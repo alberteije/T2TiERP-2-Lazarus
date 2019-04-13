@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="R07VO" table="R07" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">R07</param>
+      </generator>
+    </id>
+
+    <property name="IdR06" column="ID_R06" />
+    <property name="Ccf" column="CCF" />
+    <property name="MeioPagamento" column="MEIO_PAGAMENTO" />
+    <property name="ValorPagamento" column="VALOR_PAGAMENTO" />
+    <property name="Estorno" column="ESTORNO" />
+    <property name="ValorEstorno" column="VALOR_ESTORNO" />
+    <property name="HashRegistro" column="LOGSS" />
+
+  </class>
+</t2ti-orm-mapping>

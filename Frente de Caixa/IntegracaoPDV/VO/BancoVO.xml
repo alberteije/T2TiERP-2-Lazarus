@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="BancoVO" table="BANCO" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">BANCO</param>
+      </generator>
+    </id>
+
+    <property name="Codigo" column="CODIGO" />
+    <property name="Nome" column="NOME" />
+    <property name="Url" column="URL" />
+
+  </class>
+</t2ti-orm-mapping>

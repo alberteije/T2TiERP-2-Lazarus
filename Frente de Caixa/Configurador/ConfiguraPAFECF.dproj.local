@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2011/08/25 16:18:07.935.pas,C:\T2Ti\branches\Outros Projetos\Configuracao_PAFECF\Unit1.pas=C:\T2Ti\branches\Outros Projetos\Configuracao_PAFECF\VO\SerieEcfVO.pas</Transaction>
+    <Transaction>2011/08/25 16:31:28.279.pas,C:\T2Ti\branches\Outros Projetos\Configuracao_PAFECF\Unit1.pas=C:\T2Ti\branches\Outros Projetos\Configuracao_PAFECF\Controller\SerieEcfController.pas</Transaction>
+    <Transaction>2011/08/26 08:33:04.203.pas,C:\T2Ti\branches\Outros Projetos\Configuracao_PAFECF\Controller\SerieEcfController.pas=</Transaction>
+    <Transaction>2011/08/26 08:33:13.218.pas,C:\T2Ti\branches\Outros Projetos\Configuracao_PAFECF\VO\SerieEcfVO.pas=</Transaction>
+    <Transaction>2012/12/23 16:43:03.473.pas,C:\Projetos\AlbertEijePDV\Fontes\Configurador\UUsuario.pas=</Transaction>
+    <Transaction>2012/12/23 16:43:03.473.dfm,C:\Projetos\AlbertEijePDV\Fontes\Configurador\UUsuario.dfm=</Transaction>
+    <Transaction>2012/12/23 16:43:28.345.pas,C:\Projetos\AlbertEijePDV\Fontes\Configurador\UTurno.pas=</Transaction>
+    <Transaction>2012/12/23 16:43:28.345.dfm,C:\Projetos\AlbertEijePDV\Fontes\Configurador\UTurno.dfm=</Transaction>
+    <Transaction>2012/12/23 16:50:16.349.pas,C:\Projetos\AlbertEijePDV\Fontes\Configurador\VO\FuncionarioVO.pas=</Transaction>
+    <Transaction>2012/12/23 16:50:24.179.pas,C:\Projetos\AlbertEijePDV\Fontes\Configurador\VO\OperadorVO.pas=</Transaction>
+    <Transaction>2012/12/23 16:50:45.330.pas,C:\Projetos\AlbertEijePDV\Fontes\Configurador\VO\TurnoVO.pas=</Transaction>
+    <Transaction>2012/12/23 16:51:22.776.pas,C:\Projetos\AlbertEijePDV\Fontes\Configurador\Controller\TurnoController.pas=</Transaction>
+    <Transaction>2012/12/23 16:51:42.104.pas,C:\Projetos\AlbertEijePDV\Fontes\Configurador\Controller\OperadorFuncionarioController.pas=</Transaction>
+  </Transactions>
+</BorlandProject>

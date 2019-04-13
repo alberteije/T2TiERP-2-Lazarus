@@ -1,0 +1,33 @@
+object FDataModule: TFDataModule
+  OldCreateOrder = False
+  Height = 207
+  HorizontalOffset = 573
+  VerticalOffset = 378
+  Width = 274
+  object ACBrSPEDFiscal: TACBrSPEDFiscal
+    Path = '.\sped\'
+    Delimitador = '|'
+    TrimString = True
+    CurMascara = '#0.00'
+    left = 56
+    top = 24
+  end
+  object ACBrSintegra: TACBrSintegra
+    VersaoValidador = vv524
+    Informa88SME = False
+    Informa88SMS = False
+    Informa88EAN = False
+    Informa88C = False
+    InformaSapiMG = False
+    left = 63
+    top = 92
+  end
+  object ACBrSPEDContribuicoes: TACBrSPEDPisCofins
+    Path = '.\sped\'
+    Delimitador = '|'
+    TrimString = True
+    CurMascara = '#0.00'
+    left = 176
+    top = 80
+  end
+end

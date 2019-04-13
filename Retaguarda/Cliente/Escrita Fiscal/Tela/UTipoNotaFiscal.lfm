@@ -1,0 +1,151 @@
+inherited FTipoNotaFiscal: TFTipoNotaFiscal
+  Tag = 1
+  Left = 309
+  Top = 215
+  Caption = 'Tipo de Nota Fiscal'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelGrid: TPanel
+        inherited PanelFiltroRapido: TPanel
+          inherited BotaoConsultar: TSpeedButton
+            Left = 788
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 621
+          end
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 289
+          Top = 9
+          Width = 978
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditModelo: TLabeledEdit[1]
+          Left = 14
+          Height = 21
+          Top = 38
+          Width = 49
+          EditLabel.AnchorSideLeft.Control = EditModelo
+          EditLabel.AnchorSideRight.Control = EditModelo
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditModelo
+          EditLabel.Left = 14
+          EditLabel.Height = 13
+          EditLabel.Top = 22
+          EditLabel.Width = 49
+          EditLabel.Caption = 'Modelo:'
+          EditLabel.ParentColor = False
+          MaxLength = 2
+          TabOrder = 0
+        end
+        object EditNome: TLabeledEdit[2]
+          Left = 14
+          Height = 21
+          Top = 86
+          Width = 963
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditNome
+          EditLabel.AnchorSideRight.Control = EditNome
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditNome
+          EditLabel.Left = 14
+          EditLabel.Height = 13
+          EditLabel.Top = 70
+          EditLabel.Width = 963
+          EditLabel.Caption = 'Nome:'
+          EditLabel.ParentColor = False
+          MaxLength = 50
+          TabOrder = 3
+        end
+        object MemoDescricao: TLabeledMemo[3]
+          Left = 14
+          Height = 65
+          Top = 134
+          Width = 963
+          Anchors = [akTop, akLeft, akRight]
+          ScrollBars = ssVertical
+          TabOrder = 4
+          MemoLabel.Left = 14
+          MemoLabel.Height = 13
+          MemoLabel.Top = 118
+          MemoLabel.Width = 50
+          MemoLabel.Caption = 'Descrição:'
+          MemoLabel.ParentColor = False
+        end
+        object EditSerie: TLabeledEdit[4]
+          Left = 72
+          Height = 21
+          Top = 38
+          Width = 49
+          EditLabel.AnchorSideLeft.Control = EditSerie
+          EditLabel.AnchorSideRight.Control = EditSerie
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditSerie
+          EditLabel.Left = 72
+          EditLabel.Height = 13
+          EditLabel.Top = 22
+          EditLabel.Width = 49
+          EditLabel.Caption = 'Série:'
+          EditLabel.ParentColor = False
+          MaxLength = 2
+          TabOrder = 1
+        end
+        object MemoTemplate: TLabeledMemo[5]
+          Left = 14
+          Height = 65
+          Top = 222
+          Width = 963
+          Anchors = [akTop, akLeft, akRight]
+          ScrollBars = ssVertical
+          TabOrder = 5
+          MemoLabel.Left = 14
+          MemoLabel.Height = 13
+          MemoLabel.Top = 206
+          MemoLabel.Width = 48
+          MemoLabel.Caption = 'Template:'
+          MemoLabel.ParentColor = False
+        end
+        object EditNumeroItens: TLabeledCalcEdit[6]
+          Left = 130
+          Height = 21
+          Top = 38
+          Width = 109
+          Alignment = taRightJustify
+          DisplayFormat = '#'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 2
+          Value = 0
+          CalcEditLabel.Left = 130
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 22
+          CalcEditLabel.Width = 103
+          CalcEditLabel.Caption = 'Quantidade de Itens:'
+          CalcEditLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+end

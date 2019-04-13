@@ -1,0 +1,174 @@
+inherited FQuadroSocietario: TFQuadroSocietario
+  Left = 38
+  Top = 221
+  Caption = 'Quadro Societário'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 953
+        ClientWidth = 953
+        inherited PanelFiltroRapido: TPanel
+          Width = 953
+          ClientWidth = 953
+          inherited BotaoConsultar: TSpeedButton
+            Left = 819
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 652
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 953
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 98
+          Top = 9
+          Width = 979
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditDataRegistro: TLabeledDateEdit[1]
+          Left = 14
+          Height = 21
+          Top = 76
+          Width = 99
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 2
+          Text = '  /  /    '
+          DateEditLabel.Left = 14
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 60
+          DateEditLabel.Width = 70
+          DateEditLabel.Caption = 'Data Registro:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditCapitalSocial: TLabeledCalcEdit[2]
+          Left = 119
+          Height = 21
+          Top = 76
+          Width = 130
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 3
+          Value = 0
+          CalcEditLabel.Left = 119
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 60
+          CalcEditLabel.Width = 67
+          CalcEditLabel.Caption = 'Capital Social:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditValorQuota: TLabeledCalcEdit[3]
+          Left = 255
+          Height = 21
+          Top = 76
+          Width = 130
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 4
+          Value = 0
+          CalcEditLabel.Left = 255
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 60
+          CalcEditLabel.Width = 76
+          CalcEditLabel.Caption = 'Valor da Quota:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditQuantidadeQuota: TLabeledCalcEdit[4]
+          Left = 391
+          Height = 21
+          Top = 76
+          Width = 120
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 5
+          Value = 0
+          CalcEditLabel.Left = 391
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 60
+          CalcEditLabel.Width = 113
+          CalcEditLabel.Caption = 'Quantidade de Quotas:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditIdEmpresa: TLabeledCalcEdit[5]
+          Left = 14
+          Height = 21
+          Top = 31
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 0
+          Value = 0
+          OnKeyUp = EditIdEmpresaKeyUp
+          CalcEditLabel.Left = 14
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 15
+          CalcEditLabel.Width = 68
+          CalcEditLabel.Caption = 'Empresa [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditEmpresa: TLabeledEdit[6]
+          Left = 75
+          Height = 21
+          Top = 31
+          Width = 903
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditEmpresa
+          EditLabel.AnchorSideRight.Control = EditEmpresa
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditEmpresa
+          EditLabel.Left = 75
+          EditLabel.Height = 13
+          EditLabel.Top = 15
+          EditLabel.Width = 903
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 1
+          TabStop = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+end

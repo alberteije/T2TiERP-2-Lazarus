@@ -1,0 +1,445 @@
+inherited FFinChequeRecebido: TFFinChequeRecebido
+  Left = 318
+  Top = 144
+  Caption = 'Custódia de Cheques'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 451
+        Width = 980
+        ClientHeight = 451
+        ClientWidth = 980
+        inherited PanelFiltroRapido: TPanel
+          Top = 397
+          Width = 980
+          ClientWidth = 980
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 679
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 399
+          Width = 980
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object PanelParcelas: TPanel[0]
+          Left = 4
+          Height = 421
+          Top = 4
+          Width = 992
+          Align = alClient
+          TabOrder = 1
+        end
+        object PanelMestre: TPanel[1]
+          Left = 8
+          Height = 269
+          Top = 10
+          Width = 974
+          Anchors = [akTop, akLeft, akRight]
+          BevelOuter = bvLowered
+          ClientHeight = 269
+          ClientWidth = 974
+          TabOrder = 0
+          object EditCpfCnpj: TLabeledEdit
+            Left = 7
+            Height = 21
+            Top = 65
+            Width = 176
+            EditLabel.AnchorSideLeft.Control = EditCpfCnpj
+            EditLabel.AnchorSideRight.Control = EditCpfCnpj
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditCpfCnpj
+            EditLabel.Left = 7
+            EditLabel.Height = 13
+            EditLabel.Top = 49
+            EditLabel.Width = 176
+            EditLabel.Caption = 'CPF / CNPJ:'
+            EditLabel.ParentColor = False
+            TabOrder = 2
+          end
+          object EditValor: TLabeledCalcEdit
+            Left = 7
+            Height = 21
+            Top = 236
+            Width = 132
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 13
+            Value = 0
+            CalcEditLabel.Left = 7
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 220
+            CalcEditLabel.Width = 67
+            CalcEditLabel.Caption = 'Valor Original:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditIdContaCaixa: TLabeledCalcEdit
+            Left = 7
+            Height = 21
+            Top = 22
+            Width = 61
+            Alignment = taRightJustify
+            DisplayFormat = '#'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 0
+            Value = 0
+            OnKeyUp = EditIdContaCaixaKeyUp
+            CalcEditLabel.Left = 7
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 6
+            CalcEditLabel.Width = 87
+            CalcEditLabel.Caption = 'Conta/Caixa [F1]:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditContaCaixa: TLabeledEdit
+            Left = 68
+            Height = 21
+            Top = 22
+            Width = 893
+            Anchors = [akTop, akLeft, akRight]
+            Color = clInfoBk
+            EditLabel.AnchorSideLeft.Control = EditContaCaixa
+            EditLabel.AnchorSideRight.Control = EditContaCaixa
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditContaCaixa
+            EditLabel.Left = 68
+            EditLabel.Height = 13
+            EditLabel.Top = 6
+            EditLabel.Width = 893
+            EditLabel.Caption = '  '
+            EditLabel.ParentColor = False
+            ReadOnly = True
+            TabOrder = 1
+            TabStop = False
+          end
+          object EditNome: TLabeledEdit
+            Left = 189
+            Height = 21
+            Top = 65
+            Width = 772
+            Anchors = [akTop, akLeft, akRight]
+            EditLabel.AnchorSideLeft.Control = EditNome
+            EditLabel.AnchorSideRight.Control = EditNome
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditNome
+            EditLabel.Left = 189
+            EditLabel.Height = 13
+            EditLabel.Top = 49
+            EditLabel.Width = 772
+            EditLabel.Caption = 'Nome:'
+            EditLabel.ParentColor = False
+            TabOrder = 3
+          end
+          object EditCodigoBanco: TLabeledEdit
+            Left = 7
+            Height = 21
+            Top = 108
+            Width = 104
+            EditLabel.AnchorSideLeft.Control = EditCodigoBanco
+            EditLabel.AnchorSideRight.Control = EditCodigoBanco
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditCodigoBanco
+            EditLabel.Left = 7
+            EditLabel.Height = 13
+            EditLabel.Top = 92
+            EditLabel.Width = 104
+            EditLabel.Caption = 'Código Banco:'
+            EditLabel.ParentColor = False
+            TabOrder = 4
+          end
+          object EditCodigoAgencia: TLabeledEdit
+            Left = 117
+            Height = 21
+            Top = 108
+            Width = 98
+            EditLabel.AnchorSideLeft.Control = EditCodigoAgencia
+            EditLabel.AnchorSideRight.Control = EditCodigoAgencia
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditCodigoAgencia
+            EditLabel.Left = 117
+            EditLabel.Height = 13
+            EditLabel.Top = 92
+            EditLabel.Width = 98
+            EditLabel.Caption = 'Código Agência:'
+            EditLabel.ParentColor = False
+            EditLabel.ParentShowHint = False
+            EditLabel.ShowHint = True
+            TabOrder = 5
+          end
+          object EditConta: TLabeledEdit
+            Left = 221
+            Height = 21
+            Top = 108
+            Width = 146
+            EditLabel.AnchorSideLeft.Control = EditConta
+            EditLabel.AnchorSideRight.Control = EditConta
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditConta
+            EditLabel.Left = 221
+            EditLabel.Height = 13
+            EditLabel.Top = 92
+            EditLabel.Width = 146
+            EditLabel.Caption = 'Conta:'
+            EditLabel.ParentColor = False
+            TabOrder = 6
+          end
+          object EditNumero: TLabeledCalcEdit
+            Left = 373
+            Height = 21
+            Top = 108
+            Width = 90
+            Alignment = taRightJustify
+            DecimalPlaces = 0
+            DisplayFormat = ',0'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 7
+            Value = 0
+            CalcEditLabel.Left = 373
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 92
+            CalcEditLabel.Width = 41
+            CalcEditLabel.Caption = 'Número:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditDataEmissao: TLabeledDateEdit
+            Left = 469
+            Height = 21
+            Top = 108
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 8
+            Text = '  /  /    '
+            DateEditLabel.Left = 469
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 92
+            DateEditLabel.Width = 68
+            DateEditLabel.Caption = 'Data Emissão:'
+            DateEditLabel.ParentColor = False
+          end
+          object EditBomPara: TLabeledDateEdit
+            Left = 596
+            Height = 21
+            Top = 108
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 9
+            Text = '  /  /    '
+            DateEditLabel.Left = 596
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 92
+            DateEditLabel.Width = 49
+            DateEditLabel.Caption = 'Bom Para:'
+            DateEditLabel.ParentColor = False
+          end
+          object EditDataCompensacao: TLabeledDateEdit
+            Left = 723
+            Height = 21
+            Top = 108
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 10
+            Text = '  /  /    '
+            DateEditLabel.Left = 723
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 92
+            DateEditLabel.Width = 71
+            DateEditLabel.Caption = 'Compensação:'
+            DateEditLabel.ParentColor = False
+          end
+          object GroupBox1: TGroupBox
+            Left = 7
+            Height = 72
+            Top = 135
+            Width = 400
+            Caption = 'Custódia:'
+            ClientHeight = 54
+            ClientWidth = 396
+            TabOrder = 11
+            object EditCustodiaData: TLabeledDateEdit
+              Left = 9
+              Height = 21
+              Top = 22
+              Width = 121
+              ButtonWidth = 0
+              CharCase = ecNormal
+              DialogTitle = 'Select a Date'
+              MaxLength = 10
+              NumGlyphs = 2
+              PopupColor = clWindow
+              TabOrder = 0
+              Text = '  /  /    '
+              DateEditLabel.Left = 9
+              DateEditLabel.Height = 13
+              DateEditLabel.Top = 6
+              DateEditLabel.Width = 27
+              DateEditLabel.Caption = 'Data:'
+              DateEditLabel.ParentColor = False
+            end
+            object EditCustodiaTarifa: TLabeledCalcEdit
+              Left = 136
+              Height = 21
+              Top = 22
+              Width = 121
+              Alignment = taRightJustify
+              DisplayFormat = '###,###,##0.00'
+              MaxValue = 0
+              MinValue = 0
+              TabOrder = 1
+              Value = 0
+              CalcEditLabel.Left = 136
+              CalcEditLabel.Height = 13
+              CalcEditLabel.Top = 6
+              CalcEditLabel.Width = 32
+              CalcEditLabel.Caption = 'Tarifa:'
+              CalcEditLabel.ParentColor = False
+            end
+            object EditCustodiaComissao: TLabeledCalcEdit
+              Left = 263
+              Height = 21
+              Top = 22
+              Width = 121
+              Alignment = taRightJustify
+              DisplayFormat = '###,###,##0.00'
+              MaxValue = 0
+              MinValue = 0
+              TabOrder = 2
+              Value = 0
+              CalcEditLabel.Left = 263
+              CalcEditLabel.Height = 13
+              CalcEditLabel.Top = 6
+              CalcEditLabel.Width = 49
+              CalcEditLabel.Caption = 'Comissão:'
+              CalcEditLabel.ParentColor = False
+            end
+          end
+          object GroupBox2: TGroupBox
+            Left = 413
+            Height = 72
+            Top = 135
+            Width = 400
+            Caption = 'Desconto:'
+            ClientHeight = 54
+            ClientWidth = 396
+            TabOrder = 12
+            object EditDescontoData: TLabeledDateEdit
+              Left = 9
+              Height = 21
+              Top = 22
+              Width = 121
+              ButtonWidth = 0
+              CharCase = ecNormal
+              DialogTitle = 'Select a Date'
+              MaxLength = 10
+              NumGlyphs = 2
+              PopupColor = clWindow
+              TabOrder = 0
+              Text = '  /  /    '
+              DateEditLabel.Left = 9
+              DateEditLabel.Height = 13
+              DateEditLabel.Top = 6
+              DateEditLabel.Width = 27
+              DateEditLabel.Caption = 'Data:'
+              DateEditLabel.ParentColor = False
+            end
+            object EditDescontoTarifa: TLabeledCalcEdit
+              Left = 136
+              Height = 21
+              Top = 22
+              Width = 121
+              Alignment = taRightJustify
+              DisplayFormat = '###,###,##0.00'
+              MaxValue = 0
+              MinValue = 0
+              TabOrder = 1
+              Value = 0
+              CalcEditLabel.Left = 136
+              CalcEditLabel.Height = 13
+              CalcEditLabel.Top = 6
+              CalcEditLabel.Width = 32
+              CalcEditLabel.Caption = 'Tarifa:'
+              CalcEditLabel.ParentColor = False
+            end
+            object EditDescontoComissao: TLabeledCalcEdit
+              Left = 263
+              Height = 21
+              Top = 22
+              Width = 121
+              Alignment = taRightJustify
+              DisplayFormat = '###,###,##0.00'
+              MaxValue = 0
+              MinValue = 0
+              TabOrder = 2
+              Value = 0
+              CalcEditLabel.Left = 263
+              CalcEditLabel.Height = 13
+              CalcEditLabel.Top = 6
+              CalcEditLabel.Width = 49
+              CalcEditLabel.Caption = 'Comissão:'
+              CalcEditLabel.ParentColor = False
+            end
+          end
+          object EditValorRecebido: TLabeledCalcEdit
+            Left = 145
+            Height = 21
+            Top = 236
+            Width = 132
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 14
+            Value = 0
+            CalcEditLabel.Left = 145
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 220
+            CalcEditLabel.Width = 75
+            CalcEditLabel.Caption = 'Valor Recebido:'
+            CalcEditLabel.ParentColor = False
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+end

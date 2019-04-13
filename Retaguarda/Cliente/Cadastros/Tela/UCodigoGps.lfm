@@ -1,0 +1,79 @@
+inherited FCodigoGps: TFCodigoGps
+  inherited PageControl: TPageControl
+    Width = 961
+    ActivePage = PaginaEdits
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 953
+        inherited Grid: TJvDBUltimGrid
+          Width = 953
+        end
+        inherited PanelFiltroRapido: TPanel
+          Width = 953
+          inherited BotaoConsultar: TSpeedButton
+            Left = 819
+            ExplicitLeft = 825
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 652
+            ExplicitWidth = 652
+          end
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      inherited PanelEdits: TPanel
+        Width = 953
+        object BevelEdits: TBevel
+          Left = 8
+          Top = 9
+          Width = 932
+          Height = 108
+          Anchors = [akLeft, akTop, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditDescricao: TLabeledEdit
+          Left = 16
+          Top = 82
+          Width = 913
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          EditLabel.Width = 50
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Descrição:'
+          TabOrder = 1
+        end
+        object EditCodigo: TLabeledCalcEdit
+          Left = 16
+          Top = 30
+          Width = 100
+          Height = 21
+          ShowButton = False
+          TabOrder = 0
+          DecimalPlacesAlwaysShown = False
+          CalcEditLabel.Width = 37
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Código:'
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 961
+    inherited BotaoSair: TSpeedButton
+      Left = 855
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 755
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 645
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 745
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 545
+    end
+  end
+end

@@ -1,0 +1,169 @@
+inherited FFolhaPlanoSaude: TFFolhaPlanoSaude
+  Tag = 1
+  Left = 361
+  Width = 910
+  Caption = 'Folha Plano Saúde'
+  ClientWidth = 910
+  inherited PageControl: TPageControl
+    Width = 910
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 902
+      inherited PanelEdits: TPanel
+        Width = 902
+        ClientWidth = 902
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 149
+          Top = 10
+          Width = 876
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditIdColaborador: TLabeledCalcEdit[1]
+          Left = 16
+          Height = 21
+          Top = 33
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 0
+          Value = 0
+          OnKeyUp = EditIdColaboradorKeyUp
+          CalcEditLabel.Left = 16
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 17
+          CalcEditLabel.Width = 63
+          CalcEditLabel.Caption = 'Colaborador:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditColaborador: TLabeledEdit[2]
+          Left = 77
+          Height = 21
+          Top = 33
+          Width = 799
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditColaborador
+          EditLabel.AnchorSideRight.Control = EditColaborador
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditColaborador
+          EditLabel.Left = 77
+          EditLabel.Height = 13
+          EditLabel.Top = 17
+          EditLabel.Width = 799
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 1
+          TabStop = False
+        end
+        object EditDataInicio: TLabeledDateEdit[3]
+          Left = 16
+          Height = 21
+          Top = 125
+          Width = 121
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 4
+          Text = '  /  /    '
+          DateEditLabel.Left = 16
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 109
+          DateEditLabel.Width = 55
+          DateEditLabel.Caption = 'Data Início:'
+          DateEditLabel.ParentColor = False
+        end
+        object ComboBoxBeneficiario: TLabeledComboBox[4]
+          Left = 143
+          Height = 21
+          Top = 125
+          Width = 733
+          Anchors = [akTop, akLeft, akRight]
+          ItemHeight = 13
+          ItemIndex = 1
+          Items.Strings = (
+            '1 - Somente Colaborador'
+            '2 - Colaborador e Dependentes'
+            '3 - Somente Dependentes'
+          )
+          Style = csDropDownList
+          TabOrder = 5
+          Text = '2 - Colaborador e Dependentes'
+          ComboBoxLabel.Left = 143
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 109
+          ComboBoxLabel.Width = 59
+          ComboBoxLabel.Caption = 'Beneficiário:'
+          ComboBoxLabel.ParentColor = False
+        end
+        object EditIdOperadoraPlanoSaude: TLabeledCalcEdit[5]
+          Left = 16
+          Height = 21
+          Top = 79
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 2
+          Value = 0
+          OnKeyUp = EditIdOperadoraPlanoSaudeKeyUp
+          CalcEditLabel.Left = 16
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 63
+          CalcEditLabel.Width = 148
+          CalcEditLabel.Caption = 'Operadora do Plano de Saúde:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditOperadoraPlanoSaude: TLabeledEdit[6]
+          Left = 77
+          Height = 21
+          Top = 79
+          Width = 799
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditOperadoraPlanoSaude
+          EditLabel.AnchorSideRight.Control = EditOperadoraPlanoSaude
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditOperadoraPlanoSaude
+          EditLabel.Left = 77
+          EditLabel.Height = 13
+          EditLabel.Top = 63
+          EditLabel.Width = 799
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 3
+          TabStop = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 910
+    ClientWidth = 910
+    inherited BotaoSair: TSpeedButton
+      Left = 810
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 610
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 710
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 563
+    end
+  end
+end

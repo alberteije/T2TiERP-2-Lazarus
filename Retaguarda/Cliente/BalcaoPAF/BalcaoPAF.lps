@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="51">
+      <Unit0>
+        <Filename Value="BalcaoPAF.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="BalcaoPAF"/>
+        <UsageCount Value="206"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="Tela\umenu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FMenu"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UMenu"/>
+        <EditorIndex Value="7"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="55"/>
+        <CursorPos X="47" Y="77"/>
+        <UsageCount Value="206"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="Tela\uproduto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FProduto"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UProduto"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="585"/>
+        <CursorPos X="24" Y="597"/>
+        <UsageCount Value="206"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\Comum\DataModule\UDataModule.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FDataModule"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="UDataModule"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="37"/>
+        <CursorPos X="83" Y="48"/>
+        <UsageCount Value="206"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="..\Comum\Tipos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Tipos"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="34" Y="15"/>
+        <UsageCount Value="206"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="..\Comum\Tela\UBase.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FBase"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UBase"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="42"/>
+        <CursorPos X="84" Y="61"/>
+        <UsageCount Value="206"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\Comum\SessaoUsuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SessaoUsuario"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="53"/>
+        <CursorPos X="1" Y="85"/>
+        <UsageCount Value="206"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\..\Comum\VO\EmpresaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EmpresaVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="31"/>
+        <CursorPos X="3" Y="43"/>
+        <UsageCount Value="206"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\..\Comum\VO\UsuarioVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UsuarioVO"/>
+        <UsageCount Value="206"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\..\Comum\VO\VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="VO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="82"/>
+        <CursorPos X="91" Y="95"/>
+        <UsageCount Value="206"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="..\..\Comum\Biblioteca.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Biblioteca"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="46"/>
+        <CursorPos X="67" Y="72"/>
+        <UsageCount Value="206"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="..\Comum\Tela\UTela.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FTela"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UTela"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="55"/>
+        <CursorPos X="20" Y="87"/>
+        <FoldState Value=" TJmT1E2 pigjJ1ZN"/>
+        <UsageCount Value="206"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="..\Comum\Tela\UFiltro.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FFiltro"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UFiltro"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="376"/>
+        <CursorPos X="19" Y="402"/>
+        <UsageCount Value="204"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="..\..\Comum\Constantes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Constantes"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="17"/>
+        <CursorPos X="85" Y="42"/>
+        <UsageCount Value="203"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="..\Comum\Tela\UTelaCadastro.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FTelaCadastro"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UTelaCadastro"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="575"/>
+        <CursorPos X="37" Y="543"/>
+        <UsageCount Value="203"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="..\Comum\Tela\ULookup.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FLookup"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ULookup"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="197"/>
+        <CursorPos X="43" Y="122"/>
+        <UsageCount Value="202"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="..\..\Comum\VO\ProdutoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ProdutoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="74"/>
+        <CursorPos X="6" Y="95"/>
+        <UsageCount Value="139"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="Tela\UDAV.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FDAV"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UDAV"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="465"/>
+        <CursorPos X="1" Y="480"/>
+        <UsageCount Value="49"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="..\..\Comum\VO\DavCabecalhoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DavCabecalhoVO"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="60"/>
+        <CursorPos X="26" Y="89"/>
+        <UsageCount Value="47"/>
+        <Loaded Value="True"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="..\..\Comum\VO\DavDetalheVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DavDetalheVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="56"/>
+        <CursorPos X="26" Y="81"/>
+        <UsageCount Value="47"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="Tela\UPreview.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FPreview"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UPreview"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="31"/>
+        <CursorPos X="14" Y="51"/>
+        <UsageCount Value="42"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="Tela\USpedFiscal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FSpedFiscal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="USpedFiscal"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="37"/>
+        <CursorPos X="20" Y="52"/>
+        <UsageCount Value="42"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="..\..\Comum\VO\ContadorVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ContadorVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="56"/>
+        <CursorPos X="26" Y="72"/>
+        <UsageCount Value="37"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="Tela\USintegra.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FSintegra"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="USintegra"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="97"/>
+        <CursorPos X="12" Y="175"/>
+        <FoldState Value=" TJjD1on"/>
+        <UsageCount Value="32"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="Tela\USpedContribuicoes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FSpedContribuicoes"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="USpedContribuicoes"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="142"/>
+        <CursorPos X="73" Y="159"/>
+        <UsageCount Value="26"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="Tela\ucliente.pas"/>
+        <ComponentName Value="FCliente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UCliente"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="205"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="..\Comum\Controller.pas"/>
+        <UnitName Value="Controller"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="61"/>
+        <CursorPos X="17" Y="73"/>
+        <UsageCount Value="123"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="C:\lazarus\components\Brook\plugins\ljgridutils-master\src\ljgridutils.pas"/>
+        <UnitName Value="LJGridUtils"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="71"/>
+        <CursorPos X="15" Y="95"/>
+        <UsageCount Value="9"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="unit1.pas"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="46" Y="10"/>
+        <UsageCount Value="10"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="Tela\ucliente.lfm"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="Tela\umenu.lfm"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="Tela\UProduto.lfm"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1088"/>
+        <CursorPos X="28" Y="1098"/>
+        <UsageCount Value="9"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="C:\teste\UBase.pas"/>
+        <UnitName Value="UBase"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="C:\teste\UDataModule.pas"/>
+        <UnitName Value="UDataModule"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="C:\teste\UFiltro.pas"/>
+        <UnitName Value="UFiltro"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="C:\teste\ULogin.pas"/>
+        <UnitName Value="ULogin"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="C:\teste\ULookup.pas"/>
+        <UnitName Value="ULookup"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="C:\teste\UTelaCadastro.pas"/>
+        <UnitName Value="UTelaCadastro"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="C:\teste\UTela.pas"/>
+        <UnitName Value="UTela"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="31" Y="8"/>
+        <UsageCount Value="10"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="C:\teste\UAlmoxarifado.pas"/>
+        <UnitName Value="UAlmoxarifado"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="30" Y="14"/>
+        <UsageCount Value="10"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="Tela\UAlmoxarifado.pas"/>
+        <ComponentName Value="FAlmoxarifado"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UAlmoxarifado"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="74"/>
+        <CursorPos X="1" Y="83"/>
+        <UsageCount Value="79"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="C:\lazarus\lcl\grids.pas"/>
+        <UnitName Value="Grids"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="3"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="C:\lazarus\components\Brook\master\brokers\brookfclhttpclientbroker.pas"/>
+        <UnitName Value="BrookFCLHTTPClientBroker"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="355"/>
+        <CursorPos X="1" Y="366"/>
+        <UsageCount Value="3"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="C:\lazarus\components\Brook\master\core\brookhttputils.pas"/>
+        <UnitName Value="BrookHTTPUtils"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="420"/>
+        <CursorPos X="1" Y="433"/>
+        <UsageCount Value="27"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="C:\lazarus\lcl\dbgrids.pas"/>
+        <UnitName Value="DBGrids"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="933"/>
+        <CursorPos X="1" Y="952"/>
+        <UsageCount Value="10"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="C:\lazarus\lcl\include\customlistbox.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="178"/>
+        <CursorPos X="1" Y="197"/>
+        <UsageCount Value="1"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\objpas\typinfo.pp"/>
+        <UnitName Value="typinfo"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="6"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="C:\Testes\UDAV.pas"/>
+        <UnitName Value="UDAV"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="14" Y="17"/>
+        <UsageCount Value="9"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="Tela\UDAV.lfm"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\packages\fcl-json\src\fpjson.pp"/>
+        <UnitName Value="fpjson"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1913"/>
+        <CursorPos X="49" Y="1929"/>
+        <UsageCount Value="10"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="C:\lazarus\components\Brook\master\core\brookhttpclient.pas"/>
+        <UnitName Value="BrookHTTPClient"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="31"/>
+        <CursorPos X="28" Y="52"/>
+        <UsageCount Value="11"/>
+      </Unit50>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="7" HistoryIndex="6">
+      <Position1>
+        <Filename Value="Tela\UDAV.pas"/>
+        <Caret Line="421" Column="16" TopLine="396"/>
+      </Position1>
+      <Position2>
+        <Filename Value="Tela\USpedContribuicoes.pas"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
+      </Position2>
+      <Position3>
+        <Filename Value="Tela\umenu.pas"/>
+        <Caret Line="75" Column="36" TopLine="52"/>
+      </Position3>
+      <Position4>
+        <Filename Value="Tela\umenu.pas"/>
+        <Caret Line="77" Column="36" TopLine="54"/>
+      </Position4>
+      <Position5>
+        <Filename Value="Tela\umenu.pas"/>
+        <Caret Line="328" Column="21" TopLine="300"/>
+      </Position5>
+      <Position6>
+        <Filename Value="Tela\UDAV.pas"/>
+        <Caret Line="465" Column="47" TopLine="440"/>
+      </Position6>
+      <Position7>
+        <Filename Value="Tela\UDAV.pas"/>
+        <Caret Line="466" Column="47" TopLine="443"/>
+      </Position7>
+    </JumpHistory>
+  </ProjectSession>
+  <EditorMacros Count="0"/>
+</CONFIG>

@@ -1,0 +1,349 @@
+inherited FPontoAbono: TFPontoAbono
+  Tag = 1
+  Left = 311
+  Top = 174
+  Caption = 'Ponto Abono'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 410
+        Width = 980
+        ClientHeight = 410
+        ClientWidth = 980
+        inherited PanelFiltroRapido: TPanel
+          Top = 356
+          Width = 980
+          ClientWidth = 980
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 679
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 358
+          Width = 980
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object PanelMestre: TPanel[0]
+          Left = 12
+          Height = 153
+          Top = 10
+          Width = 974
+          Anchors = [akTop, akLeft, akRight]
+          BevelOuter = bvLowered
+          ClientHeight = 153
+          ClientWidth = 974
+          TabOrder = 0
+          object EditIdColaborador: TLabeledCalcEdit
+            Left = 7
+            Height = 21
+            Top = 22
+            Width = 61
+            Alignment = taRightJustify
+            DecimalPlaces = 0
+            DisplayFormat = '0'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 0
+            Value = 0
+            OnKeyUp = EditIdColaboradorKeyUp
+            CalcEditLabel.Left = 7
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 6
+            CalcEditLabel.Width = 86
+            CalcEditLabel.Caption = 'Colaborador [F1]:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditColaborador: TLabeledEdit
+            Left = 68
+            Height = 21
+            Top = 22
+            Width = 893
+            Anchors = [akTop, akLeft, akRight]
+            Color = clInfoBk
+            EditLabel.AnchorSideLeft.Control = EditColaborador
+            EditLabel.AnchorSideRight.Control = EditColaborador
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditColaborador
+            EditLabel.Left = 68
+            EditLabel.Height = 13
+            EditLabel.Top = 6
+            EditLabel.Width = 893
+            EditLabel.Caption = '  '
+            EditLabel.ParentColor = False
+            ReadOnly = True
+            TabOrder = 1
+            TabStop = False
+          end
+          object EditInicioUtilizacao: TLabeledDateEdit
+            Left = 515
+            Height = 21
+            Top = 63
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 6
+            Text = '  /  /    '
+            DateEditLabel.Left = 515
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 47
+            DateEditLabel.Width = 77
+            DateEditLabel.Caption = 'Início Utilização:'
+            DateEditLabel.ParentColor = False
+          end
+          object EditQuantidade: TLabeledCalcEdit
+            Left = 7
+            Height = 21
+            Top = 63
+            Width = 121
+            Alignment = taRightJustify
+            DecimalPlaces = 0
+            DisplayFormat = '0'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 2
+            Value = 0
+            CalcEditLabel.Left = 7
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 47
+            CalcEditLabel.Width = 60
+            CalcEditLabel.Caption = 'Quantidade:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditDataCadastro: TLabeledDateEdit
+            Left = 388
+            Height = 21
+            Top = 63
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 5
+            Text = '  /  /    '
+            DateEditLabel.Left = 388
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 47
+            DateEditLabel.Width = 74
+            DateEditLabel.Caption = 'Data Cadastro:'
+            DateEditLabel.ParentColor = False
+          end
+          object EditUtilizado: TLabeledCalcEdit
+            Left = 134
+            Height = 21
+            Top = 63
+            Width = 121
+            Alignment = taRightJustify
+            DecimalPlaces = 0
+            DisplayFormat = '0'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 3
+            Value = 0
+            CalcEditLabel.Left = 134
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 47
+            CalcEditLabel.Width = 44
+            CalcEditLabel.Caption = 'Utilizado:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditSaldo: TLabeledCalcEdit
+            Left = 261
+            Height = 21
+            Top = 63
+            Width = 121
+            Alignment = taRightJustify
+            DecimalPlaces = 0
+            DisplayFormat = '0'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 4
+            Value = 0
+            CalcEditLabel.Left = 261
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 47
+            CalcEditLabel.Width = 30
+            CalcEditLabel.Caption = 'Saldo:'
+            CalcEditLabel.ParentColor = False
+          end
+          object MemoObservacao: TLabeledMemo
+            Left = 7
+            Height = 34
+            Top = 107
+            Width = 954
+            Anchors = [akTop, akLeft, akRight]
+            TabOrder = 7
+            MemoLabel.Left = 7
+            MemoLabel.Height = 13
+            MemoLabel.Top = 91
+            MemoLabel.Width = 62
+            MemoLabel.Caption = 'Observação:'
+            MemoLabel.ParentColor = False
+          end
+        end
+        object PageControlItens: TPageControl[1]
+          Left = 12
+          Height = 241
+          Top = 175
+          Width = 974
+          ActivePage = tsItens
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          TabIndex = 0
+          TabOrder = 1
+          object tsItens: TTabSheet
+            Caption = 'Utilização'
+            ClientHeight = 215
+            ClientWidth = 966
+            object PanelItens: TPanel
+              Left = 0
+              Height = 215
+              Top = 0
+              Width = 966
+              Align = alClient
+              BevelOuter = bvNone
+              ClientHeight = 215
+              ClientWidth = 966
+              TabOrder = 0
+              object GridParcelas: TRxDBGrid
+                Left = 0
+                Height = 215
+                Top = 0
+                Width = 966
+                TitleButtons = True
+                AutoSort = True
+                Columns = <                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Data Utilização'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'DATA_UTILIZACAO'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Observação'
+                    Title.Orientation = toHorizontal
+                    Width = 800
+                    FieldName = 'OBSERVACAO'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end>
+                KeyStrokes = <                
+                  item
+                    Command = rxgcShowFindDlg
+                    ShortCut = 16454
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowColumnsDlg
+                    ShortCut = 16471
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowFilterDlg
+                    ShortCut = 16468
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowSortDlg
+                    ShortCut = 16467
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowQuickFilter
+                    ShortCut = 16465
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcHideQuickFilter
+                    ShortCut = 16456
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcSelectAll
+                    ShortCut = 16449
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcDeSelectAll
+                    ShortCut = 16429
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcInvertSelection
+                    ShortCut = 16426
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcOptimizeColumnsWidth
+                    ShortCut = 16427
+                    Enabled = True
+                  end>
+                OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                Align = alClient
+                Color = clWindow
+                DrawFullLine = False
+                FocusColor = clRed
+                SelectedColor = clHighlight
+                GridLineStyle = psSolid
+                DataSource = DSPontoAbonoUtilizacao
+                Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgHeaderPushedLook]
+                ParentColor = False
+                ReadOnly = True
+                TabOrder = 0
+                TitleFont.Color = clWindowText
+                TitleFont.Height = -11
+                TitleFont.Name = 'Tahoma'
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+  object DSPontoAbonoUtilizacao: TDatasource[5]
+    DataSet = CDSPontoAbonoUtilizacao
+    left = 72
+    top = 320
+  end
+  object CDSPontoAbonoUtilizacao: TBufDataset[6]
+    FieldDefs = <>
+    left = 504
+    top = 327
+  end
+end

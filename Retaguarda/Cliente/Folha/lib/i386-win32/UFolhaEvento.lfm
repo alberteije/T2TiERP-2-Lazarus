@@ -1,0 +1,166 @@
+inherited FFolhaEvento: TFFolhaEvento
+  Tag = 1
+  Left = 318
+  Top = 203
+  Caption = 'Eventos'
+  ClientWidth = 961
+  PixelsPerInch = 96
+  inherited PageControl: TPageControl
+    Width = 961
+    ActivePage = PaginaEdits
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 953
+        inherited Grid: TRxDbGrid
+          Width = 953
+        end
+        inherited PanelFiltroRapido: TPanel
+          Width = 953
+          inherited BotaoConsultar: TSpeedButton
+            Left = 819
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 652
+          end
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      inherited PanelEdits: TPanel
+        Width = 953
+        object BevelEdits: TBevel
+          Left = 8
+          Top = 9
+          Width = 935
+          Height = 230
+          Anchors = [akLeft, akTop, akRight]
+          Constraints.MinWidth = 753
+        end
+        object ComboBoxBaseCalculo: TLabeledComboBox
+          Left = 16
+          Top = 162
+          Width = 917
+          Height = 21
+          Style = csDropDownList
+          Anchors = [akLeft, akTop, akRight]
+          ItemIndex = 0
+          TabOrder = 3
+          Text = 
+            '01 - Salário contratual: define que a base de cálculo deve ser c' +
+            'alculada sobre o valor do salário contratual'
+          Items.Strings = (
+            
+              '01 - Salário contratual: define que a base de cálculo deve ser c' +
+              'alculada sobre o valor do salário contratual'
+            
+              '02 - Salário mínimo: define que a base de cálculo deve ser calcu' +
+              'lada sobre o valor do salário mínimo'
+            
+              '03 - Piso Salarial: define que a base de cálculo deve ser calcul' +
+              'ada sobre o valor do piso salarial definido no cadastro de sindi' +
+              'catos'
+            
+              '04 - Líquido: define que a base de cálculo deve ser calculada so' +
+              'bre o líquido da folha')
+          ComboBoxLabel.Width = 79
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Caption = 'Base de Cálculo:'
+        end
+        object EditTaxa: TLabeledCalcEdit
+          Left = 238
+          Top = 204
+          Width = 121
+          Height = 21
+          DisplayFormat = '###,###,##0.00'
+          TabOrder = 6
+          CalcEditLabel.Width = 28
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Taxa:'
+        end
+        object EditCodigo: TLabeledEdit
+          Left = 16
+          Top = 30
+          Width = 71
+          Height = 21
+          EditLabel.Width = 37
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Código:'
+          TabOrder = 0
+        end
+        object EditNome: TLabeledEdit
+          Left = 93
+          Top = 30
+          Width = 840
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          EditLabel.Width = 31
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Nome:'
+          TabOrder = 1
+        end
+        object MemoDescricao: TLabeledMemo
+          Left = 16
+          Top = 74
+          Width = 917
+          Height = 67
+          Anchors = [akLeft, akTop, akRight]
+          TabOrder = 2
+          MemoLabel.Width = 50
+          MemoLabel.Height = 13
+          MemoLabel.Caption = 'Descrição:'
+        end
+        object ComboBoxTipo: TLabeledComboBox
+          Left = 16
+          Top = 204
+          Width = 105
+          Height = 21
+          Style = csDropDownList
+          ItemIndex = 0
+          TabOrder = 4
+          Text = 'P - Provento'
+          Items.Strings = (
+            'P - Provento'
+            'D - Desconto')
+          ComboBoxLabel.Width = 24
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Caption = 'Tipo:'
+        end
+        object ComboBoxUnidade: TLabeledComboBox
+          Left = 127
+          Top = 204
+          Width = 105
+          Height = 21
+          Style = csDropDownList
+          ItemIndex = 0
+          TabOrder = 5
+          Text = 'V - Valor'
+          Items.Strings = (
+            'V - Valor'
+            'P - Percentual ')
+          ComboBoxLabel.Width = 43
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Caption = 'Unidade:'
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 961
+    inherited BotaoSair: TSpeedButton
+      Left = 855
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 755
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 645
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 745
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 545
+    end
+  end
+end
+

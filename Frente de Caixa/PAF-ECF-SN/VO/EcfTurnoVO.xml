@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="EcfTurnoVO" table="ECF_TURNO" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">ECF_TURNO</param>
+      </generator>
+    </id>
+
+    <property name="Descricao" column="DESCRICAO" />
+    <property name="HoraInicio" column="HORA_INICIO" />
+    <property name="HoraFim" column="HORA_FIM" />
+
+  </class>
+</t2ti-orm-mapping>

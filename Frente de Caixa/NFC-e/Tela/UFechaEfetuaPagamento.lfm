@@ -1,0 +1,36 @@
+inherited FFechaEfetuaPagamento: TFFechaEfetuaPagamento
+  Left = 166
+  Top = 278
+  Width = 662
+  BorderStyle = bsNone
+  Caption = 'FFechaEfetuaPagamento'
+  ClientWidth = 662
+  KeyPreview = True
+  OnClick = FormClick
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  object Panel1: TPanel[0]
+    Left = 0
+    Height = 56
+    Top = 0
+    Width = 662
+    Align = alClient
+    Caption = 'Enter ou ESC para continuar'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -32
+    Font.Name = 'Verdana'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Timer1: TTimer[1]
+    Enabled = False
+    Interval = 1500
+    OnTimer = Timer1Timer
+    left = 40
+  end
+end

@@ -1,0 +1,442 @@
+inherited FVendaRomaneioEntrega: TFVendaRomaneioEntrega
+  Left = 339
+  Top = 168
+  Caption = 'Romaneio de Entrega'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 438
+        Width = 925
+        ClientHeight = 438
+        ClientWidth = 925
+        inherited PanelFiltroRapido: TPanel
+          Top = 384
+          Width = 925
+          ClientWidth = 925
+          inherited BotaoConsultar: TSpeedButton
+            Left = 791
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 624
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 386
+          Width = 925
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object GroupBoxParcelas: TGroupBox[0]
+          Left = 8
+          Height = 185
+          Top = 230
+          Width = 980
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          Caption = 'Vendas Vinculadas [F1]:'
+          ClientHeight = 167
+          ClientWidth = 976
+          TabOrder = 0
+          object GridParcelas: TRxDBGrid
+            Left = 0
+            Height = 136
+            Top = 31
+            Width = 976
+            TitleButtons = True
+            AutoSort = True
+            Columns = <            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'Id Venda'
+                Title.Orientation = toHorizontal
+                FieldName = 'ID'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'Nome Cliente'
+                Title.Orientation = toHorizontal
+                Width = 400
+                FieldName = 'CLIENTE.NOME'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'Data Venda'
+                Title.Orientation = toHorizontal
+                Width = 100
+                FieldName = 'DATA_VENDA'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'Valor Total'
+                Title.Orientation = toHorizontal
+                Width = 120
+                FieldName = 'VALOR_TOTAL'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end>
+            KeyStrokes = <            
+              item
+                Command = rxgcShowFindDlg
+                ShortCut = 16454
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowColumnsDlg
+                ShortCut = 16471
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowFilterDlg
+                ShortCut = 16468
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowSortDlg
+                ShortCut = 16467
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowQuickFilter
+                ShortCut = 16465
+                Enabled = True
+              end            
+              item
+                Command = rxgcHideQuickFilter
+                ShortCut = 16456
+                Enabled = True
+              end            
+              item
+                Command = rxgcSelectAll
+                ShortCut = 16449
+                Enabled = True
+              end            
+              item
+                Command = rxgcDeSelectAll
+                ShortCut = 16429
+                Enabled = True
+              end            
+              item
+                Command = rxgcInvertSelection
+                ShortCut = 16426
+                Enabled = True
+              end            
+              item
+                Command = rxgcOptimizeColumnsWidth
+                ShortCut = 16427
+                Enabled = True
+              end>
+            OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+            Align = alClient
+            Color = clWindow
+            DrawFullLine = False
+            FocusColor = clRed
+            SelectedColor = clHighlight
+            GridLineStyle = psSolid
+            DataSource = DSVenda
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgHeaderPushedLook]
+            ParentBiDiMode = False
+            ParentColor = False
+            ReadOnly = True
+            TabOrder = 0
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+            OnKeyDown = GridParcelasKeyDown
+          end
+          object ActionToolBar1: TToolPanel
+            Left = 0
+            Height = 31
+            Top = 0
+            Width = 976
+            Items = <            
+              item
+                Action = ActionAdicionarVenda
+                Visible = True
+                Left = 679
+                Height = 21
+                Top = 5
+                Width = 115
+                ShowCaption = True
+              end            
+              item
+                Action = ActionRemoverVenda
+                Visible = True
+                Left = 794
+                Height = 21
+                Top = 5
+                Width = 177
+                ShowCaption = True
+              end>
+            ImageList = FDataModule.ImagensCadastros
+            ToolBarStyle = tbsWindowsXP
+            Options = [tpFlatBtns]
+            ButtonAllign = tbaRignt
+            Align = alTop
+            BorderWidth = 4
+            ClientHeight = 31
+            ClientWidth = 976
+            Color = clMenuBar
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            ParentColor = False
+            ParentFont = False
+            TabOrder = 1
+          end
+        end
+        object ScrollBox1: TScrollBox[1]
+          Left = 2
+          Height = 213
+          Top = 2
+          Width = 995
+          HorzScrollBar.Page = 991
+          VertScrollBar.Page = 209
+          Anchors = [akTop, akLeft, akRight]
+          ClientHeight = 209
+          ClientWidth = 991
+          TabOrder = 1
+          object Bevel1: TBevel
+            Left = 8
+            Height = 191
+            Top = 10
+            Width = 968
+            Anchors = [akTop, akLeft, akRight]
+          end
+          object EditDescricao: TLabeledEdit
+            Left = 443
+            Height = 21
+            Top = 35
+            Width = 525
+            Anchors = [akTop, akLeft, akRight]
+            EditLabel.AnchorSideLeft.Control = EditDescricao
+            EditLabel.AnchorSideRight.Control = EditDescricao
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditDescricao
+            EditLabel.Left = 443
+            EditLabel.Height = 13
+            EditLabel.Top = 19
+            EditLabel.Width = 525
+            EditLabel.Caption = 'Descrição:'
+            EditLabel.ParentColor = False
+            MaxLength = 20
+            TabOrder = 2
+          end
+          object MemoObservacao: TLabeledMemo
+            Left = 17
+            Height = 65
+            Top = 124
+            Width = 951
+            Anchors = [akTop, akLeft, akRight]
+            ScrollBars = ssVertical
+            TabOrder = 8
+            MemoLabel.Left = 17
+            MemoLabel.Height = 13
+            MemoLabel.Top = 108
+            MemoLabel.Width = 62
+            MemoLabel.Caption = 'Observação:'
+            MemoLabel.ParentColor = False
+          end
+          object EditEntregador: TLabeledEdit
+            Left = 78
+            Height = 21
+            Top = 35
+            Width = 359
+            Color = clInfoBk
+            EditLabel.AnchorSideLeft.Control = EditEntregador
+            EditLabel.AnchorSideRight.Control = EditEntregador
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditEntregador
+            EditLabel.Left = 78
+            EditLabel.Height = 13
+            EditLabel.Top = 19
+            EditLabel.Width = 359
+            EditLabel.Caption = '  '
+            EditLabel.ParentColor = False
+            ReadOnly = True
+            TabOrder = 1
+            TabStop = False
+          end
+          object ComboBoxSituacao: TLabeledComboBox
+            Left = 17
+            Height = 21
+            Top = 79
+            Width = 134
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              'A - Aberto'
+              'T - Transito'
+              'E - Encerrado'
+            )
+            Style = csDropDownList
+            TabOrder = 3
+            Text = 'A - Aberto'
+            ComboBoxLabel.Left = 17
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 63
+            ComboBoxLabel.Width = 45
+            ComboBoxLabel.Caption = 'Situação:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object EditDataEmissao: TLabeledDateEdit
+            Left = 157
+            Height = 21
+            Top = 79
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 4
+            Text = '  /  /    '
+            DateEditLabel.Left = 157
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 63
+            DateEditLabel.Width = 68
+            DateEditLabel.Caption = 'Data Emissão:'
+            DateEditLabel.ParentColor = False
+          end
+          object EditDataPrevista: TLabeledDateEdit
+            Left = 284
+            Height = 21
+            Top = 79
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 5
+            Text = '  /  /    '
+            DateEditLabel.Left = 284
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 63
+            DateEditLabel.Width = 69
+            DateEditLabel.Caption = 'Data Prevista:'
+            DateEditLabel.ParentColor = False
+          end
+          object EditDataSaida: TLabeledDateEdit
+            Left = 411
+            Height = 21
+            Top = 79
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 6
+            Text = '  /  /    '
+            DateEditLabel.Left = 411
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 63
+            DateEditLabel.Width = 56
+            DateEditLabel.Caption = 'Data Saída:'
+            DateEditLabel.ParentColor = False
+          end
+          object EditIdEntregador: TLabeledCalcEdit
+            Left = 17
+            Height = 21
+            Top = 35
+            Width = 61
+            Alignment = taRightJustify
+            DisplayFormat = '#'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 0
+            Value = 0
+            OnKeyUp = EditIdEntregadorKeyUp
+            CalcEditLabel.Left = 17
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 19
+            CalcEditLabel.Width = 81
+            CalcEditLabel.Caption = 'Entregador [F1]:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditDataEncerramento: TLabeledDateEdit
+            Left = 538
+            Height = 21
+            Top = 79
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 7
+            Text = '  /  /    '
+            DateEditLabel.Left = 538
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 63
+            DateEditLabel.Width = 97
+            DateEditLabel.Caption = 'Data Encerramento:'
+            DateEditLabel.ParentColor = False
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+  object DSVenda: TDatasource[5]
+    DataSet = CDSVenda
+    left = 668
+    top = 392
+  end
+  object ActionManager1: TActionList[6]
+    Images = FDataModule.ImagensCadastros
+    left = 374
+    top = 411
+    object ActionAdicionarVenda: TAction
+      Caption = 'Adicionar Venda'
+      ImageIndex = 13
+      OnExecute = ActionAdicionarVendaExecute
+    end
+    object ActionRemoverVenda: TAction
+      Caption = 'Remover Venda Selecionada'
+      ImageIndex = 7
+      OnExecute = ActionRemoverVendaExecute
+    end
+  end
+  object CDSVenda: TBufDataset[7]
+    FieldDefs = <>
+    left = 746
+    top = 385
+  end
+end

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="EcfPosicaoComponentesVO" table="ECF_POSICAO_COMPONENTES" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">ECF_POSICAO_COMPONENTES</param>
+      </generator>
+    </id>
+
+    <property name="IdEcfResolucao" column="ID_ECF_RESOLUCAO" />
+    <property name="Nome" column="NOME" />
+    <property name="Altura" column="ALTURA" />
+    <property name="Largura" column="LARGURA" />
+    <property name="Topo" column="TOPO" />
+    <property name="Esquerda" column="ESQUERDA" />
+    <property name="TamanhoFonte" column="TAMANHO_FONTE" />
+    <property name="Texto" column="TEXTO" />
+
+  </class>
+</t2ti-orm-mapping>

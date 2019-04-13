@@ -1,0 +1,422 @@
+inherited FFinConfiguracaoBoleto: TFFinConfiguracaoBoleto
+  Left = 318
+  Top = 144
+  Caption = 'Configurações do Boleto Bancário'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 451
+        Width = 980
+        ClientHeight = 451
+        ClientWidth = 980
+        inherited PanelFiltroRapido: TPanel
+          Top = 397
+          Width = 980
+          ClientWidth = 980
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 679
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 399
+          Width = 980
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object PanelParcelas: TPanel[0]
+          Left = 4
+          Height = 421
+          Top = 4
+          Width = 992
+          Align = alClient
+          TabOrder = 1
+        end
+        object PanelMestre: TPanel[1]
+          Left = 8
+          Height = 362
+          Top = 10
+          Width = 974
+          Anchors = [akTop, akLeft, akRight]
+          BevelOuter = bvLowered
+          ClientHeight = 362
+          ClientWidth = 974
+          TabOrder = 0
+          object SpeedButton1: TSpeedButton
+            Left = 531
+            Height = 24
+            Top = 106
+            Width = 23
+            Caption = '...'
+            Flat = True
+            OnClick = SpeedButton1Click
+          end
+          object SpeedButton2: TSpeedButton
+            Left = 938
+            Height = 24
+            Top = 106
+            Width = 23
+            Anchors = [akTop, akRight]
+            Caption = '...'
+            Flat = True
+            OnClick = SpeedButton2Click
+          end
+          object SpeedButton3: TSpeedButton
+            Left = 531
+            Height = 24
+            Top = 149
+            Width = 23
+            Caption = '...'
+            Flat = True
+            OnClick = SpeedButton3Click
+          end
+          object SpeedButton4: TSpeedButton
+            Left = 938
+            Height = 24
+            Top = 149
+            Width = 23
+            Anchors = [akTop, akRight]
+            Caption = '...'
+            Flat = True
+            OnClick = SpeedButton4Click
+          end
+          object EditInstrucao01: TLabeledEdit
+            Left = 7
+            Height = 21
+            Top = 65
+            Width = 547
+            EditLabel.AnchorSideLeft.Control = EditInstrucao01
+            EditLabel.AnchorSideRight.Control = EditInstrucao01
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditInstrucao01
+            EditLabel.Left = 7
+            EditLabel.Height = 13
+            EditLabel.Top = 49
+            EditLabel.Width = 547
+            EditLabel.Caption = 'Instrução 01:'
+            EditLabel.ParentColor = False
+            TabOrder = 2
+          end
+          object EditTaxaMulta: TLabeledCalcEdit
+            Left = 757
+            Height = 21
+            Top = 326
+            Width = 121
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 16
+            Value = 0
+            CalcEditLabel.Left = 757
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 310
+            CalcEditLabel.Width = 57
+            CalcEditLabel.Caption = 'Taxa Multa:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditIdContaCaixa: TLabeledCalcEdit
+            Left = 7
+            Height = 21
+            Top = 22
+            Width = 61
+            Alignment = taRightJustify
+            DisplayFormat = '#'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 0
+            Value = 0
+            OnKeyUp = EditIdContaCaixaKeyUp
+            CalcEditLabel.Left = 7
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 6
+            CalcEditLabel.Width = 87
+            CalcEditLabel.Caption = 'Conta/Caixa [F1]:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditContaCaixa: TLabeledEdit
+            Left = 68
+            Height = 21
+            Top = 22
+            Width = 893
+            Anchors = [akTop, akLeft, akRight]
+            Color = clInfoBk
+            EditLabel.AnchorSideLeft.Control = EditContaCaixa
+            EditLabel.AnchorSideRight.Control = EditContaCaixa
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditContaCaixa
+            EditLabel.Left = 68
+            EditLabel.Height = 13
+            EditLabel.Top = 6
+            EditLabel.Width = 893
+            EditLabel.Caption = '  '
+            EditLabel.ParentColor = False
+            ReadOnly = True
+            TabOrder = 1
+            TabStop = False
+          end
+          object EditInstrucao02: TLabeledEdit
+            Left = 560
+            Height = 21
+            Top = 65
+            Width = 401
+            Anchors = [akTop, akLeft, akRight]
+            EditLabel.AnchorSideLeft.Control = EditInstrucao02
+            EditLabel.AnchorSideRight.Control = EditInstrucao02
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditInstrucao02
+            EditLabel.Left = 560
+            EditLabel.Height = 13
+            EditLabel.Top = 49
+            EditLabel.Width = 401
+            EditLabel.Caption = 'Instrução 02:'
+            EditLabel.ParentColor = False
+            TabOrder = 3
+          end
+          object EditCaminhoArquivoRemessa: TLabeledEdit
+            Left = 7
+            Height = 21
+            Top = 108
+            Width = 518
+            EditLabel.AnchorSideLeft.Control = EditCaminhoArquivoRemessa
+            EditLabel.AnchorSideRight.Control = EditCaminhoArquivoRemessa
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditCaminhoArquivoRemessa
+            EditLabel.Left = 7
+            EditLabel.Height = 13
+            EditLabel.Top = 92
+            EditLabel.Width = 518
+            EditLabel.Caption = 'Caminho do Arquivo de Remessa:'
+            EditLabel.ParentColor = False
+            TabOrder = 4
+          end
+          object EditCaminhoArquivoRetorno: TLabeledEdit
+            Left = 560
+            Height = 21
+            Top = 108
+            Width = 372
+            Anchors = [akTop, akLeft, akRight]
+            EditLabel.AnchorSideLeft.Control = EditCaminhoArquivoRetorno
+            EditLabel.AnchorSideRight.Control = EditCaminhoArquivoRetorno
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditCaminhoArquivoRetorno
+            EditLabel.Left = 560
+            EditLabel.Height = 13
+            EditLabel.Top = 92
+            EditLabel.Width = 372
+            EditLabel.Caption = 'Caminho do Arquivo de Retorno:'
+            EditLabel.ParentColor = False
+            TabOrder = 5
+          end
+          object EditCaminhoArquivoLogotipoBanco: TLabeledEdit
+            Left = 7
+            Height = 21
+            Top = 152
+            Width = 518
+            EditLabel.AnchorSideLeft.Control = EditCaminhoArquivoLogotipoBanco
+            EditLabel.AnchorSideRight.Control = EditCaminhoArquivoLogotipoBanco
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditCaminhoArquivoLogotipoBanco
+            EditLabel.Left = 7
+            EditLabel.Height = 13
+            EditLabel.Top = 136
+            EditLabel.Width = 518
+            EditLabel.Caption = 'Caminho do Arquivo de Logotipo do Banco:'
+            EditLabel.ParentColor = False
+            TabOrder = 6
+          end
+          object EditCaminhoArquivoPdfBoleto: TLabeledEdit
+            Left = 560
+            Height = 21
+            Top = 152
+            Width = 372
+            Anchors = [akTop, akLeft, akRight]
+            EditLabel.AnchorSideLeft.Control = EditCaminhoArquivoPdfBoleto
+            EditLabel.AnchorSideRight.Control = EditCaminhoArquivoPdfBoleto
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditCaminhoArquivoPdfBoleto
+            EditLabel.Left = 560
+            EditLabel.Height = 13
+            EditLabel.Top = 136
+            EditLabel.Width = 372
+            EditLabel.Caption = 'Caminho do Arquivo de Geração do PDF do Boleto:'
+            EditLabel.ParentColor = False
+            TabOrder = 7
+          end
+          object MemoMensagem: TLabeledMemo
+            Left = 7
+            Height = 57
+            Top = 198
+            Width = 954
+            Anchors = [akTop, akLeft, akRight]
+            TabOrder = 8
+            MemoLabel.Left = 7
+            MemoLabel.Height = 13
+            MemoLabel.Top = 182
+            MemoLabel.Width = 55
+            MemoLabel.Caption = 'Mensagem:'
+            MemoLabel.ParentColor = False
+          end
+          object EditLocalPagamento: TLabeledEdit
+            Left = 7
+            Height = 21
+            Top = 278
+            Width = 954
+            Anchors = [akTop, akLeft, akRight]
+            EditLabel.AnchorSideLeft.Control = EditLocalPagamento
+            EditLabel.AnchorSideRight.Control = EditLocalPagamento
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditLocalPagamento
+            EditLabel.Left = 7
+            EditLabel.Height = 13
+            EditLabel.Top = 262
+            EditLabel.Width = 954
+            EditLabel.Caption = 'Local Pagamento:'
+            EditLabel.ParentColor = False
+            TabOrder = 9
+          end
+          object ComboBoxLayoutRemessa: TLabeledComboBox
+            Left = 7
+            Height = 21
+            Top = 326
+            Width = 79
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              '240'
+              '400'
+            )
+            Style = csDropDownList
+            TabOrder = 10
+            Text = '240'
+            ComboBoxLabel.Left = 7
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 310
+            ComboBoxLabel.Width = 67
+            ComboBoxLabel.Caption = 'Layout CNAB:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object ComboBoxAceite: TLabeledComboBox
+            Left = 92
+            Height = 21
+            Top = 326
+            Width = 79
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              'Sim'
+              'Não'
+            )
+            Style = csDropDownList
+            TabOrder = 11
+            Text = 'Sim'
+            ComboBoxLabel.Left = 92
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 310
+            ComboBoxLabel.Width = 34
+            ComboBoxLabel.Caption = 'Aceite:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object ComboBoxEspecie: TLabeledComboBox
+            Left = 177
+            Height = 21
+            Top = 326
+            Width = 150
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              'DM-Duplicata Mercantil'
+              'DS-Duplicata de Serviços'
+              'RC-Recibo'
+              'NP-Nota Promissória'
+            )
+            Style = csDropDownList
+            TabOrder = 12
+            Text = 'DM-Duplicata Mercantil'
+            ComboBoxLabel.Left = 177
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 310
+            ComboBoxLabel.Width = 40
+            ComboBoxLabel.Caption = 'Espécie:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object EditCarteira: TLabeledEdit
+            Left = 333
+            Height = 21
+            Top = 326
+            Width = 66
+            EditLabel.AnchorSideLeft.Control = EditCarteira
+            EditLabel.AnchorSideRight.Control = EditCarteira
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditCarteira
+            EditLabel.Left = 333
+            EditLabel.Height = 13
+            EditLabel.Top = 310
+            EditLabel.Width = 66
+            EditLabel.Caption = 'Carteira:'
+            EditLabel.ParentColor = False
+            MaxLength = 3
+            TabOrder = 13
+          end
+          object EditCodigoConvenio: TLabeledEdit
+            Left = 405
+            Height = 21
+            Top = 326
+            Width = 170
+            EditLabel.AnchorSideLeft.Control = EditCodigoConvenio
+            EditLabel.AnchorSideRight.Control = EditCodigoConvenio
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditCodigoConvenio
+            EditLabel.Left = 405
+            EditLabel.Height = 13
+            EditLabel.Top = 310
+            EditLabel.Width = 170
+            EditLabel.Caption = 'Código Convênio:'
+            EditLabel.ParentColor = False
+            MaxLength = 20
+            TabOrder = 14
+          end
+          object EditCodigoCedente: TLabeledEdit
+            Left = 581
+            Height = 21
+            Top = 326
+            Width = 170
+            EditLabel.AnchorSideLeft.Control = EditCodigoCedente
+            EditLabel.AnchorSideRight.Control = EditCodigoCedente
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditCodigoCedente
+            EditLabel.Left = 581
+            EditLabel.Height = 13
+            EditLabel.Top = 310
+            EditLabel.Width = 170
+            EditLabel.Caption = 'Código Cedente:'
+            EditLabel.ParentColor = False
+            MaxLength = 20
+            TabOrder = 15
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+end

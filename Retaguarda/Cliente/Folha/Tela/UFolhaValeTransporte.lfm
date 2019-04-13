@@ -1,0 +1,151 @@
+inherited FFolhaValeTransporte: TFFolhaValeTransporte
+  Tag = 1
+  Left = 444
+  Height = 307
+  Top = 228
+  Width = 910
+  Caption = 'Vale Transporte'
+  ClientHeight = 307
+  ClientWidth = 910
+  inherited PageControl: TPageControl
+    Height = 276
+    Width = 910
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 250
+      ClientWidth = 902
+      inherited PanelEdits: TPanel
+        Height = 250
+        Width = 902
+        ClientHeight = 250
+        ClientWidth = 902
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 149
+          Top = 10
+          Width = 877
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditIdColaborador: TLabeledCalcEdit[1]
+          Left = 16
+          Height = 21
+          Top = 33
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 0
+          Value = 0
+          OnKeyUp = EditIdColaboradorKeyUp
+          CalcEditLabel.Left = 16
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 17
+          CalcEditLabel.Width = 63
+          CalcEditLabel.Caption = 'Colaborador:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditColaborador: TLabeledEdit[2]
+          Left = 77
+          Height = 21
+          Top = 33
+          Width = 799
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditColaborador
+          EditLabel.AnchorSideRight.Control = EditColaborador
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditColaborador
+          EditLabel.Left = 77
+          EditLabel.Height = 13
+          EditLabel.Top = 17
+          EditLabel.Width = 799
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 1
+          TabStop = False
+        end
+        object EditIdItinerario: TLabeledCalcEdit[3]
+          Left = 16
+          Height = 21
+          Top = 79
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 2
+          Value = 0
+          OnKeyUp = EditIdItinerarioKeyUp
+          CalcEditLabel.Left = 16
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 63
+          CalcEditLabel.Width = 48
+          CalcEditLabel.Caption = 'Itinerário:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditItinerario: TLabeledEdit[4]
+          Left = 77
+          Height = 21
+          Top = 79
+          Width = 799
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditItinerario
+          EditLabel.AnchorSideRight.Control = EditItinerario
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditItinerario
+          EditLabel.Left = 77
+          EditLabel.Height = 13
+          EditLabel.Top = 63
+          EditLabel.Width = 799
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 3
+          TabStop = False
+        end
+        object EditQuantidade: TLabeledCalcEdit[5]
+          Left = 16
+          Height = 21
+          Top = 125
+          Width = 82
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 4
+          Value = 0
+          CalcEditLabel.Left = 16
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 109
+          CalcEditLabel.Width = 60
+          CalcEditLabel.Caption = 'Quantidade:'
+          CalcEditLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 910
+    ClientWidth = 910
+    inherited BotaoSair: TSpeedButton
+      Left = 810
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 610
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 710
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 563
+    end
+  end
+end

@@ -1,0 +1,131 @@
+inherited FPontoClassificacaoJornada: TFPontoClassificacaoJornada
+  Tag = 1
+  Left = 318
+  Top = 203
+  Caption = 'Classificação Jornada'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 953
+        ClientWidth = 953
+        inherited PanelFiltroRapido: TPanel
+          Width = 953
+          ClientWidth = 953
+          inherited BotaoConsultar: TSpeedButton
+            Left = 819
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 652
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 953
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 145
+          Top = 9
+          Width = 982
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditCodigo: TLabeledEdit[1]
+          Left = 16
+          Height = 21
+          Top = 30
+          Width = 55
+          EditLabel.AnchorSideLeft.Control = EditCodigo
+          EditLabel.AnchorSideRight.Control = EditCodigo
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditCodigo
+          EditLabel.Left = 16
+          EditLabel.Height = 13
+          EditLabel.Top = 14
+          EditLabel.Width = 55
+          EditLabel.Caption = 'Código:'
+          EditLabel.ParentColor = False
+          MaxLength = 3
+          TabOrder = 0
+        end
+        object EditNome: TLabeledEdit[2]
+          Left = 77
+          Height = 21
+          Top = 30
+          Width = 794
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditNome
+          EditLabel.AnchorSideRight.Control = EditNome
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditNome
+          EditLabel.Left = 77
+          EditLabel.Height = 13
+          EditLabel.Top = 14
+          EditLabel.Width = 794
+          EditLabel.Caption = 'Nome:'
+          EditLabel.ParentColor = False
+          TabOrder = 1
+        end
+        object MemoDescricao: TLabeledMemo[3]
+          Left = 16
+          Height = 67
+          Top = 76
+          Width = 963
+          Anchors = [akTop, akLeft, akRight]
+          TabOrder = 3
+          MemoLabel.Left = 16
+          MemoLabel.Height = 13
+          MemoLabel.Top = 60
+          MemoLabel.Width = 50
+          MemoLabel.Caption = 'Descrição:'
+          MemoLabel.ParentColor = False
+        end
+        object ComboBoxDescontarHoras: TLabeledComboBox[4]
+          Left = 877
+          Height = 21
+          Top = 30
+          Width = 102
+          Anchors = [akTop, akRight]
+          ItemHeight = 13
+          ItemIndex = 1
+          Items.Strings = (
+            'Sim'
+            'Não'
+          )
+          Style = csDropDownList
+          TabOrder = 2
+          Text = 'Não'
+          ComboBoxLabel.Left = 877
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 14
+          ComboBoxLabel.Width = 84
+          ComboBoxLabel.Caption = 'Descontar Horas:'
+          ComboBoxLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+end

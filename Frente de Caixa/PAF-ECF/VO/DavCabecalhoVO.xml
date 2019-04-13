@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="DavCabecalhoVO" table="DAV_CABECALHO" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">DAV_CABECALHO</param>
+      </generator>
+    </id>
+
+    <property name="IdEmpresa" column="ID_EMPRESA" />
+    <property name="IdPessoa" column="ID_PESSOA" />
+    <property name="NumeroDav" column="NUMERO_DAV" />
+    <property name="NumeroEcf" column="NUMERO_ECF" />
+    <property name="Ccf" column="CCF" />
+    <property name="Coo" column="COO" />
+    <property name="NomeDestinatario" column="NOME_DESTINATARIO" />
+    <property name="CpfCnpjDestinatario" column="CPF_CNPJ_DESTINATARIO" />
+    <property name="DataEmissao" column="DATA_EMISSAO" />
+    <property name="HoraEmissao" column="HORA_EMISSAO" />
+    <property name="Situacao" column="SITUACAO" />
+    <property name="TaxaAcrescimo" column="TAXA_ACRESCIMO" />
+    <property name="Acrescimo" column="ACRESCIMO" />
+    <property name="TaxaDesconto" column="TAXA_DESCONTO" />
+    <property name="Desconto" column="DESCONTO" />
+    <property name="Subtotal" column="SUBTOTAL" />
+    <property name="Valor" column="VALOR" />
+    <property name="Impresso" column="IMPRESSO" />
+    <property name="HashRegistro" column="LOGSS" />
+
+  </class>
+</t2ti-orm-mapping>

@@ -1,0 +1,442 @@
+inherited FConciliaContabilLancamento: TFConciliaContabilLancamento
+  Left = 318
+  Top = 203
+  Caption = 'Concilia Lançamento Contábil'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 980
+        ClientWidth = 980
+        inherited PanelFiltroRapido: TPanel
+          Width = 980
+          ClientWidth = 980
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 679
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 980
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object PanelMestre: TPanel[0]
+          Left = 10
+          Height = 101
+          Top = 12
+          Width = 979
+          Anchors = [akTop, akLeft, akRight]
+          BevelOuter = bvLowered
+          ClientHeight = 101
+          ClientWidth = 979
+          TabOrder = 0
+          object EditIdLote: TLabeledCalcEdit
+            Left = 9
+            Height = 21
+            Top = 24
+            Width = 61
+            Alignment = taRightJustify
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 0
+            Value = 0
+            CalcEditLabel.Left = 9
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 8
+            CalcEditLabel.Width = 25
+            CalcEditLabel.Caption = 'Lote:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditLote: TLabeledEdit
+            Left = 70
+            Height = 21
+            Top = 24
+            Width = 898
+            Anchors = [akTop, akLeft, akRight]
+            Color = clInfoBk
+            EditLabel.AnchorSideLeft.Control = EditLote
+            EditLabel.AnchorSideRight.Control = EditLote
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditLote
+            EditLabel.Left = 70
+            EditLabel.Height = 13
+            EditLabel.Top = 8
+            EditLabel.Width = 898
+            EditLabel.Caption = '  '
+            EditLabel.ParentColor = False
+            ReadOnly = True
+            TabOrder = 1
+            TabStop = False
+          end
+          object ComboBoxTipo: TLabeledComboBox
+            Left = 343
+            Height = 21
+            Top = 68
+            Width = 625
+            Anchors = [akTop, akLeft, akRight]
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              'UDVC - Um Débito para Vários Créditos'
+              'UCVD - Um Crédito para Vários Débitos'
+              'UDUC - Um Débito para Um Crédito'
+              'VDVC - Vários Débitos para Vários Créditos'
+            )
+            Style = csDropDownList
+            TabOrder = 5
+            Text = 'UDVC - Um Débito para Vários Créditos'
+            ComboBoxLabel.Left = 343
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 52
+            ComboBoxLabel.Width = 24
+            ComboBoxLabel.Caption = 'Tipo:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object EditDataLancamento: TLabeledDateEdit
+            Left = 9
+            Height = 21
+            Top = 68
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 2
+            Text = '  /  /    '
+            DateEditLabel.Left = 9
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 52
+            DateEditLabel.Width = 88
+            DateEditLabel.Caption = 'Data Lançamento:'
+            DateEditLabel.ParentColor = False
+          end
+          object EditDataInclusao: TLabeledDateEdit
+            Left = 136
+            Height = 21
+            Top = 68
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 3
+            Text = '  /  /    '
+            DateEditLabel.Left = 136
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 52
+            DateEditLabel.Width = 70
+            DateEditLabel.Caption = 'Data Inclusão:'
+            DateEditLabel.ParentColor = False
+          end
+          object ComboBoxLiberado: TLabeledComboBox
+            Left = 263
+            Height = 21
+            Top = 68
+            Width = 74
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              'Sim'
+              'Não'
+            )
+            Style = csDropDownList
+            TabOrder = 4
+            Text = 'Sim'
+            ComboBoxLabel.Left = 263
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 52
+            ComboBoxLabel.Width = 45
+            ComboBoxLabel.Caption = 'Liberado:'
+            ComboBoxLabel.ParentColor = False
+          end
+        end
+        object PageControlItens: TPageControl[1]
+          Left = 10
+          Height = 259
+          Top = 128
+          Width = 979
+          ActivePage = tsItens
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          TabIndex = 0
+          TabOrder = 1
+          object tsItens: TTabSheet
+            Caption = 'Detalhe'
+            ClientHeight = 233
+            ClientWidth = 971
+            object PanelItens: TPanel
+              Left = 0
+              Height = 233
+              Top = 0
+              Width = 971
+              Align = alClient
+              BevelOuter = bvNone
+              ClientHeight = 233
+              ClientWidth = 971
+              TabOrder = 0
+              object GridDetalhe: TRxDBGrid
+                Left = 0
+                Height = 233
+                Top = 0
+                Width = 971
+                TitleButtons = True
+                AutoSort = True
+                Columns = <                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Id Conta'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'ID_CONTABIL_CONTA'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Classificação'
+                    Title.Orientation = toHorizontal
+                    Width = 100
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Histórico'
+                    Title.Orientation = toHorizontal
+                    Width = 550
+                    FieldName = 'HISTORICO'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Tipo (C/D)'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'TIPO'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Valor'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'VALOR'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Alignment = taCenter
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Conciliado'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'CONCILIADO'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end>
+                KeyStrokes = <                
+                  item
+                    Command = rxgcShowFindDlg
+                    ShortCut = 16454
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowColumnsDlg
+                    ShortCut = 16471
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowFilterDlg
+                    ShortCut = 16468
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowSortDlg
+                    ShortCut = 16467
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowQuickFilter
+                    ShortCut = 16465
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcHideQuickFilter
+                    ShortCut = 16456
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcSelectAll
+                    ShortCut = 16449
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcDeSelectAll
+                    ShortCut = 16429
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcInvertSelection
+                    ShortCut = 16426
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcOptimizeColumnsWidth
+                    ShortCut = 16427
+                    Enabled = True
+                  end>
+                OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                Align = alClient
+                Color = clWindow
+                DrawFullLine = False
+                FocusColor = clRed
+                SelectedColor = clHighlight
+                GridLineStyle = psSolid
+                DataSource = DSContabilLancamentoDetalhe
+                Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgHeaderPushedLook]
+                ParentColor = False
+                TabOrder = 0
+                TitleFont.Color = clWindowText
+                TitleFont.Height = -11
+                TitleFont.Name = 'Tahoma'
+              end
+            end
+          end
+        end
+        object ActionToolBar1: TToolPanel[2]
+          Left = 4
+          Height = 31
+          Top = 394
+          Width = 992
+          Items = <          
+            item
+              Action = ActionComplementacao
+              Visible = True
+              Left = 864
+              Height = 21
+              Top = 5
+              Width = 123
+              ShowCaption = True
+            end          
+            item
+              Action = ActionConciliacao
+              Visible = True
+              Left = 774
+              Height = 21
+              Top = 5
+              Width = 90
+              ShowCaption = True
+            end          
+            item
+              Action = ActionEstorno
+              Visible = True
+              Left = 607
+              Height = 21
+              Top = 5
+              Width = 68
+              ShowCaption = True
+            end          
+            item
+              Action = Transferencia
+              Visible = True
+              Left = 675
+              Height = 21
+              Top = 5
+              Width = 99
+              ShowCaption = True
+            end>
+          ImageList = FDataModule.ImagensCadastros
+          ToolBarStyle = tbsWindowsXP
+          Options = [tpFlatBtns]
+          ButtonAllign = tbaRignt
+          Align = alBottom
+          BorderWidth = 4
+          ClientHeight = 31
+          ClientWidth = 992
+          Color = clMenuBar
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          ParentColor = False
+          ParentFont = False
+          TabOrder = 2
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+  object DSContabilLancamentoDetalhe: TDatasource[5]
+    DataSet = CDSContabilLancamentoDetalhe
+    left = 88
+    top = 280
+  end
+  object ActionManager1: TActionList[6]
+    Images = FDataModule.ImagensCadastros
+    left = 815
+    top = 278
+    object ActionConciliacao: TAction
+      Caption = 'Conciliação'
+      ImageIndex = 9
+      OnExecute = ActionConciliacaoExecute
+    end
+    object ActionEstorno: TAction
+      Caption = 'Estorno'
+      ImageIndex = 2
+      OnExecute = ActionEstornoExecute
+    end
+    object Transferencia: TAction
+      Caption = 'Transferência'
+      ImageIndex = 8
+      OnExecute = TransferenciaExecute
+    end
+    object ActionComplementacao: TAction
+      Caption = 'Complementação'
+      ImageIndex = 19
+      OnExecute = ActionComplementacaoExecute
+    end
+  end
+  object CDSContabilLancamentoDetalhe: TBufDataset[7]
+    FieldDefs = <>
+    left = 219
+    top = 291
+  end
+end

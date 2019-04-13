@@ -1,0 +1,159 @@
+inherited FContaCaixa: TFContaCaixa
+  inherited PageControl: TPageControl
+    Width = 988
+    ActivePage = PaginaEdits
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 980
+        inherited Grid: TJvDBUltimGrid
+          Width = 980
+        end
+        inherited PanelFiltroRapido: TPanel
+          Width = 980
+          inherited BotaoConsultar: TSpeedButton
+            ExplicitLeft = 825
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 679
+            ExplicitWidth = 679
+          end
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      inherited PanelEdits: TPanel
+        Width = 980
+        object BevelEdits: TBevel
+          Left = 8
+          Top = 8
+          Width = 957
+          Height = 267
+          Anchors = [akLeft, akTop, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditCodigo: TLabeledEdit
+          Left = 15
+          Top = 82
+          Width = 90
+          Height = 21
+          Constraints.MinWidth = 90
+          EditLabel.Width = 37
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Código:'
+          TabOrder = 2
+        end
+        object EditNome: TLabeledEdit
+          Left = 151
+          Top = 82
+          Width = 656
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          EditLabel.Width = 31
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Nome:'
+          TabOrder = 4
+        end
+        object EditAgenciaBanco: TLabeledEdit
+          Left = 76
+          Top = 31
+          Width = 879
+          Height = 21
+          TabStop = False
+          Anchors = [akLeft, akTop, akRight]
+          Color = clInfoBk
+          EditLabel.Width = 6
+          EditLabel.Height = 13
+          EditLabel.Caption = '  '
+          ReadOnly = True
+          TabOrder = 1
+        end
+        object MemoDescricao: TLabeledMemo
+          Left = 15
+          Top = 170
+          Width = 940
+          Height = 89
+          Anchors = [akLeft, akTop, akRight]
+          ScrollBars = ssVertical
+          TabOrder = 7
+          MemoLabel.Width = 50
+          MemoLabel.Height = 13
+          MemoLabel.Caption = 'Descrição:'
+        end
+        object EditIdAgenciaBanco: TLabeledCalcEdit
+          Left = 15
+          Top = 31
+          Width = 61
+          Height = 21
+          ShowButton = False
+          TabOrder = 0
+          DecimalPlacesAlwaysShown = False
+          OnKeyUp = EditIdAgenciaBancoKeyUp
+          CalcEditLabel.Width = 97
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Agência Banco [F1]:'
+        end
+        object ComboboxTipo: TLabeledComboBox
+          Left = 813
+          Top = 82
+          Width = 142
+          Height = 21
+          Style = csDropDownList
+          Anchors = [akTop, akRight]
+          ItemIndex = 0
+          TabOrder = 5
+          Text = 'C - Corrente'
+          Items.Strings = (
+            'C - Corrente'
+            'P - Poupança'
+            'I - Investimento'
+            'X - Caixa Interno')
+          ComboBoxLabel.Width = 24
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Caption = 'Tipo:'
+        end
+        object EditDigito: TLabeledEdit
+          Left = 111
+          Top = 82
+          Width = 34
+          Height = 21
+          EditLabel.Width = 31
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Dígito:'
+          MaxLength = 1
+          TabOrder = 3
+        end
+        object EditClassificacaoContabilConta: TLabeledEdit
+          Left = 15
+          Top = 127
+          Width = 940
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          EditLabel.Width = 177
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Classificação da Conta Contábil [F1]:'
+          MaxLength = 30
+          TabOrder = 6
+          OnKeyUp = EditClassificacaoContabilContaKeyUp
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 988
+    inherited BotaoSair: TSpeedButton
+      Left = 882
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 782
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 672
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 772
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 572
+    end
+  end
+end

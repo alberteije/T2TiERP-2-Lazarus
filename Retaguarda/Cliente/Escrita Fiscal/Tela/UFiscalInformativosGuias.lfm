@@ -1,0 +1,352 @@
+object FFiscalInformativosGuias: TFFiscalInformativosGuias
+  Left = 419
+  Height = 275
+  Top = 305
+  Width = 662
+  BorderStyle = bsDialog
+  Caption = 'Informativos e Guias'
+  ClientHeight = 275
+  ClientWidth = 662
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Position = poDesktopCenter
+  LCLVersion = '1.2.0.3'
+  object PanelCabecalho: TPanel
+    Left = 0
+    Height = 65
+    Top = 0
+    Width = 662
+    Align = alTop
+    ClientHeight = 65
+    ClientWidth = 662
+    Color = 14537936
+    ParentColor = False
+    TabOrder = 0
+    object Bevel1: TBevel
+      Left = 61
+      Height = 6
+      Top = 50
+      Width = 595
+    end
+    object Image1: TImage
+      Left = 7
+      Height = 49
+      Top = 7
+      Width = 48
+      ParentShowHint = False
+      Picture.Data = {
+        1754506F727461626C654E6574776F726B47726170686963E705000089504E47
+        0D0A1A0A0000000D49484452000000300000003008060000005702F987000000
+        097048597300000B1300000B1301009A9C180000000467414D410000B18E7CFB
+        5193000000206348524D00007A25000080830000F9FF000080E9000075300000
+        EA6000003A980000176F925FC5460000055D4944415478DA62FCFFFF3F033258
+        B5EF12AA0015012323030392751380B831DC59FF03317AD1DD09030001C488CD
+        03614E7A34F1C0DB8F5F197EFFF9CB70F3E14B86EF3F7F317CFAFEF70250D891
+        184FE0F20040003131D01108F373334808F33158E9293170B0303188F0B01A00
+        85F7AFDC7B51805C33010288AE1E80015616660651217E06113E7606616E168A
+        3C01104003E201109010E167F8CBC0CCA02D2FC420C4CD4CB627000288851845
+        E95513180CB49419DEBEFFC46069A4C570E1FA5D062E0E76064E204606BECE16
+        0CC2827C4427A71BF79F33F0F1893268CBFD67B8F2F0ADC1FB6FFF409E702436
+        6383004000911403204F1C3F778D41565294414D5186E1ED874F607175251988
+        A388743CA2546264606767077A828F414B569041909389E498000820A2620014
+        B2A090070119A0E3410E7DF2FC35581C041E3F7BCD20021403C510499E007A80
+        9999998183838341404080411358D25C7BF4DEE0C38FFFF7A131718190110001
+        44D762141D1CB9788FC1465F095C44FEFDFB97E1C78F1F0CEFDEBD63B8FEE403
+        C3C71F0C1FA045EC057CC5284000B10C5426FEF5FB2FC39D472F198E9DB9CAF0
+        FBF76F0671617E0636561606413E2E0629612EA083FF087CFAC9B89F504C0004
+        100B3115C7AC59B3188C8D8D195EBF7ECDF0EDDB3786376FDE30C8C9C981E534
+        353519E4E5E5093AF8F0E1C30C0F1F3E04ABFDFAF52B980E76D061D8B3670F03
+        03331B8390081FC3B7EF3F18DE7F7CCF70F8D173065E2E0E06513111811FFF58
+        C09E001A81D513000144540C5CBF7E1DEE781006399E9B9B1B2C0EE213E3012E
+        2E2E8643870E31888A8A82D9200F05050531AC59B3062C565151014E4220FCFD
+        FB778697EFBE303C7EF192415C424CE0FB5F967E5072C2662E4000E1CC03B8D2
+        1CB900146BA09087B1411EB7B5B505C70A08800205240672FCAF5FBFC01EF9F2
+        F53BC39E33F719B8F9781932421C18B1990B104074CB03222222600C02C83186
+        CC06C52A28767EFEFC09F6000FCF2F0613EDBF0C87CEDDC6692E400011E581E3
+        571F11ED504B6D39AA9801AA1F402593F48FBF0C1F3F9CC1A916208088CAC416
+        5AB2445B8E2BE9916306A88E00D53BA064850B0004D080B58588051C6CAC0C7F
+        FEFCC1290F10404425A113D71E136D21AE90A68619D8004000B150DB405A9A81
+        0D0004100BA96979B0018000626218E2002080884A426B0F5EA5ABA382EDB589
+        560B1040442721255909FC8DB39FDF19D8D839C99687817B8F5F90947C010288
+        E89AF8E89ECD0C0282C20CEC9C9C0C3F81E5F28F1F40FCFD1B58CCCCC609EC40
+        6E4E0E865347F631F003C53880EA4034481EE601903C087CF9FC918187971FC5
+        7C6C62C4008000222913DFBC7A11EC010E0E4848821CF7E0DE2D06536B47B81E
+        101FE4C197CF1F33C829A93184C6A6A398F9F8FE6D863347F6403CF5EB2783A0
+        8818C3D74F1FC11E88CDAA20B900010820A263C0D4D605ABB82E107FF808E9C2
+        826857BF701479981C8CCD2B24CAE0E81789D52C64B5C4028000223A064CD424
+        F11A74E6D673BC6A08C9C3C093571F498A0180001AF2C5284000111D03C4840A
+        2135C4862C2931001040447BE0ECED17040D23A486183348F5004000119D898D
+        54C4F1CA9FBBF312AF1A42F2C8798014001040433E090104D090F70040000DF9
+        52082080888E812D27EE509C7E894DDFA4C400400011E5012F3325BA862A291E
+        0008A021DFA1010820A23C70E5D17BA20DD49113A4AB07000288280F68CB0AD0
+        24FAA901000268C89742000144540C5C7B427CEDA825C34F570F0004104E0FFC
+        FBF70FCED690E225DA40647DF400000134E44B2180001AF21E0008A021EF0180
+        001AF21E0008209C1E1013131B121E0008200C0F8086B2272FDBCDF0F6ED5B86
+        4F9F3E83674A40130D8315000418009B1F646AB7C1646F0000000049454E44AE
+        426082
+      }
+      Transparent = True
+    end
+    object Label2: TLabel
+      Left = 62
+      Height = 23
+      Top = 24
+      Width = 200
+      Caption = 'Informativos e Guias'
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object ActionToolBarPrincipal: TToolPanel
+    Left = 0
+    Height = 31
+    Top = 244
+    Width = 662
+    Items = <    
+      item
+        Action = ActionGerarDarf
+        Visible = True
+        Left = 499
+        Height = 21
+        Top = 5
+        Width = 88
+        ShowCaption = True
+      end    
+      item
+        Action = ActionSair
+        Visible = True
+        Left = 587
+        Height = 21
+        Top = 5
+        Width = 70
+        ShowCaption = True
+      end>
+    ImageList = FDataModule.ImagensCadastros
+    ToolBarStyle = tbsWindowsXP
+    Options = [tpFlatBtns]
+    ButtonAllign = tbaRignt
+    Align = alBottom
+    BorderWidth = 4
+    ClientHeight = 31
+    ClientWidth = 662
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    ParentFont = False
+    TabOrder = 1
+  end
+  object PageControlItens: TPageControl
+    Left = 0
+    Height = 179
+    Top = 65
+    Width = 662
+    ActivePage = tsGuias
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 2
+    object tsGuias: TTabSheet
+      Caption = 'Guias'
+      ClientHeight = 153
+      ClientWidth = 654
+      ImageIndex = 3
+      object Panel1: TPanel
+        Left = 0
+        Height = 153
+        Top = 0
+        Width = 654
+        Align = alClient
+        BevelOuter = bvNone
+        ClientHeight = 153
+        ClientWidth = 654
+        TabOrder = 0
+        object GroupBox10: TGroupBox
+          Left = 7
+          Height = 133
+          Top = 4
+          Width = 636
+          Caption = 'DARF:'
+          ClientHeight = 115
+          ClientWidth = 632
+          TabOrder = 0
+          object EditValorMulta: TLabeledCalcEdit
+            Left = 139
+            Height = 21
+            Top = 80
+            Width = 121
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 5
+            Value = 0
+            CalcEditLabel.Left = 139
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 64
+            CalcEditLabel.Width = 57
+            CalcEditLabel.Caption = 'Valor Multa:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditValorJuros: TLabeledCalcEdit
+            Left = 266
+            Height = 21
+            Top = 80
+            Width = 121
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 6
+            Value = 0
+            CalcEditLabel.Left = 266
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 64
+            CalcEditLabel.Width = 57
+            CalcEditLabel.Caption = 'Valor Juros:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditDataVencimento: TLabeledDateEdit
+            Left = 139
+            Height = 21
+            Top = 32
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 1
+            Text = '  /  /    '
+            DateEditLabel.Left = 139
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 16
+            DateEditLabel.Width = 85
+            DateEditLabel.Caption = 'Data Vencimento:'
+            DateEditLabel.ParentColor = False
+          end
+          object EditPeriodoApuracao: TLabeledDateEdit
+            Left = 12
+            Height = 21
+            Top = 32
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 0
+            Text = '  /  /    '
+            DateEditLabel.Left = 12
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 16
+            DateEditLabel.Width = 89
+            DateEditLabel.Caption = 'Período Apuração:'
+            DateEditLabel.ParentColor = False
+          end
+          object EditCodigoReceita: TLabeledMaskEdit
+            Left = 266
+            Height = 21
+            Top = 32
+            Width = 105
+            CharCase = ecNormal
+            MaxLength = 4
+            TabOrder = 2
+            EditMask = '####'
+            Text = '    '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 266
+            MaskEditLabel.Height = 13
+            MaskEditLabel.Top = 16
+            MaskEditLabel.Width = 76
+            MaskEditLabel.Caption = 'Codigo Receita:'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditNumeroReferencia: TLabeledMaskEdit
+            Left = 377
+            Height = 21
+            Top = 32
+            Width = 248
+            CharCase = ecNormal
+            MaxLength = 0
+            TabOrder = 3
+            SpaceChar = '_'
+            MaskEditLabel.Left = 377
+            MaskEditLabel.Height = 13
+            MaskEditLabel.Top = 16
+            MaskEditLabel.Width = 96
+            MaskEditLabel.Caption = 'Numero Referencia:'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditValorPrincipal: TLabeledCalcEdit
+            Left = 12
+            Height = 21
+            Top = 80
+            Width = 121
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 4
+            Value = 0
+            CalcEditLabel.Left = 12
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 64
+            CalcEditLabel.Width = 70
+            CalcEditLabel.Caption = 'Valor Principal:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditValorTotal: TLabeledCalcEdit
+            Left = 393
+            Height = 21
+            Top = 80
+            Width = 121
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 7
+            Value = 0
+            CalcEditLabel.Left = 393
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 64
+            CalcEditLabel.Width = 55
+            CalcEditLabel.Caption = 'Valor Total:'
+            CalcEditLabel.ParentColor = False
+          end
+        end
+      end
+    end
+  end
+  object ActionManagerLocal: TActionList
+    Images = FDataModule.ImagensCadastros
+    left = 552
+    top = 8
+    object ActionCancelar: TAction
+      Category = 'Geral'
+      Caption = 'Cancelar [F11]'
+      ImageIndex = 10
+      OnExecute = ActionCancelarExecute
+      ShortCut = 122
+    end
+    object ActionSair: TAction
+      Category = 'Geral'
+      Caption = 'Sair [F8]'
+      ImageIndex = 19
+      OnExecute = ActionSairExecute
+      ShortCut = 119
+    end
+    object ActionGerarDarf: TAction
+      Category = 'Guias'
+      Caption = 'Gerar DARF'
+      ImageIndex = 5
+      OnExecute = ActionGerarDarfExecute
+    end
+  end
+end

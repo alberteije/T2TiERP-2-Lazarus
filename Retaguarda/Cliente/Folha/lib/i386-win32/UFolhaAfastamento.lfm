@@ -1,0 +1,167 @@
+inherited FFolhaAfastamento: TFFolhaAfastamento
+  Tag = 1
+  Left = 284
+  Top = 180
+  Caption = 'Folha Afastamentos'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 149
+          Top = 10
+          Width = 887
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditIdColaborador: TLabeledCalcEdit[1]
+          Left = 16
+          Height = 21
+          Top = 33
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 0
+          Value = 0
+          OnKeyUp = EditIdColaboradorKeyUp
+          CalcEditLabel.Left = 16
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 17
+          CalcEditLabel.Width = 63
+          CalcEditLabel.Caption = 'Colaborador:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditColaborador: TLabeledEdit[2]
+          Left = 77
+          Height = 21
+          Top = 33
+          Width = 806
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditColaborador
+          EditLabel.AnchorSideRight.Control = EditColaborador
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditColaborador
+          EditLabel.Left = 77
+          EditLabel.Height = 13
+          EditLabel.Top = 17
+          EditLabel.Width = 806
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 1
+          TabStop = False
+        end
+        object EditDataInicio: TLabeledDateEdit[3]
+          Left = 16
+          Height = 21
+          Top = 125
+          Width = 121
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 4
+          Text = '  /  /    '
+          DateEditLabel.Left = 16
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 109
+          DateEditLabel.Width = 55
+          DateEditLabel.Caption = 'Data Início:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditIdTipoAfastamento: TLabeledCalcEdit[4]
+          Left = 16
+          Height = 21
+          Top = 79
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 2
+          Value = 0
+          OnKeyUp = EditIdTipoAfastamentoKeyUp
+          CalcEditLabel.Left = 16
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 63
+          CalcEditLabel.Width = 104
+          CalcEditLabel.Caption = 'Tipo de Afastamento:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditTipoAfastamento: TLabeledEdit[5]
+          Left = 77
+          Height = 21
+          Top = 79
+          Width = 806
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditTipoAfastamento
+          EditLabel.AnchorSideRight.Control = EditTipoAfastamento
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditTipoAfastamento
+          EditLabel.Left = 77
+          EditLabel.Height = 13
+          EditLabel.Top = 63
+          EditLabel.Width = 806
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 3
+          TabStop = False
+        end
+        object EditDataFim: TLabeledDateEdit[6]
+          Left = 143
+          Height = 21
+          Top = 125
+          Width = 121
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 5
+          Text = '  /  /    '
+          DateEditLabel.Left = 143
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 109
+          DateEditLabel.Width = 46
+          DateEditLabel.Caption = 'Data Fim:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditDiasAfastado: TLabeledCalcEdit[7]
+          Left = 270
+          Height = 21
+          Top = 125
+          Width = 82
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 6
+          Value = 0
+          CalcEditLabel.Left = 270
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 109
+          CalcEditLabel.Width = 71
+          CalcEditLabel.Caption = 'Dias Afastado:'
+          CalcEditLabel.ParentColor = False
+        end
+      end
+    end
+  end
+end

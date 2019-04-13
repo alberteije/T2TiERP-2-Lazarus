@@ -1,0 +1,2699 @@
+inherited FCTe: TFCTe
+  inherited PageControl: TPageControl
+    Width = 984
+    Height = 541
+    ActivePage = PaginaEdits
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 976
+        Height = 513
+        inherited Grid: TRxDbGrid
+          Width = 976
+          Height = 461
+        end
+        inherited PanelFiltroRapido: TPanel
+          Top = 459
+          Width = 976
+          inherited BotaoConsultar: TSpeedButton
+            Left = 842
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 675
+          end
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      inherited PanelEdits: TPanel
+        Width = 976
+        Height = 513
+        object ScrollBox: TScrollBox
+          Left = 2
+          Top = 2
+          Width = 968
+          Height = 505
+          Align = alClient
+          TabOrder = 0
+          object BevelEdits: TBevel
+            Left = 0
+            Top = 60
+            Width = 964
+            Height = 328
+            Align = alClient
+          end
+          object ActionToolBarEdits: TToolPanel
+            Left = 3
+            Top = 3
+            Width = 958
+            Height = 54
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+          end
+          object PageControlEdits: TPageControl
+            Left = 0
+            Top = 60
+            Width = 964
+            Height = 328
+            ActivePage = TabSheetDadosNotaFiscal
+            Align = alClient
+            TabOrder = 1
+            object TabSheetDadosNotaFiscal: TTabSheet
+              Caption = 'Dados do CT-e'
+              object PanelDadosCTe: TPanel
+                Left = 0
+                Top = 0
+                Width = 956
+                Height = 300
+                Align = alClient
+                BevelInner = bvLowered
+                BevelOuter = bvNone
+                BiDiMode = bdLeftToRight
+                UseDockManager = False
+                FullRepaint = False
+                ParentBiDiMode = False
+                TabOrder = 0
+                object EditNumeroCTe: TLabeledEdit
+                  Left = 518
+                  Top = 64
+                  Width = 84
+                  Height = 21
+                  Anchors = [akTop, akRight]
+                  EditLabel.Width = 41
+                  EditLabel.Height = 13
+                  EditLabel.Caption = 'Número:'
+                  ReadOnly = True
+                  TabOrder = 7
+                end
+                object EditSerie: TLabeledEdit
+                  Left = 450
+                  Top = 64
+                  Width = 62
+                  Height = 21
+                  Anchors = [akTop, akRight]
+                  EditLabel.Width = 28
+                  EditLabel.Height = 13
+                  EditLabel.Caption = 'Serie:'
+                  ReadOnly = True
+                  TabOrder = 6
+                end
+                object EditNaturezaOperacao: TLabeledEdit
+                  Left = 374
+                  Top = 21
+                  Width = 572
+                  Height = 21
+                  Anchors = [akLeft, akTop, akRight]
+                  EditLabel.Width = 113
+                  EditLabel.Height = 13
+                  EditLabel.Caption = 'Natureza da Operação:'
+                  ReadOnly = True
+                  TabOrder = 2
+                end
+                object GroupBoxDestinatario: TGroupBox
+                  Left = 6
+                  Top = 134
+                  Width = 940
+                  Height = 191
+                  Anchors = [akLeft, akTop, akRight]
+                  Caption = 'Destinatário:'
+                  TabOrder = 16
+                  object EditDestinatarioCpfCnpj: TLabeledEdit
+                    Left = 67
+                    Top = 18
+                    Width = 136
+                    Height = 21
+                    EditLabel.Width = 58
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'CPF / CNPJ:'
+                    MaxLength = 14
+                    TabOrder = 1
+                  end
+                  object EditDestinatarioIE: TLabeledEdit
+                    Left = 615
+                    Top = 101
+                    Width = 138
+                    Height = 21
+                    Anchors = [akTop, akRight]
+                    EditLabel.Width = 91
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'Inscrição Estadual:'
+                    MaxLength = 14
+                    TabOrder = 11
+                  end
+                  object EditDestinatarioTelefone: TLabeledEdit
+                    Left = 759
+                    Top = 101
+                    Width = 169
+                    Height = 21
+                    Anchors = [akTop, akRight]
+                    EditLabel.Width = 46
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'Telefone:'
+                    MaxLength = 14
+                    TabOrder = 12
+                  end
+                  object EditDestinatarioLogradouro: TLabeledEdit
+                    Left = 85
+                    Top = 59
+                    Width = 423
+                    Height = 21
+                    Anchors = [akLeft, akTop, akRight]
+                    EditLabel.Width = 59
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'Logradouro:'
+                    MaxLength = 60
+                    TabOrder = 4
+                  end
+                  object EditDestinatarioNumero: TLabeledEdit
+                    Left = 514
+                    Top = 59
+                    Width = 100
+                    Height = 21
+                    Anchors = [akTop, akRight]
+                    EditLabel.Width = 41
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'Numero:'
+                    MaxLength = 60
+                    TabOrder = 5
+                  end
+                  object EditDestinatarioBairro: TLabeledEdit
+                    Left = 7
+                    Top = 101
+                    Width = 200
+                    Height = 21
+                    EditLabel.Width = 32
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'Bairro:'
+                    MaxLength = 60
+                    TabOrder = 8
+                  end
+                  object EditDestinatarioCEP: TLabeledEdit
+                    Left = 7
+                    Top = 59
+                    Width = 72
+                    Height = 21
+                    EditLabel.Width = 23
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'CEP:'
+                    MaxLength = 8
+                    TabOrder = 3
+                  end
+                  object EditDestinatarioCidade: TLabeledEdit
+                    Left = 282
+                    Top = 101
+                    Width = 282
+                    Height = 21
+                    Anchors = [akLeft, akTop, akRight]
+                    EditLabel.Width = 37
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'Cidade:'
+                    MaxLength = 60
+                    TabOrder = 9
+                  end
+                  object EditDestinatarioUF: TLabeledEdit
+                    Left = 570
+                    Top = 101
+                    Width = 39
+                    Height = 21
+                    Anchors = [akTop, akRight]
+                    CharCase = ecUpperCase
+                    EditLabel.Width = 17
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'UF:'
+                    MaxLength = 2
+                    TabOrder = 10
+                  end
+                  object EditDestinatarioComplemento: TLabeledEdit
+                    Left = 620
+                    Top = 59
+                    Width = 308
+                    Height = 21
+                    Anchors = [akTop, akRight]
+                    EditLabel.Width = 69
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'Complemento:'
+                    MaxLength = 60
+                    TabOrder = 6
+                  end
+                  object EditDestinatarioRazao: TLabeledEdit
+                    Left = 209
+                    Top = 18
+                    Width = 719
+                    Height = 21
+                    Anchors = [akLeft, akTop, akRight]
+                    EditLabel.Width = 101
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'Razão Social / Nome:'
+                    MaxLength = 60
+                    TabOrder = 2
+                  end
+                  object EditDestinatarioEmail: TLabeledEdit
+                    Left = 7
+                    Top = 145
+                    Width = 921
+                    Height = 21
+                    Anchors = [akLeft, akTop, akRight]
+                    EditLabel.Width = 32
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'E-Mail:'
+                    MaxLength = 60
+                    TabOrder = 13
+                  end
+                  object EditDestinatarioId: TLabeledCalcEdit
+                    Left = 7
+                    Top = 18
+                    Width = 54
+                    Height = 21
+                    TabOrder = 0
+                    OnKeyUp = EditDestinatarioIdKeyUp
+                    CalcEditLabel.Width = 37
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Caption = 'Id [F1]:'
+                  end
+                  object EditDestinatarioCodigoIbge: TLabeledEdit
+                    Left = 213
+                    Top = 101
+                    Width = 63
+                    Height = 21
+                    EditLabel.Width = 49
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'Cód IBGE:'
+                    MaxLength = 60
+                    TabOrder = 7
+                  end
+                end
+                object EditDataHoraEmissao: TLabeledDateEdit
+                  Left = 608
+                  Top = 64
+                  Width = 110
+                  Height = 21
+                  Anchors = [akTop, akRight]
+                  TabOrder = 8
+                  DateEditLabel.Width = 83
+                  DateEditLabel.Height = 13
+                  DateEditLabel.Caption = 'Data de Emissão:'
+                end
+                object EditDataEntradaSaida: TLabeledDateEdit
+                  Left = 724
+                  Top = 64
+                  Width = 110
+                  Height = 21
+                  Anchors = [akTop, akRight]
+                  TabOrder = 9
+                  DateEditLabel.Width = 98
+                  DateEditLabel.Height = 13
+                  DateEditLabel.Caption = 'Data Entrada/Saída:'
+                end
+                object EditHoraEntradaSaida: TLabeledMaskEdit
+                  Left = 840
+                  Top = 64
+                  Width = 106
+                  Height = 21
+                  Anchors = [akTop, akRight]
+                  MaxLength = 8
+                  TabOrder = 10
+                  Text = 
+                    '  ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::' +
+                    '::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::' +
+                    ':::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: :' +
+                    ' :'
+                  EditMask = '##:##:##;1;_'
+                end
+                object ComboTipoOperacao: TLabeledComboBox
+                  Left = 7
+                  Top = 106
+                  Width = 200
+                  Height = 22
+                  Style = csOwnerDrawFixed
+                  ItemIndex = 1
+                  TabOrder = 11
+                  Text = '1 - Saída'
+                  Items.Strings = (
+                    '0 - Entrada'
+                    '1 - Saída')
+                  ComboBoxLabel.Width = 89
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Caption = 'Tipo de Operação:'
+                end
+                object ComboTipoEmissao: TLabeledComboBox
+                  Left = 213
+                  Top = 106
+                  Width = 190
+                  Height = 22
+                  Style = csOwnerDrawFixed
+                  ItemIndex = 0
+                  TabOrder = 12
+                  Text = '1 – Normal'
+                  Items.Strings = (
+                    '1 – Normal'
+                    '2 – Contingência FS'
+                    '3 – Contingência SCAN'
+                    '4 – Contingência DPEC'
+                    '5 – Contingência FS-DA'
+                    '6 – Contingência SVC-AN'
+                    '7 – Contingência SVC-RS')
+                  ComboBoxLabel.Width = 80
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Caption = 'Tipo de Emissão:'
+                end
+                object ComboFinalidadeEmissao: TLabeledComboBox
+                  Left = 409
+                  Top = 106
+                  Width = 190
+                  Height = 22
+                  Style = csOwnerDrawFixed
+                  ItemIndex = 0
+                  TabOrder = 13
+                  Text = '1 - Normal'
+                  Items.Strings = (
+                    '1 - Normal'
+                    '2 - Complementar'
+                    '3 - Ajuste')
+                  ComboBoxLabel.Width = 108
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Caption = 'Finalidade de Emissão:'
+                end
+                object ComboFormaImpDaCTe: TLabeledComboBox
+                  Left = 605
+                  Top = 106
+                  Width = 190
+                  Height = 22
+                  Style = csOwnerDrawFixed
+                  ItemIndex = 0
+                  TabOrder = 14
+                  Text = '1 - Retrato'
+                  Items.Strings = (
+                    '1 - Retrato'
+                    '2 - Paisagem')
+                  ComboBoxLabel.Width = 133
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Caption = 'Formato Impressão DACTe:'
+                end
+                object ComboBoxFormaPagamento: TLabeledComboBox
+                  Left = 801
+                  Top = 106
+                  Width = 145
+                  Height = 22
+                  Style = csOwnerDrawFixed
+                  Anchors = [akLeft, akTop, akRight]
+                  ItemIndex = 0
+                  TabOrder = 15
+                  Text = 'A Vista'
+                  Items.Strings = (
+                    'A Vista'
+                    'A Prazo'
+                    'Outros')
+                  ComboBoxLabel.Width = 106
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Caption = 'Forma de Pagamento:'
+                end
+                object EditChaveAcesso: TLabeledEdit
+                  Left = 7
+                  Top = 63
+                  Width = 282
+                  Height = 22
+                  Anchors = [akLeft, akTop, akRight]
+                  AutoSize = False
+                  EditLabel.Width = 87
+                  EditLabel.Height = 13
+                  EditLabel.Caption = 'Chave de Acesso:'
+                  Font.Charset = ANSI_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -11
+                  Font.Name = 'Courier New'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                  ReadOnly = True
+                  TabOrder = 3
+                end
+                object EditCodigoNumerico: TLabeledEdit
+                  Left = 316
+                  Top = 64
+                  Width = 128
+                  Height = 21
+                  Anchors = [akTop, akRight]
+                  EditLabel.Width = 74
+                  EditLabel.Height = 13
+                  EditLabel.Caption = 'Cód. Numérico:'
+                  ReadOnly = True
+                  TabOrder = 5
+                end
+                object EditDigitoChaveAcesso: TLabeledEdit
+                  Left = 289
+                  Top = 63
+                  Width = 21
+                  Height = 22
+                  Anchors = [akTop, akRight]
+                  AutoSize = False
+                  EditLabel.Width = 17
+                  EditLabel.Height = 13
+                  EditLabel.Caption = 'DV:'
+                  Font.Charset = ANSI_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -11
+                  Font.Name = 'Courier New'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                  ReadOnly = True
+                  TabOrder = 4
+                end
+                object ComboboxModeloNotaFiscal: TLabeledComboBox
+                  Left = 75
+                  Top = 21
+                  Width = 293
+                  Height = 22
+                  Style = csOwnerDrawFixed
+                  ItemIndex = 0
+                  TabOrder = 1
+                  Text = '57 - Conhecimento de Transporte Eletrônico - CTe'
+                  Items.Strings = (
+                    '57 - Conhecimento de Transporte Eletrônico - CTe')
+                  ComboBoxLabel.Width = 93
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Caption = 'Modelo Nota Fiscal:'
+                end
+                object EditIdVenda: TLabeledCalcEdit
+                  Left = 8
+                  Top = 21
+                  Width = 61
+                  Height = 21
+                  TabOrder = 0
+                  OnKeyUp = EditIdVendaKeyUp
+                  CalcEditLabel.Width = 57
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Caption = 'Venda [F1]:'
+                end
+              end
+            end
+            object TabSheetInformacoesAdicionais: TTabSheet
+              Caption = 'Informações Adicionais'
+              ImageIndex = 4
+              object PanelInformacoesAdicionais: TPanel
+                Left = 0
+                Top = 0
+                Width = 956
+                Height = 300
+                Align = alClient
+                TabOrder = 0
+                object PageControlInformacoesAdicionais: TPageControl
+                  Left = 0
+                  Top = 0
+                  Width = 954
+                  Height = 298
+                  ActivePage = TabSheet1
+                  Align = alClient
+                  TabOrder = 0
+                  object TabSheet1: TTabSheet
+                    Caption = 'Emitente'
+                    object GroupBox2: TGroupBox
+                      Left = 3
+                      Top = 10
+                      Width = 940
+                      Height = 191
+                      Anchors = [akLeft, akTop, akRight]
+                      Caption = 'Dados do Emitente:'
+                      TabOrder = 0
+                      object EditCnpjEmitente: TLabeledEdit
+                        Left = 67
+                        Top = 18
+                        Width = 136
+                        Height = 21
+                        EditLabel.Width = 29
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'CNPJ:'
+                        MaxLength = 14
+                        TabOrder = 1
+                      end
+                      object EditIeEmitente: TLabeledEdit
+                        Left = 615
+                        Top = 101
+                        Width = 138
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        EditLabel.Width = 91
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Inscrição Estadual:'
+                        MaxLength = 14
+                        TabOrder = 11
+                      end
+                      object EditTelefoneEmitente: TLabeledEdit
+                        Left = 759
+                        Top = 101
+                        Width = 169
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        EditLabel.Width = 46
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Telefone:'
+                        MaxLength = 14
+                        TabOrder = 12
+                      end
+                      object EditLogradouroEmitente: TLabeledEdit
+                        Left = 85
+                        Top = 59
+                        Width = 423
+                        Height = 21
+                        Anchors = [akLeft, akTop, akRight]
+                        EditLabel.Width = 59
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Logradouro:'
+                        MaxLength = 60
+                        TabOrder = 4
+                      end
+                      object EditNumeroEmitente: TLabeledEdit
+                        Left = 514
+                        Top = 59
+                        Width = 100
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        EditLabel.Width = 41
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Numero:'
+                        MaxLength = 60
+                        TabOrder = 5
+                      end
+                      object EditBairroEmitente: TLabeledEdit
+                        Left = 7
+                        Top = 101
+                        Width = 200
+                        Height = 21
+                        EditLabel.Width = 32
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Bairro:'
+                        MaxLength = 60
+                        TabOrder = 8
+                      end
+                      object EditCepEmitente: TLabeledEdit
+                        Left = 7
+                        Top = 59
+                        Width = 72
+                        Height = 21
+                        EditLabel.Width = 23
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'CEP:'
+                        MaxLength = 8
+                        TabOrder = 3
+                      end
+                      object EditCidadeEmitente: TLabeledEdit
+                        Left = 282
+                        Top = 101
+                        Width = 282
+                        Height = 21
+                        Anchors = [akLeft, akTop, akRight]
+                        EditLabel.Width = 37
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Cidade:'
+                        MaxLength = 60
+                        TabOrder = 9
+                      end
+                      object EditUfEmitente: TLabeledEdit
+                        Left = 570
+                        Top = 101
+                        Width = 39
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        CharCase = ecUpperCase
+                        EditLabel.Width = 17
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'UF:'
+                        MaxLength = 2
+                        TabOrder = 10
+                      end
+                      object EditComplementoEmitente: TLabeledEdit
+                        Left = 620
+                        Top = 59
+                        Width = 308
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        EditLabel.Width = 69
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Complemento:'
+                        MaxLength = 60
+                        TabOrder = 6
+                      end
+                      object EditNomeEmitente: TLabeledEdit
+                        Left = 209
+                        Top = 18
+                        Width = 719
+                        Height = 21
+                        Anchors = [akLeft, akTop, akRight]
+                        EditLabel.Width = 31
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Nome:'
+                        MaxLength = 60
+                        TabOrder = 2
+                      end
+                      object EditEmailEmitente: TLabeledEdit
+                        Left = 7
+                        Top = 145
+                        Width = 921
+                        Height = 21
+                        Anchors = [akLeft, akTop, akRight]
+                        EditLabel.Width = 32
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'E-Mail:'
+                        MaxLength = 60
+                        TabOrder = 13
+                      end
+                      object EditIdEmitente: TLabeledCalcEdit
+                        Left = 7
+                        Top = 18
+                        Width = 54
+                        Height = 21
+                        TabOrder = 0
+                        OnKeyUp = EditDestinatarioIdKeyUp
+                        CalcEditLabel.Width = 37
+                        CalcEditLabel.Height = 13
+                        CalcEditLabel.Caption = 'Id [F1]:'
+                      end
+                      object EditIbgeEmitente: TLabeledEdit
+                        Left = 213
+                        Top = 101
+                        Width = 63
+                        Height = 21
+                        EditLabel.Width = 49
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Cód IBGE:'
+                        MaxLength = 60
+                        TabOrder = 7
+                      end
+                    end
+                  end
+                  object Remetente: TTabSheet
+                    Caption = 'Remetente'
+                    ImageIndex = 1
+                    object GroupBox3: TGroupBox
+                      Left = 3
+                      Top = 10
+                      Width = 940
+                      Height = 191
+                      Anchors = [akLeft, akTop, akRight]
+                      Caption = 'Dados do Remetente:'
+                      TabOrder = 0
+                      object EditCnpjRemetente: TLabeledEdit
+                        Left = 67
+                        Top = 18
+                        Width = 136
+                        Height = 21
+                        EditLabel.Width = 29
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'CNPJ:'
+                        MaxLength = 14
+                        TabOrder = 1
+                      end
+                      object EditIeRemetente: TLabeledEdit
+                        Left = 615
+                        Top = 101
+                        Width = 138
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        EditLabel.Width = 91
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Inscrição Estadual:'
+                        MaxLength = 14
+                        TabOrder = 11
+                      end
+                      object EditTelefoneRemetente: TLabeledEdit
+                        Left = 759
+                        Top = 101
+                        Width = 169
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        EditLabel.Width = 46
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Telefone:'
+                        MaxLength = 14
+                        TabOrder = 12
+                      end
+                      object EditLogradouroRemetente: TLabeledEdit
+                        Left = 85
+                        Top = 59
+                        Width = 423
+                        Height = 21
+                        Anchors = [akLeft, akTop, akRight]
+                        EditLabel.Width = 59
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Logradouro:'
+                        MaxLength = 60
+                        TabOrder = 4
+                      end
+                      object EditNumeroRemetente: TLabeledEdit
+                        Left = 514
+                        Top = 59
+                        Width = 100
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        EditLabel.Width = 41
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Numero:'
+                        MaxLength = 60
+                        TabOrder = 5
+                      end
+                      object EditBairroRemetente: TLabeledEdit
+                        Left = 7
+                        Top = 101
+                        Width = 200
+                        Height = 21
+                        EditLabel.Width = 32
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Bairro:'
+                        MaxLength = 60
+                        TabOrder = 8
+                      end
+                      object EditCepRemetente: TLabeledEdit
+                        Left = 7
+                        Top = 59
+                        Width = 72
+                        Height = 21
+                        EditLabel.Width = 23
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'CEP:'
+                        MaxLength = 8
+                        TabOrder = 3
+                      end
+                      object EditCidadeRemetente: TLabeledEdit
+                        Left = 282
+                        Top = 101
+                        Width = 282
+                        Height = 21
+                        Anchors = [akLeft, akTop, akRight]
+                        EditLabel.Width = 37
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Cidade:'
+                        MaxLength = 60
+                        TabOrder = 9
+                      end
+                      object EditUfRemetente: TLabeledEdit
+                        Left = 570
+                        Top = 101
+                        Width = 39
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        CharCase = ecUpperCase
+                        EditLabel.Width = 17
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'UF:'
+                        MaxLength = 2
+                        TabOrder = 10
+                      end
+                      object EditComplementoRemetente: TLabeledEdit
+                        Left = 620
+                        Top = 59
+                        Width = 308
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        EditLabel.Width = 69
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Complemento:'
+                        MaxLength = 60
+                        TabOrder = 6
+                      end
+                      object EditNomeRemetente: TLabeledEdit
+                        Left = 351
+                        Top = 18
+                        Width = 577
+                        Height = 21
+                        Anchors = [akLeft, akTop, akRight]
+                        EditLabel.Width = 31
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Nome:'
+                        MaxLength = 60
+                        TabOrder = 2
+                      end
+                      object EditEmailRemetente: TLabeledEdit
+                        Left = 7
+                        Top = 145
+                        Width = 921
+                        Height = 21
+                        Anchors = [akLeft, akTop, akRight]
+                        EditLabel.Width = 32
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'E-Mail:'
+                        MaxLength = 60
+                        TabOrder = 13
+                      end
+                      object EditIdRemetente: TLabeledCalcEdit
+                        Left = 7
+                        Top = 18
+                        Width = 54
+                        Height = 21
+                        TabOrder = 0
+                        OnKeyUp = EditDestinatarioIdKeyUp
+                        CalcEditLabel.Width = 37
+                        CalcEditLabel.Height = 13
+                        CalcEditLabel.Caption = 'Id [F1]:'
+                      end
+                      object EditIbgeRemetente: TLabeledEdit
+                        Left = 213
+                        Top = 101
+                        Width = 63
+                        Height = 21
+                        EditLabel.Width = 49
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Cód IBGE:'
+                        MaxLength = 60
+                        TabOrder = 7
+                      end
+                      object EditCpfRemetente: TLabeledEdit
+                        Left = 209
+                        Top = 18
+                        Width = 136
+                        Height = 21
+                        EditLabel.Width = 23
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'CPF:'
+                        MaxLength = 14
+                        TabOrder = 14
+                      end
+                    end
+                  end
+                  object Recebedor: TTabSheet
+                    Caption = 'Recebedor'
+                    ImageIndex = 2
+                    object GroupBox4: TGroupBox
+                      Left = 3
+                      Top = 10
+                      Width = 940
+                      Height = 191
+                      Anchors = [akLeft, akTop, akRight]
+                      Caption = 'Dados do Recebedor:'
+                      TabOrder = 0
+                      object LabeledEdit1: TLabeledEdit
+                        Left = 67
+                        Top = 18
+                        Width = 136
+                        Height = 21
+                        EditLabel.Width = 29
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'CNPJ:'
+                        MaxLength = 14
+                        TabOrder = 1
+                      end
+                      object LabeledEdit2: TLabeledEdit
+                        Left = 615
+                        Top = 101
+                        Width = 138
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        EditLabel.Width = 91
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Inscrição Estadual:'
+                        MaxLength = 14
+                        TabOrder = 11
+                      end
+                      object LabeledEdit3: TLabeledEdit
+                        Left = 759
+                        Top = 101
+                        Width = 169
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        EditLabel.Width = 46
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Telefone:'
+                        MaxLength = 14
+                        TabOrder = 12
+                      end
+                      object LabeledEdit4: TLabeledEdit
+                        Left = 85
+                        Top = 59
+                        Width = 423
+                        Height = 21
+                        Anchors = [akLeft, akTop, akRight]
+                        EditLabel.Width = 59
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Logradouro:'
+                        MaxLength = 60
+                        TabOrder = 4
+                      end
+                      object LabeledEdit5: TLabeledEdit
+                        Left = 514
+                        Top = 59
+                        Width = 100
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        EditLabel.Width = 41
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Numero:'
+                        MaxLength = 60
+                        TabOrder = 5
+                      end
+                      object LabeledEdit6: TLabeledEdit
+                        Left = 7
+                        Top = 101
+                        Width = 200
+                        Height = 21
+                        EditLabel.Width = 32
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Bairro:'
+                        MaxLength = 60
+                        TabOrder = 8
+                      end
+                      object LabeledEdit7: TLabeledEdit
+                        Left = 7
+                        Top = 59
+                        Width = 72
+                        Height = 21
+                        EditLabel.Width = 23
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'CEP:'
+                        MaxLength = 8
+                        TabOrder = 3
+                      end
+                      object LabeledEdit8: TLabeledEdit
+                        Left = 282
+                        Top = 101
+                        Width = 282
+                        Height = 21
+                        Anchors = [akLeft, akTop, akRight]
+                        EditLabel.Width = 37
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Cidade:'
+                        MaxLength = 60
+                        TabOrder = 9
+                      end
+                      object LabeledEdit9: TLabeledEdit
+                        Left = 570
+                        Top = 101
+                        Width = 39
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        CharCase = ecUpperCase
+                        EditLabel.Width = 17
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'UF:'
+                        MaxLength = 2
+                        TabOrder = 10
+                      end
+                      object LabeledEdit10: TLabeledEdit
+                        Left = 620
+                        Top = 59
+                        Width = 308
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        EditLabel.Width = 69
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Complemento:'
+                        MaxLength = 60
+                        TabOrder = 6
+                      end
+                      object LabeledEdit11: TLabeledEdit
+                        Left = 351
+                        Top = 18
+                        Width = 577
+                        Height = 21
+                        Anchors = [akLeft, akTop, akRight]
+                        EditLabel.Width = 31
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Nome:'
+                        MaxLength = 60
+                        TabOrder = 2
+                      end
+                      object LabeledEdit12: TLabeledEdit
+                        Left = 7
+                        Top = 145
+                        Width = 921
+                        Height = 21
+                        Anchors = [akLeft, akTop, akRight]
+                        EditLabel.Width = 32
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'E-Mail:'
+                        MaxLength = 60
+                        TabOrder = 13
+                      end
+                      object LabeledCalcEdit1: TLabeledCalcEdit
+                        Left = 7
+                        Top = 18
+                        Width = 54
+                        Height = 21
+                        TabOrder = 0
+                        OnKeyUp = EditDestinatarioIdKeyUp
+                        CalcEditLabel.Width = 37
+                        CalcEditLabel.Height = 13
+                        CalcEditLabel.Caption = 'Id [F1]:'
+                      end
+                      object LabeledEdit13: TLabeledEdit
+                        Left = 213
+                        Top = 101
+                        Width = 63
+                        Height = 21
+                        EditLabel.Width = 49
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Cód IBGE:'
+                        MaxLength = 60
+                        TabOrder = 7
+                      end
+                      object LabeledEdit14: TLabeledEdit
+                        Left = 209
+                        Top = 18
+                        Width = 136
+                        Height = 21
+                        EditLabel.Width = 23
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'CPF:'
+                        MaxLength = 14
+                        TabOrder = 14
+                      end
+                    end
+                  end
+                  object Expedidor: TTabSheet
+                    Caption = 'Expedidor'
+                    ImageIndex = 3
+                    object GroupBox5: TGroupBox
+                      Left = 3
+                      Top = 10
+                      Width = 940
+                      Height = 191
+                      Anchors = [akLeft, akTop, akRight]
+                      Caption = 'Dados do Expedidor:'
+                      TabOrder = 0
+                      object LabeledEdit15: TLabeledEdit
+                        Left = 67
+                        Top = 18
+                        Width = 136
+                        Height = 21
+                        EditLabel.Width = 29
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'CNPJ:'
+                        MaxLength = 14
+                        TabOrder = 1
+                      end
+                      object LabeledEdit16: TLabeledEdit
+                        Left = 615
+                        Top = 101
+                        Width = 138
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        EditLabel.Width = 91
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Inscrição Estadual:'
+                        MaxLength = 14
+                        TabOrder = 11
+                      end
+                      object LabeledEdit17: TLabeledEdit
+                        Left = 759
+                        Top = 101
+                        Width = 169
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        EditLabel.Width = 46
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Telefone:'
+                        MaxLength = 14
+                        TabOrder = 12
+                      end
+                      object LabeledEdit18: TLabeledEdit
+                        Left = 85
+                        Top = 59
+                        Width = 423
+                        Height = 21
+                        Anchors = [akLeft, akTop, akRight]
+                        EditLabel.Width = 59
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Logradouro:'
+                        MaxLength = 60
+                        TabOrder = 4
+                      end
+                      object LabeledEdit19: TLabeledEdit
+                        Left = 514
+                        Top = 59
+                        Width = 100
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        EditLabel.Width = 41
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Numero:'
+                        MaxLength = 60
+                        TabOrder = 5
+                      end
+                      object LabeledEdit20: TLabeledEdit
+                        Left = 7
+                        Top = 101
+                        Width = 200
+                        Height = 21
+                        EditLabel.Width = 32
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Bairro:'
+                        MaxLength = 60
+                        TabOrder = 8
+                      end
+                      object LabeledEdit21: TLabeledEdit
+                        Left = 7
+                        Top = 59
+                        Width = 72
+                        Height = 21
+                        EditLabel.Width = 23
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'CEP:'
+                        MaxLength = 8
+                        TabOrder = 3
+                      end
+                      object LabeledEdit22: TLabeledEdit
+                        Left = 282
+                        Top = 101
+                        Width = 282
+                        Height = 21
+                        Anchors = [akLeft, akTop, akRight]
+                        EditLabel.Width = 37
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Cidade:'
+                        MaxLength = 60
+                        TabOrder = 9
+                      end
+                      object LabeledEdit23: TLabeledEdit
+                        Left = 570
+                        Top = 101
+                        Width = 39
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        CharCase = ecUpperCase
+                        EditLabel.Width = 17
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'UF:'
+                        MaxLength = 2
+                        TabOrder = 10
+                      end
+                      object LabeledEdit24: TLabeledEdit
+                        Left = 620
+                        Top = 59
+                        Width = 308
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        EditLabel.Width = 69
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Complemento:'
+                        MaxLength = 60
+                        TabOrder = 6
+                      end
+                      object LabeledEdit25: TLabeledEdit
+                        Left = 351
+                        Top = 18
+                        Width = 577
+                        Height = 21
+                        Anchors = [akLeft, akTop, akRight]
+                        EditLabel.Width = 31
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Nome:'
+                        MaxLength = 60
+                        TabOrder = 2
+                      end
+                      object LabeledEdit26: TLabeledEdit
+                        Left = 7
+                        Top = 145
+                        Width = 921
+                        Height = 21
+                        Anchors = [akLeft, akTop, akRight]
+                        EditLabel.Width = 32
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'E-Mail:'
+                        MaxLength = 60
+                        TabOrder = 13
+                      end
+                      object LabeledCalcEdit2: TLabeledCalcEdit
+                        Left = 7
+                        Top = 18
+                        Width = 54
+                        Height = 21
+                        TabOrder = 0
+                        OnKeyUp = EditDestinatarioIdKeyUp
+                        CalcEditLabel.Width = 37
+                        CalcEditLabel.Height = 13
+                        CalcEditLabel.Caption = 'Id [F1]:'
+                      end
+                      object LabeledEdit27: TLabeledEdit
+                        Left = 213
+                        Top = 101
+                        Width = 63
+                        Height = 21
+                        EditLabel.Width = 49
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Cód IBGE:'
+                        MaxLength = 60
+                        TabOrder = 7
+                      end
+                      object LabeledEdit28: TLabeledEdit
+                        Left = 209
+                        Top = 18
+                        Width = 136
+                        Height = 21
+                        EditLabel.Width = 23
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'CPF:'
+                        MaxLength = 14
+                        TabOrder = 14
+                      end
+                    end
+                  end
+                  object Tomador: TTabSheet
+                    Caption = 'Tomador'
+                    ImageIndex = 4
+                    object GroupBox6: TGroupBox
+                      Left = 3
+                      Top = 10
+                      Width = 940
+                      Height = 191
+                      Anchors = [akLeft, akTop, akRight]
+                      Caption = 'Dados do Tomador:'
+                      TabOrder = 0
+                      object LabeledEdit29: TLabeledEdit
+                        Left = 67
+                        Top = 18
+                        Width = 136
+                        Height = 21
+                        EditLabel.Width = 29
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'CNPJ:'
+                        MaxLength = 14
+                        TabOrder = 1
+                      end
+                      object LabeledEdit30: TLabeledEdit
+                        Left = 615
+                        Top = 101
+                        Width = 138
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        EditLabel.Width = 91
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Inscrição Estadual:'
+                        MaxLength = 14
+                        TabOrder = 11
+                      end
+                      object LabeledEdit31: TLabeledEdit
+                        Left = 759
+                        Top = 101
+                        Width = 169
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        EditLabel.Width = 46
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Telefone:'
+                        MaxLength = 14
+                        TabOrder = 12
+                      end
+                      object LabeledEdit32: TLabeledEdit
+                        Left = 85
+                        Top = 59
+                        Width = 423
+                        Height = 21
+                        Anchors = [akLeft, akTop, akRight]
+                        EditLabel.Width = 59
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Logradouro:'
+                        MaxLength = 60
+                        TabOrder = 4
+                      end
+                      object LabeledEdit33: TLabeledEdit
+                        Left = 514
+                        Top = 59
+                        Width = 100
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        EditLabel.Width = 41
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Numero:'
+                        MaxLength = 60
+                        TabOrder = 5
+                      end
+                      object LabeledEdit34: TLabeledEdit
+                        Left = 7
+                        Top = 101
+                        Width = 200
+                        Height = 21
+                        EditLabel.Width = 32
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Bairro:'
+                        MaxLength = 60
+                        TabOrder = 8
+                      end
+                      object LabeledEdit35: TLabeledEdit
+                        Left = 7
+                        Top = 59
+                        Width = 72
+                        Height = 21
+                        EditLabel.Width = 23
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'CEP:'
+                        MaxLength = 8
+                        TabOrder = 3
+                      end
+                      object LabeledEdit36: TLabeledEdit
+                        Left = 282
+                        Top = 101
+                        Width = 282
+                        Height = 21
+                        Anchors = [akLeft, akTop, akRight]
+                        EditLabel.Width = 37
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Cidade:'
+                        MaxLength = 60
+                        TabOrder = 9
+                      end
+                      object LabeledEdit37: TLabeledEdit
+                        Left = 570
+                        Top = 101
+                        Width = 39
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        CharCase = ecUpperCase
+                        EditLabel.Width = 17
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'UF:'
+                        MaxLength = 2
+                        TabOrder = 10
+                      end
+                      object LabeledEdit38: TLabeledEdit
+                        Left = 620
+                        Top = 59
+                        Width = 308
+                        Height = 21
+                        Anchors = [akTop, akRight]
+                        EditLabel.Width = 69
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Complemento:'
+                        MaxLength = 60
+                        TabOrder = 6
+                      end
+                      object LabeledEdit39: TLabeledEdit
+                        Left = 351
+                        Top = 18
+                        Width = 577
+                        Height = 21
+                        Anchors = [akLeft, akTop, akRight]
+                        EditLabel.Width = 31
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Nome:'
+                        MaxLength = 60
+                        TabOrder = 2
+                      end
+                      object LabeledEdit40: TLabeledEdit
+                        Left = 7
+                        Top = 145
+                        Width = 921
+                        Height = 21
+                        Anchors = [akLeft, akTop, akRight]
+                        EditLabel.Width = 32
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'E-Mail:'
+                        MaxLength = 60
+                        TabOrder = 13
+                      end
+                      object LabeledCalcEdit3: TLabeledCalcEdit
+                        Left = 7
+                        Top = 18
+                        Width = 54
+                        Height = 21
+                        TabOrder = 0
+                        OnKeyUp = EditDestinatarioIdKeyUp
+                        CalcEditLabel.Width = 37
+                        CalcEditLabel.Height = 13
+                        CalcEditLabel.Caption = 'Id [F1]:'
+                      end
+                      object LabeledEdit41: TLabeledEdit
+                        Left = 213
+                        Top = 101
+                        Width = 63
+                        Height = 21
+                        EditLabel.Width = 49
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'Cód IBGE:'
+                        MaxLength = 60
+                        TabOrder = 7
+                      end
+                      object LabeledEdit42: TLabeledEdit
+                        Left = 209
+                        Top = 18
+                        Width = 136
+                        Height = 21
+                        EditLabel.Width = 23
+                        EditLabel.Height = 13
+                        EditLabel.Caption = 'CPF:'
+                        MaxLength = 14
+                        TabOrder = 14
+                      end
+                    end
+                  end
+                end
+              end
+            end
+            object TabSheetCobranca: TTabSheet
+              Caption = 'Cobrança'
+              ImageIndex = 7
+              object PanelCobranca: TPanel
+                Left = 0
+                Top = 0
+                Width = 956
+                Height = 300
+                Align = alClient
+                BevelInner = bvLowered
+                BevelOuter = bvNone
+                TabOrder = 0
+                object PanelFatura: TPanel
+                  Left = 0
+                  Top = 29
+                  Width = 954
+                  Height = 123
+                  Align = alTop
+                  BevelOuter = bvLowered
+                  TabOrder = 0
+                  object GroupBoxFatura: TGroupBox
+                    Left = 6
+                    Top = 4
+                    Width = 938
+                    Height = 107
+                    Anchors = [akLeft, akTop, akRight]
+                    Caption = 'Fatura:'
+                    TabOrder = 0
+                    object EditFaturaNumero: TLabeledEdit
+                      Left = 8
+                      Top = 19
+                      Width = 917
+                      Height = 21
+                      Anchors = [akLeft, akTop, akRight]
+                      EditLabel.Width = 41
+                      EditLabel.Height = 13
+                      EditLabel.Caption = 'Número:'
+                      MaxLength = 60
+                      TabOrder = 0
+                    end
+                    object EditFaturaValorOriginal: TLabeledCalcEdit
+                      Left = 8
+                      Top = 63
+                      Width = 121
+                      Height = 21
+                      DisplayFormat = '###,###,##0.00'
+                      TabOrder = 1
+                      CalcEditLabel.Width = 67
+                      CalcEditLabel.Height = 13
+                      CalcEditLabel.Caption = 'Valor Original:'
+                    end
+                    object EditFaturaValorDesconto: TLabeledCalcEdit
+                      Left = 135
+                      Top = 63
+                      Width = 121
+                      Height = 21
+                      DisplayFormat = '###,###,##0.00'
+                      TabOrder = 2
+                      CalcEditLabel.Width = 91
+                      CalcEditLabel.Height = 13
+                      CalcEditLabel.Caption = 'Valor do Desconto:'
+                    end
+                    object EditFaturaValorLiquido: TLabeledCalcEdit
+                      Left = 262
+                      Top = 63
+                      Width = 121
+                      Height = 21
+                      DisplayFormat = '###,###,##0.00'
+                      TabOrder = 3
+                      CalcEditLabel.Width = 64
+                      CalcEditLabel.Height = 13
+                      CalcEditLabel.Caption = 'Valor Líquido:'
+                    end
+                    object Button1: TButton
+                      Left = 718
+                      Top = 58
+                      Width = 203
+                      Height = 25
+                      Caption = 'Financeiro'
+                      TabOrder = 4
+                      OnClick = Button1Click
+                    end
+                  end
+                end
+                object GroupBox1: TGroupBox
+                  Left = 0
+                  Top = 152
+                  Width = 954
+                  Height = 145
+                  Align = alClient
+                  Caption = 'Duplicatas'
+                  TabOrder = 1
+                  object GridDuplicatas: TRxDbGrid
+                    Left = 0
+                    Top = 1
+                    Width = 950
+                    Height = 128
+                    Align = alClient
+                    DataSource = FDataModuleCTe.DSDuplicata
+                    TabOrder = 0
+                    TitleFont.Charset = DEFAULT_CHARSET
+                    TitleFont.Color = clWindowText
+                    TitleFont.Height = -11
+                    TitleFont.Name = 'Tahoma'
+                    TitleFont.Style = []
+                  end
+                end
+                object ActionToolBar5: TToolPanel
+                  Left = 2
+                  Top = 2
+                  Width = 948
+                  Height = 24
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clBlack
+                  Font.Height = -11
+                  Font.Name = 'Tahoma'
+                  Font.Style = []
+                  ParentFont = False
+                end
+              end
+            end
+            object TabSheetNF: TTabSheet
+              Caption = 'Notas Fiscais'
+              ImageIndex = 1
+              object JvNetscapeSplitter1: TJvNetscapeSplitter
+                Left = 0
+                Top = 279
+                Width = 956
+                Height = 20
+                Cursor = crDefault
+                Align = alBottom
+                Color = clBtnFace
+                MinSize = 1
+                ParentColor = False
+                Maximized = False
+                Minimized = True
+                ButtonCursor = crDefault
+                ButtonStyle = bsWindows
+                WindowsButtons = [wbMin, wbMax]
+                ButtonWidth = 300
+                ExplicitTop = 0
+                ExplicitWidth = 1013
+                RestorePos = 185
+              end
+              object PanelDetalhes: TPanel
+                Left = 0
+                Top = 0
+                Width = 956
+                Height = 279
+                Align = alClient
+                BevelInner = bvLowered
+                BevelOuter = bvNone
+                TabOrder = 0
+                object GridItens: TRxDbGrid
+                  Left = 0
+                  Top = 31
+                  Width = 954
+                  Height = 245
+                  Align = alClient
+                  DataSource = FDataModuleCTe.DSCteNf
+                  TabOrder = 0
+                  TitleFont.Charset = DEFAULT_CHARSET
+                  TitleFont.Color = clWindowText
+                  TitleFont.Height = -11
+                  TitleFont.Name = 'Tahoma'
+                  TitleFont.Style = []
+                  OnKeyDown = GridItensKeyDown
+                end
+                object ActionToolBar1: TToolPanel
+                  Left = 2
+                  Top = 2
+                  Width = 948
+                  Height = 26
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clBlack
+                  Font.Height = -11
+                  Font.Name = 'Tahoma'
+                  Font.Style = []
+                  ParentFont = False
+                end
+              end
+              object PanelDetalhesAnexo: TPanel
+                Left = 0
+                Top = 299
+                Width = 956
+                Height = 1
+                Align = alBottom
+                BevelInner = bvLowered
+                BevelOuter = bvNone
+                TabOrder = 1
+              end
+            end
+            object TabSheetTipoTransporte: TTabSheet
+              Caption = 'Tipo Transporte'
+              ImageIndex = 2
+              object PageControlReferenciado: TPageControl
+                Left = 0
+                Top = 30
+                Width = 956
+                Height = 270
+                ActivePage = TabSheetTransporteAereo
+                Align = alClient
+                TabOrder = 0
+                object TabSheetTransporteAereo: TTabSheet
+                  Caption = 'Aéreo'
+                  object GridCTeReferenciada: TRxDbGrid
+                    Left = 0
+                    Top = 47
+                    Width = 948
+                    Height = 195
+                    Align = alBottom
+                    TabOrder = 0
+                    TitleFont.Charset = DEFAULT_CHARSET
+                    TitleFont.Color = clWindowText
+                    TitleFont.Height = -11
+                    TitleFont.Name = 'Tahoma'
+                    TitleFont.Style = []
+                  end
+                  object EditAereoNumeroMinuta: TLabeledEdit
+                    Left = 9
+                    Top = 20
+                    Width = 128
+                    Height = 21
+                    EditLabel.Width = 36
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'Minuta:'
+                    ReadOnly = True
+                    TabOrder = 1
+                  end
+                  object LabeledEdit43: TLabeledEdit
+                    Left = 143
+                    Top = 20
+                    Width = 128
+                    Height = 21
+                    EditLabel.Width = 72
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'Conhecimento:'
+                    ReadOnly = True
+                    TabOrder = 2
+                  end
+                  object LabeledDateEdit1: TLabeledDateEdit
+                    Left = 277
+                    Top = 20
+                    Width = 110
+                    Height = 21
+                    TabOrder = 3
+                    DateEditLabel.Width = 110
+                    DateEditLabel.Height = 13
+                    DateEditLabel.Caption = 'Data Prevista Entrega:'
+                  end
+                end
+                object TabSheetTransporteRodoviario: TTabSheet
+                  Caption = 'Rodoviário'
+                  ImageIndex = 1
+                  object GroupBox7: TGroupBox
+                    Left = 3
+                    Top = 7
+                    Width = 940
+                    Height = 65
+                    Anchors = [akLeft, akTop, akRight]
+                    Caption = 'Cabeçalho:'
+                    TabOrder = 0
+                    object LabeledEdit44: TLabeledEdit
+                      Left = 174
+                      Top = 20
+                      Width = 133
+                      Height = 21
+                      EditLabel.Width = 38
+                      EditLabel.Height = 13
+                      EditLabel.Caption = 'RNTRC:'
+                      MaxLength = 20
+                      TabOrder = 2
+                    end
+                    object LabeledEdit45: TLabeledEdit
+                      Left = 53
+                      Top = 20
+                      Width = 115
+                      Height = 21
+                      EditLabel.Width = 90
+                      EditLabel.Height = 13
+                      EditLabel.Caption = 'Indicador Lotação:'
+                      MaxLength = 8
+                      TabOrder = 1
+                    end
+                    object LabeledEdit46: TLabeledEdit
+                      Left = 8
+                      Top = 20
+                      Width = 39
+                      Height = 21
+                      CharCase = ecUpperCase
+                      EditLabel.Width = 29
+                      EditLabel.Height = 13
+                      EditLabel.Caption = 'CIOT:'
+                      MaxLength = 2
+                      TabOrder = 0
+                    end
+                    object LabeledDateEdit2: TLabeledDateEdit
+                      Left = 313
+                      Top = 20
+                      Width = 110
+                      Height = 21
+                      TabOrder = 3
+                      DateEditLabel.Width = 110
+                      DateEditLabel.Height = 13
+                      DateEditLabel.Caption = 'Data Prevista Entrega:'
+                    end
+                  end
+                  object PageControl1: TPageControl
+                    Left = 0
+                    Top = 68
+                    Width = 948
+                    Height = 174
+                    ActivePage = TabSheet2
+                    Align = alBottom
+                    TabOrder = 1
+                    object TabSheet2: TTabSheet
+                      Caption = 'Lacre'
+                      object JvDBUltimGrid4: TRxDbGrid
+                        Left = 0
+                        Top = 0
+                        Width = 940
+                        Height = 146
+                        Align = alClient
+                        TabOrder = 0
+                        TitleFont.Charset = DEFAULT_CHARSET
+                        TitleFont.Color = clWindowText
+                        TitleFont.Height = -11
+                        TitleFont.Name = 'Tahoma'
+                        TitleFont.Style = []
+                      end
+                    end
+                    object TabSheet3: TTabSheet
+                      Caption = 'Motorista'
+                      ImageIndex = 1
+                      object JvDBUltimGrid1: TRxDbGrid
+                        Left = 0
+                        Top = 0
+                        Width = 940
+                        Height = 146
+                        Align = alClient
+                        TabOrder = 0
+                        TitleFont.Charset = DEFAULT_CHARSET
+                        TitleFont.Color = clWindowText
+                        TitleFont.Height = -11
+                        TitleFont.Name = 'Tahoma'
+                        TitleFont.Style = []
+                      end
+                    end
+                    object TabSheet4: TTabSheet
+                      Caption = 'Pedágio'
+                      ImageIndex = 3
+                      object JvDBUltimGrid2: TRxDbGrid
+                        Left = 0
+                        Top = 0
+                        Width = 940
+                        Height = 146
+                        Align = alClient
+                        TabOrder = 0
+                        TitleFont.Charset = DEFAULT_CHARSET
+                        TitleFont.Color = clWindowText
+                        TitleFont.Height = -11
+                        TitleFont.Name = 'Tahoma'
+                        TitleFont.Style = []
+                      end
+                    end
+                    object TabSheet5: TTabSheet
+                      Caption = 'Veículo'
+                      ImageIndex = 4
+                      object JvDBUltimGrid3: TRxDbGrid
+                        Left = 0
+                        Top = 0
+                        Width = 940
+                        Height = 146
+                        Align = alClient
+                        TabOrder = 0
+                        TitleFont.Charset = DEFAULT_CHARSET
+                        TitleFont.Color = clWindowText
+                        TitleFont.Height = -11
+                        TitleFont.Name = 'Tahoma'
+                        TitleFont.Style = []
+                      end
+                    end
+                  end
+                end
+                object TabSheetTransporteAquaviario: TTabSheet
+                  Caption = 'Aquaviário'
+                  ImageIndex = 3
+                  object GroupBox8: TGroupBox
+                    Left = 3
+                    Top = 7
+                    Width = 940
+                    Height = 65
+                    Anchors = [akLeft, akTop, akRight]
+                    Caption = 'Cabeçalho:'
+                    TabOrder = 0
+                    object LabeledEdit48: TLabeledEdit
+                      Left = 77
+                      Top = 20
+                      Width = 115
+                      Height = 21
+                      EditLabel.Width = 45
+                      EditLabel.Height = 13
+                      EditLabel.Caption = 'Controle:'
+                      MaxLength = 8
+                      TabOrder = 1
+                    end
+                    object LabeledEdit49: TLabeledEdit
+                      Left = 8
+                      Top = 20
+                      Width = 63
+                      Height = 21
+                      CharCase = ecUpperCase
+                      EditLabel.Width = 41
+                      EditLabel.Height = 13
+                      EditLabel.Caption = 'Booking:'
+                      MaxLength = 2
+                      TabOrder = 0
+                    end
+                    object LabeledCalcEdit4: TLabeledCalcEdit
+                      Left = 198
+                      Top = 20
+                      Width = 121
+                      Height = 21
+                      DisplayFormat = '###,###,##0.00'
+                      ReadOnly = True
+                      TabOrder = 2
+                      CalcEditLabel.Width = 79
+                      CalcEditLabel.Height = 13
+                      CalcEditLabel.Caption = 'Valor Prestação:'
+                    end
+                    object LabeledCalcEdit5: TLabeledCalcEdit
+                      Left = 325
+                      Top = 20
+                      Width = 121
+                      Height = 21
+                      DisplayFormat = '###,###,##0.00'
+                      ReadOnly = True
+                      TabOrder = 3
+                      CalcEditLabel.Width = 40
+                      CalcEditLabel.Height = 13
+                      CalcEditLabel.Caption = 'AFRMM:'
+                    end
+                  end
+                  object PageControl2: TPageControl
+                    Left = 0
+                    Top = 50
+                    Width = 948
+                    Height = 192
+                    ActivePage = TabSheet6
+                    Align = alBottom
+                    TabOrder = 1
+                    object TabSheet6: TTabSheet
+                      Caption = 'Balsa'
+                      object JvDBUltimGrid5: TRxDbGrid
+                        Left = 0
+                        Top = 0
+                        Width = 940
+                        Height = 164
+                        Align = alClient
+                        TabOrder = 0
+                        TitleFont.Charset = DEFAULT_CHARSET
+                        TitleFont.Color = clWindowText
+                        TitleFont.Height = -11
+                        TitleFont.Name = 'Tahoma'
+                        TitleFont.Style = []
+                      end
+                    end
+                  end
+                end
+                object TabSheetTransporteFerroviario: TTabSheet
+                  Caption = 'Ferroviário'
+                  ImageIndex = 4
+                  object GroupBox9: TGroupBox
+                    Left = 3
+                    Top = 7
+                    Width = 940
+                    Height = 65
+                    Anchors = [akLeft, akTop, akRight]
+                    Caption = 'Cabeçalho:'
+                    TabOrder = 0
+                    object LabeledEdit47: TLabeledEdit
+                      Left = 77
+                      Top = 20
+                      Width = 115
+                      Height = 21
+                      EditLabel.Width = 97
+                      EditLabel.Height = 13
+                      EditLabel.Caption = 'Resp. Faturamento:'
+                      MaxLength = 8
+                      TabOrder = 1
+                    end
+                    object LabeledEdit50: TLabeledEdit
+                      Left = 8
+                      Top = 20
+                      Width = 63
+                      Height = 21
+                      CharCase = ecUpperCase
+                      EditLabel.Width = 42
+                      EditLabel.Height = 13
+                      EditLabel.Caption = 'Tráfego:'
+                      MaxLength = 2
+                      TabOrder = 0
+                    end
+                    object LabeledCalcEdit6: TLabeledCalcEdit
+                      Left = 198
+                      Top = 20
+                      Width = 121
+                      Height = 21
+                      DisplayFormat = '###,###,##0.00'
+                      ReadOnly = True
+                      TabOrder = 2
+                      CalcEditLabel.Width = 57
+                      CalcEditLabel.Height = 13
+                      CalcEditLabel.Caption = 'Valor Frete:'
+                    end
+                  end
+                  object PageControl3: TPageControl
+                    Left = 0
+                    Top = 50
+                    Width = 948
+                    Height = 192
+                    ActivePage = TabSheet7
+                    Align = alBottom
+                    TabOrder = 1
+                    object TabSheet7: TTabSheet
+                      Caption = 'Ferrovia'
+                      object JvDBUltimGrid6: TRxDbGrid
+                        Left = 0
+                        Top = 0
+                        Width = 940
+                        Height = 164
+                        Align = alClient
+                        TabOrder = 0
+                        TitleFont.Charset = DEFAULT_CHARSET
+                        TitleFont.Color = clWindowText
+                        TitleFont.Height = -11
+                        TitleFont.Name = 'Tahoma'
+                        TitleFont.Style = []
+                      end
+                    end
+                    object TabSheet8: TTabSheet
+                      Caption = 'Vagão'
+                      ImageIndex = 1
+                      object JvDBUltimGrid7: TRxDbGrid
+                        Left = 0
+                        Top = 0
+                        Width = 940
+                        Height = 164
+                        Align = alClient
+                        TabOrder = 0
+                        TitleFont.Charset = DEFAULT_CHARSET
+                        TitleFont.Color = clWindowText
+                        TitleFont.Height = -11
+                        TitleFont.Name = 'Tahoma'
+                        TitleFont.Style = []
+                      end
+                    end
+                  end
+                end
+              end
+              object ActionToolBar2: TToolPanel
+                Left = 3
+                Top = 3
+                Width = 950
+                Height = 24
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlack
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                ParentFont = False
+              end
+            end
+            object TabSheetEntregaRetirada: TTabSheet
+              Caption = 'Entrega / Coleta'
+              ImageIndex = 6
+              object PanelEntregaRetirada: TPanel
+                Left = 0
+                Top = 0
+                Width = 956
+                Height = 300
+                Align = alClient
+                BevelInner = bvLowered
+                BevelOuter = bvNone
+                BiDiMode = bdLeftToRight
+                UseDockManager = False
+                FullRepaint = False
+                ParentBiDiMode = False
+                TabOrder = 0
+                object GroupBoxEntrega: TGroupBox
+                  Left = 6
+                  Top = 33
+                  Width = 938
+                  Height = 113
+                  Anchors = [akLeft, akTop, akRight]
+                  Caption = 'Dados para entrega:'
+                  TabOrder = 0
+                  object EditEntregaCpfCnpj: TLabeledEdit
+                    Left = 7
+                    Top = 17
+                    Width = 136
+                    Height = 21
+                    EditLabel.Width = 58
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'CPF / CNPJ:'
+                    MaxLength = 14
+                    TabOrder = 0
+                  end
+                  object EditEntregaLogradouro: TLabeledEdit
+                    Left = 152
+                    Top = 17
+                    Width = 356
+                    Height = 21
+                    Anchors = [akLeft, akTop, akRight]
+                    EditLabel.Width = 59
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'Logradouro:'
+                    MaxLength = 60
+                    TabOrder = 1
+                  end
+                  object EditEntregaNumero: TLabeledEdit
+                    Left = 518
+                    Top = 17
+                    Width = 100
+                    Height = 21
+                    Anchors = [akTop, akRight]
+                    EditLabel.Width = 41
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'Numero:'
+                    MaxLength = 60
+                    TabOrder = 2
+                  end
+                  object EditEntregaBairro: TLabeledEdit
+                    Left = 7
+                    Top = 62
+                    Width = 200
+                    Height = 21
+                    EditLabel.Width = 32
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'Bairro:'
+                    MaxLength = 60
+                    TabOrder = 4
+                  end
+                  object EditEntregaCidade: TLabeledEdit
+                    Left = 282
+                    Top = 62
+                    Width = 598
+                    Height = 21
+                    Anchors = [akLeft, akTop, akRight]
+                    EditLabel.Width = 37
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'Cidade:'
+                    MaxLength = 60
+                    TabOrder = 6
+                  end
+                  object EditEntregaUf: TLabeledEdit
+                    Left = 887
+                    Top = 62
+                    Width = 39
+                    Height = 21
+                    Anchors = [akTop, akRight]
+                    CharCase = ecUpperCase
+                    EditLabel.Width = 17
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'UF:'
+                    MaxLength = 2
+                    TabOrder = 7
+                  end
+                  object EditEntregaComplemento: TLabeledEdit
+                    Left = 626
+                    Top = 17
+                    Width = 300
+                    Height = 21
+                    Anchors = [akTop, akRight]
+                    EditLabel.Width = 69
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'Complemento:'
+                    MaxLength = 60
+                    TabOrder = 3
+                  end
+                  object EditEntregaIbge: TLabeledCalcEdit
+                    Left = 213
+                    Top = 62
+                    Width = 63
+                    Height = 21
+                    TabOrder = 5
+                    CalcEditLabel.Width = 63
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Caption = 'Código IBGE:'
+                  end
+                end
+                object GroupBoxRetirada: TGroupBox
+                  Left = 6
+                  Top = 163
+                  Width = 938
+                  Height = 113
+                  Anchors = [akLeft, akTop, akRight]
+                  Caption = 'Dados para coleta:'
+                  TabOrder = 1
+                  object EditRetiradaCpfCnpj: TLabeledEdit
+                    Left = 7
+                    Top = 17
+                    Width = 136
+                    Height = 21
+                    EditLabel.Width = 58
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'CPF / CNPJ:'
+                    MaxLength = 14
+                    TabOrder = 0
+                  end
+                  object EditRetiradaLogradouro: TLabeledEdit
+                    Left = 152
+                    Top = 17
+                    Width = 356
+                    Height = 21
+                    Anchors = [akLeft, akTop, akRight]
+                    EditLabel.Width = 59
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'Logradouro:'
+                    MaxLength = 60
+                    TabOrder = 1
+                  end
+                  object EditRetiradaNumero: TLabeledEdit
+                    Left = 518
+                    Top = 17
+                    Width = 100
+                    Height = 21
+                    Anchors = [akTop, akRight]
+                    EditLabel.Width = 41
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'Numero:'
+                    MaxLength = 60
+                    TabOrder = 2
+                  end
+                  object EditRetiradaBairro: TLabeledEdit
+                    Left = 7
+                    Top = 62
+                    Width = 200
+                    Height = 21
+                    EditLabel.Width = 32
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'Bairro:'
+                    MaxLength = 60
+                    TabOrder = 4
+                  end
+                  object EditRetiradaCidade: TLabeledEdit
+                    Left = 282
+                    Top = 62
+                    Width = 598
+                    Height = 21
+                    Anchors = [akLeft, akTop, akRight]
+                    EditLabel.Width = 37
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'Cidade:'
+                    MaxLength = 60
+                    TabOrder = 6
+                  end
+                  object EditRetiradaUf: TLabeledEdit
+                    Left = 887
+                    Top = 62
+                    Width = 39
+                    Height = 21
+                    Anchors = [akTop, akRight]
+                    CharCase = ecUpperCase
+                    EditLabel.Width = 17
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'UF:'
+                    MaxLength = 2
+                    TabOrder = 7
+                  end
+                  object EditRetiradaComplemento: TLabeledEdit
+                    Left = 626
+                    Top = 17
+                    Width = 300
+                    Height = 21
+                    Anchors = [akTop, akRight]
+                    EditLabel.Width = 69
+                    EditLabel.Height = 13
+                    EditLabel.Caption = 'Complemento:'
+                    MaxLength = 60
+                    TabOrder = 3
+                  end
+                  object EditRetiradaIbge: TLabeledCalcEdit
+                    Left = 213
+                    Top = 62
+                    Width = 63
+                    Height = 21
+                    TabOrder = 5
+                    CalcEditLabel.Width = 63
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Caption = 'Código IBGE:'
+                  end
+                end
+                object ActionToolBar3: TToolPanel
+                  Left = 2
+                  Top = 2
+                  Width = 948
+                  Height = 24
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clBlack
+                  Font.Height = -11
+                  Font.Name = 'Tahoma'
+                  Font.Style = []
+                  ParentFont = False
+                end
+              end
+            end
+            object TabSheetRespostaSefaz: TTabSheet
+              Caption = 'Respostas Sefaz'
+              ImageIndex = 3
+              object MemoRespostas: TMemo
+                Left = 0
+                Top = 0
+                Width = 956
+                Height = 300
+                Align = alClient
+                ScrollBars = ssVertical
+                TabOrder = 0
+              end
+            end
+          end
+          object PageControlTotais: TPageControl
+            Left = 0
+            Top = 388
+            Width = 964
+            Height = 113
+            ActivePage = tsTotaisGeral
+            Align = alBottom
+            TabOrder = 2
+            object tsTotaisGeral: TTabSheet
+              Caption = 'Totais Geral'
+              object PanelTotais: TPanel
+                Left = 0
+                Top = 0
+                Width = 956
+                Height = 85
+                Align = alClient
+                BevelInner = bvLowered
+                BevelOuter = bvNone
+                TabOrder = 0
+                object EditBCIcms: TLabeledCalcEdit
+                  Left = 10
+                  Top = 18
+                  Width = 121
+                  Height = 21
+                  DisplayFormat = '###,###,##0.00'
+                  ReadOnly = True
+                  TabOrder = 0
+                  CalcEditLabel.Width = 122
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Caption = 'Base de Cálculo do ICMS:'
+                end
+                object EditValorIcms: TLabeledCalcEdit
+                  Left = 137
+                  Top = 18
+                  Width = 121
+                  Height = 21
+                  DisplayFormat = '###,###,##0.00'
+                  ReadOnly = True
+                  TabOrder = 1
+                  CalcEditLabel.Width = 71
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Caption = 'Valor do ICMS:'
+                end
+                object EditBCIcmsSt: TLabeledCalcEdit
+                  Left = 264
+                  Top = 18
+                  Width = 121
+                  Height = 21
+                  DisplayFormat = '###,###,##0.00'
+                  ReadOnly = True
+                  TabOrder = 2
+                  CalcEditLabel.Width = 107
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Caption = 'Base Cálculo ICMS ST:'
+                end
+                object EditValorIcmsSt: TLabeledCalcEdit
+                  Left = 391
+                  Top = 18
+                  Width = 121
+                  Height = 21
+                  DisplayFormat = '###,###,##0.00'
+                  ReadOnly = True
+                  TabOrder = 3
+                  CalcEditLabel.Width = 86
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Caption = 'Valor do ICMS ST:'
+                end
+                object EditValorCreditoPresumidoICMS: TLabeledCalcEdit
+                  Left = 518
+                  Top = 18
+                  Width = 121
+                  Height = 21
+                  DisplayFormat = '###,###,##0.00'
+                  ReadOnly = True
+                  TabOrder = 4
+                  CalcEditLabel.Width = 118
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Caption = 'Valor Crédito Presumido:'
+                end
+                object EditValorICMSOutraUF: TLabeledCalcEdit
+                  Left = 645
+                  Top = 18
+                  Width = 121
+                  Height = 21
+                  DisplayFormat = '###,###,##0.00'
+                  ReadOnly = True
+                  TabOrder = 5
+                  CalcEditLabel.Width = 103
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Caption = 'Valor ICMS Outra UF:'
+                end
+                object EditSimplesNacionalTotal: TLabeledCalcEdit
+                  Left = 645
+                  Top = 57
+                  Width = 121
+                  Height = 21
+                  DisplayFormat = '###,###,##0.00'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -11
+                  Font.Name = 'Tahoma'
+                  Font.Style = []
+                  ParentFont = False
+                  ReadOnly = True
+                  TabOrder = 6
+                  CalcEditLabel.Width = 109
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Caption = 'Simples Nacional Total:'
+                  CalcEditLabel.Font.Charset = DEFAULT_CHARSET
+                  CalcEditLabel.Font.Color = clWindowText
+                  CalcEditLabel.Font.Height = -11
+                  CalcEditLabel.Font.Name = 'Tahoma'
+                  CalcEditLabel.Font.Style = []
+                  CalcEditLabel.ParentFont = False
+                end
+                object EditValorTotalCarga: TLabeledCalcEdit
+                  Left = 825
+                  Top = 57
+                  Width = 121
+                  Height = 21
+                  DisplayFormat = '###,###,##0.00'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -11
+                  Font.Name = 'Tahoma'
+                  Font.Style = [fsBold]
+                  Anchors = [akTop, akRight]
+                  ParentFont = False
+                  ReadOnly = True
+                  TabOrder = 7
+                  CalcEditLabel.Width = 68
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Caption = 'Total Carga:'
+                  CalcEditLabel.Font.Charset = DEFAULT_CHARSET
+                  CalcEditLabel.Font.Color = clWindowText
+                  CalcEditLabel.Font.Height = -11
+                  CalcEditLabel.Font.Name = 'Tahoma'
+                  CalcEditLabel.Font.Style = [fsBold]
+                  CalcEditLabel.ParentFont = False
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 984
+    inherited BotaoSair: TSpeedButton
+      Left = 878
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 778
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 678
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 568
+    end
+    inherited BotaoAlterar: TSpeedButton
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 578
+    end
+  end
+  inherited PopupMenuExportar: TPopupMenu
+    Left = 24
+    Top = 0
+  end
+  inherited PopupMenuAtalhosBotoesTela: TPopupMenu
+    Left = 124
+    Top = 65535
+  end
+  inherited PopupMenuAtalhosBotoesTelaCadastro: TPopupMenu
+    Left = 264
+    Top = 0
+  end
+  object ActionManager: TActionList
+    ActionBars.ShowHints = False
+    ActionBars = <
+      item
+      end
+      item
+        Items = <
+          item
+            Caption = '-'
+          end
+          item
+            Caption = '-'
+          end
+          item
+            Caption = '-'
+          end>
+      end
+      item
+      end
+      item
+        Items = <
+          item
+            Caption = '-'
+          end>
+      end
+      item
+      end
+      item
+        Items = <
+          item
+            Action = ActionAtualizarTotais
+            Caption = 'A&tualizar Totais'
+            ImageIndex = 30
+          end
+          item
+            Caption = '-'
+          end
+          item
+            Action = ActionConsultarSefaz
+            Caption = '&Consultar Sefaz'
+            ImageIndex = 36
+          end
+          item
+            Action = ActionStatusServico
+            Caption = 'C&onsultar Status Serviço'
+            ImageIndex = 37
+          end
+          item
+            Action = ActionCancelarCTe
+            Caption = 'C&ancelar CT-e'
+            ImageIndex = 34
+          end
+          item
+            Caption = '-'
+          end
+          item
+            Action = ActionSelecionarCertificado
+            Caption = 'S&elecionar Certificado'
+            ImageIndex = 27
+          end
+          item
+            Action = ActionImprimirDaCTe
+            Caption = '&Imprimir DACTe'
+            ImageIndex = 4
+          end
+          item
+            Action = ActionEnviar
+            Caption = 'E&nviar'
+            ImageIndex = 33
+          end
+          item
+            Action = ActionAssinar
+            Caption = 'Assina&r'
+            ImageIndex = 35
+          end
+          item
+            Action = ActionValidar
+            Caption = '&Validar'
+            ImageIndex = 32
+          end
+          item
+            Action = ActionInutilizarCTe
+            Caption = 'In&utilizar'
+            ImageIndex = 33
+          end
+          item
+            Action = ActionCCe
+            ImageIndex = 1
+          end
+          item
+            Action = ActionGerarXml
+            Caption = '&Gerar XML'
+            ImageIndex = 18
+          end>
+        ActionBar = ActionToolBarEdits
+      end
+      item
+      end
+      item
+        Items = <
+          item
+            Action = ActionExcluirItem
+            Caption = '&Excluir Nota'
+            ImageIndex = 10
+          end
+          item
+            Action = ActionIncluirItem
+            Caption = '&Incluir Nota'
+            ImageIndex = 31
+          end>
+        ActionBar = ActionToolBar1
+      end
+      item
+        Items = <
+          item
+            Action = ActionExcluirTipoTransporte
+            Caption = '&Excluir Tipo Transporte'
+            ImageIndex = 10
+          end>
+        ActionBar = ActionToolBar2
+      end
+      item
+        Items = <
+          item
+            Action = ActionExcluirEntregaRetirada
+            Caption = '&Excluir Dados Entrega/Coleta'
+            ImageIndex = 10
+          end>
+        ActionBar = ActionToolBar3
+      end
+      item
+        Items = <
+          item
+            Action = ActionExcluirTransporte
+            Caption = '&Excluir Dados Transporte'
+            ImageIndex = 10
+          end>
+      end
+      item
+        Items = <
+          item
+            Action = ActionExcluirCobranca
+            Caption = '&Excluir Dados Cobrança'
+            ImageIndex = 10
+          end>
+        ActionBar = ActionToolBar5
+      end>
+    DisabledImages = FDataModule.ImagensCadastrosD
+    Images = FDataModule.ImagensCadastros
+    Left = 427
+    StyleName = 'Ribbon - Silver'
+    object ActionIncluirItem: TAction
+      Category = 'CTe'
+      Caption = 'Incluir Nota'
+      ImageIndex = 31
+      OnExecute = ActionIncluirItemExecute
+    end
+    object ActionExcluirItem: TAction
+      Category = 'CTe'
+      Caption = 'Excluir Nota'
+      ImageIndex = 10
+      OnExecute = ActionExcluirItemExecute
+    end
+    object ActionExcluirTipoTransporte: TAction
+      Category = 'CTe'
+      Caption = 'Excluir Tipo Transporte'
+      ImageIndex = 10
+    end
+    object ActionExcluirEntregaRetirada: TAction
+      Category = 'CTe'
+      Caption = 'Excluir Dados Entrega/Coleta'
+      ImageIndex = 10
+      OnExecute = ActionExcluirEntregaRetiradaExecute
+    end
+    object ActionExcluirTransporte: TAction
+      Category = 'CTe'
+      Caption = 'Excluir Dados Transporte'
+      ImageIndex = 10
+    end
+    object ActionExcluirCobranca: TAction
+      Category = 'CTe'
+      Caption = 'Excluir Dados Cobrança'
+      ImageIndex = 10
+      OnExecute = ActionExcluirCobrancaExecute
+    end
+    object ActionSelecionarCertificado: TAction
+      Category = 'CTe'
+      Caption = 'Selecionar Certificado'
+      ImageIndex = 27
+      OnExecute = ActionSelecionarCertificadoExecute
+    end
+    object ActionConsultarSefaz: TAction
+      Category = 'CTe'
+      Caption = 'Consultar Sefaz'
+      ImageIndex = 36
+      OnExecute = ActionConsultarSefazExecute
+    end
+    object ActionImprimirDaCTe: TAction
+      Category = 'CTe'
+      Caption = 'Imprimir DACTe'
+      ImageIndex = 4
+      OnExecute = ActionImprimirDaCTeExecute
+    end
+    object ActionCancelarCTe: TAction
+      Category = 'CTe'
+      Caption = 'Cancelar CT-e'
+      ImageIndex = 34
+      OnExecute = ActionCancelarCTeExecute
+    end
+    object ActionEnviar: TAction
+      Category = 'CTe'
+      Caption = 'Enviar'
+      ImageIndex = 33
+      OnExecute = ActionEnviarExecute
+    end
+    object ActionAssinar: TAction
+      Category = 'CTe'
+      Caption = 'Assinar'
+      ImageIndex = 35
+      OnExecute = ActionAssinarExecute
+    end
+    object ActionValidar: TAction
+      Category = 'CTe'
+      Caption = 'Validar'
+      ImageIndex = 32
+      OnExecute = ActionValidarExecute
+    end
+    object ActionAtualizarTotais: TAction
+      Category = 'CTe'
+      Caption = 'Atualizar Totais'
+      ImageIndex = 30
+      OnExecute = ActionAtualizarTotaisExecute
+    end
+    object ActionGerarXml: TAction
+      Category = 'CTe'
+      Caption = 'Gerar XML'
+      ImageIndex = 18
+      OnExecute = ActionGerarXmlExecute
+    end
+    object ActionInutilizarCTe: TAction
+      Category = 'CTe'
+      Caption = 'Inutilizar'
+      ImageIndex = 33
+      OnExecute = ActionInutilizarCTeExecute
+    end
+    object ActionCCe: TAction
+      Category = 'CTe'
+      Caption = 'CC-e'
+      ImageIndex = 1
+      OnExecute = ActionCCeExecute
+    end
+    object ActionStatusServico: TAction
+      Category = 'CTe'
+      Caption = 'Consultar Status Serviço'
+      ImageIndex = 37
+      OnExecute = ActionStatusServicoExecute
+    end
+  end
+end
+

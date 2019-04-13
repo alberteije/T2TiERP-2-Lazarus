@@ -1,0 +1,66 @@
+object FIntegracaoPDV: TFIntegracaoPDV
+  Left = 459
+  Height = 72
+  Top = 423
+  Width = 387
+  Caption = 'T2TiPDV - Sistema de Integração'
+  ClientHeight = 72
+  ClientWidth = 387
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  OnCreate = FormCreate
+  LCLVersion = '1.2.0.3'
+  object ListTXT: TFileListBox
+    Left = 120
+    Height = 41
+    Top = 8
+    Width = 121
+    Directory = 'C:\lazarus'
+    ItemHeight = 13
+    TabOrder = 0
+    Visible = False
+  end
+  object pBanco: TProgressBar
+    Left = 0
+    Height = 16
+    Top = 56
+    Width = 387
+    Align = alBottom
+    Max = 30
+    TabOrder = 1
+  end
+  object pLabel: TPanel
+    Left = 0
+    Height = 56
+    Top = 0
+    Width = 387
+    Align = alClient
+    BevelInner = bvLowered
+    Caption = 'Realizando a Conexão com o Banco...'
+    Font.Color = clMaroon
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+  end
+  object ListSemaforo: TFileListBox
+    Left = 8
+    Height = 41
+    Top = 8
+    Width = 121
+    Directory = 'C:\lazarus'
+    ItemHeight = 13
+    TabOrder = 3
+    Visible = False
+  end
+  object TimerIntegracao: TTimer
+    Enabled = False
+    Interval = 5000
+    OnTimer = TimerIntegracaoTimer
+    left = 328
+    top = 8
+  end
+end

@@ -1,0 +1,265 @@
+inherited FPatrimGrupoBem: TFPatrimGrupoBem
+  Tag = 1
+  Left = 309
+  Top = 215
+  Caption = 'Grupo Bem'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 922
+        ClientWidth = 922
+        inherited PanelFiltroRapido: TPanel
+          Width = 922
+          ClientWidth = 922
+          inherited BotaoConsultar: TSpeedButton
+            Left = 788
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 621
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 922
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 309
+          Top = 9
+          Width = 978
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditNome: TLabeledEdit[1]
+          Left = 69
+          Height = 21
+          Top = 30
+          Width = 908
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditNome
+          EditLabel.AnchorSideRight.Control = EditNome
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditNome
+          EditLabel.Left = 69
+          EditLabel.Height = 13
+          EditLabel.Top = 14
+          EditLabel.Width = 908
+          EditLabel.Caption = 'Nome:'
+          EditLabel.ParentColor = False
+          MaxLength = 50
+          TabOrder = 1
+        end
+        object MemoDescricao: TLabeledMemo[2]
+          Left = 14
+          Height = 65
+          Top = 73
+          Width = 963
+          Anchors = [akTop, akLeft, akRight]
+          ScrollBars = ssVertical
+          TabOrder = 2
+          MemoLabel.Left = 14
+          MemoLabel.Height = 13
+          MemoLabel.Top = 57
+          MemoLabel.Width = 50
+          MemoLabel.Caption = 'Descrição:'
+          MemoLabel.ParentColor = False
+        end
+        object EditCodigo: TLabeledEdit[3]
+          Left = 14
+          Height = 21
+          Top = 30
+          Width = 49
+          EditLabel.AnchorSideLeft.Control = EditCodigo
+          EditLabel.AnchorSideRight.Control = EditCodigo
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditCodigo
+          EditLabel.Left = 14
+          EditLabel.Height = 13
+          EditLabel.Top = 14
+          EditLabel.Width = 49
+          EditLabel.Caption = 'Código:'
+          EditLabel.ParentColor = False
+          MaxLength = 3
+          TabOrder = 0
+        end
+        object EditContaAtivoImobilizadoDescricao: TLabeledEdit[4]
+          Left = 206
+          Height = 21
+          Top = 160
+          Width = 771
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditContaAtivoImobilizadoDescricao
+          EditLabel.AnchorSideRight.Control = EditContaAtivoImobilizadoDescricao
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditContaAtivoImobilizadoDescricao
+          EditLabel.Left = 206
+          EditLabel.Height = 13
+          EditLabel.Top = 144
+          EditLabel.Width = 771
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 4
+          TabStop = False
+        end
+        object EditContaAtivoImobilizado: TLabeledEdit[5]
+          Left = 14
+          Height = 21
+          Top = 160
+          Width = 193
+          EditLabel.AnchorSideLeft.Control = EditContaAtivoImobilizado
+          EditLabel.AnchorSideRight.Control = EditContaAtivoImobilizado
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditContaAtivoImobilizado
+          EditLabel.Left = 14
+          EditLabel.Height = 13
+          EditLabel.Top = 144
+          EditLabel.Width = 193
+          EditLabel.Caption = 'Conta ativo imobilizado [F1]:'
+          EditLabel.ParentColor = False
+          MaxLength = 30
+          TabOrder = 3
+          OnKeyUp = EditContaAtivoImobilizadoKeyUp
+        end
+        object EditContaDepreciacaoAcumulada: TLabeledEdit[6]
+          Left = 14
+          Height = 21
+          Top = 203
+          Width = 193
+          EditLabel.AnchorSideLeft.Control = EditContaDepreciacaoAcumulada
+          EditLabel.AnchorSideRight.Control = EditContaDepreciacaoAcumulada
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditContaDepreciacaoAcumulada
+          EditLabel.Left = 14
+          EditLabel.Height = 13
+          EditLabel.Top = 187
+          EditLabel.Width = 193
+          EditLabel.Caption = 'Conta depreciação acumulada [F1]:'
+          EditLabel.ParentColor = False
+          MaxLength = 30
+          TabOrder = 5
+          OnKeyUp = EditContaDepreciacaoAcumuladaKeyUp
+        end
+        object EditContaDepreciacaoAcumuladaDescricao: TLabeledEdit[7]
+          Left = 206
+          Height = 21
+          Top = 203
+          Width = 771
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditContaDepreciacaoAcumuladaDescricao
+          EditLabel.AnchorSideRight.Control = EditContaDepreciacaoAcumuladaDescricao
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditContaDepreciacaoAcumuladaDescricao
+          EditLabel.Left = 206
+          EditLabel.Height = 13
+          EditLabel.Top = 187
+          EditLabel.Width = 771
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 6
+          TabStop = False
+        end
+        object EditContaDespesaDepreciacao: TLabeledEdit[8]
+          Left = 14
+          Height = 21
+          Top = 246
+          Width = 193
+          EditLabel.AnchorSideLeft.Control = EditContaDespesaDepreciacao
+          EditLabel.AnchorSideRight.Control = EditContaDespesaDepreciacao
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditContaDespesaDepreciacao
+          EditLabel.Left = 14
+          EditLabel.Height = 13
+          EditLabel.Top = 230
+          EditLabel.Width = 193
+          EditLabel.Caption = 'Conta despesa depreciação [F1]:'
+          EditLabel.ParentColor = False
+          MaxLength = 30
+          TabOrder = 7
+          OnKeyUp = EditContaDespesaDepreciacaoKeyUp
+        end
+        object EditContaDespesaDepreciacaoDescricao: TLabeledEdit[9]
+          Left = 206
+          Height = 21
+          Top = 246
+          Width = 771
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditContaDespesaDepreciacaoDescricao
+          EditLabel.AnchorSideRight.Control = EditContaDespesaDepreciacaoDescricao
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditContaDespesaDepreciacaoDescricao
+          EditLabel.Left = 206
+          EditLabel.Height = 13
+          EditLabel.Top = 230
+          EditLabel.Width = 771
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 8
+          TabStop = False
+        end
+        object EditCodigoHistorico: TLabeledEdit[10]
+          Left = 14
+          Height = 21
+          Top = 288
+          Width = 193
+          EditLabel.AnchorSideLeft.Control = EditCodigoHistorico
+          EditLabel.AnchorSideRight.Control = EditCodigoHistorico
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditCodigoHistorico
+          EditLabel.Left = 14
+          EditLabel.Height = 13
+          EditLabel.Top = 272
+          EditLabel.Width = 193
+          EditLabel.Caption = 'Código Histórico [F1]:'
+          EditLabel.ParentColor = False
+          MaxLength = 30
+          TabOrder = 9
+          OnKeyUp = EditCodigoHistoricoKeyUp
+        end
+        object EditCodigoHistoricoDescricao: TLabeledEdit[11]
+          Left = 206
+          Height = 21
+          Top = 288
+          Width = 771
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditCodigoHistoricoDescricao
+          EditLabel.AnchorSideRight.Control = EditCodigoHistoricoDescricao
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditCodigoHistoricoDescricao
+          EditLabel.Left = 206
+          EditLabel.Height = 13
+          EditLabel.Top = 272
+          EditLabel.Width = 771
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 10
+          TabStop = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+end

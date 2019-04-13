@@ -1,0 +1,280 @@
+inherited FComissaoObjetivo: TFComissaoObjetivo
+  Tag = 1
+  Left = 368
+  Top = 180
+  Caption = 'Objetivos / Metas'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 447
+        Width = 855
+        ClientHeight = 447
+        ClientWidth = 855
+        inherited PanelFiltroRapido: TPanel
+          Top = 393
+          Width = 855
+          ClientWidth = 855
+          inherited BotaoConsultar: TSpeedButton
+            Left = 721
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 554
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 395
+          Width = 855
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 424
+          Top = 9
+          Width = 979
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditCodigo: TLabeledEdit[1]
+          Left = 17
+          Height = 21
+          Top = 30
+          Width = 75
+          EditLabel.AnchorSideLeft.Control = EditCodigo
+          EditLabel.AnchorSideRight.Control = EditCodigo
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditCodigo
+          EditLabel.Left = 17
+          EditLabel.Height = 13
+          EditLabel.Top = 14
+          EditLabel.Width = 75
+          EditLabel.Caption = 'Código:'
+          EditLabel.ParentColor = False
+          TabOrder = 0
+        end
+        object EditIdPerfil: TLabeledCalcEdit[2]
+          Left = 98
+          Height = 21
+          Top = 30
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 1
+          Value = 0
+          OnKeyUp = EditIdPerfilKeyUp
+          CalcEditLabel.Left = 98
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 14
+          CalcEditLabel.Width = 51
+          CalcEditLabel.Caption = 'Perfil [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditPerfil: TLabeledEdit[3]
+          Left = 159
+          Height = 21
+          Top = 30
+          Width = 818
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditPerfil
+          EditLabel.AnchorSideRight.Control = EditPerfil
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditPerfil
+          EditLabel.Left = 159
+          EditLabel.Height = 13
+          EditLabel.Top = 14
+          EditLabel.Width = 818
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 2
+        end
+        object EditNome: TLabeledEdit[4]
+          Left = 17
+          Height = 21
+          Top = 121
+          Width = 960
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditNome
+          EditLabel.AnchorSideRight.Control = EditNome
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditNome
+          EditLabel.Left = 17
+          EditLabel.Height = 13
+          EditLabel.Top = 105
+          EditLabel.Width = 960
+          EditLabel.Caption = 'Nome:'
+          EditLabel.ParentColor = False
+          TabOrder = 5
+        end
+        object MemoDescricao: TLabeledMemo[5]
+          Left = 17
+          Height = 60
+          Top = 166
+          Width = 960
+          Anchors = [akTop, akLeft, akRight]
+          ScrollBars = ssVertical
+          TabOrder = 6
+          MemoLabel.Left = 17
+          MemoLabel.Height = 13
+          MemoLabel.Top = 150
+          MemoLabel.Width = 50
+          MemoLabel.Caption = 'Descrição:'
+          MemoLabel.ParentColor = False
+        end
+        object EditIdProduto: TLabeledCalcEdit[6]
+          Left = 17
+          Height = 21
+          Top = 75
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 3
+          Value = 0
+          OnKeyUp = EditIdProdutoKeyUp
+          CalcEditLabel.Left = 17
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 59
+          CalcEditLabel.Width = 65
+          CalcEditLabel.Caption = 'Produto [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditProduto: TLabeledEdit[7]
+          Left = 78
+          Height = 21
+          Top = 75
+          Width = 899
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditProduto
+          EditLabel.AnchorSideRight.Control = EditProduto
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditProduto
+          EditLabel.Left = 78
+          EditLabel.Height = 13
+          EditLabel.Top = 59
+          EditLabel.Width = 899
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 4
+        end
+        object ComboboxFormaPagamento: TLabeledComboBox[8]
+          Left = 17
+          Height = 21
+          Top = 252
+          Width = 132
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            '0=VALOR FIXO'
+            '1=PERCENTUAL'
+          )
+          Style = csDropDownList
+          TabOrder = 7
+          Text = '0=VALOR FIXO'
+          ComboBoxLabel.Left = 17
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 236
+          ComboBoxLabel.Width = 106
+          ComboBoxLabel.Caption = 'Forma de Pagamento:'
+          ComboBoxLabel.ParentColor = False
+        end
+        object EditTaxaPagamento: TLabeledCalcEdit[9]
+          Left = 155
+          Height = 21
+          Top = 252
+          Width = 110
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 8
+          Value = 0
+          CalcEditLabel.Left = 155
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 236
+          CalcEditLabel.Width = 85
+          CalcEditLabel.Caption = 'Taxa Pagamento:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditValorPagamento: TLabeledCalcEdit[10]
+          Left = 271
+          Height = 21
+          Top = 252
+          Width = 110
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 9
+          Value = 0
+          CalcEditLabel.Left = 271
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 236
+          CalcEditLabel.Width = 85
+          CalcEditLabel.Caption = 'Valor Pagamento:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditValorMeta: TLabeledCalcEdit[11]
+          Left = 387
+          Height = 21
+          Top = 252
+          Width = 110
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 10
+          Value = 0
+          CalcEditLabel.Left = 387
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 236
+          CalcEditLabel.Width = 55
+          CalcEditLabel.Caption = 'Valor Meta:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditQuantidade: TLabeledCalcEdit[12]
+          Left = 503
+          Height = 21
+          Top = 252
+          Width = 110
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 11
+          Value = 0
+          CalcEditLabel.Left = 503
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 236
+          CalcEditLabel.Width = 60
+          CalcEditLabel.Caption = 'Quantidade:'
+          CalcEditLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+end

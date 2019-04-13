@@ -1,0 +1,298 @@
+inherited FTributIss: TFTributIss
+  Left = 318
+  Top = 139
+  Caption = 'Tributação'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 466
+        ClientHeight = 466
+        inherited PanelFiltroRapido: TPanel
+          Top = 412
+          inherited BotaoConsultar: TSpeedButton
+            Left = 850
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 683
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 414
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object ScrollBox: TScrollBox[0]
+          Left = 4
+          Height = 421
+          Top = 4
+          Width = 992
+          HorzScrollBar.Page = 992
+          VertScrollBar.Page = 421
+          Align = alClient
+          BorderStyle = bsNone
+          ClientHeight = 421
+          ClientWidth = 992
+          TabOrder = 0
+          object BevelEdits: TBevel
+            Left = 7
+            Height = 54
+            Top = 11
+            Width = 975
+            Anchors = [akTop, akLeft, akRight]
+            Constraints.MinWidth = 753
+          end
+          object PageControlDadosTributIss: TPageControl
+            Left = 7
+            Height = 338
+            Top = 77
+            Width = 975
+            ActivePage = tsIss
+            Anchors = [akTop, akLeft, akRight, akBottom]
+            TabIndex = 0
+            TabOrder = 2
+            object tsIss: TTabSheet
+              Caption = 'ISS'
+              ClientHeight = 312
+              ClientWidth = 967
+              ImageIndex = 4
+              object PanelIss: TPanel
+                Left = 0
+                Height = 312
+                Top = 0
+                Width = 967
+                Align = alClient
+                BevelOuter = bvNone
+                ClientHeight = 312
+                ClientWidth = 967
+                TabOrder = 0
+                object EditPorcentoBaseCalculoIss: TLabeledCalcEdit
+                  Left = 186
+                  Height = 21
+                  Top = 24
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 1
+                  Value = 0
+                  CalcEditLabel.Left = 186
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 8
+                  CalcEditLabel.Width = 110
+                  CalcEditLabel.Caption = 'Porcento Base Cálculo:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object ComboboxModalidadeBcIss: TLabeledComboBox
+                  Left = 3
+                  Height = 21
+                  Top = 24
+                  Width = 177
+                  ItemHeight = 13
+                  ItemIndex = 0
+                  Items.Strings = (
+                    '0-Valor Operação'
+                    '9-Outros'
+                  )
+                  Style = csDropDownList
+                  TabOrder = 0
+                  Text = '0-Valor Operação'
+                  ComboBoxLabel.Left = 3
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Top = 8
+                  ComboBoxLabel.Width = 151
+                  ComboBoxLabel.Caption = 'Modalidade da Base de Cálculo:'
+                  ComboBoxLabel.ParentColor = False
+                end
+                object EditAliquotaPorcentoIss: TLabeledCalcEdit
+                  Left = 313
+                  Height = 21
+                  Top = 24
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 2
+                  Value = 0
+                  CalcEditLabel.Left = 313
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 8
+                  CalcEditLabel.Width = 89
+                  CalcEditLabel.Caption = 'Alíquota Porcento:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditAliquotaUnidadeIss: TLabeledCalcEdit
+                  Left = 440
+                  Height = 21
+                  Top = 24
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 3
+                  Value = 0
+                  CalcEditLabel.Left = 440
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 8
+                  CalcEditLabel.Width = 85
+                  CalcEditLabel.Caption = 'Alíquota Unidade:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorPrecoMaximoIss: TLabeledCalcEdit
+                  Left = 567
+                  Height = 21
+                  Top = 24
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 4
+                  Value = 0
+                  CalcEditLabel.Left = 567
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 8
+                  CalcEditLabel.Width = 97
+                  CalcEditLabel.Caption = 'Valor Preço Máximo:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorPautaFiscalIss: TLabeledCalcEdit
+                  Left = 694
+                  Height = 21
+                  Top = 24
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 5
+                  Value = 0
+                  CalcEditLabel.Left = 694
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 8
+                  CalcEditLabel.Width = 88
+                  CalcEditLabel.Caption = 'Valor Pauta Fiscal:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditItemListaServico: TLabeledCalcEdit
+                  Left = 821
+                  Height = 21
+                  Top = 24
+                  Width = 121
+                  Alignment = taRightJustify
+                  DecimalPlaces = 0
+                  DisplayFormat = '0'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 6
+                  Value = 0
+                  CalcEditLabel.Left = 821
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 8
+                  CalcEditLabel.Width = 89
+                  CalcEditLabel.Caption = 'Item Lista Serviço:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object ComboboxCodigoTributacao: TLabeledComboBox
+                  Left = 3
+                  Height = 21
+                  Top = 80
+                  Width = 177
+                  ItemHeight = 13
+                  ItemIndex = 0
+                  Items.Strings = (
+                    'N – NORMAL'
+                    'R – RETIDA'
+                    'S –SUBSTITUTA'
+                    'I – ISENTA'
+                  )
+                  Style = csDropDownList
+                  TabOrder = 7
+                  Text = 'N – NORMAL'
+                  ComboBoxLabel.Left = 3
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Top = 64
+                  ComboBoxLabel.Width = 106
+                  ComboBoxLabel.Caption = 'Código da Tributação:'
+                  ComboBoxLabel.ParentColor = False
+                end
+              end
+            end
+          end
+          object EditIdOperacaoFiscal: TLabeledCalcEdit
+            Left = 16
+            Height = 21
+            Top = 33
+            Width = 61
+            Alignment = taRightJustify
+            DecimalPlaces = 0
+            DisplayFormat = '0'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 0
+            Value = 0
+            OnKeyUp = EditIdOperacaoFiscalKeyUp
+            CalcEditLabel.Left = 16
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 17
+            CalcEditLabel.Width = 103
+            CalcEditLabel.Caption = 'Operação Fiscal [F1]:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditOperacaoFiscal: TLabeledEdit
+            Left = 77
+            Height = 21
+            Top = 33
+            Width = 894
+            Anchors = [akTop, akLeft, akRight]
+            Color = clInfoBk
+            EditLabel.AnchorSideLeft.Control = EditOperacaoFiscal
+            EditLabel.AnchorSideRight.Control = EditOperacaoFiscal
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditOperacaoFiscal
+            EditLabel.Left = 77
+            EditLabel.Height = 13
+            EditLabel.Top = 17
+            EditLabel.Width = 894
+            EditLabel.Caption = '  '
+            EditLabel.ParentColor = False
+            ReadOnly = True
+            TabOrder = 1
+            TabStop = False
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+  inherited PopupMenuAtalhosBotoesTela: TPopupMenu
+    top = 23
+  end
+  inherited PopupMenuAtalhosBotoesTelaCadastro: TPopupMenu
+    left = 720
+    top = 24
+  end
+end

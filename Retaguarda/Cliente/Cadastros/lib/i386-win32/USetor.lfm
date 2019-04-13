@@ -1,0 +1,79 @@
+inherited FSetor: TFSetor
+  Width = 921
+  Caption = 'Setor'
+  ClientWidth = 921
+  inherited PageControl: TPageControl
+    Width = 921
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      ClientHeight = 1033
+      ClientWidth = 2680
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientWidth = 913
+      inherited PanelEdits: TPanel
+        Width = 913
+        ClientWidth = 913
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 168
+          Top = 9
+          Width = 886
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditNome: TLabeledEdit[1]
+          Left = 16
+          Height = 21
+          Top = 32
+          Width = 867
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditNome
+          EditLabel.AnchorSideRight.Control = EditNome
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditNome
+          EditLabel.Left = 16
+          EditLabel.Height = 13
+          EditLabel.Top = 16
+          EditLabel.Width = 867
+          EditLabel.Caption = 'Nome:'
+          EditLabel.ParentColor = False
+          MaxLength = 50
+          TabOrder = 0
+        end
+        object MemoDescricao: TLabeledMemo[2]
+          Left = 16
+          Height = 89
+          Top = 78
+          Width = 867
+          Anchors = [akTop, akLeft, akRight]
+          ScrollBars = ssVertical
+          TabOrder = 1
+          MemoLabel.Left = 16
+          MemoLabel.Height = 13
+          MemoLabel.Top = 62
+          MemoLabel.Width = 50
+          MemoLabel.Caption = 'Descrição:'
+          MemoLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 921
+    ClientWidth = 921
+    inherited BotaoSair: TSpeedButton
+      Left = 821
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 621
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 721
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 563
+    end
+  end
+end

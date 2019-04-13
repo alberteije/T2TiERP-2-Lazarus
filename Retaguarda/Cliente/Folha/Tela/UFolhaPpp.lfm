@@ -1,0 +1,457 @@
+inherited FFolhaPpp: TFFolhaPpp
+  Left = 346
+  Caption = 'PPP'
+  ClientHeight = 500
+  ClientWidth = 860
+  PixelsPerInch = 96
+  inherited PageControl: TPageControl
+    Width = 860
+    Height = 469
+    ActivePage = PaginaEdits
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 852
+        Height = 441
+        inherited Grid: TRxDbGrid
+          Width = 852
+          Height = 389
+        end
+        inherited PanelFiltroRapido: TPanel
+          Top = 387
+          Width = 852
+          inherited BotaoConsultar: TSpeedButton
+            Left = 718
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 551
+          end
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      inherited PanelEdits: TPanel
+        Width = 852
+        Height = 441
+        object ScrollBox: TScrollBox
+          Left = 2
+          Top = 2
+          Width = 844
+          Height = 433
+          Align = alClient
+          BorderStyle = bsNone
+          TabOrder = 0
+          object BevelEdits: TBevel
+            Left = 7
+            Top = 8
+            Width = 827
+            Height = 416
+            Anchors = [akLeft, akTop, akRight, akBottom]
+            Constraints.MinWidth = 753
+          end
+          object PageControlDadosFolhaPpp: TPageControl
+            Left = 16
+            Top = 142
+            Width = 807
+            Height = 274
+            ActivePage = tsCat
+            Anchors = [akLeft, akTop, akRight, akBottom]
+            TabOrder = 3
+            object tsCat: TTabSheet
+              Caption = 'CAT'
+              ImageIndex = 2
+              object PanelCat: TPanel
+                Left = 0
+                Top = 0
+                Width = 799
+                Height = 246
+                Align = alClient
+                BevelOuter = bvNone
+                TabOrder = 0
+                object GridCat: TRxDbGrid
+                  Left = 0
+                  Top = 0
+                  Width = 799
+                  Height = 246
+                  Align = alClient
+                  DataSource = DSFolhaPppCat
+                  TabOrder = 0
+                  TitleFont.Charset = DEFAULT_CHARSET
+                  TitleFont.Color = clWindowText
+                  TitleFont.Height = -11
+                  TitleFont.Name = 'Tahoma'
+                  TitleFont.Style = []
+                  OnKeyDown = GridCatKeyDown
+                  Columns = <
+                    item
+                      Expanded = False
+                      FieldName = 'NUMERO_CAT'
+                      Title.Caption = 'Número'
+                      Width = 150
+                      Visible = True
+                    end
+                    item
+                      Expanded = False
+                      FieldName = 'DATA_AFASTAMENTO'
+                      Title.Caption = 'Data Afastamento'
+                      Width = 150
+                      Visible = True
+                    end
+                    item
+                      Expanded = False
+                      FieldName = 'DATA_REGISTRO'
+                      Title.Caption = 'Data Registro'
+                      Width = 150
+                      Visible = True
+                    end>
+                end
+              end
+            end
+            object tsAtividade: TTabSheet
+              Caption = 'Atividade'
+              ImageIndex = 2
+              object PanelAtividade: TPanel
+                Left = 0
+                Top = 0
+                Width = 799
+                Height = 246
+                Align = alClient
+                BevelOuter = bvNone
+                TabOrder = 0
+                object GridAtividade: TRxDbGrid
+                  Left = 0
+                  Top = 0
+                  Width = 799
+                  Height = 246
+                  Align = alClient
+                  DataSource = DSFolhaPppAtividade
+                  TabOrder = 0
+                  TitleFont.Charset = DEFAULT_CHARSET
+                  TitleFont.Color = clWindowText
+                  TitleFont.Height = -11
+                  TitleFont.Name = 'Tahoma'
+                  TitleFont.Style = []
+                  OnKeyDown = GridAtividadeKeyDown
+                  Columns = <
+                    item
+                      Expanded = False
+                      FieldName = 'DATA_INICIO'
+                      Title.Caption = 'Data Início'
+                      Width = 100
+                      Visible = True
+                    end
+                    item
+                      Expanded = False
+                      FieldName = 'DATA_FIM'
+                      Title.Caption = 'Data Fim'
+                      Width = 100
+                      Visible = True
+                    end
+                    item
+                      Expanded = False
+                      FieldName = 'DESCRICAO'
+                      Title.Caption = 'Descrição'
+                      Width = 500
+                      Visible = True
+                    end>
+                end
+              end
+            end
+            object tsMovimentacaoBem: TTabSheet
+              Caption = 'Fator Risco'
+              ImageIndex = 3
+              object PanelFatorRisco: TPanel
+                Left = 0
+                Top = 0
+                Width = 799
+                Height = 246
+                Align = alClient
+                BevelOuter = bvNone
+                TabOrder = 0
+                object GridFatorRisco: TRxDbGrid
+                  Left = 0
+                  Top = 0
+                  Width = 799
+                  Height = 246
+                  Align = alClient
+                  DataSource = DSFolhaPppFatorRisco
+                  TabOrder = 0
+                  TitleFont.Charset = DEFAULT_CHARSET
+                  TitleFont.Color = clWindowText
+                  TitleFont.Height = -11
+                  TitleFont.Name = 'Tahoma'
+                  TitleFont.Style = []
+                  OnKeyDown = GridFatorRiscoKeyDown
+                  Columns = <
+                    item
+                      Expanded = False
+                      FieldName = 'DATA_INICIO'
+                      Title.Caption = 'Data Início'
+                      Visible = True
+                    end
+                    item
+                      Expanded = False
+                      FieldName = 'DATA_FIM'
+                      Title.Caption = 'Data Fim'
+                      Visible = True
+                    end
+                    item
+                      Expanded = False
+                      FieldName = 'TIPO'
+                      PickList.Strings = (
+                        'F=Físico'
+                        'Q=Químico'
+                        'B=Biológico'
+                        'E=Ergonômico/Psicossocial'
+                        'M=Mecânico/de Acidente')
+                      Title.Caption = 'Tipo (F|Q|B|E|M)'
+                      Width = 150
+                      Visible = True
+                    end
+                    item
+                      Expanded = False
+                      FieldName = 'FATOR_RISCO'
+                      Title.Caption = 'Fator Risco'
+                      Visible = True
+                    end
+                    item
+                      Expanded = False
+                      FieldName = 'INTENSIDADE'
+                      Title.Caption = 'Intensidade'
+                      Visible = True
+                    end
+                    item
+                      Expanded = False
+                      FieldName = 'TECNICA_UTILIZADA'
+                      Title.Caption = 'Técnica Utilizada'
+                      Visible = True
+                    end
+                    item
+                      Expanded = False
+                      FieldName = 'EPC_EFICAZ'
+                      PickList.Strings = (
+                        'S - Sim'
+                        'N - Não')
+                      Title.Caption = 'EPC Eficaz (S|N)'
+                      Visible = True
+                    end
+                    item
+                      Expanded = False
+                      FieldName = 'EPI_EFICAZ'
+                      PickList.Strings = (
+                        'S - Sim'
+                        'N - Não')
+                      Title.Caption = 'EPI Eficaz (S|N)'
+                      Visible = True
+                    end
+                    item
+                      Expanded = False
+                      FieldName = 'CA_EPI'
+                      Title.Caption = 'CA EPI'
+                      Visible = True
+                    end
+                    item
+                      Expanded = False
+                      FieldName = 'ATENDIMENTO_NR06_1'
+                      PickList.Strings = (
+                        'S - Sim'
+                        'N - Não')
+                      Title.Caption = 'NR06 1 (S|N)'
+                      Visible = True
+                    end
+                    item
+                      Expanded = False
+                      FieldName = 'ATENDIMENTO_NR06_2'
+                      PickList.Strings = (
+                        'S - Sim'
+                        'N - Não')
+                      Title.Caption = 'NR06 2 (S|N)'
+                      Visible = True
+                    end
+                    item
+                      Expanded = False
+                      FieldName = 'ATENDIMENTO_NR06_3'
+                      PickList.Strings = (
+                        'S - Sim'
+                        'N - Não')
+                      Title.Caption = 'NR06 3 (S|N)'
+                      Visible = True
+                    end
+                    item
+                      Expanded = False
+                      FieldName = 'ATENDIMENTO_NR06_4'
+                      PickList.Strings = (
+                        'S - Sim'
+                        'N - Não')
+                      Title.Caption = 'NR06 4 (S|N)'
+                      Visible = True
+                    end
+                    item
+                      Expanded = False
+                      FieldName = 'ATENDIMENTO_NR06_5'
+                      PickList.Strings = (
+                        'S - Sim'
+                        'N - Não')
+                      Title.Caption = 'NR06 5 (S|N)'
+                      Visible = True
+                    end>
+                end
+              end
+            end
+            object tsExameMedico: TTabSheet
+              Caption = 'Exame Médico'
+              ImageIndex = 3
+              object PanelExameMedico: TPanel
+                Left = 0
+                Top = 0
+                Width = 799
+                Height = 246
+                Align = alClient
+                BevelOuter = bvNone
+                TabOrder = 0
+                object GridExameMedico: TRxDbGrid
+                  Left = 0
+                  Top = 0
+                  Width = 799
+                  Height = 246
+                  Align = alClient
+                  DataSource = DSFolhaPppExameMedico
+                  TabOrder = 0
+                  TitleFont.Charset = DEFAULT_CHARSET
+                  TitleFont.Color = clWindowText
+                  TitleFont.Height = -11
+                  TitleFont.Name = 'Tahoma'
+                  TitleFont.Style = []
+                  OnKeyDown = GridExameMedicoKeyDown
+                  Columns = <
+                    item
+                      Expanded = False
+                      FieldName = 'DATA_ULTIMO'
+                      Title.Caption = 'Data Último'
+                      Visible = True
+                    end
+                    item
+                      Expanded = False
+                      FieldName = 'TIPO'
+                      PickList.Strings = (
+                        'A=Admissional'
+                        'P=Periódico'
+                        'R=Retorno ao Trabalho'
+                        'M=Mudança de Função'
+                        'D=Demissional')
+                      Title.Caption = 'Tipo (A|P|R|M|D)'
+                      Width = 150
+                      Visible = True
+                    end
+                    item
+                      Expanded = False
+                      FieldName = 'NATUREZA'
+                      Title.Caption = 'Natureza'
+                      Visible = True
+                    end
+                    item
+                      Expanded = False
+                      FieldName = 'EXAME'
+                      PickList.Strings = (
+                        'R=Referencial'
+                        'S=Seqüencial')
+                      Title.Caption = 'Exame (R|S)'
+                      Width = 100
+                      Visible = True
+                    end
+                    item
+                      Expanded = False
+                      FieldName = 'INDICACAO_RESULTADOS'
+                      Title.Caption = 'Indicação Resultados'
+                      Visible = True
+                    end>
+                end
+              end
+            end
+          end
+          object EditIdColaborador: TLabeledCalcEdit
+            Left = 16
+            Top = 30
+            Width = 61
+            Height = 21
+            TabOrder = 0
+            OnKeyUp = EditIdColaboradorKeyUp
+            CalcEditLabel.Width = 86
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Caption = 'Colaborador [F1]:'
+          end
+          object EditColaborador: TLabeledEdit
+            Left = 77
+            Top = 30
+            Width = 742
+            Height = 21
+            TabStop = False
+            Anchors = [akLeft, akTop, akRight]
+            Color = clInfoBk
+            EditLabel.Width = 6
+            EditLabel.Height = 13
+            EditLabel.Caption = '  '
+            ReadOnly = True
+            TabOrder = 1
+          end
+          object MemoObservacao: TLabeledMemo
+            Left = 16
+            Top = 72
+            Width = 803
+            Height = 57
+            Anchors = [akLeft, akTop, akRight]
+            TabOrder = 2
+            MemoLabel.Width = 62
+            MemoLabel.Height = 13
+            MemoLabel.Caption = 'Observação:'
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 860
+    inherited BotaoSair: TSpeedButton
+      Left = 754
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 654
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 544
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 644
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 444
+    end
+  end
+  inherited PopupMenuAtalhosBotoesTela: TPopupMenu
+    Top = 23
+  end
+  inherited PopupMenuAtalhosBotoesTelaCadastro: TPopupMenu
+    Left = 720
+    Top = 24
+  end
+  object DSFolhaPppCat: TDataSource
+    DataSet = CDSFolhaPppCat
+    Left = 93
+    Top = 336
+  end
+  object DSFolhaPppAtividade: TDataSource
+    DataSet = CDSFolhaPppAtividade
+    Left = 221
+    Top = 336
+  end
+  object DSFolhaPppFatorRisco: TDataSource
+    DataSet = CDSFolhaPppFatorRisco
+    Left = 357
+    Top = 336
+  end
+  object DSFolhaPppExameMedico: TDataSource
+    DataSet = CDSFolhaPppExameMedico
+    Left = 485
+    Top = 336
+  end
+end
+

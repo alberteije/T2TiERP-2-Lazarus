@@ -1,0 +1,128 @@
+inherited FContratoTemplate: TFContratoTemplate
+  Tag = 1
+  Left = 366
+  Top = 206
+  Caption = 'Templates'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 922
+        ClientWidth = 922
+        inherited PanelFiltroRapido: TPanel
+          Width = 922
+          ClientWidth = 922
+          inherited BotaoConsultar: TSpeedButton
+            Left = 790
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 621
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 922
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 9
+          Height = 140
+          Top = 44
+          Width = 982
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditNome: TLabeledEdit[1]
+          Left = 18
+          Height = 21
+          Top = 67
+          Width = 962
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditNome
+          EditLabel.AnchorSideRight.Control = EditNome
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditNome
+          EditLabel.Left = 18
+          EditLabel.Height = 13
+          EditLabel.Top = 51
+          EditLabel.Width = 962
+          EditLabel.Caption = 'Nome:'
+          EditLabel.ParentColor = False
+          MaxLength = 50
+          TabOrder = 0
+        end
+        object MemoDescricao: TLabeledMemo[2]
+          Left = 18
+          Height = 65
+          Top = 110
+          Width = 962
+          Anchors = [akTop, akLeft, akRight]
+          ScrollBars = ssVertical
+          TabOrder = 1
+          MemoLabel.Left = 18
+          MemoLabel.Height = 13
+          MemoLabel.Top = 94
+          MemoLabel.Width = 50
+          MemoLabel.Caption = 'Descrição:'
+          MemoLabel.ParentColor = False
+        end
+        object ActionToolBar1: TToolPanel[3]
+          Left = 4
+          Height = 31
+          Top = 4
+          Width = 992
+          Items = <          
+            item
+              Action = ActionEditarArquivo
+              Visible = True
+              Left = 884
+              Height = 21
+              Top = 5
+              Width = 103
+              ShowCaption = True
+            end>
+          ImageList = FDataModule.ImagensCadastros
+          ToolBarStyle = tbsWindowsXP
+          Options = [tpFlatBtns]
+          ButtonAllign = tbaRignt
+          Align = alTop
+          BorderWidth = 4
+          ClientHeight = 31
+          ClientWidth = 992
+          Color = clMenuBar
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          ParentColor = False
+          ParentFont = False
+          TabOrder = 2
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+  object ActionManager1: TActionList[5]
+    Images = FDataModule.ImagensCadastros
+    left = 756
+    top = 271
+    object ActionEditarArquivo: TAction
+      Caption = 'Editar Arquivo'
+      ImageIndex = 23
+      OnExecute = ActionEditarArquivoExecute
+    end
+  end
+end

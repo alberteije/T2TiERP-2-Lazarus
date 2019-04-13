@@ -1,0 +1,583 @@
+inherited FCompraConfirmaCotacao: TFCompraConfirmaCotacao
+  Tag = 1
+  Left = 358
+  Top = 138
+  Caption = 'Confirma Cotação'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 507
+        ClientHeight = 507
+        inherited PanelFiltroRapido: TPanel
+          Top = 453
+          inherited BotaoConsultar: TSpeedButton
+            Left = 850
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 683
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 455
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 9
+          Height = 51
+          Top = 10
+          Width = 975
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditDescricao: TLabeledEdit[1]
+          Left = 148
+          Height = 21
+          Top = 31
+          Width = 824
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditDescricao
+          EditLabel.AnchorSideRight.Control = EditDescricao
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditDescricao
+          EditLabel.Left = 148
+          EditLabel.Height = 13
+          EditLabel.Top = 15
+          EditLabel.Width = 824
+          EditLabel.Caption = 'Descrição:'
+          EditLabel.ParentColor = False
+          TabOrder = 1
+        end
+        object EditDataCotacao: TLabeledDateEdit[2]
+          Left = 21
+          Height = 21
+          Top = 31
+          Width = 121
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 0
+          Text = '  /  /    '
+          DateEditLabel.Left = 21
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 15
+          DateEditLabel.Width = 70
+          DateEditLabel.Caption = 'Data Cotação:'
+          DateEditLabel.ParentColor = False
+        end
+        object GroupBoxItensCotacao: TGroupBox[3]
+          Left = 9
+          Height = 171
+          Top = 238
+          Width = 975
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          Caption = 'Itens da cotação por fornecedor:'
+          ClientHeight = 153
+          ClientWidth = 971
+          TabOrder = 3
+          object GridCompraCotacaoDetalhe: TRxDBGrid
+            Left = 0
+            Height = 153
+            Top = 0
+            Width = 971
+            TitleButtons = True
+            AutoSort = True
+            Columns = <            
+              item
+                ReadOnly = True
+                Title.Alignment = taCenter
+                Title.Caption = 'ID'
+                Title.Orientation = toHorizontal
+                Visible = False
+                FieldName = 'ID'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                ReadOnly = True
+                Title.Alignment = taCenter
+                Title.Caption = 'ID_COMPRA_FORNECEDOR_COTACAO'
+                Title.Orientation = toHorizontal
+                Visible = False
+                FieldName = 'ID_COMPRA_FORNECEDOR_COTACAO'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                ReadOnly = True
+                Title.Alignment = taCenter
+                Title.Caption = 'ID_PRODUTO'
+                Title.Orientation = toHorizontal
+                Width = 60
+                FieldName = 'ID_PRODUTO'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Color = clInfoBk
+                ReadOnly = True
+                Title.Alignment = taCenter
+                Title.Caption = 'Nome Produto'
+                Title.Orientation = toHorizontal
+                Width = 300
+                FieldName = 'PRODUTO.NOME'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                ReadOnly = True
+                Title.Alignment = taCenter
+                Title.Caption = 'QUANTIDADE'
+                Title.Orientation = toHorizontal
+                Width = 80
+                FieldName = 'QUANTIDADE'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'VALOR_UNITARIO'
+                Title.Orientation = toHorizontal
+                FieldName = 'VALOR_UNITARIO'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'VALOR_SUBTOTAL'
+                Title.Orientation = toHorizontal
+                FieldName = 'VALOR_SUBTOTAL'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'TAXA_DESCONTO'
+                Title.Orientation = toHorizontal
+                FieldName = 'TAXA_DESCONTO'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'VALOR_DESCONTO'
+                Title.Orientation = toHorizontal
+                FieldName = 'VALOR_DESCONTO'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'VALOR_TOTAL'
+                Title.Orientation = toHorizontal
+                FieldName = 'VALOR_TOTAL'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end>
+            KeyStrokes = <            
+              item
+                Command = rxgcShowFindDlg
+                ShortCut = 16454
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowColumnsDlg
+                ShortCut = 16471
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowFilterDlg
+                ShortCut = 16468
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowSortDlg
+                ShortCut = 16467
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowQuickFilter
+                ShortCut = 16465
+                Enabled = True
+              end            
+              item
+                Command = rxgcHideQuickFilter
+                ShortCut = 16456
+                Enabled = True
+              end            
+              item
+                Command = rxgcSelectAll
+                ShortCut = 16449
+                Enabled = True
+              end            
+              item
+                Command = rxgcDeSelectAll
+                ShortCut = 16429
+                Enabled = True
+              end            
+              item
+                Command = rxgcInvertSelection
+                ShortCut = 16426
+                Enabled = True
+              end            
+              item
+                Command = rxgcOptimizeColumnsWidth
+                ShortCut = 16427
+                Enabled = True
+              end>
+            OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+            Align = alClient
+            Color = clWindow
+            DrawFullLine = False
+            FocusColor = clRed
+            SelectedColor = clHighlight
+            GridLineStyle = psSolid
+            DataSource = DSCompraCotacaoDetalhe
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgHeaderPushedLook]
+            ParentColor = False
+            TabOrder = 0
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+          end
+        end
+        object GroupBoxFornecedores: TGroupBox[4]
+          Left = 9
+          Height = 166
+          Top = 65
+          Width = 975
+          Anchors = [akTop, akLeft, akRight]
+          Caption = 'Fornecedores:'
+          ClientHeight = 148
+          ClientWidth = 971
+          TabOrder = 2
+          object GridCompraFornecedorCotacao: TRxDBGrid
+            Left = 0
+            Height = 116
+            Top = 32
+            Width = 971
+            TitleButtons = True
+            AutoSort = True
+            Columns = <            
+              item
+                ReadOnly = True
+                Title.Alignment = taCenter
+                Title.Caption = 'ID'
+                Title.Orientation = toHorizontal
+                Visible = False
+                FieldName = 'ID'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                ReadOnly = True
+                Title.Alignment = taCenter
+                Title.Caption = 'ID_COMPRA_COTACAO'
+                Title.Orientation = toHorizontal
+                Visible = False
+                FieldName = 'ID_COMPRA_COTACAO'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                ReadOnly = True
+                Title.Alignment = taCenter
+                Title.Caption = 'ID_FORNECEDOR'
+                Title.Orientation = toHorizontal
+                Width = 77
+                FieldName = 'ID_FORNECEDOR'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Color = clInfoBk
+                ReadOnly = True
+                Title.Alignment = taCenter
+                Title.Caption = 'Nome Fornecedor'
+                Title.Orientation = toHorizontal
+                Width = 300
+                FieldName = 'FORNECEDOR.NOME'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'PRAZO_ENTREGA'
+                Title.Orientation = toHorizontal
+                FieldName = 'PRAZO_ENTREGA'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'CONDICOES_PAGAMENTO'
+                Title.Orientation = toHorizontal
+                FieldName = 'CONDICOES_PAGAMENTO'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'VALOR_SUBTOTAL'
+                Title.Orientation = toHorizontal
+                FieldName = 'VALOR_SUBTOTAL'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'TAXA_DESCONTO'
+                Title.Orientation = toHorizontal
+                FieldName = 'TAXA_DESCONTO'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'VALOR_DESCONTO'
+                Title.Orientation = toHorizontal
+                FieldName = 'VALOR_DESCONTO'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'TOTAL'
+                Title.Orientation = toHorizontal
+                FieldName = 'TOTAL'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end>
+            KeyStrokes = <            
+              item
+                Command = rxgcShowFindDlg
+                ShortCut = 16454
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowColumnsDlg
+                ShortCut = 16471
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowFilterDlg
+                ShortCut = 16468
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowSortDlg
+                ShortCut = 16467
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowQuickFilter
+                ShortCut = 16465
+                Enabled = True
+              end            
+              item
+                Command = rxgcHideQuickFilter
+                ShortCut = 16456
+                Enabled = True
+              end            
+              item
+                Command = rxgcSelectAll
+                ShortCut = 16449
+                Enabled = True
+              end            
+              item
+                Command = rxgcDeSelectAll
+                ShortCut = 16429
+                Enabled = True
+              end            
+              item
+                Command = rxgcInvertSelection
+                ShortCut = 16426
+                Enabled = True
+              end            
+              item
+                Command = rxgcOptimizeColumnsWidth
+                ShortCut = 16427
+                Enabled = True
+              end>
+            OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+            Align = alClient
+            Color = clWindow
+            DrawFullLine = False
+            FocusColor = clRed
+            SelectedColor = clHighlight
+            GridLineStyle = psSolid
+            DataSource = DSCompraFornecedorCotacao
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgHeaderPushedLook]
+            ParentColor = False
+            TabOrder = 0
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+          end
+          object ActionToolBar3: TToolPanel
+            Left = 0
+            Height = 32
+            Top = 0
+            Width = 971
+            Items = <            
+              item
+                Action = ActionGerarCsv
+                Visible = True
+                Left = 741
+                Height = 22
+                Top = 5
+                Width = 225
+                ShowCaption = True
+              end            
+              item
+                Action = ActionLerCsvFornecedor
+                Visible = True
+                Left = 551
+                Height = 22
+                Top = 5
+                Width = 190
+                ShowCaption = True
+              end>
+            ImageList = FDataModule.ImagensCadastros
+            ToolBarStyle = tbsWindowsXP
+            Options = [tpFlatBtns]
+            ButtonAllign = tbaRignt
+            Align = alTop
+            BorderWidth = 4
+            ClientHeight = 32
+            ClientWidth = 971
+            Color = clMenuBar
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            ParentColor = False
+            ParentFont = False
+            TabOrder = 1
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+  object DSCompraFornecedorCotacao: TDatasource[5]
+    DataSet = CDSCompraFornecedorCotacao
+    left = 736
+    top = 200
+  end
+  object DSCompraCotacaoDetalhe: TDatasource[6]
+    DataSet = CDSCompraCotacaoDetalhe
+    left = 760
+    top = 424
+  end
+  object ActionManager1: TActionList[7]
+    Images = FDataModule.ImagensCadastros
+    left = 871
+    top = 186
+    object ActionGerarCsv: TAction
+      Caption = 'Gerar Arquivo CSV para Fornecedores'
+      ImageIndex = 21
+      OnExecute = ActionGerarCsvExecute
+    end
+    object ActionLerCsvFornecedor: TAction
+      Caption = 'Importar Dados do Fornecedor'
+      ImageIndex = 3
+      OnExecute = ActionLerCsvFornecedorExecute
+    end
+  end
+  object CDSCompraFornecedorCotacao: TBufDataset[8]
+    FieldDefs = <>
+    AfterPost = CDSCompraFornecedorCotacaoAfterPost
+    left = 540
+    top = 232
+  end
+  object CDSCompraCotacaoDetalhe: TBufDataset[9]
+    FieldDefs = <>
+    AfterPost = CDSCompraCotacaoDetalheAfterPost
+    left = 876
+    top = 388
+  end
+end

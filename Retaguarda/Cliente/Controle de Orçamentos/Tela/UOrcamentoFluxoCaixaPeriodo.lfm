@@ -1,0 +1,10 @@
+inherited FOrcamentoFluxoCaixaPeriodo: TFOrcamentoFluxoCaixaPeriodo
+  Tag = 1
+  Caption = 'Períodos do Orçamento'
+  PixelsPerInch = 96
+  inherited PageControl: TPageControl
+    inherited PaginaEdits: TTabSheet
+    end
+  end
+end
+

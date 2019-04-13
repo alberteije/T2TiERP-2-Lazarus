@@ -1,0 +1,254 @@
+inherited FPontoParametro: TFPontoParametro
+  Tag = 1
+  Left = 372
+  Top = 203
+  Caption = 'Ponto Parâmetros'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 953
+        ClientWidth = 953
+        inherited PanelFiltroRapido: TPanel
+          Width = 953
+          ClientWidth = 953
+          inherited BotaoConsultar: TSpeedButton
+            Left = 819
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 652
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 953
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 182
+          Top = 12
+          Width = 982
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditMesAno: TLabeledMaskEdit[1]
+          Left = 16
+          Height = 21
+          Top = 34
+          Width = 86
+          CharCase = ecNormal
+          MaxLength = 7
+          TabOrder = 0
+          EditMask = '##/####;1;_'
+          Text = '  /    '
+          SpaceChar = '_'
+          MaskEditLabel.Left = 16
+          MaskEditLabel.Height = 13
+          MaskEditLabel.Top = 18
+          MaskEditLabel.Width = 46
+          MaskEditLabel.Caption = 'Mes/Ano:'
+          MaskEditLabel.ParentColor = False
+        end
+        object EditDiaInicialApuracao: TLabeledCalcEdit[2]
+          Left = 110
+          Height = 21
+          Top = 34
+          Width = 104
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 1
+          Value = 0
+          CalcEditLabel.Left = 110
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 18
+          CalcEditLabel.Width = 98
+          CalcEditLabel.Caption = 'Dia Inicial Apuração:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditHoraNoturnaInicio: TLabeledMaskEdit[3]
+          Left = 220
+          Height = 21
+          Top = 34
+          Width = 110
+          CharCase = ecNormal
+          MaxLength = 8
+          TabOrder = 2
+          EditMask = '##:##:##;1;_'
+          Text = '  :  :  '
+          SpaceChar = '_'
+          MaskEditLabel.Left = 220
+          MaskEditLabel.Height = 13
+          MaskEditLabel.Top = 18
+          MaskEditLabel.Width = 97
+          MaskEditLabel.Caption = 'Hora Noturna Inicio:'
+          MaskEditLabel.ParentColor = False
+        end
+        object EditHoraNoturnaFim: TLabeledMaskEdit[4]
+          Left = 336
+          Height = 21
+          Top = 34
+          Width = 110
+          CharCase = ecNormal
+          MaxLength = 8
+          TabOrder = 3
+          EditMask = '##:##:##;1;_'
+          Text = '  :  :  '
+          SpaceChar = '_'
+          MaskEditLabel.Left = 336
+          MaskEditLabel.Height = 13
+          MaskEditLabel.Top = 18
+          MaskEditLabel.Width = 88
+          MaskEditLabel.Caption = 'Hora Noturna Fim:'
+          MaskEditLabel.ParentColor = False
+        end
+        object EditPeriodoMinimoInterjornada: TLabeledMaskEdit[5]
+          Left = 452
+          Height = 21
+          Top = 34
+          Width = 110
+          CharCase = ecNormal
+          MaxLength = 8
+          TabOrder = 4
+          EditMask = '##:##:##;1;_'
+          Text = '  :  :  '
+          SpaceChar = '_'
+          MaskEditLabel.Left = 452
+          MaskEditLabel.Height = 13
+          MaskEditLabel.Top = 18
+          MaskEditLabel.Width = 100
+          MaskEditLabel.Caption = 'Minimo Interjornada:'
+          MaskEditLabel.ParentColor = False
+        end
+        object EditPercentualHEDiurna: TLabeledCalcEdit[6]
+          Left = 684
+          Height = 21
+          Top = 34
+          Width = 121
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 6
+          Value = 0
+          CalcEditLabel.Left = 684
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 18
+          CalcEditLabel.Width = 105
+          CalcEditLabel.Caption = 'Percentual HE Diurna:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditPercentualHENoturna: TLabeledCalcEdit[7]
+          Left = 811
+          Height = 21
+          Top = 34
+          Width = 121
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 7
+          Value = 0
+          CalcEditLabel.Left = 811
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 18
+          CalcEditLabel.Width = 113
+          CalcEditLabel.Caption = 'Percentual HE Noturna:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditDuracaoHoraNoturna: TLabeledMaskEdit[8]
+          Left = 568
+          Height = 21
+          Top = 34
+          Width = 110
+          CharCase = ecNormal
+          MaxLength = 8
+          TabOrder = 5
+          EditMask = '##:##:##;1;_'
+          Text = '  :  :  '
+          SpaceChar = '_'
+          MaskEditLabel.Left = 568
+          MaskEditLabel.Height = 13
+          MaskEditLabel.Top = 18
+          MaskEditLabel.Width = 112
+          MaskEditLabel.Caption = 'Duracao Hora Noturna:'
+          MaskEditLabel.ParentColor = False
+        end
+        object CheckBoxRepetirParametros: TCheckBox[9]
+          Left = 16
+          Height = 19
+          Top = 168
+          Width = 411
+          Caption = 'Gerar os mesmos parâmetros para todos os meses do ano informado em Mês/Ano'
+          TabOrder = 10
+        end
+        object ComboBoxTratamentoHoraMais: TLabeledComboBox[10]
+          Left = 16
+          Height = 21
+          Top = 82
+          Width = 916
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            'E = Hora Extra [Paga como hora extra]'
+            'B = Banco de Horas [Horas são armazenadas no banco de horas para futura compensação]'
+          )
+          Style = csDropDownList
+          TabOrder = 8
+          Text = 'E = Hora Extra [Paga como hora extra]'
+          ComboBoxLabel.Left = 16
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 66
+          ComboBoxLabel.Width = 348
+          ComboBoxLabel.Caption = 'Tratamento dado para horas trabalhadas a mais na jornada de trabalho:'
+          ComboBoxLabel.ParentColor = False
+        end
+        object ComboBoxTratamentoHoraMenos: TLabeledComboBox[11]
+          Left = 16
+          Height = 21
+          Top = 131
+          Width = 916
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            'F = Falta [Desconta como falta]'
+            'B = Banco de Horas [Horas são armazenadas no banco de horas para futura compensação]'
+          )
+          Style = csDropDownList
+          TabOrder = 9
+          Text = 'F = Falta [Desconta como falta]'
+          ComboBoxLabel.Left = 16
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 115
+          ComboBoxLabel.Width = 358
+          ComboBoxLabel.Caption = 'Tratamento dado para horas trabalhadas a menos na jornada de trabalho:'
+          ComboBoxLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+end

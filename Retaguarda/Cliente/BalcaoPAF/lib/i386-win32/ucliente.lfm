@@ -1,0 +1,56 @@
+object FCliente: TFCliente
+  Tag = 1
+  Left = 415
+  Height = 349
+  Top = 228
+  Width = 565
+  Caption = 'Clientes'
+  ClientHeight = 349
+  ClientWidth = 565
+  LCLVersion = '1.0.4.0'
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 324
+    Top = 0
+    Width = 565
+    Align = alClient
+    Color = clWindow
+    Columns = <>
+    DataSource = Datasource1
+    TabOrder = 0
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 0
+    Height = 25
+    Top = 324
+    Width = 565
+    Align = alBottom
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 25
+    ClientWidth = 565
+    DataSource = Datasource1
+    Options = []
+    TabOrder = 1
+  end
+  object Dbf1: TDbf
+    FilePath = 'C:\lazarus\examples\database\dblookup\data\'
+    IndexDefs = <>
+    TableName = 'lookerup.dbf'
+    TableLevel = 3
+    Active = True
+    FilterOptions = []
+    left = 184
+    top = 120
+  end
+  object Datasource1: TDatasource
+    DataSet = Dbf1
+    left = 295
+    top = 127
+  end
+end

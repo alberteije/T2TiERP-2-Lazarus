@@ -1,0 +1,94 @@
+inherited FWmsParametro: TFWmsParametro
+  inherited PageControl: TPageControl
+    Width = 961
+    ActivePage = PaginaEdits
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 953
+        inherited Grid: TJvDBUltimGrid
+          Width = 953
+        end
+        inherited PanelFiltroRapido: TPanel
+          Width = 953
+          inherited BotaoConsultar: TSpeedButton
+            Left = 819
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 652
+          end
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      inherited PanelEdits: TPanel
+        Width = 953
+        object BevelEdits: TBevel
+          Left = 8
+          Top = 12
+          Width = 935
+          Height = 59
+          Anchors = [akLeft, akTop, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditHoraPorVolume: TLabeledCalcEdit
+          Left = 21
+          Top = 34
+          Width = 104
+          Height = 21
+          TabOrder = 0
+          CalcEditLabel.Width = 83
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Hora por Volume:'
+        end
+        object EditPessoaPorVolume: TLabeledCalcEdit
+          Left = 131
+          Top = 34
+          Width = 104
+          Height = 21
+          TabOrder = 1
+          CalcEditLabel.Width = 94
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Pessoa por Volume:'
+        end
+        object EditHoraPorPeso: TLabeledCalcEdit
+          Left = 242
+          Top = 34
+          Width = 104
+          Height = 21
+          TabOrder = 2
+          CalcEditLabel.Width = 72
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Hora por Peso:'
+        end
+        object EditPessoaPorPeso: TLabeledCalcEdit
+          Left = 352
+          Top = 34
+          Width = 104
+          Height = 21
+          TabOrder = 3
+          CalcEditLabel.Width = 83
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Pessoa por Peso:'
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 961
+    inherited BotaoSair: TSpeedButton
+      Left = 855
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 755
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 645
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 745
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 545
+    end
+  end
+end

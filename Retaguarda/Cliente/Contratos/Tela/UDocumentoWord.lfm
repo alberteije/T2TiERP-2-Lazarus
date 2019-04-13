@@ -1,0 +1,60 @@
+object FDocumentoWord: TFDocumentoWord
+  Left = 303
+  Top = 231
+  Caption = 'T2Ti ERP - Edição de Template Tipo MS-Word'
+  ClientHeight = 296
+  ClientWidth = 992
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Position = poDesktopCenter
+  WindowState = wsMaximized
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  object ActionToolBarPrincipal: TToolPanel
+    Left = 3
+    Top = 269
+    Width = 986
+    Height = 24
+    Align = alBottom
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object OleContainer: TActiveXContainer
+    Left = 0
+    Top = 0
+    Width = 992
+    Height = 266
+    Align = alClient
+    Caption = 'OleContainer'
+    TabOrder = 1
+  end
+  object ActionManagerLocal: TActionList
+    Images = FDataModule.ImagensCadastros
+    Left = 312
+    Top = 32
+    object ActionSalvarSair: TAction
+      Category = 'Geral'
+      Caption = 'Salvar e Sair'
+      ImageIndex = 9
+      OnExecute = ActionSalvarSairExecute
+    end
+    object ActionCancelarSair: TAction
+      Category = 'Geral'
+      Caption = 'Cancelar e Sair'
+      ImageIndex = 10
+      OnExecute = ActionCancelarSairExecute
+    end
+  end
+end
+

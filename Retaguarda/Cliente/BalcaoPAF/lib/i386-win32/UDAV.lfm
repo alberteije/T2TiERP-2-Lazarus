@@ -1,0 +1,357 @@
+inherited FDAV: TFDAV
+  Left = 3
+  Height = 465
+  Top = 182
+  Caption = 'DAV'
+  ClientHeight = 465
+  inherited PageControl: TPageControl
+    Height = 434
+    inherited PaginaGrid: TTabSheet
+      ClientHeight = 408
+      inherited PanelGrid: TPanel
+        Height = 408
+        ClientHeight = 408
+        inherited PanelFiltroRapido: TPanel
+          Top = 356
+          inherited BotaoConsultar: TSpeedButton
+            Left = 868
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 699
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 356
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 408
+      inherited PanelEdits: TPanel
+        Height = 408
+        ClientHeight = 408
+        object BevelEdits: TBevel[0]
+          Left = 10
+          Height = 97
+          Top = 12
+          Width = 980
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object GroupBoxDAVDetalhe: TGroupBox[1]
+          Left = 10
+          Height = 276
+          Top = 119
+          Width = 980
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          Caption = 'Itens:'
+          ClientHeight = 258
+          ClientWidth = 976
+          TabOrder = 7
+          object GridDetalhe: TRxDBGrid
+            Left = 0
+            Height = 227
+            Top = 31
+            Width = 976
+            TitleButtons = True
+            AutoSort = True
+            KeyStrokes = <            
+              item
+                Command = rxgcShowFindDlg
+                ShortCut = 16454
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowColumnsDlg
+                ShortCut = 16471
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowFilterDlg
+                ShortCut = 16468
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowSortDlg
+                ShortCut = 16467
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowQuickFilter
+                ShortCut = 16465
+                Enabled = True
+              end            
+              item
+                Command = rxgcHideQuickFilter
+                ShortCut = 16456
+                Enabled = True
+              end            
+              item
+                Command = rxgcSelectAll
+                ShortCut = 16449
+                Enabled = True
+              end            
+              item
+                Command = rxgcDeSelectAll
+                ShortCut = 16429
+                Enabled = True
+              end            
+              item
+                Command = rxgcInvertSelection
+                ShortCut = 16426
+                Enabled = True
+              end            
+              item
+                Command = rxgcOptimizeColumnsWidth
+                ShortCut = 16427
+                Enabled = True
+              end>
+            OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+            Align = alClient
+            Color = clWindow
+            DrawFullLine = False
+            FocusColor = clRed
+            SelectedColor = clHighlight
+            GridLineStyle = psSolid
+            DataSource = DSDetalhe
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgHeaderPushedLook]
+            ParentColor = False
+            TabOrder = 0
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+            OnDrawColumnCell = GridDetalheDrawColumnCell
+            OnKeyDown = GridDetalheKeyDown
+          end
+          object ActionToolBar1: TToolPanel
+            Left = 0
+            Height = 31
+            Top = 0
+            Width = 976
+            Items = <            
+              item
+                Action = ActionAtualizarTotais
+                Visible = True
+                Left = 862
+                Height = 21
+                Top = 5
+                Width = 109
+                ShowCaption = True
+              end            
+              item
+                Action = ActionExcluirItem
+                Visible = True
+                Left = 761
+                Height = 21
+                Top = 5
+                Width = 101
+                ShowCaption = True
+              end            
+              item
+                Action = ActionIncluirItem
+                Visible = True
+                Left = 673
+                Height = 21
+                Top = 5
+                Width = 88
+                ShowCaption = True
+              end>
+            ImageList = FDataModule.ImagensCadastros
+            Options = [tpFlatBtns]
+            ButtonAllign = tbaRignt
+            Align = alTop
+            BorderWidth = 4
+            ClientHeight = 31
+            ClientWidth = 976
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            ParentFont = False
+            TabOrder = 1
+          end
+        end
+        object EditIdCliente: TLabeledCalcEdit[2]
+          Left = 18
+          Height = 21
+          Top = 37
+          Width = 61
+          Alignment = taRightJustify
+          DisplayFormat = '#'
+          MaxValue = 0
+          MinValue = 0
+          ParentShowHint = False
+          TabOrder = 0
+          Value = 0
+          OnKeyUp = EditIdClienteKeyUp
+          CalcEditLabel.Left = 18
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 21
+          CalcEditLabel.Width = 60
+          CalcEditLabel.Caption = 'Cliente [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditNomeCliente: TLabeledEdit[3]
+          Left = 85
+          Height = 21
+          Top = 37
+          Width = 706
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditNomeCliente
+          EditLabel.AnchorSideRight.Control = EditNomeCliente
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditNomeCliente
+          EditLabel.Left = 85
+          EditLabel.Height = 13
+          EditLabel.Top = 21
+          EditLabel.Width = 706
+          EditLabel.Caption = 'Nome Cliente:'
+          EditLabel.ParentColor = False
+          TabOrder = 1
+          TabStop = False
+        end
+        object EditCpfCnpjCliente: TLabeledEdit[4]
+          Left = 797
+          Height = 21
+          Top = 37
+          Width = 184
+          Anchors = [akTop, akRight]
+          EditLabel.AnchorSideLeft.Control = EditCpfCnpjCliente
+          EditLabel.AnchorSideRight.Control = EditCpfCnpjCliente
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditCpfCnpjCliente
+          EditLabel.Left = 797
+          EditLabel.Height = 13
+          EditLabel.Top = 21
+          EditLabel.Width = 184
+          EditLabel.Caption = 'Cpf/Cnpj Cliente:'
+          EditLabel.ParentColor = False
+          TabOrder = 2
+          TabStop = False
+        end
+        object EditValorDesconto: TLabeledCalcEdit[5]
+          Left = 733
+          Height = 21
+          Top = 80
+          Width = 121
+          Alignment = taRightJustify
+          Color = clInfoBk
+          DisplayFormat = '###,###,##0.00'
+          Anchors = [akTop, akRight]
+          MaxValue = 0
+          MinValue = 0
+          ReadOnly = True
+          TabOrder = 5
+          Value = 0
+          CalcEditLabel.Left = 733
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 64
+          CalcEditLabel.Width = 76
+          CalcEditLabel.Caption = 'Valor Desconto:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditValorSubTotal: TLabeledCalcEdit[6]
+          Left = 479
+          Height = 21
+          Top = 80
+          Width = 121
+          Alignment = taRightJustify
+          Color = clInfoBk
+          DisplayFormat = '###,###,##0.00'
+          Anchors = [akTop, akRight]
+          MaxValue = 0
+          MinValue = 0
+          ReadOnly = True
+          TabOrder = 3
+          Value = 0
+          CalcEditLabel.Left = 479
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 64
+          CalcEditLabel.Width = 46
+          CalcEditLabel.Caption = 'SubTotal:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditValorTotal: TLabeledCalcEdit[7]
+          Left = 860
+          Height = 21
+          Top = 80
+          Width = 121
+          Alignment = taRightJustify
+          Color = clInfoBk
+          DisplayFormat = '###,###,##0.00'
+          Anchors = [akTop, akRight]
+          MaxValue = 0
+          MinValue = 0
+          ReadOnly = True
+          TabOrder = 6
+          Value = 0
+          CalcEditLabel.Left = 860
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 64
+          CalcEditLabel.Width = 28
+          CalcEditLabel.Caption = 'Total:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditTaxadesconto: TLabeledCalcEdit[8]
+          Left = 606
+          Height = 21
+          Top = 80
+          Width = 121
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          Anchors = [akTop, akRight]
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 4
+          Value = 0
+          CalcEditLabel.Left = 606
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 64
+          CalcEditLabel.Width = 76
+          CalcEditLabel.Caption = 'Taxa Desconto:'
+          CalcEditLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+  object DSDetalhe: TDatasource[5]
+    DataSet = CDSDetalhe
+    left = 720
+    top = 312
+  end
+  object ActionManager: TActionList[6]
+    Images = FDataModule.ImagensCadastros
+    left = 307
+    top = 120
+    object ActionIncluirItem: TAction
+      Category = 'Opcoes'
+      Caption = 'Incluir Item'
+      ImageIndex = 13
+      OnExecute = ActionIncluirItemExecute
+    end
+    object ActionExcluirItem: TAction
+      Category = 'Opcoes'
+      Caption = 'Cancelar Item'
+      ImageIndex = 2
+      OnExecute = ActionExcluirItemExecute
+    end
+    object ActionAtualizarTotais: TAction
+      Category = 'Opcoes'
+      Caption = 'Atualizar Totais'
+      ImageIndex = 22
+      OnExecute = ActionAtualizarTotaisExecute
+    end
+  end
+  object CDSDetalhe: TBufDataset[7]
+    FieldDefs = <>
+    left = 800
+    top = 312
+  end
+end

@@ -1,0 +1,1905 @@
+inherited FPessoa: TFPessoa
+  Tag = 1
+  Left = 51
+  Height = 540
+  Top = 121
+  Width = 927
+  Caption = 'Pessoa'
+  ClientHeight = 540
+  ClientWidth = 927
+  inherited PageControl: TPageControl
+    Height = 509
+    Width = 927
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      ClientHeight = 483
+      ClientWidth = 919
+      inherited PanelGrid: TPanel
+        Height = 483
+        Width = 919
+        ClientHeight = 483
+        ClientWidth = 919
+        inherited PanelFiltroRapido: TPanel
+          Top = 431
+          Width = 919
+          ClientWidth = 919
+          inherited BotaoConsultar: TSpeedButton
+            Left = 785
+            OnClick = BotaoConsultarClick
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 618
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 431
+          Width = 919
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 483
+      ClientWidth = 919
+      inherited PanelEdits: TPanel
+        Height = 483
+        Width = 919
+        ClientHeight = 483
+        ClientWidth = 919
+        object ScrollBox: TScrollBox[0]
+          Left = 4
+          Height = 475
+          Top = 4
+          Width = 911
+          HorzScrollBar.Page = 911
+          VertScrollBar.Page = 475
+          Align = alClient
+          BorderStyle = bsNone
+          ClientHeight = 475
+          ClientWidth = 911
+          TabOrder = 0
+          object PanelPessoaDadosBase: TPanel
+            Left = 7
+            Height = 107
+            Top = 8
+            Width = 894
+            Anchors = [akTop, akLeft, akRight]
+            BevelOuter = bvLowered
+            ClientHeight = 107
+            ClientWidth = 894
+            TabOrder = 1
+            object EditEmail: TLabeledEdit
+              Left = 9
+              Height = 21
+              Top = 76
+              Width = 361
+              Anchors = [akTop, akLeft, akRight]
+              EditLabel.AnchorSideLeft.Control = EditEmail
+              EditLabel.AnchorSideRight.Control = EditEmail
+              EditLabel.AnchorSideRight.Side = asrBottom
+              EditLabel.AnchorSideBottom.Control = EditEmail
+              EditLabel.Left = 9
+              EditLabel.Height = 13
+              EditLabel.Top = 60
+              EditLabel.Width = 361
+              EditLabel.Caption = 'E-mail:'
+              EditLabel.ParentColor = False
+              TabOrder = 3
+            end
+            object EditNome: TLabeledEdit
+              Left = 9
+              Height = 21
+              Top = 27
+              Width = 601
+              Anchors = [akTop, akLeft, akRight]
+              EditLabel.AnchorSideLeft.Control = EditNome
+              EditLabel.AnchorSideRight.Control = EditNome
+              EditLabel.AnchorSideRight.Side = asrBottom
+              EditLabel.AnchorSideBottom.Control = EditNome
+              EditLabel.Left = 9
+              EditLabel.Height = 13
+              EditLabel.Top = 11
+              EditLabel.Width = 601
+              EditLabel.Caption = 'Nome:'
+              EditLabel.ParentColor = False
+              MaxLength = 150
+              TabOrder = 0
+            end
+            object ComboboxTipoPessoa: TLabeledComboBox
+              Left = 616
+              Height = 21
+              Top = 27
+              Width = 139
+              Anchors = [akTop, akRight]
+              ItemHeight = 13
+              ItemIndex = 0
+              Items.Strings = (
+                'Física'
+                'Jurídica'
+              )
+              OnChange = ComboboxTipoPessoaChange
+              Style = csDropDownList
+              TabOrder = 1
+              Text = 'Física'
+              ComboBoxLabel.Left = 616
+              ComboBoxLabel.Height = 13
+              ComboBoxLabel.Top = 11
+              ComboBoxLabel.Width = 76
+              ComboBoxLabel.Caption = 'Tipo de Pessoa:'
+              ComboBoxLabel.ParentColor = False
+            end
+            object CheckListBoxPessoa: TCheckListBox
+              Left = 769
+              Height = 83
+              Top = 14
+              Width = 113
+              Anchors = [akTop, akRight]
+              Items.Strings = (
+                'Cliente'
+                'Fornecedor'
+                'Transportadora'
+                'Colaborador'
+              )
+              ItemHeight = 17
+              OnClick = CheckListBoxPessoaClick
+              TabOrder = 2
+              Data = {
+                0400000000000000
+              }
+            end
+            object EditSite: TLabeledEdit
+              Left = 382
+              Height = 21
+              Top = 76
+              Width = 373
+              Anchors = [akTop, akRight]
+              EditLabel.AnchorSideLeft.Control = EditSite
+              EditLabel.AnchorSideRight.Control = EditSite
+              EditLabel.AnchorSideRight.Side = asrBottom
+              EditLabel.AnchorSideBottom.Control = EditSite
+              EditLabel.Left = 382
+              EditLabel.Height = 13
+              EditLabel.Top = 60
+              EditLabel.Width = 373
+              EditLabel.Caption = 'Site:'
+              EditLabel.ParentColor = False
+              TabOrder = 4
+            end
+          end
+          object PageControlDadosPessoa: TPageControl
+            Left = 7
+            Height = 337
+            Top = 130
+            Width = 894
+            ActivePage = tsCliente
+            Anchors = [akTop, akLeft, akRight, akBottom]
+            TabIndex = 4
+            TabOrder = 0
+            object tsTipoPessoa: TTabSheet
+              Caption = 'Informações do Tipo de Pessoa'
+              ClientHeight = 311
+              ClientWidth = 886
+              object PanelDadosPessoa: TPanel
+                Left = 0
+                Height = 311
+                Top = 0
+                Width = 886
+                Align = alClient
+                ClientHeight = 311
+                ClientWidth = 886
+                TabOrder = 0
+                object PageControlTipoPessoa: TPageControl
+                  Left = 3
+                  Height = 294
+                  Top = 5
+                  Width = 877
+                  ActivePage = tsPessoaFisica
+                  Anchors = [akTop, akLeft, akRight, akBottom]
+                  TabIndex = 0
+                  TabOrder = 0
+                  Visible = False
+                  object tsPessoaFisica: TTabSheet
+                    Caption = 'tsPessoaFisica'
+                    ClientHeight = 268
+                    ClientWidth = 869
+                    object PanelPessoaFisica: TPanel
+                      Left = 0
+                      Height = 268
+                      Top = 0
+                      Width = 869
+                      Align = alClient
+                      BevelOuter = bvNone
+                      ClientHeight = 268
+                      ClientWidth = 869
+                      TabOrder = 0
+                      Visible = False
+                      object EditCPF: TLabeledMaskEdit
+                        Left = 8
+                        Height = 21
+                        Top = 18
+                        Width = 111
+                        CharCase = ecNormal
+                        Color = clWhite
+                        MaxLength = 14
+                        TabOrder = 0
+                        EditMask = '###.###.###-##;0;_'
+                        SpaceChar = '_'
+                        MaskEditLabel.Left = 8
+                        MaskEditLabel.Height = 13
+                        MaskEditLabel.Top = 2
+                        MaskEditLabel.Width = 37
+                        MaskEditLabel.Caption = 'EditCPF'
+                        MaskEditLabel.ParentColor = False
+                      end
+                      object GroupBoxRG: TGroupBox
+                        Left = 8
+                        Height = 57
+                        Top = 136
+                        Width = 449
+                        Caption = 'RG'
+                        ClientHeight = 39
+                        ClientWidth = 445
+                        TabOrder = 9
+                        object EditRGNumero: TLabeledEdit
+                          Left = 11
+                          Height = 21
+                          Top = 14
+                          Width = 121
+                          EditLabel.AnchorSideLeft.Control = EditRGNumero
+                          EditLabel.AnchorSideRight.Control = EditRGNumero
+                          EditLabel.AnchorSideRight.Side = asrBottom
+                          EditLabel.AnchorSideBottom.Control = EditRGNumero
+                          EditLabel.Left = 11
+                          EditLabel.Height = 13
+                          EditLabel.Top = -2
+                          EditLabel.Width = 121
+                          EditLabel.Caption = 'Número:'
+                          EditLabel.ParentColor = False
+                          TabOrder = 0
+                        end
+                        object EditRGEmissao: TLabeledDateEdit
+                          Left = 140
+                          Height = 21
+                          Top = 14
+                          Width = 99
+                          ButtonWidth = 0
+                          CharCase = ecNormal
+                          DialogTitle = 'Select a Date'
+                          MaxLength = 10
+                          NumGlyphs = 2
+                          PopupColor = clWindow
+                          TabOrder = 1
+                          Text = '  /  /    '
+                          DateEditLabel.Left = 140
+                          DateEditLabel.Height = 13
+                          DateEditLabel.Top = -2
+                          DateEditLabel.Width = 42
+                          DateEditLabel.Caption = 'Emissão:'
+                          DateEditLabel.ParentColor = False
+                        end
+                        object EditRGOrgaoEmissor: TLabeledEdit
+                          Left = 247
+                          Height = 21
+                          Top = 14
+                          Width = 193
+                          EditLabel.AnchorSideLeft.Control = EditRGOrgaoEmissor
+                          EditLabel.AnchorSideRight.Control = EditRGOrgaoEmissor
+                          EditLabel.AnchorSideRight.Side = asrBottom
+                          EditLabel.AnchorSideBottom.Control = EditRGOrgaoEmissor
+                          EditLabel.Left = 247
+                          EditLabel.Height = 13
+                          EditLabel.Top = -2
+                          EditLabel.Width = 193
+                          EditLabel.Caption = 'Orgão Emissor:'
+                          EditLabel.ParentColor = False
+                          TabOrder = 2
+                        end
+                      end
+                      object EditNascimento: TLabeledDateEdit
+                        Left = 131
+                        Height = 21
+                        Top = 18
+                        Width = 99
+                        ButtonWidth = 0
+                        CharCase = ecNormal
+                        DialogTitle = 'Select a Date'
+                        MaxLength = 10
+                        NumGlyphs = 2
+                        PopupColor = clWindow
+                        TabOrder = 1
+                        Text = '  /  /    '
+                        DateEditLabel.Left = 131
+                        DateEditLabel.Height = 13
+                        DateEditLabel.Top = 2
+                        DateEditLabel.Width = 59
+                        DateEditLabel.Caption = 'Nascimento:'
+                        DateEditLabel.ParentColor = False
+                      end
+                      object RadioGroupSexo: TRadioGroup
+                        Left = 679
+                        Height = 57
+                        Top = 136
+                        Width = 93
+                        AutoFill = True
+                        Caption = 'Sexo: '
+                        ChildSizing.LeftRightSpacing = 6
+                        ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+                        ChildSizing.EnlargeVertical = crsHomogenousChildResize
+                        ChildSizing.ShrinkHorizontal = crsScaleChilds
+                        ChildSizing.ShrinkVertical = crsScaleChilds
+                        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+                        ChildSizing.ControlsPerLine = 1
+                        ClientHeight = 39
+                        ClientWidth = 89
+                        ItemIndex = 0
+                        Items.Strings = (
+                          'Feminino'
+                          'Masculino'
+                        )
+                        TabOrder = 11
+                      end
+                      object LComboBoxEstadoCivil: TLabeledComboBox
+                        Left = 244
+                        Height = 21
+                        Top = 18
+                        Width = 204
+                        ItemHeight = 13
+                        Style = csDropDownList
+                        TabOrder = 2
+                        ComboBoxLabel.Left = 244
+                        ComboBoxLabel.Height = 13
+                        ComboBoxLabel.Top = 2
+                        ComboBoxLabel.Width = 59
+                        ComboBoxLabel.Caption = 'Estado Civil:'
+                        ComboBoxLabel.ParentColor = False
+                      end
+                      object EditNomeMae: TLabeledEdit
+                        Left = 456
+                        Height = 21
+                        Top = 106
+                        Width = 404
+                        Anchors = [akTop, akLeft, akRight]
+                        EditLabel.AnchorSideLeft.Control = EditNomeMae
+                        EditLabel.AnchorSideRight.Control = EditNomeMae
+                        EditLabel.AnchorSideRight.Side = asrBottom
+                        EditLabel.AnchorSideBottom.Control = EditNomeMae
+                        EditLabel.Left = 456
+                        EditLabel.Height = 13
+                        EditLabel.Top = 90
+                        EditLabel.Width = 404
+                        EditLabel.Caption = 'Nome da Mãe:'
+                        EditLabel.ParentColor = False
+                        MaxLength = 100
+                        TabOrder = 8
+                      end
+                      object EditNaturalidade: TLabeledEdit
+                        Left = 8
+                        Height = 21
+                        Top = 62
+                        Width = 440
+                        EditLabel.AnchorSideLeft.Control = EditNaturalidade
+                        EditLabel.AnchorSideRight.Control = EditNaturalidade
+                        EditLabel.AnchorSideRight.Side = asrBottom
+                        EditLabel.AnchorSideBottom.Control = EditNaturalidade
+                        EditLabel.Left = 8
+                        EditLabel.Height = 13
+                        EditLabel.Top = 46
+                        EditLabel.Width = 440
+                        EditLabel.Caption = 'Naturalidade:'
+                        EditLabel.ParentColor = False
+                        MaxLength = 100
+                        TabOrder = 5
+                      end
+                      object EditNacionalidade: TLabeledEdit
+                        Left = 456
+                        Height = 21
+                        Top = 62
+                        Width = 404
+                        Anchors = [akTop, akLeft, akRight]
+                        EditLabel.AnchorSideLeft.Control = EditNacionalidade
+                        EditLabel.AnchorSideRight.Control = EditNacionalidade
+                        EditLabel.AnchorSideRight.Side = asrBottom
+                        EditLabel.AnchorSideBottom.Control = EditNacionalidade
+                        EditLabel.Left = 456
+                        EditLabel.Height = 13
+                        EditLabel.Top = 46
+                        EditLabel.Width = 404
+                        EditLabel.Caption = 'Nacionalidade:'
+                        EditLabel.ParentColor = False
+                        MaxLength = 100
+                        TabOrder = 6
+                      end
+                      object ComboBoxRaca: TLabeledComboBox
+                        Left = 456
+                        Height = 21
+                        Top = 18
+                        Width = 198
+                        ItemHeight = 13
+                        Items.Strings = (
+                          'B - Branco '
+                          'N - Negro '
+                          'P - Pardo'
+                          'I - Indio'
+                        )
+                        Style = csDropDownList
+                        TabOrder = 3
+                        ComboBoxLabel.Left = 456
+                        ComboBoxLabel.Height = 13
+                        ComboBoxLabel.Top = 2
+                        ComboBoxLabel.Width = 28
+                        ComboBoxLabel.Caption = 'Raça:'
+                        ComboBoxLabel.ParentColor = False
+                      end
+                      object ComboBoxTipoSangue: TLabeledComboBox
+                        Left = 664
+                        Height = 21
+                        Top = 18
+                        Width = 196
+                        Anchors = [akTop, akLeft, akRight]
+                        ItemHeight = 13
+                        Items.Strings = (
+                          'A+'
+                          'A-'
+                          'B+'
+                          'B-'
+                          'O+'
+                          'O-'
+                          'AB+'
+                          'AB-'
+                        )
+                        Style = csDropDownList
+                        TabOrder = 4
+                        ComboBoxLabel.Left = 664
+                        ComboBoxLabel.Height = 13
+                        ComboBoxLabel.Top = 2
+                        ComboBoxLabel.Width = 77
+                        ComboBoxLabel.Caption = 'Tipo Sanguíneo:'
+                        ComboBoxLabel.ParentColor = False
+                      end
+                      object GroupBoxCNH: TGroupBox
+                        Left = 8
+                        Height = 57
+                        Top = 202
+                        Width = 389
+                        Caption = 'CNH'
+                        ClientHeight = 39
+                        ClientWidth = 385
+                        TabOrder = 12
+                        object EditCNHNumero: TLabeledEdit
+                          Left = 11
+                          Height = 21
+                          Top = 14
+                          Width = 145
+                          EditLabel.AnchorSideLeft.Control = EditCNHNumero
+                          EditLabel.AnchorSideRight.Control = EditCNHNumero
+                          EditLabel.AnchorSideRight.Side = asrBottom
+                          EditLabel.AnchorSideBottom.Control = EditCNHNumero
+                          EditLabel.Left = 11
+                          EditLabel.Height = 13
+                          EditLabel.Top = -2
+                          EditLabel.Width = 145
+                          EditLabel.Caption = 'Número:'
+                          EditLabel.ParentColor = False
+                          TabOrder = 0
+                        end
+                        object EditCNHVencimento: TLabeledDateEdit
+                          Left = 164
+                          Height = 21
+                          Top = 14
+                          Width = 99
+                          ButtonWidth = 0
+                          CharCase = ecNormal
+                          DialogTitle = 'Select a Date'
+                          MaxLength = 10
+                          NumGlyphs = 2
+                          PopupColor = clWindow
+                          TabOrder = 1
+                          Text = '  /  /    '
+                          DateEditLabel.Left = 164
+                          DateEditLabel.Height = 13
+                          DateEditLabel.Top = -2
+                          DateEditLabel.Width = 59
+                          DateEditLabel.Caption = 'Vencimento:'
+                          DateEditLabel.ParentColor = False
+                        end
+                        object ComboBoxCNHCategoria: TLabeledComboBox
+                          Left = 272
+                          Height = 21
+                          Top = 14
+                          Width = 108
+                          ItemHeight = 13
+                          Items.Strings = (
+                            'A'
+                            'B'
+                            'C'
+                            'D'
+                            'E'
+                          )
+                          Style = csDropDownList
+                          TabOrder = 2
+                          ComboBoxLabel.Left = 272
+                          ComboBoxLabel.Height = 13
+                          ComboBoxLabel.Top = -2
+                          ComboBoxLabel.Width = 51
+                          ComboBoxLabel.Caption = 'Categoria:'
+                          ComboBoxLabel.ParentColor = False
+                        end
+                      end
+                      object GroupBoxTituloEleitoral: TGroupBox
+                        Left = 403
+                        Height = 57
+                        Top = 202
+                        Width = 369
+                        Caption = 'Título Eleitoral'
+                        ClientHeight = 39
+                        ClientWidth = 365
+                        TabOrder = 13
+                        object EditTituloNumero: TLabeledEdit
+                          Left = 11
+                          Height = 21
+                          Top = 14
+                          Width = 166
+                          EditLabel.AnchorSideLeft.Control = EditTituloNumero
+                          EditLabel.AnchorSideRight.Control = EditTituloNumero
+                          EditLabel.AnchorSideRight.Side = asrBottom
+                          EditLabel.AnchorSideBottom.Control = EditTituloNumero
+                          EditLabel.Left = 11
+                          EditLabel.Height = 13
+                          EditLabel.Top = -2
+                          EditLabel.Width = 166
+                          EditLabel.Caption = 'Número:'
+                          EditLabel.ParentColor = False
+                          TabOrder = 0
+                        end
+                        object EditTituloZona: TLabeledCalcEdit
+                          Left = 188
+                          Height = 21
+                          Top = 14
+                          Width = 80
+                          Alignment = taRightJustify
+                          MaxValue = 0
+                          MinValue = 0
+                          TabOrder = 1
+                          Value = 0
+                          CalcEditLabel.Left = 188
+                          CalcEditLabel.Height = 13
+                          CalcEditLabel.Top = -2
+                          CalcEditLabel.Width = 28
+                          CalcEditLabel.Caption = 'Zona:'
+                          CalcEditLabel.ParentColor = False
+                        end
+                        object EditTituloSecao: TLabeledCalcEdit
+                          Left = 279
+                          Height = 21
+                          Top = 14
+                          Width = 80
+                          Alignment = taRightJustify
+                          MaxValue = 0
+                          MinValue = 0
+                          TabOrder = 2
+                          Value = 0
+                          CalcEditLabel.Left = 279
+                          CalcEditLabel.Height = 13
+                          CalcEditLabel.Top = -2
+                          CalcEditLabel.Width = 33
+                          CalcEditLabel.Caption = 'Seção:'
+                          CalcEditLabel.ParentColor = False
+                        end
+                      end
+                      object EditNomePai: TLabeledEdit
+                        Left = 8
+                        Height = 21
+                        Top = 106
+                        Width = 440
+                        EditLabel.AnchorSideLeft.Control = EditNomePai
+                        EditLabel.AnchorSideRight.Control = EditNomePai
+                        EditLabel.AnchorSideRight.Side = asrBottom
+                        EditLabel.AnchorSideBottom.Control = EditNomePai
+                        EditLabel.Left = 8
+                        EditLabel.Height = 13
+                        EditLabel.Top = 90
+                        EditLabel.Width = 440
+                        EditLabel.Caption = 'Nome do Pai:'
+                        EditLabel.ParentColor = False
+                        MaxLength = 100
+                        TabOrder = 7
+                      end
+                      object GroupBoxReservista: TGroupBox
+                        Left = 463
+                        Height = 57
+                        Top = 136
+                        Width = 208
+                        Caption = 'Reservista'
+                        ClientHeight = 39
+                        ClientWidth = 204
+                        TabOrder = 10
+                        object EditReservistaNumero: TLabeledEdit
+                          Left = 11
+                          Height = 21
+                          Top = 14
+                          Width = 121
+                          EditLabel.AnchorSideLeft.Control = EditReservistaNumero
+                          EditLabel.AnchorSideRight.Control = EditReservistaNumero
+                          EditLabel.AnchorSideRight.Side = asrBottom
+                          EditLabel.AnchorSideBottom.Control = EditReservistaNumero
+                          EditLabel.Left = 11
+                          EditLabel.Height = 13
+                          EditLabel.Top = -2
+                          EditLabel.Width = 121
+                          EditLabel.Caption = 'Número:'
+                          EditLabel.ParentColor = False
+                          TabOrder = 0
+                        end
+                        object ComboBoxReservistaCategoria: TLabeledComboBox
+                          Left = 141
+                          Height = 21
+                          Top = 14
+                          Width = 55
+                          ItemHeight = 13
+                          Items.Strings = (
+                            '1'
+                            '2'
+                            '3'
+                          )
+                          Style = csDropDownList
+                          TabOrder = 1
+                          ComboBoxLabel.Left = 141
+                          ComboBoxLabel.Height = 13
+                          ComboBoxLabel.Top = -2
+                          ComboBoxLabel.Width = 51
+                          ComboBoxLabel.Caption = 'Categoria:'
+                          ComboBoxLabel.ParentColor = False
+                        end
+                      end
+                    end
+                  end
+                  object tsPessoaJuridica: TTabSheet
+                    Caption = 'tsPessoaJuridica'
+                    ClientHeight = 268
+                    ClientWidth = 869
+                    ImageIndex = 1
+                    object PanelPessoaJuridica: TPanel
+                      Left = 0
+                      Height = 268
+                      Top = 0
+                      Width = 869
+                      Align = alClient
+                      BevelOuter = bvNone
+                      ClientHeight = 268
+                      ClientWidth = 869
+                      TabOrder = 0
+                      Visible = False
+                      object EditFantasia: TLabeledEdit
+                        Left = 7
+                        Height = 21
+                        Top = 24
+                        Width = 851
+                        Anchors = [akTop, akLeft, akRight]
+                        EditLabel.AnchorSideLeft.Control = EditFantasia
+                        EditLabel.AnchorSideRight.Control = EditFantasia
+                        EditLabel.AnchorSideRight.Side = asrBottom
+                        EditLabel.AnchorSideBottom.Control = EditFantasia
+                        EditLabel.Left = 7
+                        EditLabel.Height = 13
+                        EditLabel.Top = 8
+                        EditLabel.Width = 851
+                        EditLabel.Caption = 'Nome de Fantasia:'
+                        EditLabel.ParentColor = False
+                        MaxLength = 150
+                        TabOrder = 0
+                      end
+                      object EditCNPJ: TLabeledMaskEdit
+                        Left = 7
+                        Height = 21
+                        Top = 74
+                        Width = 113
+                        CharCase = ecNormal
+                        MaxLength = 18
+                        TabOrder = 1
+                        EditMask = '##.###.###/####-##;0;_'
+                        SpaceChar = '_'
+                        MaskEditLabel.Left = 7
+                        MaskEditLabel.Height = 13
+                        MaskEditLabel.Top = 58
+                        MaskEditLabel.Width = 43
+                        MaskEditLabel.Caption = 'EditCNPJ'
+                        MaskEditLabel.ParentColor = False
+                      end
+                      object EditInscricaoMunicipal: TLabeledEdit
+                        Left = 330
+                        Height = 21
+                        Top = 74
+                        Width = 190
+                        EditLabel.AnchorSideLeft.Control = EditInscricaoMunicipal
+                        EditLabel.AnchorSideRight.Control = EditInscricaoMunicipal
+                        EditLabel.AnchorSideRight.Side = asrBottom
+                        EditLabel.AnchorSideBottom.Control = EditInscricaoMunicipal
+                        EditLabel.Left = 330
+                        EditLabel.Height = 13
+                        EditLabel.Top = 58
+                        EditLabel.Width = 190
+                        EditLabel.Caption = 'Incrição Municipal:'
+                        EditLabel.ParentColor = False
+                        MaxLength = 30
+                        TabOrder = 3
+                      end
+                      object EditDataConstituicao: TLabeledDateEdit
+                        Left = 532
+                        Height = 21
+                        Top = 74
+                        Width = 104
+                        ButtonWidth = 0
+                        CharCase = ecNormal
+                        DialogTitle = 'Select a Date'
+                        MaxLength = 10
+                        NumGlyphs = 2
+                        PopupColor = clWindow
+                        TabOrder = 4
+                        Text = '  /  /    '
+                        DateEditLabel.Left = 532
+                        DateEditLabel.Height = 13
+                        DateEditLabel.Top = 58
+                        DateEditLabel.Width = 104
+                        DateEditLabel.Caption = 'Data da Constituição:'
+                        DateEditLabel.ParentColor = False
+                      end
+                      object EditInscricaoEstadual: TLabeledEdit
+                        Left = 130
+                        Height = 21
+                        Top = 74
+                        Width = 190
+                        EditLabel.AnchorSideLeft.Control = EditInscricaoEstadual
+                        EditLabel.AnchorSideRight.Control = EditInscricaoEstadual
+                        EditLabel.AnchorSideRight.Side = asrBottom
+                        EditLabel.AnchorSideBottom.Control = EditInscricaoEstadual
+                        EditLabel.Left = 130
+                        EditLabel.Height = 13
+                        EditLabel.Top = 58
+                        EditLabel.Width = 190
+                        EditLabel.Caption = 'Incrição Estadual:'
+                        EditLabel.ParentColor = False
+                        MaxLength = 30
+                        TabOrder = 2
+                      end
+                      object EditSuframa: TLabeledEdit
+                        Left = 644
+                        Height = 21
+                        Top = 74
+                        Width = 214
+                        Anchors = [akTop, akLeft, akRight]
+                        EditLabel.AnchorSideLeft.Control = EditSuframa
+                        EditLabel.AnchorSideRight.Control = EditSuframa
+                        EditLabel.AnchorSideRight.Side = asrBottom
+                        EditLabel.AnchorSideBottom.Control = EditSuframa
+                        EditLabel.Left = 644
+                        EditLabel.Height = 13
+                        EditLabel.Top = 58
+                        EditLabel.Width = 214
+                        EditLabel.Caption = 'Suframa:'
+                        EditLabel.ParentColor = False
+                        MaxLength = 9
+                        TabOrder = 5
+                      end
+                      object ComboBoxTipoRegime: TLabeledComboBox
+                        Left = 7
+                        Height = 21
+                        Top = 122
+                        Width = 233
+                        ItemHeight = 13
+                        Items.Strings = (
+                          '1-Lucro Real'
+                          '2-Lucro Presumido'
+                          '3-Simples Nacional'
+                        )
+                        Style = csDropDownList
+                        TabOrder = 6
+                        ComboBoxLabel.Left = 7
+                        ComboBoxLabel.Height = 13
+                        ComboBoxLabel.Top = 106
+                        ComboBoxLabel.Width = 62
+                        ComboBoxLabel.Caption = 'Tipo Regime:'
+                        ComboBoxLabel.ParentColor = False
+                      end
+                      object ComboBoxCRT: TLabeledComboBox
+                        Left = 249
+                        Height = 21
+                        Top = 122
+                        Width = 609
+                        Anchors = [akTop, akLeft, akRight]
+                        ItemHeight = 13
+                        Items.Strings = (
+                          '1-Simples Nacional'
+                          '2-Simples Nacional - excesso de sublimite da receita bruta'
+                          '3-Regime Normal '
+                        )
+                        Style = csDropDownList
+                        TabOrder = 7
+                        ComboBoxLabel.Left = 249
+                        ComboBoxLabel.Height = 13
+                        ComboBoxLabel.Top = 106
+                        ComboBoxLabel.Width = 24
+                        ComboBoxLabel.Caption = 'CRT:'
+                        ComboBoxLabel.ParentColor = False
+                      end
+                    end
+                  end
+                end
+              end
+            end
+            object tsContato: TTabSheet
+              Caption = 'Contatos'
+              ClientHeight = 311
+              ClientWidth = 886
+              ImageIndex = 2
+              object PanelContatos: TPanel
+                Left = 0
+                Height = 311
+                Top = 0
+                Width = 886
+                Align = alClient
+                BevelOuter = bvNone
+                ClientHeight = 311
+                ClientWidth = 886
+                TabOrder = 0
+                object GridContato: TRxDBGrid
+                  Left = 0
+                  Height = 280
+                  Top = 31
+                  Width = 886
+                  TitleButtons = False
+                  AutoSort = True
+                  KeyStrokes = <                  
+                    item
+                      Command = rxgcShowFindDlg
+                      ShortCut = 16454
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowColumnsDlg
+                      ShortCut = 16471
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowFilterDlg
+                      ShortCut = 16468
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowSortDlg
+                      ShortCut = 16467
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowQuickFilter
+                      ShortCut = 16465
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcHideQuickFilter
+                      ShortCut = 16456
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcSelectAll
+                      ShortCut = 16449
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcDeSelectAll
+                      ShortCut = 16429
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcInvertSelection
+                      ShortCut = 16426
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcOptimizeColumnsWidth
+                      ShortCut = 16427
+                      Enabled = True
+                    end>
+                  OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                  Align = alClient
+                  Color = clWindow
+                  DrawFullLine = False
+                  FocusColor = clRed
+                  SelectedColor = clHighlight
+                  GridLineStyle = psSolid
+                  DataSource = DSContato
+                  Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgCancelOnExit]
+                  ParentColor = False
+                  TabOrder = 0
+                  TitleFont.Color = clWindowText
+                  TitleFont.Height = -11
+                  TitleFont.Name = 'Tahoma'
+                end
+                object ActionToolBar2: TToolPanel
+                  Left = 0
+                  Height = 31
+                  Top = 0
+                  Width = 886
+                  Items = <                  
+                    item
+                      Action = ActionExcluirContato
+                      Visible = True
+                      Left = 4
+                      Height = 24
+                      Top = 4
+                      Width = 108
+                      ShowCaption = True
+                    end>
+                  ImageList = FDataModule.ImagensCadastros
+                  Options = [tpFlatBtns]
+                  ButtonAllign = tbaRignt
+                  Align = alTop
+                  BorderWidth = 4
+                  ClientHeight = 31
+                  ClientWidth = 886
+                  Font.Color = clBlack
+                  Font.Height = -11
+                  Font.Name = 'Tahoma'
+                  ParentFont = False
+                  TabOrder = 1
+                end
+              end
+            end
+            object tsEndereco: TTabSheet
+              Caption = 'Endereços'
+              ClientHeight = 311
+              ClientWidth = 886
+              ImageIndex = 2
+              object PanelEnderecos: TPanel
+                Left = 0
+                Height = 311
+                Top = 0
+                Width = 886
+                Align = alClient
+                BevelOuter = bvNone
+                ClientHeight = 311
+                ClientWidth = 886
+                TabOrder = 0
+                object GridEndereco: TRxDBGrid
+                  Left = 0
+                  Height = 280
+                  Top = 31
+                  Width = 886
+                  TitleButtons = False
+                  AutoSort = True
+                  KeyStrokes = <                  
+                    item
+                      Command = rxgcShowFindDlg
+                      ShortCut = 16454
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowColumnsDlg
+                      ShortCut = 16471
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowFilterDlg
+                      ShortCut = 16468
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowSortDlg
+                      ShortCut = 16467
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowQuickFilter
+                      ShortCut = 16465
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcHideQuickFilter
+                      ShortCut = 16456
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcSelectAll
+                      ShortCut = 16449
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcDeSelectAll
+                      ShortCut = 16429
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcInvertSelection
+                      ShortCut = 16426
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcOptimizeColumnsWidth
+                      ShortCut = 16427
+                      Enabled = True
+                    end>
+                  OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                  Align = alClient
+                  Color = clWindow
+                  DrawFullLine = False
+                  FocusColor = clRed
+                  SelectedColor = clHighlight
+                  GridLineStyle = psSolid
+                  DataSource = DSEndereco
+                  Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+                  ParentColor = False
+                  TabOrder = 0
+                  TitleFont.Color = clWindowText
+                  TitleFont.Height = -11
+                  TitleFont.Name = 'Tahoma'
+                end
+                object ActionToolBar1: TToolPanel
+                  Left = 0
+                  Height = 31
+                  Top = 0
+                  Width = 886
+                  Items = <                  
+                    item
+                      Action = ActionExcluirEndereco
+                      Visible = True
+                      Left = 4
+                      Height = 24
+                      Top = 4
+                      Width = 114
+                      ShowCaption = True
+                    end>
+                  ImageList = FDataModule.ImagensCadastros
+                  Options = [tpFlatBtns]
+                  ButtonAllign = tbaRignt
+                  Align = alTop
+                  BorderWidth = 4
+                  ClientHeight = 31
+                  ClientWidth = 886
+                  Font.Color = clBlack
+                  Font.Height = -11
+                  Font.Name = 'Tahoma'
+                  ParentFont = False
+                  TabOrder = 1
+                end
+              end
+            end
+            object tsTelefone: TTabSheet
+              Caption = 'Telefones'
+              ClientHeight = 311
+              ClientWidth = 886
+              ImageIndex = 3
+              object PanelTelefones: TPanel
+                Left = 0
+                Height = 311
+                Top = 0
+                Width = 886
+                Align = alClient
+                BevelOuter = bvNone
+                ClientHeight = 311
+                ClientWidth = 886
+                TabOrder = 0
+                object GridTelefone: TRxDBGrid
+                  Left = 0
+                  Height = 280
+                  Top = 31
+                  Width = 886
+                  TitleButtons = False
+                  AutoSort = True
+                  KeyStrokes = <                  
+                    item
+                      Command = rxgcShowFindDlg
+                      ShortCut = 16454
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowColumnsDlg
+                      ShortCut = 16471
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowFilterDlg
+                      ShortCut = 16468
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowSortDlg
+                      ShortCut = 16467
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowQuickFilter
+                      ShortCut = 16465
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcHideQuickFilter
+                      ShortCut = 16456
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcSelectAll
+                      ShortCut = 16449
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcDeSelectAll
+                      ShortCut = 16429
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcInvertSelection
+                      ShortCut = 16426
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcOptimizeColumnsWidth
+                      ShortCut = 16427
+                      Enabled = True
+                    end>
+                  OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                  Align = alClient
+                  Color = clWindow
+                  DrawFullLine = False
+                  FocusColor = clRed
+                  SelectedColor = clHighlight
+                  GridLineStyle = psSolid
+                  DataSource = DSTelefone
+                  Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+                  ParentColor = False
+                  TabOrder = 0
+                  TitleFont.Color = clWindowText
+                  TitleFont.Height = -11
+                  TitleFont.Name = 'Tahoma'
+                end
+                object ActionToolBar3: TToolPanel
+                  Left = 0
+                  Height = 31
+                  Top = 0
+                  Width = 886
+                  Items = <                  
+                    item
+                      Action = ActionExcluirTelefone
+                      Visible = True
+                      Left = 4
+                      Height = 24
+                      Top = 4
+                      Width = 111
+                      ShowCaption = True
+                    end>
+                  ImageList = FDataModule.ImagensCadastros
+                  Options = [tpFlatBtns]
+                  ButtonAllign = tbaRignt
+                  Align = alTop
+                  BorderWidth = 4
+                  ClientHeight = 31
+                  ClientWidth = 886
+                  Font.Color = clBlack
+                  Font.Height = -11
+                  Font.Name = 'Tahoma'
+                  ParentFont = False
+                  TabOrder = 1
+                end
+              end
+            end
+            object tsCliente: TTabSheet
+              Caption = 'Dados Cliente'
+              ClientHeight = 311
+              ClientWidth = 886
+              ImageIndex = 4
+              object PanelCliente: TPanel
+                Left = 0
+                Height = 311
+                Top = 0
+                Width = 886
+                Align = alClient
+                ClientHeight = 311
+                ClientWidth = 886
+                TabOrder = 0
+                object EditIdSituacaoCliente: TLabeledCalcEdit
+                  Left = 6
+                  Height = 21
+                  Top = 28
+                  Width = 61
+                  Alignment = taRightJustify
+                  DisplayFormat = '0'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 0
+                  Value = 0
+                  OnKeyUp = EditIdSituacaoClienteKeyUp
+                  CalcEditLabel.Left = 6
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 12
+                  CalcEditLabel.Width = 68
+                  CalcEditLabel.Caption = 'Situação [F1]:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditSituacaoCliente: TLabeledEdit
+                  Left = 67
+                  Height = 21
+                  Top = 28
+                  Width = 345
+                  Color = clInfoBk
+                  EditLabel.AnchorSideLeft.Control = EditSituacaoCliente
+                  EditLabel.AnchorSideRight.Control = EditSituacaoCliente
+                  EditLabel.AnchorSideRight.Side = asrBottom
+                  EditLabel.AnchorSideBottom.Control = EditSituacaoCliente
+                  EditLabel.Left = 67
+                  EditLabel.Height = 13
+                  EditLabel.Top = 12
+                  EditLabel.Width = 345
+                  EditLabel.Caption = '  '
+                  EditLabel.ParentColor = False
+                  ReadOnly = True
+                  TabOrder = 1
+                  TabStop = False
+                end
+                object EditIdAtividadeCliente: TLabeledCalcEdit
+                  Left = 418
+                  Height = 21
+                  Top = 28
+                  Width = 61
+                  Alignment = taRightJustify
+                  DecimalPlaces = 0
+                  DisplayFormat = '0'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 2
+                  Value = 0
+                  OnKeyUp = EditIdAtividadeClienteKeyUp
+                  CalcEditLabel.Left = 418
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 12
+                  CalcEditLabel.Width = 72
+                  CalcEditLabel.Caption = 'Atividade [F1]:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditAtividadeCliente: TLabeledEdit
+                  Left = 479
+                  Height = 21
+                  Top = 28
+                  Width = 395
+                  Anchors = [akTop, akLeft, akRight]
+                  Color = clInfoBk
+                  EditLabel.AnchorSideLeft.Control = EditAtividadeCliente
+                  EditLabel.AnchorSideRight.Control = EditAtividadeCliente
+                  EditLabel.AnchorSideRight.Side = asrBottom
+                  EditLabel.AnchorSideBottom.Control = EditAtividadeCliente
+                  EditLabel.Left = 479
+                  EditLabel.Height = 13
+                  EditLabel.Top = 12
+                  EditLabel.Width = 395
+                  EditLabel.Caption = '  '
+                  EditLabel.ParentColor = False
+                  ReadOnly = True
+                  TabOrder = 3
+                  TabStop = False
+                end
+                object EditDataDesde: TLabeledDateEdit
+                  Left = 5
+                  Height = 21
+                  Top = 77
+                  Width = 99
+                  ButtonWidth = 0
+                  CharCase = ecNormal
+                  DialogTitle = 'Select a Date'
+                  MaxLength = 10
+                  NumGlyphs = 2
+                  PopupColor = clWindow
+                  TabOrder = 4
+                  Text = '  /  /    '
+                  DateEditLabel.Left = 5
+                  DateEditLabel.Height = 13
+                  DateEditLabel.Top = 61
+                  DateEditLabel.Width = 34
+                  DateEditLabel.Caption = 'Desde:'
+                  DateEditLabel.ParentColor = False
+                end
+                object EditContaTomador: TLabeledEdit
+                  Left = 110
+                  Height = 21
+                  Top = 77
+                  Width = 302
+                  EditLabel.AnchorSideLeft.Control = EditContaTomador
+                  EditLabel.AnchorSideRight.Control = EditContaTomador
+                  EditLabel.AnchorSideRight.Side = asrBottom
+                  EditLabel.AnchorSideBottom.Control = EditContaTomador
+                  EditLabel.Left = 110
+                  EditLabel.Height = 13
+                  EditLabel.Top = 61
+                  EditLabel.Width = 302
+                  EditLabel.Caption = 'Conta Tomador:'
+                  EditLabel.ParentColor = False
+                  MaxLength = 100
+                  TabOrder = 5
+                end
+                object ComboBoxGeraFinanceiro: TLabeledComboBox
+                  Left = 418
+                  Height = 21
+                  Top = 77
+                  Width = 89
+                  ItemHeight = 13
+                  ItemIndex = 0
+                  Items.Strings = (
+                    'S - Sim'
+                    'N - Não'
+                  )
+                  Style = csDropDownList
+                  TabOrder = 6
+                  Text = 'S - Sim'
+                  ComboBoxLabel.Left = 418
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Top = 61
+                  ComboBoxLabel.Width = 83
+                  ComboBoxLabel.Caption = 'Gerar Financeiro:'
+                  ComboBoxLabel.ParentColor = False
+                end
+                object ComboBoxIndicadorPreco: TLabeledComboBox
+                  Left = 513
+                  Height = 21
+                  Top = 77
+                  Width = 168
+                  ItemHeight = 13
+                  ItemIndex = 0
+                  Items.Strings = (
+                    'T - Tabela'
+                    'P - Último Pedido'
+                  )
+                  Style = csDropDownList
+                  TabOrder = 7
+                  Text = 'T - Tabela'
+                  ComboBoxLabel.Left = 513
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Top = 61
+                  ComboBoxLabel.Width = 94
+                  ComboBoxLabel.Caption = 'Indicador de Preço:'
+                  ComboBoxLabel.ParentColor = False
+                end
+                object ComboBoxTipoFrete: TLabeledComboBox
+                  Left = 687
+                  Height = 21
+                  Top = 77
+                  Width = 202
+                  ItemHeight = 13
+                  ItemIndex = 0
+                  Items.Strings = (
+                    'E - Emitente'
+                    'D - Destinatário'
+                    'S - Sem Frete'
+                    'T - Terceiros'
+                  )
+                  Style = csDropDownList
+                  TabOrder = 8
+                  Text = 'E - Emitente'
+                  ComboBoxLabel.Left = 687
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Top = 61
+                  ComboBoxLabel.Width = 68
+                  ComboBoxLabel.Caption = 'Tipo de Frete:'
+                  ComboBoxLabel.ParentColor = False
+                end
+                object ComboBoxFormaDesconto: TLabeledComboBox
+                  Left = 5
+                  Height = 21
+                  Top = 125
+                  Width = 204
+                  ItemHeight = 13
+                  ItemIndex = 0
+                  Items.Strings = (
+                    'P - Produto'
+                    'F - Fim do Pedido'
+                  )
+                  Style = csDropDownList
+                  TabOrder = 9
+                  Text = 'P - Produto'
+                  ComboBoxLabel.Left = 5
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Top = 109
+                  ComboBoxLabel.Width = 97
+                  ComboBoxLabel.Caption = 'Forma de Desconto:'
+                  ComboBoxLabel.ParentColor = False
+                end
+                object EditDesconto: TLabeledCalcEdit
+                  Left = 215
+                  Height = 21
+                  Top = 124
+                  Width = 130
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 10
+                  Value = 0
+                  CalcEditLabel.Left = 215
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 108
+                  CalcEditLabel.Width = 76
+                  CalcEditLabel.Caption = 'Taxa Desconto:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditLimiteCredito: TLabeledCalcEdit
+                  Left = 351
+                  Height = 21
+                  Top = 124
+                  Width = 130
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 11
+                  Value = 0
+                  CalcEditLabel.Left = 351
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 108
+                  CalcEditLabel.Width = 84
+                  CalcEditLabel.Caption = 'Limite de Crédito:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object MemoObservacao: TLabeledMemo
+                  Left = 5
+                  Height = 122
+                  Top = 175
+                  Width = 869
+                  Anchors = [akTop, akLeft, akRight]
+                  ScrollBars = ssVertical
+                  TabOrder = 12
+                  MemoLabel.Left = 5
+                  MemoLabel.Height = 13
+                  MemoLabel.Top = 159
+                  MemoLabel.Width = 62
+                  MemoLabel.Caption = 'Observação:'
+                  MemoLabel.ParentColor = False
+                end
+              end
+            end
+            object tsFornecedor: TTabSheet
+              Caption = 'Dados Fornecedor'
+              ClientHeight = 311
+              ClientWidth = 886
+              ImageIndex = 5
+              object PanelFornecedor: TPanel
+                Left = 0
+                Height = 311
+                Top = 0
+                Width = 886
+                Align = alClient
+                ClientHeight = 311
+                ClientWidth = 886
+                TabOrder = 0
+                object EditIdSituacaoFornecedor: TLabeledCalcEdit
+                  Left = 6
+                  Height = 21
+                  Top = 28
+                  Width = 61
+                  Alignment = taRightJustify
+                  DisplayFormat = '0'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 0
+                  Value = 0
+                  CalcEditLabel.Left = 6
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 12
+                  CalcEditLabel.Width = 68
+                  CalcEditLabel.Caption = 'Situação [F1]:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditSituacaoFornecedor: TLabeledEdit
+                  Left = 67
+                  Height = 21
+                  Top = 28
+                  Width = 345
+                  Color = clInfoBk
+                  EditLabel.AnchorSideLeft.Control = EditSituacaoFornecedor
+                  EditLabel.AnchorSideRight.Control = EditSituacaoFornecedor
+                  EditLabel.AnchorSideRight.Side = asrBottom
+                  EditLabel.AnchorSideBottom.Control = EditSituacaoFornecedor
+                  EditLabel.Left = 67
+                  EditLabel.Height = 13
+                  EditLabel.Top = 12
+                  EditLabel.Width = 345
+                  EditLabel.Caption = '  '
+                  EditLabel.ParentColor = False
+                  ReadOnly = True
+                  TabOrder = 1
+                  TabStop = False
+                end
+                object EditIdAtividadeFornecedor: TLabeledCalcEdit
+                  Left = 418
+                  Height = 21
+                  Top = 28
+                  Width = 61
+                  Alignment = taRightJustify
+                  DisplayFormat = '0'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 2
+                  Value = 0
+                  CalcEditLabel.Left = 418
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 12
+                  CalcEditLabel.Width = 72
+                  CalcEditLabel.Caption = 'Atividade [F1]:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditAtividadeFornecedor: TLabeledEdit
+                  Left = 479
+                  Height = 21
+                  Top = 28
+                  Width = 395
+                  Anchors = [akTop, akLeft, akRight]
+                  Color = clInfoBk
+                  EditLabel.AnchorSideLeft.Control = EditAtividadeFornecedor
+                  EditLabel.AnchorSideRight.Control = EditAtividadeFornecedor
+                  EditLabel.AnchorSideRight.Side = asrBottom
+                  EditLabel.AnchorSideBottom.Control = EditAtividadeFornecedor
+                  EditLabel.Left = 479
+                  EditLabel.Height = 13
+                  EditLabel.Top = 12
+                  EditLabel.Width = 395
+                  EditLabel.Caption = '  '
+                  EditLabel.ParentColor = False
+                  ReadOnly = True
+                  TabOrder = 3
+                  TabStop = False
+                end
+                object LabeledDateEdit1: TLabeledDateEdit
+                  Left = 6
+                  Height = 21
+                  Top = 77
+                  Width = 99
+                  ButtonWidth = 0
+                  CharCase = ecNormal
+                  DialogTitle = 'Select a Date'
+                  MaxLength = 10
+                  NumGlyphs = 2
+                  PopupColor = clWindow
+                  TabOrder = 4
+                  Text = '  /  /    '
+                  DateEditLabel.Left = 6
+                  DateEditLabel.Height = 13
+                  DateEditLabel.Top = 61
+                  DateEditLabel.Width = 34
+                  DateEditLabel.Caption = 'Desde:'
+                  DateEditLabel.ParentColor = False
+                end
+                object EditContaRemetente: TLabeledEdit
+                  Left = 111
+                  Height = 21
+                  Top = 77
+                  Width = 302
+                  EditLabel.AnchorSideLeft.Control = EditContaRemetente
+                  EditLabel.AnchorSideRight.Control = EditContaRemetente
+                  EditLabel.AnchorSideRight.Side = asrBottom
+                  EditLabel.AnchorSideBottom.Control = EditContaRemetente
+                  EditLabel.Left = 111
+                  EditLabel.Height = 13
+                  EditLabel.Top = 61
+                  EditLabel.Width = 302
+                  EditLabel.Caption = 'Conta Remetente:'
+                  EditLabel.ParentColor = False
+                  MaxLength = 100
+                  TabOrder = 5
+                end
+                object ComboBoxGeraFaturamento: TLabeledComboBox
+                  Left = 419
+                  Height = 21
+                  Top = 77
+                  Width = 118
+                  ItemHeight = 13
+                  ItemIndex = 0
+                  Items.Strings = (
+                    'S - Sim'
+                    'N - Não'
+                  )
+                  Style = csDropDownList
+                  TabOrder = 6
+                  Text = 'S - Sim'
+                  ComboBoxLabel.Left = 419
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Top = 61
+                  ComboBoxLabel.Width = 96
+                  ComboBoxLabel.Caption = 'Gerar Faturamento:'
+                  ComboBoxLabel.ParentColor = False
+                end
+                object ComboBoxOptanteSimples: TLabeledComboBox
+                  Left = 543
+                  Height = 21
+                  Top = 77
+                  Width = 139
+                  ItemHeight = 13
+                  ItemIndex = 0
+                  Items.Strings = (
+                    'S - Sim'
+                    'N - Não'
+                  )
+                  Style = csDropDownList
+                  TabOrder = 7
+                  Text = 'S - Sim'
+                  ComboBoxLabel.Left = 543
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Top = 61
+                  ComboBoxLabel.Width = 82
+                  ComboBoxLabel.Caption = 'Optante Simples:'
+                  ComboBoxLabel.ParentColor = False
+                end
+                object ComboBoxLocalizacao: TLabeledComboBox
+                  Left = 688
+                  Height = 21
+                  Top = 77
+                  Width = 201
+                  ItemHeight = 13
+                  ItemIndex = 0
+                  Items.Strings = (
+                    'N - Nacional'
+                    'E - Exterior'
+                  )
+                  Style = csDropDownList
+                  TabOrder = 8
+                  Text = 'N - Nacional'
+                  ComboBoxLabel.Left = 688
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Top = 61
+                  ComboBoxLabel.Width = 58
+                  ComboBoxLabel.Caption = 'Localização:'
+                  ComboBoxLabel.ParentColor = False
+                end
+                object ComboBoxSofreRetencao: TLabeledComboBox
+                  Left = 6
+                  Height = 21
+                  Top = 125
+                  Width = 204
+                  ItemHeight = 13
+                  ItemIndex = 1
+                  Items.Strings = (
+                    'S - Sim'
+                    'N - Não'
+                  )
+                  Style = csDropDownList
+                  TabOrder = 9
+                  Text = 'N - Não'
+                  ComboBoxLabel.Left = 6
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Top = 109
+                  ComboBoxLabel.Width = 79
+                  ComboBoxLabel.Caption = 'Sofre Retenção:'
+                  ComboBoxLabel.ParentColor = False
+                end
+                object EditPrazoMedioEntrega: TLabeledCalcEdit
+                  Left = 216
+                  Height = 21
+                  Top = 125
+                  Width = 130
+                  Alignment = taRightJustify
+                  DecimalPlaces = 0
+                  DisplayFormat = '0'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 10
+                  Value = 0
+                  CalcEditLabel.Left = 216
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 109
+                  CalcEditLabel.Width = 103
+                  CalcEditLabel.Caption = 'Prazo Médio Entrega:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditNumDiasPrimeiroVencimento: TLabeledCalcEdit
+                  Left = 352
+                  Height = 21
+                  Top = 125
+                  Width = 130
+                  Alignment = taRightJustify
+                  DecimalPlaces = 0
+                  DisplayFormat = '0'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 11
+                  Value = 0
+                  CalcEditLabel.Left = 352
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 109
+                  CalcEditLabel.Width = 120
+                  CalcEditLabel.Caption = 'Num Dias 1º Vencimento:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditNumDiasIntervalo: TLabeledCalcEdit
+                  Left = 488
+                  Height = 21
+                  Top = 125
+                  Width = 130
+                  Alignment = taRightJustify
+                  DecimalPlaces = 0
+                  DisplayFormat = '0'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 12
+                  Value = 0
+                  CalcEditLabel.Left = 488
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 109
+                  CalcEditLabel.Width = 95
+                  CalcEditLabel.Caption = 'Num Dias Intervalo:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditQuantidadeParcelas: TLabeledCalcEdit
+                  Left = 624
+                  Height = 21
+                  Top = 125
+                  Width = 130
+                  Alignment = taRightJustify
+                  DecimalPlaces = 0
+                  DisplayFormat = '0'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 13
+                  Value = 0
+                  CalcEditLabel.Left = 624
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 109
+                  CalcEditLabel.Width = 103
+                  CalcEditLabel.Caption = 'Quantidade Parcelas:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditChequeNominal: TLabeledEdit
+                  Left = 6
+                  Height = 21
+                  Top = 172
+                  Width = 868
+                  Anchors = [akTop, akLeft, akRight]
+                  EditLabel.AnchorSideLeft.Control = EditChequeNominal
+                  EditLabel.AnchorSideRight.Control = EditChequeNominal
+                  EditLabel.AnchorSideRight.Side = asrBottom
+                  EditLabel.AnchorSideBottom.Control = EditChequeNominal
+                  EditLabel.Left = 6
+                  EditLabel.Height = 13
+                  EditLabel.Top = 156
+                  EditLabel.Width = 868
+                  EditLabel.Caption = 'Cheque Nominal A:'
+                  EditLabel.ParentColor = False
+                  MaxLength = 100
+                  TabOrder = 14
+                end
+                object LabeledMemo1: TLabeledMemo
+                  Left = 6
+                  Height = 81
+                  Top = 216
+                  Width = 868
+                  Anchors = [akTop, akLeft, akRight]
+                  ScrollBars = ssVertical
+                  TabOrder = 15
+                  MemoLabel.Left = 6
+                  MemoLabel.Height = 13
+                  MemoLabel.Top = 200
+                  MemoLabel.Width = 62
+                  MemoLabel.Caption = 'Observação:'
+                  MemoLabel.ParentColor = False
+                end
+              end
+            end
+            object tsTransportadora: TTabSheet
+              Caption = 'Dados Transportadora'
+              ClientHeight = 311
+              ClientWidth = 886
+              ImageIndex = 6
+              object PanelTransportadora: TPanel
+                Left = 0
+                Height = 311
+                Top = 0
+                Width = 886
+                Align = alClient
+                ClientHeight = 311
+                ClientWidth = 886
+                TabOrder = 0
+                object LabeledMemo2: TLabeledMemo
+                  Left = 5
+                  Height = 269
+                  Top = 28
+                  Width = 869
+                  Anchors = [akTop, akLeft, akRight]
+                  ScrollBars = ssVertical
+                  TabOrder = 0
+                  MemoLabel.Left = 5
+                  MemoLabel.Height = 13
+                  MemoLabel.Top = 12
+                  MemoLabel.Width = 62
+                  MemoLabel.Caption = 'Observação:'
+                  MemoLabel.ParentColor = False
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 927
+    ClientWidth = 927
+    inherited BotaoSair: TSpeedButton
+      Left = 827
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 727
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 617
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 717
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 563
+    end
+  end
+  inherited PopupMenuAtalhosBotoesTela: TPopupMenu
+    top = 23
+  end
+  inherited PopupMenuAtalhosBotoesTelaCadastro: TPopupMenu
+    left = 720
+    top = 24
+  end
+  object CDSEndereco: TBufDataset[5]
+    FieldDefs = <>
+    left = 918
+    top = 419
+  end
+  object DSEndereco: TDatasource[6]
+    DataSet = CDSEndereco
+    left = 915
+    top = 464
+  end
+  object CDSContato: TBufDataset[7]
+    FieldDefs = <>
+    left = 771
+    top = 245
+  end
+  object DSContato: TDatasource[8]
+    DataSet = CDSContato
+    left = 768
+    top = 293
+  end
+  object CDSEstadoCivil: TBufDataset[9]
+    FieldDefs = <>
+    left = 840
+    top = 248
+  end
+  object DSEstadoCivil: TDatasource[10]
+    AutoEdit = False
+    DataSet = CDSEstadoCivil
+    left = 846
+    top = 296
+  end
+  object ActionManager: TActionList[11]
+    Images = FDataModule.ImagensCadastros
+    left = 307
+    top = 120
+    object ActionExcluirContato: TAction
+      Category = 'Opcoes'
+      Caption = 'Excluir Contato'
+      ImageIndex = 2
+      OnExecute = ActionExcluirContatoExecute
+    end
+    object ActionExcluirEndereco: TAction
+      Category = 'Opcoes'
+      Caption = 'Excluir Endereço'
+      ImageIndex = 2
+      OnExecute = ActionExcluirEnderecoExecute
+    end
+    object ActionExcluirTelefone: TAction
+      Category = 'Opcoes'
+      Caption = 'Excluir Telefone'
+      ImageIndex = 2
+      OnExecute = ActionExcluirTelefoneExecute
+    end
+  end
+  object CDSTelefone: TBufDataset[12]
+    FieldDefs = <>
+    left = 915
+    top = 248
+  end
+  object DSTelefone: TDatasource[13]
+    DataSet = CDSTelefone
+    left = 912
+    top = 293
+  end
+end

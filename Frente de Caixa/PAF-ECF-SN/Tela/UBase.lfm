@@ -1,0 +1,19 @@
+object FBase: TFBase
+  Left = 510
+  Height = 56
+  Top = 433
+  Width = 632
+  Caption = 'FBase'
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  LCLVersion = '1.2.0.3'
+  object TimerIntegracao: TTimer
+    Enabled = False
+    Interval = 8000
+    OnTimer = TimerIntegracaoTimer
+    left = 145
+    top = 4
+  end
+end

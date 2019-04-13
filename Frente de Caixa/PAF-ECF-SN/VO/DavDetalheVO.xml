@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="DavDetalheVO" table="DAV_DETALHE" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">DAV_DETALHE</param>
+      </generator>
+    </id>
+
+    <property name="IdProduto" column="ID_PRODUTO" />
+    <property name="IdDavCabecalho" column="ID_DAV_CABECALHO" />
+    <property name="NumeroDav" column="NUMERO_DAV" />
+    <property name="DataEmissao" column="DATA_EMISSAO" />
+    <property name="Item" column="ITEM" />
+    <property name="Quantidade" column="QUANTIDADE" />
+    <property name="ValorUnitario" column="VALOR_UNITARIO" />
+    <property name="ValorTotal" column="VALOR_TOTAL" />
+    <property name="Cancelado" column="CANCELADO" />
+    <property name="MesclaProduto" column="MESCLA_PRODUTO" />
+    <property name="GtinProduto" column="GTIN_PRODUTO" />
+    <property name="NomeProduto" column="NOME_PRODUTO" />
+    <property name="UnidadeProduto" column="UNIDADE_PRODUTO" />
+    <property name="TotalizadorParcial" column="TOTALIZADOR_PARCIAL" />
+    <property name="HashRegistro" column="LOGSS" />
+
+  </class>
+</t2ti-orm-mapping>

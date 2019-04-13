@@ -1,0 +1,148 @@
+inherited FEmpresaCnae: TFEmpresaCnae
+  Left = 318
+  Top = 203
+  Caption = 'Empresa Cnae'
+  ClientWidth = 988
+  PixelsPerInch = 96
+  inherited PageControl: TPageControl
+    Width = 988
+    ActivePage = PaginaEdits
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 980
+        inherited Grid: TRxDbGrid
+          Width = 980
+        end
+        inherited PanelFiltroRapido: TPanel
+          Width = 980
+          inherited BotaoConsultar: TSpeedButton
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 679
+          end
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      inherited PanelEdits: TPanel
+        Width = 980
+        object BevelEdits: TBevel
+          Left = 9
+          Top = 11
+          Width = 954
+          Height = 380
+          Anchors = [akLeft, akTop, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditDescricaoCnae: TLabeledEdit
+          Left = 79
+          Top = 85
+          Width = 873
+          Height = 21
+          TabStop = False
+          Anchors = [akLeft, akTop, akRight]
+          Color = clInfoBk
+          EditLabel.Width = 6
+          EditLabel.Height = 13
+          EditLabel.Caption = '  '
+          ReadOnly = True
+          TabOrder = 3
+        end
+        object EditEmpresa: TLabeledEdit
+          Left = 79
+          Top = 38
+          Width = 873
+          Height = 21
+          TabStop = False
+          Anchors = [akLeft, akTop, akRight]
+          Color = clInfoBk
+          EditLabel.Width = 6
+          EditLabel.Height = 13
+          EditLabel.Caption = '  '
+          ReadOnly = True
+          TabOrder = 1
+        end
+        object EditRamoAtividade: TLabeledEdit
+          Left = 121
+          Top = 134
+          Width = 831
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          EditLabel.Width = 94
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Ramo de Atividade:'
+          TabOrder = 5
+        end
+        object MemoObjetoSocial: TLabeledMemo
+          Left = 18
+          Top = 181
+          Width = 934
+          Height = 202
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          ScrollBars = ssVertical
+          TabOrder = 6
+          MemoLabel.Width = 67
+          MemoLabel.Height = 13
+          MemoLabel.Caption = 'Objeto Social:'
+        end
+        object ComboBoxPrincipal: TLabeledComboBox
+          Left = 18
+          Top = 134
+          Width = 97
+          Height = 21
+          Style = csDropDownList
+          ItemIndex = 1
+          TabOrder = 4
+          Text = 'Não'
+          Items.Strings = (
+            'Sim'
+            'Não')
+          ComboBoxLabel.Width = 43
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Caption = 'Principal:'
+        end
+        object EditIdEmpresa: TLabeledCalcEdit
+          Left = 18
+          Top = 38
+          Width = 61
+          Height = 21
+          TabOrder = 0
+          OnKeyUp = EditIdEmpresaKeyUp
+          CalcEditLabel.Width = 68
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Empresa [F1]:'
+        end
+        object EditIdCnae: TLabeledCalcEdit
+          Left = 18
+          Top = 85
+          Width = 61
+          Height = 21
+          TabOrder = 2
+          OnKeyUp = EditIdCnaeKeyUp
+          CalcEditLabel.Width = 54
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'CNAE [F1]:'
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 988
+    inherited BotaoSair: TSpeedButton
+      Left = 882
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 782
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 672
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 772
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 572
+    end
+  end
+end
+

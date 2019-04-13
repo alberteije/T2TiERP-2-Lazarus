@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="EcfMovimentoVO" table="ECF_MOVIMENTO" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">ECF_MOVIMENTO</param>
+      </generator>
+    </id>
+
+    <property name="IdEcfEmpresa" column="ID_ECF_EMPRESA" />
+    <property name="IdEcfTurno" column="ID_ECF_TURNO" />
+    <property name="IdEcfImpressora" column="ID_ECF_IMPRESSORA" />
+    <property name="IdEcfOperador" column="ID_ECF_OPERADOR" />
+    <property name="IdEcfCaixa" column="ID_ECF_CAIXA" />
+    <property name="IdGerenteSupervisor" column="ID_GERENTE_SUPERVISOR" />
+    <property name="DataAbertura" column="DATA_ABERTURA" />
+    <property name="HoraAbertura" column="HORA_ABERTURA" />
+    <property name="DataFechamento" column="DATA_FECHAMENTO" />
+    <property name="HoraFechamento" column="HORA_FECHAMENTO" />
+    <property name="TotalSuprimento" column="TOTAL_SUPRIMENTO" />
+    <property name="TotalSangria" column="TOTAL_SANGRIA" />
+    <property name="TotalNaoFiscal" column="TOTAL_NAO_FISCAL" />
+    <property name="TotalVenda" column="TOTAL_VENDA" />
+    <property name="TotalDesconto" column="TOTAL_DESCONTO" />
+    <property name="TotalAcrescimo" column="TOTAL_ACRESCIMO" />
+    <property name="TotalFinal" column="TOTAL_FINAL" />
+    <property name="TotalRecebido" column="TOTAL_RECEBIDO" />
+    <property name="TotalTroco" column="TOTAL_TROCO" />
+    <property name="TotalCancelado" column="TOTAL_CANCELADO" />
+    <property name="StatusMovimento" column="STATUS_MOVIMENTO" />
+
+  </class>
+</t2ti-orm-mapping>

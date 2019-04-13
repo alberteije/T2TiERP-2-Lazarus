@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <Flags>
+        <SaveOnlyProjectUnits Value="True"/>
+        <MainUnitHasCreateFormStatements Value="False"/>
+        <Runnable Value="False"/>
+      </Flags>
+      <MainUnit Value="0"/>
+      <Title Value="servidorT2Ti"/>
+      <UseAppBundle Value="False"/>
+      <ResourceType Value="res"/>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1" Active="Default">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="1">
+      <Item1>
+        <PackageName Value="BrookRT"/>
+      </Item1>
+    </RequiredPackages>
+    <Units Count="39">
+      <Unit0>
+        <Filename Value="servidorT2Ti.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="servidorT2Ti"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="71" Y="10"/>
+        <UsageCount Value="42"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="produto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Produto"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="36" Y="48"/>
+        <UsageCount Value="42"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="brokers.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Brokers"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="69" Y="8"/>
+        <UsageCount Value="42"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="DavCabecalho.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DavCabecalho"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="65" Y="32"/>
+        <UsageCount Value="42"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="DavDetalhe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DavDetalhe"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="96" Y="37"/>
+        <UsageCount Value="42"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="Contador.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Contador"/>
+        <UsageCount Value="42"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="EstadoCivil.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EstadoCivil"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="Pessoa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Pessoa"/>
+        <UsageCount Value="20"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="Banco.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Banco"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="28"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="Pais.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Pais"/>
+        <UsageCount Value="20"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="NfeConfiguracao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeConfiguracao"/>
+        <UsageCount Value="20"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="NfeNumero.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeNumero"/>
+        <UsageCount Value="20"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="Empresa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Empresa"/>
+        <UsageCount Value="20"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="EmpresaEndereco.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EmpresaEndereco"/>
+        <UsageCount Value="20"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="ViewPessoaCliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewPessoaCliente"/>
+        <UsageCount Value="20"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="NfeCabecalho.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeCabecalho"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="27"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="ViewTributacaoIcms.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTributacaoIcms"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="24"/>
+        <CursorPos X="1" Y="36"/>
+        <UsageCount Value="20"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="ViewTributacaoCofins.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTributacaoCofins"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="25"/>
+        <CursorPos X="1" Y="36"/>
+        <UsageCount Value="20"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="ViewTributacaoIpi.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTributacaoIpi"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="22"/>
+        <CursorPos X="1" Y="36"/>
+        <UsageCount Value="20"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="ViewTributacaoPis.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTributacaoPis"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="22"/>
+        <CursorPos X="1" Y="60"/>
+        <UsageCount Value="20"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="NfeDestinatario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDestinatario"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="19"/>
+        <CursorPos X="1" Y="36"/>
+        <UsageCount Value="20"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="NfeDetalheImpostoCofins.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetalheImpostoCofins"/>
+        <UsageCount Value="20"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="NfeDetalheImpostoPis.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetalheImpostoPis"/>
+        <UsageCount Value="20"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="NfeDetalheImpostoIcms.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetalheImpostoIcms"/>
+        <UsageCount Value="20"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="NfeDetalhe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetalhe"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="49"/>
+        <CursorPos X="86" Y="71"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="NfeTransporte.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeTransporte"/>
+        <UsageCount Value="20"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="NfeLocalRetirada.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeLocalRetirada"/>
+        <UsageCount Value="20"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="NfeLocalEntrega.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeLocalEntrega"/>
+        <UsageCount Value="20"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="NfeDetalheImpostoIpi.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetalheImpostoIpi"/>
+        <UsageCount Value="20"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="Tributacao\TributCofinsCodApuracao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributCofinsCodApuracao"/>
+        <UsageCount Value="20"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="Tributacao\TributConfiguraOfGt.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributConfiguraOfGt"/>
+        <UsageCount Value="20"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="Tributacao\TributGrupoTributario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributGrupoTributario"/>
+        <UsageCount Value="20"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="Tributacao\TributIcmsCustomCab.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributIcmsCustomCab"/>
+        <UsageCount Value="20"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="Tributacao\TributIcmsCustomDet.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributIcmsCustomDet"/>
+        <UsageCount Value="20"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="Tributacao\TributIcmsUf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributIcmsUf"/>
+        <UsageCount Value="20"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="Tributacao\TributIpiDipi.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributIpiDipi"/>
+        <UsageCount Value="20"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="Tributacao\TributIss.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributIss"/>
+        <UsageCount Value="20"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="Tributacao\TributOperacaoFiscal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributOperacaoFiscal"/>
+        <UsageCount Value="20"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="Tributacao\TributPisCodApuracao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributPisCodApuracao"/>
+        <UsageCount Value="20"/>
+      </Unit38>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="C:\Program Files (x86)\EasyPHP-DevServer-14.1VC11\binaries\apache\cgi-bin\servidorT2Ti.cgi" ApplyConventions="False"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="Tributacao"/>
+    </SearchPaths>
+    <Other>
+      <CompilerMessages>
+        <MsgFileName Value=""/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+  <EditorMacros Count="0"/>
+</CONFIG>

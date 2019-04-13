@@ -1,0 +1,191 @@
+inherited FEmpresaCnae: TFEmpresaCnae
+  Left = 318
+  Top = 203
+  Caption = 'Empresa Cnae'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 980
+        ClientWidth = 980
+        inherited PanelFiltroRapido: TPanel
+          Width = 980
+          ClientWidth = 980
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 679
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 980
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 9
+          Height = 380
+          Top = 11
+          Width = 974
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditDescricaoCnae: TLabeledEdit[1]
+          Left = 79
+          Height = 21
+          Top = 85
+          Width = 893
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditDescricaoCnae
+          EditLabel.AnchorSideRight.Control = EditDescricaoCnae
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditDescricaoCnae
+          EditLabel.Left = 79
+          EditLabel.Height = 13
+          EditLabel.Top = 69
+          EditLabel.Width = 893
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 3
+          TabStop = False
+        end
+        object EditEmpresa: TLabeledEdit[2]
+          Left = 79
+          Height = 21
+          Top = 38
+          Width = 893
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditEmpresa
+          EditLabel.AnchorSideRight.Control = EditEmpresa
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditEmpresa
+          EditLabel.Left = 79
+          EditLabel.Height = 13
+          EditLabel.Top = 22
+          EditLabel.Width = 893
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 1
+          TabStop = False
+        end
+        object EditRamoAtividade: TLabeledEdit[3]
+          Left = 121
+          Height = 21
+          Top = 134
+          Width = 851
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditRamoAtividade
+          EditLabel.AnchorSideRight.Control = EditRamoAtividade
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditRamoAtividade
+          EditLabel.Left = 121
+          EditLabel.Height = 13
+          EditLabel.Top = 118
+          EditLabel.Width = 851
+          EditLabel.Caption = 'Ramo de Atividade:'
+          EditLabel.ParentColor = False
+          TabOrder = 5
+        end
+        object MemoObjetoSocial: TLabeledMemo[4]
+          Left = 18
+          Height = 202
+          Top = 181
+          Width = 954
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          ScrollBars = ssVertical
+          TabOrder = 6
+          MemoLabel.Left = 18
+          MemoLabel.Height = 13
+          MemoLabel.Top = 165
+          MemoLabel.Width = 67
+          MemoLabel.Caption = 'Objeto Social:'
+          MemoLabel.ParentColor = False
+        end
+        object ComboBoxPrincipal: TLabeledComboBox[5]
+          Left = 18
+          Height = 21
+          Top = 134
+          Width = 97
+          ItemHeight = 13
+          ItemIndex = 1
+          Items.Strings = (
+            'Sim'
+            'Não'
+          )
+          Style = csDropDownList
+          TabOrder = 4
+          Text = 'Não'
+          ComboBoxLabel.Left = 18
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 118
+          ComboBoxLabel.Width = 43
+          ComboBoxLabel.Caption = 'Principal:'
+          ComboBoxLabel.ParentColor = False
+        end
+        object EditIdEmpresa: TLabeledCalcEdit[6]
+          Left = 18
+          Height = 21
+          Top = 38
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 0
+          Value = 0
+          OnKeyUp = EditIdEmpresaKeyUp
+          CalcEditLabel.Left = 18
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 22
+          CalcEditLabel.Width = 68
+          CalcEditLabel.Caption = 'Empresa [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditIdCnae: TLabeledCalcEdit[7]
+          Left = 18
+          Height = 21
+          Top = 85
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 2
+          Value = 0
+          OnKeyUp = EditIdCnaeKeyUp
+          CalcEditLabel.Left = 18
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 69
+          CalcEditLabel.Width = 54
+          CalcEditLabel.Caption = 'CNAE [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+end

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="EcfConfiguracaoLeitorSerVO" table="ECF_CONFIGURACAO_LEITOR_SER" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">ECF_CONFIGURACAO_LEITOR_SER</param>
+      </generator>
+    </id>
+
+    <property name="IdEcfConfiguracao" column="ID_ECF_CONFIGURACAO" />
+    <property name="Usa" column="USA" />
+    <property name="Porta" column="PORTA" />
+    <property name="Baud" column="BAUD" />
+    <property name="HandShake" column="HAND_SHAKE" />
+    <property name="Parity" column="PARITY" />
+    <property name="StopBits" column="STOP_BITS" />
+    <property name="DataBits" column="DATA_BITS" />
+    <property name="Intervalo" column="INTERVALO" />
+    <property name="UsarFila" column="USAR_FILA" />
+    <property name="HardFlow" column="HARD_FLOW" />
+    <property name="SoftFlow" column="SOFT_FLOW" />
+    <property name="Sufixo" column="SUFIXO" />
+    <property name="ExcluirSufixo" column="EXCLUIR_SUFIXO" />
+
+  </class>
+</t2ti-orm-mapping>

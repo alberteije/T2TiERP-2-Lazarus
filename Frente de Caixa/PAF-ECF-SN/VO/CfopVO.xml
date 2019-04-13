@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="CfopVO" table="CFOP" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">CFOP</param>
+      </generator>
+    </id>
+
+    <property name="Cfop" column="CFOP" />
+    <property name="Descricao" column="DESCRICAO" />
+    <property name="Aplicacao" column="APLICACAO" />
+
+  </class>
+</t2ti-orm-mapping>

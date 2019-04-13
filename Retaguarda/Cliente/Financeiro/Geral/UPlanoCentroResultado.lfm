@@ -1,0 +1,105 @@
+inherited FPlanoCentroResultado: TFPlanoCentroResultado
+  Tag = 1
+  Left = 318
+  Top = 203
+  Caption = 'Plano Centro de Resultado'
+  ClientWidth = 961
+  PixelsPerInch = 96
+  inherited PageControl: TPageControl
+    Width = 961
+    ActivePage = PaginaEdits
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 953
+        inherited Grid: TRxDbGrid
+          Width = 953
+        end
+        inherited PanelFiltroRapido: TPanel
+          Width = 953
+          inherited BotaoConsultar: TSpeedButton
+            Left = 819
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 652
+          end
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      inherited PanelEdits: TPanel
+        Width = 953
+        object BevelEdits: TBevel
+          Left = 8
+          Top = 9
+          Width = 932
+          Height = 102
+          Anchors = [akLeft, akTop, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditNome: TLabeledEdit
+          Left = 16
+          Top = 31
+          Width = 599
+          Height = 21
+          Constraints.MinWidth = 90
+          EditLabel.Width = 31
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Nome:'
+          TabOrder = 0
+        end
+        object EditMascara: TLabeledEdit
+          Left = 621
+          Top = 31
+          Width = 308
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          EditLabel.Width = 44
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Máscara:'
+          EditLabel.WordWrap = True
+          TabOrder = 1
+        end
+        object EditNiveis: TLabeledCalcEdit
+          Left = 16
+          Top = 78
+          Width = 121
+          Height = 21
+          DisplayFormat = '#'
+          TabOrder = 2
+          CalcEditLabel.Width = 32
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Niveis:'
+        end
+        object EditDataInclusao: TLabeledDateEdit
+          Left = 143
+          Top = 78
+          Width = 121
+          Height = 21
+          TabOrder = 3
+          DateEditLabel.Width = 70
+          DateEditLabel.Height = 13
+          DateEditLabel.Caption = 'Data Inclusão:'
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 961
+    inherited BotaoSair: TSpeedButton
+      Left = 855
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 755
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 645
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 745
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 545
+    end
+  end
+end
+

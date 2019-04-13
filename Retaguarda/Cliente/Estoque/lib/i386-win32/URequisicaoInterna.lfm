@@ -1,0 +1,377 @@
+inherited FRequisicaoInterna: TFRequisicaoInterna
+  Tag = 1
+  Left = 309
+  Top = 216
+  Caption = 'Requisição Interna'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 922
+        ClientWidth = 922
+        inherited PanelFiltroRapido: TPanel
+          Width = 922
+          ClientWidth = 922
+          inherited BotaoConsultar: TSpeedButton
+            Left = 790
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 621
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 922
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 10
+          Height = 54
+          Top = 38
+          Width = 978
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object GroupBoxParcelas: TGroupBox[1]
+          Left = 10
+          Height = 321
+          Top = 98
+          Width = 978
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          Caption = 'Itens'
+          ClientHeight = 303
+          ClientWidth = 974
+          TabOrder = 0
+          object GridItens: TRxDBGrid
+            Left = 0
+            Height = 303
+            Top = 0
+            Width = 974
+            TitleButtons = True
+            AutoSort = True
+            Columns = <            
+              item
+                ReadOnly = True
+                Title.Alignment = taCenter
+                Title.Caption = 'Id Produto'
+                Title.Orientation = toHorizontal
+                FieldName = 'ID_PRODUTO'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                ReadOnly = True
+                Title.Alignment = taCenter
+                Title.Caption = 'Nome Produto'
+                Title.Orientation = toHorizontal
+                FieldName = 'PRODUTO.NOME'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'Quantidade'
+                Title.Orientation = toHorizontal
+                Width = 80
+                FieldName = 'QUANTIDADE'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                ReadOnly = True
+                Title.Alignment = taCenter
+                Title.Caption = 'Qtde. em Estoque'
+                Title.Orientation = toHorizontal
+                FieldName = 'QUANTIDADE_ESTOQUE'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end>
+            KeyStrokes = <            
+              item
+                Command = rxgcShowFindDlg
+                ShortCut = 16454
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowColumnsDlg
+                ShortCut = 16471
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowFilterDlg
+                ShortCut = 16468
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowSortDlg
+                ShortCut = 16467
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowQuickFilter
+                ShortCut = 16465
+                Enabled = True
+              end            
+              item
+                Command = rxgcHideQuickFilter
+                ShortCut = 16456
+                Enabled = True
+              end            
+              item
+                Command = rxgcSelectAll
+                ShortCut = 16449
+                Enabled = True
+              end            
+              item
+                Command = rxgcDeSelectAll
+                ShortCut = 16429
+                Enabled = True
+              end            
+              item
+                Command = rxgcInvertSelection
+                ShortCut = 16426
+                Enabled = True
+              end            
+              item
+                Command = rxgcOptimizeColumnsWidth
+                ShortCut = 16427
+                Enabled = True
+              end>
+            OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+            Align = alClient
+            Color = clWindow
+            DrawFullLine = False
+            FocusColor = clRed
+            SelectedColor = clHighlight
+            GridLineStyle = psSolid
+            DataSource = DSRequisicaoInternaDetalhe
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgHeaderPushedLook]
+            ParentColor = False
+            TabOrder = 0
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+            OnKeyDown = GridItensKeyDown
+          end
+        end
+        object EditIdColaborador: TLabeledCalcEdit[2]
+          Left = 16
+          Height = 21
+          Top = 61
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 1
+          Value = 0
+          OnKeyUp = EditIdColaboradorKeyUp
+          CalcEditLabel.Left = 16
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 45
+          CalcEditLabel.Width = 86
+          CalcEditLabel.Caption = 'Colaborador [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditColaborador: TLabeledEdit[3]
+          Left = 77
+          Height = 21
+          Top = 61
+          Width = 775
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditColaborador
+          EditLabel.AnchorSideRight.Control = EditColaborador
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditColaborador
+          EditLabel.Left = 77
+          EditLabel.Height = 13
+          EditLabel.Top = 45
+          EditLabel.Width = 775
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 2
+          TabStop = False
+        end
+        object EditDataRequisicao: TLabeledDateEdit[4]
+          Left = 858
+          Height = 21
+          Top = 61
+          Width = 121
+          Anchors = [akTop, akRight]
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 3
+          Text = '  /  /    '
+          DateEditLabel.Left = 858
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 45
+          DateEditLabel.Width = 81
+          DateEditLabel.Caption = 'Data Requisição:'
+          DateEditLabel.ParentColor = False
+        end
+        object ActionToolBar1: TToolPanel[5]
+          Left = 4
+          Height = 31
+          Top = 4
+          Width = 992
+          Items = <          
+            item
+              Action = ActionAdicionarItem
+              Visible = True
+              Left = 881
+              Height = 21
+              Top = 5
+              Width = 106
+              ShowCaption = True
+            end          
+            item
+              Action = ActionDeferirSolicitacao
+              Visible = True
+              Left = 758
+              Height = 21
+              Top = 5
+              Width = 123
+              ShowCaption = True
+            end          
+            item
+              Action = ActionIndeferirSolicitacao
+              Visible = True
+              Left = 626
+              Height = 21
+              Top = 5
+              Width = 132
+              ShowCaption = True
+            end>
+          ImageList = FDataModule.ImagensCadastros
+          ToolBarStyle = tbsWindowsXP
+          Options = [tpFlatBtns]
+          ButtonAllign = tbaRignt
+          Align = alTop
+          BorderWidth = 4
+          ClientHeight = 31
+          ClientWidth = 992
+          Color = clMenuBar
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          ParentColor = False
+          ParentFont = False
+          TabOrder = 4
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+  inherited PopupMenuAtalhosBotoesTelaCadastro: TPopupMenu
+    left = 216
+  end
+  object CDSRequisicaoInternaDetalhe: TBufDataset[5]
+    FieldDefs = <>
+    left = 836
+    top = 311
+  end
+  object DSRequisicaoInternaDetalhe: TDatasource[6]
+    DataSet = CDSRequisicaoInternaDetalhe
+    left = 836
+    top = 367
+  end
+  object ActionManager1: TActionList[7]
+    Images = FDataModule.ImagensCadastros
+    left = 574
+    top = 319
+    object ActionAdicionarItem: TAction
+      Caption = 'Adicionar Item'
+      ImageIndex = 13
+      OnExecute = ActionAdicionarItemExecute
+    end
+    object ActionDeferirSolicitacao: TAction
+      Caption = 'Deferir Solicitação'
+      ImageIndex = 8
+      OnExecute = ActionDeferirSolicitacaoExecute
+    end
+    object ActionIndeferirSolicitacao: TAction
+      Caption = 'Indeferir Solicitação'
+      ImageIndex = 2
+      OnExecute = ActionIndeferirSolicitacaoExecute
+    end
+  end
+  object PopupMenu1: TPopupMenu[8]
+    Images = FDataModule.ImagensCadastros
+    left = 374
+    top = 257
+    object ExcluirItem1: TMenuItem
+      Caption = 'Excluir Item'
+      Bitmap.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000064000000640000000000000000000000FFFFFF001514
+        13001716150217161508171615111716151A1615141F15141323141312231413
+        1224161514211716151D171615151716150B161514031B1A1900FFFFFF002322
+        210015141314171615481514136A1A191780201F1E942A2928A52C2B2AAC2A29
+        28A6201F1E9618161585151413761716155B1413122729282704FFFFFF002827
+        260011100F171816154F252524A52B2B2AEA2A2A2AFF292929FF2E2E2EFF3434
+        34FF3C3C3BFD3A3A39E8272726AA151312651413123121201F05FFFFFF002524
+        2300252423012C2B2A83171616FA070606FF080808FF0D0D0CFF121212FF1A1A
+        1AFF262526FF323131FF404040F73837377111100F0141403E00FFFFFF008988
+        88006464636A0E0E0DFF060303FF0C0808FF0A0A09FF0A0A09FF0A0A09FF0A0A
+        09FF0A0808FF140C0DFF262324FF404040FE6969685C8C8C8B00FFFFFF00B3B3
+        B2212A2A2AE9010000FF315449FF4F9580FF141413FF100E0EFF0F0E0DFF0A04
+        04FF1E2220FF3F7364FF273632FF171414FF5B5A59DFBABABA17FFFFFF009797
+        9679080707FF0C0506FF4E7F72FF84DFC6FF21201FFF170F10FF231D1DFF586B
+        65FF8BD4C0FF8FF7DBFF445952FF0D0808FF201E1EFF89898968FFFFFF005B5A
+        5ABF100F0FFF21191AFF568679FF76D4BBFF2C2727FF3F5650FF75C2AEFF8FF2
+        D9FF8BF2D8FF8DEBD3FF51625DFF231D1DFF161413FF767575A0FFFFFF004C4B
+        4ADE2E2D2BFF3B3032FF42826AFF44C194FF588D77FF45D49FFF3FDAA3FF48D3
+        A1FF54D6A7FF5BD8ABFF526A60FF393333FF2E2C2BFF777675B8FFFFFF006B6A
+        69D7464443FF4C4244FF558B72FF6ACA9FFF768C81FF76BC9BFF6FD9ABFF54D3
+        9DFF52D099FF63D5A3FF62766CFF4B4546FF474443FF92908FB2FFFFFF009C9B
+        9AA2575553FF5E5656FF80A69AFF9CE3CEFF868181FF8B8284FF97A8A1FF88D2
+        BAFF76E7C5FF7BE7C7FF7E918AFF5E5757FF5E5B5AFF9998978AFFFFFF00C0BF
+        BD4F706E6DFF6E6A68FFB1C1BCFFD1EEE8FF9E9D9CFF9C9A99FF9B9696FFA19D
+        9DFFAEC4BEFFBFECE1FFA4ADA9FF706C6AFF7C7977FDA2A2A141FFFFFF00BCBB
+        BB02999897B97E7B7AFFB0AFAEFFC3C4C3FFB1B0AFFFB1B0AFFFB1B0AFFFB1AF
+        AEFFB1ACABFFBBB7B7FFA8A6A5FF807E7CFFA5A4A3ACC1C0C000FFFFFF00CDCD
+        CD00C9C9C926A19E9DDBA29F9EFFC2C0C0FFC3C2C1FFC2C1C0FFC2C1C0FFC2C1
+        C0FFC4C2C1FFC2C1C0FFA19F9DFFA9A8A6C8CBCBCB1BCCCCCB00FFFFFF00D4D4
+        D400D7D7D700CFCECE1DB2B1B0A9BAB8B7FFCBCAC9FFD0D0CFFFD1D0CFFFD0CF
+        CEFFCAC9C8FFB9B7B6FDBBB9B89ED4D3D312CECECE00CCCCCC00FFFFFF00D3D3
+        D300D5D5D500D1D1D000CCCBCA01CCCACA3FCCCACA90C7C5C4D3CAC8C7DEC8C7
+        C6C7CCCBCA88CDCCCB36D7D7D600D5D4D400CCCCCC00CCCCCC00
+      }
+      ImageIndex = 10
+      OnClick = ExcluirItem1Click
+    end
+  end
+end

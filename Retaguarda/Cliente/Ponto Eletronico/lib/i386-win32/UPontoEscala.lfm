@@ -1,0 +1,367 @@
+inherited FPontoEscala: TFPontoEscala
+  Tag = 1
+  Left = 378
+  Top = 175
+  Caption = 'Ponto Escala'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object PanelMestre: TPanel[0]
+          Left = 10
+          Height = 153
+          Top = 10
+          Width = 978
+          Anchors = [akTop, akLeft, akRight]
+          BevelOuter = bvLowered
+          ClientHeight = 153
+          ClientWidth = 978
+          TabOrder = 0
+          object EditNome: TLabeledEdit
+            Left = 7
+            Height = 21
+            Top = 20
+            Width = 576
+            Anchors = [akTop, akLeft, akRight]
+            EditLabel.AnchorSideLeft.Control = EditNome
+            EditLabel.AnchorSideRight.Control = EditNome
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditNome
+            EditLabel.Left = 7
+            EditLabel.Height = 13
+            EditLabel.Top = 4
+            EditLabel.Width = 576
+            EditLabel.Caption = 'Nome:'
+            EditLabel.ParentColor = False
+            TabOrder = 0
+          end
+          object EditDescontoHoraDia: TLabeledMaskEdit
+            Left = 7
+            Height = 21
+            Top = 65
+            Width = 156
+            CharCase = ecNormal
+            MaxLength = 8
+            TabOrder = 1
+            EditMask = '##:##:##;1;_'
+            Text = '  :  :  '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 7
+            MaskEditLabel.Height = 13
+            MaskEditLabel.Top = 49
+            MaskEditLabel.Width = 101
+            MaskEditLabel.Caption = 'EditDescontoHoraDia'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditDescontoDsr: TLabeledMaskEdit
+            Left = 169
+            Height = 21
+            Top = 65
+            Width = 156
+            CharCase = ecNormal
+            MaxLength = 8
+            TabOrder = 2
+            EditMask = '##:##:##;1;_'
+            Text = '  :  :  '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 169
+            MaskEditLabel.Height = 13
+            MaskEditLabel.Top = 49
+            MaskEditLabel.Width = 79
+            MaskEditLabel.Caption = 'EditDescontoDsr'
+            MaskEditLabel.ParentColor = False
+          end
+          object GroupBoxHorarios: TGroupBox
+            Left = 589
+            Height = 138
+            Top = 1
+            Width = 378
+            Anchors = [akTop, akRight]
+            Caption = 'Horários [F1]'
+            ClientHeight = 120
+            ClientWidth = 374
+            TabOrder = 3
+            object GridHorarios: TRxDBGrid
+              Left = 0
+              Height = 120
+              Top = 0
+              Width = 374
+              TitleButtons = False
+              AutoSort = True
+              Columns = <              
+                item
+                  ReadOnly = True
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Dia'
+                  Title.Orientation = toHorizontal
+                  Width = 70
+                  FieldName = 'DIA'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Código'
+                  Title.Orientation = toHorizontal
+                  Width = 50
+                  FieldName = 'CODIGO'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Nome'
+                  Title.Orientation = toHorizontal
+                  Width = 200
+                  FieldName = 'NOME'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end>
+              KeyStrokes = <              
+                item
+                  Command = rxgcShowFindDlg
+                  ShortCut = 16454
+                  Enabled = True
+                end              
+                item
+                  Command = rxgcShowColumnsDlg
+                  ShortCut = 16471
+                  Enabled = True
+                end              
+                item
+                  Command = rxgcShowFilterDlg
+                  ShortCut = 16468
+                  Enabled = True
+                end              
+                item
+                  Command = rxgcShowSortDlg
+                  ShortCut = 16467
+                  Enabled = True
+                end              
+                item
+                  Command = rxgcShowQuickFilter
+                  ShortCut = 16465
+                  Enabled = True
+                end              
+                item
+                  Command = rxgcHideQuickFilter
+                  ShortCut = 16456
+                  Enabled = True
+                end              
+                item
+                  Command = rxgcSelectAll
+                  ShortCut = 16449
+                  Enabled = True
+                end              
+                item
+                  Command = rxgcDeSelectAll
+                  ShortCut = 16429
+                  Enabled = True
+                end              
+                item
+                  Command = rxgcInvertSelection
+                  ShortCut = 16426
+                  Enabled = True
+                end              
+                item
+                  Command = rxgcOptimizeColumnsWidth
+                  ShortCut = 16427
+                  Enabled = True
+                end>
+              OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+              Align = alClient
+              Color = clWindow
+              DrawFullLine = False
+              FocusColor = clRed
+              SelectedColor = clHighlight
+              GridLineStyle = psSolid
+              DataSource = DSHorarios
+              Options = [dgEditing, dgTitles, dgIndicator, dgColLines, dgRowLines, dgTabs, dgCancelOnExit]
+              ParentColor = False
+              TabOrder = 0
+              TitleFont.Color = clWindowText
+              TitleFont.Height = -11
+              TitleFont.Name = 'Tahoma'
+              OnKeyDown = GridHorariosKeyDown
+            end
+          end
+        end
+        object PageControlItens: TPageControl[1]
+          Left = 10
+          Height = 245
+          Top = 174
+          Width = 978
+          ActivePage = tsItens
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          TabIndex = 0
+          TabOrder = 1
+          object tsItens: TTabSheet
+            Caption = 'Turmas'
+            ClientHeight = 219
+            ClientWidth = 970
+            object PanelItens: TPanel
+              Left = 0
+              Height = 219
+              Top = 0
+              Width = 970
+              Align = alClient
+              BevelOuter = bvNone
+              ClientHeight = 219
+              ClientWidth = 970
+              TabOrder = 0
+              object GridTurmas: TRxDBGrid
+                Left = 0
+                Height = 219
+                Top = 0
+                Width = 970
+                TitleButtons = True
+                AutoSort = True
+                Columns = <                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Código'
+                    Title.Orientation = toHorizontal
+                    Width = 100
+                    FieldName = 'CODIGO'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Nome'
+                    Title.Orientation = toHorizontal
+                    Width = 500
+                    FieldName = 'NOME'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end>
+                KeyStrokes = <                
+                  item
+                    Command = rxgcShowFindDlg
+                    ShortCut = 16454
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowColumnsDlg
+                    ShortCut = 16471
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowFilterDlg
+                    ShortCut = 16468
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowSortDlg
+                    ShortCut = 16467
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowQuickFilter
+                    ShortCut = 16465
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcHideQuickFilter
+                    ShortCut = 16456
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcSelectAll
+                    ShortCut = 16449
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcDeSelectAll
+                    ShortCut = 16429
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcInvertSelection
+                    ShortCut = 16426
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcOptimizeColumnsWidth
+                    ShortCut = 16427
+                    Enabled = True
+                  end>
+                OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                Align = alClient
+                Color = clWindow
+                DrawFullLine = False
+                FocusColor = clRed
+                SelectedColor = clHighlight
+                GridLineStyle = psSolid
+                DataSource = DSPontoTurma
+                Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgHeaderPushedLook]
+                ParentColor = False
+                TabOrder = 0
+                TitleFont.Color = clWindowText
+                TitleFont.Height = -11
+                TitleFont.Name = 'Tahoma'
+                OnKeyDown = GridTurmasKeyDown
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+  object DSPontoTurma: TDatasource[5]
+    DataSet = CDSPontoTurma
+    left = 72
+    top = 320
+  end
+  object DSHorarios: TDatasource[6]
+    DataSet = CDSHorarios
+    left = 880
+    top = 136
+  end
+  object CDSPontoTurma: TBufDataset[7]
+    FieldDefs = <>
+    BeforeDelete = CDSPontoTurmaBeforeDelete
+    left = 257
+    top = 349
+  end
+  object CDSHorarios: TBufDataset[8]
+    FieldDefs = <>
+    AfterPost = CDSHorariosAfterPost
+    left = 770
+    top = 137
+  end
+end

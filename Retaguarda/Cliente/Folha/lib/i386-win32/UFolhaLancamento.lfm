@@ -1,0 +1,306 @@
+inherited FFolhaLancamento: TFFolhaLancamento
+  Left = 346
+  Top = 201
+  Caption = 'Folha Lançamento'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 980
+        ClientWidth = 980
+        inherited PanelFiltroRapido: TPanel
+          Width = 980
+          ClientWidth = 980
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 679
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 980
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object PanelMestre: TPanel[0]
+          Left = 8
+          Height = 101
+          Top = 10
+          Width = 974
+          Anchors = [akTop, akLeft, akRight]
+          BevelOuter = bvLowered
+          ClientHeight = 101
+          ClientWidth = 974
+          TabOrder = 0
+          object EditIdColaborador: TLabeledCalcEdit
+            Left = 7
+            Height = 21
+            Top = 22
+            Width = 61
+            Alignment = taRightJustify
+            DecimalPlaces = 0
+            DisplayFormat = '0'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 0
+            Value = 0
+            OnKeyUp = EditIdColaboradorKeyUp
+            CalcEditLabel.Left = 7
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 6
+            CalcEditLabel.Width = 86
+            CalcEditLabel.Caption = 'Colaborador [F1]:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditColaborador: TLabeledEdit
+            Left = 68
+            Height = 21
+            Top = 22
+            Width = 893
+            Anchors = [akTop, akLeft, akRight]
+            Color = clInfoBk
+            EditLabel.AnchorSideLeft.Control = EditColaborador
+            EditLabel.AnchorSideRight.Control = EditColaborador
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditColaborador
+            EditLabel.Left = 68
+            EditLabel.Height = 13
+            EditLabel.Top = 6
+            EditLabel.Width = 893
+            EditLabel.Caption = '  '
+            EditLabel.ParentColor = False
+            ReadOnly = True
+            TabOrder = 1
+            TabStop = False
+          end
+          object EditCompetencia: TLabeledMaskEdit
+            Left = 7
+            Height = 21
+            Top = 63
+            Width = 86
+            CharCase = ecNormal
+            MaxLength = 7
+            TabOrder = 2
+            EditMask = '##/####;1;_'
+            Text = '  /    '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 7
+            MaskEditLabel.Height = 13
+            MaskEditLabel.Top = 47
+            MaskEditLabel.Width = 66
+            MaskEditLabel.Caption = 'Competencia:'
+            MaskEditLabel.ParentColor = False
+          end
+          object ComboBoxTipo: TLabeledComboBox
+            Left = 99
+            Height = 21
+            Top = 63
+            Width = 132
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              '1 - Folha Mensal'
+              '2 - Rescisão'
+            )
+            Style = csDropDownList
+            TabOrder = 3
+            Text = '1 - Folha Mensal'
+            ComboBoxLabel.Left = 99
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 47
+            ComboBoxLabel.Width = 24
+            ComboBoxLabel.Caption = 'Tipo:'
+            ComboBoxLabel.ParentColor = False
+          end
+        end
+        object PageControlItens: TPageControl[1]
+          Left = 8
+          Height = 293
+          Top = 126
+          Width = 974
+          ActivePage = tsItens
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          TabIndex = 0
+          TabOrder = 1
+          object tsItens: TTabSheet
+            Caption = 'Detalhe'
+            ClientHeight = 267
+            ClientWidth = 966
+            object PanelItens: TPanel
+              Left = 0
+              Height = 267
+              Top = 0
+              Width = 966
+              Align = alClient
+              BevelOuter = bvNone
+              ClientHeight = 267
+              ClientWidth = 966
+              TabOrder = 0
+              object GridDetalhe: TRxDBGrid
+                Left = 0
+                Height = 267
+                Top = 0
+                Width = 966
+                TitleButtons = True
+                AutoSort = True
+                Columns = <                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'ID Evento'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'ID_FOLHA_EVENTO'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Evento'
+                    Title.Orientation = toHorizontal
+                    Width = 250
+                    FieldName = 'FOLHA_EVENTO.NOME'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Origem'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'ORIGEM'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Provento'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'PROVENTO'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Desconto'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'DESCONTO'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end>
+                KeyStrokes = <                
+                  item
+                    Command = rxgcShowFindDlg
+                    ShortCut = 16454
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowColumnsDlg
+                    ShortCut = 16471
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowFilterDlg
+                    ShortCut = 16468
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowSortDlg
+                    ShortCut = 16467
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowQuickFilter
+                    ShortCut = 16465
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcHideQuickFilter
+                    ShortCut = 16456
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcSelectAll
+                    ShortCut = 16449
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcDeSelectAll
+                    ShortCut = 16429
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcInvertSelection
+                    ShortCut = 16426
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcOptimizeColumnsWidth
+                    ShortCut = 16427
+                    Enabled = True
+                  end>
+                OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                Align = alClient
+                Color = clWindow
+                DrawFullLine = False
+                FocusColor = clRed
+                SelectedColor = clHighlight
+                GridLineStyle = psSolid
+                DataSource = DSFolhaLancamentoDetalhe
+                Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgHeaderPushedLook]
+                ParentColor = False
+                ReadOnly = True
+                TabOrder = 0
+                TitleFont.Color = clWindowText
+                TitleFont.Height = -11
+                TitleFont.Name = 'Tahoma'
+                OnKeyDown = GridDetalheKeyDown
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+  object DSFolhaLancamentoDetalhe: TDatasource[5]
+    DataSet = CDSFolhaLancamentoDetalhe
+    left = 152
+    top = 352
+  end
+  object CDSFolhaLancamentoDetalhe: TBufDataset[6]
+    FieldDefs = <>
+    left = 340
+    top = 359
+  end
+end

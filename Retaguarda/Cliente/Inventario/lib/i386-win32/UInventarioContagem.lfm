@@ -1,0 +1,260 @@
+inherited FInventarioContagem: TFInventarioContagem
+  Tag = 1
+  Left = 347
+  Top = 209
+  Caption = 'Contagem Estoque'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 922
+        ClientWidth = 922
+        inherited PanelFiltroRapido: TPanel
+          Width = 922
+          ClientWidth = 922
+          inherited BotaoConsultar: TSpeedButton
+            Left = 788
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 621
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 922
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 54
+          Top = 41
+          Width = 978
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object GroupBoxParcelas: TGroupBox[1]
+          Left = 8
+          Height = 318
+          Top = 101
+          Width = 978
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          Caption = 'Itens'
+          ClientHeight = 300
+          ClientWidth = 974
+          TabOrder = 0
+          object GridItens: TRxDBGrid
+            Left = 0
+            Height = 300
+            Top = 0
+            Width = 974
+            TitleButtons = True
+            AutoSort = True
+            KeyStrokes = <            
+              item
+                Command = rxgcShowFindDlg
+                ShortCut = 16454
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowColumnsDlg
+                ShortCut = 16471
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowFilterDlg
+                ShortCut = 16468
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowSortDlg
+                ShortCut = 16467
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowQuickFilter
+                ShortCut = 16465
+                Enabled = True
+              end            
+              item
+                Command = rxgcHideQuickFilter
+                ShortCut = 16456
+                Enabled = True
+              end            
+              item
+                Command = rxgcSelectAll
+                ShortCut = 16449
+                Enabled = True
+              end            
+              item
+                Command = rxgcDeSelectAll
+                ShortCut = 16429
+                Enabled = True
+              end            
+              item
+                Command = rxgcInvertSelection
+                ShortCut = 16426
+                Enabled = True
+              end            
+              item
+                Command = rxgcOptimizeColumnsWidth
+                ShortCut = 16427
+                Enabled = True
+              end>
+            OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+            Align = alClient
+            Color = clWindow
+            DrawFullLine = False
+            FocusColor = clRed
+            SelectedColor = clHighlight
+            GridLineStyle = psSolid
+            DataSource = DSInventarioContagemDetalhe
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgHeaderPushedLook]
+            ParentColor = False
+            TabOrder = 0
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+          end
+        end
+        object EditDataContagem: TLabeledDateEdit[2]
+          Left = 18
+          Height = 21
+          Top = 64
+          Width = 121
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 1
+          Text = '  /  /    '
+          DateEditLabel.Left = 18
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 48
+          DateEditLabel.Width = 79
+          DateEditLabel.Caption = 'Data Contagem:'
+          DateEditLabel.ParentColor = False
+        end
+        object ActionToolBarEdits: TToolPanel[3]
+          Left = 4
+          Height = 31
+          Top = 4
+          Width = 992
+          Items = <          
+            item
+              Action = ActionSelecionarItens
+              Visible = True
+              Left = 761
+              Height = 21
+              Top = 5
+              Width = 110
+              ShowCaption = True
+            end          
+            item
+              Action = ActionRealizarCalculos
+              Visible = True
+              Left = 871
+              Height = 21
+              Top = 5
+              Width = 116
+              ShowCaption = True
+            end>
+          ImageList = FDataModule.ImagensCadastros
+          ToolBarStyle = tbsWindowsXP
+          Options = [tpFlatBtns]
+          ButtonAllign = tbaRignt
+          Align = alTop
+          BorderWidth = 4
+          ClientHeight = 31
+          ClientWidth = 992
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          ParentFont = False
+          TabOrder = 2
+        end
+        object CheckBoxAtualizaEstoque: TCheckBox[4]
+          Left = 292
+          Height = 19
+          Top = 67
+          Width = 104
+          Caption = 'Atualizar Estoque'
+          TabOrder = 3
+        end
+        object ComboBoxTipo: TLabeledComboBox[5]
+          Left = 147
+          Height = 21
+          Top = 64
+          Width = 137
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            'Geral'
+            'Dinâmico'
+            'Rotativo'
+            'Amostragem'
+          )
+          Style = csDropDownList
+          TabOrder = 4
+          Text = 'Geral'
+          ComboBoxLabel.Left = 147
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 48
+          ComboBoxLabel.Width = 24
+          ComboBoxLabel.Caption = 'Tipo:'
+          ComboBoxLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+  inherited PopupMenuAtalhosBotoesTelaCadastro: TPopupMenu
+    left = 704
+    top = 24
+  end
+  object DSInventarioContagemDetalhe: TDatasource[5]
+    DataSet = CDSInventarioContagemDetalhe
+    left = 836
+    top = 367
+  end
+  object ActionManager: TActionList[6]
+    Images = FDataModule.ImagensCadastros
+    left = 448
+    top = 336
+    object ActionSelecionarItens: TAction
+      Category = 'InventarioContagem'
+      Caption = 'Selecionar Itens'
+      ImageIndex = 0
+      OnExecute = ActionSelecionarItensExecute
+    end
+    object ActionRealizarCalculos: TAction
+      Category = 'InventarioContagem'
+      Caption = 'Realizar Cálculos'
+      ImageIndex = 6
+      OnExecute = ActionRealizarCalculosExecute
+    end
+  end
+  object CDSInventarioContagemDetalhe: TBufDataset[7]
+    FieldDefs = <>
+    AfterEdit = CDSInventarioContagemDetalheAfterEdit
+    AfterPost = CDSInventarioContagemDetalheAfterPost
+    BeforePost = CDSInventarioContagemDetalheBeforePost
+    left = 836
+    top = 312
+  end
+end

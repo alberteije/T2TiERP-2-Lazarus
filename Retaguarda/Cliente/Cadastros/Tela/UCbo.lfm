@@ -1,0 +1,106 @@
+inherited FCbo: TFCbo
+  inherited PageControl: TPageControl
+    Width = 863
+    Height = 307
+    ActivePage = PaginaEdits
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 855
+        Height = 279
+        inherited Grid: TJvDBUltimGrid
+          Width = 855
+          Height = 227
+        end
+        inherited PanelFiltroRapido: TPanel
+          Top = 225
+          Width = 855
+          inherited BotaoConsultar: TSpeedButton
+            Left = 721
+            ExplicitLeft = 879
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 554
+            ExplicitWidth = 554
+          end
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      inherited PanelEdits: TPanel
+        Width = 855
+        Height = 279
+        object BevelEdits: TBevel
+          Left = 8
+          Top = 9
+          Width = 834
+          Height = 190
+          Anchors = [akLeft, akTop, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditNome: TLabeledEdit
+          Left = 18
+          Top = 78
+          Width = 815
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          EditLabel.Width = 31
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Nome:'
+          TabOrder = 2
+        end
+        object EditCodigo1994: TLabeledEdit
+          Left = 144
+          Top = 34
+          Width = 120
+          Height = 21
+          AutoSize = False
+          EditLabel.Width = 64
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Código 1994:'
+          TabOrder = 1
+        end
+        object MemoObservacao: TLabeledMemo
+          Left = 18
+          Top = 126
+          Width = 815
+          Height = 60
+          Anchors = [akLeft, akTop, akRight]
+          ScrollBars = ssVertical
+          TabOrder = 3
+          MemoLabel.Width = 62
+          MemoLabel.Height = 13
+          MemoLabel.Caption = 'Observação:'
+        end
+        object EditCodigo: TLabeledEdit
+          Left = 18
+          Top = 34
+          Width = 120
+          Height = 21
+          AutoSize = False
+          EditLabel.Width = 37
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Código:'
+          TabOrder = 0
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 863
+    inherited BotaoSair: TSpeedButton
+      Left = 757
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 657
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 557
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 447
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 457
+    end
+  end
+end

@@ -1,0 +1,154 @@
+inherited FAidfAimdf: TFAidfAimdf
+  Left = 359
+  Top = 180
+  Caption = 'AIDF|AIMDF'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 414
+        Width = 855
+        ClientHeight = 414
+        ClientWidth = 855
+        inherited PanelFiltroRapido: TPanel
+          Top = 360
+          Width = 855
+          ClientWidth = 855
+          inherited BotaoConsultar: TSpeedButton
+            Left = 721
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 554
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 362
+          Width = 855
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 54
+          Top = 9
+          Width = 979
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditNumeroAutorizacao: TLabeledEdit[1]
+          Left = 356
+          Height = 21
+          Top = 33
+          Width = 138
+          AutoSize = False
+          EditLabel.AnchorSideLeft.Control = EditNumeroAutorizacao
+          EditLabel.AnchorSideRight.Control = EditNumeroAutorizacao
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditNumeroAutorizacao
+          EditLabel.Left = 356
+          EditLabel.Height = 13
+          EditLabel.Top = 17
+          EditLabel.Width = 138
+          EditLabel.Caption = 'Número Autorização:'
+          EditLabel.ParentColor = False
+          TabOrder = 2
+        end
+        object EditDataAutorizacao: TLabeledDateEdit[2]
+          Left = 104
+          Height = 21
+          Top = 33
+          Width = 120
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 0
+          Text = '  /  /    '
+          DateEditLabel.Left = 104
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 17
+          DateEditLabel.Width = 87
+          DateEditLabel.Caption = 'Data Autorização:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditDataValidade: TLabeledDateEdit[3]
+          Left = 230
+          Height = 21
+          Top = 33
+          Width = 120
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 1
+          Text = '  /  /    '
+          DateEditLabel.Left = 230
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 17
+          DateEditLabel.Width = 70
+          DateEditLabel.Caption = 'Data Validade:'
+          DateEditLabel.ParentColor = False
+        end
+        object ComboBoxFormularioDisponivel: TLabeledComboBox[4]
+          Left = 500
+          Height = 21
+          Top = 33
+          Width = 145
+          ItemHeight = 13
+          ItemIndex = 1
+          Items.Strings = (
+            'Sim'
+            'Não'
+          )
+          Style = csDropDownList
+          TabOrder = 3
+          Text = 'Não'
+          ComboBoxLabel.Left = 500
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 17
+          ComboBoxLabel.Width = 105
+          ComboBoxLabel.Caption = 'Formulário Disponível:'
+          ComboBoxLabel.ParentColor = False
+        end
+        object EditNumero: TLabeledCalcEdit[5]
+          Left = 16
+          Height = 21
+          Top = 33
+          Width = 82
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 4
+          Value = 0
+          CalcEditLabel.Left = 16
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 17
+          CalcEditLabel.Width = 41
+          CalcEditLabel.Caption = 'Número:'
+          CalcEditLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+end

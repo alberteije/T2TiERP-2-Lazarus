@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="PreVendaDetalheVO" table="PRE_VENDA_DETALHE" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">PRE_VENDA_DETALHE</param>
+      </generator>
+    </id>
+
+    <property name="IdProduto" column="ID_PRODUTO" />
+    <property name="IdPreVendaCabecalho" column="ID_PRE_VENDA_CABECALHO" />
+    <property name="Item" column="ITEM" />
+    <property name="Quantidade" column="QUANTIDADE" />
+    <property name="ValorUnitario" column="VALOR_UNITARIO" />
+    <property name="ValorTotal" column="VALOR_TOTAL" />
+    <property name="Cancelado" column="CANCELADO" />
+    <property name="GtinProduto" column="GTIN_PRODUTO" />
+    <property name="NomeProduto" column="NOME_PRODUTO" />
+    <property name="UnidadeProduto" column="UNIDADE_PRODUTO" />
+    <property name="EcfIcmsSt" column="ECF_ICMS_ST" />
+
+  </class>
+</t2ti-orm-mapping>

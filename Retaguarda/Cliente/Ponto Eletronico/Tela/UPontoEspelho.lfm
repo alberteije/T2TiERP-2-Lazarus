@@ -1,0 +1,2269 @@
+inherited FPontoEspelho: TFPontoEspelho
+  Tag = 1
+  Left = 344
+  Top = 175
+  Caption = 'Ponto Espelho'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 440
+        ClientHeight = 440
+        inherited PanelFiltroRapido: TPanel
+          Top = 388
+        end
+        inherited Grid: TRxDBGrid
+          Height = 388
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 11
+          Height = 167
+          Top = 40
+          Width = 969
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditIdColaborador: TLabeledCalcEdit[1]
+          Left = 18
+          Height = 21
+          Top = 65
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 0
+          Value = 0
+          CalcEditLabel.Left = 18
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 49
+          CalcEditLabel.Width = 63
+          CalcEditLabel.Caption = 'Colaborador:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditColaborador: TLabeledEdit[2]
+          Left = 79
+          Height = 21
+          Top = 65
+          Width = 633
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditColaborador
+          EditLabel.AnchorSideRight.Control = EditColaborador
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditColaborador
+          EditLabel.Left = 79
+          EditLabel.Height = 13
+          EditLabel.Top = 49
+          EditLabel.Width = 633
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 1
+          TabStop = False
+        end
+        object EditMesAno: TLabeledMaskEdit[3]
+          Left = 18
+          Height = 21
+          Top = 113
+          Width = 86
+          CharCase = ecNormal
+          MaxLength = 7
+          TabOrder = 2
+          OnChange = EditMesAnoChange
+          EditMask = '##/####;1;_'
+          Text = '  /    '
+          SpaceChar = '_'
+          MaskEditLabel.Left = 18
+          MaskEditLabel.Height = 13
+          MaskEditLabel.Top = 97
+          MaskEditLabel.Width = 46
+          MaskEditLabel.Caption = 'Mes/Ano:'
+          MaskEditLabel.ParentColor = False
+        end
+        object PageControlItens: TPageControl[4]
+          Left = 10
+          Height = 202
+          Top = 218
+          Width = 970
+          ActivePage = tsItens
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          TabIndex = 0
+          TabOrder = 3
+          object tsItens: TTabSheet
+            Caption = 'Fechamento Jornada Mensal'
+            ClientHeight = 176
+            ClientWidth = 962
+            object GridFechamento: TRxDBGrid
+              Left = 0
+              Height = 176
+              Top = 0
+              Width = 962
+              TitleButtons = False
+              AutoSort = True
+              Columns = <              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Data'
+                  Title.Orientation = toHorizontal
+                  Width = 70
+                  FieldName = 'DATA_FECHAMENTO'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Dia'
+                  Title.Orientation = toHorizontal
+                  Width = 60
+                  FieldName = 'DIA_SEMANA'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Colaborador'
+                  Title.Orientation = toHorizontal
+                  Width = 300
+                  FieldName = 'NOME_COLABORADOR'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'PIS'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'PIS_NUMERO'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Cód Classificação'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'CODIGO_CLASSIFICACAO'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Classificação'
+                  Title.Orientation = toHorizontal
+                  Width = 200
+                  FieldName = 'NOME_CLASSIFICACAO'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Entrada 01'
+                  Title.Orientation = toHorizontal
+                  Width = 70
+                  FieldName = 'ENTRADA01'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Saída 01'
+                  Title.Orientation = toHorizontal
+                  Width = 70
+                  FieldName = 'SAIDA01'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Entrada 02'
+                  Title.Orientation = toHorizontal
+                  Width = 70
+                  FieldName = 'ENTRADA02'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Saída 02'
+                  Title.Orientation = toHorizontal
+                  Width = 70
+                  FieldName = 'SAIDA02'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Entrada 03'
+                  Title.Orientation = toHorizontal
+                  Width = 70
+                  FieldName = 'ENTRADA03'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Saída 03'
+                  Title.Orientation = toHorizontal
+                  Width = 70
+                  FieldName = 'SAIDA03'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Entrada 04'
+                  Title.Orientation = toHorizontal
+                  Width = 70
+                  FieldName = 'ENTRADA04'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Saída 04'
+                  Title.Orientation = toHorizontal
+                  Width = 70
+                  FieldName = 'SAIDA04'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Entrada 05'
+                  Title.Orientation = toHorizontal
+                  Width = 70
+                  FieldName = 'ENTRADA05'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Saída 05'
+                  Title.Orientation = toHorizontal
+                  Width = 70
+                  FieldName = 'SAIDA05'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Hora Extra 01'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'HORA_EXTRA01'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Percentual HE 01'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'PERCENTUAL_HORA_EXTRA01'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Modalidade HE 01'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'MODALIDADE_HORA_EXTRA01'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Hora Extra 02'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'HORA_EXTRA02'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Percentual HE 02'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'PERCENTUAL_HORA_EXTRA02'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Modalidade HE 02'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'MODALIDADE_HORA_EXTRA02'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Hora Extra 03'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'HORA_EXTRA03'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Percentual HE 03'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'PERCENTUAL_HORA_EXTRA03'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Modalidade HE 03'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'MODALIDADE_HORA_EXTRA03'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Hora Extra 04'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'HORA_EXTRA04'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Percentual HE 04'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'PERCENTUAL_HORA_EXTRA04'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Modalidade HE 04'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'MODALIDADE_HORA_EXTRA04'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Horas de Falta/Atraso'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'FALTA_ATRASO'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Início da Jornada'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'HORA_INICIO_JORNADA'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Fim da Jornada'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'HORA_FIM_JORNADA'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Código Horário'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'CODIGO_HORARIO'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Carga Horária Esperada'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'CARGA_HORARIA_ESPERADA'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Carga Horária Diurna'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'CARGA_HORARIA_DIURNA'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Carga Horária Noturna'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'CARGA_HORARIA_NOTURNA'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Carga Horária Total'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'CARGA_HORARIA_TOTAL'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Compensar'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'COMPENSAR'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Banco de Horas'
+                  Title.Orientation = toHorizontal
+                  FieldName = 'BANCO_HORAS'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end              
+                item
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Observação'
+                  Title.Orientation = toHorizontal
+                  Width = 300
+                  FieldName = 'OBSERVACAO'
+                  Filter.DropDownRows = 0
+                  Filter.EmptyValue = '(Empty)'
+                  Filter.EmptyFont.Style = [fsItalic]
+                  Filter.ItemIndex = -1
+                  EditButtons = <>
+                end>
+              KeyStrokes = <              
+                item
+                  Command = rxgcShowFindDlg
+                  ShortCut = 16454
+                  Enabled = True
+                end              
+                item
+                  Command = rxgcShowColumnsDlg
+                  ShortCut = 16471
+                  Enabled = True
+                end              
+                item
+                  Command = rxgcShowFilterDlg
+                  ShortCut = 16468
+                  Enabled = True
+                end              
+                item
+                  Command = rxgcShowSortDlg
+                  ShortCut = 16467
+                  Enabled = True
+                end              
+                item
+                  Command = rxgcShowQuickFilter
+                  ShortCut = 16465
+                  Enabled = True
+                end              
+                item
+                  Command = rxgcHideQuickFilter
+                  ShortCut = 16456
+                  Enabled = True
+                end              
+                item
+                  Command = rxgcSelectAll
+                  ShortCut = 16449
+                  Enabled = True
+                end              
+                item
+                  Command = rxgcDeSelectAll
+                  ShortCut = 16429
+                  Enabled = True
+                end              
+                item
+                  Command = rxgcInvertSelection
+                  ShortCut = 16426
+                  Enabled = True
+                end              
+                item
+                  Command = rxgcOptimizeColumnsWidth
+                  ShortCut = 16427
+                  Enabled = True
+                end>
+              OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+              Align = alClient
+              Color = clWindow
+              DrawFullLine = False
+              FocusColor = clRed
+              SelectedColor = clHighlight
+              GridLineStyle = psSolid
+              DataSource = DSPontoFechamentoJornada
+              Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+              ParentColor = False
+              ReadOnly = True
+              TabOrder = 0
+              TitleFont.Color = clWindowText
+              TitleFont.Height = -11
+              TitleFont.Name = 'Tahoma'
+            end
+          end
+        end
+        object ActionToolBar1: TToolPanel[5]
+          Left = 4
+          Height = 31
+          Top = 4
+          Width = 992
+          Items = <          
+            item
+              Action = ActionClassificarDia
+              Visible = True
+              Left = 547
+              Height = 21
+              Top = 5
+              Width = 101
+              ShowCaption = True
+            end          
+            item
+              Action = ActionConsultar
+              Visible = True
+              Left = 797
+              Height = 21
+              Top = 5
+              Width = 190
+              ShowCaption = True
+            end          
+            item
+              Action = ActionGerarParaWord
+              Visible = True
+              Left = 648
+              Height = 21
+              Top = 5
+              Width = 149
+              ShowCaption = True
+            end          
+            item
+              Action = ActionImprimirPrintFast
+              Visible = True
+              Left = 424
+              Height = 21
+              Top = 5
+              Width = 123
+              ShowCaption = True
+            end          
+            item
+              Action = ActionImprimirRDPrint
+              Visible = True
+              Left = 307
+              Height = 21
+              Top = 5
+              Width = 117
+              ShowCaption = True
+            end          
+            item
+              Action = ActionImprimirRSPrint
+              Visible = True
+              Left = 192
+              Height = 21
+              Top = 5
+              Width = 115
+              ShowCaption = True
+            end          
+            item
+              Action = ActionImprimirVDOPrint
+              Visible = True
+              Left = 66
+              Height = 21
+              Top = 5
+              Width = 126
+              ShowCaption = True
+            end>
+          ImageList = FDataModule.ImagensCadastros
+          ToolBarStyle = tbsWindowsXP
+          Options = [tpFlatBtns]
+          ButtonAllign = tbaRignt
+          Align = alTop
+          BorderWidth = 4
+          ClientHeight = 31
+          ClientWidth = 992
+          Color = clMenuBar
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          ParentColor = False
+          ParentFont = False
+          TabOrder = 4
+        end
+        object Calendario: TRxCalendarGrid[6]
+          Left = 724
+          Height = 153
+          Top = 48
+          Width = 254
+          Anchors = [akTop, akRight]
+          SelectedColor = clHighlight
+          ShortDaysOfWeek.Strings = (
+            'dom'
+            'seg'
+            'ter'
+            'qua'
+            'qui'
+            'sex'
+            's�b'
+          )
+        end
+      end
+    end
+  end
+  inherited PopupMenuExportar: TPopupMenu
+    left = 384
+    top = 96
+  end
+  inherited PopupMenuAtalhosBotoesTela: TPopupMenu
+    top = 87
+  end
+  inherited PopupMenuAtalhosBotoesTelaCadastro: TPopupMenu
+    left = 696
+    top = 96
+  end
+  object ActionManager1: TActionList[5]
+    Images = FDataModule.ImagensCadastros
+    left = 732
+    top = 311
+    object ActionConsultar: TAction
+      Category = 'Opções'
+      Caption = 'Consultar Dados Armazenados'
+      ImageIndex = 9
+      OnExecute = ActionConsultarExecute
+    end
+    object ActionClassificarDia: TAction
+      Category = 'Opções'
+      Caption = 'Classificar Dia'
+      ImageIndex = 1
+      OnExecute = ActionClassificarDiaExecute
+    end
+    object ActionImprimirRDPrint: TAction
+      Category = 'Opções'
+      Caption = 'Imprimir RDPrint'
+      ImageIndex = 12
+    end
+    object ActionImprimirVDOPrint: TAction
+      Category = 'Opções'
+      Caption = 'Imprimir VDOPrint'
+      ImageIndex = 5
+    end
+    object ActionGerarParaWord: TAction
+      Category = 'Opções'
+      Caption = 'Gerar Espelho no Word'
+      ImageIndex = 23
+    end
+    object ActionImprimirRSPrint: TAction
+      Category = 'Opções'
+      Caption = 'Imprimir RSPrint'
+      ImageIndex = 12
+    end
+    object ActionImprimirPrintFast: TAction
+      Category = 'Opções'
+      Caption = 'Imprimir PrintFast'
+      ImageIndex = 5
+    end
+  end
+  object CDSPontoFechamentoJornada: TBufDataset[6]
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'ID_PONTO_CLASSIFICACAO_JORNADA'
+        DataType = ftInteger
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'ID_COLABORADOR'
+        DataType = ftInteger
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'DATA_FECHAMENTO'
+        DataType = ftDate
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'DIA_SEMANA'
+        DataType = ftString
+        Precision = 0
+        Size = 7
+      end    
+      item
+        Name = 'CODIGO_HORARIO'
+        DataType = ftString
+        Precision = 0
+        Size = 4
+      end    
+      item
+        Name = 'CARGA_HORARIA_ESPERADA'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'CARGA_HORARIA_DIURNA'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'CARGA_HORARIA_NOTURNA'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'CARGA_HORARIA_TOTAL'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'ENTRADA01'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'SAIDA01'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'ENTRADA02'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'SAIDA02'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'ENTRADA03'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'SAIDA03'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'ENTRADA04'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'SAIDA04'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'ENTRADA05'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'SAIDA05'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'HORA_INICIO_JORNADA'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'HORA_FIM_JORNADA'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'HORA_EXTRA01'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'PERCENTUAL_HORA_EXTRA01'
+        DataType = ftFMTBcd
+        Precision = 20
+        Size = 6
+      end    
+      item
+        Name = 'MODALIDADE_HORA_EXTRA01'
+        DataType = ftString
+        Precision = 0
+        Size = 1
+      end    
+      item
+        Name = 'HORA_EXTRA02'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'PERCENTUAL_HORA_EXTRA02'
+        DataType = ftFMTBcd
+        Precision = 20
+        Size = 6
+      end    
+      item
+        Name = 'MODALIDADE_HORA_EXTRA02'
+        DataType = ftString
+        Precision = 0
+        Size = 1
+      end    
+      item
+        Name = 'HORA_EXTRA03'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'PERCENTUAL_HORA_EXTRA03'
+        DataType = ftFMTBcd
+        Precision = 20
+        Size = 6
+      end    
+      item
+        Name = 'MODALIDADE_HORA_EXTRA03'
+        DataType = ftString
+        Precision = 0
+        Size = 1
+      end    
+      item
+        Name = 'HORA_EXTRA04'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'PERCENTUAL_HORA_EXTRA04'
+        DataType = ftFMTBcd
+        Precision = 20
+        Size = 6
+      end    
+      item
+        Name = 'MODALIDADE_HORA_EXTRA04'
+        DataType = ftString
+        Precision = 0
+        Size = 1
+      end    
+      item
+        Name = 'NOME_COLABORADOR'
+        DataType = ftString
+        Precision = 0
+        Size = 150
+      end    
+      item
+        Name = 'COMPENSAR'
+        DataType = ftString
+        Precision = 0
+        Size = 1
+      end    
+      item
+        Name = 'BANCO_HORAS'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'OBSERVACAO'
+        DataType = ftString
+        Precision = 0
+        Size = 250
+      end    
+      item
+        Name = 'FALTA_ATRASO'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'PIS_NUMERO'
+        DataType = ftString
+        Precision = 0
+        Size = 12
+      end    
+      item
+        Name = 'CODIGO_CLASSIFICACAO'
+        DataType = ftString
+        Precision = 0
+        Size = 3
+      end    
+      item
+        Name = 'NOME_CLASSIFICACAO'
+        DataType = ftString
+        Precision = 0
+        Size = 50
+      end>
+    left = 404
+    top = 321
+    object CDSPontoFechamentoJornadaID: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object CDSPontoFechamentoJornadaID_PONTO_CLASSIFICACAO_JORNADA: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID_PONTO_CLASSIFICACAO_JORNADA'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object CDSPontoFechamentoJornadaID_COLABORADOR: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID_COLABORADOR'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object CDSPontoFechamentoJornadaDATA_FECHAMENTO: TDateField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DATA_FECHAMENTO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '##/##/####'
+    end
+    object CDSPontoFechamentoJornadaDIA_SEMANA: TStringField
+      DisplayWidth = 7
+      FieldKind = fkData
+      FieldName = 'DIA_SEMANA'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 7
+    end
+    object CDSPontoFechamentoJornadaCODIGO_HORARIO: TStringField
+      DisplayWidth = 4
+      FieldKind = fkData
+      FieldName = 'CODIGO_HORARIO'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 4
+    end
+    object CDSPontoFechamentoJornadaCARGA_HORARIA_ESPERADA: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'CARGA_HORARIA_ESPERADA'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '##:##:##'
+      Size = 8
+    end
+    object CDSPontoFechamentoJornadaCARGA_HORARIA_DIURNA: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'CARGA_HORARIA_DIURNA'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '##:##:##'
+      Size = 8
+    end
+    object CDSPontoFechamentoJornadaCARGA_HORARIA_NOTURNA: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'CARGA_HORARIA_NOTURNA'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '##:##:##'
+      Size = 8
+    end
+    object CDSPontoFechamentoJornadaCARGA_HORARIA_TOTAL: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'CARGA_HORARIA_TOTAL'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '##:##:##'
+      Size = 8
+    end
+    object CDSPontoFechamentoJornadaENTRADA01: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'ENTRADA01'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '##:##:##'
+      Size = 8
+    end
+    object CDSPontoFechamentoJornadaSAIDA01: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'SAIDA01'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '##:##:##'
+      Size = 8
+    end
+    object CDSPontoFechamentoJornadaENTRADA02: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'ENTRADA02'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '##:##:##'
+      Size = 8
+    end
+    object CDSPontoFechamentoJornadaSAIDA02: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'SAIDA02'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '##:##:##'
+      Size = 8
+    end
+    object CDSPontoFechamentoJornadaENTRADA03: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'ENTRADA03'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '##:##:##'
+      Size = 8
+    end
+    object CDSPontoFechamentoJornadaSAIDA03: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'SAIDA03'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '##:##:##'
+      Size = 8
+    end
+    object CDSPontoFechamentoJornadaENTRADA04: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'ENTRADA04'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '##:##:##'
+      Size = 8
+    end
+    object CDSPontoFechamentoJornadaSAIDA04: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'SAIDA04'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '##:##:##'
+      Size = 8
+    end
+    object CDSPontoFechamentoJornadaENTRADA05: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'ENTRADA05'
+      Index = 18
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '##:##:##'
+      Size = 8
+    end
+    object CDSPontoFechamentoJornadaSAIDA05: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'SAIDA05'
+      Index = 19
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '##:##:##'
+      Size = 8
+    end
+    object CDSPontoFechamentoJornadaHORA_INICIO_JORNADA: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'HORA_INICIO_JORNADA'
+      Index = 20
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '##:##:##'
+      Size = 8
+    end
+    object CDSPontoFechamentoJornadaHORA_FIM_JORNADA: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'HORA_FIM_JORNADA'
+      Index = 21
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '##:##:##'
+      Size = 8
+    end
+    object CDSPontoFechamentoJornadaHORA_EXTRA01: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'HORA_EXTRA01'
+      Index = 22
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '##:##:##'
+      Size = 8
+    end
+    object CDSPontoFechamentoJornadaPERCENTUAL_HORA_EXTRA01: TFMTBCDField
+      DisplayWidth = 21
+      FieldKind = fkData
+      FieldName = 'PERCENTUAL_HORA_EXTRA01'
+      Index = 23
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '##0.00'
+      Precision = 20
+      Currency = False
+      MaxValue = '0'
+      MinValue = '0'
+      Size = 6
+    end
+    object CDSPontoFechamentoJornadaMODALIDADE_HORA_EXTRA01: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'MODALIDADE_HORA_EXTRA01'
+      Index = 24
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object CDSPontoFechamentoJornadaHORA_EXTRA02: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'HORA_EXTRA02'
+      Index = 25
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '##:##:##'
+      Size = 8
+    end
+    object CDSPontoFechamentoJornadaPERCENTUAL_HORA_EXTRA02: TFMTBCDField
+      DisplayWidth = 21
+      FieldKind = fkData
+      FieldName = 'PERCENTUAL_HORA_EXTRA02'
+      Index = 26
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '##0.00'
+      Precision = 20
+      Currency = False
+      MaxValue = '0'
+      MinValue = '0'
+      Size = 6
+    end
+    object CDSPontoFechamentoJornadaMODALIDADE_HORA_EXTRA02: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'MODALIDADE_HORA_EXTRA02'
+      Index = 27
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object CDSPontoFechamentoJornadaHORA_EXTRA03: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'HORA_EXTRA03'
+      Index = 28
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '##:##:##'
+      Size = 8
+    end
+    object CDSPontoFechamentoJornadaPERCENTUAL_HORA_EXTRA03: TFMTBCDField
+      DisplayWidth = 21
+      FieldKind = fkData
+      FieldName = 'PERCENTUAL_HORA_EXTRA03'
+      Index = 29
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '##0.00'
+      Precision = 20
+      Currency = False
+      MaxValue = '0'
+      MinValue = '0'
+      Size = 6
+    end
+    object CDSPontoFechamentoJornadaMODALIDADE_HORA_EXTRA03: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'MODALIDADE_HORA_EXTRA03'
+      Index = 30
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object CDSPontoFechamentoJornadaHORA_EXTRA04: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'HORA_EXTRA04'
+      Index = 31
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '##:##:##'
+      Size = 8
+    end
+    object CDSPontoFechamentoJornadaPERCENTUAL_HORA_EXTRA04: TFMTBCDField
+      DisplayWidth = 21
+      FieldKind = fkData
+      FieldName = 'PERCENTUAL_HORA_EXTRA04'
+      Index = 32
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '##0.00'
+      Precision = 20
+      Currency = False
+      MaxValue = '0'
+      MinValue = '0'
+      Size = 6
+    end
+    object CDSPontoFechamentoJornadaMODALIDADE_HORA_EXTRA04: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'MODALIDADE_HORA_EXTRA04'
+      Index = 33
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object CDSPontoFechamentoJornadaNOME_COLABORADOR: TStringField
+      DisplayWidth = 150
+      FieldKind = fkData
+      FieldName = 'NOME_COLABORADOR'
+      Index = 34
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 150
+    end
+    object CDSPontoFechamentoJornadaCOMPENSAR: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'COMPENSAR'
+      Index = 35
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object CDSPontoFechamentoJornadaBANCO_HORAS: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'BANCO_HORAS'
+      Index = 36
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '##:##:##'
+      Size = 8
+    end
+    object CDSPontoFechamentoJornadaOBSERVACAO: TStringField
+      DisplayWidth = 250
+      FieldKind = fkData
+      FieldName = 'OBSERVACAO'
+      Index = 37
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 250
+    end
+    object CDSPontoFechamentoJornadaFALTA_ATRASO: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'FALTA_ATRASO'
+      Index = 38
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '##:##:##'
+      Size = 8
+    end
+    object CDSPontoFechamentoJornadaPIS_NUMERO: TStringField
+      DisplayWidth = 12
+      FieldKind = fkData
+      FieldName = 'PIS_NUMERO'
+      Index = 39
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 12
+    end
+    object CDSPontoFechamentoJornadaCODIGO_CLASSIFICACAO: TStringField
+      DisplayWidth = 3
+      FieldKind = fkData
+      FieldName = 'CODIGO_CLASSIFICACAO'
+      Index = 40
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 3
+    end
+    object CDSPontoFechamentoJornadaNOME_CLASSIFICACAO: TStringField
+      DisplayWidth = 50
+      FieldKind = fkData
+      FieldName = 'NOME_CLASSIFICACAO'
+      Index = 41
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+  end
+  object DSPontoFechamentoJornada: TDatasource[7]
+    DataSet = CDSPontoFechamentoJornada
+    left = 572
+    top = 321
+  end
+  object CDSPontoEscalaTurma: TBufDataset[8]
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'ID_EMPRESA'
+        DataType = ftInteger
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'NOME'
+        DataType = ftString
+        Precision = 0
+        Size = 50
+      end    
+      item
+        Name = 'DESCONTO_HORA_DIA'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'DESCONTO_DSR'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'CODIGO_HORARIO_DOMINGO'
+        DataType = ftString
+        Precision = 0
+        Size = 4
+      end    
+      item
+        Name = 'CODIGO_HORARIO_SEGUNDA'
+        DataType = ftString
+        Precision = 0
+        Size = 4
+      end    
+      item
+        Name = 'CODIGO_HORARIO_TERCA'
+        DataType = ftString
+        Precision = 0
+        Size = 4
+      end    
+      item
+        Name = 'CODIGO_HORARIO_QUARTA'
+        DataType = ftString
+        Precision = 0
+        Size = 4
+      end    
+      item
+        Name = 'CODIGO_HORARIO_QUINTA'
+        DataType = ftString
+        Precision = 0
+        Size = 4
+      end    
+      item
+        Name = 'CODIGO_HORARIO_SEXTA'
+        DataType = ftString
+        Precision = 0
+        Size = 4
+      end    
+      item
+        Name = 'CODIGO_HORARIO_SABADO'
+        DataType = ftString
+        Precision = 0
+        Size = 4
+      end    
+      item
+        Name = 'CODIGO_TURMA'
+        DataType = ftString
+        Precision = 0
+        Size = 5
+      end>
+    left = 72
+    top = 376
+    object CDSPontoEscalaTurmaID: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object CDSPontoEscalaTurmaID_EMPRESA: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID_EMPRESA'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object CDSPontoEscalaTurmaNOME: TStringField
+      DisplayWidth = 50
+      FieldKind = fkData
+      FieldName = 'NOME'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object CDSPontoEscalaTurmaDESCONTO_HORA_DIA: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'DESCONTO_HORA_DIA'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8
+    end
+    object CDSPontoEscalaTurmaDESCONTO_DSR: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'DESCONTO_DSR'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8
+    end
+    object CDSPontoEscalaTurmaCODIGO_HORARIO_DOMINGO: TStringField
+      DisplayWidth = 4
+      FieldKind = fkData
+      FieldName = 'CODIGO_HORARIO_DOMINGO'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 4
+    end
+    object CDSPontoEscalaTurmaCODIGO_HORARIO_SEGUNDA: TStringField
+      DisplayWidth = 4
+      FieldKind = fkData
+      FieldName = 'CODIGO_HORARIO_SEGUNDA'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 4
+    end
+    object CDSPontoEscalaTurmaCODIGO_HORARIO_TERCA: TStringField
+      DisplayWidth = 4
+      FieldKind = fkData
+      FieldName = 'CODIGO_HORARIO_TERCA'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 4
+    end
+    object CDSPontoEscalaTurmaCODIGO_HORARIO_QUARTA: TStringField
+      DisplayWidth = 4
+      FieldKind = fkData
+      FieldName = 'CODIGO_HORARIO_QUARTA'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 4
+    end
+    object CDSPontoEscalaTurmaCODIGO_HORARIO_QUINTA: TStringField
+      DisplayWidth = 4
+      FieldKind = fkData
+      FieldName = 'CODIGO_HORARIO_QUINTA'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 4
+    end
+    object CDSPontoEscalaTurmaCODIGO_HORARIO_SEXTA: TStringField
+      DisplayWidth = 4
+      FieldKind = fkData
+      FieldName = 'CODIGO_HORARIO_SEXTA'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 4
+    end
+    object CDSPontoEscalaTurmaCODIGO_HORARIO_SABADO: TStringField
+      DisplayWidth = 4
+      FieldKind = fkData
+      FieldName = 'CODIGO_HORARIO_SABADO'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 4
+    end
+    object CDSPontoEscalaTurmaCODIGO_TURMA: TStringField
+      DisplayWidth = 5
+      FieldKind = fkData
+      FieldName = 'CODIGO_TURMA'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 5
+    end
+  end
+  object CDSPontoHorario: TBufDataset[9]
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'ID_EMPRESA'
+        DataType = ftInteger
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'TIPO'
+        DataType = ftString
+        Precision = 0
+        Size = 1
+      end    
+      item
+        Name = 'CODIGO'
+        DataType = ftString
+        Precision = 0
+        Size = 4
+      end    
+      item
+        Name = 'NOME'
+        DataType = ftString
+        Precision = 0
+        Size = 50
+      end    
+      item
+        Name = 'TIPO_TRABALHO'
+        DataType = ftString
+        Precision = 0
+        Size = 1
+      end    
+      item
+        Name = 'CARGA_HORARIA'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'ENTRADA01'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'SAIDA01'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'ENTRADA02'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'SAIDA02'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'ENTRADA03'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'SAIDA03'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'ENTRADA04'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'SAIDA04'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'ENTRADA05'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'SAIDA05'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'HORA_INICIO_JORNADA'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'HORA_FIM_JORNADA'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end>
+    left = 192
+    top = 376
+    object CDSPontoHorarioID: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object CDSPontoHorarioID_EMPRESA: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID_EMPRESA'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object CDSPontoHorarioTIPO: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'TIPO'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object CDSPontoHorarioCODIGO: TStringField
+      DisplayWidth = 4
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 4
+    end
+    object CDSPontoHorarioNOME: TStringField
+      DisplayWidth = 50
+      FieldKind = fkData
+      FieldName = 'NOME'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object CDSPontoHorarioTIPO_TRABALHO: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'TIPO_TRABALHO'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object CDSPontoHorarioCARGA_HORARIA: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'CARGA_HORARIA'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8
+    end
+    object CDSPontoHorarioENTRADA01: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'ENTRADA01'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8
+    end
+    object CDSPontoHorarioSAIDA01: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'SAIDA01'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8
+    end
+    object CDSPontoHorarioENTRADA02: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'ENTRADA02'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8
+    end
+    object CDSPontoHorarioSAIDA02: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'SAIDA02'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8
+    end
+    object CDSPontoHorarioENTRADA03: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'ENTRADA03'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8
+    end
+    object CDSPontoHorarioSAIDA03: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'SAIDA03'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8
+    end
+    object CDSPontoHorarioENTRADA04: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'ENTRADA04'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8
+    end
+    object CDSPontoHorarioSAIDA04: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'SAIDA04'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8
+    end
+    object CDSPontoHorarioENTRADA05: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'ENTRADA05'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8
+    end
+    object CDSPontoHorarioSAIDA05: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'SAIDA05'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8
+    end
+    object CDSPontoHorarioHORA_INICIO_JORNADA: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'HORA_INICIO_JORNADA'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8
+    end
+    object CDSPontoHorarioHORA_FIM_JORNADA: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'HORA_FIM_JORNADA'
+      Index = 18
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8
+    end
+  end
+  object CDSPontoMarcacao: TBufDataset[10]
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'ID_COLABORADOR'
+        DataType = ftInteger
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'ID_PONTO_RELOGIO'
+        DataType = ftInteger
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'NSR'
+        DataType = ftInteger
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'DATA_MARCACAO'
+        DataType = ftDate
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'HORA_MARCACAO'
+        DataType = ftString
+        Precision = 0
+        Size = 8
+      end    
+      item
+        Name = 'TIPO_MARCACAO'
+        DataType = ftString
+        Precision = 0
+        Size = 1
+      end    
+      item
+        Name = 'TIPO_REGISTRO'
+        DataType = ftString
+        Precision = 0
+        Size = 1
+      end    
+      item
+        Name = 'JUSTIFICATIVA'
+        DataType = ftString
+        Precision = 0
+        Size = 100
+      end    
+      item
+        Name = 'PAR_ENTRADA_SAIDA'
+        DataType = ftString
+        Precision = 0
+        Size = 2
+      end>
+    left = 312
+    top = 376
+    object CDSPontoMarcacaoID: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object CDSPontoMarcacaoID_COLABORADOR: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID_COLABORADOR'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object CDSPontoMarcacaoID_PONTO_RELOGIO: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID_PONTO_RELOGIO'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object CDSPontoMarcacaoNSR: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'NSR'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object CDSPontoMarcacaoDATA_MARCACAO: TDateField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DATA_MARCACAO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object CDSPontoMarcacaoHORA_MARCACAO: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'HORA_MARCACAO'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8
+    end
+    object CDSPontoMarcacaoTIPO_MARCACAO: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'TIPO_MARCACAO'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object CDSPontoMarcacaoTIPO_REGISTRO: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'TIPO_REGISTRO'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object CDSPontoMarcacaoJUSTIFICATIVA: TStringField
+      DisplayWidth = 100
+      FieldKind = fkData
+      FieldName = 'JUSTIFICATIVA'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+    object CDSPontoMarcacaoPAR_ENTRADA_SAIDA: TStringField
+      DisplayWidth = 2
+      FieldKind = fkData
+      FieldName = 'PAR_ENTRADA_SAIDA'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 2
+    end
+  end
+end

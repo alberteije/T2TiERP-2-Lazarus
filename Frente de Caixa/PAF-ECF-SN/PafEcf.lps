@@ -1,0 +1,1611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="138">
+      <Unit0>
+        <Filename Value="PafEcf.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="79"/>
+        <CursorPos X="1" Y="91"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="VO\CfopVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="CfopVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="VO\ClienteVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ClienteVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="VO\DAVDetalheVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DavDetalheVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="60"/>
+        <CursorPos X="26" Y="81"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="VO\PreVendaDetalheVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PreVendaDetalheVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="VO\R02VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="R02VO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="71"/>
+        <CursorPos X="41" Y="82"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="VO\R03VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="R03VO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="41"/>
+        <CursorPos X="41" Y="63"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="VO\R06VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="R06VO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="67"/>
+        <CursorPos X="41" Y="80"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="VO\R07VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="R07VO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="43"/>
+        <CursorPos X="41" Y="65"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="VO\SituacaoClienteVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SituacaoClienteVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="Controller\ProdutoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ProdutoController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="111"/>
+        <CursorPos X="9" Y="139"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="Controller\VendaController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="VendaController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="65"/>
+        <CursorPos X="56" Y="89"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="Tela\UCaixa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FCaixa"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UCaixa"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1388"/>
+        <CursorPos X="66" Y="1406"/>
+        <UsageCount Value="93"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="Tela\UDescontoAcrescimo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FDescontoAcrescimo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UDescontoAcrescimo"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="82"/>
+        <CursorPos X="4" Y="93"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="Tela\UEfetuaPagamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FEfetuaPagamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UEfetuaPagamento"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="810"/>
+        <CursorPos X="87" Y="842"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="Tela\UIdentificaCliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FIdentificaCliente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UIdentificaCliente"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="115"/>
+        <CursorPos X="53" Y="144"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="Tela\UImportaCliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FImportaCliente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UImportaCliente"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="127"/>
+        <CursorPos X="6" Y="162"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="Tela\UImportaNumero.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FImportaNumero"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UImportaNumero"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="53"/>
+        <CursorPos X="1" Y="78"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="Tela\UIniciaMovimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FIniciaMovimento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UIniciaMovimento"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="62"/>
+        <CursorPos X="1" Y="234"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="Tela\UMovimentoAberto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FMovimentoAberto"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UMovimentoAberto"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="93"/>
+        <CursorPos X="101" Y="114"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="Tela\UValorReal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FValorReal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UValorReal"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="65"/>
+        <CursorPos X="1" Y="78"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="VO\FichaTecnicaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FichaTecnicaVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="VO\ProdutoPromocaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ProdutoPromocaoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="Tela\UImportaProduto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FImportaProduto"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UImportaProduto"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="185"/>
+        <CursorPos X="26" Y="210"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="Util\Biblioteca.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Biblioteca"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="71"/>
+        <CursorPos X="1" Y="94"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="Controller\ClienteController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ClienteController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="46"/>
+        <CursorPos X="1" Y="69"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="Controller\PreVendaController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PreVendaController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="18"/>
+        <CursorPos X="17" Y="37"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="Controller\DAVController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DAVController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="39"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="VO\Sintegra60AVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Sintegra60aVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="VO\Sintegra60MVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Sintegra60mVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="50"/>
+        <CursorPos X="1" Y="99"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="Tela\ULoginGerenteSupervisor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FLoginGerenteSupervisor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ULoginGerenteSupervisor"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="92"/>
+        <CursorPos X="23" Y="104"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="Tela\UVendasPeriodo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FVendasPeriodo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UVendasPeriodo"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="113"/>
+        <CursorPos X="45" Y="144"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="VO\R01VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="R01VO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="81"/>
+        <CursorPos X="41" Y="101"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="Util\Constantes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Constantes"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="28"/>
+        <CursorPos X="1" Y="46"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="Tela\UCargaPDV.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FCargaPDV"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UCargaPDV"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="200"/>
+        <CursorPos X="39" Y="231"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="Tela\UFechaEfetuaPagamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FFechaEfetuaPagamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UFechaEfetuaPagamento"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="25"/>
+        <CursorPos X="27" Y="44"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="Tela\UFichaTecnica.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FFichaTecnica"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UFichaTecnica"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="112"/>
+        <CursorPos X="32" Y="140"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="Controller\FichaTecnicaController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FichaTecnicaController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="33"/>
+        <CursorPos X="22" Y="68"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="Tela\UParcelamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FParcelamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UParcelamento"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="366"/>
+        <CursorPos X="94" Y="376"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="Tela\ULocaliza.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FLocaliza"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ULocaliza"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="11"/>
+        <CursorPos X="56" Y="33"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="Tela\USplash.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FSplash"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="USplash"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="24"/>
+        <CursorPos X="23" Y="17"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="Tela\UEncerraMovimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FEncerraMovimento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UEncerraMovimento"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="392"/>
+        <CursorPos X="30" Y="455"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="Controller\BancoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="BancoController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="28"/>
+        <CursorPos X="31" Y="59"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="Tela\UCheques.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FCheques"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UCheques"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="380"/>
+        <CursorPos X="5" Y="416"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="VO\LogImportacaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="LogImportacaoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="Tela\ULogImportacao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FLogImportacao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ULogImportacao"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="98"/>
+        <CursorPos X="5" Y="111"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="Tela\UNotaFiscal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FNotaFiscal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UNotaFiscal"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="281"/>
+        <CursorPos X="19" Y="282"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="VO\DavCabecalhoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DavCabecalhoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="68"/>
+        <CursorPos X="41" Y="89"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="VO\ContasParcelasVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ContasParcelasVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="VO\ContasPagarReceberVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ContasPagarReceberVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="VO\NotaFiscalDetalheVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NotaFiscalDetalheVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="VO\NotaFiscalCabecalhoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NotaFiscalCabecalhoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="89"/>
+        <CursorPos X="17" Y="112"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="VO\UnidadeProdutoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnidadeProdutoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="VO\PreVendaCabecalhoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PreVendaCabecalhoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="Tela\UPenDrive.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FPenDrive"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UPenDrive"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="77"/>
+        <CursorPos X="3" Y="80"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="Tela\UMenuFiscal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FMenuFiscal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UMenuFiscal"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="148"/>
+        <CursorPos X="1" Y="159"/>
+        <UsageCount Value="93"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="VO\BancoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="BancoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="Tela\UBase.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FBase"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UBase"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="92"/>
+        <CursorPos X="5" Y="80"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="Util\ECFUtil.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ECFUtil"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="271"/>
+        <CursorPos X="50" Y="284"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="Util\PAFUtil.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PAFUtil"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="8"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="111"/>
+        <CursorPos X="1" Y="135"/>
+        <UsageCount Value="93"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="Util\SessaoUsuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SessaoUsuario"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="127"/>
+        <CursorPos X="1" Y="143"/>
+        <UsageCount Value="93"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="Util\Tipos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Tipos"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="16" Y="23"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="VO\DavDetalheAlteracaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DavDetalheAlteracaoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="VO\EcfAliquotasVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfAliquotasVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="VO\EcfCaixaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfCaixaVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="VO\EcfChequeClienteVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfChequeClienteVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit65>
+      <Unit66>
+        <Filename Value="VO\EcfConfiguracaoBalancaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfConfiguracaoBalancaVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit66>
+      <Unit67>
+        <Filename Value="VO\EcfConfiguracaoLeitorSerVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfConfiguracaoLeitorSerVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit67>
+      <Unit68>
+        <Filename Value="VO\EcfConfiguracaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfConfiguracaoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="25"/>
+        <CursorPos X="54" Y="45"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit68>
+      <Unit69>
+        <Filename Value="VO\EcfContadorVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfContadorVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit69>
+      <Unit70>
+        <Filename Value="VO\EcfDocumentosEmitidosVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfDocumentosEmitidosVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit70>
+      <Unit71>
+        <Filename Value="VO\EcfE3VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfE3VO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="45"/>
+        <CursorPos X="41" Y="67"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit71>
+      <Unit72>
+        <Filename Value="VO\EcfEmpresaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfEmpresaVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit72>
+      <Unit73>
+        <Filename Value="VO\EcfFechamentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfFechamentoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="34"/>
+        <CursorPos X="20" Y="36"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit73>
+      <Unit74>
+        <Filename Value="VO\EcfFuncionarioVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfFuncionarioVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="37"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit74>
+      <Unit75>
+        <Filename Value="VO\EcfImpressoraVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfImpressoraVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="70"/>
+        <CursorPos X="24" Y="93"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit75>
+      <Unit76>
+        <Filename Value="VO\EcfMovimentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfMovimentoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="55"/>
+        <CursorPos X="19" Y="78"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit76>
+      <Unit77>
+        <Filename Value="VO\EcfOperadorVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfOperadorVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="37"/>
+        <CursorPos X="58" Y="49"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit77>
+      <Unit78>
+        <Filename Value="VO\EcfPosicaoComponentesVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfPosicaoComponentesVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit78>
+      <Unit79>
+        <Filename Value="VO\EcfProdutoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfProdutoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="65"/>
+        <CursorPos X="22" Y="76"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit79>
+      <Unit80>
+        <Filename Value="VO\EcfRecebimentoNaoFiscalVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfRecebimentoNaoFiscalVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit80>
+      <Unit81>
+        <Filename Value="VO\EcfRelatorioGerencialVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfRelatorioGerencialVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit81>
+      <Unit82>
+        <Filename Value="VO\EcfResolucaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfResolucaoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="41"/>
+        <CursorPos X="1" Y="114"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit82>
+      <Unit83>
+        <Filename Value="VO\EcfSangriaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfSangriaVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit83>
+      <Unit84>
+        <Filename Value="VO\EcfSuprimentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfSuprimentoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit84>
+      <Unit85>
+        <Filename Value="VO\EcfTipoPagamentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfTipoPagamentoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="62"/>
+        <CursorPos X="1" Y="94"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit85>
+      <Unit86>
+        <Filename Value="VO\EcfTotalTipoPagamentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfTotalTipoPagamentoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="62"/>
+        <CursorPos X="45" Y="69"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit86>
+      <Unit87>
+        <Filename Value="VO\EcfTurnoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfTurnoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit87>
+      <Unit88>
+        <Filename Value="VO\EcfVendaCabecalhoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfVendaCabecalhoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="112"/>
+        <CursorPos X="20" Y="134"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit88>
+      <Unit89>
+        <Filename Value="VO\EcfVendaDetalheVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfVendaDetalheVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="68"/>
+        <CursorPos X="33" Y="83"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit89>
+      <Unit90>
+        <Filename Value="VO\LogssVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="LogssVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit90>
+      <Unit91>
+        <Filename Value="VO\ViewTotalPagamentoDataVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTotalPagamentoDataVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit91>
+      <Unit92>
+        <Filename Value="VO\ViewTotalPagamentoMovimentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTotalPagamentoMovimentoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="35"/>
+        <CursorPos X="67" Y="24"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit92>
+      <Unit93>
+        <Filename Value="VO\VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="VO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="62"/>
+        <CursorPos X="47" Y="74"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit93>
+      <Unit94>
+        <Filename Value="Controller\Controller.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Controller"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="40"/>
+        <CursorPos X="20" Y="71"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit94>
+      <Unit95>
+        <Filename Value="Controller\DavDetalheController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DavDetalheController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="16"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit95>
+      <Unit96>
+        <Filename Value="Controller\EcfAliquotasController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfAliquotasController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="27"/>
+        <CursorPos X="38" Y="59"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit96>
+      <Unit97>
+        <Filename Value="Controller\EcfChequeClienteController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfChequeClienteController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="38"/>
+        <CursorPos X="20" Y="86"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit97>
+      <Unit98>
+        <Filename Value="Controller\EcfConfiguracaoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfConfiguracaoController"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="56"/>
+        <CursorPos X="1" Y="66"/>
+        <UsageCount Value="93"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit98>
+      <Unit99>
+        <Filename Value="Controller\EcfContadorController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfContadorController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="27"/>
+        <CursorPos X="37" Y="59"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit99>
+      <Unit100>
+        <Filename Value="Controller\EcfE3Controller.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfE3Controller"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="49"/>
+        <CursorPos X="57" Y="66"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit100>
+      <Unit101>
+        <Filename Value="Controller\EcfFechamentoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfFechamentoController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="33"/>
+        <CursorPos X="22" Y="68"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit101>
+      <Unit102>
+        <Filename Value="Controller\EcfFuncionarioController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfFuncionarioController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="46"/>
+        <CursorPos X="22" Y="67"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit102>
+      <Unit103>
+        <Filename Value="Controller\EcfImpressoraController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfImpressoraController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="42"/>
+        <CursorPos X="65" Y="74"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit103>
+      <Unit104>
+        <Filename Value="Controller\EcfMovimentoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfMovimentoController"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="58"/>
+        <CursorPos X="1" Y="74"/>
+        <UsageCount Value="93"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit104>
+      <Unit105>
+        <Filename Value="Controller\EcfSangriaController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfSangriaController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="19"/>
+        <CursorPos X="1" Y="60"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit105>
+      <Unit106>
+        <Filename Value="Controller\EcfSuprimentoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfSuprimentoController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="19"/>
+        <CursorPos X="1" Y="60"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit106>
+      <Unit107>
+        <Filename Value="Controller\EcfTipoPagamentoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfTipoPagamentoController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="43"/>
+        <CursorPos X="68" Y="74"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit107>
+      <Unit108>
+        <Filename Value="Controller\EcfTotalTipoPagamentoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfTotalTipoPagamentoController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="86"/>
+        <CursorPos X="22" Y="69"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit108>
+      <Unit109>
+        <Filename Value="Controller\EcfTurnoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfTurnoController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="36"/>
+        <CursorPos X="58" Y="65"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit109>
+      <Unit110>
+        <Filename Value="Controller\LogssController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="LogssController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="114"/>
+        <CursorPos X="1" Y="135"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit110>
+      <Unit111>
+        <Filename Value="Controller\NotaFiscalCabecalhoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NotaFiscalCabecalhoController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="83"/>
+        <CursorPos X="71" Y="77"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit111>
+      <Unit112>
+        <Filename Value="Controller\NotaFiscalDetalheController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NotaFiscalDetalheController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="44"/>
+        <CursorPos X="1" Y="59"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit112>
+      <Unit113>
+        <Filename Value="Controller\PreVendaDetalheController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PreVendaDetalheController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="18"/>
+        <CursorPos X="58" Y="42"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit113>
+      <Unit114>
+        <Filename Value="Controller\R01Controller.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="R01Controller"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="21"/>
+        <CursorPos X="17" Y="45"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit114>
+      <Unit115>
+        <Filename Value="Controller\R02Controller.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="R02Controller"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="70"/>
+        <CursorPos X="19" Y="88"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit115>
+      <Unit116>
+        <Filename Value="Controller\R06Controller.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="R06Controller"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="77"/>
+        <CursorPos X="55" Y="77"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit116>
+      <Unit117>
+        <Filename Value="Controller\Sintegra60MController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Sintegra60MController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="38"/>
+        <CursorPos X="63" Y="65"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit117>
+      <Unit118>
+        <Filename Value="Controller\ViewTotalPagamentoDataController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTotalPagamentoDataController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="42"/>
+        <CursorPos X="74" Y="74"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit118>
+      <Unit119>
+        <Filename Value="Controller\ViewTotalPagamentoMovimentoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTotalPagamentoMovimentoController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="41"/>
+        <CursorPos X="79" Y="72"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit119>
+      <Unit120>
+        <Filename Value="DataModule\UDataModule.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FDataModule"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="UDataModule"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="51"/>
+        <CursorPos X="50" Y="75"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit120>
+      <Unit121>
+        <Filename Value="DataModule\udatamoduleconexao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FDataModuleConexao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="UDataModuleConexao"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="95"/>
+        <CursorPos X="32" Y="105"/>
+        <UsageCount Value="93"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit121>
+      <Unit122>
+        <Filename Value="Tela\ULMF.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FLMF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ULMF"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="132"/>
+        <CursorPos X="49" Y="161"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit122>
+      <Unit123>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FRegistrosPAF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="URegistrosPAF"/>
+        <EditorIndex Value="7"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="65"/>
+        <CursorPos X="1" Y="90"/>
+        <UsageCount Value="93"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit123>
+      <Unit124>
+        <Filename Value="Util\T2TiORM.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="T2TiORM"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="33"/>
+        <CursorPos X="1" Y="53"/>
+        <UsageCount Value="93"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit124>
+      <Unit125>
+        <Filename Value="Tela\UMovimentoECF.pas"/>
+        <ComponentName Value="FMovimentoECF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UMovimentoECF"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="28"/>
+        <CursorPos X="32" Y="34"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit125>
+      <Unit126>
+        <Filename Value="Tela\UCarregaDAV.pas"/>
+        <ComponentName Value="FCarregaDAV"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UCarregaDAV"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="118"/>
+        <CursorPos X="29" Y="126"/>
+        <UsageCount Value="55"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit126>
+      <Unit127>
+        <Filename Value="Tela\UConfigConexao.pas"/>
+        <ComponentName Value="FConfigConexao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UConfigConexao"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="402"/>
+        <CursorPos X="25" Y="414"/>
+        <UsageCount Value="4"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit127>
+      <Unit128>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\objpas\sysutils\sysinth.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="119"/>
+        <CursorPos X="3" Y="82"/>
+        <UsageCount Value="7"/>
+      </Unit128>
+      <Unit129>
+        <Filename Value="C:\Componentes\Lazarus\ACBr\Fontes\ACBrTEFD\ACBrTEFDClass.pas"/>
+        <UnitName Value="ACBrTEFDClass"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="28"/>
+        <CursorPos X="19" Y="43"/>
+        <UsageCount Value="9"/>
+      </Unit129>
+      <Unit130>
+        <Filename Value="C:\lazarus\components\ZEOSDBO-7.1.3a-stable\src\dbc\ZDbcInterbase6Utils.pas"/>
+        <UnitName Value="ZDbcInterbase6Utils"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="826"/>
+        <CursorPos X="36" Y="836"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit130>
+      <Unit131>
+        <Filename Value="C:\lazarus\components\ZEOSDBO-7.1.3a-stable\src\dbc\ZDbcMySqlUtils.pas"/>
+        <UnitName Value="ZDbcMySqlUtils"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="417"/>
+        <CursorPos X="1" Y="434"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit131>
+      <Unit132>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2693"/>
+        <CursorPos X="1" Y="2713"/>
+        <UsageCount Value="9"/>
+      </Unit132>
+      <Unit133>
+        <Filename Value="C:\Componentes\Lazarus\ACBr\Fontes\ACBrSerial\ACBrECF.pas"/>
+        <UnitName Value="ACBrECF"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2874"/>
+        <CursorPos X="1" Y="2892"/>
+        <UsageCount Value="9"/>
+      </Unit133>
+      <Unit134>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\packages\fcl-json\src\fpjsonrtti.pp"/>
+        <UnitName Value="fpjsonrtti"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="6"/>
+        <CursorPos X="43" Y="20"/>
+        <UsageCount Value="11"/>
+      </Unit134>
+      <Unit135>
+        <Filename Value="C:\lazarus\components\ZEOSDBO-7.1.3a-stable\src\component\ZAbstractRODataset.pas"/>
+        <UnitName Value="ZAbstractRODataset"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="829"/>
+        <CursorPos X="37" Y="832"/>
+        <UsageCount Value="9"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit135>
+      <Unit136>
+        <Filename Value="C:\lazarus\lcl\include\customform.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="439"/>
+        <CursorPos X="24" Y="441"/>
+        <UsageCount Value="9"/>
+      </Unit136>
+      <Unit137>
+        <Filename Value="C:\Componentes\Lazarus\ACBr\Fontes\synalist\synaser.pas"/>
+        <UnitName Value="synaser"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2106"/>
+        <CursorPos X="45" Y="2118"/>
+        <UsageCount Value="9"/>
+      </Unit137>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="Util\SessaoUsuario.pas"/>
+        <Caret Line="143" Column="1" TopLine="127"/>
+      </Position1>
+      <Position2>
+        <Filename Value="Controller\EcfMovimentoController.pas"/>
+        <Caret Line="74" Column="1" TopLine="57"/>
+      </Position2>
+      <Position3>
+        <Filename Value="Util\SessaoUsuario.pas"/>
+        <Caret Line="144" Column="3" TopLine="127"/>
+      </Position3>
+      <Position4>
+        <Filename Value="Tela\UCaixa.pas"/>
+        <Caret Line="1406" Column="66" TopLine="1388"/>
+      </Position4>
+      <Position5>
+        <Filename Value="Controller\EcfMovimentoController.pas"/>
+        <Caret Line="74" Column="1" TopLine="58"/>
+      </Position5>
+      <Position6>
+        <Filename Value="Tela\UMenuFiscal.pas"/>
+        <Caret Line="169" Column="7" TopLine="149"/>
+      </Position6>
+      <Position7>
+        <Filename Value="Tela\UMenuFiscal.pas"/>
+        <Caret Line="168" Column="7" TopLine="148"/>
+      </Position7>
+      <Position8>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <Caret Line="173" Column="1" TopLine="140"/>
+      </Position8>
+      <Position9>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <Caret Line="172" Column="1" TopLine="139"/>
+      </Position9>
+      <Position10>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <Caret Line="171" Column="1" TopLine="138"/>
+      </Position10>
+      <Position11>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <Caret Line="170" Column="1" TopLine="137"/>
+      </Position11>
+      <Position12>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <Caret Line="169" Column="1" TopLine="136"/>
+      </Position12>
+      <Position13>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <Caret Line="168" Column="1" TopLine="135"/>
+      </Position13>
+      <Position14>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <Caret Line="167" Column="1" TopLine="134"/>
+      </Position14>
+      <Position15>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <Caret Line="166" Column="1" TopLine="133"/>
+      </Position15>
+      <Position16>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <Caret Line="165" Column="1" TopLine="132"/>
+      </Position16>
+      <Position17>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <Caret Line="164" Column="1" TopLine="131"/>
+      </Position17>
+      <Position18>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <Caret Line="163" Column="1" TopLine="130"/>
+      </Position18>
+      <Position19>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <Caret Line="162" Column="1" TopLine="129"/>
+      </Position19>
+      <Position20>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <Caret Line="161" Column="1" TopLine="128"/>
+      </Position20>
+      <Position21>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <Caret Line="160" Column="1" TopLine="127"/>
+      </Position21>
+      <Position22>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <Caret Line="159" Column="1" TopLine="126"/>
+      </Position22>
+      <Position23>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <Caret Line="158" Column="1" TopLine="125"/>
+      </Position23>
+      <Position24>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <Caret Line="92" Column="47" TopLine="74"/>
+      </Position24>
+      <Position25>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
+      </Position25>
+      <Position26>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <Caret Line="67" Column="1" TopLine="36"/>
+      </Position26>
+      <Position27>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <Caret Line="91" Column="53" TopLine="60"/>
+      </Position27>
+      <Position28>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
+      </Position28>
+      <Position29>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <Caret Line="66" Column="1" TopLine="35"/>
+      </Position29>
+      <Position30>
+        <Filename Value="Util\PAFUtil.pas"/>
+        <Caret Line="1159" Column="1" TopLine="1135"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+  <EditorMacros Count="0"/>
+</CONFIG>

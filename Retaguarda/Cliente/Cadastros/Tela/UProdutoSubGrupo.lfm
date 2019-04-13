@@ -1,0 +1,66 @@
+inherited FProdutoSubGrupo: TFProdutoSubGrupo
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    inherited PaginaEdits: TTabSheet
+      inherited PanelEdits: TPanel
+        object BevelEdits: TBevel
+          Left = 8
+          Top = 9
+          Width = 969
+          Height = 216
+          Anchors = [akLeft, akTop, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditNome: TLabeledEdit
+          Left = 14
+          Top = 78
+          Width = 953
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          EditLabel.Width = 31
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Nome:'
+          TabOrder = 0
+        end
+        object MemoDescricao: TLabeledMemo
+          Left = 14
+          Top = 126
+          Width = 953
+          Height = 89
+          Anchors = [akLeft, akTop, akRight]
+          ScrollBars = ssVertical
+          TabOrder = 1
+          MemoLabel.Width = 50
+          MemoLabel.Height = 13
+          MemoLabel.Caption = 'Descrição:'
+        end
+        object EditGrupoProduto: TLabeledEdit
+          Left = 75
+          Top = 30
+          Width = 892
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          Color = clInfoBk
+          EditLabel.Width = 6
+          EditLabel.Height = 13
+          EditLabel.Caption = '  '
+          ReadOnly = True
+          TabOrder = 2
+        end
+        object EditIdGrupoProduto: TLabeledCalcEdit
+          Left = 14
+          Top = 30
+          Width = 61
+          Height = 21
+          ShowButton = False
+          TabOrder = 3
+          DecimalPlacesAlwaysShown = False
+          OnKeyUp = EditIdGrupoProdutoKeyUp
+          CalcEditLabel.Width = 97
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Grupo Produto [F1]:'
+        end
+      end
+    end
+  end
+end

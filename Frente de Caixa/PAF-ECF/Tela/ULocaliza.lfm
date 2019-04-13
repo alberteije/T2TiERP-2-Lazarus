@@ -1,0 +1,59 @@
+inherited FLocaliza: TFLocaliza
+  Left = 441
+  Height = 128
+  Top = 361
+  Width = 282
+  Align = alCustom
+  BorderStyle = bsSingle
+  Caption = 'Localiza - Teclado Reduzido'
+  ClientHeight = 128
+  ClientWidth = 282
+  KeyPreview = True
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  Position = poDesktopCenter
+  object btnProdutos: TSpeedButton[0]
+    Left = 24
+    Height = 35
+    Top = 8
+    Width = 230
+    Caption = '  1 - Pesquisa Produtos'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Verdana'
+    Font.Style = [fsBold]
+    OnClick = btnProdutosClick
+    ParentFont = False
+  end
+  object btnClientes: TSpeedButton[1]
+    Left = 24
+    Height = 35
+    Top = 47
+    Width = 230
+    Caption = '  2 - Identifica Clientes'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Verdana'
+    Font.Style = [fsBold]
+    OnClick = btnClientesClick
+    ParentFont = False
+  end
+  object btnVendedor: TSpeedButton[2]
+    Left = 24
+    Height = 35
+    Top = 85
+    Width = 230
+    Caption = '  3 - Identifica Vendedor'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Verdana'
+    Font.Style = [fsBold]
+    OnClick = btnVendedorClick
+    ParentFont = False
+  end
+  inherited TimerIntegracao: TTimer[3]
+  end
+end

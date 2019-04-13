@@ -1,0 +1,331 @@
+inherited FFeriasPeriodoAquisitivo: TFFeriasPeriodoAquisitivo
+  Tag = 1
+  Left = 337
+  Caption = 'Férias Períodos Aquisitivos'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 142
+          Top = 10
+          Width = 980
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditIdColaborador: TLabeledCalcEdit[1]
+          Left = 16
+          Height = 21
+          Top = 33
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 0
+          Value = 0
+          OnKeyUp = EditIdColaboradorKeyUp
+          CalcEditLabel.Left = 16
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 17
+          CalcEditLabel.Width = 63
+          CalcEditLabel.Caption = 'Colaborador:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditColaborador: TLabeledEdit[2]
+          Left = 77
+          Height = 21
+          Top = 33
+          Width = 903
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditColaborador
+          EditLabel.AnchorSideRight.Control = EditColaborador
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditColaborador
+          EditLabel.Left = 77
+          EditLabel.Height = 13
+          EditLabel.Top = 17
+          EditLabel.Width = 903
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 1
+          TabStop = False
+        end
+        object EditDataInicio: TLabeledDateEdit[3]
+          Left = 16
+          Height = 21
+          Top = 77
+          Width = 121
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 2
+          Text = '  /  /    '
+          DateEditLabel.Left = 16
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 61
+          DateEditLabel.Width = 55
+          DateEditLabel.Caption = 'Data Início:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditDataFim: TLabeledDateEdit[4]
+          Left = 143
+          Height = 21
+          Top = 77
+          Width = 121
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 3
+          Text = '  /  /    '
+          DateEditLabel.Left = 143
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 61
+          DateEditLabel.Width = 46
+          DateEditLabel.Caption = 'Data Fim:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditAfastamentoPrevidencia: TLabeledCalcEdit[5]
+          Left = 840
+          Height = 21
+          Top = 77
+          Width = 138
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          Anchors = [akTop, akRight]
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 8
+          Value = 0
+          CalcEditLabel.Left = 840
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 61
+          CalcEditLabel.Width = 124
+          CalcEditLabel.Caption = 'Afastamento Previdência:'
+          CalcEditLabel.ParentColor = False
+        end
+        object ComboBoxSituacao: TLabeledComboBox[6]
+          Left = 270
+          Height = 21
+          Top = 77
+          Width = 155
+          Anchors = [akTop, akLeft, akRight]
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            '0 - Em Aberto'
+            '1 - Gozado'
+            '2 - Parcialmente Gozado'
+            '3 - Perda por Afastamento'
+            '4 - Perda por Falta'
+            '5 - Cancelado'
+          )
+          Style = csDropDownList
+          TabOrder = 4
+          Text = '0 - Em Aberto'
+          ComboBoxLabel.Left = 270
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 61
+          ComboBoxLabel.Width = 45
+          ComboBoxLabel.Caption = 'Situação:'
+          ComboBoxLabel.ParentColor = False
+        end
+        object EditLimiteParaGozo: TLabeledDateEdit[7]
+          Left = 432
+          Height = 21
+          Top = 77
+          Width = 121
+          Anchors = [akTop, akRight]
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 5
+          Text = '  /  /    '
+          DateEditLabel.Left = 432
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 61
+          DateEditLabel.Width = 83
+          DateEditLabel.Caption = 'Limite para Gozo:'
+          DateEditLabel.ParentColor = False
+        end
+        object ComboBoxDescontarFaltas: TLabeledComboBox[8]
+          Left = 559
+          Height = 21
+          Top = 77
+          Width = 120
+          Anchors = [akTop, akRight]
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            'Sim'
+            'Não'
+          )
+          Style = csDropDownList
+          TabOrder = 6
+          Text = 'Sim'
+          ComboBoxLabel.Left = 559
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 61
+          ComboBoxLabel.Width = 85
+          ComboBoxLabel.Caption = 'Descontar Faltas:'
+          ComboBoxLabel.ParentColor = False
+        end
+        object ComboBoxDesconsiderarAfastamento: TLabeledComboBox[9]
+          Left = 685
+          Height = 21
+          Top = 77
+          Width = 149
+          Anchors = [akTop, akRight]
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            'Sim'
+            'Não'
+          )
+          Style = csDropDownList
+          TabOrder = 7
+          Text = 'Sim'
+          ComboBoxLabel.Left = 685
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 61
+          ComboBoxLabel.Width = 137
+          ComboBoxLabel.Caption = 'Desconsiderar Afastamento:'
+          ComboBoxLabel.ParentColor = False
+        end
+        object EditAfastamentoSemRemuneracao: TLabeledCalcEdit[10]
+          Left = 16
+          Height = 21
+          Top = 120
+          Width = 151
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 9
+          Value = 0
+          CalcEditLabel.Left = 16
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 104
+          CalcEditLabel.Width = 147
+          CalcEditLabel.Caption = 'Afastamento s/ Remuneração:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditAfastamentoComRemuneracao: TLabeledCalcEdit[11]
+          Left = 173
+          Height = 21
+          Top = 120
+          Width = 151
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 10
+          Value = 0
+          CalcEditLabel.Left = 173
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 104
+          CalcEditLabel.Width = 147
+          CalcEditLabel.Caption = 'Afastamento c/ Remuneração:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditDiasDireito: TLabeledCalcEdit[12]
+          Left = 330
+          Height = 21
+          Top = 120
+          Width = 85
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 11
+          Value = 0
+          CalcEditLabel.Left = 330
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 104
+          CalcEditLabel.Width = 58
+          CalcEditLabel.Caption = 'Dias Direito:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditDiasGozados: TLabeledCalcEdit[13]
+          Left = 421
+          Height = 21
+          Top = 120
+          Width = 85
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 12
+          Value = 0
+          CalcEditLabel.Left = 421
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 104
+          CalcEditLabel.Width = 68
+          CalcEditLabel.Caption = 'Dias Gozados:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditDiasFaltas: TLabeledCalcEdit[14]
+          Left = 512
+          Height = 21
+          Top = 120
+          Width = 85
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 13
+          Value = 0
+          CalcEditLabel.Left = 512
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 104
+          CalcEditLabel.Width = 56
+          CalcEditLabel.Caption = 'Dias Faltas:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditDiasRestantes: TLabeledCalcEdit[15]
+          Left = 603
+          Height = 21
+          Top = 120
+          Width = 85
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 14
+          Value = 0
+          CalcEditLabel.Left = 603
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 104
+          CalcEditLabel.Width = 76
+          CalcEditLabel.Caption = 'Dias Restantes:'
+          CalcEditLabel.ParentColor = False
+        end
+      end
+    end
+  end
+end

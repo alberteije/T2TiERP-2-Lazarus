@@ -1,0 +1,284 @@
+inherited FConvenio: TFConvenio
+  inherited PageControl: TPageControl
+    Width = 990
+    Height = 444
+    ActivePage = PaginaEdits
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 982
+        Height = 416
+        inherited Grid: TJvDBUltimGrid
+          Width = 982
+          Height = 364
+        end
+        inherited PanelFiltroRapido: TPanel
+          Top = 362
+          Width = 982
+          inherited BotaoConsultar: TSpeedButton
+            Left = 848
+            ExplicitLeft = 825
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 681
+            ExplicitWidth = 681
+          end
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      inherited PanelEdits: TPanel
+        Width = 982
+        Height = 416
+        object BevelEdits: TBevel
+          Left = 8
+          Top = 9
+          Width = 958
+          Height = 388
+          Anchors = [akLeft, akTop, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditLogradouro: TLabeledEdit
+          Left = 350
+          Top = 78
+          Width = 608
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          EditLabel.Width = 59
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Logradouro:'
+          TabOrder = 5
+        end
+        object EditContato: TLabeledEdit
+          Left = 181
+          Top = 175
+          Width = 540
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          EditLabel.Width = 43
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Contato:'
+          TabOrder = 11
+        end
+        object EditBairro: TLabeledEdit
+          Left = 127
+          Top = 127
+          Width = 471
+          Height = 21
+          EditLabel.Width = 32
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Bairro:'
+          TabOrder = 7
+        end
+        object EditDesconto: TLabeledCalcEdit
+          Left = 16
+          Top = 78
+          Width = 105
+          Height = 21
+          DisplayFormat = ',0.00'
+          ShowButton = False
+          TabOrder = 2
+          DecimalPlacesAlwaysShown = True
+          CalcEditLabel.Width = 49
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Desconto:'
+        end
+        object EditVencimento: TLabeledDateEdit
+          Left = 127
+          Top = 78
+          Width = 120
+          Height = 21
+          ShowNullDate = False
+          TabOrder = 3
+          DateEditLabel.Width = 59
+          DateEditLabel.Height = 13
+          DateEditLabel.Caption = 'Vencimento:'
+        end
+        object EditUf: TLabeledEdit
+          Left = 141
+          Top = 175
+          Width = 34
+          Height = 21
+          EditLabel.Width = 15
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Uf:'
+          TabOrder = 10
+        end
+        object EditTelefone: TLabeledMaskEdit
+          Left = 727
+          Top = 175
+          Width = 99
+          Height = 21
+          Anchors = [akTop, akRight]
+          Color = clWhite
+          EditLabel.Width = 46
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Telefone:'
+          MaxLength = 13
+          TabOrder = 12
+          Text = '((()()()-()-()-()-()-()-()-()- )- )-  -  -'
+          Required = False
+          EditMask = '(##)####-####;0;_'
+          MaskState = [msMasked]
+        end
+        object EditDataCadastro: TLabeledDateEdit
+          Left = 838
+          Top = 175
+          Width = 120
+          Height = 21
+          Anchors = [akTop, akRight]
+          ShowNullDate = False
+          TabOrder = 13
+          DateEditLabel.Width = 74
+          DateEditLabel.Height = 13
+          DateEditLabel.Caption = 'Data Cadastro:'
+        end
+        object MemoDescricao: TLabeledMemo
+          Left = 16
+          Top = 219
+          Width = 942
+          Height = 72
+          Anchors = [akLeft, akTop, akRight]
+          ScrollBars = ssVertical
+          TabOrder = 14
+          MemoLabel.Width = 50
+          MemoLabel.Height = 13
+          MemoLabel.Caption = 'Descrição:'
+        end
+        object EditNumero: TLabeledEdit
+          Left = 16
+          Top = 127
+          Width = 105
+          Height = 21
+          Constraints.MinWidth = 90
+          EditLabel.Width = 41
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Número:'
+          TabOrder = 6
+        end
+        object EditMunicipioIbge: TLabeledCalcEdit
+          Left = 16
+          Top = 175
+          Width = 119
+          Height = 21
+          ShowButton = False
+          TabOrder = 9
+          DecimalPlacesAlwaysShown = False
+          CalcEditLabel.Width = 73
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Município IBGE:'
+        end
+        object EditNome: TLabeledEdit
+          Left = 17
+          Top = 33
+          Width = 809
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          EditLabel.Width = 31
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Nome:'
+          MaxLength = 150
+          TabOrder = 0
+        end
+        object EditCNPJ: TLabeledMaskEdit
+          Left = 832
+          Top = 33
+          Width = 126
+          Height = 21
+          Anchors = [akTop, akRight]
+          EditLabel.Width = 29
+          EditLabel.Height = 13
+          EditLabel.Caption = 'CNPJ:'
+          MaxLength = 18
+          TabOrder = 1
+          Text = 
+            '  ......../../.-./.-./.-./.-./.-./.-./.-./.-./.-./.-./.-./.-./.-' +
+            './.-./.-./.-./.-./.-./.-./.-./.-./.-./.-./.-./.- /.- /.- /.- / -' +
+            ' / -   -'
+          Required = False
+          EditMask = '##.###.###/####-##;0;_'
+          MaskState = []
+        end
+        object EditEmail: TLabeledEdit
+          Left = 479
+          Top = 319
+          Width = 479
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          EditLabel.Width = 32
+          EditLabel.Height = 13
+          EditLabel.Caption = 'E-mail:'
+          TabOrder = 16
+        end
+        object EditSite: TLabeledEdit
+          Left = 17
+          Top = 362
+          Width = 941
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          EditLabel.Width = 22
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Site:'
+          TabOrder = 17
+        end
+        object EditClassificacaoContabilConta: TLabeledEdit
+          Left = 15
+          Top = 319
+          Width = 458
+          Height = 21
+          EditLabel.Width = 177
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Classificação da Conta Contábil [F1]:'
+          MaxLength = 30
+          TabOrder = 15
+          OnKeyUp = EditClassificacaoContabilContaKeyUp
+        end
+        object EditCidade: TLabeledEdit
+          Left = 604
+          Top = 127
+          Width = 354
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          EditLabel.Width = 37
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Cidade:'
+          TabOrder = 8
+        end
+        object EditCep: TLabeledMaskEdit
+          Left = 253
+          Top = 78
+          Width = 91
+          Height = 21
+          Color = clWhite
+          EditLabel.Width = 46
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Cep [F1]:'
+          MaxLength = 9
+          TabOrder = 4
+          Text = '     -----------'
+          OnKeyUp = EditCepKeyUp
+          Required = False
+          EditMask = '#####-###;0;_'
+          MaskState = [msMasked]
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 990
+    inherited BotaoSair: TSpeedButton
+      Left = 884
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 784
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 674
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 774
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 574
+    end
+  end
+end

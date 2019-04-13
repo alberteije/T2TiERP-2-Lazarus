@@ -1,0 +1,948 @@
+inherited FCompraPedido: TFCompraPedido
+  Left = 342
+  Top = 156
+  Caption = 'Pedido'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 490
+        ClientHeight = 490
+        inherited PanelFiltroRapido: TPanel
+          Top = 436
+          inherited BotaoConsultar: TSpeedButton
+            Left = 850
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 683
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 438
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 9
+          Height = 227
+          Top = 36
+          Width = 971
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object GroupBoxItensPedido: TGroupBox[1]
+          Left = 8
+          Height = 146
+          Top = 269
+          Width = 976
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          Caption = 'Itens do Pedido'
+          ClientHeight = 128
+          ClientWidth = 972
+          TabOrder = 29
+          object GridCompraPedidoDetalhe: TRxDBGrid
+            Left = 0
+            Height = 128
+            Top = 0
+            Width = 972
+            TitleButtons = True
+            AutoSort = True
+            Columns = <            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'Id'
+                Title.Orientation = toHorizontal
+                Visible = False
+                FieldName = 'ID'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'ID_COMPRA_PEDIDO'
+                Title.Orientation = toHorizontal
+                Visible = False
+                FieldName = 'ID_COMPRA_PEDIDO'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'ID_PRODUTO'
+                Title.Orientation = toHorizontal
+                Width = 60
+                FieldName = 'ID_PRODUTO'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Color = clInfoBk
+                ReadOnly = True
+                Title.Alignment = taCenter
+                Title.Caption = 'Produto Nome'
+                Title.Orientation = toHorizontal
+                Width = 312
+                FieldName = 'PRODUTO.NOME'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'CFOP'
+                Title.Orientation = toHorizontal
+                Width = 80
+                FieldName = 'CFOP'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'CST_CSOSN'
+                Title.Orientation = toHorizontal
+                Width = 80
+                FieldName = 'CST_CSOSN'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'QUANTIDADE'
+                Title.Orientation = toHorizontal
+                FieldName = 'QUANTIDADE'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'VALOR_UNITARIO'
+                Title.Orientation = toHorizontal
+                FieldName = 'VALOR_UNITARIO'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                ReadOnly = True
+                Title.Alignment = taCenter
+                Title.Caption = 'VALOR_SUBTOTAL'
+                Title.Orientation = toHorizontal
+                FieldName = 'VALOR_SUBTOTAL'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'ALIQUOTA_ICMS'
+                Title.Orientation = toHorizontal
+                FieldName = 'ALIQUOTA_ICMS'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'VALOR_ICMS'
+                Title.Orientation = toHorizontal
+                FieldName = 'VALOR_ICMS'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'BASE_CALCULO_ICMS'
+                Title.Orientation = toHorizontal
+                FieldName = 'BASE_CALCULO_ICMS'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'ALIQUOTA_IPI'
+                Title.Orientation = toHorizontal
+                FieldName = 'ALIQUOTA_IPI'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'VALOR_IPI'
+                Title.Orientation = toHorizontal
+                FieldName = 'VALOR_IPI'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'TAXA_DESCONTO'
+                Title.Orientation = toHorizontal
+                FieldName = 'TAXA_DESCONTO'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'VALOR_DESCONTO'
+                Title.Orientation = toHorizontal
+                FieldName = 'VALOR_DESCONTO'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'VALOR_TOTAL'
+                Title.Orientation = toHorizontal
+                Width = 80
+                FieldName = 'VALOR_TOTAL'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end>
+            KeyStrokes = <            
+              item
+                Command = rxgcShowFindDlg
+                ShortCut = 16454
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowColumnsDlg
+                ShortCut = 16471
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowFilterDlg
+                ShortCut = 16468
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowSortDlg
+                ShortCut = 16467
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowQuickFilter
+                ShortCut = 16465
+                Enabled = True
+              end            
+              item
+                Command = rxgcHideQuickFilter
+                ShortCut = 16456
+                Enabled = True
+              end            
+              item
+                Command = rxgcSelectAll
+                ShortCut = 16449
+                Enabled = True
+              end            
+              item
+                Command = rxgcDeSelectAll
+                ShortCut = 16429
+                Enabled = True
+              end            
+              item
+                Command = rxgcInvertSelection
+                ShortCut = 16426
+                Enabled = True
+              end            
+              item
+                Command = rxgcOptimizeColumnsWidth
+                ShortCut = 16427
+                Enabled = True
+              end>
+            OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+            Align = alClient
+            Color = clWindow
+            DrawFullLine = False
+            FocusColor = clRed
+            SelectedColor = clHighlight
+            GridLineStyle = psSolid
+            DataSource = DSCompraPedidoDetalhe
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgHeaderPushedLook]
+            ParentColor = False
+            TabOrder = 0
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+            OnKeyDown = GridCompraPedidoDetalheKeyDown
+          end
+        end
+        object EditLocalEntrega: TLabeledEdit[2]
+          Left = 344
+          Height = 21
+          Top = 103
+          Width = 288
+          EditLabel.AnchorSideLeft.Control = EditLocalEntrega
+          EditLabel.AnchorSideRight.Control = EditLocalEntrega
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditLocalEntrega
+          EditLabel.Left = 344
+          EditLabel.Height = 13
+          EditLabel.Top = 87
+          EditLabel.Width = 288
+          EditLabel.Caption = 'Local Entrega:'
+          EditLabel.ParentColor = False
+          MaxLength = 100
+          TabOrder = 7
+        end
+        object EditValorSubtotal: TLabeledCalcEdit[3]
+          Left = 18
+          Height = 21
+          Top = 188
+          Width = 118
+          Alignment = taRightJustify
+          DisplayFormat = '#,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          ReadOnly = True
+          TabOrder = 15
+          TabStop = False
+          Value = 0
+          CalcEditLabel.Left = 18
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 172
+          CalcEditLabel.Width = 71
+          CalcEditLabel.Caption = 'Valor Subtotal:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditValorFrete: TLabeledCalcEdit[4]
+          Left = 266
+          Height = 21
+          Top = 233
+          Width = 118
+          Alignment = taRightJustify
+          DisplayFormat = '#,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          ReadOnly = True
+          TabOrder = 24
+          Value = 0
+          CalcEditLabel.Left = 266
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 217
+          CalcEditLabel.Width = 57
+          CalcEditLabel.Caption = 'Valor Frete:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditValorIcmsSt: TLabeledCalcEdit[5]
+          Left = 18
+          Height = 21
+          Top = 233
+          Width = 118
+          Alignment = taRightJustify
+          DisplayFormat = '#,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          ReadOnly = True
+          TabOrder = 22
+          Value = 0
+          CalcEditLabel.Left = 18
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 217
+          CalcEditLabel.Width = 71
+          CalcEditLabel.Caption = 'Valor ICMS ST:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditValorICMS: TLabeledCalcEdit[6]
+          Left = 638
+          Height = 21
+          Top = 188
+          Width = 118
+          Alignment = taRightJustify
+          DisplayFormat = '#,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          ReadOnly = True
+          TabOrder = 20
+          Value = 0
+          CalcEditLabel.Left = 638
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 172
+          CalcEditLabel.Width = 56
+          CalcEditLabel.Caption = 'Valor ICMS:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditFornecedor: TLabeledEdit[7]
+          Left = 79
+          Height = 21
+          Top = 60
+          Width = 587
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditFornecedor
+          EditLabel.AnchorSideRight.Control = EditFornecedor
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditFornecedor
+          EditLabel.Left = 79
+          EditLabel.Height = 13
+          EditLabel.Top = 44
+          EditLabel.Width = 587
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 1
+          TabStop = False
+        end
+        object ComboBoxTipoFrete: TLabeledComboBox[8]
+          Left = 477
+          Height = 21
+          Top = 144
+          Width = 62
+          Anchors = [akTop, akRight]
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            'CIF'
+            'FOB'
+          )
+          Style = csDropDownList
+          TabOrder = 11
+          Text = 'CIF'
+          ComboBoxLabel.Left = 477
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 128
+          ComboBoxLabel.Width = 30
+          ComboBoxLabel.Caption = 'Frete:'
+          ComboBoxLabel.ParentColor = False
+        end
+        object EditDataPedido: TLabeledDateEdit[9]
+          Left = 18
+          Height = 21
+          Top = 103
+          Width = 100
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 4
+          Text = '  /  /    '
+          DateEditLabel.Left = 18
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 87
+          DateEditLabel.Width = 62
+          DateEditLabel.Caption = 'Data Pedido:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditDataPrevistaEntrega: TLabeledDateEdit[10]
+          Left = 124
+          Height = 21
+          Top = 103
+          Width = 100
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 5
+          Text = '  /  /    '
+          DateEditLabel.Left = 124
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 87
+          DateEditLabel.Width = 86
+          DateEditLabel.Caption = 'Previsão Entrega:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditValorDesconto: TLabeledCalcEdit[11]
+          Left = 266
+          Height = 21
+          Top = 188
+          Width = 118
+          Alignment = taRightJustify
+          DisplayFormat = '#,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          ReadOnly = True
+          TabOrder = 17
+          Value = 0
+          CalcEditLabel.Left = 266
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 172
+          CalcEditLabel.Width = 76
+          CalcEditLabel.Caption = 'Valor Desconto:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditTaxaDesconto: TLabeledCalcEdit[12]
+          Left = 142
+          Height = 21
+          Top = 188
+          Width = 118
+          Alignment = taRightJustify
+          DisplayFormat = '#,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          ReadOnly = True
+          TabOrder = 16
+          Value = 0
+          CalcEditLabel.Left = 142
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 172
+          CalcEditLabel.Width = 76
+          CalcEditLabel.Caption = 'Taxa Desconto:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditValorTotalPedido: TLabeledCalcEdit[13]
+          Left = 390
+          Height = 21
+          Top = 188
+          Width = 118
+          Alignment = taRightJustify
+          DisplayFormat = '#,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          ReadOnly = True
+          TabOrder = 18
+          TabStop = False
+          Value = 0
+          CalcEditLabel.Left = 390
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 172
+          CalcEditLabel.Width = 55
+          CalcEditLabel.Caption = 'Valor Total:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditIdFornecedor: TLabeledCalcEdit[14]
+          Left = 18
+          Height = 21
+          Top = 60
+          Width = 61
+          Alignment = taRightJustify
+          DisplayFormat = '#'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 0
+          Value = 0
+          OnKeyUp = EditIdFornecedorKeyUp
+          CalcEditLabel.Left = 18
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 44
+          CalcEditLabel.Width = 82
+          CalcEditLabel.Caption = 'Fornecedor [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditIdCompraTipoPedido: TLabeledCalcEdit[15]
+          Left = 672
+          Height = 21
+          Top = 60
+          Width = 61
+          Alignment = taRightJustify
+          DisplayFormat = '#'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 2
+          Value = 0
+          OnKeyUp = EditIdCompraTipoPedidoKeyUp
+          CalcEditLabel.Left = 672
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 44
+          CalcEditLabel.Width = 82
+          CalcEditLabel.Caption = 'Tipo Pedido [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditCompraTipoPedido: TLabeledEdit[16]
+          Left = 733
+          Height = 21
+          Top = 60
+          Width = 238
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditCompraTipoPedido
+          EditLabel.AnchorSideRight.Control = EditCompraTipoPedido
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditCompraTipoPedido
+          EditLabel.Left = 733
+          EditLabel.Height = 13
+          EditLabel.Top = 44
+          EditLabel.Width = 238
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 3
+          TabStop = False
+        end
+        object EditQuantidadeParcelas: TLabeledCalcEdit[17]
+          Left = 545
+          Height = 21
+          Top = 144
+          Width = 108
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          Anchors = [akTop, akRight]
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 12
+          Value = 0
+          CalcEditLabel.Left = 545
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 128
+          CalcEditLabel.Width = 103
+          CalcEditLabel.Caption = 'Quantidade Parcelas:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditLocalCobranca: TLabeledEdit[18]
+          Left = 638
+          Height = 21
+          Top = 103
+          Width = 333
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditLocalCobranca
+          EditLabel.AnchorSideRight.Control = EditLocalCobranca
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditLocalCobranca
+          EditLabel.Left = 638
+          EditLabel.Height = 13
+          EditLabel.Top = 87
+          EditLabel.Width = 333
+          EditLabel.Caption = 'Local Cobrança:'
+          EditLabel.ParentColor = False
+          MaxLength = 100
+          TabOrder = 8
+        end
+        object ComboBoxFormaPagamento: TLabeledComboBox[19]
+          Left = 331
+          Height = 21
+          Top = 144
+          Width = 140
+          Anchors = [akTop, akRight]
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            '0 - Pagamento à Vista '
+            '1 - Pagamento a Prazo'
+            '2 - Outros'
+          )
+          Style = csDropDownList
+          TabOrder = 10
+          Text = '0 - Pagamento à Vista '
+          ComboBoxLabel.Left = 331
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 128
+          ComboBoxLabel.Width = 106
+          ComboBoxLabel.Caption = 'Forma de Pagamento:'
+          ComboBoxLabel.ParentColor = False
+        end
+        object EditDataPrevisaoPagamento: TLabeledDateEdit[20]
+          Left = 230
+          Height = 21
+          Top = 103
+          Width = 108
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 6
+          Text = '  /  /    '
+          DateEditLabel.Left = 230
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 87
+          DateEditLabel.Width = 102
+          DateEditLabel.Caption = 'Previsão Pagamento:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditContato: TLabeledEdit[21]
+          Left = 18
+          Height = 21
+          Top = 144
+          Width = 307
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditContato
+          EditLabel.AnchorSideRight.Control = EditContato
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditContato
+          EditLabel.Left = 18
+          EditLabel.Height = 13
+          EditLabel.Top = 128
+          EditLabel.Width = 307
+          EditLabel.Caption = 'Contato:'
+          EditLabel.ParentColor = False
+          MaxLength = 100
+          TabOrder = 9
+        end
+        object EditBaseCalculoIcmsSt: TLabeledCalcEdit[22]
+          Left = 762
+          Height = 21
+          Top = 188
+          Width = 118
+          Alignment = taRightJustify
+          DisplayFormat = '#,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          ReadOnly = True
+          TabOrder = 21
+          Value = 0
+          CalcEditLabel.Left = 762
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 172
+          CalcEditLabel.Width = 107
+          CalcEditLabel.Caption = 'Base Cálculo ICMS ST:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditValorSeguro: TLabeledCalcEdit[23]
+          Left = 390
+          Height = 21
+          Top = 233
+          Width = 118
+          Alignment = taRightJustify
+          DisplayFormat = '#,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          ReadOnly = True
+          TabOrder = 25
+          Value = 0
+          CalcEditLabel.Left = 390
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 217
+          CalcEditLabel.Width = 65
+          CalcEditLabel.Caption = 'Valor Seguro:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditValorOutrasDespesas: TLabeledCalcEdit[24]
+          Left = 514
+          Height = 21
+          Top = 233
+          Width = 118
+          Alignment = taRightJustify
+          DisplayFormat = '#,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          ReadOnly = True
+          TabOrder = 26
+          Value = 0
+          CalcEditLabel.Left = 514
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 217
+          CalcEditLabel.Width = 113
+          CalcEditLabel.Caption = 'Valor Outras Despesas:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditValorIPI: TLabeledCalcEdit[25]
+          Left = 638
+          Height = 21
+          Top = 233
+          Width = 118
+          Alignment = taRightJustify
+          DisplayFormat = '#,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          ReadOnly = True
+          TabOrder = 27
+          Value = 0
+          CalcEditLabel.Left = 638
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 217
+          CalcEditLabel.Width = 45
+          CalcEditLabel.Caption = 'Valor IPI:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditBaseCalculoICMS: TLabeledCalcEdit[26]
+          Left = 514
+          Height = 21
+          Top = 188
+          Width = 118
+          Alignment = taRightJustify
+          DisplayFormat = '#,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          ReadOnly = True
+          TabOrder = 19
+          Value = 0
+          CalcEditLabel.Left = 514
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 172
+          CalcEditLabel.Width = 92
+          CalcEditLabel.Caption = 'Base Cálculo ICMS:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditValorTotalProdutos: TLabeledCalcEdit[27]
+          Left = 142
+          Height = 21
+          Top = 233
+          Width = 118
+          Alignment = taRightJustify
+          DisplayFormat = '#,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          ReadOnly = True
+          TabOrder = 23
+          TabStop = False
+          Value = 0
+          CalcEditLabel.Left = 142
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 217
+          CalcEditLabel.Width = 101
+          CalcEditLabel.Caption = 'Valor Total Produtos:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditValorTotalNF: TLabeledCalcEdit[28]
+          Left = 762
+          Height = 21
+          Top = 233
+          Width = 118
+          Alignment = taRightJustify
+          DisplayFormat = '#,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          ReadOnly = True
+          TabOrder = 28
+          TabStop = False
+          Value = 0
+          CalcEditLabel.Left = 762
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 217
+          CalcEditLabel.Width = 108
+          CalcEditLabel.Caption = 'Valor Total Nota fiscal:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditDiasPrimeiroVencimento: TLabeledCalcEdit[29]
+          Left = 659
+          Height = 21
+          Top = 144
+          Width = 130
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          Anchors = [akTop, akRight]
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 13
+          Value = 0
+          CalcEditLabel.Left = 659
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 128
+          CalcEditLabel.Width = 123
+          CalcEditLabel.Caption = 'Dias Primeiro Vencimento:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditDiasIntervalo: TLabeledCalcEdit[30]
+          Left = 795
+          Height = 21
+          Top = 144
+          Width = 84
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          Anchors = [akTop, akRight]
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 14
+          Value = 0
+          CalcEditLabel.Left = 795
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 128
+          CalcEditLabel.Width = 71
+          CalcEditLabel.Caption = 'Dias Intervalo:'
+          CalcEditLabel.ParentColor = False
+        end
+        object ActionToolBar1: TToolPanel[31]
+          Left = 4
+          Height = 31
+          Top = 4
+          Width = 992
+          Items = <          
+            item
+              Action = ActionAtualizarValores
+              Visible = True
+              Left = 872
+              Height = 21
+              Top = 5
+              Width = 115
+              ShowCaption = True
+            end>
+          ImageList = FDataModule.ImagensCadastros
+          ToolBarStyle = tbsWindowsXP
+          Options = [tpFlatBtns]
+          ButtonAllign = tbaRignt
+          Align = alTop
+          BorderWidth = 4
+          ClientHeight = 31
+          ClientWidth = 992
+          Color = clMenuBar
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          ParentColor = False
+          ParentFont = False
+          TabOrder = 30
+        end
+      end
+    end
+  end
+  object DSCompraPedidoDetalhe: TDatasource[5]
+    DataSet = CDSCompraPedidoDetalhe
+    left = 836
+    top = 367
+  end
+  object ActionManager1: TActionList[6]
+    Images = FDataModule.ImagensCadastros
+    left = 694
+    top = 425
+    object ActionAtualizarValores: TAction
+      Caption = 'Atualizar Valores'
+      ImageIndex = 6
+      OnExecute = ActionAtualizarValoresExecute
+    end
+  end
+  object CDSCompraPedidoDetalhe: TBufDataset[7]
+    FieldDefs = <>
+    BeforePost = CDSCompraPedidoDetalheBeforePost
+    left = 600
+    top = 383
+  end
+end

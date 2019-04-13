@@ -1,0 +1,43 @@
+object FFechaEfetuaPagamento: TFFechaEfetuaPagamento
+  Left = 452
+  Height = 56
+  Top = 271
+  Width = 662
+  BorderStyle = bsNone
+  Caption = 'FFechaEfetuaPagamento'
+  ClientHeight = 56
+  ClientWidth = 662
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  KeyPreview = True
+  OnClick = FormClick
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  LCLVersion = '1.2.0.3'
+  object Panel1: TPanel
+    Left = 0
+    Height = 56
+    Top = 0
+    Width = 662
+    Align = alClient
+    Caption = 'Enter ou ESC para continuar'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -32
+    Font.Name = 'Verdana'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 1500
+    OnTimer = Timer1Timer
+    left = 40
+  end
+end

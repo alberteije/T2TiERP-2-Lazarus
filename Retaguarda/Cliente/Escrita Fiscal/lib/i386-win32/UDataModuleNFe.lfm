@@ -1,0 +1,238 @@
+object FDataModuleNFe: TFDataModuleNFe
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 601
+  HorizontalOffset = 379
+  VerticalOffset = 79
+  Width = 912
+  object CDSVolumes: TBufDataset
+    FieldDefs = <>
+    left = 356
+    top = 22
+  end
+  object DSVolumes: TDatasource
+    DataSet = CDSVolumes
+    left = 356
+    top = 70
+  end
+  object CDSNfReferenciada: TBufDataset
+    FieldDefs = <>
+    left = 356
+    top = 134
+  end
+  object DSNfReferenciada: TDatasource
+    DataSet = CDSNfReferenciada
+    left = 356
+    top = 182
+  end
+  object CDSCteReferenciado: TBufDataset
+    FieldDefs = <>
+    left = 212
+    top = 134
+  end
+  object DSCteReferenciado: TDatasource
+    DataSet = CDSCteReferenciado
+    left = 212
+    top = 182
+  end
+  object CDSNfRuralReferenciada: TBufDataset
+    FieldDefs = <>
+    left = 212
+    top = 22
+  end
+  object DSNfRuralReferenciada: TDatasource
+    DataSet = CDSNfRuralReferenciada
+    left = 212
+    top = 70
+  end
+  object CDSCupomReferenciado: TBufDataset
+    FieldDefs = <>
+    left = 68
+    top = 254
+  end
+  object DSCupomReferenciado: TDatasource
+    DataSet = CDSCupomReferenciado
+    left = 68
+    top = 302
+  end
+  object CDSDuplicata: TBufDataset
+    FieldDefs = <>
+    left = 212
+    top = 254
+  end
+  object DSDuplicata: TDatasource
+    DataSet = CDSDuplicata
+    left = 212
+    top = 302
+  end
+  object CDSNfeReferenciada: TBufDataset
+    FieldDefs = <>
+    left = 68
+    top = 134
+  end
+  object DSNfeReferenciada: TDatasource
+    DataSet = CDSNfeReferenciada
+    left = 68
+    top = 182
+  end
+  object CDSNfeDetalhe: TBufDataset
+    FieldDefs = <>
+    left = 68
+    top = 22
+  end
+  object DSNfeDetalhe: TDatasource
+    DataSet = CDSNfeDetalhe
+    left = 68
+    top = 70
+  end
+  object CDSReboque: TBufDataset
+    FieldDefs = <>
+    left = 356
+    top = 254
+  end
+  object DSReboque: TDatasource
+    DataSet = CDSReboque
+    left = 356
+    top = 302
+  end
+  object CDSNfeImpostoCofins: TBufDataset
+    FieldDefs = <>
+    left = 492
+    top = 22
+  end
+  object DSNfeImpostoCofins: TDatasource
+    DataSet = CDSNfeImpostoCofins
+    left = 492
+    top = 70
+  end
+  object CDSNfeImpostoIcms: TBufDataset
+    FieldDefs = <>
+    left = 492
+    top = 134
+  end
+  object DSNfeImpostoIcms: TDatasource
+    DataSet = CDSNfeImpostoIcms
+    left = 492
+    top = 182
+  end
+  object CDSNfeImpostoImportacao: TBufDataset
+    FieldDefs = <>
+    left = 492
+    top = 254
+  end
+  object DSNfeImpostoImportacao: TDatasource
+    DataSet = CDSNfeImpostoImportacao
+    left = 492
+    top = 302
+  end
+  object CDSNfeImpostoIpi: TBufDataset
+    FieldDefs = <>
+    left = 636
+    top = 22
+  end
+  object DSNfeImpostoIpi: TDatasource
+    DataSet = CDSNfeImpostoIpi
+    left = 636
+    top = 70
+  end
+  object CDSNfeImpostoIssqn: TBufDataset
+    FieldDefs = <>
+    left = 636
+    top = 134
+  end
+  object DSNfeImpostoIssqn: TDatasource
+    DataSet = CDSNfeImpostoIssqn
+    left = 636
+    top = 182
+  end
+  object CDSNfeImpostoPis: TBufDataset
+    FieldDefs = <>
+    left = 636
+    top = 254
+  end
+  object DSNfeImpostoPis: TDatasource
+    DataSet = CDSNfeImpostoPis
+    left = 636
+    top = 302
+  end
+  object CDSNfeDeclaracaoImportacao: TBufDataset
+    FieldDefs = <>
+    left = 68
+    top = 374
+  end
+  object DSNfeDeclaracaoImportacao: TDatasource
+    DataSet = CDSNfeDeclaracaoImportacao
+    left = 68
+    top = 422
+  end
+  object CDSNfeImportacaoDetalhe: TBufDataset
+    FieldDefs = <>
+    left = 68
+    top = 494
+  end
+  object DSNfeImportacaoDetalhe: TDatasource
+    DataSet = CDSNfeImportacaoDetalhe
+    left = 68
+    top = 542
+  end
+  object CDSNfeDetalheVeiculo: TBufDataset
+    FieldDefs = <>
+    left = 212
+    top = 374
+  end
+  object DSNfeDetalheVeiculo: TDatasource
+    DataSet = CDSNfeDetalheVeiculo
+    left = 212
+    top = 422
+  end
+  object CDSNfeDetalheArmamento: TBufDataset
+    FieldDefs = <>
+    left = 212
+    top = 494
+  end
+  object DSNfeDetalheArmamento: TDatasource
+    DataSet = CDSNfeDetalheArmamento
+    left = 212
+    top = 542
+  end
+  object CDSNfeDetalheCombustivel: TBufDataset
+    FieldDefs = <>
+    left = 356
+    top = 374
+  end
+  object DSNfeDetalheCombustivel: TDatasource
+    DataSet = CDSNfeDetalheCombustivel
+    left = 356
+    top = 422
+  end
+  object CDSNfeDetalheMedicamento: TBufDataset
+    FieldDefs = <>
+    left = 356
+    top = 494
+  end
+  object DSNfeDetalheMedicamento: TDatasource
+    DataSet = CDSNfeDetalheMedicamento
+    left = 356
+    top = 542
+  end
+  object CDSVolumesLacres: TBufDataset
+    FieldDefs = <>
+    left = 492
+    top = 374
+  end
+  object DSVolumesLacres: TDatasource
+    DataSet = CDSVolumesLacres
+    left = 492
+    top = 422
+  end
+  object CDSNfeNumero: TBufDataset
+    FieldDefs = <>
+    left = 492
+    top = 494
+  end
+  object DSNfeNumero: TDatasource
+    DataSet = CDSNfeNumero
+    left = 492
+    top = 542
+  end
+end

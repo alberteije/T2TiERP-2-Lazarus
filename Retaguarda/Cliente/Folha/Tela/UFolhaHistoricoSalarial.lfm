@@ -1,0 +1,195 @@
+inherited FFolhaHistoricoSalarial: TFFolhaHistoricoSalarial
+  Tag = 1
+  Left = 372
+  Top = 162
+  Width = 941
+  Caption = 'Histórico Salarial'
+  ClientWidth = 941
+  inherited PageControl: TPageControl
+    Width = 941
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 933
+      inherited PanelEdits: TPanel
+        Width = 933
+        ClientWidth = 933
+        object BevelEdits: TBevel[0]
+          Left = 7
+          Height = 142
+          Top = 11
+          Width = 916
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditIdColaborador: TLabeledCalcEdit[1]
+          Left = 16
+          Height = 21
+          Top = 33
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 0
+          Value = 0
+          OnKeyUp = EditIdColaboradorKeyUp
+          CalcEditLabel.Left = 16
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 17
+          CalcEditLabel.Width = 63
+          CalcEditLabel.Caption = 'Colaborador:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditColaborador: TLabeledEdit[2]
+          Left = 77
+          Height = 21
+          Top = 33
+          Width = 831
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditColaborador
+          EditLabel.AnchorSideRight.Control = EditColaborador
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditColaborador
+          EditLabel.Left = 77
+          EditLabel.Height = 13
+          EditLabel.Top = 17
+          EditLabel.Width = 831
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 1
+          TabStop = False
+        end
+        object EditCompetencia: TLabeledMaskEdit[3]
+          Left = 16
+          Height = 21
+          Top = 120
+          Width = 86
+          CharCase = ecNormal
+          MaxLength = 7
+          TabOrder = 3
+          EditMask = '##/####;1;_'
+          Text = '  /    '
+          SpaceChar = '_'
+          MaskEditLabel.Left = 16
+          MaskEditLabel.Height = 13
+          MaskEditLabel.Top = 104
+          MaskEditLabel.Width = 66
+          MaskEditLabel.Caption = 'Competencia:'
+          MaskEditLabel.ParentColor = False
+        end
+        object EditSalarioAtual: TLabeledCalcEdit[4]
+          Left = 108
+          Height = 21
+          Top = 120
+          Width = 121
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 4
+          Value = 0
+          CalcEditLabel.Left = 108
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 104
+          CalcEditLabel.Width = 64
+          CalcEditLabel.Caption = 'Salário Atual:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditPercentualAumento: TLabeledCalcEdit[5]
+          Left = 235
+          Height = 21
+          Top = 120
+          Width = 121
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 5
+          Value = 0
+          OnExit = EditPercentualAumentoExit
+          CalcEditLabel.Left = 235
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 104
+          CalcEditLabel.Width = 101
+          CalcEditLabel.Caption = 'Percentual Aumento:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditSalarioNovo: TLabeledCalcEdit[6]
+          Left = 362
+          Height = 21
+          Top = 120
+          Width = 121
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 6
+          Value = 0
+          CalcEditLabel.Left = 362
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 104
+          CalcEditLabel.Width = 64
+          CalcEditLabel.Caption = 'Salário Novo:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditValidoAPartir: TLabeledMaskEdit[7]
+          Left = 489
+          Height = 21
+          Top = 120
+          Width = 86
+          CharCase = ecNormal
+          MaxLength = 7
+          TabOrder = 7
+          EditMask = '##/####;1;_'
+          Text = '  /    '
+          SpaceChar = '_'
+          MaskEditLabel.Left = 489
+          MaskEditLabel.Height = 13
+          MaskEditLabel.Top = 104
+          MaskEditLabel.Width = 71
+          MaskEditLabel.Caption = 'Valido A Partir:'
+          MaskEditLabel.ParentColor = False
+        end
+        object EditMotivo: TLabeledEdit[8]
+          Left = 16
+          Height = 21
+          Top = 76
+          Width = 892
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditMotivo
+          EditLabel.AnchorSideRight.Control = EditMotivo
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditMotivo
+          EditLabel.Left = 16
+          EditLabel.Height = 13
+          EditLabel.Top = 60
+          EditLabel.Width = 892
+          EditLabel.Caption = 'Motivo:'
+          EditLabel.ParentColor = False
+          TabOrder = 2
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 941
+    ClientWidth = 941
+    inherited BotaoSair: TSpeedButton
+      Left = 841
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 641
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 741
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 563
+    end
+  end
+end

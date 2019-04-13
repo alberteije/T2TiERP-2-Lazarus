@@ -1,0 +1,885 @@
+inherited FColaborador: TFColaborador
+  inherited PageControl: TPageControl
+    Height = 535
+    ActivePage = PaginaEdits
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 507
+        inherited Grid: TRxDBGrid
+          Height = 455
+        end
+        inherited PanelFiltroRapido: TPanel
+          Top = 453
+          inherited BotaoConsultar: TSpeedButton
+            Left = 850
+            ExplicitLeft = 879
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 683
+            ExplicitWidth = 554
+          end
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      inherited PanelEdits: TPanel
+        Height = 507
+        object BevelEdits: TBevel
+          Left = 6
+          Top = 7
+          Width = 969
+          Height = 474
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          Constraints.MinWidth = 753
+        end
+        object EditIdContabilConta: TLabeledCalcEdit
+          Left = 14
+          Top = 112
+          Width = 61
+          Height = 21
+          Hint = 'Pressione F1 para importar conta contábil'
+          ParentShowHint = False
+          ShowButton = False
+          ShowHint = False
+          TabOrder = 12
+          DecimalPlacesAlwaysShown = False
+          OnExit = EditIdContabilContaExit
+          OnKeyDown = EditIdContabilContaKeyDown
+          OnKeyPress = EditIdContabilContaKeyPress
+          CalcEditLabel.Width = 98
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Conta Contábil [F1]:'
+        end
+        object EditContabilConta: TLabeledEdit
+          Left = 75
+          Top = 112
+          Width = 374
+          Height = 21
+          TabStop = False
+          Color = clInfoBk
+          EditLabel.Width = 6
+          EditLabel.Height = 13
+          EditLabel.Caption = '  '
+          ReadOnly = True
+          TabOrder = 13
+        end
+        object EditIdPessoa: TLabeledCalcEdit
+          Left = 14
+          Top = 28
+          Width = 61
+          Height = 21
+          Hint = 'Pressione F1 para importar pessoa'
+          ParentShowHint = False
+          ShowButton = False
+          ShowHint = False
+          TabOrder = 0
+          DecimalPlacesAlwaysShown = False
+          OnExit = EditIdPessoaExit
+          OnKeyDown = EditIdPessoaKeyDown
+          OnKeyPress = EditIdPessoaKeyPress
+          CalcEditLabel.Width = 61
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Pessoa [F1]:'
+        end
+        object EditIdNivelFormacao: TLabeledCalcEdit
+          Left = 455
+          Top = 71
+          Width = 61
+          Height = 21
+          Hint = 'Pressione F1 para importar nível de formação'
+          ParentShowHint = False
+          ShowButton = False
+          ShowHint = False
+          TabOrder = 8
+          DecimalPlacesAlwaysShown = False
+          OnExit = EditIdNivelFormacaoExit
+          OnKeyDown = EditIdNivelFormacaoKeyDown
+          OnKeyPress = EditIdNivelFormacaoKeyPress
+          CalcEditLabel.Width = 100
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Nível Formação [F1]:'
+        end
+        object EditIdSindicato: TLabeledCalcEdit
+          Left = 14
+          Top = 71
+          Width = 61
+          Height = 21
+          Hint = 'Pressione F1 para importar sindicato do colaborador'
+          ParentShowHint = False
+          ShowButton = False
+          ShowHint = False
+          TabOrder = 6
+          DecimalPlacesAlwaysShown = False
+          OnExit = EditIdSindicatoExit
+          OnKeyDown = EditIdSindicatoKeyDown
+          OnKeyPress = EditIdSindicatoKeyPress
+          CalcEditLabel.Width = 70
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Sindicato [F1]:'
+        end
+        object EditNivelFormacao: TLabeledEdit
+          Left = 516
+          Top = 71
+          Width = 198
+          Height = 21
+          TabStop = False
+          Color = clInfoBk
+          EditLabel.Width = 6
+          EditLabel.Height = 13
+          EditLabel.Caption = '  '
+          ReadOnly = True
+          TabOrder = 9
+        end
+        object EditSindicato: TLabeledEdit
+          Left = 75
+          Top = 71
+          Width = 374
+          Height = 21
+          TabStop = False
+          Color = clInfoBk
+          EditLabel.Width = 6
+          EditLabel.Height = 13
+          EditLabel.Caption = '  '
+          ReadOnly = True
+          TabOrder = 7
+        end
+        object EditNomePessoa: TLabeledEdit
+          Left = 75
+          Top = 28
+          Width = 374
+          Height = 21
+          TabStop = False
+          Color = clInfoBk
+          EditLabel.Width = 6
+          EditLabel.Height = 13
+          EditLabel.Caption = '  '
+          ReadOnly = True
+          TabOrder = 1
+        end
+        object EditIdTipoColaborador: TLabeledCalcEdit
+          Left = 455
+          Top = 28
+          Width = 61
+          Height = 21
+          Hint = 'Pressione F1 para importar tipo do colaborador'
+          ParentShowHint = False
+          ShowButton = False
+          ShowHint = False
+          TabOrder = 2
+          DecimalPlacesAlwaysShown = False
+          OnExit = EditIdTipoColaboradorExit
+          OnKeyDown = EditIdTipoColaboradorKeyDown
+          OnKeyPress = EditIdTipoColaboradorKeyPress
+          CalcEditLabel.Width = 109
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Tipo Colaborador [F1]:'
+        end
+        object EditTipoColaborador: TLabeledEdit
+          Left = 516
+          Top = 28
+          Width = 198
+          Height = 21
+          TabStop = False
+          Color = clInfoBk
+          EditLabel.Width = 6
+          EditLabel.Height = 13
+          EditLabel.Caption = '  '
+          ReadOnly = True
+          TabOrder = 3
+        end
+        object EditIdSituacaoColaborador: TLabeledCalcEdit
+          Left = 720
+          Top = 28
+          Width = 61
+          Height = 21
+          Hint = 'Pressione F1 para importar situação colaborador'
+          ParentShowHint = False
+          ShowButton = False
+          ShowHint = False
+          TabOrder = 4
+          DecimalPlacesAlwaysShown = False
+          OnExit = EditIdSituacaoColaboradorExit
+          OnKeyDown = EditIdSituacaoColaboradorKeyDown
+          OnKeyPress = EditIdSituacaoColaboradorKeyPress
+          CalcEditLabel.Width = 130
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Situação Colaborador [F1]:'
+        end
+        object EditSituacaoColaborador: TLabeledEdit
+          Left = 781
+          Top = 28
+          Width = 184
+          Height = 21
+          TabStop = False
+          Anchors = [akLeft, akTop, akRight]
+          Color = clInfoBk
+          EditLabel.Width = 6
+          EditLabel.Height = 13
+          EditLabel.Caption = '  '
+          ReadOnly = True
+          TabOrder = 5
+        end
+        object EditIdCargo: TLabeledCalcEdit
+          Left = 720
+          Top = 71
+          Width = 61
+          Height = 21
+          Hint = 'Pressione F1 para importar cargo'
+          ParentShowHint = False
+          ShowButton = False
+          ShowHint = False
+          TabOrder = 10
+          DecimalPlacesAlwaysShown = False
+          OnExit = EditIdCargoExit
+          OnKeyDown = EditIdCargoKeyDown
+          OnKeyPress = EditIdCargoKeyPress
+          CalcEditLabel.Width = 56
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Cargo [F1]:'
+        end
+        object EditCargo: TLabeledEdit
+          Left = 781
+          Top = 71
+          Width = 184
+          Height = 21
+          TabStop = False
+          Anchors = [akLeft, akTop, akRight]
+          Color = clInfoBk
+          EditLabel.Width = 6
+          EditLabel.Height = 13
+          EditLabel.Caption = '  '
+          ReadOnly = True
+          TabOrder = 11
+        end
+        object EditIdSetor: TLabeledCalcEdit
+          Left = 455
+          Top = 112
+          Width = 61
+          Height = 21
+          Hint = 'Pressione F1 para importar setor'
+          ParentShowHint = False
+          ShowButton = False
+          ShowHint = False
+          TabOrder = 14
+          DecimalPlacesAlwaysShown = False
+          OnExit = EditIdSetorExit
+          OnKeyDown = EditIdSetorKeyDown
+          OnKeyPress = EditIdSetorKeyPress
+          CalcEditLabel.Width = 53
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Setor [F1]:'
+        end
+        object EditSetor: TLabeledEdit
+          Left = 516
+          Top = 112
+          Width = 198
+          Height = 21
+          TabStop = False
+          Color = clInfoBk
+          EditLabel.Width = 6
+          EditLabel.Height = 13
+          EditLabel.Caption = '  '
+          ReadOnly = True
+          TabOrder = 15
+        end
+        object EditMatricula: TLabeledEdit
+          Left = 720
+          Top = 112
+          Width = 245
+          Height = 21
+          Hint = 'Informe o número da matrícula'
+          Anchors = [akLeft, akTop, akRight]
+          EditLabel.Width = 47
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Matrícula:'
+          MaxLength = 10
+          ParentShowHint = False
+          ShowHint = False
+          TabOrder = 16
+        end
+        object MemoObservacao: TLabeledMemo
+          Left = 14
+          Top = 398
+          Width = 951
+          Height = 74
+          Hint = 'Informe as observações julgadas necessárias'
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          ParentShowHint = False
+          ScrollBars = ssVertical
+          ShowHint = False
+          TabOrder = 32
+          MemoLabel.Width = 62
+          MemoLabel.Height = 13
+          MemoLabel.Caption = 'Observação:'
+        end
+        object GroupBoxFinanceiro: TGroupBox
+          Left = 14
+          Top = 262
+          Width = 324
+          Height = 113
+          Caption = 'Pagamento:'
+          TabOrder = 29
+          object ComboBoxFormaPagamento: TLabeledComboBox
+            Left = 5
+            Top = 18
+            Width = 309
+            Height = 21
+            Hint = 'Selecione a forma de pagamento'
+            Style = csDropDownList
+            ItemIndex = 0
+            ParentShowHint = False
+            ShowHint = False
+            TabOrder = 0
+            Text = '1 - Dinheiro'
+            Items.Strings = (
+              '1 - Dinheiro'
+              '2 - Cheque'
+              '3 - Conta')
+            ComboBoxLabel.Width = 34
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Caption = 'Forma:'
+          end
+          object EditBancoPagamento: TLabeledEdit
+            Left = 5
+            Top = 62
+            Width = 103
+            Height = 21
+            Hint = 'Pressione F1 para importar banco'
+            EditLabel.Width = 33
+            EditLabel.Height = 13
+            EditLabel.Caption = 'Banco:'
+            MaxLength = 10
+            ParentShowHint = False
+            ShowHint = False
+            TabOrder = 1
+          end
+          object EditAgenciaPagamento: TLabeledEdit
+            Left = 114
+            Top = 62
+            Width = 51
+            Height = 21
+            Hint = 'Informe no número da agência'
+            EditLabel.Width = 42
+            EditLabel.Height = 13
+            EditLabel.Caption = 'Agência:'
+            MaxLength = 10
+            ParentShowHint = False
+            ShowHint = False
+            TabOrder = 2
+          end
+          object EditAgenciaDigitoPagamento: TLabeledEdit
+            Left = 171
+            Top = 62
+            Width = 34
+            Height = 21
+            Hint = 'Informe o dígito da agência'
+            EditLabel.Width = 31
+            EditLabel.Height = 13
+            EditLabel.Caption = 'Dígito:'
+            MaxLength = 1
+            ParentShowHint = False
+            ShowHint = False
+            TabOrder = 3
+          end
+          object EditContaPagamento: TLabeledEdit
+            Left = 211
+            Top = 62
+            Width = 64
+            Height = 21
+            Hint = 'Informe o número da conta sem o dígito'
+            EditLabel.Width = 33
+            EditLabel.Height = 13
+            EditLabel.Caption = 'Conta:'
+            MaxLength = 10
+            ParentShowHint = False
+            ShowHint = False
+            TabOrder = 4
+          end
+          object EditDigitoContaPagamento: TLabeledEdit
+            Left = 281
+            Top = 62
+            Width = 33
+            Height = 21
+            Hint = 'Informe o dígito da conta'
+            EditLabel.Width = 31
+            EditLabel.Height = 13
+            EditLabel.Caption = 'Dígito:'
+            MaxLength = 1
+            ParentShowHint = False
+            ShowHint = False
+            TabOrder = 5
+          end
+        end
+        object GroupBox2: TGroupBox
+          Left = 487
+          Top = 193
+          Width = 267
+          Height = 63
+          Caption = 'FGTS:'
+          TabOrder = 27
+          object ComboBoxOptanteFgts: TLabeledComboBox
+            Left = 5
+            Top = 18
+            Width = 74
+            Height = 21
+            Hint = 'Selecione o tipo de opção'
+            Style = csDropDownList
+            ItemIndex = 0
+            ParentShowHint = False
+            ShowHint = False
+            TabOrder = 0
+            Text = 'S - Sim'
+            Items.Strings = (
+              'S - Sim'
+              'N - Não')
+            ComboBoxLabel.Width = 44
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Caption = 'Optante:'
+          end
+          object EditDataOpcaoFgts: TLabeledDateEdit
+            Left = 85
+            Top = 18
+            Width = 99
+            Height = 21
+            Hint = 'Selecione data da opção'
+            ParentShowHint = False
+            ShowHint = False
+            ShowNullDate = False
+            TabOrder = 1
+            DateEditLabel.Width = 61
+            DateEditLabel.Height = 13
+            DateEditLabel.Caption = 'Data Opção:'
+          end
+          object EditContaFgts: TLabeledCalcEdit
+            Left = 190
+            Top = 18
+            Width = 61
+            Height = 21
+            Hint = 'Informe o número da conta do FGTS'
+            ParentShowHint = False
+            ShowButton = False
+            ShowHint = False
+            TabOrder = 2
+            DecimalPlacesAlwaysShown = False
+            CalcEditLabel.Width = 63
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Caption = 'Nº da Conta:'
+          end
+        end
+        object GroupBox3: TGroupBox
+          Left = 344
+          Top = 262
+          Width = 349
+          Height = 63
+          Hint = 'Informe o número do PIS'
+          Caption = 'PIS:'
+          TabOrder = 30
+          object EditDataCadastroPis: TLabeledDateEdit
+            Left = 7
+            Top = 18
+            Width = 99
+            Height = 21
+            Hint = 'Informe data de cadastro do PIS'
+            ParentShowHint = False
+            ShowHint = False
+            ShowNullDate = False
+            TabOrder = 0
+            DateEditLabel.Width = 48
+            DateEditLabel.Height = 13
+            DateEditLabel.Caption = 'Cadastro:'
+          end
+          object EditBancoPis: TLabeledEdit
+            Left = 184
+            Top = 18
+            Width = 56
+            Height = 21
+            Hint = 'Pressione F1 para importar o banco'
+            EditLabel.Width = 33
+            EditLabel.Height = 13
+            EditLabel.Caption = 'Banco:'
+            MaxLength = 10
+            ParentShowHint = False
+            ShowHint = False
+            TabOrder = 2
+          end
+          object EditNumeroPis: TLabeledEdit
+            Left = 112
+            Top = 18
+            Width = 67
+            Height = 21
+            EditLabel.Width = 57
+            EditLabel.Height = 13
+            EditLabel.Caption = 'Número Pis:'
+            MaxLength = 12
+            ParentShowHint = False
+            ShowHint = False
+            TabOrder = 1
+          end
+          object EditAgenciaPis: TLabeledEdit
+            Left = 246
+            Top = 18
+            Width = 52
+            Height = 21
+            Hint = 'Informe o número da agência sem o dígito'
+            EditLabel.Width = 42
+            EditLabel.Height = 13
+            EditLabel.Caption = 'Agência:'
+            MaxLength = 10
+            ParentShowHint = False
+            ShowHint = False
+            TabOrder = 3
+          end
+          object EditDigitoAgenciaPis: TLabeledEdit
+            Left = 304
+            Top = 18
+            Width = 37
+            Height = 21
+            Hint = 'Informe o dígito da agência'
+            EditLabel.Width = 31
+            EditLabel.Height = 13
+            EditLabel.Caption = 'Dígito:'
+            MaxLength = 1
+            ParentShowHint = False
+            ShowHint = False
+            TabOrder = 4
+          end
+        end
+        object GroupBox4: TGroupBox
+          Left = 14
+          Top = 193
+          Width = 219
+          Height = 63
+          Caption = 'Exame Médico:'
+          TabOrder = 25
+          object EditVencimentoExame: TLabeledDateEdit
+            Left = 110
+            Top = 21
+            Width = 99
+            Height = 21
+            Hint = 'Informe o vencimento do exame'
+            ParentShowHint = False
+            ShowHint = False
+            ShowNullDate = False
+            TabOrder = 1
+            DateEditLabel.Width = 59
+            DateEditLabel.Height = 13
+            DateEditLabel.Caption = 'Vencimento:'
+          end
+          object EditDataUltimoExame: TLabeledDateEdit
+            Left = 5
+            Top = 21
+            Width = 99
+            Height = 21
+            Hint = 'Informe a data do último exame médico'
+            ParentShowHint = False
+            ShowHint = False
+            ShowNullDate = False
+            TabOrder = 0
+            DateEditLabel.Width = 85
+            DateEditLabel.Height = 13
+            DateEditLabel.Caption = 'Último Exame em:'
+          end
+        end
+        object GroupBox5: TGroupBox
+          Left = 699
+          Top = 262
+          Width = 266
+          Height = 63
+          Caption = 'Carteira Profissional:'
+          TabOrder = 31
+          object EditNumeroCtps: TLabeledEdit
+            Left = 4
+            Top = 18
+            Width = 56
+            Height = 21
+            Hint = 'Informe o número da CTPS'
+            EditLabel.Width = 41
+            EditLabel.Height = 13
+            EditLabel.Caption = 'Número:'
+            MaxLength = 10
+            ParentShowHint = False
+            ShowHint = False
+            TabOrder = 0
+          end
+          object EditSerieCtps: TLabeledEdit
+            Left = 66
+            Top = 18
+            Width = 56
+            Height = 21
+            Hint = 'Informe o número de série'
+            EditLabel.Width = 28
+            EditLabel.Height = 13
+            EditLabel.Caption = 'Série:'
+            MaxLength = 10
+            ParentShowHint = False
+            ShowHint = False
+            TabOrder = 1
+          end
+          object EditUfCtps: TLabeledEdit
+            Left = 223
+            Top = 18
+            Width = 35
+            Height = 21
+            Hint = 'Informe a UF'
+            EditLabel.Width = 17
+            EditLabel.Height = 13
+            EditLabel.Caption = 'UF:'
+            MaxLength = 2
+            ParentShowHint = False
+            ShowHint = False
+            TabOrder = 3
+          end
+          object EditDataExpedicaoCtps: TLabeledDateEdit
+            Left = 131
+            Top = 18
+            Width = 86
+            Height = 21
+            Hint = 'Informe a data de expedição da CTPS'
+            ParentShowHint = False
+            ShowHint = False
+            ShowNullDate = False
+            TabOrder = 2
+            DateEditLabel.Width = 65
+            DateEditLabel.Height = 13
+            DateEditLabel.Caption = 'Expedida em:'
+          end
+        end
+        object GroupBox6: TGroupBox
+          Left = 760
+          Top = 193
+          Width = 205
+          Height = 63
+          Caption = 'Caged:'
+          TabOrder = 28
+          object EditCodigoAdmissaoCaged: TLabeledCalcEdit
+            Left = 8
+            Top = 21
+            Width = 94
+            Height = 21
+            Hint = 'Informe o código de admissão Caged'
+            ParentShowHint = False
+            ShowButton = False
+            ShowHint = False
+            TabOrder = 0
+            DecimalPlacesAlwaysShown = False
+            CalcEditLabel.Width = 85
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Caption = 'Código Admissão:'
+          end
+          object EditCodigoDemissaoCaged: TLabeledCalcEdit
+            Left = 108
+            Top = 21
+            Width = 86
+            Height = 21
+            Hint = 'Informe o código de demissão Caged'
+            ParentShowHint = False
+            ShowButton = False
+            ShowHint = False
+            TabOrder = 1
+            DecimalPlacesAlwaysShown = False
+            CalcEditLabel.Width = 85
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Caption = 'Código Demissão:'
+          end
+        end
+        object ComboBoxDescontoPlanoSaude: TLabeledComboBox
+          Left = 539
+          Top = 158
+          Width = 115
+          Height = 21
+          Hint = 'Selecione uma opção'
+          Style = csDropDownList
+          ItemIndex = 0
+          ParentShowHint = False
+          ShowHint = False
+          TabOrder = 22
+          Text = 'S - Sim'
+          Items.Strings = (
+            'S - Sim'
+            'N - Não')
+          ComboBoxLabel.Width = 111
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Caption = 'Desconto Plano Saúde:'
+        end
+        object ComboBoxSainaRais: TLabeledComboBox
+          Left = 660
+          Top = 158
+          Width = 115
+          Height = 21
+          Hint = 'Selecione uma opção'
+          Style = csDropDownList
+          ItemIndex = 0
+          ParentShowHint = False
+          ShowHint = False
+          TabOrder = 23
+          Text = 'S - Sim'
+          Items.Strings = (
+            'S - Sim'
+            'N - Não')
+          ComboBoxLabel.Width = 60
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Caption = 'Sai na RAIS:'
+        end
+        object GroupBox7: TGroupBox
+          Left = 239
+          Top = 193
+          Width = 242
+          Height = 63
+          Caption = 'Sefip:'
+          TabOrder = 26
+          object EditCategoriaSefip: TLabeledEdit
+            Left = 6
+            Top = 21
+            Width = 56
+            Height = 21
+            Hint = 'Informe a categoria'
+            EditLabel.Width = 51
+            EditLabel.Height = 13
+            EditLabel.Caption = 'Categoria:'
+            MaxLength = 2
+            ParentShowHint = False
+            ShowHint = False
+            TabOrder = 0
+          end
+          object EditOcorrenciaSefip: TLabeledCalcEdit
+            Left = 68
+            Top = 21
+            Width = 67
+            Height = 21
+            Hint = 'Informe o código de ocorrência'
+            ParentShowHint = False
+            ShowButton = False
+            ShowHint = False
+            TabOrder = 1
+            DecimalPlacesAlwaysShown = False
+            CalcEditLabel.Width = 56
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Caption = 'Ocorrência:'
+          end
+          object EditCodigoDemissaoSefip: TLabeledCalcEdit
+            Left = 141
+            Top = 21
+            Width = 88
+            Height = 21
+            Hint = 'Informe o código de demissão'
+            ParentShowHint = False
+            ShowButton = False
+            ShowHint = False
+            TabOrder = 2
+            DecimalPlacesAlwaysShown = False
+            CalcEditLabel.Width = 85
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Caption = 'Código Demissão:'
+          end
+        end
+        object EditCodigoTurma: TLabeledEdit
+          Left = 781
+          Top = 158
+          Width = 184
+          Height = 21
+          Hint = 'Informe o código da turma'
+          Anchors = [akLeft, akTop, akRight]
+          EditLabel.Width = 70
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Codigo Turma:'
+          MaxLength = 2
+          ParentShowHint = False
+          ShowHint = False
+          TabOrder = 24
+        end
+        object EditDataDemissao: TLabeledDateEdit
+          Left = 434
+          Top = 158
+          Width = 99
+          Height = 21
+          Hint = 'Informe a data da demissão'
+          ParentShowHint = False
+          ShowHint = False
+          ShowNullDate = False
+          TabOrder = 21
+          DateEditLabel.Width = 49
+          DateEditLabel.Height = 13
+          DateEditLabel.Caption = 'Demissão:'
+        end
+        object EditDataTransferencia: TLabeledDateEdit
+          Left = 329
+          Top = 158
+          Width = 99
+          Height = 21
+          Hint = 'Informe a data da transferência'
+          ParentShowHint = False
+          ShowHint = False
+          ShowNullDate = False
+          TabOrder = 20
+          DateEditLabel.Width = 70
+          DateEditLabel.Height = 13
+          DateEditLabel.Caption = 'Transferência:'
+        end
+        object EditDataVencimentoFerias: TLabeledDateEdit
+          Left = 224
+          Top = 158
+          Width = 99
+          Height = 21
+          Hint = 'Informe a data das férias'
+          ParentShowHint = False
+          ShowHint = False
+          ShowNullDate = False
+          TabOrder = 19
+          DateEditLabel.Width = 87
+          DateEditLabel.Height = 13
+          DateEditLabel.Caption = 'Vencimento Férias'
+        end
+        object EditDataAdmissao: TLabeledDateEdit
+          Left = 119
+          Top = 158
+          Width = 99
+          Height = 21
+          Hint = 'Informe a data da adminissão'
+          ParentShowHint = False
+          ShowHint = False
+          ShowNullDate = False
+          TabOrder = 18
+          DateEditLabel.Width = 49
+          DateEditLabel.Height = 13
+          DateEditLabel.Caption = 'Admissão:'
+        end
+        object EditDataCadastro: TLabeledDateEdit
+          Left = 14
+          Top = 158
+          Width = 99
+          Height = 21
+          Hint = 'Informe a data do cadastro'
+          ParentShowHint = False
+          ShowHint = False
+          ShowNullDate = False
+          TabOrder = 17
+          DateEditLabel.Width = 48
+          DateEditLabel.Height = 13
+          DateEditLabel.Caption = 'Cadastro:'
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoSair: TSpeedButton
+    end
+    inherited BotaoExportar: TSpeedButton
+    end
+    inherited BotaoImprimir: TSpeedButton
+    end
+    inherited BotaoSeparador1: TSpeedButton
+    end
+    inherited BotaoFiltrar: TSpeedButton
+    end
+  end
+  inherited PopupMenuExportar: TPopupMenu
+    Top = 0
+  end
+  inherited PopupMenuAtalhosBotoesTela: TPopupMenu
+    Top = 65535
+  end
+  inherited PopupMenuAtalhosBotoesTelaCadastro: TPopupMenu
+    Left = 696
+    Top = 8
+  end
+end

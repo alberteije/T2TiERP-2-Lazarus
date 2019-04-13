@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="PreVendaCabecalhoVO" table="PRE_VENDA_CABECALHO" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">PRE_VENDA_CABECALHO</param>
+      </generator>
+    </id>
+
+    <property name="IdEmpresa" column="ID_EMPRESA" />
+    <property name="IdPessoa" column="ID_PESSOA" />
+    <property name="DataEmissao" column="DATA_EMISSAO" />
+    <property name="HoraEmissao" column="HORA_EMISSAO" />
+    <property name="Situacao" column="SITUACAO" />
+    <property name="Ccf" column="CCF" />
+    <property name="Valor" column="VALOR" />
+    <property name="NomeDestinatario" column="NOME_DESTINATARIO" />
+    <property name="CpfCnpjDestinatario" column="CPF_CNPJ_DESTINATARIO" />
+    <property name="Subtotal" column="SUBTOTAL" />
+    <property name="Desconto" column="DESCONTO" />
+    <property name="Acrescimo" column="ACRESCIMO" />
+    <property name="TaxaAcrescimo" column="TAXA_ACRESCIMO" />
+    <property name="TaxaDesconto" column="TAXA_DESCONTO" />
+
+  </class>
+</t2ti-orm-mapping>

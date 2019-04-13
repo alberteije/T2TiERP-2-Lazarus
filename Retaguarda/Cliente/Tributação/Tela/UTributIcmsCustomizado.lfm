@@ -1,0 +1,488 @@
+inherited FTributIcmsCustomizado: TFTributIcmsCustomizado
+  Left = 122
+  Top = 139
+  Caption = 'ICMS Customizado'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 466
+        ClientHeight = 466
+        inherited PanelFiltroRapido: TPanel
+          Top = 414
+          inherited BotaoConsultar: TSpeedButton
+            Left = 852
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 683
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 414
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object ScrollBox: TScrollBox[0]
+          Left = 4
+          Height = 421
+          Top = 4
+          Width = 992
+          HorzScrollBar.Page = 992
+          VertScrollBar.Page = 421
+          Align = alClient
+          BorderStyle = bsNone
+          ClientHeight = 421
+          ClientWidth = 992
+          TabOrder = 0
+          object BevelEdits: TBevel
+            Left = 7
+            Height = 56
+            Top = 11
+            Width = 975
+            Anchors = [akTop, akLeft, akRight]
+            Constraints.MinWidth = 753
+          end
+          object PageControlDadosTributIcmsCustomizado: TPageControl
+            Left = 7
+            Height = 331
+            Top = 80
+            Width = 975
+            ActivePage = tsIcms
+            Anchors = [akTop, akLeft, akRight, akBottom]
+            TabIndex = 0
+            TabOrder = 2
+            object tsIcms: TTabSheet
+              Caption = 'ICMS'
+              ClientHeight = 305
+              ClientWidth = 967
+              ImageIndex = 2
+              object PanelIcms: TPanel
+                Left = 0
+                Height = 305
+                Top = 0
+                Width = 967
+                Align = alClient
+                BevelOuter = bvNone
+                ClientHeight = 305
+                ClientWidth = 967
+                TabOrder = 0
+                object GridIcms: TRxDBGrid
+                  Left = 0
+                  Height = 274
+                  Top = 31
+                  Width = 967
+                  TitleButtons = False
+                  AutoSort = True
+                  Columns = <                  
+                    item
+                      Alignment = taCenter
+                      Title.Alignment = taCenter
+                      Title.Caption = 'UF Destino [F1]'
+                      Title.Orientation = toHorizontal
+                      Width = 100
+                      FieldName = 'UF_DESTINO'
+                      Filter.DropDownRows = 0
+                      Filter.EmptyValue = '(Empty)'
+                      Filter.EmptyFont.Style = [fsItalic]
+                      Filter.ItemIndex = -1
+                      EditButtons = <>
+                    end                  
+                    item
+                      Alignment = taCenter
+                      Title.Alignment = taCenter
+                      Title.Caption = 'CFOP [F1]'
+                      Title.Orientation = toHorizontal
+                      Width = 100
+                      FieldName = 'CFOP'
+                      Filter.DropDownRows = 0
+                      Filter.EmptyValue = '(Empty)'
+                      Filter.EmptyFont.Style = [fsItalic]
+                      Filter.ItemIndex = -1
+                      EditButtons = <>
+                    end                  
+                    item
+                      Alignment = taCenter
+                      Title.Alignment = taCenter
+                      Title.Caption = 'CSOSN_B [F1]'
+                      Title.Orientation = toHorizontal
+                      Width = 100
+                      FieldName = 'CSOSN_B'
+                      Filter.DropDownRows = 0
+                      Filter.EmptyValue = '(Empty)'
+                      Filter.EmptyFont.Style = [fsItalic]
+                      Filter.ItemIndex = -1
+                      EditButtons = <>
+                    end                  
+                    item
+                      Alignment = taCenter
+                      Title.Alignment = taCenter
+                      Title.Caption = 'CST_B [F1]'
+                      Title.Orientation = toHorizontal
+                      Width = 100
+                      FieldName = 'CST_B'
+                      Filter.DropDownRows = 0
+                      Filter.EmptyValue = '(Empty)'
+                      Filter.EmptyFont.Style = [fsItalic]
+                      Filter.ItemIndex = -1
+                      EditButtons = <>
+                    end                  
+                    item
+                      PickList.Strings = (
+                        '0-Margem Valor Agregado'
+                        '1-Valor Pauta'
+                        '2-Valor Preço Máximo'
+                        '3-Valor da Operação'
+                      )
+                      Title.Alignment = taCenter
+                      Title.Caption = 'Modalidade BC ICMS'
+                      Title.Orientation = toHorizontal
+                      FieldName = 'MODALIDADE_BC'
+                      Filter.DropDownRows = 0
+                      Filter.EmptyValue = '(Empty)'
+                      Filter.EmptyFont.Style = [fsItalic]
+                      Filter.ItemIndex = -1
+                      EditButtons = <>
+                    end                  
+                    item
+                      Title.Alignment = taCenter
+                      Title.Caption = 'Alíquota'
+                      Title.Orientation = toHorizontal
+                      FieldName = 'ALIQUOTA'
+                      Filter.DropDownRows = 0
+                      Filter.EmptyValue = '(Empty)'
+                      Filter.EmptyFont.Style = [fsItalic]
+                      Filter.ItemIndex = -1
+                      EditButtons = <>
+                    end                  
+                    item
+                      Title.Alignment = taCenter
+                      Title.Caption = 'Valor Pauta'
+                      Title.Orientation = toHorizontal
+                      FieldName = 'VALOR_PAUTA'
+                      Filter.DropDownRows = 0
+                      Filter.EmptyValue = '(Empty)'
+                      Filter.EmptyFont.Style = [fsItalic]
+                      Filter.ItemIndex = -1
+                      EditButtons = <>
+                    end                  
+                    item
+                      Title.Alignment = taCenter
+                      Title.Caption = 'Valor Preço Máximo'
+                      Title.Orientation = toHorizontal
+                      FieldName = 'VALOR_PRECO_MAXIMO'
+                      Filter.DropDownRows = 0
+                      Filter.EmptyValue = '(Empty)'
+                      Filter.EmptyFont.Style = [fsItalic]
+                      Filter.ItemIndex = -1
+                      EditButtons = <>
+                    end                  
+                    item
+                      Title.Alignment = taCenter
+                      Title.Caption = 'Percentual BC'
+                      Title.Orientation = toHorizontal
+                      FieldName = 'PORCENTO_BC'
+                      Filter.DropDownRows = 0
+                      Filter.EmptyValue = '(Empty)'
+                      Filter.EmptyFont.Style = [fsItalic]
+                      Filter.ItemIndex = -1
+                      EditButtons = <>
+                    end                  
+                    item
+                      Title.Alignment = taCenter
+                      Title.Caption = 'MVA'
+                      Title.Orientation = toHorizontal
+                      FieldName = 'MVA'
+                      Filter.DropDownRows = 0
+                      Filter.EmptyValue = '(Empty)'
+                      Filter.EmptyFont.Style = [fsItalic]
+                      Filter.ItemIndex = -1
+                      EditButtons = <>
+                    end                  
+                    item
+                      PickList.Strings = (
+                        '0-Valor Preço Máximo '
+                        '1-Valor Lista Negativa'
+                        '2-Valor Lista Positiva'
+                        '3-valor Lista Neutra'
+                        '4-Margem Valor Agregado'
+                        '5-Valor Pauta'
+                      )
+                      Title.Alignment = taCenter
+                      Title.Caption = 'Modalidade BC ST'
+                      Title.Orientation = toHorizontal
+                      FieldName = 'MODALIDADE_BC_ST'
+                      Filter.DropDownRows = 0
+                      Filter.EmptyValue = '(Empty)'
+                      Filter.EmptyFont.Style = [fsItalic]
+                      Filter.ItemIndex = -1
+                      EditButtons = <>
+                    end                  
+                    item
+                      Title.Alignment = taCenter
+                      Title.Caption = 'Alíquota ST'
+                      Title.Orientation = toHorizontal
+                      FieldName = 'ALIQUOTA_ICMS_ST'
+                      Filter.DropDownRows = 0
+                      Filter.EmptyValue = '(Empty)'
+                      Filter.EmptyFont.Style = [fsItalic]
+                      Filter.ItemIndex = -1
+                      EditButtons = <>
+                    end                  
+                    item
+                      Title.Alignment = taCenter
+                      Title.Caption = 'Alíquota Interna ST'
+                      Title.Orientation = toHorizontal
+                      FieldName = 'ALIQUOTA_INTERNA_ST'
+                      Filter.DropDownRows = 0
+                      Filter.EmptyValue = '(Empty)'
+                      Filter.EmptyFont.Style = [fsItalic]
+                      Filter.ItemIndex = -1
+                      EditButtons = <>
+                    end                  
+                    item
+                      Title.Alignment = taCenter
+                      Title.Caption = 'Alíquota Interestadual ST'
+                      Title.Orientation = toHorizontal
+                      FieldName = 'ALIQUOTA_INTERESTADUAL_ST'
+                      Filter.DropDownRows = 0
+                      Filter.EmptyValue = '(Empty)'
+                      Filter.EmptyFont.Style = [fsItalic]
+                      Filter.ItemIndex = -1
+                      EditButtons = <>
+                    end                  
+                    item
+                      Title.Alignment = taCenter
+                      Title.Caption = 'Valor Pauta ST'
+                      Title.Orientation = toHorizontal
+                      FieldName = 'VALOR_PAUTA_ST'
+                      Filter.DropDownRows = 0
+                      Filter.EmptyValue = '(Empty)'
+                      Filter.EmptyFont.Style = [fsItalic]
+                      Filter.ItemIndex = -1
+                      EditButtons = <>
+                    end                  
+                    item
+                      Title.Alignment = taCenter
+                      Title.Caption = 'Valor Preço Máximo ST'
+                      Title.Orientation = toHorizontal
+                      FieldName = 'VALOR_PRECO_MAXIMO_ST'
+                      Filter.DropDownRows = 0
+                      Filter.EmptyValue = '(Empty)'
+                      Filter.EmptyFont.Style = [fsItalic]
+                      Filter.ItemIndex = -1
+                      EditButtons = <>
+                    end                  
+                    item
+                      Title.Alignment = taCenter
+                      Title.Caption = 'Percentual BC ST'
+                      Title.Orientation = toHorizontal
+                      FieldName = 'PORCENTO_BC_ST'
+                      Filter.DropDownRows = 0
+                      Filter.EmptyValue = '(Empty)'
+                      Filter.EmptyFont.Style = [fsItalic]
+                      Filter.ItemIndex = -1
+                      EditButtons = <>
+                    end>
+                  KeyStrokes = <                  
+                    item
+                      Command = rxgcShowFindDlg
+                      ShortCut = 16454
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowColumnsDlg
+                      ShortCut = 16471
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowFilterDlg
+                      ShortCut = 16468
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowSortDlg
+                      ShortCut = 16467
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowQuickFilter
+                      ShortCut = 16465
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcHideQuickFilter
+                      ShortCut = 16456
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcSelectAll
+                      ShortCut = 16449
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcDeSelectAll
+                      ShortCut = 16429
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcInvertSelection
+                      ShortCut = 16426
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcOptimizeColumnsWidth
+                      ShortCut = 16427
+                      Enabled = True
+                    end>
+                  OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                  Align = alClient
+                  Color = clWindow
+                  DrawFullLine = False
+                  FocusColor = clRed
+                  SelectedColor = clHighlight
+                  GridLineStyle = psSolid
+                  DataSource = DSIcms
+                  Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+                  ParentColor = False
+                  TabOrder = 0
+                  TitleFont.Color = clWindowText
+                  TitleFont.Height = -11
+                  TitleFont.Name = 'Tahoma'
+                  OnKeyDown = GridIcmsKeyDown
+                end
+                object ToolPanel1: TToolPanel
+                  Left = 0
+                  Height = 31
+                  Top = 0
+                  Width = 967
+                  Items = <                  
+                    item
+                      Action = ActionExcluirItem
+                      Visible = True
+                      Left = 873
+                      Height = 21
+                      Top = 5
+                      Width = 89
+                      ShowCaption = True
+                    end                  
+                    item
+                      Action = ActionUf
+                      Visible = True
+                      Left = 777
+                      Height = 21
+                      Top = 5
+                      Width = 96
+                      ShowCaption = True
+                    end>
+                  ImageList = FDataModule.ImagensCadastros
+                  ToolBarStyle = tbsWindowsXP
+                  Options = [tpFlatBtns]
+                  ButtonAllign = tbaRignt
+                  Align = alTop
+                  BorderWidth = 4
+                  ClientHeight = 31
+                  ClientWidth = 967
+                  TabOrder = 1
+                end
+              end
+            end
+          end
+          object EditDescricao: TLabeledEdit
+            Left = 16
+            Height = 21
+            Top = 36
+            Width = 776
+            Anchors = [akTop, akLeft, akRight]
+            EditLabel.AnchorSideLeft.Control = EditDescricao
+            EditLabel.AnchorSideRight.Control = EditDescricao
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditDescricao
+            EditLabel.Left = 16
+            EditLabel.Height = 13
+            EditLabel.Top = 20
+            EditLabel.Width = 776
+            EditLabel.Caption = 'Descrição:'
+            EditLabel.ParentColor = False
+            TabOrder = 0
+          end
+          object ComboboxOrigemMercadoria: TLabeledComboBox
+            Left = 798
+            Height = 21
+            Top = 36
+            Width = 177
+            Anchors = [akTop, akRight]
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              '0 = Nacional'
+              '1 = Estrangeira - Importação direta'
+              '2 = Estrangeira - Adquirida no mercado interno'
+            )
+            Style = csDropDownList
+            TabOrder = 1
+            Text = '0 = Nacional'
+            ComboBoxLabel.Left = 798
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 20
+            ComboBoxLabel.Width = 94
+            ComboBoxLabel.Caption = 'Origem Mercadoria:'
+            ComboBoxLabel.ParentColor = False
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+  inherited PopupMenuAtalhosBotoesTela: TPopupMenu
+    top = 23
+  end
+  inherited PopupMenuAtalhosBotoesTelaCadastro: TPopupMenu
+    left = 720
+    top = 24
+  end
+  object DSIcms: TDatasource[5]
+    DataSet = CDSIcms
+    left = 104
+    top = 384
+  end
+  object ActionManager1: TActionList[6]
+    Images = FDataModule.ImagensCadastros
+    left = 752
+    top = 248
+    object ActionUf: TAction
+      Caption = 'Importar UFs'
+      ImageIndex = 22
+      OnExecute = ActionUfExecute
+    end
+    object ActionExcluirItem: TAction
+      Caption = 'Excluir Item'
+      ImageIndex = 2
+      OnExecute = ActionExcluirItemExecute
+    end
+  end
+  object CDSIcms: TBufDataset[7]
+    FieldDefs = <>
+    left = 180
+    top = 383
+  end
+end

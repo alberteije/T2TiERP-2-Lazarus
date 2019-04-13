@@ -1,0 +1,395 @@
+inherited FFiscalParametros: TFFiscalParametros
+  Left = 335
+  Top = 234
+  Caption = 'Fiscal Parâmetros'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 264
+        Width = 980
+        ClientHeight = 264
+        ClientWidth = 980
+        inherited PanelFiltroRapido: TPanel
+          Top = 210
+          Width = 980
+          ClientWidth = 980
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 679
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 212
+          Width = 980
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object PanelMestre: TPanel[0]
+          Left = 8
+          Height = 61
+          Top = 10
+          Width = 978
+          Anchors = [akTop, akLeft, akRight]
+          BevelOuter = bvLowered
+          ClientHeight = 61
+          ClientWidth = 978
+          TabOrder = 0
+          object EditVigencia: TLabeledMaskEdit
+            Left = 7
+            Height = 21
+            Top = 22
+            Width = 86
+            CharCase = ecNormal
+            MaxLength = 7
+            TabOrder = 0
+            EditMask = '##/####;1;_'
+            Text = '  /    '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 7
+            MaskEditLabel.Height = 13
+            MaskEditLabel.Top = 6
+            MaskEditLabel.Width = 57
+            MaskEditLabel.Caption = 'EditVigencia'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditDescricaoVigencia: TLabeledEdit
+            Left = 99
+            Height = 21
+            Top = 22
+            Width = 475
+            Anchors = [akTop, akLeft, akRight]
+            EditLabel.AnchorSideLeft.Control = EditDescricaoVigencia
+            EditLabel.AnchorSideRight.Control = EditDescricaoVigencia
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditDescricaoVigencia
+            EditLabel.Left = 99
+            EditLabel.Height = 13
+            EditLabel.Top = 6
+            EditLabel.Width = 475
+            EditLabel.Caption = 'Descrição Vigência:'
+            EditLabel.ParentColor = False
+            TabOrder = 1
+          end
+          object ComboBoxCriterioLancamento: TLabeledComboBox
+            Left = 580
+            Height = 21
+            Top = 22
+            Width = 384
+            Anchors = [akTop, akRight]
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              'L - Livre'
+              'A - Avisar'
+              'N - Não permitir (para lançamentos efetuados fora do período informado)'
+            )
+            Style = csDropDownList
+            TabOrder = 2
+            Text = 'L - Livre'
+            ComboBoxLabel.Left = 580
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 6
+            ComboBoxLabel.Width = 100
+            ComboBoxLabel.Caption = 'Critério Lançamento:'
+            ComboBoxLabel.ParentColor = False
+          end
+        end
+        object PageControlItens: TPageControl[1]
+          Left = 8
+          Height = 328
+          Top = 86
+          Width = 978
+          ActivePage = tsFederal
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          TabIndex = 0
+          TabOrder = 1
+          object tsFederal: TTabSheet
+            Caption = 'Federal'
+            ClientHeight = 302
+            ClientWidth = 970
+            object PanelFederal: TPanel
+              Left = 0
+              Height = 302
+              Top = 0
+              Width = 970
+              Align = alClient
+              BevelOuter = bvNone
+              ClientHeight = 302
+              ClientWidth = 970
+              TabOrder = 0
+              object ComboBoxApuracao: TLabeledComboBox
+                Left = 7
+                Height = 21
+                Top = 24
+                Width = 160
+                ItemHeight = 13
+                ItemIndex = 0
+                Items.Strings = (
+                  '1 - Regime Competencia'
+                  '2 - Regime de Caixa'
+                )
+                Style = csDropDownList
+                TabOrder = 0
+                Text = '1 - Regime Competencia'
+                ComboBoxLabel.Left = 7
+                ComboBoxLabel.Height = 13
+                ComboBoxLabel.Top = 8
+                ComboBoxLabel.Width = 50
+                ComboBoxLabel.Caption = 'Apuração:'
+                ComboBoxLabel.ParentColor = False
+              end
+              object ComboBoxMicroempreendedorIndividual: TLabeledComboBox
+                Left = 173
+                Height = 21
+                Top = 24
+                Width = 160
+                ItemHeight = 13
+                ItemIndex = 0
+                Items.Strings = (
+                  'Sim'
+                  'Não'
+                )
+                Style = csDropDownList
+                TabOrder = 1
+                Text = 'Sim'
+                ComboBoxLabel.Left = 173
+                ComboBoxLabel.Height = 13
+                ComboBoxLabel.Top = 8
+                ComboBoxLabel.Width = 148
+                ComboBoxLabel.Caption = 'Microempreendedor Individual:'
+                ComboBoxLabel.ParentColor = False
+              end
+              object ComboBoxCalcPisCofinsEfd: TLabeledComboBox
+                Left = 339
+                Height = 21
+                Top = 24
+                Width = 228
+                ItemHeight = 13
+                ItemIndex = 0
+                Items.Strings = (
+                  'AB - Alíquota Básica'
+                  'AD - Alíquota Diferenciada'
+                  'UP - Unidade de Medida de Produto'
+                )
+                Style = csDropDownList
+                TabOrder = 2
+                Text = 'AB - Alíquota Básica'
+                ComboBoxLabel.Left = 339
+                ComboBoxLabel.Height = 13
+                ComboBoxLabel.Top = 8
+                ComboBoxLabel.Width = 218
+                ComboBoxLabel.Caption = 'Forma Cálculo Pis/Cofins - EFD Contribuições:'
+                ComboBoxLabel.ParentColor = False
+              end
+              object EditSimplesCodigoAcesso: TLabeledEdit
+                Left = 573
+                Height = 21
+                Top = 24
+                Width = 383
+                Anchors = [akTop, akLeft, akRight]
+                EditLabel.AnchorSideLeft.Control = EditSimplesCodigoAcesso
+                EditLabel.AnchorSideRight.Control = EditSimplesCodigoAcesso
+                EditLabel.AnchorSideRight.Side = asrBottom
+                EditLabel.AnchorSideBottom.Control = EditSimplesCodigoAcesso
+                EditLabel.Left = 573
+                EditLabel.Height = 13
+                EditLabel.Top = 8
+                EditLabel.Width = 383
+                EditLabel.Caption = 'Código Acesso Simples:'
+                EditLabel.ParentColor = False
+                MaxLength = 50
+                TabOrder = 3
+              end
+              object ComboBoxSimplesTabela: TLabeledComboBox
+                Left = 7
+                Height = 21
+                Top = 72
+                Width = 160
+                ItemHeight = 13
+                ItemIndex = 0
+                Items.Strings = (
+                  '1 - Federal'
+                  '2 - Estadual'
+                )
+                Style = csDropDownList
+                TabOrder = 4
+                Text = '1 - Federal'
+                ComboBoxLabel.Left = 7
+                ComboBoxLabel.Height = 13
+                ComboBoxLabel.Top = 56
+                ComboBoxLabel.Width = 74
+                ComboBoxLabel.Caption = 'Tabela Simples:'
+                ComboBoxLabel.ParentColor = False
+              end
+              object ComboBoxSimplesAtividade: TLabeledComboBox
+                Left = 173
+                Height = 21
+                Top = 72
+                Width = 160
+                ItemHeight = 13
+                ItemIndex = 0
+                Items.Strings = (
+                  'CO - Comercio'
+                  'IN - Indústria'
+                  'S1 - Serviços Anexo III'
+                  'S2 - Serviços Anexo IV'
+                  'S3 - Serviços Anexo V'
+                )
+                Style = csDropDownList
+                TabOrder = 5
+                Text = 'CO - Comercio'
+                ComboBoxLabel.Left = 173
+                ComboBoxLabel.Height = 13
+                ComboBoxLabel.Top = 56
+                ComboBoxLabel.Width = 87
+                ComboBoxLabel.Caption = 'Atividade Simples:'
+                ComboBoxLabel.ParentColor = False
+              end
+            end
+          end
+          object tsEstadual: TTabSheet
+            Caption = 'Estadual'
+            ClientHeight = 302
+            ClientWidth = 970
+            ImageIndex = 1
+            object PanelEstadual: TPanel
+              Left = 0
+              Height = 302
+              Top = 0
+              Width = 970
+              Align = alClient
+              BevelOuter = bvNone
+              ClientHeight = 302
+              ClientWidth = 970
+              TabOrder = 0
+              object ComboBoxPerfilSped: TLabeledComboBox
+                Left = 8
+                Height = 21
+                Top = 24
+                Width = 111
+                ItemHeight = 13
+                ItemIndex = 0
+                Items.Strings = (
+                  'A - Perfil A'
+                  'B - Perfil B'
+                  'C - Perfil C'
+                )
+                Style = csDropDownList
+                TabOrder = 0
+                Text = 'A - Perfil A'
+                ComboBoxLabel.Left = 8
+                ComboBoxLabel.Height = 13
+                ComboBoxLabel.Top = 8
+                ComboBoxLabel.Width = 84
+                ComboBoxLabel.Caption = 'Perfil Sped Fiscal:'
+                ComboBoxLabel.ParentColor = False
+              end
+              object ComboBoxApuracaoConsolidada: TLabeledComboBox
+                Left = 125
+                Height = 21
+                Top = 24
+                Width = 120
+                ItemHeight = 13
+                ItemIndex = 0
+                Items.Strings = (
+                  'Sim'
+                  'Não'
+                )
+                Style = csDropDownList
+                TabOrder = 1
+                Text = 'Sim'
+                ComboBoxLabel.Left = 125
+                ComboBoxLabel.Height = 13
+                ComboBoxLabel.Top = 8
+                ComboBoxLabel.Width = 111
+                ComboBoxLabel.Caption = 'Apuração Consolidada:'
+                ComboBoxLabel.ParentColor = False
+              end
+              object ComboBoxSubstituicaoTributaria: TLabeledComboBox
+                Left = 251
+                Height = 21
+                Top = 24
+                Width = 124
+                ItemHeight = 13
+                ItemIndex = 0
+                Items.Strings = (
+                  'Sim'
+                  'Não'
+                )
+                Style = csDropDownList
+                TabOrder = 2
+                Text = 'Sim'
+                ComboBoxLabel.Left = 251
+                ComboBoxLabel.Height = 13
+                ComboBoxLabel.Top = 8
+                ComboBoxLabel.Width = 111
+                ComboBoxLabel.Caption = 'Substituição Tributária:'
+                ComboBoxLabel.ParentColor = False
+              end
+            end
+          end
+          object tsMunicipal: TTabSheet
+            Caption = 'Municipal'
+            ClientHeight = 302
+            ClientWidth = 970
+            ImageIndex = 2
+            object PanelMunicipal: TPanel
+              Left = 0
+              Height = 302
+              Top = 0
+              Width = 970
+              Align = alClient
+              BevelOuter = bvNone
+              ClientHeight = 302
+              ClientWidth = 970
+              TabOrder = 0
+              object ComboBoxFormaCalculoIss: TLabeledComboBox
+                Left = 8
+                Height = 21
+                Top = 24
+                Width = 167
+                ItemHeight = 13
+                ItemIndex = 0
+                Items.Strings = (
+                  'NO - Normal'
+                  'PH - Profissional Habilitado'
+                  'VF - Valor Fixo'
+                )
+                Style = csDropDownList
+                TabOrder = 0
+                Text = 'NO - Normal'
+                ComboBoxLabel.Left = 8
+                ComboBoxLabel.Height = 13
+                ComboBoxLabel.Top = 8
+                ComboBoxLabel.Width = 90
+                ComboBoxLabel.Caption = 'Forma Cálculo ISS:'
+                ComboBoxLabel.ParentColor = False
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+end

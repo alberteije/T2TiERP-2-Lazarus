@@ -1,0 +1,441 @@
+inherited FFolhaParametros: TFFolhaParametros
+  Tag = 1
+  Left = 318
+  Top = 204
+  Caption = 'Folha Parâmetros'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 953
+        ClientWidth = 953
+        inherited PanelFiltroRapido: TPanel
+          Width = 953
+          ClientWidth = 953
+          inherited BotaoConsultar: TSpeedButton
+            Left = 819
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 652
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 953
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 206
+          Top = 9
+          Width = 982
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditCompetencia: TLabeledMaskEdit[1]
+          Left = 16
+          Height = 21
+          Top = 31
+          Width = 86
+          CharCase = ecNormal
+          MaxLength = 7
+          TabOrder = 0
+          EditMask = '##/####;1;_'
+          Text = '  /    '
+          SpaceChar = '_'
+          MaskEditLabel.Left = 16
+          MaskEditLabel.Height = 13
+          MaskEditLabel.Top = 15
+          MaskEditLabel.Width = 66
+          MaskEditLabel.Caption = 'Competencia:'
+          MaskEditLabel.ParentColor = False
+        end
+        object EditDiaPagamento: TLabeledCalcEdit[2]
+          Left = 405
+          Height = 21
+          Top = 31
+          Width = 82
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 4
+          Value = 0
+          CalcEditLabel.Left = 405
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 15
+          CalcEditLabel.Width = 76
+          CalcEditLabel.Caption = 'Dia Pagamento:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditAliquotaPis: TLabeledCalcEdit[3]
+          Left = 185
+          Height = 21
+          Top = 31
+          Width = 121
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 2
+          Value = 0
+          CalcEditLabel.Left = 185
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 15
+          CalcEditLabel.Width = 59
+          CalcEditLabel.Caption = 'Alíquota Pis:'
+          CalcEditLabel.ParentColor = False
+        end
+        object ComboBoxContribuiPis: TLabeledComboBox[4]
+          Left = 108
+          Height = 21
+          Top = 31
+          Width = 71
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            'Sim'
+            'Não'
+          )
+          Style = csDropDownList
+          TabOrder = 1
+          Text = 'Sim'
+          ComboBoxLabel.Left = 108
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 15
+          ComboBoxLabel.Width = 63
+          ComboBoxLabel.Caption = 'Contribui Pis:'
+          ComboBoxLabel.ParentColor = False
+        end
+        object ComboBoxDiscriminarDsr: TLabeledComboBox[5]
+          Left = 312
+          Height = 21
+          Top = 31
+          Width = 87
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            'Sim'
+            'Não'
+          )
+          Style = csDropDownList
+          TabOrder = 3
+          Text = 'Sim'
+          ComboBoxLabel.Left = 312
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 15
+          ComboBoxLabel.Width = 78
+          ComboBoxLabel.Caption = 'Discriminar DSR:'
+          ComboBoxLabel.ParentColor = False
+        end
+        object ComboBoxCalculoProporcionalidade: TLabeledComboBox[6]
+          Left = 493
+          Height = 21
+          Top = 31
+          Width = 150
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            '0 - 30 Dias'
+            '1 - Conforme dias do mês'
+          )
+          Style = csDropDownList
+          TabOrder = 5
+          Text = '0 - 30 Dias'
+          ComboBoxLabel.Left = 493
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 15
+          ComboBoxLabel.Width = 126
+          ComboBoxLabel.Caption = 'Cálculo Proporcionalidade:'
+          ComboBoxLabel.ParentColor = False
+        end
+        object GroupBox1: TGroupBox[7]
+          Left = 16
+          Height = 69
+          Top = 58
+          Width = 964
+          Anchors = [akTop, akLeft, akRight]
+          Caption = '13º Salário'
+          ClientHeight = 51
+          ClientWidth = 960
+          TabOrder = 6
+          object ComboBoxDescontarFaltas13: TLabeledComboBox
+            Left = 8
+            Height = 21
+            Top = 18
+            Width = 120
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              'Sim'
+              'Não'
+            )
+            Style = csDropDownList
+            TabOrder = 0
+            Text = 'Sim'
+            ComboBoxLabel.Left = 8
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 2
+            ComboBoxLabel.Width = 85
+            ComboBoxLabel.Caption = 'Descontar Faltas:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object ComboBoxPagarAdicionais13: TLabeledComboBox
+            Left = 134
+            Height = 21
+            Top = 18
+            Width = 113
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              'Sim'
+              'Não'
+            )
+            Style = csDropDownList
+            TabOrder = 1
+            Text = 'Sim'
+            ComboBoxLabel.Left = 134
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 2
+            ComboBoxLabel.Width = 82
+            ComboBoxLabel.Caption = 'Pagar Adicionais:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object ComboBoxPagarEstagiarios13: TLabeledComboBox
+            Left = 253
+            Height = 21
+            Top = 18
+            Width = 113
+            ItemHeight = 13
+            ItemIndex = 1
+            Items.Strings = (
+              'Sim'
+              'Não'
+            )
+            Style = csDropDownList
+            TabOrder = 2
+            Text = 'Não'
+            ComboBoxLabel.Left = 253
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 2
+            ComboBoxLabel.Width = 87
+            ComboBoxLabel.Caption = 'Pagar Estagiários:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object ComboBoxMesAdiantamento13: TLabeledComboBox
+            Left = 372
+            Height = 21
+            Top = 18
+            Width = 123
+            ItemHeight = 13
+            ItemIndex = 3
+            Items.Strings = (
+              '01 - Janeiro'
+              '02 - Fevereiro'
+              '03 - Março'
+              '04 - Abril'
+              '05 - Maio'
+              '06 - Junho'
+              '07 - Julho'
+              '08 - Agosto'
+              '09 - Setembro'
+              '10 - Outubro'
+              '11 - Novembro'
+              '12 - Dezembro'
+            )
+            Style = csDropDownList
+            TabOrder = 3
+            Text = '04 - Abril'
+            ComboBoxLabel.Left = 372
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 2
+            ComboBoxLabel.Width = 93
+            ComboBoxLabel.Caption = 'Mês Adiantamento:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object EditPercentualAdiantamento13: TLabeledCalcEdit
+            Left = 501
+            Height = 21
+            Top = 18
+            Width = 159
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 4
+            Value = 0
+            CalcEditLabel.Left = 501
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 2
+            CalcEditLabel.Width = 125
+            CalcEditLabel.Caption = 'Percentual Adiantamento:'
+            CalcEditLabel.ParentColor = False
+          end
+        end
+        object GroupBox2: TGroupBox[8]
+          Left = 16
+          Height = 69
+          Top = 133
+          Width = 964
+          Anchors = [akTop, akLeft, akRight]
+          Caption = 'Férias'
+          ClientHeight = 51
+          ClientWidth = 960
+          TabOrder = 7
+          object ComboBoxDescontarFaltasFerias: TLabeledComboBox
+            Left = 8
+            Height = 21
+            Top = 18
+            Width = 120
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              'Sim'
+              'Não'
+            )
+            Style = csDropDownList
+            TabOrder = 0
+            Text = 'Sim'
+            ComboBoxLabel.Left = 8
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 2
+            ComboBoxLabel.Width = 85
+            ComboBoxLabel.Caption = 'Descontar Faltas:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object ComboBoxPagarAdicionaisFerias: TLabeledComboBox
+            Left = 134
+            Height = 21
+            Top = 18
+            Width = 113
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              'Sim'
+              'Não'
+            )
+            Style = csDropDownList
+            TabOrder = 1
+            Text = 'Sim'
+            ComboBoxLabel.Left = 134
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 2
+            ComboBoxLabel.Width = 82
+            ComboBoxLabel.Caption = 'Pagar Adicionais:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object ComboBoxPagarEstagiariosFerias: TLabeledComboBox
+            Left = 253
+            Height = 21
+            Top = 18
+            Width = 113
+            ItemHeight = 13
+            ItemIndex = 1
+            Items.Strings = (
+              'Sim'
+              'Não'
+            )
+            Style = csDropDownList
+            TabOrder = 2
+            Text = 'Não'
+            ComboBoxLabel.Left = 253
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 2
+            ComboBoxLabel.Width = 87
+            ComboBoxLabel.Caption = 'Pagar Estagiários:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object ComboBoxAdiantar13Ferias: TLabeledComboBox
+            Left = 372
+            Height = 21
+            Top = 18
+            Width = 123
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              'Sim'
+              'Não'
+            )
+            Style = csDropDownList
+            TabOrder = 3
+            Text = 'Sim'
+            ComboBoxLabel.Left = 372
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 2
+            ComboBoxLabel.Width = 65
+            ComboBoxLabel.Caption = 'Adiantar 13º:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object ComboBoxCalculoJustaCausaFerias: TLabeledComboBox
+            Left = 501
+            Height = 21
+            Top = 18
+            Width = 123
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              'Sim'
+              'Não'
+            )
+            Style = csDropDownList
+            TabOrder = 4
+            Text = 'Sim'
+            ComboBoxLabel.Left = 501
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 2
+            ComboBoxLabel.Width = 100
+            ComboBoxLabel.Caption = 'Cálculo Justa Causa:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object ComboBoxMovimentoMensalFerias: TLabeledComboBox
+            Left = 630
+            Height = 21
+            Top = 18
+            Width = 123
+            ItemHeight = 13
+            ItemIndex = 1
+            Items.Strings = (
+              'Sim'
+              'Não'
+            )
+            Style = csDropDownList
+            TabOrder = 5
+            Text = 'Não'
+            ComboBoxLabel.Left = 630
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 2
+            ComboBoxLabel.Width = 92
+            ComboBoxLabel.Caption = 'Movimento Mensal:'
+            ComboBoxLabel.ParentColor = False
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+  inherited PopupMenuExportar: TPopupMenu
+    left = 344
+    top = 24
+  end
+end

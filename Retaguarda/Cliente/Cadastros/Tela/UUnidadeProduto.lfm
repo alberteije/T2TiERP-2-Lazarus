@@ -1,0 +1,60 @@
+inherited FUnidadeProduto: TFUnidadeProduto
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    inherited PaginaEdits: TTabSheet
+      inherited PanelEdits: TPanel
+        object BevelEdits: TBevel
+          Left = 8
+          Top = 15
+          Width = 965
+          Height = 154
+          Anchors = [akLeft, akTop, akRight]
+          Constraints.MinWidth = 753
+        end
+        object Label1: TLabel
+          Left = 16
+          Top = 69
+          Width = 50
+          Height = 13
+          Caption = 'Descrição:'
+        end
+        object EditSigla: TLabeledEdit
+          Left = 16
+          Top = 40
+          Width = 90
+          Height = 21
+          EditLabel.Width = 26
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Sigla:'
+          MaxLength = 10
+          TabOrder = 0
+        end
+        object MemoDescricao: TMemo
+          Left = 16
+          Top = 85
+          Width = 949
+          Height = 74
+          Anchors = [akLeft, akTop, akRight]
+          ScrollBars = ssVertical
+          TabOrder = 1
+        end
+        object ComboboxPodeFracionar: TLabeledComboBox
+          Left = 112
+          Top = 40
+          Width = 95
+          Height = 21
+          Style = csDropDownList
+          ItemIndex = 1
+          TabOrder = 2
+          Text = 'Não'
+          Items.Strings = (
+            'Sim'
+            'Não')
+          ComboBoxLabel.Width = 76
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Caption = 'Pode Fracionar:'
+        end
+      end
+    end
+  end
+end

@@ -1,0 +1,80 @@
+inherited FGedTipoDocumento: TFGedTipoDocumento
+  Left = 376
+  Top = 118
+  Width = 993
+  Caption = 'Tipo de Documento'
+  ClientWidth = 993
+  inherited PageControl: TPageControl
+    Width = 993
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 985
+      inherited PanelEdits: TPanel
+        Width = 985
+        ClientWidth = 985
+        object BevelEdits: TBevel[0]
+          Left = 10
+          Height = 102
+          Top = 12
+          Width = 955
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditNome: TLabeledEdit[1]
+          Left = 18
+          Height = 21
+          Top = 35
+          Width = 939
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditNome
+          EditLabel.AnchorSideRight.Control = EditNome
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditNome
+          EditLabel.Left = 18
+          EditLabel.Height = 13
+          EditLabel.Top = 19
+          EditLabel.Width = 939
+          EditLabel.Caption = 'Nome:'
+          EditLabel.ParentColor = False
+          TabOrder = 0
+        end
+        object EditTamanhoMaximo: TLabeledCalcEdit[2]
+          Left = 18
+          Height = 21
+          Top = 80
+          Width = 119
+          Alignment = taRightJustify
+          DisplayFormat = ',0.000'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 1
+          Value = 0
+          CalcEditLabel.Left = 18
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 64
+          CalcEditLabel.Width = 112
+          CalcEditLabel.Caption = 'Tamanho Máximo (MB):'
+          CalcEditLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 993
+    ClientWidth = 993
+    inherited BotaoSair: TSpeedButton
+      Left = 893
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 693
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 793
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 593
+    end
+  end
+end

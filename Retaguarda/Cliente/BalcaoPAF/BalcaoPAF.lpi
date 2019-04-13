@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="BalcaoPAF"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="10">
+      <Item1>
+        <PackageName Value="Printer4Lazarus"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="rxnew"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="LJGridUtilsPkg"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="BrookRT"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="LabeledControls"/>
+      </Item5>
+      <Item6>
+        <PackageName Value="FCL"/>
+      </Item6>
+      <Item7>
+        <PackageName Value="ACBr_Boleto"/>
+      </Item7>
+      <Item8>
+        <PackageName Value="ACBr_NFe2"/>
+      </Item8>
+      <Item9>
+        <PackageName Value="SpkToolbarPackage"/>
+      </Item9>
+      <Item10>
+        <PackageName Value="LCL"/>
+      </Item10>
+    </RequiredPackages>
+    <Units Count="25">
+      <Unit0>
+        <Filename Value="BalcaoPAF.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="BalcaoPAF"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="Tela\umenu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FMenu"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UMenu"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="Tela\uproduto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FProduto"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UProduto"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\Comum\DataModule\UDataModule.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FDataModule"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="UDataModule"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="..\Comum\Tipos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Tipos"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="..\Comum\Tela\UBase.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FBase"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UBase"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\Comum\SessaoUsuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SessaoUsuario"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\..\Comum\VO\EmpresaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EmpresaVO"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\..\Comum\VO\UsuarioVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UsuarioVO"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\..\Comum\VO\VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="VO"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="..\..\Comum\Biblioteca.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Biblioteca"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="..\Comum\Tela\UTela.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FTela"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UTela"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="..\Comum\Tela\UFiltro.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FFiltro"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UFiltro"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="..\..\Comum\Constantes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Constantes"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="..\Comum\Tela\UTelaCadastro.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FTelaCadastro"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UTelaCadastro"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="..\Comum\Tela\ULookup.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FLookup"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ULookup"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="..\..\Comum\VO\ProdutoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ProdutoVO"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="Tela\UDAV.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FDAV"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UDAV"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="..\..\Comum\VO\DavCabecalhoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DavCabecalhoVO"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="..\..\Comum\VO\DavDetalheVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DavDetalheVO"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="Tela\UPreview.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FPreview"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UPreview"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="Tela\USpedFiscal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FSpedFiscal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="USpedFiscal"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="..\..\Comum\VO\ContadorVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ContadorVO"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="Tela\USintegra.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FSintegra"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="USintegra"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="Tela\USpedContribuicoes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FSpedContribuicoes"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="USpedContribuicoes"/>
+      </Unit24>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="BalcaoPAF"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="Tela;..\Comum\DataModule;..\Comum;..\Comum\Tela;..\..\Comum\VO;..\..\Comum"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerMessages>
+        <MsgFileName Value=""/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

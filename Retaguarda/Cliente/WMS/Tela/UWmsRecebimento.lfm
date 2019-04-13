@@ -1,0 +1,302 @@
+inherited FWmsRecebimento: TFWmsRecebimento
+  inherited PageControl: TPageControl
+    Width = 933
+    ActivePage = PaginaEdits
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 925
+        inherited Grid: TJvDBUltimGrid
+          Width = 925
+        end
+        inherited PanelFiltroRapido: TPanel
+          Width = 925
+          inherited BotaoConsultar: TSpeedButton
+            Left = 791
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 624
+          end
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      inherited PanelEdits: TPanel
+        Width = 925
+        object BevelEdits: TBevel
+          Left = 8
+          Top = 10
+          Width = 905
+          Height = 97
+          Anchors = [akLeft, akTop, akRight]
+          Constraints.MinWidth = 753
+        end
+        object GroupBoxWmsRecebimentoDetalhe: TGroupBox
+          Left = 8
+          Top = 117
+          Width = 905
+          Height = 265
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          Caption = 'Itens'
+          TabOrder = 3
+          object GridWmsRecebimentoDetalhe: TJvDBUltimGrid
+            Left = 0
+            Top = 33
+            Width = 901
+            Height = 216
+            Align = alClient
+            DataSource = DSWmsRecebimentoDetalhe
+            TabOrder = 0
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+            TitleFont.Style = []
+            OnKeyDown = GridWmsRecebimentoDetalheKeyDown
+            TitleButtons = True
+            AlternateRowColor = 15593713
+            TitleArrow = True
+            SelectColumnsDialogStrings.Caption = 'Select columns'
+            SelectColumnsDialogStrings.OK = '&OK'
+            SelectColumnsDialogStrings.NoSelectionWarning = 'At least one column must be visible!'
+            CanDelete = False
+            EditControls = <>
+            RowsHeight = 17
+            TitleRowHeight = 17
+            SortWith = swFields
+          end
+          object ActionToolBar1: TActionToolBar
+            AlignWithMargins = True
+            Left = 3
+            Top = 4
+            Width = 895
+            Height = 26
+            ActionManager = ActionManager
+            BiDiMode = bdRightToLeft
+            Caption = 'ActionToolBarEdits'
+            ColorMap.MenuColor = clMenu
+            ColorMap.BtnSelectedColor = clBtnFace
+            ColorMap.UnusedColor = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            Orientation = boRightToLeft
+            ParentBiDiMode = False
+            ParentFont = False
+            Spacing = 0
+          end
+        end
+        object EditIdWmsAgendamento: TLabeledCalcEdit
+          Left = 16
+          Top = 75
+          Width = 99
+          Height = 21
+          DisplayFormat = '#'
+          ParentShowHint = False
+          ShowHint = False
+          TabOrder = 1
+          OnKeyUp = EditIdWmsAgendamentoKeyUp
+          CalcEditLabel.Width = 94
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Agendamento [F1]:'
+        end
+        object EditObservacao: TLabeledEdit
+          Left = 121
+          Top = 75
+          Width = 783
+          Height = 21
+          TabStop = False
+          Anchors = [akLeft, akTop, akRight]
+          EditLabel.Width = 62
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Observação:'
+          TabOrder = 2
+        end
+        object EditDataRecebimento: TLabeledDateEdit
+          Left = 16
+          Top = 33
+          Width = 121
+          Height = 21
+          TabOrder = 0
+          DateEditLabel.Width = 23
+          DateEditLabel.Height = 13
+          DateEditLabel.Caption = 'Data'
+        end
+        object EditHoraInicio: TLabeledMaskEdit
+          Left = 143
+          Top = 33
+          Width = 110
+          Height = 21
+          MaxLength = 8
+          TabOrder = 4
+          Text = '  :: : :'
+          EditMask = '##:##:##;1;_'
+        end
+        object EditHoraFim: TLabeledMaskEdit
+          Left = 259
+          Top = 33
+          Width = 110
+          Height = 21
+          MaxLength = 8
+          TabOrder = 5
+          Text = '  :::: : :'
+          EditMask = '##:##:##;1;_'
+        end
+        object EditVolumeRecebido: TLabeledCalcEdit
+          Left = 375
+          Top = 33
+          Width = 104
+          Height = 21
+          TabOrder = 6
+          CalcEditLabel.Width = 85
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Volume Recebido:'
+        end
+        object EditPesoRecebido: TLabeledCalcEdit
+          Left = 485
+          Top = 33
+          Width = 121
+          Height = 21
+          DisplayFormat = '###,###,##0.00'
+          TabOrder = 7
+          CalcEditLabel.Width = 74
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Peso Recebido:'
+        end
+        object ComboInconsistencia: TLabeledComboBox
+          Left = 612
+          Top = 33
+          Width = 145
+          Height = 21
+          Style = csDropDownList
+          ItemIndex = 1
+          TabOrder = 8
+          Text = 'Não'
+          Items.Strings = (
+            'Sim'
+            'Não')
+          ComboBoxLabel.Width = 68
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Caption = 'Inconsistência'
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 933
+    inherited BotaoSair: TSpeedButton
+      Left = 827
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 727
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 627
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 517
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 527
+    end
+  end
+  object CDSWmsRecebimentoDetalhe: TClientDataSet
+    Aggregates = <>
+    FieldDefs = <>
+    IndexDefs = <>
+    Params = <>
+    StoreDefs = True
+    AfterEdit = CDSWmsRecebimentoDetalheAfterEdit
+    Left = 712
+    Top = 264
+  end
+  object DSWmsRecebimentoDetalhe: TDataSource
+    DataSet = CDSWmsRecebimentoDetalhe
+    Left = 720
+    Top = 312
+  end
+  object ActionManager: TActionManager
+    ActionBars.ShowHints = False
+    ActionBars = <
+      item
+      end
+      item
+        Items = <
+          item
+            Caption = '-'
+          end
+          item
+            Caption = '-'
+          end
+          item
+            Caption = '-'
+          end>
+      end
+      item
+      end
+      item
+        Items = <
+          item
+            Caption = '-'
+          end>
+      end
+      item
+      end
+      item
+        Items = <
+          item
+            Caption = '-'
+          end
+          item
+            Caption = '-'
+          end>
+      end
+      item
+      end
+      item
+        Items = <
+          item
+            Action = ActionExcluirItem
+            Caption = '&Excluir Item'
+            ImageIndex = 10
+          end
+          item
+            Action = ActionIncluirItem
+            Caption = '&Incluir Item'
+            ImageIndex = 31
+          end>
+        ActionBar = ActionToolBar1
+      end
+      item
+      end
+      item
+      end
+      item
+      end
+      item
+      end>
+    DisabledImages = FDataModule.ImagensCadastrosD
+    Images = FDataModule.ImagensCadastros
+    Left = 307
+    Top = 120
+    StyleName = 'Ribbon - Silver'
+    object ActionIncluirItem: TAction
+      Category = 'Opcoes'
+      Caption = 'Incluir Item'
+      ImageIndex = 31
+      OnExecute = ActionIncluirItemExecute
+    end
+    object ActionExcluirItem: TAction
+      Category = 'Opcoes'
+      Caption = 'Excluir Item'
+      ImageIndex = 10
+      OnExecute = ActionExcluirItemExecute
+    end
+    object ActionAtualizarTotais: TAction
+      Category = 'Opcoes'
+      Caption = 'Atualizar Totais'
+      ImageIndex = 30
+    end
+  end
+end

@@ -1,0 +1,235 @@
+inherited FSocioDependente: TFSocioDependente
+  Left = 318
+  Top = 203
+  Caption = 'Dependentes dos Sócios'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 953
+        ClientWidth = 953
+        inherited PanelFiltroRapido: TPanel
+          Width = 953
+          ClientWidth = 953
+          inherited BotaoConsultar: TSpeedButton
+            Left = 819
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 652
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 953
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 248
+          Top = 9
+          Width = 979
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditDependente: TLabeledEdit[1]
+          Left = 16
+          Height = 21
+          Top = 135
+          Width = 960
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditDependente
+          EditLabel.AnchorSideRight.Control = EditDependente
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditDependente
+          EditLabel.Left = 16
+          EditLabel.Height = 13
+          EditLabel.Top = 119
+          EditLabel.Width = 960
+          EditLabel.Caption = 'Nome do Dependente:'
+          EditLabel.ParentColor = False
+          TabOrder = 2
+        end
+        object EditIdSocio: TLabeledEdit[2]
+          Left = 16
+          Height = 21
+          Top = 36
+          Width = 49
+          EditLabel.AnchorSideLeft.Control = EditIdSocio
+          EditLabel.AnchorSideRight.Control = EditIdSocio
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditIdSocio
+          EditLabel.Left = 16
+          EditLabel.Height = 13
+          EditLabel.Top = 20
+          EditLabel.Width = 49
+          EditLabel.Caption = 'Sócio [F1]:'
+          EditLabel.ParentColor = False
+          MaxLength = 100
+          TabOrder = 0
+          OnKeyUp = EditIdSocioKeyUp
+        end
+        object EditIdRelacionamento: TLabeledEdit[3]
+          Left = 16
+          Height = 21
+          Top = 84
+          Width = 49
+          EditLabel.AnchorSideLeft.Control = EditIdRelacionamento
+          EditLabel.AnchorSideRight.Control = EditIdRelacionamento
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditIdRelacionamento
+          EditLabel.Left = 16
+          EditLabel.Height = 13
+          EditLabel.Top = 68
+          EditLabel.Width = 49
+          EditLabel.Caption = 'Tipo Relacionamento [F1]:'
+          EditLabel.ParentColor = False
+          MaxLength = 100
+          TabOrder = 1
+          OnKeyUp = EditIdRelacionamentoKeyUp
+        end
+        object EditCPF: TLabeledMaskEdit[4]
+          Left = 16
+          Height = 21
+          Top = 186
+          Width = 111
+          CharCase = ecNormal
+          Color = clWhite
+          MaxLength = 14
+          TabOrder = 3
+          OnExit = EditCPFExit
+          EditMask = '###.###.###-##;0;_'
+          SpaceChar = '_'
+          MaskEditLabel.Left = 16
+          MaskEditLabel.Height = 13
+          MaskEditLabel.Top = 170
+          MaskEditLabel.Width = 37
+          MaskEditLabel.Caption = 'EditCPF'
+          MaskEditLabel.ParentColor = False
+        end
+        object EditNascimento: TLabeledDateEdit[5]
+          Left = 149
+          Height = 21
+          Top = 186
+          Width = 99
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 4
+          Text = '  /  /    '
+          DateEditLabel.Left = 149
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 170
+          DateEditLabel.Width = 59
+          DateEditLabel.Caption = 'Nascimento:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditInicioDependencia: TLabeledDateEdit[6]
+          Left = 276
+          Height = 21
+          Top = 186
+          Width = 107
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 5
+          Text = '  /  /    '
+          DateEditLabel.Left = 276
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 170
+          DateEditLabel.Width = 109
+          DateEditLabel.Caption = 'Inicio da Dependência:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditFimDependencia: TLabeledDateEdit[7]
+          Left = 412
+          Height = 21
+          Top = 186
+          Width = 107
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 6
+          Text = '  /  /    '
+          DateEditLabel.Left = 412
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 170
+          DateEditLabel.Width = 100
+          DateEditLabel.Caption = 'Fim da Dependência:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditSocio: TLabeledEdit[8]
+          Left = 71
+          Height = 21
+          Top = 36
+          Width = 905
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditSocio
+          EditLabel.AnchorSideRight.Control = EditSocio
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditSocio
+          EditLabel.Left = 71
+          EditLabel.Height = 13
+          EditLabel.Top = 20
+          EditLabel.Width = 905
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 7
+          TabStop = False
+        end
+        object EditRelacionamento: TLabeledEdit[9]
+          Left = 71
+          Height = 21
+          Top = 84
+          Width = 905
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditRelacionamento
+          EditLabel.AnchorSideRight.Control = EditRelacionamento
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditRelacionamento
+          EditLabel.Left = 71
+          EditLabel.Height = 13
+          EditLabel.Top = 68
+          EditLabel.Width = 905
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 8
+          TabStop = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+end

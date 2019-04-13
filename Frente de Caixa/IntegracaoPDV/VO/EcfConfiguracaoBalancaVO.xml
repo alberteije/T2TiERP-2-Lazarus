@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="EcfConfiguracaoBalancaVO" table="ECF_CONFIGURACAO_BALANCA" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">ECF_CONFIGURACAO_BALANCA</param>
+      </generator>
+    </id>
+
+    <property name="IdEcfConfiguracao" column="ID_ECF_CONFIGURACAO" />
+    <property name="Modelo" column="MODELO" />
+    <property name="Identificador" column="IDENTIFICADOR" />
+    <property name="HandShake" column="HAND_SHAKE" />
+    <property name="Parity" column="PARITY" />
+    <property name="StopBits" column="STOP_BITS" />
+    <property name="DataBits" column="DATA_BITS" />
+    <property name="BaudRate" column="BAUD_RATE" />
+    <property name="Porta" column="PORTA" />
+    <property name="Timeout" column="TIMEOUT" />
+    <property name="TipoConfiguracao" column="TIPO_CONFIGURACAO" />
+
+  </class>
+</t2ti-orm-mapping>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="LogImportacaoVO" table="LOG_IMPORTACAO" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">LOG_IMPORTACAO</param>
+      </generator>
+    </id>
+
+    <property name="DataImportacao" column="DATA_IMPORTACAO" />
+    <property name="LogErro" column="LOG_ERRO" />
+
+  </class>
+</t2ti-orm-mapping>

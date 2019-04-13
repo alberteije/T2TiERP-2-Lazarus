@@ -1,0 +1,45 @@
+inherited FAlmoxarifado: TFAlmoxarifado
+  Caption = 'Almoxarifado'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      ClientHeight = 1033
+      ClientWidth = 2680
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 54
+          Top = 9
+          Width = 885
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditNome: TLabeledEdit[1]
+          Left = 14
+          Height = 21
+          Top = 30
+          Width = 871
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditNome
+          EditLabel.AnchorSideRight.Control = EditNome
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditNome
+          EditLabel.Left = 14
+          EditLabel.Height = 13
+          EditLabel.Top = 14
+          EditLabel.Width = 871
+          EditLabel.Caption = 'Nome:'
+          EditLabel.ParentColor = False
+          MaxLength = 50
+          TabOrder = 0
+        end
+      end
+    end
+  end
+end

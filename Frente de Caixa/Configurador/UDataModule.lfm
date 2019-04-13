@@ -1,0 +1,77 @@
+object FDataModule: TFDataModule
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  left = 790
+  top = 206
+  Height = 195
+  HorizontalOffset = 548
+  VerticalOffset = 261
+  Width = 201
+  object ACBrECF: TACBrECF
+    Modelo = ecfSwedaSTX
+    Porta = 'COM2'
+    ReTentar = False
+    MsgAguarde = 'Aguardando a resposta da Impressora: %d segundos'
+    MsgTrabalhando = 'Impressora está trabalhando'
+    MsgRelatorio = 'Imprimindo %s  %dª Via '
+    MsgPausaRelatorio = 'Destaque a %dª via, <ENTER> proxima, %d seg.'
+    MaxLinhasBuffer = 3
+    PaginaDeCodigo = 0
+    FormMsgFonte.Color = clWindowText
+    FormMsgFonte.Height = -11
+    FormMsgFonte.Name = 'Tahoma'
+    FormMsgColor = clHighlight
+    DecimaisPreco = 2
+    MemoParams.Strings = (
+      '[Cabecalho]'
+      'LIN000=<center><b>Nome da Empresa</b></center>'
+      'LIN001=<center>Nome da Rua , 1234  -  Bairro</center>'
+      'LIN002=<center>Cidade  -  UF  -  99999-999</center>'
+      'LIN003=<center>CNPJ: 01.234.567/0001-22    IE: 012.345.678.90</center>'
+      'LIN004=<table width=100%><tr><td align=left><code>Data</code> <code>Hora</code></td><td align=right>COO: <b><code>NumCupom</code></b></td></tr></table>'
+      'LIN005=<hr>'
+      ' '
+      '[Cabecalho_Item]'
+      'LIN000=ITEM   CODIGO     DESCRICAO'
+      'LIN001=QTD         x UNITARIO       Aliq     VALOR (R$)'
+      'LIN002=<hr>'
+      'MascaraItem=III CCCCCCCCCCCCC DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDQQQQQQQQ UU x VVVVVVVVVVVVV AAAAAA TTTTTTTTTTTTT'
+      ' '
+      '[Rodape]'
+      'LIN000=<hr>'
+      'LIN001=<table width=100%><tr><td align=left><code>Data</code> <code>Hora</code></td><td align=right>Projeto ACBr: <b><code>ACBR</code></b></td></tr></table>'
+      'LIN002=<center>Obrigado Volte Sempre</center>'
+      'LIN003=<hr>'
+      ' '
+      '[Formato]'
+      'Colunas=48'
+      'HTML=1'
+      'HTML_Title_Size=2'
+      'HTML_Font=<font size="2" face="Lucida Console">'
+    )
+    Device.HandShake = hsDTR_DSR
+    ConfigBarras.MostrarCodigo = True
+    ConfigBarras.LarguraLinha = 3
+    ConfigBarras.Altura = 10
+    left = 112
+    top = 40
+  end
+  object Conexao: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = False
+    Connected = True
+    HostName = 'localhost'
+    Port = 0
+    Database = 'pafecf'
+    User = 'root'
+    Password = 'root'
+    Protocol = 'mysql'
+    LibraryLocation = 'C:\Projetos\T2Ti ERP 2.0\Lazarus\PAF\Configurador\libmySQL.dll'
+    left = 32
+    top = 33
+  end
+  object OpenDialog: TOpenDialog
+    left = 67
+    top = 128
+  end
+end

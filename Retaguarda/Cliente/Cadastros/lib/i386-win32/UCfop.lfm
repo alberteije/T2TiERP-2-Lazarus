@@ -1,0 +1,116 @@
+inherited FCfop: TFCfop
+  Left = 75
+  Top = 161
+  Width = 879
+  Caption = 'CFOP'
+  ClientWidth = 879
+  inherited PageControl: TPageControl
+    Width = 879
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      ClientHeight = 1033
+      ClientWidth = 2680
+      inherited PanelGrid: TPanel
+        Width = 1028
+        ClientWidth = 1028
+        inherited PanelFiltroRapido: TPanel
+          Width = 1028
+          ClientWidth = 1028
+          inherited BotaoConsultar: TSpeedButton
+            Left = 894
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 727
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 1028
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientWidth = 871
+      inherited PanelEdits: TPanel
+        Width = 871
+        ClientWidth = 871
+        object BevelEdits: TBevel[0]
+          Left = 7
+          Height = 259
+          Top = 10
+          Width = 850
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object MemoDescricao: TLabeledMemo[1]
+          Left = 16
+          Height = 60
+          Top = 75
+          Width = 833
+          Anchors = [akTop, akLeft, akRight]
+          ScrollBars = ssVertical
+          TabOrder = 0
+          MemoLabel.Left = 16
+          MemoLabel.Height = 13
+          MemoLabel.Top = 59
+          MemoLabel.Width = 50
+          MemoLabel.Caption = 'Descrição:'
+          MemoLabel.ParentColor = False
+        end
+        object MemoAplicacao: TLabeledMemo[2]
+          Left = 16
+          Height = 98
+          Top = 160
+          Width = 833
+          Anchors = [akTop, akLeft, akRight]
+          ScrollBars = ssVertical
+          TabOrder = 1
+          MemoLabel.Left = 16
+          MemoLabel.Height = 13
+          MemoLabel.Top = 144
+          MemoLabel.Width = 49
+          MemoLabel.Caption = 'Aplicação:'
+          MemoLabel.ParentColor = False
+        end
+        object EditCfop: TLabeledCalcEdit[3]
+          Left = 16
+          Height = 21
+          Top = 30
+          Width = 100
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 2
+          Value = 0
+          CalcEditLabel.Left = 16
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 14
+          CalcEditLabel.Width = 27
+          CalcEditLabel.Caption = 'Cfop:'
+          CalcEditLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 879
+    ClientWidth = 879
+    inherited BotaoSair: TSpeedButton
+      Left = 779
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 679
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 569
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 669
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 563
+    end
+  end
+end

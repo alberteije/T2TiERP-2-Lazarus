@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="NFe"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="14">
+      <Item1>
+        <PackageName Value="lazreport"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="ACBr_SPED"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="zcore"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="ACBr_NFe_DanfeRL"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="ACBr_NFe"/>
+      </Item5>
+      <Item6>
+        <PackageName Value="Printer4Lazarus"/>
+      </Item6>
+      <Item7>
+        <PackageName Value="rxnew"/>
+      </Item7>
+      <Item8>
+        <PackageName Value="LJGridUtilsPkg"/>
+      </Item8>
+      <Item9>
+        <PackageName Value="BrookRT"/>
+      </Item9>
+      <Item10>
+        <PackageName Value="LabeledControls"/>
+      </Item10>
+      <Item11>
+        <PackageName Value="FCL"/>
+      </Item11>
+      <Item12>
+        <PackageName Value="ACBr_Boleto"/>
+      </Item12>
+      <Item13>
+        <PackageName Value="SpkToolbarPackage"/>
+      </Item13>
+      <Item14>
+        <PackageName Value="LCL"/>
+      </Item14>
+    </RequiredPackages>
+    <Units Count="73">
+      <Unit0>
+        <Filename Value="NFe.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NFe"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="Tela\umenu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FMenu"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UMenu"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="..\Comum\DataModule\UDataModule.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FDataModule"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="UDataModule"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\Comum\Tipos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Tipos"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="..\Comum\Tela\UBase.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FBase"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UBase"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="..\Comum\SessaoUsuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SessaoUsuario"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\..\Comum\VO\EmpresaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EmpresaVO"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\..\Comum\VO\UsuarioVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UsuarioVO"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\..\Comum\VO\VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="VO"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\..\Comum\Biblioteca.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Biblioteca"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="..\Comum\Tela\UTela.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FTela"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UTela"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="..\Comum\Tela\UFiltro.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FFiltro"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UFiltro"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="..\..\Comum\Constantes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Constantes"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="..\Comum\Tela\UTelaCadastro.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FTelaCadastro"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UTelaCadastro"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="..\Comum\Tela\ULookup.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FLookup"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ULookup"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="..\..\Comum\VO\ProdutoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ProdutoVO"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="..\..\Comum\VO\ContadorVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ContadorVO"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="..\Comum\DataModule\UDataModuleNFe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FDataModuleNFe"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="UDataModuleNFe"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="Tela\UNFe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FNFe"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UNFe"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="Controller\NFeCalculoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NFeCalculoController"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="..\..\Comum\VO\NfeAcessoXmlVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeAcessoXmlVO"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="..\..\Comum\VO\NfeCabecalhoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeCabecalhoVO"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="..\..\Comum\VO\NfeCanaDeducoesSafraVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeCanaDeducoesSafraVO"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="..\..\Comum\VO\NfeCanaFornecimentoDiarioVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeCanaFornecimentoDiarioVO"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="..\..\Comum\VO\NfeCanaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeCanaVO"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="..\..\Comum\VO\NfeConfiguracaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeConfiguracaoVO"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="..\..\Comum\VO\NfeCteReferenciadoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeCteReferenciadoVO"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="..\..\Comum\VO\NfeCupomFiscalReferenciadoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeCupomFiscalReferenciadoVO"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="..\..\Comum\VO\NfeDeclaracaoImportacaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDeclaracaoImportacaoVO"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="..\..\Comum\VO\NfeDestinatarioVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDestinatarioVO"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="..\..\Comum\VO\NfeDetalheImpostoCofinsVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetalheImpostoCofinsVO"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="..\..\Comum\VO\NfeDetalheImpostoIcmsVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetalheImpostoIcmsVO"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="..\..\Comum\VO\NfeDetalheImpostoIiVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetalheImpostoIiVO"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="..\..\Comum\VO\NfeDetalheImpostoIpiVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetalheImpostoIpiVO"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="..\..\Comum\VO\NfeDetalheImpostoIssqnVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetalheImpostoIssqnVO"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="..\..\Comum\VO\NfeDetalheImpostoPisVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetalheImpostoPisVO"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="..\..\Comum\VO\NfeDetalheVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetalheVO"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="..\..\Comum\VO\NfeDetEspecificoArmamentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetEspecificoArmamentoVO"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="..\..\Comum\VO\NfeDetEspecificoCombustivelVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetEspecificoCombustivelVO"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="..\..\Comum\VO\NfeDetEspecificoMedicamentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetEspecificoMedicamentoVO"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="..\..\Comum\VO\NfeDetEspecificoVeiculoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetEspecificoVeiculoVO"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="..\..\Comum\VO\NfeDuplicataVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDuplicataVO"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="..\..\Comum\VO\NfeEmitenteVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeEmitenteVO"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="..\..\Comum\VO\NfeExportacaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeExportacaoVO"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="..\..\Comum\VO\NfeFaturaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeFaturaVO"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="..\..\Comum\VO\NfeFormaPagamentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeFormaPagamentoVO"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="..\..\Comum\VO\NfeImportacaoDetalheVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeImportacaoDetalheVO"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="..\..\Comum\VO\NfeLocalEntregaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeLocalEntregaVO"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="..\..\Comum\VO\NfeLocalRetiradaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeLocalRetiradaVO"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="..\..\Comum\VO\NfeNfReferenciadaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeNfReferenciadaVO"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="..\..\Comum\VO\NfeNumeroVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeNumeroVO"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="..\..\Comum\VO\NfeProcessoReferenciadoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeProcessoReferenciadoVO"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="..\..\Comum\VO\NfeProdRuralReferenciadaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeProdRuralReferenciadaVO"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="..\..\Comum\VO\NfeReferenciadaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeReferenciadaVO"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="..\..\Comum\VO\NfeTransporteReboqueVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeTransporteReboqueVO"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="..\..\Comum\VO\NfeTransporteVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeTransporteVO"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="..\..\Comum\VO\NfeTransporteVolumeLacreVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeTransporteVolumeLacreVO"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="..\..\Comum\VO\NfeTransporteVolumeVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeTransporteVolumeVO"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="..\..\Comum\VO\ViewTributacaoCofinsVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTributacaoCofinsVO"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="..\..\Comum\VO\ViewTributacaoIcmsCustomVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTributacaoIcmsCustomVO"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="..\..\Comum\VO\ViewTributacaoIcmsVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTributacaoIcmsVO"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="..\..\Comum\VO\ViewTributacaoIpiVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTributacaoIpiVO"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="..\..\Comum\VO\ViewTributacaoIssVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTributacaoIssVO"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="..\..\Comum\VO\ViewTributacaoPisVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTributacaoPisVO"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="..\..\Comum\VO\ViewPessoaClienteVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewPessoaClienteVO"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="..\..\Comum\VO\ViewPessoaTransportadoraVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewPessoaTransportadoraVO"/>
+      </Unit65>
+      <Unit66>
+        <Filename Value="..\..\Comum\VO\VendaCabecalhoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="VendaCabecalhoVO"/>
+      </Unit66>
+      <Unit67>
+        <Filename Value="..\..\Comum\VO\TributOperacaoFiscalVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributOperacaoFiscalVO"/>
+      </Unit67>
+      <Unit68>
+        <Filename Value="..\..\Comum\VO\EmpresaEnderecoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EmpresaEnderecoVO"/>
+      </Unit68>
+      <Unit69>
+        <Filename Value="..\..\Comum\VO\FinLancamentoReceberVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FinLancamentoReceberVO"/>
+      </Unit69>
+      <Unit70>
+        <Filename Value="..\..\Comum\VO\FinLctoReceberNtFinanceiraVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FinLctoReceberNtFinanceiraVO"/>
+      </Unit70>
+      <Unit71>
+        <Filename Value="..\..\Comum\VO\FinParcelaReceberVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FinParcelaReceberVO"/>
+      </Unit71>
+      <Unit72>
+        <Filename Value="..\..\Comum\VO\FinParcelaRecebimentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FinParcelaRecebimentoVO"/>
+      </Unit72>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="NFe"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="Tela;..\Comum\DataModule;..\Comum;..\Comum\Tela;..\..\Comum\VO;..\..\Comum;Controller;C:\Componentes\Lazarus\ACBr2\Fontes\ACBrBoleto\;C:\Componentes\Lazarus\ACBr2\Fontes\ACBrBoleto\FC\Fortes\;C:\Componentes\Lazarus\Fortes\fortesreport-ce\trunk\Binary\libLaz\i386-win32\"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerMessages>
+        <MsgFileName Value=""/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

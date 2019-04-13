@@ -1,0 +1,118 @@
+inherited FPatrimTaxaDepreciacao: TFPatrimTaxaDepreciacao
+  Tag = 1
+  Left = 296
+  Top = 185
+  Caption = 'Taxa de Depreciação'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 980
+        ClientWidth = 980
+        inherited PanelFiltroRapido: TPanel
+          Width = 980
+          ClientWidth = 980
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 679
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 980
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 10
+          Height = 193
+          Top = 9
+          Width = 977
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditNcm: TLabeledEdit[1]
+          Left = 18
+          Height = 21
+          Top = 32
+          Width = 90
+          Constraints.MinWidth = 90
+          EditLabel.AnchorSideLeft.Control = EditNcm
+          EditLabel.AnchorSideRight.Control = EditNcm
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditNcm
+          EditLabel.Left = 18
+          EditLabel.Height = 13
+          EditLabel.Top = 16
+          EditLabel.Width = 90
+          EditLabel.Caption = 'Ncm:'
+          EditLabel.ParentColor = False
+          TabOrder = 0
+        end
+        object MemoBem: TLabeledMemo[2]
+          Left = 18
+          Height = 72
+          Top = 77
+          Width = 958
+          Anchors = [akTop, akLeft, akRight]
+          TabOrder = 1
+          MemoLabel.Left = 18
+          MemoLabel.Height = 13
+          MemoLabel.Top = 61
+          MemoLabel.Width = 24
+          MemoLabel.Caption = 'Bem:'
+          MemoLabel.ParentColor = False
+        end
+        object EditVida: TLabeledCalcEdit[3]
+          Left = 18
+          Height = 21
+          Top = 171
+          Width = 121
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 2
+          Value = 0
+          CalcEditLabel.Left = 18
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 155
+          CalcEditLabel.Width = 24
+          CalcEditLabel.Caption = 'Vida:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditTaxa: TLabeledCalcEdit[4]
+          Left = 145
+          Height = 21
+          Top = 171
+          Width = 121
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 3
+          Value = 0
+          CalcEditLabel.Left = 145
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 155
+          CalcEditLabel.Width = 28
+          CalcEditLabel.Caption = 'Taxa:'
+          CalcEditLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+end

@@ -1,0 +1,356 @@
+inherited FHistoricoReajuste: TFHistoricoReajuste
+  Tag = 1
+  Left = 138
+  Top = 183
+  Caption = 'Reajuste de Preços'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelGrid: TPanel
+        inherited PanelFiltroRapido: TPanel
+          inherited BotaoConsultar: TSpeedButton
+            Left = 866
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 699
+          end
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 54
+          Top = 41
+          Width = 978
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object GroupBoxParcelas: TGroupBox[1]
+          Left = 8
+          Height = 318
+          Top = 101
+          Width = 978
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          Caption = 'Itens'
+          ClientHeight = 300
+          ClientWidth = 974
+          TabOrder = 5
+          object GridItens: TRxDBGrid
+            Left = 0
+            Height = 300
+            Top = 0
+            Width = 974
+            TitleButtons = True
+            AutoSort = True
+            Columns = <            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'Id Produto'
+                Title.Orientation = toHorizontal
+                FieldName = 'ID_PRODUTO'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'Nome Produto'
+                Title.Orientation = toHorizontal
+                Width = 500
+                FieldName = 'PRODUTO.NOME'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'Valor Original'
+                Title.Orientation = toHorizontal
+                FieldName = 'VALOR_ORIGINAL'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end            
+              item
+                Title.Alignment = taCenter
+                Title.Caption = 'Valor Reajuste'
+                Title.Orientation = toHorizontal
+                FieldName = 'VALOR_REAJUSTE'
+                Filter.DropDownRows = 0
+                Filter.EmptyValue = '(Empty)'
+                Filter.EmptyFont.Style = [fsItalic]
+                Filter.ItemIndex = -1
+                EditButtons = <>
+              end>
+            KeyStrokes = <            
+              item
+                Command = rxgcShowFindDlg
+                ShortCut = 16454
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowColumnsDlg
+                ShortCut = 16471
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowFilterDlg
+                ShortCut = 16468
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowSortDlg
+                ShortCut = 16467
+                Enabled = True
+              end            
+              item
+                Command = rxgcShowQuickFilter
+                ShortCut = 16465
+                Enabled = True
+              end            
+              item
+                Command = rxgcHideQuickFilter
+                ShortCut = 16456
+                Enabled = True
+              end            
+              item
+                Command = rxgcSelectAll
+                ShortCut = 16449
+                Enabled = True
+              end            
+              item
+                Command = rxgcDeSelectAll
+                ShortCut = 16429
+                Enabled = True
+              end            
+              item
+                Command = rxgcInvertSelection
+                ShortCut = 16426
+                Enabled = True
+              end            
+              item
+                Command = rxgcOptimizeColumnsWidth
+                ShortCut = 16427
+                Enabled = True
+              end>
+            OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+            Align = alClient
+            Color = clWindow
+            DrawFullLine = False
+            FocusColor = clRed
+            SelectedColor = clHighlight
+            GridLineStyle = psSolid
+            DataSource = DSEstoqueReajusteDetalhe
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgHeaderPushedLook]
+            ParentColor = False
+            ReadOnly = True
+            TabOrder = 0
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -11
+            TitleFont.Name = 'Tahoma'
+          end
+        end
+        object ActionToolBarEdits: TToolPanel[2]
+          Left = 4
+          Height = 31
+          Top = 4
+          Width = 992
+          Items = <          
+            item
+              Action = ActionRealizarCalculos
+              Visible = True
+              Left = 871
+              Height = 21
+              Top = 5
+              Width = 116
+              ShowCaption = True
+            end          
+            item
+              Action = ActionSelecionarItens
+              Visible = True
+              Left = 761
+              Height = 21
+              Top = 5
+              Width = 110
+              ShowCaption = True
+            end>
+          ImageList = FDataModule.ImagensCadastros
+          ToolBarStyle = tbsWindowsXP
+          Options = [tpFlatBtns]
+          ButtonAllign = tbaRignt
+          Align = alTop
+          BorderWidth = 4
+          ClientHeight = 31
+          ClientWidth = 992
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          ParentFont = False
+          TabOrder = 6
+        end
+        object EditIdColaborador: TLabeledCalcEdit[3]
+          Left = 14
+          Height = 21
+          Top = 64
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 0
+          Value = 0
+          OnKeyUp = EditIdColaboradorKeyUp
+          CalcEditLabel.Left = 14
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 48
+          CalcEditLabel.Width = 86
+          CalcEditLabel.Caption = 'Colaborador [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditColaborador: TLabeledEdit[4]
+          Left = 75
+          Height = 21
+          Top = 64
+          Width = 497
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditColaborador
+          EditLabel.AnchorSideRight.Control = EditColaborador
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditColaborador
+          EditLabel.Left = 75
+          EditLabel.Height = 13
+          EditLabel.Top = 48
+          EditLabel.Width = 497
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 1
+          TabStop = False
+        end
+        object EditDataReajuste: TLabeledDateEdit[5]
+          Left = 856
+          Height = 21
+          Top = 64
+          Width = 121
+          Anchors = [akTop, akRight]
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 4
+          Text = '  /  /    '
+          DateEditLabel.Left = 856
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 48
+          DateEditLabel.Width = 73
+          DateEditLabel.Caption = 'Data Reajuste:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditPorcentagemReajuste: TLabeledCalcEdit[6]
+          Left = 729
+          Height = 21
+          Top = 64
+          Width = 121
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          Anchors = [akTop, akRight]
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 3
+          Value = 0
+          CalcEditLabel.Left = 729
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 48
+          CalcEditLabel.Width = 28
+          CalcEditLabel.Caption = 'Taxa:'
+          CalcEditLabel.ParentColor = False
+        end
+        object ComboBoxTipoReajuste: TLabeledComboBox[7]
+          Left = 578
+          Height = 21
+          Top = 64
+          Width = 145
+          Anchors = [akTop, akRight]
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            'A - Aumentar'
+            'D - Diminuir'
+          )
+          Style = csDropDownList
+          TabOrder = 2
+          Text = 'A - Aumentar'
+          ComboBoxLabel.Left = 578
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 48
+          ComboBoxLabel.Width = 70
+          ComboBoxLabel.Caption = 'Tipo Reajuste:'
+          ComboBoxLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+  inherited PopupMenuExportar: TPopupMenu
+    left = 296
+  end
+  inherited PopupMenuAtalhosBotoesTela: TPopupMenu
+    left = 380
+  end
+  inherited PopupMenuAtalhosBotoesTelaCadastro: TPopupMenu
+    left = 496
+  end
+  object DSEstoqueReajusteDetalhe: TDatasource[5]
+    DataSet = CDSEstoqueReajusteDetalhe
+    left = 836
+    top = 367
+  end
+  object ActionManager: TActionList[6]
+    Images = FDataModule.ImagensCadastros
+    left = 851
+    top = 88
+    object ActionSelecionarItens: TAction
+      Category = 'HistoricoReajuste'
+      Caption = 'Selecionar Itens'
+      ImageIndex = 9
+      OnExecute = ActionSelecionarItensExecute
+    end
+    object ActionRealizarCalculos: TAction
+      Category = 'HistoricoReajuste'
+      Caption = 'Realizar Cálculos'
+      ImageIndex = 6
+      OnExecute = ActionRealizarCalculosExecute
+    end
+  end
+  object CDSEstoqueReajusteDetalhe: TBufDataset[7]
+    FieldDefs = <>
+    left = 824
+    top = 303
+  end
+end

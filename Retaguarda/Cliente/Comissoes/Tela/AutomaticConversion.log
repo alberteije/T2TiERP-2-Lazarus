@@ -1,0 +1,75 @@
+* Convertendo arquivo C:\Projetos\T2Ti ERP 2.0\Lazarus\Retaguarda\Cliente\Comissoes\Tela\UComissaoObjetivo.pas *
+Codificação alterada de cp1252 para UTF-8
+Unidade "ShellApi" removida na seção "uses".
+Unidade "Windows" substituída com "LCLIntf, LCLType, LMessages" na seção "uses".
+* Reparando arquivo formulário C:\Projetos\T2Ti ERP 2.0\Lazarus\Retaguarda\Cliente\Comissoes\Tela\UComissaoObjetivo.lfm *
+Removed property "ExplicitLeft".
+Removed property "ExplicitLeft".
+Removed property "ExplicitLeft".
+Removed property "ExplicitLeft".
+Removed property "ExplicitLeft".
+Removed property "ExplicitWidth".
+Removed property "DecimalPlacesAlwaysShown".
+Removed property "DecimalPlacesAlwaysShown".
+Removed property "DecimalPlacesAlwaysShown".
+Removed property "DecimalPlacesAlwaysShown".
+Removed property "DecimalPlacesAlwaysShown".
+Removed property "ShowButton".
+Removed property "DecimalPlacesAlwaysShown".
+Removed property "ShowButton".
+Removed property "ExplicitHeight".
+Removed property "ExplicitWidth".
+Removed property "ExplicitHeight".
+Removed property "ExplicitWidth".
+Removed property "ExplicitTop".
+Removed property "ExplicitLeft".
+Removed property "ExplicitWidth".
+Removed property "ExplicitLeft".
+Removed property "ExplicitWidth".
+Removed property "ExplicitTop".
+Removed property "ExplicitHeight".
+Removed property "ExplicitWidth".
+Removed property "ExplicitHeight".
+Removed property "ExplicitWidth".
+Removed property "ExplicitTop".
+Removed property "ExplicitLeft".
+Removed property "ExplicitHeight".
+Removed property "ExplicitWidth".
+Removed property "TextHeight".
+Removed property "ExplicitHeight".
+Removed property "ExplicitWidth".
+Changed Left coord of TSpeedButton from "459" to "457" inside TPanel.
+Changed Left coord of TSpeedButton from "449" to "447" inside TPanel.
+Changed Left coord of TSpeedButton from "559" to "557" inside TPanel.
+Changed Left coord of TSpeedButton from "659" to "657" inside TPanel.
+Changed Left coord of TSpeedButton from "759" to "757" inside TPanel.
+Changed Top coord of TLabeledCalcEdit from "254" to "252" inside TPanel.
+Changed Left coord of TLabeledCalcEdit from "505" to "503" inside TPanel.
+Changed Top coord of TLabeledCalcEdit from "254" to "252" inside TPanel.
+Changed Left coord of TLabeledCalcEdit from "389" to "387" inside TPanel.
+Changed Top coord of TLabeledCalcEdit from "254" to "252" inside TPanel.
+Changed Left coord of TLabeledCalcEdit from "273" to "271" inside TPanel.
+Changed Top coord of TLabeledCalcEdit from "254" to "252" inside TPanel.
+Changed Left coord of TLabeledCalcEdit from "157" to "155" inside TPanel.
+Changed Top coord of TLabeledComboBox from "254" to "252" inside TPanel.
+Changed Left coord of TLabeledComboBox from "19" to "17" inside TPanel.
+Changed Top coord of TLabeledEdit from "77" to "75" inside TPanel.
+Changed Left coord of TLabeledEdit from "80" to "78" inside TPanel.
+Changed Top coord of TLabeledCalcEdit from "77" to "75" inside TPanel.
+Changed Left coord of TLabeledCalcEdit from "19" to "17" inside TPanel.
+Changed Top coord of TLabeledMemo from "168" to "166" inside TPanel.
+Changed Left coord of TLabeledMemo from "19" to "17" inside TPanel.
+Changed Top coord of TLabeledEdit from "123" to "121" inside TPanel.
+Changed Left coord of TLabeledEdit from "19" to "17" inside TPanel.
+Changed Top coord of TLabeledEdit from "32" to "30" inside TPanel.
+Changed Left coord of TLabeledEdit from "161" to "159" inside TPanel.
+Changed Top coord of TLabeledCalcEdit from "32" to "30" inside TPanel.
+Changed Left coord of TLabeledCalcEdit from "100" to "98" inside TPanel.
+Changed Top coord of TLabeledEdit from "32" to "30" inside TPanel.
+Changed Left coord of TLabeledEdit from "19" to "17" inside TPanel.
+Changed Top coord of TBevel from "11" to "9" inside TPanel.
+Changed Left coord of TBevel from "10" to "8" inside TPanel.
+Changed Left coord of TSpeedButton from "723" to "721" inside TPanel.
+Changed Top coord of TPanel from "395" to "393" inside TPanel.
+* Reparando unidades usadas para o arquivo C:\Projetos\T2Ti ERP 2.0\Lazarus\Retaguarda\Cliente\Comissoes\Tela\UComissaoObjetivo.pas *
+Conversão Pronta.

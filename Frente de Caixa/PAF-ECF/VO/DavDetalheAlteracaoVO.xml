@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="DavDetalheAlteracaoVO" table="DAV_DETALHE_ALTERACAO" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">DAV_DETALHE_ALTERACAO</param>
+      </generator>
+    </id>
+
+    <property name="IdDavDetalhe" column="ID_DAV_DETALHE" />
+    <property name="DataAlteracao" column="DATA_ALTERACAO" />
+    <property name="HoraAlteracao" column="HORA_ALTERACAO" />
+    <property name="TipoAlteracao" column="TIPO_ALTERACAO" />
+    <property name="Objeto" column="OBJETO" />
+
+  </class>
+</t2ti-orm-mapping>

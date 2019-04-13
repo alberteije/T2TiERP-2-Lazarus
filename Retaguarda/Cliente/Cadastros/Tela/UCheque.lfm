@@ -1,0 +1,125 @@
+inherited FCheque: TFCheque
+  inherited PageControl: TPageControl
+    Width = 892
+    ActivePage = PaginaEdits
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 884
+        inherited Grid: TJvDBUltimGrid
+          Width = 884
+        end
+        inherited PanelFiltroRapido: TPanel
+          Width = 884
+          inherited BotaoConsultar: TSpeedButton
+            Left = 750
+            ExplicitLeft = 825
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 583
+            ExplicitWidth = 583
+          end
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      inherited PanelEdits: TPanel
+        Width = 884
+        object BevelEdits: TBevel
+          Left = 8
+          Top = 8
+          Width = 861
+          Height = 101
+          Anchors = [akLeft, akTop, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditTalonarioCheque: TLabeledEdit
+          Left = 77
+          Top = 30
+          Width = 784
+          Height = 21
+          TabStop = False
+          Anchors = [akLeft, akTop, akRight]
+          Color = clInfoBk
+          EditLabel.Width = 6
+          EditLabel.Height = 13
+          EditLabel.Caption = '  '
+          ReadOnly = True
+          TabOrder = 1
+        end
+        object EditDataStatus: TLabeledDateEdit
+          Left = 301
+          Top = 75
+          Width = 137
+          Height = 21
+          ShowNullDate = False
+          TabOrder = 4
+          DateEditLabel.Width = 61
+          DateEditLabel.Height = 13
+          DateEditLabel.Caption = 'Data Status:'
+        end
+        object EditIdTalonarioCheque: TLabeledCalcEdit
+          Left = 16
+          Top = 30
+          Width = 61
+          Height = 21
+          ShowButton = False
+          TabOrder = 0
+          DecimalPlacesAlwaysShown = False
+          OnKeyUp = EditIdTalonarioChequeKeyUp
+          CalcEditLabel.Width = 111
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Talonário Cheque [F1]:'
+        end
+        object EditNumero: TLabeledCalcEdit
+          Left = 16
+          Top = 75
+          Width = 106
+          Height = 21
+          ShowButton = False
+          TabOrder = 2
+          DecimalPlacesAlwaysShown = False
+          CalcEditLabel.Width = 41
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Número:'
+        end
+        object ComboboxStatusCheque: TLabeledComboBox
+          Left = 128
+          Top = 75
+          Width = 167
+          Height = 21
+          Style = csDropDownList
+          ItemIndex = 0
+          TabOrder = 3
+          Text = 'E - Em Ser'
+          Items.Strings = (
+            'E - Em Ser'
+            'B - Baixado'
+            'U - Utilizado'
+            'C - Compensado'
+            'N - Cancelado')
+          ComboBoxLabel.Width = 35
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Caption = 'Status:'
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 892
+    inherited BotaoSair: TSpeedButton
+      Left = 786
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 686
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 576
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 676
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 476
+    end
+  end
+end

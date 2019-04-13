@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <Flags>
+        <MainUnitHasUsesSectionForAllUnits Value="False"/>
+        <MainUnitHasCreateFormStatements Value="False"/>
+        <MainUnitHasTitleStatement Value="False"/>
+      </Flags>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="NFCe"/>
+      <UseAppBundle Value="False"/>
+      <ResourceType Value="res"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="15">
+      <Item1>
+        <PackageName Value="ACBr_NFe2"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="ACBr_NFe2_DanfeRL"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="LabeledControls"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="ACBrComum"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="MemDSLaz"/>
+      </Item5>
+      <Item6>
+        <PackageName Value="FCL"/>
+      </Item6>
+      <Item7>
+        <PackageName Value="ACBr_PAF"/>
+      </Item7>
+      <Item8>
+        <PackageName Value="ACBr_SPED"/>
+      </Item8>
+      <Item9>
+        <PackageName Value="ACBr_Sintegra"/>
+      </Item9>
+      <Item10>
+        <PackageName Value="zcomponent"/>
+      </Item10>
+      <Item11>
+        <PackageName Value="ACBrSerial"/>
+      </Item11>
+      <Item12>
+        <PackageName Value="rxnew"/>
+      </Item12>
+      <Item13>
+        <PackageName Value="ACBrDiversos"/>
+      </Item13>
+      <Item14>
+        <PackageName Value="ACBr_TEFD"/>
+      </Item14>
+      <Item15>
+        <PackageName Value="LCL"/>
+      </Item15>
+    </RequiredPackages>
+    <Units Count="77">
+      <Unit0>
+        <Filename Value="NFCe.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="VO\CfopVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="CfopVO"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="VO\DAVDetalheVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DavDetalheVO"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="Controller\ProdutoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ProdutoController"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="Controller\VendaController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="VendaController"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="Tela\UCaixa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FCaixa"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UCaixa"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="Tela\UDescontoAcrescimo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FDescontoAcrescimo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UDescontoAcrescimo"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="Tela\UEfetuaPagamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FEfetuaPagamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UEfetuaPagamento"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="Tela\UIdentificaCliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FIdentificaCliente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UIdentificaCliente"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="Tela\UImportaCliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FImportaCliente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UImportaCliente"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="Tela\UImportaNumero.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FImportaNumero"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UImportaNumero"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="Tela\UIniciaMovimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FIniciaMovimento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UIniciaMovimento"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="Tela\UMovimentoAberto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FMovimentoAberto"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UMovimentoAberto"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="Tela\UValorReal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FValorReal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UValorReal"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="Tela\UImportaProduto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FImportaProduto"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UImportaProduto"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="Util\Biblioteca.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Biblioteca"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="Controller\DAVController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DAVController"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="Tela\ULoginGerenteSupervisor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FLoginGerenteSupervisor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ULoginGerenteSupervisor"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="Util\Constantes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Constantes"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="Tela\UFechaEfetuaPagamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FFechaEfetuaPagamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UFechaEfetuaPagamento"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="Tela\UParcelamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FParcelamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UParcelamento"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="Tela\UEncerraMovimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FEncerraMovimento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UEncerraMovimento"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="VO\DavCabecalhoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DavCabecalhoVO"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="VO\UnidadeProdutoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnidadeProdutoVO"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="Tela\UBase.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FBase"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UBase"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="Util\SessaoUsuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SessaoUsuario"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="Util\Tipos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Tipos"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="VO\VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="VO"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="Controller\Controller.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Controller"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="DataModule\UDataModule.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FDataModule"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="UDataModule"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="Util\T2TiORM.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="T2TiORM"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="Controller\NfceTurnoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfceTurnoController"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="Controller\NfeFormaPagamentoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeFormaPagamentoController"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="Controller\NfceTipoPagamentoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfceTipoPagamentoController"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="Controller\NfceSangriaController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfceSangriaController"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="Controller\NfceSuprimentoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfceSuprimentoController"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="Controller\NfceConfiguracaoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfceConfiguracaoController"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="Controller\NfceFechamentoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfceFechamentoController"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="Controller\NfceMovimentoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfceMovimentoController"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="Controller\NfceOperadorController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfceOperadorController"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="VO\EmpresaEnderecoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EmpresaEnderecoVO"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="VO\EmpresaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EmpresaVO"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="VO\FinLancamentoReceberVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FinLancamentoReceberVO"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="VO\FinParcelaReceberVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FinParcelaReceberVO"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="VO\FiscalNotaFiscalEntradaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FiscalNotaFiscalEntradaVO"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="VO\NfceCaixaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfceCaixaVO"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="VO\NfceConfiguracaoBalancaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfceConfiguracaoBalancaVO"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="VO\NfceConfiguracaoLeitorSerVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfceConfiguracaoLeitorSerVO"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="VO\NfceConfiguracaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfceConfiguracaoVO"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="VO\NfceFechamentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfceFechamentoVO"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="VO\NfceMovimentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfceMovimentoVO"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="VO\NfceOperadorVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfceOperadorVO"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="VO\NfcePosicaoComponentesVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfcePosicaoComponentesVO"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="VO\NfceResolucaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfceResolucaoVO"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="VO\NfceSangriaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfceSangriaVO"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="VO\NfceSuprimentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfceSuprimentoVO"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="VO\NfceTipoPagamentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfceTipoPagamentoVO"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="VO\NfceTurnoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfceTurnoVO"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="VO\NfeConfiguracaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeConfiguracaoVO"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="VO\NfeDestinatarioVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDestinatarioVO"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="VO\NfeDetalheImpostoIcmsVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetalheImpostoIcmsVO"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="VO\NfeDetalheVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetalheVO"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="VO\NfeFormaPagamentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeFormaPagamentoVO"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="VO\NfeNumeroVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeNumeroVO"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="VO\ProdutoLoteVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ProdutoLoteVO"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="VO\ProdutoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ProdutoVO"/>
+      </Unit65>
+      <Unit66>
+        <Filename Value="VO\TributOperacaoFiscalVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributOperacaoFiscalVO"/>
+      </Unit66>
+      <Unit67>
+        <Filename Value="VO\VendedorVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="VendedorVO"/>
+      </Unit67>
+      <Unit68>
+        <Filename Value="VO\ViewNfceClienteVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewNfceClienteVO"/>
+      </Unit68>
+      <Unit69>
+        <Filename Value="Controller\ViewNfceClienteController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewNfceClienteController"/>
+      </Unit69>
+      <Unit70>
+        <Filename Value="Controller\VendedorController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="VendedorController"/>
+      </Unit70>
+      <Unit71>
+        <Filename Value="VO\NfeCabecalhoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeCabecalhoVO"/>
+      </Unit71>
+      <Unit72>
+        <Filename Value="Controller\NfeNumeroController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeNumeroController"/>
+      </Unit72>
+      <Unit73>
+        <Filename Value="Controller\NfeConfiguracaoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeConfiguracaoController"/>
+      </Unit73>
+      <Unit74>
+        <Filename Value="Controller\FinLancamentoReceberController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FinLancamentoReceberController"/>
+      </Unit74>
+      <Unit75>
+        <Filename Value="Controller\ControleEstoqueController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ControleEstoqueController"/>
+      </Unit75>
+      <Unit76>
+        <Filename Value="Tela\UListaNfce.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FListaNfce"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UListaNfce"/>
+      </Unit76>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <SearchPaths>
+      <IncludeFiles Value="VO;Controller;$(ProjOutDir)"/>
+      <OtherUnitFiles Value="VO;Controller;Tela;Util;DataModule"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <SyntaxMode Value="Delphi"/>
+      </SyntaxOptions>
+    </Parsing>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerMessages>
+        <MsgFileName Value=""/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="8">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+      <Item4>
+        <Name Value="ESynaSerError"/>
+      </Item4>
+      <Item5>
+        <Name Value="EClassNotFound"/>
+      </Item5>
+      <Item6>
+        <Name Value="EACBrECFSemResposta"/>
+      </Item6>
+      <Item7>
+        <Name Value="Exception"/>
+      </Item7>
+      <Item8>
+        <Name Value="EACBrTEFDGPNaoResponde"/>
+      </Item8>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

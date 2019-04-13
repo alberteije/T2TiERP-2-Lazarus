@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="ViewTotalPagamentoMovimentoVO" table="VIEW_TOTAL_PAGAMENTO_MOVIMENTO" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">VIEW_TOTAL_PAGAMENTO_MOVIMENTO</param>
+      </generator>
+    </id>
+
+    <property name="IdEcfMovimento" column="ID_ECF_MOVIMENTO" />
+    <property name="Descricao" column="DESCRICAO" />
+    <property name="ValorApurado" column="VALOR_APURADO" />
+
+  </class>
+</t2ti-orm-mapping>

@@ -1,0 +1,321 @@
+inherited FGuiasAcumuladas: TFGuiasAcumuladas
+  Tag = 1
+  Left = 353
+  Top = 198
+  Caption = 'Guias Acumuladas'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 953
+        ClientWidth = 953
+        inherited PanelFiltroRapido: TPanel
+          Width = 953
+          ClientWidth = 953
+          inherited BotaoConsultar: TSpeedButton
+            Left = 819
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 652
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 953
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 278
+          Top = 9
+          Width = 982
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object GroupBox1: TGroupBox[1]
+          Left = 16
+          Height = 109
+          Top = 18
+          Width = 964
+          Anchors = [akTop, akLeft, akRight]
+          Caption = 'GPS'
+          ClientHeight = 91
+          ClientWidth = 960
+          TabOrder = 0
+          object ComboBoxGpsTipo: TLabeledComboBox
+            Left = 8
+            Height = 21
+            Top = 18
+            Width = 849
+            Anchors = [akTop, akLeft, akRight]
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              '1 - emite GPS de apenas uma filial (serviços que representam a própria empresa, um tomador de serviço ou obra por empreitada parcial) '
+              '2 - emite GPS somente de um serviço (obra própria/empreitada total) '
+              '3 - emite GPS apenas de uma filial referente aos cooperados (tomadores de serviço de cooperativa de trabalho)'
+            )
+            Style = csDropDownList
+            TabOrder = 0
+            Text = '1 - emite GPS de apenas uma filial (serviços que representam a própria empresa, um tomador de serviço ou obra por empreitada parcial) '
+            ComboBoxLabel.Left = 8
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 2
+            ComboBoxLabel.Width = 24
+            ComboBoxLabel.Caption = 'Tipo:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object EditGpsValorInss: TLabeledCalcEdit
+            Left = 8
+            Height = 21
+            Top = 63
+            Width = 121
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 2
+            Value = 0
+            CalcEditLabel.Left = 8
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 47
+            CalcEditLabel.Width = 54
+            CalcEditLabel.Caption = 'Valor INSS:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditGpsCompetencia: TLabeledMaskEdit
+            Left = 863
+            Height = 21
+            Top = 19
+            Width = 86
+            Anchors = [akTop, akRight]
+            CharCase = ecNormal
+            MaxLength = 7
+            TabOrder = 1
+            EditMask = '##/####;1;_'
+            Text = '  /    '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 863
+            MaskEditLabel.Height = 13
+            MaskEditLabel.Top = 3
+            MaskEditLabel.Width = 66
+            MaskEditLabel.Caption = 'Competencia:'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditGpsValorOutrasEntidades: TLabeledCalcEdit
+            Left = 135
+            Height = 21
+            Top = 63
+            Width = 121
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 3
+            Value = 0
+            CalcEditLabel.Left = 135
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 47
+            CalcEditLabel.Width = 114
+            CalcEditLabel.Caption = 'Valor Outras Entidades:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditGpsDataPagamento: TLabeledDateEdit
+            Left = 262
+            Height = 21
+            Top = 63
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 4
+            Text = '  /  /    '
+            DateEditLabel.Left = 262
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 47
+            DateEditLabel.Width = 84
+            DateEditLabel.Caption = 'Data Pagamento:'
+            DateEditLabel.ParentColor = False
+          end
+        end
+        object GroupBox2: TGroupBox[2]
+          Left = 16
+          Height = 69
+          Top = 133
+          Width = 964
+          Anchors = [akTop, akLeft, akRight]
+          Caption = 'IRRF'
+          ClientHeight = 51
+          ClientWidth = 960
+          TabOrder = 1
+          object EditIrrfCompetencia: TLabeledMaskEdit
+            Left = 8
+            Height = 21
+            Top = 18
+            Width = 86
+            CharCase = ecNormal
+            MaxLength = 7
+            TabOrder = 0
+            EditMask = '##/####;1;_'
+            Text = '  /    '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 8
+            MaskEditLabel.Height = 13
+            MaskEditLabel.Top = 2
+            MaskEditLabel.Width = 66
+            MaskEditLabel.Caption = 'Competencia:'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditIrrfCodigoRecolhimento: TLabeledCalcEdit
+            Left = 100
+            Height = 21
+            Top = 18
+            Width = 115
+            Alignment = taRightJustify
+            DecimalPlaces = 0
+            DisplayFormat = '0'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 1
+            Value = 0
+            CalcEditLabel.Left = 100
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 2
+            CalcEditLabel.Width = 104
+            CalcEditLabel.Caption = 'Código Recolhimento:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditIrrfValorAcumulado: TLabeledCalcEdit
+            Left = 221
+            Height = 21
+            Top = 18
+            Width = 121
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 2
+            Value = 0
+            CalcEditLabel.Left = 221
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 2
+            CalcEditLabel.Width = 83
+            CalcEditLabel.Caption = 'Valor Acumulado:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditIrrfDataPagamento: TLabeledDateEdit
+            Left = 348
+            Height = 21
+            Top = 18
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 3
+            Text = '  /  /    '
+            DateEditLabel.Left = 348
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 2
+            DateEditLabel.Width = 84
+            DateEditLabel.Caption = 'Data Pagamento:'
+            DateEditLabel.ParentColor = False
+          end
+        end
+        object GroupBox3: TGroupBox[3]
+          Left = 16
+          Height = 69
+          Top = 208
+          Width = 964
+          Anchors = [akTop, akLeft, akRight]
+          Caption = 'PIS'
+          ClientHeight = 51
+          ClientWidth = 960
+          TabOrder = 2
+          object EditPisCompetencia: TLabeledMaskEdit
+            Left = 8
+            Height = 21
+            Top = 18
+            Width = 86
+            CharCase = ecNormal
+            MaxLength = 7
+            TabOrder = 0
+            EditMask = '##/####;1;_'
+            Text = '  /    '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 8
+            MaskEditLabel.Height = 13
+            MaskEditLabel.Top = 2
+            MaskEditLabel.Width = 66
+            MaskEditLabel.Caption = 'Competencia:'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditPisValorAcumulado: TLabeledCalcEdit
+            Left = 100
+            Height = 21
+            Top = 18
+            Width = 121
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 1
+            Value = 0
+            CalcEditLabel.Left = 100
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 2
+            CalcEditLabel.Width = 83
+            CalcEditLabel.Caption = 'Valor Acumulado:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditPisDataPagamento: TLabeledDateEdit
+            Left = 227
+            Height = 21
+            Top = 18
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 2
+            Text = '  /  /    '
+            DateEditLabel.Left = 227
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 2
+            DateEditLabel.Width = 84
+            DateEditLabel.Caption = 'Data Pagamento:'
+            DateEditLabel.ParentColor = False
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+end

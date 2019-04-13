@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="EcfRelatorioGerencialVO" table="ECF_RELATORIO_GERENCIAL" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">ECF_RELATORIO_GERENCIAL</param>
+      </generator>
+    </id>
+
+    <property name="IdEcfConfiguracao" column="ID_ECF_CONFIGURACAO" />
+    <property name="X" column="X" />
+    <property name="MeiosPagamento" column="MEIOS_PAGAMENTO" />
+    <property name="DavEmitidos" column="DAV_EMITIDOS" />
+    <property name="IdentificacaoPaf" column="IDENTIFICACAO_PAF" />
+    <property name="ParametrosConfiguracao" column="PARAMETROS_CONFIGURACAO" />
+    <property name="Outros" column="OUTROS" />
+
+  </class>
+</t2ti-orm-mapping>

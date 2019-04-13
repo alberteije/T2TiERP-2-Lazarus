@@ -1,0 +1,95 @@
+inherited FFolhaFechamento: TFFolhaFechamento
+  Tag = 1
+  Left = 366
+  Top = 197
+  Caption = 'Folha Fechamento'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 953
+        ClientWidth = 953
+        inherited PanelFiltroRapido: TPanel
+          Width = 953
+          ClientWidth = 953
+          inherited BotaoConsultar: TSpeedButton
+            Left = 819
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 652
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 953
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 54
+          Top = 9
+          Width = 982
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditFechamentoAtual: TLabeledMaskEdit[1]
+          Left = 16
+          Height = 21
+          Top = 31
+          Width = 130
+          CharCase = ecNormal
+          MaxLength = 7
+          TabOrder = 0
+          EditMask = '##/####;1;_'
+          Text = '  /    '
+          SpaceChar = '_'
+          MaskEditLabel.Left = 16
+          MaskEditLabel.Height = 13
+          MaskEditLabel.Top = 15
+          MaskEditLabel.Width = 91
+          MaskEditLabel.Caption = 'Fechamento Atual:'
+          MaskEditLabel.ParentColor = False
+        end
+        object EditProximoFechamento: TLabeledMaskEdit[2]
+          Left = 152
+          Height = 21
+          Top = 31
+          Width = 130
+          CharCase = ecNormal
+          MaxLength = 7
+          TabOrder = 1
+          EditMask = '##/####;1;_'
+          Text = '  /    '
+          SpaceChar = '_'
+          MaskEditLabel.Left = 152
+          MaskEditLabel.Height = 13
+          MaskEditLabel.Top = 15
+          MaskEditLabel.Width = 104
+          MaskEditLabel.Caption = 'Proximo Fechamento:'
+          MaskEditLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+end

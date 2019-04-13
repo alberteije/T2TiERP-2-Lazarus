@@ -1,0 +1,496 @@
+inherited FSocio: TFSocio
+  Left = 318
+  Top = 128
+  Caption = 'Socio'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 477
+        Width = 905
+        ClientHeight = 477
+        ClientWidth = 905
+        inherited PanelFiltroRapido: TPanel
+          Top = 423
+          Width = 905
+          ClientWidth = 905
+          inherited BotaoConsultar: TSpeedButton
+            Left = 771
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 604
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 425
+          Width = 905
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object PageControlSocio: TPageControl[0]
+          Left = 8
+          Height = 209
+          Top = 205
+          Width = 978
+          ActivePage = tsDependente
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          TabIndex = 0
+          TabOrder = 0
+          object tsDependente: TTabSheet
+            Caption = 'Dependentes'
+            ClientHeight = 183
+            ClientWidth = 970
+            object PanelDependente: TPanel
+              Left = 0
+              Height = 183
+              Top = 0
+              Width = 970
+              Align = alClient
+              ClientHeight = 183
+              ClientWidth = 970
+              TabOrder = 0
+              object GridDependente: TDBGrid
+                Left = 1
+                Height = 181
+                Top = 1
+                Width = 968
+                Align = alClient
+                Color = clWindow
+                Columns = <                
+                  item
+                    Title.Caption = 'Nome'
+                    Width = 400
+                    FieldName = 'NOME'
+                  end                
+                  item
+                    Title.Caption = 'Id Relacionamento [F1]'
+                    FieldName = 'ID_TIPO_RELACIONAMENTO'
+                  end                
+                  item
+                    Title.Caption = 'Nome Relacionamento'
+                    Width = 400
+                    FieldName = 'TIPO_RELACIONAMENTO.NOME'
+                  end                
+                  item
+                    Title.Caption = 'Data Nascimento'
+                    FieldName = 'DATA_NASCIMENTO'
+                  end                
+                  item
+                    Title.Caption = 'Inicio Dependência'
+                    FieldName = 'DATA_INICIO_DEPENDENCIA'
+                  end                
+                  item
+                    Title.Caption = 'Fim Dependência'
+                    FieldName = 'DATA_FIM_DEPENDENCIA'
+                  end                
+                  item
+                    Title.Caption = 'CPF'
+                    Width = 100
+                    FieldName = 'CPF'
+                  end>
+                DataSource = DSSocioDependente
+                TabOrder = 0
+                TitleFont.Color = clWindowText
+                TitleFont.Height = -11
+                TitleFont.Name = 'Tahoma'
+                OnKeyDown = GridDependenteKeyDown
+              end
+            end
+          end
+          object TabSheetParticipacaoSocietaria: TTabSheet
+            Caption = 'Participação Societária'
+            ClientHeight = 0
+            ClientWidth = 0
+            ImageIndex = 1
+            object PanelParticipacaoSocietaria: TPanel
+              Left = 0
+              Height = 229
+              Top = 0
+              Width = 875
+              Align = alClient
+              ClientHeight = 229
+              ClientWidth = 875
+              TabOrder = 0
+              object GridParticipacaoSocietaria: TDBGrid
+                Left = 0
+                Height = 227
+                Top = 0
+                Width = 873
+                Align = alClient
+                Color = clWindow
+                Columns = <                
+                  item
+                    Title.Caption = 'CNPJ'
+                    Width = 120
+                    FieldName = 'CNPJ'
+                  end                
+                  item
+                    Title.Caption = 'Razão Social'
+                    FieldName = 'RAZAO_SOCIAL'
+                  end                
+                  item
+                    Title.Caption = 'Data Entrada'
+                    FieldName = 'DATA_ENTRADA'
+                  end                
+                  item
+                    Title.Caption = 'Data Saída'
+                    FieldName = 'DATA_SAIDA'
+                  end                
+                  item
+                    Title.Caption = 'Participação no Capital'
+                    FieldName = 'PARTICIPACAO'
+                  end                
+                  item
+                    PickList.Strings = (
+                      'S - Sim'
+                      'N - Não'
+                    )
+                    Title.Caption = 'Dirigente [S/N]'
+                    FieldName = 'DIRIGENTE'
+                  end>
+                DataSource = DSParticipacaoSocietaria
+                TabOrder = 0
+                TitleFont.Color = clWindowText
+                TitleFont.Height = -11
+                TitleFont.Name = 'Tahoma'
+                OnKeyDown = GridParticipacaoSocietariaKeyDown
+              end
+            end
+          end
+        end
+        object PanelDados: TPanel[1]
+          Left = 8
+          Height = 190
+          Top = 9
+          Width = 978
+          Anchors = [akTop, akLeft, akRight]
+          BevelOuter = bvLowered
+          ClientHeight = 190
+          ClientWidth = 978
+          TabOrder = 1
+          object EditIdQuadroSocietario: TLabeledCalcEdit
+            Left = 6
+            Height = 21
+            Top = 26
+            Width = 114
+            Alignment = taRightJustify
+            DecimalPlaces = 0
+            DisplayFormat = '0'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 0
+            Value = 0
+            OnKeyUp = EditIdQuadroSocietarioKeyUp
+            CalcEditLabel.Left = 6
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 10
+            CalcEditLabel.Width = 113
+            CalcEditLabel.Caption = 'Quadro Societário [F1]:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditCep: TLabeledMaskEdit
+            Left = 126
+            Height = 21
+            Top = 26
+            Width = 87
+            CharCase = ecNormal
+            Color = clWhite
+            MaxLength = 9
+            TabOrder = 1
+            EditMask = '#####-###;0;_'
+            SpaceChar = '_'
+            MaskEditLabel.Left = 126
+            MaskEditLabel.Height = 13
+            MaskEditLabel.Top = 10
+            MaskEditLabel.Width = 37
+            MaskEditLabel.Caption = 'EditCep'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditLogradouro: TLabeledEdit
+            Left = 219
+            Height = 21
+            Top = 26
+            Width = 746
+            Anchors = [akTop, akLeft, akRight]
+            EditLabel.AnchorSideLeft.Control = EditLogradouro
+            EditLabel.AnchorSideRight.Control = EditLogradouro
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditLogradouro
+            EditLabel.Left = 219
+            EditLabel.Height = 13
+            EditLabel.Top = 10
+            EditLabel.Width = 746
+            EditLabel.Caption = 'Logradouro:'
+            EditLabel.ParentColor = False
+            TabOrder = 2
+          end
+          object EditComplemento: TLabeledEdit
+            Left = 6
+            Height = 21
+            Top = 69
+            Width = 315
+            EditLabel.AnchorSideLeft.Control = EditComplemento
+            EditLabel.AnchorSideRight.Control = EditComplemento
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditComplemento
+            EditLabel.Left = 6
+            EditLabel.Height = 13
+            EditLabel.Top = 53
+            EditLabel.Width = 315
+            EditLabel.Caption = 'Complemento:'
+            EditLabel.ParentColor = False
+            TabOrder = 3
+          end
+          object EditMunicipio: TLabeledEdit
+            Left = 6
+            Height = 21
+            Top = 112
+            Width = 212
+            EditLabel.AnchorSideLeft.Control = EditMunicipio
+            EditLabel.AnchorSideRight.Control = EditMunicipio
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditMunicipio
+            EditLabel.Left = 6
+            EditLabel.Height = 13
+            EditLabel.Top = 96
+            EditLabel.Width = 212
+            EditLabel.Caption = 'Municipio:'
+            EditLabel.ParentColor = False
+            TabOrder = 6
+          end
+          object EditUf: TLabeledEdit
+            Left = 220
+            Height = 21
+            Top = 112
+            Width = 29
+            Anchors = [akTop]
+            EditLabel.AnchorSideLeft.Control = EditUf
+            EditLabel.AnchorSideRight.Control = EditUf
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditUf
+            EditLabel.Left = 220
+            EditLabel.Height = 13
+            EditLabel.Top = 96
+            EditLabel.Width = 29
+            EditLabel.Caption = 'UF'
+            EditLabel.ParentColor = False
+            MaxLength = 2
+            TabOrder = 7
+          end
+          object EditFone: TLabeledMaskEdit
+            Left = 259
+            Height = 21
+            Top = 112
+            Width = 90
+            CharCase = ecNormal
+            Color = clWhite
+            MaxLength = 13
+            TabOrder = 8
+            EditMask = '(##)####-####;0;_'
+            SpaceChar = '_'
+            MaskEditLabel.Left = 259
+            MaskEditLabel.Height = 13
+            MaskEditLabel.Top = 96
+            MaskEditLabel.Width = 42
+            MaskEditLabel.Caption = 'EditFone'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditCelular: TLabeledMaskEdit
+            Left = 355
+            Height = 21
+            Top = 112
+            Width = 98
+            CharCase = ecNormal
+            Color = clWhite
+            MaxLength = 13
+            TabOrder = 9
+            EditMask = '(##)####-####;0;_'
+            SpaceChar = '_'
+            MaskEditLabel.Left = 355
+            MaskEditLabel.Height = 13
+            MaskEditLabel.Top = 96
+            MaskEditLabel.Width = 51
+            MaskEditLabel.Caption = 'EditCelular'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditEmail: TLabeledEdit
+            Left = 459
+            Height = 21
+            Top = 112
+            Width = 506
+            Anchors = [akTop, akLeft, akRight]
+            EditLabel.AnchorSideLeft.Control = EditEmail
+            EditLabel.AnchorSideRight.Control = EditEmail
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditEmail
+            EditLabel.Left = 459
+            EditLabel.Height = 13
+            EditLabel.Top = 96
+            EditLabel.Width = 506
+            EditLabel.Caption = 'E-mail:'
+            EditLabel.ParentColor = False
+            TabOrder = 10
+          end
+          object EditBairro: TLabeledEdit
+            Left = 422
+            Height = 21
+            Top = 69
+            Width = 543
+            Anchors = [akTop, akLeft, akRight]
+            EditLabel.AnchorSideLeft.Control = EditBairro
+            EditLabel.AnchorSideRight.Control = EditBairro
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditBairro
+            EditLabel.Left = 422
+            EditLabel.Height = 13
+            EditLabel.Top = 53
+            EditLabel.Width = 543
+            EditLabel.Caption = 'Bairro:'
+            EditLabel.ParentColor = False
+            TabOrder = 5
+          end
+          object EditNumero: TLabeledCalcEdit
+            Left = 327
+            Height = 21
+            Top = 69
+            Width = 89
+            Alignment = taRightJustify
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 4
+            Value = 0
+            CalcEditLabel.Left = 327
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 53
+            CalcEditLabel.Width = 41
+            CalcEditLabel.Caption = 'Número:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditDataIngresso: TLabeledDateEdit
+            Left = 6
+            Height = 21
+            Top = 156
+            Width = 118
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 11
+            Text = '  /  /    '
+            DateEditLabel.Left = 6
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 140
+            DateEditLabel.Width = 72
+            DateEditLabel.Caption = 'Data Ingresso:'
+            DateEditLabel.ParentColor = False
+          end
+          object EditDataSaida: TLabeledDateEdit
+            Left = 130
+            Height = 21
+            Top = 156
+            Width = 118
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 12
+            Text = '  /  /    '
+            DateEditLabel.Left = 130
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 140
+            DateEditLabel.Width = 56
+            DateEditLabel.Caption = 'Data Saída:'
+            DateEditLabel.ParentColor = False
+          end
+          object EditParticipacao: TLabeledCalcEdit
+            Left = 254
+            Height = 21
+            Top = 155
+            Width = 130
+            Alignment = taRightJustify
+            DisplayFormat = '#,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 13
+            Value = 0
+            CalcEditLabel.Left = 254
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 139
+            CalcEditLabel.Width = 62
+            CalcEditLabel.Caption = 'Participação:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditQuotas: TLabeledCalcEdit
+            Left = 526
+            Height = 21
+            Top = 155
+            Width = 130
+            Alignment = taRightJustify
+            DisplayFormat = '#,###,##0'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 15
+            Value = 0
+            CalcEditLabel.Left = 526
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 139
+            CalcEditLabel.Width = 39
+            CalcEditLabel.Caption = 'Quotas:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditIntegralizar: TLabeledCalcEdit
+            Left = 390
+            Height = 21
+            Top = 155
+            Width = 130
+            Alignment = taRightJustify
+            DisplayFormat = '#,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 14
+            Value = 0
+            CalcEditLabel.Left = 390
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 139
+            CalcEditLabel.Width = 95
+            CalcEditLabel.Caption = 'Valor a Integralizar:'
+            CalcEditLabel.ParentColor = False
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+  object DSSocioDependente: TDatasource[5]
+    left = 656
+    top = 464
+  end
+  object DSParticipacaoSocietaria: TDatasource[6]
+    left = 800
+    top = 464
+  end
+end

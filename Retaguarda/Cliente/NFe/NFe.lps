@@ -1,0 +1,1069 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="116">
+      <Unit0>
+        <Filename Value="NFe.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NFe"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="45" Y="7"/>
+        <UsageCount Value="206"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="Tela\umenu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FMenu"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UMenu"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="58"/>
+        <CursorPos X="1" Y="73"/>
+        <UsageCount Value="206"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="..\Comum\DataModule\UDataModule.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FDataModule"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="UDataModule"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="33"/>
+        <CursorPos X="40" Y="44"/>
+        <UsageCount Value="206"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\Comum\Tipos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Tipos"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="34" Y="15"/>
+        <UsageCount Value="206"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="..\Comum\Tela\UBase.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FBase"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UBase"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="113"/>
+        <CursorPos X="40" Y="124"/>
+        <UsageCount Value="206"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="..\Comum\SessaoUsuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SessaoUsuario"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="28"/>
+        <CursorPos X="6" Y="39"/>
+        <UsageCount Value="206"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\..\Comum\VO\EmpresaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EmpresaVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="31"/>
+        <CursorPos X="3" Y="43"/>
+        <UsageCount Value="206"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\..\Comum\VO\UsuarioVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UsuarioVO"/>
+        <UsageCount Value="206"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\..\Comum\VO\VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="VO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="132"/>
+        <CursorPos X="91" Y="95"/>
+        <UsageCount Value="206"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\..\Comum\Biblioteca.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Biblioteca"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="35"/>
+        <CursorPos X="11" Y="46"/>
+        <UsageCount Value="206"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="..\Comum\Tela\UTela.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FTela"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UTela"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="115"/>
+        <CursorPos X="16" Y="149"/>
+        <UsageCount Value="206"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="..\Comum\Tela\UFiltro.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FFiltro"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UFiltro"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="376"/>
+        <CursorPos X="19" Y="402"/>
+        <UsageCount Value="204"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="..\..\Comum\Constantes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Constantes"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="17"/>
+        <CursorPos X="85" Y="42"/>
+        <UsageCount Value="203"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="..\Comum\Tela\UTelaCadastro.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FTelaCadastro"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UTelaCadastro"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="511"/>
+        <CursorPos X="1" Y="529"/>
+        <UsageCount Value="203"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="..\Comum\Tela\ULookup.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FLookup"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ULookup"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="104"/>
+        <CursorPos X="30" Y="116"/>
+        <UsageCount Value="202"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="..\..\Comum\VO\ProdutoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ProdutoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="43"/>
+        <CursorPos X="6" Y="95"/>
+        <UsageCount Value="200"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="..\..\Comum\VO\ContadorVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ContadorVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="56"/>
+        <CursorPos X="26" Y="72"/>
+        <UsageCount Value="148"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="..\Comum\DataModule\UDataModuleNFe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FDataModuleNFe"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="UDataModuleNFe"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="66"/>
+        <CursorPos X="25" Y="82"/>
+        <UsageCount Value="129"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="Tela\UNFe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FNFe"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UNFe"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2937"/>
+        <CursorPos X="59" Y="2962"/>
+        <FoldState Value=" TJ=V1#M1 p0]6{^c"/>
+        <UsageCount Value="129"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="Controller\NFeCalculoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NFeCalculoController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="153"/>
+        <CursorPos X="34" Y="156"/>
+        <UsageCount Value="123"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="..\..\Comum\VO\NfeAcessoXmlVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeAcessoXmlVO"/>
+        <UsageCount Value="123"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="..\..\Comum\VO\NfeCabecalhoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeCabecalhoVO"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="224"/>
+        <CursorPos X="1" Y="250"/>
+        <UsageCount Value="123"/>
+        <Loaded Value="True"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="..\..\Comum\VO\NfeCanaDeducoesSafraVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeCanaDeducoesSafraVO"/>
+        <UsageCount Value="123"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="..\..\Comum\VO\NfeCanaFornecimentoDiarioVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeCanaFornecimentoDiarioVO"/>
+        <UsageCount Value="123"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="..\..\Comum\VO\NfeCanaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeCanaVO"/>
+        <UsageCount Value="123"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="..\..\Comum\VO\NfeConfiguracaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeConfiguracaoVO"/>
+        <UsageCount Value="123"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="..\..\Comum\VO\NfeCteReferenciadoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeCteReferenciadoVO"/>
+        <UsageCount Value="123"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="..\..\Comum\VO\NfeCupomFiscalReferenciadoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeCupomFiscalReferenciadoVO"/>
+        <UsageCount Value="123"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="..\..\Comum\VO\NfeDeclaracaoImportacaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDeclaracaoImportacaoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="63"/>
+        <CursorPos X="14" Y="82"/>
+        <UsageCount Value="123"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="..\..\Comum\VO\NfeDestinatarioVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDestinatarioVO"/>
+        <UsageCount Value="123"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="..\..\Comum\VO\NfeDetalheImpostoCofinsVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetalheImpostoCofinsVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="45"/>
+        <CursorPos X="1" Y="66"/>
+        <UsageCount Value="123"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="..\..\Comum\VO\NfeDetalheImpostoIcmsVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetalheImpostoIcmsVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="88"/>
+        <CursorPos X="1" Y="108"/>
+        <UsageCount Value="123"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="..\..\Comum\VO\NfeDetalheImpostoIiVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetalheImpostoIiVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="51"/>
+        <CursorPos X="1" Y="62"/>
+        <UsageCount Value="123"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="..\..\Comum\VO\NfeDetalheImpostoIpiVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetalheImpostoIpiVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="57"/>
+        <CursorPos X="1" Y="76"/>
+        <UsageCount Value="123"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="..\..\Comum\VO\NfeDetalheImpostoIssqnVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetalheImpostoIssqnVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="72"/>
+        <CursorPos X="1" Y="86"/>
+        <UsageCount Value="123"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="..\..\Comum\VO\NfeDetalheImpostoPisVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetalheImpostoPisVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="56"/>
+        <CursorPos X="1" Y="66"/>
+        <UsageCount Value="123"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="..\..\Comum\VO\NfeDetalheVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetalheVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="142"/>
+        <CursorPos X="1" Y="156"/>
+        <UsageCount Value="123"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="..\..\Comum\VO\NfeDetEspecificoArmamentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetEspecificoArmamentoVO"/>
+        <UsageCount Value="123"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="..\..\Comum\VO\NfeDetEspecificoCombustivelVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetEspecificoCombustivelVO"/>
+        <UsageCount Value="123"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="..\..\Comum\VO\NfeDetEspecificoMedicamentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetEspecificoMedicamentoVO"/>
+        <UsageCount Value="123"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="..\..\Comum\VO\NfeDetEspecificoVeiculoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDetEspecificoVeiculoVO"/>
+        <UsageCount Value="123"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="..\..\Comum\VO\NfeDuplicataVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDuplicataVO"/>
+        <UsageCount Value="123"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="..\..\Comum\VO\NfeEmitenteVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeEmitenteVO"/>
+        <UsageCount Value="123"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="..\..\Comum\VO\NfeExportacaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeExportacaoVO"/>
+        <UsageCount Value="123"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="..\..\Comum\VO\NfeFaturaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeFaturaVO"/>
+        <UsageCount Value="123"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="..\..\Comum\VO\NfeFormaPagamentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeFormaPagamentoVO"/>
+        <UsageCount Value="123"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="..\..\Comum\VO\NfeImportacaoDetalheVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeImportacaoDetalheVO"/>
+        <UsageCount Value="123"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="..\..\Comum\VO\NfeLocalEntregaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeLocalEntregaVO"/>
+        <UsageCount Value="123"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="..\..\Comum\VO\NfeLocalRetiradaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeLocalRetiradaVO"/>
+        <UsageCount Value="123"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="..\..\Comum\VO\NfeNfReferenciadaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeNfReferenciadaVO"/>
+        <UsageCount Value="123"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="..\..\Comum\VO\NfeNumeroVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeNumeroVO"/>
+        <UsageCount Value="123"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="..\..\Comum\VO\NfeProcessoReferenciadoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeProcessoReferenciadoVO"/>
+        <UsageCount Value="123"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="..\..\Comum\VO\NfeProdRuralReferenciadaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeProdRuralReferenciadaVO"/>
+        <UsageCount Value="123"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="..\..\Comum\VO\NfeReferenciadaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeReferenciadaVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="45"/>
+        <CursorPos X="1" Y="56"/>
+        <UsageCount Value="123"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="..\..\Comum\VO\NfeTransporteReboqueVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeTransporteReboqueVO"/>
+        <UsageCount Value="123"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="..\..\Comum\VO\NfeTransporteVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeTransporteVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="86"/>
+        <CursorPos X="1" Y="102"/>
+        <UsageCount Value="123"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="..\..\Comum\VO\NfeTransporteVolumeLacreVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeTransporteVolumeLacreVO"/>
+        <UsageCount Value="123"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="..\..\Comum\VO\NfeTransporteVolumeVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeTransporteVolumeVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="59"/>
+        <CursorPos X="23" Y="64"/>
+        <UsageCount Value="123"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="..\..\Comum\VO\ViewTributacaoCofinsVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTributacaoCofinsVO"/>
+        <UsageCount Value="120"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="..\..\Comum\VO\ViewTributacaoIcmsCustomVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTributacaoIcmsCustomVO"/>
+        <UsageCount Value="120"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="..\..\Comum\VO\ViewTributacaoIcmsVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTributacaoIcmsVO"/>
+        <UsageCount Value="120"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="..\..\Comum\VO\ViewTributacaoIpiVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTributacaoIpiVO"/>
+        <UsageCount Value="120"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="..\..\Comum\VO\ViewTributacaoIssVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTributacaoIssVO"/>
+        <UsageCount Value="120"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="..\..\Comum\VO\ViewTributacaoPisVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTributacaoPisVO"/>
+        <UsageCount Value="120"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="..\..\Comum\VO\ViewPessoaClienteVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewPessoaClienteVO"/>
+        <UsageCount Value="120"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="..\..\Comum\VO\ViewPessoaTransportadoraVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewPessoaTransportadoraVO"/>
+        <UsageCount Value="120"/>
+      </Unit65>
+      <Unit66>
+        <Filename Value="..\..\Comum\VO\VendaCabecalhoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="VendaCabecalhoVO"/>
+        <UsageCount Value="120"/>
+      </Unit66>
+      <Unit67>
+        <Filename Value="..\..\Comum\VO\TributOperacaoFiscalVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributOperacaoFiscalVO"/>
+        <UsageCount Value="119"/>
+      </Unit67>
+      <Unit68>
+        <Filename Value="..\..\Comum\VO\EmpresaEnderecoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EmpresaEnderecoVO"/>
+        <UsageCount Value="108"/>
+      </Unit68>
+      <Unit69>
+        <Filename Value="..\Comum\Controller\EmpresaController.pas"/>
+        <UnitName Value="EmpresaController"/>
+        <UsageCount Value="72"/>
+      </Unit69>
+      <Unit70>
+        <Filename Value="Tela\uproduto.pas"/>
+        <ComponentName Value="FProduto"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UProduto"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="585"/>
+        <CursorPos X="24" Y="597"/>
+        <UsageCount Value="199"/>
+      </Unit70>
+      <Unit71>
+        <Filename Value="Tela\UPreview.pas"/>
+        <ComponentName Value="FPreview"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UPreview"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="31"/>
+        <CursorPos X="14" Y="51"/>
+        <UsageCount Value="51"/>
+      </Unit71>
+      <Unit72>
+        <Filename Value="Tela\USpedFiscal.pas"/>
+        <ComponentName Value="FSpedFiscal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="USpedFiscal"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="37"/>
+        <CursorPos X="20" Y="52"/>
+        <UsageCount Value="51"/>
+      </Unit72>
+      <Unit73>
+        <Filename Value="Tela\USintegra.pas"/>
+        <ComponentName Value="FSintegra"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="USintegra"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="97"/>
+        <CursorPos X="12" Y="175"/>
+        <FoldState Value=" TJjD1on"/>
+        <UsageCount Value="41"/>
+      </Unit73>
+      <Unit74>
+        <Filename Value="Tela\USpedContribuicoes.pas"/>
+        <ComponentName Value="FSpedContribuicoes"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="USpedContribuicoes"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="142"/>
+        <CursorPos X="73" Y="159"/>
+        <UsageCount Value="35"/>
+      </Unit74>
+      <Unit75>
+        <Filename Value="Tela\UDAV.pas"/>
+        <ComponentName Value="FDAV"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UDAV"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="440"/>
+        <CursorPos X="47" Y="465"/>
+        <UsageCount Value="41"/>
+      </Unit75>
+      <Unit76>
+        <Filename Value="..\..\Comum\VO\DavCabecalhoVO.pas"/>
+        <UnitName Value="DavCabecalhoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="57"/>
+        <CursorPos X="26" Y="89"/>
+        <UsageCount Value="39"/>
+      </Unit76>
+      <Unit77>
+        <Filename Value="..\..\Comum\VO\DavDetalheVO.pas"/>
+        <UnitName Value="DavDetalheVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="56"/>
+        <CursorPos X="26" Y="81"/>
+        <UsageCount Value="39"/>
+      </Unit77>
+      <Unit78>
+        <Filename Value="Tela\ucliente.pas"/>
+        <ComponentName Value="FCliente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UCliente"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="197"/>
+      </Unit78>
+      <Unit79>
+        <Filename Value="..\Comum\Controller.pas"/>
+        <UnitName Value="Controller"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="61"/>
+        <CursorPos X="17" Y="73"/>
+        <UsageCount Value="115"/>
+      </Unit79>
+      <Unit80>
+        <Filename Value="C:\lazarus\components\Brook\plugins\ljgridutils-master\src\ljgridutils.pas"/>
+        <UnitName Value="LJGridUtils"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="71"/>
+        <CursorPos X="15" Y="95"/>
+        <UsageCount Value="1"/>
+      </Unit80>
+      <Unit81>
+        <Filename Value="unit1.pas"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="46" Y="10"/>
+        <UsageCount Value="2"/>
+      </Unit81>
+      <Unit82>
+        <Filename Value="Tela\ucliente.lfm"/>
+        <UsageCount Value="2"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit82>
+      <Unit83>
+        <Filename Value="Tela\umenu.lfm"/>
+        <UsageCount Value="2"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit83>
+      <Unit84>
+        <Filename Value="Tela\UProduto.lfm"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1088"/>
+        <CursorPos X="28" Y="1098"/>
+        <UsageCount Value="1"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit84>
+      <Unit85>
+        <Filename Value="C:\teste\UBase.pas"/>
+        <UnitName Value="UBase"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="2"/>
+      </Unit85>
+      <Unit86>
+        <Filename Value="C:\teste\UDataModule.pas"/>
+        <UnitName Value="UDataModule"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="2"/>
+      </Unit86>
+      <Unit87>
+        <Filename Value="C:\teste\UFiltro.pas"/>
+        <UnitName Value="UFiltro"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="2"/>
+      </Unit87>
+      <Unit88>
+        <Filename Value="C:\teste\ULogin.pas"/>
+        <UnitName Value="ULogin"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="2"/>
+      </Unit88>
+      <Unit89>
+        <Filename Value="C:\teste\ULookup.pas"/>
+        <UnitName Value="ULookup"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="2"/>
+      </Unit89>
+      <Unit90>
+        <Filename Value="C:\teste\UTelaCadastro.pas"/>
+        <UnitName Value="UTelaCadastro"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="2"/>
+      </Unit90>
+      <Unit91>
+        <Filename Value="C:\teste\UTela.pas"/>
+        <UnitName Value="UTela"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="31" Y="8"/>
+        <UsageCount Value="2"/>
+      </Unit91>
+      <Unit92>
+        <Filename Value="C:\teste\UAlmoxarifado.pas"/>
+        <UnitName Value="UAlmoxarifado"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="30" Y="14"/>
+        <UsageCount Value="2"/>
+      </Unit92>
+      <Unit93>
+        <Filename Value="Tela\UAlmoxarifado.pas"/>
+        <ComponentName Value="FAlmoxarifado"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UAlmoxarifado"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="74"/>
+        <CursorPos X="1" Y="83"/>
+        <UsageCount Value="71"/>
+      </Unit93>
+      <Unit94>
+        <Filename Value="C:\lazarus\lcl\grids.pas"/>
+        <UnitName Value="Grids"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="5"/>
+      </Unit94>
+      <Unit95>
+        <Filename Value="C:\lazarus\components\Brook\master\brokers\brookfclhttpclientbroker.pas"/>
+        <UnitName Value="BrookFCLHTTPClientBroker"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="341"/>
+        <CursorPos X="1" Y="366"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit95>
+      <Unit96>
+        <Filename Value="C:\lazarus\components\Brook\master\core\brookhttputils.pas"/>
+        <UnitName Value="BrookHTTPUtils"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="474"/>
+        <CursorPos X="1" Y="493"/>
+        <UsageCount Value="25"/>
+      </Unit96>
+      <Unit97>
+        <Filename Value="C:\lazarus\lcl\dbgrids.pas"/>
+        <UnitName Value="DBGrids"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="933"/>
+        <CursorPos X="1" Y="952"/>
+        <UsageCount Value="2"/>
+      </Unit97>
+      <Unit98>
+        <Filename Value="C:\lazarus\lcl\include\customlistbox.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="178"/>
+        <CursorPos X="1" Y="197"/>
+        <UsageCount Value="3"/>
+      </Unit98>
+      <Unit99>
+        <Filename Value="C:\Testes\UDAV.pas"/>
+        <UnitName Value="UDAV"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="14" Y="17"/>
+        <UsageCount Value="1"/>
+      </Unit99>
+      <Unit100>
+        <Filename Value="Tela\UDAV.lfm"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="4"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit100>
+      <Unit101>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\packages\fcl-json\src\fpjson.pp"/>
+        <UnitName Value="fpjson"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="10"/>
+        <CursorPos X="32" Y="21"/>
+        <UsageCount Value="3"/>
+      </Unit101>
+      <Unit102>
+        <Filename Value="C:\lazarus\components\Brook\master\core\brookhttpclient.pas"/>
+        <UnitName Value="BrookHTTPClient"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="31"/>
+        <CursorPos X="28" Y="52"/>
+        <UsageCount Value="3"/>
+      </Unit102>
+      <Unit103>
+        <Filename Value="C:\Testes\UDataModuleNFe.pas"/>
+        <UnitName Value="UDataModuleNFe"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="2"/>
+      </Unit103>
+      <Unit104>
+        <Filename Value="C:\Testes\UNFe.pas"/>
+        <UnitName Value="UNFe"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="2"/>
+      </Unit104>
+      <Unit105>
+        <Filename Value="..\Comum\DataModule\UDataModuleNFe.lfm"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="27" Y="7"/>
+        <UsageCount Value="2"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit105>
+      <Unit106>
+        <Filename Value="Tela\UNFe.lfm"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="3308"/>
+        <CursorPos X="52" Y="3329"/>
+        <UsageCount Value="2"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit106>
+      <Unit107>
+        <Filename Value="C:\Componentes\Lazarus\ACBr\Fontes\ACBrNFe2\ACBrNFeConfiguracoes.pas"/>
+        <UnitName Value="ACBrNFeConfiguracoes"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="428"/>
+        <CursorPos X="1" Y="441"/>
+        <UsageCount Value="4"/>
+      </Unit107>
+      <Unit108>
+        <Filename Value="C:\lazarus\lcl\include\customform.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="441"/>
+        <CursorPos X="14" Y="442"/>
+        <UsageCount Value="4"/>
+      </Unit108>
+      <Unit109>
+        <Filename Value="C:\Componentes\Lazarus\ACBr\Fontes\ACBrNFe2\ACBrNFeNotasFiscais.pas"/>
+        <UnitName Value="ACBrNFeNotasFiscais"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="538"/>
+        <CursorPos X="1" Y="556"/>
+        <UsageCount Value="9"/>
+      </Unit109>
+      <Unit110>
+        <Filename Value="C:\Componentes\Lazarus\ACBr\Fontes\ACBrNFe2\ACBrNFeWebServices.pas"/>
+        <UnitName Value="ACBrNFeWebServices"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1256"/>
+        <CursorPos X="1" Y="1269"/>
+        <UsageCount Value="9"/>
+      </Unit110>
+      <Unit111>
+        <Filename Value="..\..\..\..\..\Lazarus\Testes NFe NFCe\Unit1.pas"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="5"/>
+      </Unit111>
+      <Unit112>
+        <Filename Value="..\..\Comum\VO\FinLancamentoReceberVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FinLancamentoReceberVO"/>
+        <UsageCount Value="20"/>
+      </Unit112>
+      <Unit113>
+        <Filename Value="..\..\Comum\VO\FinLctoReceberNtFinanceiraVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FinLctoReceberNtFinanceiraVO"/>
+        <UsageCount Value="20"/>
+      </Unit113>
+      <Unit114>
+        <Filename Value="..\..\Comum\VO\FinParcelaReceberVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FinParcelaReceberVO"/>
+        <UsageCount Value="20"/>
+      </Unit114>
+      <Unit115>
+        <Filename Value="..\..\Comum\VO\FinParcelaRecebimentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FinParcelaRecebimentoVO"/>
+        <UsageCount Value="20"/>
+      </Unit115>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="362" Column="1" TopLine="353"/>
+      </Position1>
+      <Position2>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="2166" Column="13" TopLine="2137"/>
+      </Position2>
+      <Position3>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="46" Column="55" TopLine="27"/>
+      </Position3>
+      <Position4>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="47" Column="15" TopLine="27"/>
+      </Position4>
+      <Position5>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="46" Column="55" TopLine="27"/>
+      </Position5>
+      <Position6>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="2151" Column="1" TopLine="2147"/>
+      </Position6>
+      <Position7>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="46" Column="55" TopLine="27"/>
+      </Position7>
+      <Position8>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="2230" Column="1" TopLine="2193"/>
+      </Position8>
+      <Position9>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="322" Column="1" TopLine="1118"/>
+      </Position9>
+      <Position10>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="311" Column="1" TopLine="298"/>
+      </Position10>
+      <Position11>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="475" Column="3" TopLine="457"/>
+      </Position11>
+      <Position12>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="2095" Column="30" TopLine="2091"/>
+      </Position12>
+      <Position13>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="2094" Column="1" TopLine="2083"/>
+      </Position13>
+      <Position14>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="317" Column="46" TopLine="290"/>
+      </Position14>
+      <Position15>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="2121" Column="71" TopLine="2103"/>
+      </Position15>
+      <Position16>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="2052" Column="64" TopLine="2025"/>
+      </Position16>
+      <Position17>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
+      </Position17>
+      <Position18>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="768" Column="129" TopLine="738"/>
+      </Position18>
+      <Position19>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="873" Column="48" TopLine="843"/>
+      </Position19>
+      <Position20>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="2121" Column="73" TopLine="2104"/>
+      </Position20>
+      <Position21>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="2144" Column="101" TopLine="2126"/>
+      </Position21>
+      <Position22>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="2175" Column="13" TopLine="2156"/>
+      </Position22>
+      <Position23>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="2247" Column="1" TopLine="2240"/>
+      </Position23>
+      <Position24>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="2260" Column="33" TopLine="2250"/>
+      </Position24>
+      <Position25>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="2261" Column="148" TopLine="2242"/>
+      </Position25>
+      <Position26>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="2262" Column="9" TopLine="2243"/>
+      </Position26>
+      <Position27>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="2311" Column="7" TopLine="2274"/>
+      </Position27>
+      <Position28>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="2347" Column="47" TopLine="2328"/>
+      </Position28>
+      <Position29>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="2366" Column="103" TopLine="2347"/>
+      </Position29>
+      <Position30>
+        <Filename Value="Tela\UNFe.pas"/>
+        <Caret Line="2962" Column="59" TopLine="2937"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+  <EditorMacros Count="0"/>
+</CONFIG>

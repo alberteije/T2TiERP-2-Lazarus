@@ -1,0 +1,168 @@
+inherited FPlanoContaRefSped: TFPlanoContaRefSped
+  Left = 370
+  Top = 228
+  Caption = 'Plano de Contas Ref. Sped'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 341
+        Width = 842
+        ClientHeight = 341
+        ClientWidth = 842
+        inherited PanelFiltroRapido: TPanel
+          Top = 287
+          Width = 842
+          ClientWidth = 842
+          inherited BotaoConsultar: TSpeedButton
+            Left = 708
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 541
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 289
+          Width = 842
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 182
+          Top = 9
+          Width = 979
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditDescricao: TLabeledEdit[1]
+          Left = 232
+          Height = 21
+          Top = 31
+          Width = 744
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditDescricao
+          EditLabel.AnchorSideRight.Control = EditDescricao
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditDescricao
+          EditLabel.Left = 232
+          EditLabel.Height = 13
+          EditLabel.Top = 15
+          EditLabel.Width = 744
+          EditLabel.Caption = 'Descrição:'
+          EditLabel.ParentColor = False
+          TabOrder = 1
+        end
+        object EditCodCtaRef: TLabeledEdit[2]
+          Left = 15
+          Height = 21
+          Top = 31
+          Width = 211
+          AutoSize = False
+          EditLabel.AnchorSideLeft.Control = EditCodCtaRef
+          EditLabel.AnchorSideRight.Control = EditCodCtaRef
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditCodCtaRef
+          EditLabel.Left = 15
+          EditLabel.Height = 13
+          EditLabel.Top = 15
+          EditLabel.Width = 211
+          EditLabel.Caption = 'Código Conta:'
+          EditLabel.ParentColor = False
+          TabOrder = 0
+        end
+        object EditInicioValidade: TLabeledDateEdit[3]
+          Left = 15
+          Height = 21
+          Top = 160
+          Width = 128
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 3
+          Text = '  /  /    '
+          DateEditLabel.Left = 15
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 144
+          DateEditLabel.Width = 72
+          DateEditLabel.Caption = 'Validade Início:'
+          DateEditLabel.ParentColor = False
+        end
+        object MemoOrientacoes: TLabeledMemo[4]
+          Left = 15
+          Height = 60
+          Top = 75
+          Width = 961
+          Anchors = [akTop, akLeft, akRight]
+          ScrollBars = ssVertical
+          TabOrder = 2
+          MemoLabel.Left = 15
+          MemoLabel.Height = 13
+          MemoLabel.Top = 59
+          MemoLabel.Width = 62
+          MemoLabel.Caption = 'Orientações:'
+          MemoLabel.ParentColor = False
+        end
+        object EditFimValidade: TLabeledDateEdit[5]
+          Left = 149
+          Height = 21
+          Top = 160
+          Width = 128
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 4
+          Text = '  /  /    '
+          DateEditLabel.Left = 149
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 144
+          DateEditLabel.Width = 63
+          DateEditLabel.Caption = 'Validade Fim:'
+          DateEditLabel.ParentColor = False
+        end
+        object ComboBoxTipo: TLabeledComboBox[6]
+          Left = 283
+          Height = 21
+          Top = 161
+          Width = 145
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            'Sintética'
+            'Analítica'
+          )
+          Style = csDropDownList
+          TabOrder = 5
+          Text = 'Sintética'
+          ComboBoxLabel.Left = 283
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 145
+          ComboBoxLabel.Width = 24
+          ComboBoxLabel.Caption = 'Tipo:'
+          ComboBoxLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+end

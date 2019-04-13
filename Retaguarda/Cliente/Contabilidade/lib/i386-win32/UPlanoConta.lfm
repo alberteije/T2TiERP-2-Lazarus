@@ -1,0 +1,133 @@
+inherited FPlanoConta: TFPlanoConta
+  Left = 368
+  Top = 220
+  Caption = 'Plano de Contas'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 363
+        Width = 842
+        ClientHeight = 363
+        ClientWidth = 842
+        inherited PanelFiltroRapido: TPanel
+          Top = 309
+          Width = 842
+          ClientWidth = 842
+          inherited BotaoConsultar: TSpeedButton
+            Left = 708
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 541
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 311
+          Width = 842
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 95
+          Top = 9
+          Width = 979
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditNome: TLabeledEdit[1]
+          Left = 15
+          Height = 21
+          Top = 32
+          Width = 963
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditNome
+          EditLabel.AnchorSideRight.Control = EditNome
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditNome
+          EditLabel.Left = 15
+          EditLabel.Height = 13
+          EditLabel.Top = 16
+          EditLabel.Width = 963
+          EditLabel.Caption = 'Nome:'
+          EditLabel.ParentColor = False
+          TabOrder = 0
+        end
+        object EditMascara: TLabeledEdit[2]
+          Left = 149
+          Height = 21
+          Top = 74
+          Width = 701
+          Anchors = [akTop, akLeft, akRight]
+          AutoSize = False
+          EditLabel.AnchorSideLeft.Control = EditMascara
+          EditLabel.AnchorSideRight.Control = EditMascara
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditMascara
+          EditLabel.Left = 149
+          EditLabel.Height = 13
+          EditLabel.Top = 58
+          EditLabel.Width = 701
+          EditLabel.Caption = 'Máscara:'
+          EditLabel.ParentColor = False
+          TabOrder = 2
+        end
+        object EditDataInclusao: TLabeledDateEdit[3]
+          Left = 15
+          Height = 21
+          Top = 74
+          Width = 128
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 1
+          Text = '  /  /    '
+          DateEditLabel.Left = 15
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 58
+          DateEditLabel.Width = 70
+          DateEditLabel.Caption = 'Data Inclusão:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditNiveis: TLabeledCalcEdit[4]
+          Left = 856
+          Height = 21
+          Top = 74
+          Width = 122
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          Anchors = [akTop, akRight]
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 3
+          Value = 0
+          CalcEditLabel.Left = 856
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 58
+          CalcEditLabel.Width = 32
+          CalcEditLabel.Caption = 'Níveis:'
+          CalcEditLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+end

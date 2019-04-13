@@ -1,0 +1,78 @@
+inherited FEstadoCivil: TFEstadoCivil
+  Left = 186
+  Top = 171
+  Caption = 'Estado Civil'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelGrid: TPanel
+        inherited PanelFiltroRapido: TPanel
+          inherited BotaoConsultar: TSpeedButton
+            OnClick = BotaoConsultarClick
+          end
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 153
+          Top = 9
+          Width = 979
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditNome: TLabeledEdit[1]
+          Left = 15
+          Height = 21
+          Top = 30
+          Width = 965
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditNome
+          EditLabel.AnchorSideRight.Control = EditNome
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditNome
+          EditLabel.Left = 15
+          EditLabel.Height = 13
+          EditLabel.Top = 14
+          EditLabel.Width = 965
+          EditLabel.Caption = 'Nome:'
+          EditLabel.ParentColor = False
+          TabOrder = 0
+        end
+        object MemoDescricao: TLabeledMemo[2]
+          Left = 15
+          Height = 82
+          Top = 72
+          Width = 965
+          Anchors = [akTop, akLeft, akRight]
+          ScrollBars = ssVertical
+          TabOrder = 1
+          MemoLabel.Left = 15
+          MemoLabel.Height = 13
+          MemoLabel.Top = 56
+          MemoLabel.Width = 50
+          MemoLabel.Caption = 'Descrição:'
+          MemoLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoSalvar: TSpeedButton
+      OnClick = BotaoSalvarClick
+    end
+  end
+  object Datasource1: TDatasource[5]
+    left = 922
+    top = 313
+  end
+end

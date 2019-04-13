@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="ProdutoPromocaoVO" table="PRODUTO_PROMOCAO" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">PRODUTO_PROMOCAO</param>
+      </generator>
+    </id>
+
+    <property name="IdProduto" column="ID_PRODUTO" />
+    <property name="DataInicio" column="DATA_INICIO" />
+    <property name="DataFim" column="DATA_FIM" />
+    <property name="QuantidadeEmPromocao" column="QUANTIDADE_EM_PROMOCAO" />
+    <property name="QuantidadeMaximaCliente" column="QUANTIDADE_MAXIMA_CLIENTE" />
+    <property name="Valor" column="VALOR" />
+
+  </class>
+</t2ti-orm-mapping>

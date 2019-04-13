@@ -1,0 +1,61 @@
+inherited FPcpInstrucao: TFPcpInstrucao
+  Left = 278
+  Top = 230
+  Caption = 'Instrução'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object Bevel1: TBevel[0]
+          Left = 4
+          Height = 74
+          Top = 4
+          Width = 992
+          Align = alTop
+        end
+        object EditDescricao: TLabeledEdit[1]
+          Left = 81
+          Height = 21
+          Top = 30
+          Width = 800
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditDescricao
+          EditLabel.AnchorSideRight.Control = EditDescricao
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditDescricao
+          EditLabel.Left = 81
+          EditLabel.Height = 13
+          EditLabel.Top = 14
+          EditLabel.Width = 800
+          EditLabel.Caption = 'Descrição:'
+          EditLabel.ParentColor = False
+          MaxLength = 100
+          TabOrder = 0
+        end
+        object EditCodigo: TLabeledEdit[2]
+          Left = 11
+          Height = 21
+          Top = 30
+          Width = 66
+          EditLabel.AnchorSideLeft.Control = EditCodigo
+          EditLabel.AnchorSideRight.Control = EditCodigo
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditCodigo
+          EditLabel.Left = 11
+          EditLabel.Height = 13
+          EditLabel.Top = 14
+          EditLabel.Width = 66
+          EditLabel.Caption = 'Código:'
+          EditLabel.ParentColor = False
+          MaxLength = 100
+          TabOrder = 1
+        end
+      end
+    end
+  end
+end

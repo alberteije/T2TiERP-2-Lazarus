@@ -1,0 +1,298 @@
+inherited FPontoBancoHoras: TFPontoBancoHoras
+  Tag = 1
+  Left = 313
+  Top = 176
+  Caption = 'Ponto Banco de Horas'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 980
+        ClientWidth = 980
+        inherited PanelFiltroRapido: TPanel
+          Width = 980
+          ClientWidth = 980
+          inherited BotaoConsultar: TSpeedButton
+            Left = 845
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 683
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 980
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 12
+          Height = 100
+          Top = 10
+          Width = 974
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditIdColaborador: TLabeledCalcEdit[1]
+          Left = 20
+          Height = 21
+          Top = 33
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 0
+          Value = 0
+          CalcEditLabel.Left = 20
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 17
+          CalcEditLabel.Width = 86
+          CalcEditLabel.Caption = 'Colaborador [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditColaborador: TLabeledEdit[2]
+          Left = 81
+          Height = 21
+          Top = 33
+          Width = 896
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditColaborador
+          EditLabel.AnchorSideRight.Control = EditColaborador
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditColaborador
+          EditLabel.Left = 81
+          EditLabel.Height = 13
+          EditLabel.Top = 17
+          EditLabel.Width = 896
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 1
+          TabStop = False
+        end
+        object EditDataTrabalho: TLabeledDateEdit[3]
+          Left = 20
+          Height = 21
+          Top = 77
+          Width = 121
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 2
+          Text = '  /  /    '
+          DateEditLabel.Left = 20
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 61
+          DateEditLabel.Width = 72
+          DateEditLabel.Caption = 'Data Trabalho:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditQuantidade: TLabeledMaskEdit[4]
+          Left = 147
+          Height = 21
+          Top = 77
+          Width = 72
+          CharCase = ecNormal
+          MaxLength = 8
+          TabOrder = 3
+          EditMask = '##:##:##;1;_'
+          Text = '  :  :  '
+          SpaceChar = '_'
+          MaskEditLabel.Left = 147
+          MaskEditLabel.Height = 13
+          MaskEditLabel.Top = 61
+          MaskEditLabel.Width = 74
+          MaskEditLabel.Caption = 'EditQuantidade'
+          MaskEditLabel.ParentColor = False
+        end
+        object ComboboxSituacao: TLabeledComboBox[5]
+          Left = 225
+          Height = 21
+          Top = 77
+          Width = 170
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            'N - Não Utilizado'
+            'U - Utilizado'
+            'P - Utilizado Parcialmente'
+          )
+          Style = csDropDownList
+          TabOrder = 4
+          Text = 'N - Não Utilizado'
+          ComboBoxLabel.Left = 225
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 61
+          ComboBoxLabel.Width = 24
+          ComboBoxLabel.Caption = 'Tipo:'
+          ComboBoxLabel.ParentColor = False
+        end
+        object PageControlItens: TPageControl[6]
+          Left = 12
+          Height = 298
+          Top = 121
+          Width = 974
+          ActivePage = tsItens
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          TabIndex = 0
+          TabOrder = 5
+          object tsItens: TTabSheet
+            Caption = 'Utilização'
+            ClientHeight = 272
+            ClientWidth = 966
+            object PanelItens: TPanel
+              Left = 0
+              Height = 272
+              Top = 0
+              Width = 966
+              Align = alClient
+              BevelOuter = bvNone
+              ClientHeight = 272
+              ClientWidth = 966
+              TabOrder = 0
+              object GridParcelas: TRxDBGrid
+                Left = 0
+                Height = 272
+                Top = 0
+                Width = 966
+                TitleButtons = True
+                AutoSort = True
+                Columns = <                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Data Utilização'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'DATA_UTILIZACAO'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Qtde Utilizada'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'QUANTIDADE_UTILIZADA'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Observação'
+                    Title.Orientation = toHorizontal
+                    Width = 750
+                    FieldName = 'OBSERVACAO'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end>
+                KeyStrokes = <                
+                  item
+                    Command = rxgcShowFindDlg
+                    ShortCut = 16454
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowColumnsDlg
+                    ShortCut = 16471
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowFilterDlg
+                    ShortCut = 16468
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowSortDlg
+                    ShortCut = 16467
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowQuickFilter
+                    ShortCut = 16465
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcHideQuickFilter
+                    ShortCut = 16456
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcSelectAll
+                    ShortCut = 16449
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcDeSelectAll
+                    ShortCut = 16429
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcInvertSelection
+                    ShortCut = 16426
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcOptimizeColumnsWidth
+                    ShortCut = 16427
+                    Enabled = True
+                  end>
+                OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                Align = alClient
+                Color = clWindow
+                DrawFullLine = False
+                FocusColor = clRed
+                SelectedColor = clHighlight
+                GridLineStyle = psSolid
+                DataSource = DSPontoBancoHorasUtilizacao
+                Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgHeaderPushedLook]
+                ParentColor = False
+                ReadOnly = True
+                TabOrder = 0
+                TitleFont.Color = clWindowText
+                TitleFont.Height = -11
+                TitleFont.Name = 'Tahoma'
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+  object DSPontoBancoHorasUtilizacao: TDatasource[5]
+    DataSet = CDSPontoBancoHorasUtilizacao
+    left = 72
+    top = 288
+  end
+  object CDSPontoBancoHorasUtilizacao: TBufDataset[6]
+    FieldDefs = <>
+    left = 364
+    top = 351
+  end
+end

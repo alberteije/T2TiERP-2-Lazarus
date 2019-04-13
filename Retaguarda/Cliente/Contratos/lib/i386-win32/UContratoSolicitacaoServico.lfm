@@ -1,0 +1,386 @@
+inherited FContratoSolicitacaoServico: TFContratoSolicitacaoServico
+  Tag = 1
+  Left = 309
+  Top = 215
+  Caption = 'Solicitação de Serviço'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 885
+        ClientWidth = 885
+        inherited PanelFiltroRapido: TPanel
+          Width = 885
+          ClientWidth = 885
+          inherited BotaoConsultar: TSpeedButton
+            Left = 753
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 584
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 885
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 10
+          Height = 294
+          Top = 11
+          Width = 979
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object ComboBoxUrgente: TLabeledComboBox[1]
+          Left = 270
+          Height = 21
+          Top = 274
+          Width = 75
+          ItemHeight = 13
+          ItemIndex = 1
+          Items.Strings = (
+            'Sim'
+            'Não'
+          )
+          Style = csDropDownList
+          TabOrder = 13
+          Text = 'Não'
+          ComboBoxLabel.Left = 270
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 258
+          ComboBoxLabel.Width = 43
+          ComboBoxLabel.Caption = 'Urgente:'
+          ComboBoxLabel.ParentColor = False
+        end
+        object EditIdCliente: TLabeledCalcEdit[2]
+          Left = 163
+          Height = 21
+          Top = 42
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 0
+          Value = 0
+          Visible = False
+          OnKeyUp = EditIdClienteKeyUp
+          CalcEditLabel.Left = 163
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 26
+          CalcEditLabel.Width = 60
+          CalcEditLabel.Caption = 'Cliente [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditCliente: TLabeledEdit[3]
+          Left = 224
+          Height = 21
+          Top = 42
+          Width = 755
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditCliente
+          EditLabel.AnchorSideRight.Control = EditCliente
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditCliente
+          EditLabel.Left = 224
+          EditLabel.Height = 13
+          EditLabel.Top = 26
+          EditLabel.Width = 755
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 1
+          TabStop = False
+          Visible = False
+        end
+        object EditIdFornecedor: TLabeledCalcEdit[4]
+          Left = 163
+          Height = 21
+          Top = 42
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 2
+          Value = 0
+          Visible = False
+          OnKeyUp = EditIdFornecedorKeyUp
+          CalcEditLabel.Left = 163
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 26
+          CalcEditLabel.Width = 82
+          CalcEditLabel.Caption = 'Fornecedor [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditFornecedor: TLabeledEdit[5]
+          Left = 224
+          Height = 21
+          Top = 42
+          Width = 755
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditFornecedor
+          EditLabel.AnchorSideRight.Control = EditFornecedor
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditFornecedor
+          EditLabel.Left = 224
+          EditLabel.Height = 13
+          EditLabel.Top = 26
+          EditLabel.Width = 755
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 3
+          TabStop = False
+          Visible = False
+        end
+        object EditIdSetor: TLabeledCalcEdit[6]
+          Left = 16
+          Height = 21
+          Top = 104
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 4
+          Value = 0
+          OnKeyUp = EditIdSetorKeyUp
+          CalcEditLabel.Left = 16
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 88
+          CalcEditLabel.Width = 53
+          CalcEditLabel.Caption = 'Setor [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditSetor: TLabeledEdit[7]
+          Left = 77
+          Height = 21
+          Top = 104
+          Width = 902
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditSetor
+          EditLabel.AnchorSideRight.Control = EditSetor
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditSetor
+          EditLabel.Left = 77
+          EditLabel.Height = 13
+          EditLabel.Top = 88
+          EditLabel.Width = 902
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 5
+          TabStop = False
+        end
+        object EditColaborador: TLabeledEdit[8]
+          Left = 77
+          Height = 21
+          Top = 147
+          Width = 902
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditColaborador
+          EditLabel.AnchorSideRight.Control = EditColaborador
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditColaborador
+          EditLabel.Left = 77
+          EditLabel.Height = 13
+          EditLabel.Top = 131
+          EditLabel.Width = 902
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 7
+          TabStop = False
+        end
+        object EditIdColaborador: TLabeledCalcEdit[9]
+          Left = 16
+          Height = 21
+          Top = 147
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 6
+          Value = 0
+          OnKeyUp = EditIdColaboradorKeyUp
+          CalcEditLabel.Left = 16
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 131
+          CalcEditLabel.Width = 86
+          CalcEditLabel.Caption = 'Colaborador [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditTipoServico: TLabeledEdit[10]
+          Left = 77
+          Height = 21
+          Top = 190
+          Width = 902
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditTipoServico
+          EditLabel.AnchorSideRight.Control = EditTipoServico
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditTipoServico
+          EditLabel.Left = 77
+          EditLabel.Height = 13
+          EditLabel.Top = 174
+          EditLabel.Width = 902
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 9
+          TabStop = False
+        end
+        object EditIdTipoServico: TLabeledCalcEdit[11]
+          Left = 16
+          Height = 21
+          Top = 190
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 8
+          Value = 0
+          OnKeyUp = EditIdTipoServicoKeyUp
+          CalcEditLabel.Left = 16
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 174
+          CalcEditLabel.Width = 85
+          CalcEditLabel.Caption = 'Tipo Serviço [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditDataSolicitacao: TLabeledDateEdit[12]
+          Left = 16
+          Height = 21
+          Top = 274
+          Width = 121
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 11
+          Text = '  /  /    '
+          DateEditLabel.Left = 16
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 258
+          DateEditLabel.Width = 80
+          DateEditLabel.Caption = 'Data Solicitação:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditDataDesejadaInicio: TLabeledDateEdit[13]
+          Left = 143
+          Height = 21
+          Top = 274
+          Width = 121
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 12
+          Text = '  /  /    '
+          DateEditLabel.Left = 143
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 258
+          DateEditLabel.Width = 103
+          DateEditLabel.Caption = 'Data Desejada Início:'
+          DateEditLabel.ParentColor = False
+        end
+        object ComboBoxStatusSolicitacao: TLabeledComboBox[14]
+          Left = 351
+          Height = 21
+          Top = 274
+          Width = 110
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            'Aguardando'
+            'Deferido'
+            'Indeferido'
+          )
+          Style = csDropDownList
+          TabOrder = 14
+          Text = 'Aguardando'
+          ComboBoxLabel.Left = 351
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 258
+          ComboBoxLabel.Width = 35
+          ComboBoxLabel.Caption = 'Status:'
+          ComboBoxLabel.ParentColor = False
+        end
+        object RadioGroupTipoContratacao: TRadioGroup[15]
+          Left = 16
+          Height = 60
+          Top = 22
+          Width = 134
+          AutoFill = True
+          Caption = 'Tipo Contratação:'
+          ChildSizing.LeftRightSpacing = 6
+          ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+          ChildSizing.EnlargeVertical = crsHomogenousChildResize
+          ChildSizing.ShrinkHorizontal = crsScaleChilds
+          ChildSizing.ShrinkVertical = crsScaleChilds
+          ChildSizing.Layout = cclLeftToRightThenTopToBottom
+          ChildSizing.ControlsPerLine = 1
+          ClientHeight = 42
+          ClientWidth = 130
+          Items.Strings = (
+            'Serviço Prestado'
+            'Serviço Contratado'
+          )
+          OnClick = RadioGroupTipoContratacaoClick
+          TabOrder = 15
+        end
+        object EditDescricao: TLabeledEdit[16]
+          Left = 16
+          Height = 21
+          Top = 232
+          Width = 963
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditDescricao
+          EditLabel.AnchorSideRight.Control = EditDescricao
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditDescricao
+          EditLabel.Left = 16
+          EditLabel.Height = 13
+          EditLabel.Top = 216
+          EditLabel.Width = 963
+          EditLabel.Caption = 'Descrição'
+          EditLabel.ParentColor = False
+          TabOrder = 10
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+end

@@ -1,0 +1,119 @@
+inherited FPatrimIndiceAtualizacao: TFPatrimIndiceAtualizacao
+  Tag = 1
+  Left = 296
+  Top = 185
+  Caption = 'Índice de Atualização'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelGrid: TPanel
+        inherited PanelFiltroRapido: TPanel
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 679
+          end
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 10
+          Height = 57
+          Top = 9
+          Width = 977
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditNome: TLabeledEdit[1]
+          Left = 145
+          Height = 21
+          Top = 32
+          Width = 90
+          Constraints.MinWidth = 90
+          EditLabel.AnchorSideLeft.Control = EditNome
+          EditLabel.AnchorSideRight.Control = EditNome
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditNome
+          EditLabel.Left = 145
+          EditLabel.Height = 13
+          EditLabel.Top = 16
+          EditLabel.Width = 90
+          EditLabel.Caption = 'Nome:'
+          EditLabel.ParentColor = False
+          TabOrder = 0
+        end
+        object EditValor: TLabeledCalcEdit[2]
+          Left = 241
+          Height = 21
+          Top = 32
+          Width = 121
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 1
+          Value = 0
+          CalcEditLabel.Left = 241
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 16
+          CalcEditLabel.Width = 28
+          CalcEditLabel.Caption = 'Valor:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditValorAlternativo: TLabeledCalcEdit[3]
+          Left = 368
+          Height = 21
+          Top = 32
+          Width = 121
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 2
+          Value = 0
+          CalcEditLabel.Left = 368
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 16
+          CalcEditLabel.Width = 84
+          CalcEditLabel.Caption = 'Valor Alternativo:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditDataIndice: TLabeledDateEdit[4]
+          Left = 18
+          Height = 21
+          Top = 32
+          Width = 121
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 3
+          Text = '  /  /    '
+          DateEditLabel.Left = 18
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 16
+          DateEditLabel.Width = 59
+          DateEditLabel.Caption = 'Data Índice:'
+          DateEditLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+end

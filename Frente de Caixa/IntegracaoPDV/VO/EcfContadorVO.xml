@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="EcfContadorVO" table="ECF_CONTADOR" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">ECF_CONTADOR</param>
+      </generator>
+    </id>
+
+    <property name="IdEcfEmpresa" column="ID_ECF_EMPRESA" />
+    <property name="Cpf" column="CPF" />
+    <property name="Cnpj" column="CNPJ" />
+    <property name="Nome" column="NOME" />
+    <property name="InscricaoCrc" column="INSCRICAO_CRC" />
+    <property name="Fone" column="FONE" />
+    <property name="Fax" column="FAX" />
+    <property name="Logradouro" column="LOGRADOURO" />
+    <property name="Numero" column="NUMERO" />
+    <property name="Complemento" column="COMPLEMENTO" />
+    <property name="Bairro" column="BAIRRO" />
+    <property name="Cep" column="CEP" />
+    <property name="CodigoMunicipio" column="CODIGO_MUNICIPIO" />
+    <property name="Uf" column="UF" />
+    <property name="Email" column="EMAIL" />
+
+  </class>
+</t2ti-orm-mapping>

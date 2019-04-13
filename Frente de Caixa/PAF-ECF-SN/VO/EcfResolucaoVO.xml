@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="EcfResolucaoVO" table="ECF_RESOLUCAO" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">ECF_RESOLUCAO</param>
+      </generator>
+    </id>
+
+    <property name="ResolucaoTela" column="RESOLUCAO_TELA" />
+    <property name="Largura" column="LARGURA" />
+    <property name="Altura" column="ALTURA" />
+    <property name="ImagemTela" column="IMAGEM_TELA" />
+    <property name="ImagemMenu" column="IMAGEM_MENU" />
+    <property name="ImagemSubmenu" column="IMAGEM_SUBMENU" />
+    <property name="HottrackColor" column="HOTTRACK_COLOR" />
+    <property name="ItemStyleFontName" column="ITEM_STYLE_FONT_NAME" />
+    <property name="ItemStyleFontColor" column="ITEM_STYLE_FONT_COLOR" />
+    <property name="ItemSelStyleColor" column="ITEM_SEL_STYLE_COLOR" />
+    <property name="LabelTotalGeralFontColor" column="LABEL_TOTAL_GERAL_FONT_COLOR" />
+    <property name="ItemStyleFontStyle" column="ITEM_STYLE_FONT_STYLE" />
+    <property name="EditsColor" column="EDITS_COLOR" />
+    <property name="EditsFontColor" column="EDITS_FONT_COLOR" />
+    <property name="EditsDisabledColor" column="EDITS_DISABLED_COLOR" />
+    <property name="EditsFontName" column="EDITS_FONT_NAME" />
+    <property name="EditsFontStyle" column="EDITS_FONT_STYLE" />
+
+  </class>
+</t2ti-orm-mapping>

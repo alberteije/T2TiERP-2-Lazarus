@@ -1,0 +1,396 @@
+inherited FSocio: TFSocio
+  Left = 318
+  Top = 128
+  Caption = 'Socio'
+  ClientHeight = 536
+  ClientWidth = 913
+  PixelsPerInch = 96
+  inherited PageControl: TPageControl
+    Width = 913
+    Height = 505
+    ActivePage = PaginaEdits
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 905
+        Height = 477
+        inherited Grid: TRxDbGrid
+          Width = 905
+          Height = 425
+        end
+        inherited PanelFiltroRapido: TPanel
+          Top = 423
+          Width = 905
+          inherited BotaoConsultar: TSpeedButton
+            Left = 771
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 604
+          end
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      inherited PanelEdits: TPanel
+        Width = 905
+        Height = 477
+        object PageControlSocio: TPageControl
+          Left = 8
+          Top = 205
+          Width = 883
+          Height = 257
+          ActivePage = tsDependente
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          TabOrder = 0
+          object tsDependente: TTabSheet
+            Caption = 'Dependentes'
+            object PanelDependente: TPanel
+              Left = 0
+              Top = 0
+              Width = 875
+              Height = 229
+              Align = alClient
+              TabOrder = 0
+              object GridDependente: TDBGrid
+                Left = 0
+                Top = 0
+                Width = 873
+                Height = 227
+                Align = alClient
+                DataSource = DSSocioDependente
+                TabOrder = 0
+                TitleFont.Charset = DEFAULT_CHARSET
+                TitleFont.Color = clWindowText
+                TitleFont.Height = -11
+                TitleFont.Name = 'Tahoma'
+                TitleFont.Style = []
+                OnKeyDown = GridDependenteKeyDown
+                Columns = <
+                  item
+                    Expanded = False
+                    FieldName = 'NOME'
+                    Title.Caption = 'Nome'
+                    Width = 400
+                    Visible = True
+                  end
+                  item
+                    Expanded = False
+                    FieldName = 'ID_TIPO_RELACIONAMENTO'
+                    Title.Caption = 'Id Relacionamento [F1]'
+                    Visible = True
+                  end
+                  item
+                    Expanded = False
+                    FieldName = 'TIPO_RELACIONAMENTO.NOME'
+                    Title.Caption = 'Nome Relacionamento'
+                    Width = 400
+                    Visible = True
+                  end
+                  item
+                    Expanded = False
+                    FieldName = 'DATA_NASCIMENTO'
+                    Title.Caption = 'Data Nascimento'
+                    Visible = True
+                  end
+                  item
+                    Expanded = False
+                    FieldName = 'DATA_INICIO_DEPENDENCIA'
+                    Title.Caption = 'Inicio Dependência'
+                    Visible = True
+                  end
+                  item
+                    Expanded = False
+                    FieldName = 'DATA_FIM_DEPENDENCIA'
+                    Title.Caption = 'Fim Dependência'
+                    Visible = True
+                  end
+                  item
+                    Expanded = False
+                    FieldName = 'CPF'
+                    Width = 100
+                    Visible = True
+                  end>
+              end
+            end
+          end
+          object TabSheetParticipacaoSocietaria: TTabSheet
+            Caption = 'Participação Societária'
+            ImageIndex = 1
+            object PanelParticipacaoSocietaria: TPanel
+              Left = 0
+              Top = 0
+              Width = 875
+              Height = 229
+              Align = alClient
+              TabOrder = 0
+              object GridParticipacaoSocietaria: TDBGrid
+                Left = 0
+                Top = 0
+                Width = 873
+                Height = 227
+                Align = alClient
+                DataSource = DSParticipacaoSocietaria
+                TabOrder = 0
+                TitleFont.Charset = DEFAULT_CHARSET
+                TitleFont.Color = clWindowText
+                TitleFont.Height = -11
+                TitleFont.Name = 'Tahoma'
+                TitleFont.Style = []
+                OnKeyDown = GridParticipacaoSocietariaKeyDown
+                Columns = <
+                  item
+                    Expanded = False
+                    FieldName = 'CNPJ'
+                    Width = 120
+                    Visible = True
+                  end
+                  item
+                    Expanded = False
+                    FieldName = 'RAZAO_SOCIAL'
+                    Title.Caption = 'Razão Social'
+                    Visible = True
+                  end
+                  item
+                    Expanded = False
+                    FieldName = 'DATA_ENTRADA'
+                    Title.Caption = 'Data Entrada'
+                    Visible = True
+                  end
+                  item
+                    Expanded = False
+                    FieldName = 'DATA_SAIDA'
+                    Title.Caption = 'Data Saída'
+                    Visible = True
+                  end
+                  item
+                    Expanded = False
+                    FieldName = 'PARTICIPACAO'
+                    Title.Caption = 'Participação no Capital'
+                    Visible = True
+                  end
+                  item
+                    Expanded = False
+                    FieldName = 'DIRIGENTE'
+                    PickList.Strings = (
+                      'S - Sim'
+                      'N - Não')
+                    Title.Caption = 'Dirigente [S/N]'
+                    Visible = True
+                  end>
+              end
+            end
+          end
+        end
+        object PanelDados: TPanel
+          Left = 8
+          Top = 9
+          Width = 883
+          Height = 190
+          Anchors = [akLeft, akTop, akRight]
+          BevelOuter = bvLowered
+          TabOrder = 1
+          object EditIdQuadroSocietario: TLabeledCalcEdit
+            Left = 6
+            Top = 26
+            Width = 114
+            Height = 21
+            TabOrder = 0
+            OnKeyUp = EditIdQuadroSocietarioKeyUp
+            CalcEditLabel.Width = 113
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Caption = 'Quadro Societário [F1]:'
+          end
+          object EditCep: TLabeledMaskEdit
+            Left = 126
+            Top = 26
+            Width = 87
+            Height = 21
+            Color = clWhite
+            MaxLength = 9
+            TabOrder = 1
+            Text = '     ---_'
+            EditMask = '#####-###;0;_'
+          end
+          object EditLogradouro: TLabeledEdit
+            Left = 219
+            Top = 26
+            Width = 651
+            Height = 21
+            Anchors = [akLeft, akTop, akRight]
+            EditLabel.Width = 59
+            EditLabel.Height = 13
+            EditLabel.Caption = 'Logradouro:'
+            TabOrder = 2
+          end
+          object EditComplemento: TLabeledEdit
+            Left = 6
+            Top = 69
+            Width = 315
+            Height = 21
+            EditLabel.Width = 69
+            EditLabel.Height = 13
+            EditLabel.Caption = 'Complemento:'
+            TabOrder = 3
+          end
+          object EditMunicipio: TLabeledEdit
+            Left = 6
+            Top = 112
+            Width = 212
+            Height = 21
+            EditLabel.Width = 47
+            EditLabel.Height = 13
+            EditLabel.Caption = 'Municipio:'
+            TabOrder = 6
+          end
+          object EditUf: TLabeledEdit
+            Left = 224
+            Top = 112
+            Width = 29
+            Height = 21
+            Anchors = [akTop]
+            EditLabel.Width = 13
+            EditLabel.Height = 13
+            EditLabel.Caption = 'UF'
+            MaxLength = 2
+            TabOrder = 7
+          end
+          object EditFone: TLabeledMaskEdit
+            Left = 259
+            Top = 112
+            Width = 90
+            Height = 21
+            Color = clWhite
+            MaxLength = 13
+            TabOrder = 8
+            Text = '((()()()-()-()-()-()-()-()-()- )- )-  -  -'
+            EditMask = '(##)####-####;0;_'
+          end
+          object EditCelular: TLabeledMaskEdit
+            Left = 355
+            Top = 112
+            Width = 98
+            Height = 21
+            Color = clWhite
+            MaxLength = 13
+            TabOrder = 9
+            Text = '((()()()-()-()-()-()-()-()-()-()-()-()- )- )-  -  -'
+            EditMask = '(##)####-####;0;_'
+          end
+          object EditEmail: TLabeledEdit
+            Left = 459
+            Top = 112
+            Width = 411
+            Height = 21
+            Anchors = [akLeft, akTop, akRight]
+            EditLabel.Width = 32
+            EditLabel.Height = 13
+            EditLabel.Caption = 'E-mail:'
+            TabOrder = 10
+          end
+          object EditBairro: TLabeledEdit
+            Left = 422
+            Top = 69
+            Width = 448
+            Height = 21
+            Anchors = [akLeft, akTop, akRight]
+            EditLabel.Width = 32
+            EditLabel.Height = 13
+            EditLabel.Caption = 'Bairro:'
+            TabOrder = 5
+          end
+          object EditNumero: TLabeledCalcEdit
+            Left = 327
+            Top = 69
+            Width = 89
+            Height = 21
+            TabOrder = 4
+            CalcEditLabel.Width = 41
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Caption = 'Número:'
+          end
+          object EditDataIngresso: TLabeledDateEdit
+            Left = 6
+            Top = 156
+            Width = 118
+            Height = 21
+            TabOrder = 11
+            DateEditLabel.Width = 72
+            DateEditLabel.Height = 13
+            DateEditLabel.Caption = 'Data Ingresso:'
+          end
+          object EditDataSaida: TLabeledDateEdit
+            Left = 130
+            Top = 156
+            Width = 118
+            Height = 21
+            TabOrder = 12
+            DateEditLabel.Width = 56
+            DateEditLabel.Height = 13
+            DateEditLabel.Caption = 'Data Saída:'
+          end
+          object EditParticipacao: TLabeledCalcEdit
+            Left = 254
+            Top = 155
+            Width = 130
+            Height = 21
+            DisplayFormat = '#,###,##0.00'
+            TabOrder = 13
+            CalcEditLabel.Width = 62
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Caption = 'Participação:'
+          end
+          object EditQuotas: TLabeledCalcEdit
+            Left = 526
+            Top = 155
+            Width = 130
+            Height = 21
+            DisplayFormat = '#,###,##0'
+            TabOrder = 15
+            CalcEditLabel.Width = 39
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Caption = 'Quotas:'
+          end
+          object EditIntegralizar: TLabeledCalcEdit
+            Left = 390
+            Top = 155
+            Width = 130
+            Height = 21
+            DisplayFormat = '#,###,##0.00'
+            TabOrder = 14
+            CalcEditLabel.Width = 95
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Caption = 'Valor a Integralizar:'
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 913
+    inherited BotaoSair: TSpeedButton
+      Left = 807
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 707
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 597
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 697
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 497
+    end
+  end
+  object DSSocioDependente: TDataSource
+    DataSet = CDSSocioDependente
+    Left = 656
+    Top = 464
+  end
+  object DSParticipacaoSocietaria: TDataSource
+    DataSet = CDSParticipacaoSocietaria
+    Left = 800
+    Top = 464
+  end
+end
+

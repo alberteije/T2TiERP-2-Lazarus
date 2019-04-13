@@ -1,0 +1,755 @@
+inherited FProduto: TFProduto
+  Tag = 1
+  Left = 316
+  Top = 148
+  Caption = 'Produto'
+  ClientHeight = 548
+  ClientWidth = 942
+  PixelsPerInch = 96
+  inherited PageControl: TPageControl
+    Width = 942
+    Height = 517
+    ActivePage = PaginaEdits
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 934
+        Height = 489
+        inherited Grid: TRxDbGrid
+          Width = 934
+          Height = 437
+        end
+        inherited PanelFiltroRapido: TPanel
+          Top = 435
+          Width = 934
+          inherited BotaoConsultar: TSpeedButton
+            Left = 800
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 633
+          end
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      inherited PanelEdits: TPanel
+        Width = 934
+        Height = 489
+        object ScrollBox: TScrollBox
+          Left = 2
+          Top = 2
+          Width = 926
+          Height = 481
+          Align = alClient
+          BorderStyle = bsNone
+          TabOrder = 0
+          object BevelEdits: TBevel
+            Tag = 1
+            Left = 7
+            Top = 8
+            Width = 909
+            Height = 137
+            Anchors = [akLeft, akTop, akRight]
+            Constraints.MinWidth = 753
+          end
+          object PanelProdutoDadosBase: TPanel
+            Left = 8
+            Top = 9
+            Width = 908
+            Height = 135
+            Anchors = [akLeft, akTop, akRight]
+            BevelOuter = bvNone
+            TabOrder = 1
+            object EditIdSubgrupoProduto: TLabeledCalcEdit
+              Left = 6
+              Top = 19
+              Width = 61
+              Height = 21
+              TabOrder = 0
+              OnKeyUp = EditIdSubgrupoProdutoKeyUp
+              CalcEditLabel.Width = 92
+              CalcEditLabel.Height = 13
+              CalcEditLabel.Caption = 'Agrupamento [F1]:'
+            end
+            object EditSubGrupoProduto: TLabeledEdit
+              Left = 67
+              Top = 19
+              Width = 828
+              Height = 21
+              TabStop = False
+              Anchors = [akLeft, akTop, akRight]
+              Color = clInfoBk
+              EditLabel.Width = 6
+              EditLabel.Height = 13
+              EditLabel.Caption = '  '
+              ReadOnly = True
+              TabOrder = 1
+            end
+            object EditIdMarcaProduto: TLabeledCalcEdit
+              Left = 432
+              Top = 62
+              Width = 61
+              Height = 21
+              TabOrder = 4
+              OnKeyUp = EditIdMarcaProdutoKeyUp
+              CalcEditLabel.Width = 56
+              CalcEditLabel.Height = 13
+              CalcEditLabel.Caption = 'Marca [F1]:'
+            end
+            object EditMarcaProduto: TLabeledEdit
+              Left = 493
+              Top = 62
+              Width = 402
+              Height = 21
+              TabStop = False
+              Anchors = [akLeft, akTop, akRight]
+              Color = clInfoBk
+              EditLabel.Width = 6
+              EditLabel.Height = 13
+              EditLabel.Caption = '  '
+              ReadOnly = True
+              TabOrder = 5
+            end
+            object EditUnidadeProduto: TLabeledEdit
+              Left = 67
+              Top = 62
+              Width = 359
+              Height = 21
+              TabStop = False
+              Color = clInfoBk
+              EditLabel.Width = 6
+              EditLabel.Height = 13
+              EditLabel.Caption = '  '
+              ReadOnly = True
+              TabOrder = 3
+            end
+            object EditIdUnidadeProduto: TLabeledCalcEdit
+              Left = 6
+              Top = 62
+              Width = 61
+              Height = 21
+              TabOrder = 2
+              OnKeyUp = EditIdUnidadeProdutoKeyUp
+              CalcEditLabel.Width = 66
+              CalcEditLabel.Height = 13
+              CalcEditLabel.Caption = 'Unidade [F1]:'
+            end
+            object EditIdAlmoxarifado: TLabeledCalcEdit
+              Left = 6
+              Top = 104
+              Width = 61
+              Height = 21
+              TabOrder = 6
+              OnKeyUp = EditIdAlmoxarifadoKeyUp
+              CalcEditLabel.Width = 90
+              CalcEditLabel.Height = 13
+              CalcEditLabel.Caption = 'Almoxarifado [F1]:'
+            end
+            object EditAlmoxarifado: TLabeledEdit
+              Left = 67
+              Top = 104
+              Width = 359
+              Height = 21
+              TabStop = False
+              Color = clInfoBk
+              EditLabel.Width = 6
+              EditLabel.Height = 13
+              EditLabel.Caption = '  '
+              ReadOnly = True
+              TabOrder = 7
+            end
+            object EditIdTributGrupoTributario: TLabeledCalcEdit
+              Left = 541
+              Top = 104
+              Width = 61
+              Height = 21
+              TabOrder = 9
+              OnKeyUp = EditIdTributGrupoTributarioKeyUp
+              CalcEditLabel.Width = 105
+              CalcEditLabel.Height = 13
+              CalcEditLabel.Caption = 'Grupo Tributário [F1]:'
+            end
+            object EditTributGrupoTributario: TLabeledEdit
+              Left = 602
+              Top = 104
+              Width = 293
+              Height = 21
+              TabStop = False
+              Anchors = [akLeft, akTop, akRight]
+              Color = clInfoBk
+              EditLabel.Width = 6
+              EditLabel.Height = 13
+              EditLabel.Caption = '  '
+              ReadOnly = True
+              TabOrder = 10
+            end
+            object ComboboxIcmsCustomizado: TLabeledComboBox
+              Left = 432
+              Top = 104
+              Width = 103
+              Height = 21
+              Style = csDropDownList
+              ItemIndex = 1
+              TabOrder = 8
+              Text = 'Não'
+              OnChange = ComboboxIcmsCustomizadoChange
+              Items.Strings = (
+                'Sim'
+                'Não')
+              ComboBoxLabel.Width = 94
+              ComboBoxLabel.Height = 13
+              ComboBoxLabel.Caption = 'ICMS Customizado?'
+            end
+          end
+          object PageControlDadosProduto: TPageControl
+            Left = 7
+            Top = 163
+            Width = 909
+            Height = 314
+            ActivePage = tsProdutoPrincipal
+            Anchors = [akLeft, akTop, akRight, akBottom]
+            TabOrder = 0
+            object tsProdutoPrincipal: TTabSheet
+              Caption = 'Principal'
+              object PanelProdutoPrincipal: TPanel
+                Left = 0
+                Top = 0
+                Width = 901
+                Height = 286
+                Align = alClient
+                BevelOuter = bvNone
+                TabOrder = 0
+                object GroupBoxRG: TGroupBox
+                  Left = 6
+                  Top = 148
+                  Width = 879
+                  Height = 108
+                  Anchors = [akLeft, akTop, akRight]
+                  Caption = 'Valores Principais'
+                  TabOrder = 8
+                  object EditValorCompra: TLabeledCalcEdit
+                    Left = 16
+                    Top = 19
+                    Width = 110
+                    Height = 21
+                    DisplayFormat = '###,###,##0.00'
+                    TabOrder = 0
+                    CalcEditLabel.Width = 68
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Caption = 'Valor Compra:'
+                  end
+                  object EditValorVenda: TLabeledCalcEdit
+                    Left = 137
+                    Top = 19
+                    Width = 110
+                    Height = 21
+                    DisplayFormat = '###,###,##0.00'
+                    TabOrder = 1
+                    CalcEditLabel.Width = 61
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Caption = 'Valor Venda:'
+                  end
+                  object EditPrecoVendaMinimo: TLabeledCalcEdit
+                    Left = 258
+                    Top = 19
+                    Width = 110
+                    Height = 21
+                    DisplayFormat = '###,###,##0.00'
+                    TabOrder = 2
+                    CalcEditLabel.Width = 96
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Caption = 'Valor Venda Mínimo:'
+                  end
+                  object EditPrecoSugerido: TLabeledCalcEdit
+                    Left = 379
+                    Top = 19
+                    Width = 110
+                    Height = 21
+                    DisplayFormat = '###,###,##0.00'
+                    TabOrder = 3
+                    CalcEditLabel.Width = 73
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Caption = 'Valor Sugerido:'
+                  end
+                  object EditCustoMedioLiquido: TLabeledCalcEdit
+                    Left = 500
+                    Top = 19
+                    Width = 110
+                    Height = 21
+                    DisplayFormat = '###,###,##0.00'
+                    TabOrder = 4
+                    CalcEditLabel.Width = 99
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Caption = 'Custo Médio Líquido:'
+                  end
+                  object EditPrecoLucroZero: TLabeledCalcEdit
+                    Left = 621
+                    Top = 19
+                    Width = 110
+                    Height = 21
+                    DisplayFormat = '###,###,##0.00'
+                    TabOrder = 5
+                    CalcEditLabel.Width = 85
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Caption = 'Preço Lucro Zero:'
+                  end
+                  object EditPrecoLucroMinimo: TLabeledCalcEdit
+                    Left = 743
+                    Top = 19
+                    Width = 110
+                    Height = 21
+                    DisplayFormat = '###,###,##0.00'
+                    TabOrder = 6
+                    CalcEditLabel.Width = 95
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Caption = 'Preço Lucro Mínimo:'
+                  end
+                  object EditPrecoLucroMaximo: TLabeledCalcEdit
+                    Left = 16
+                    Top = 62
+                    Width = 110
+                    Height = 21
+                    DisplayFormat = '###,###,##0.00'
+                    TabOrder = 7
+                    CalcEditLabel.Width = 99
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Caption = 'Preço Lucro Máximo:'
+                  end
+                  object EditMarkup: TLabeledCalcEdit
+                    Left = 137
+                    Top = 62
+                    Width = 110
+                    Height = 21
+                    DisplayFormat = '###,###,##0.00'
+                    TabOrder = 8
+                    CalcEditLabel.Width = 39
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Caption = 'Markup:'
+                  end
+                  object EditQuantidadeEstoque: TLabeledCalcEdit
+                    Left = 258
+                    Top = 62
+                    Width = 110
+                    Height = 21
+                    DisplayFormat = '###,###,##0.00'
+                    TabOrder = 9
+                    CalcEditLabel.Width = 102
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Caption = 'Quantidade Estoque:'
+                  end
+                  object EditQuantidadeEstoqueAnterior: TLabeledCalcEdit
+                    Left = 379
+                    Top = 62
+                    Width = 110
+                    Height = 21
+                    DisplayFormat = '###,###,##0.00'
+                    TabOrder = 10
+                    CalcEditLabel.Width = 112
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Caption = 'Qtde Estoque Anterior:'
+                  end
+                  object EditEstoqueIdeal: TLabeledCalcEdit
+                    Left = 500
+                    Top = 62
+                    Width = 110
+                    Height = 21
+                    DisplayFormat = '###,###,##0.00'
+                    TabOrder = 11
+                    CalcEditLabel.Width = 70
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Caption = 'Estoque Ideal:'
+                  end
+                  object EditEstoqueMinimo: TLabeledCalcEdit
+                    Left = 621
+                    Top = 62
+                    Width = 110
+                    Height = 21
+                    DisplayFormat = '###,###,##0.00'
+                    TabOrder = 12
+                    CalcEditLabel.Width = 78
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Caption = 'Estoque Mínimo:'
+                  end
+                  object EditEstoqueMaximo: TLabeledCalcEdit
+                    Left = 743
+                    Top = 62
+                    Width = 110
+                    Height = 21
+                    DisplayFormat = '###,###,##0.00'
+                    TabOrder = 13
+                    CalcEditLabel.Width = 82
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Caption = 'Estoque Máximo:'
+                  end
+                end
+                object EditNome: TLabeledEdit
+                  Left = 6
+                  Top = 58
+                  Width = 516
+                  Height = 21
+                  EditLabel.Width = 31
+                  EditLabel.Height = 13
+                  EditLabel.Caption = 'Nome:'
+                  MaxLength = 100
+                  TabOrder = 5
+                end
+                object ComboBoxInativo: TLabeledComboBox
+                  Left = 740
+                  Top = 16
+                  Width = 71
+                  Height = 21
+                  Style = csDropDownList
+                  ItemIndex = 1
+                  TabOrder = 3
+                  Text = 'Não'
+                  Items.Strings = (
+                    'Sim'
+                    'Não')
+                  ComboBoxLabel.Width = 39
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Caption = 'Inativo?'
+                end
+                object EditGtin: TLabeledEdit
+                  Left = 6
+                  Top = 16
+                  Width = 119
+                  Height = 21
+                  EditLabel.Width = 28
+                  EditLabel.Height = 13
+                  EditLabel.Caption = 'GTIN:'
+                  MaxLength = 14
+                  TabOrder = 0
+                end
+                object EditCodigoInterno: TLabeledEdit
+                  Left = 131
+                  Top = 16
+                  Width = 391
+                  Height = 21
+                  EditLabel.Width = 76
+                  EditLabel.Height = 13
+                  EditLabel.Caption = 'Código Interno:'
+                  MaxLength = 60
+                  TabOrder = 1
+                end
+                object EditNcm: TLabeledEdit
+                  Left = 528
+                  Top = 16
+                  Width = 206
+                  Height = 21
+                  EditLabel.Width = 49
+                  EditLabel.Height = 13
+                  EditLabel.Caption = 'NCM [F1]:'
+                  MaxLength = 8
+                  TabOrder = 2
+                  OnKeyUp = EditNcmKeyUp
+                end
+                object ComboBoxClasseAbc: TLabeledComboBox
+                  Left = 817
+                  Top = 16
+                  Width = 68
+                  Height = 21
+                  Style = csDropDownList
+                  Anchors = [akLeft, akTop, akRight]
+                  ItemIndex = 0
+                  TabOrder = 4
+                  Text = 'A'
+                  Items.Strings = (
+                    'A'
+                    'B'
+                    'C')
+                  ComboBoxLabel.Width = 35
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Caption = 'Classe:'
+                end
+                object EditDescricaoPdv: TLabeledEdit
+                  Left = 528
+                  Top = 58
+                  Width = 357
+                  Height = 21
+                  Anchors = [akLeft, akTop, akRight]
+                  EditLabel.Width = 72
+                  EditLabel.Height = 13
+                  EditLabel.Caption = 'Descrição PDV:'
+                  MaxLength = 30
+                  TabOrder = 6
+                end
+                object MemoDescricao: TLabeledMemo
+                  Left = 6
+                  Top = 101
+                  Width = 879
+                  Height = 41
+                  Anchors = [akLeft, akTop, akRight]
+                  TabOrder = 7
+                  MemoLabel.Width = 50
+                  MemoLabel.Height = 13
+                  MemoLabel.Caption = 'Descrição:'
+                end
+              end
+            end
+            object tsDadosComplementares: TTabSheet
+              Caption = 'Dados Complementares'
+              ImageIndex = 2
+              object PanelDadosComplementares: TPanel
+                Left = 0
+                Top = 0
+                Width = 901
+                Height = 286
+                Align = alClient
+                BevelOuter = bvNone
+                TabOrder = 0
+                object ImagemProduto: TImage
+                  Left = 9
+                  Top = 23
+                  Width = 250
+                  Height = 250
+                  Center = True
+                  PopupMenu = PopupMenu1
+                  Transparent = True
+                  OnClick = ImagemProdutoClick
+                end
+                object Label1: TLabel
+                  Left = 6
+                  Top = 4
+                  Width = 98
+                  Height = 13
+                  Caption = 'Imagem do Produto:'
+                end
+                object ComboBoxIat: TLabeledComboBox
+                  Left = 467
+                  Top = 16
+                  Width = 124
+                  Height = 21
+                  Style = csDropDownList
+                  ItemIndex = 1
+                  TabOrder = 3
+                  Text = 'T - Truncamento'
+                  Items.Strings = (
+                    'A - Arredondamento'
+                    'T - Truncamento')
+                  ComboBoxLabel.Width = 21
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Caption = 'IAT:'
+                end
+                object ComboBoxIppt: TLabeledComboBox
+                  Left = 597
+                  Top = 16
+                  Width = 86
+                  Height = 21
+                  Style = csDropDownList
+                  ItemIndex = 1
+                  TabOrder = 4
+                  Text = 'T - Terceiro'
+                  Items.Strings = (
+                    'P - Próprio'
+                    'T - Terceiro')
+                  ComboBoxLabel.Width = 26
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Caption = 'IPPT:'
+                end
+                object ComboBoxTipoItemSped: TLabeledComboBox
+                  Left = 689
+                  Top = 16
+                  Width = 199
+                  Height = 21
+                  Style = csDropDownList
+                  Anchors = [akLeft, akTop, akRight]
+                  ItemIndex = 0
+                  TabOrder = 5
+                  Text = '00 - Mercadoria para Revenda'
+                  Items.Strings = (
+                    '00 - Mercadoria para Revenda'
+                    '01 - Matéria-Prima'
+                    '02 - Embalagem'
+                    '03 - Produto em Processo'
+                    '04 - Produto Acabado'
+                    '05 - Subproduto'
+                    '06 - Produto Intermediário'
+                    '07 - Material de Uso e Consumo'
+                    '08 - Ativo Imobilizado'
+                    '09 - Serviços'
+                    '10 - Outros insumos'
+                    '99 - Outras')
+                  ComboBoxLabel.Width = 76
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Caption = 'Tipo Item Sped:'
+                end
+                object EditCodigoLst: TLabeledEdit
+                  Left = 265
+                  Top = 16
+                  Width = 42
+                  Height = 21
+                  EditLabel.Width = 21
+                  EditLabel.Height = 13
+                  EditLabel.Caption = 'LST:'
+                  MaxLength = 4
+                  TabOrder = 0
+                end
+                object EditExTipi: TLabeledEdit
+                  Left = 313
+                  Top = 16
+                  Width = 42
+                  Height = 21
+                  EditLabel.Width = 36
+                  EditLabel.Height = 13
+                  EditLabel.Caption = 'EXTIPI:'
+                  MaxLength = 3
+                  TabOrder = 1
+                end
+                object EditTotalizadorParcial: TLabeledEdit
+                  Left = 265
+                  Top = 58
+                  Width = 90
+                  Height = 21
+                  EditLabel.Width = 91
+                  EditLabel.Height = 13
+                  EditLabel.Caption = 'Totalizador Parcial:'
+                  MaxLength = 10
+                  TabOrder = 6
+                end
+                object EditCodigoBalanca: TLabeledCalcEdit
+                  Left = 361
+                  Top = 58
+                  Width = 80
+                  Height = 21
+                  TabOrder = 7
+                  CalcEditLabel.Width = 77
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Caption = 'Código Balança:'
+                end
+                object EditPeso: TLabeledCalcEdit
+                  Left = 265
+                  Top = 100
+                  Width = 110
+                  Height = 21
+                  DisplayFormat = '###,###,##0.00'
+                  TabOrder = 8
+                  CalcEditLabel.Width = 27
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Caption = 'Peso:'
+                end
+                object EditPorcentoComissao: TLabeledCalcEdit
+                  Left = 381
+                  Top = 100
+                  Width = 110
+                  Height = 21
+                  DisplayFormat = '###,###,##0.00'
+                  TabOrder = 9
+                  CalcEditLabel.Width = 76
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Caption = 'Taxa Comissão:'
+                end
+                object EditPontoPedido: TLabeledCalcEdit
+                  Left = 497
+                  Top = 100
+                  Width = 110
+                  Height = 21
+                  DisplayFormat = '###,###,##0.00'
+                  TabOrder = 10
+                  CalcEditLabel.Width = 67
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Caption = 'Ponto Pedido:'
+                end
+                object EditLoteEconomicoCompra: TLabeledCalcEdit
+                  Left = 613
+                  Top = 100
+                  Width = 110
+                  Height = 21
+                  DisplayFormat = '###,###,##0.00'
+                  TabOrder = 11
+                  CalcEditLabel.Width = 118
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Caption = 'Lote Econômico Compra:'
+                end
+                object GroupBoxValoresPaf: TGroupBox
+                  Left = 265
+                  Top = 128
+                  Width = 623
+                  Height = 67
+                  Anchors = [akLeft, akTop, akRight]
+                  Caption = 'Valores para PAF:'
+                  TabOrder = 12
+                  object EditAliquotaIcmsPaf: TLabeledCalcEdit
+                    Left = 12
+                    Top = 19
+                    Width = 110
+                    Height = 21
+                    DisplayFormat = '###,###,##0.00'
+                    TabOrder = 0
+                    CalcEditLabel.Width = 71
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Caption = 'Alíquota ICMS:'
+                  end
+                  object EditAliquotaIssqnPaf: TLabeledCalcEdit
+                    Left = 128
+                    Top = 19
+                    Width = 110
+                    Height = 21
+                    DisplayFormat = '###,###,##0.00'
+                    TabOrder = 1
+                    CalcEditLabel.Width = 77
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Caption = 'Alíquota ISSQN:'
+                  end
+                end
+                object ComboboxTipo: TLabeledComboBox
+                  Left = 361
+                  Top = 16
+                  Width = 100
+                  Height = 21
+                  Style = csDropDownList
+                  ItemIndex = 0
+                  TabOrder = 2
+                  Text = 'V - Venda'
+                  Items.Strings = (
+                    'V - Venda'
+                    'C - Composição'
+                    'P - Produção'
+                    'I - Insumo'
+                    'U - Uso Proprio')
+                  ComboBoxLabel.Width = 24
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Caption = 'Tipo:'
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 942
+    inherited BotaoSair: TSpeedButton
+      Left = 836
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 736
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 626
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 726
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 526
+    end
+  end
+  inherited PopupMenuAtalhosBotoesTela: TPopupMenu
+    Top = 23
+  end
+  inherited PopupMenuAtalhosBotoesTelaCadastro: TPopupMenu
+    Left = 720
+    Top = 24
+  end
+  object PopupMenu1: TPopupMenu
+    Images = FDataModule.ImagensCadastros
+    Left = 224
+    Top = 467
+    object CarregarImaem1: TMenuItem
+      Caption = 'Carregar Imagem'
+      ImageIndex = 28
+      OnClick = CarregarImaem1Click
+    end
+  end
+end
+

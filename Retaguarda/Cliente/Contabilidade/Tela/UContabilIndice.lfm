@@ -1,0 +1,292 @@
+inherited FContabilIndice: TFContabilIndice
+  Left = 318
+  Top = 203
+  Caption = 'Contábil Índices'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 980
+        ClientWidth = 980
+        inherited PanelFiltroRapido: TPanel
+          Width = 980
+          ClientWidth = 980
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 679
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 980
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object PanelMestre: TPanel[0]
+          Left = 8
+          Height = 101
+          Top = 10
+          Width = 980
+          Anchors = [akTop, akLeft, akRight]
+          BevelOuter = bvLowered
+          ClientHeight = 101
+          ClientWidth = 980
+          TabOrder = 0
+          object ComboBoxPeriodicidade: TLabeledComboBox
+            Left = 7
+            Height = 21
+            Top = 63
+            Width = 132
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              'D - Diário'
+              'M -Mensal'
+            )
+            Style = csDropDownList
+            TabOrder = 0
+            Text = 'D - Diário'
+            ComboBoxLabel.Left = 7
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 47
+            ComboBoxLabel.Width = 67
+            ComboBoxLabel.Caption = 'Periodicidade:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object EditMensalMesAno: TLabeledMaskEdit
+            Left = 145
+            Height = 21
+            Top = 63
+            Width = 86
+            CharCase = ecNormal
+            MaxLength = 7
+            TabOrder = 1
+            EditMask = '##/####;1;_'
+            Text = '  /    '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 145
+            MaskEditLabel.Height = 13
+            MaskEditLabel.Top = 47
+            MaskEditLabel.Width = 89
+            MaskEditLabel.Caption = 'EditMensalMesAno'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditDiarioAPartirDe: TLabeledDateEdit
+            Left = 237
+            Height = 21
+            Top = 62
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 2
+            Text = '  /  /    '
+            DateEditLabel.Left = 237
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 46
+            DateEditLabel.Width = 85
+            DateEditLabel.Caption = 'Diário a Partir De:'
+            DateEditLabel.ParentColor = False
+          end
+          object EditIdIndiceEconomico: TLabeledCalcEdit
+            Left = 7
+            Height = 21
+            Top = 22
+            Width = 61
+            Alignment = taRightJustify
+            DecimalPlaces = 0
+            DisplayFormat = '0'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 3
+            Value = 0
+            OnKeyUp = EditIdIndiceEconomicoKeyUp
+            CalcEditLabel.Left = 7
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 6
+            CalcEditLabel.Width = 109
+            CalcEditLabel.Caption = 'Índice Econômico [F1]:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditIndiceEconomico: TLabeledEdit
+            Left = 68
+            Height = 21
+            Top = 22
+            Width = 899
+            Anchors = [akTop, akLeft, akRight]
+            Color = clInfoBk
+            EditLabel.AnchorSideLeft.Control = EditIndiceEconomico
+            EditLabel.AnchorSideRight.Control = EditIndiceEconomico
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditIndiceEconomico
+            EditLabel.Left = 68
+            EditLabel.Height = 13
+            EditLabel.Top = 6
+            EditLabel.Width = 899
+            EditLabel.Caption = '  '
+            EditLabel.ParentColor = False
+            ReadOnly = True
+            TabOrder = 4
+            TabStop = False
+          end
+        end
+        object PageControlItens: TPageControl[1]
+          Left = 8
+          Height = 293
+          Top = 126
+          Width = 980
+          ActivePage = tsItens
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          TabIndex = 0
+          TabOrder = 1
+          object tsItens: TTabSheet
+            Caption = 'Detalhe'
+            ClientHeight = 267
+            ClientWidth = 972
+            object PanelItens: TPanel
+              Left = 0
+              Height = 267
+              Top = 0
+              Width = 972
+              Align = alClient
+              BevelOuter = bvNone
+              ClientHeight = 267
+              ClientWidth = 972
+              TabOrder = 0
+              object GridDetalhe: TRxDBGrid
+                Left = 0
+                Height = 267
+                Top = 0
+                Width = 972
+                TitleButtons = True
+                AutoSort = True
+                Columns = <                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Data Índice'
+                    Title.Orientation = toHorizontal
+                    Width = 120
+                    FieldName = 'DATA_INDICE'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Valor'
+                    Title.Orientation = toHorizontal
+                    Width = 200
+                    FieldName = 'VALOR'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end>
+                KeyStrokes = <                
+                  item
+                    Command = rxgcShowFindDlg
+                    ShortCut = 16454
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowColumnsDlg
+                    ShortCut = 16471
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowFilterDlg
+                    ShortCut = 16468
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowSortDlg
+                    ShortCut = 16467
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowQuickFilter
+                    ShortCut = 16465
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcHideQuickFilter
+                    ShortCut = 16456
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcSelectAll
+                    ShortCut = 16449
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcDeSelectAll
+                    ShortCut = 16429
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcInvertSelection
+                    ShortCut = 16426
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcOptimizeColumnsWidth
+                    ShortCut = 16427
+                    Enabled = True
+                  end>
+                OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                Align = alClient
+                Color = clWindow
+                DrawFullLine = False
+                FocusColor = clRed
+                SelectedColor = clHighlight
+                GridLineStyle = psSolid
+                DataSource = DSContabilIndiceValor
+                Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgHeaderPushedLook]
+                ParentColor = False
+                TabOrder = 0
+                TitleFont.Color = clWindowText
+                TitleFont.Height = -11
+                TitleFont.Name = 'Tahoma'
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+  object DSContabilIndiceValor: TDatasource[5]
+    DataSet = CDSContabilIndiceValor
+    left = 72
+    top = 320
+  end
+  object CDSContabilIndiceValor: TBufDataset[6]
+    FieldDefs = <>
+    left = 312
+    top = 311
+  end
+end

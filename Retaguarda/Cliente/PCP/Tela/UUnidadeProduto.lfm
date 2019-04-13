@@ -1,0 +1,82 @@
+inherited FUnidadeProduto: TFUnidadeProduto
+  Tag = 1
+  Left = 347
+  Top = 230
+  Caption = 'Unidade do Produto'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 154
+          Top = 15
+          Width = 881
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object Label1: TLabel[1]
+          Left = 16
+          Height = 13
+          Top = 69
+          Width = 50
+          Caption = 'Descrição:'
+          ParentColor = False
+        end
+        object EditSigla: TLabeledEdit[2]
+          Left = 16
+          Height = 21
+          Top = 40
+          Width = 90
+          EditLabel.AnchorSideLeft.Control = EditSigla
+          EditLabel.AnchorSideRight.Control = EditSigla
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditSigla
+          EditLabel.Left = 16
+          EditLabel.Height = 13
+          EditLabel.Top = 24
+          EditLabel.Width = 90
+          EditLabel.Caption = 'Sigla:'
+          EditLabel.ParentColor = False
+          MaxLength = 10
+          TabOrder = 0
+        end
+        object MemoDescricao: TMemo[3]
+          Left = 16
+          Height = 74
+          Top = 85
+          Width = 865
+          Anchors = [akTop, akLeft, akRight]
+          ScrollBars = ssVertical
+          TabOrder = 1
+        end
+        object ComboboxPodeFracionar: TLabeledComboBox[4]
+          Left = 112
+          Height = 21
+          Top = 40
+          Width = 95
+          ItemHeight = 13
+          ItemIndex = 1
+          Items.Strings = (
+            'Sim'
+            'Não'
+          )
+          Style = csDropDownList
+          TabOrder = 2
+          Text = 'Não'
+          ComboBoxLabel.Left = 112
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 24
+          ComboBoxLabel.Width = 76
+          ComboBoxLabel.Caption = 'Pode Fracionar:'
+          ComboBoxLabel.ParentColor = False
+        end
+      end
+    end
+  end
+end

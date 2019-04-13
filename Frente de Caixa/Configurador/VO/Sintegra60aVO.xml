@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="Sintegra60aVO" table="SINTEGRA_60A" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">SINTEGRA_60A</param>
+      </generator>
+    </id>
+
+    <property name="IdSintegra60m" column="ID_SINTEGRA_60M" />
+    <property name="SituacaoTributaria" column="SITUACAO_TRIBUTARIA" />
+    <property name="Valor" column="VALOR" />
+
+  </class>
+</t2ti-orm-mapping>

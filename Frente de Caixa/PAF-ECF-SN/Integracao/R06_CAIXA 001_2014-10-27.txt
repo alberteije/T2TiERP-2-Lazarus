@@ -1,0 +1,2 @@
+{ "Cdc" : 0, "Coo" : 0, "DataEmissao" : "30\/12\/1899", "Denominacao" : "", "Gnf" : 0, "Grg" : 0, "HashRegistro" : "", "HoraEmissao" : "", "Id" : 0, "IdEcfCaixa" : 0, "IdImpressora" : 0, "IdOperador" : 0, "ListaR07VO" : {}, "SerieEcf" : "" }
+{ "Cdc" : 0, "Coo" : 0, "DataEmissao" : "30\/12\/1899", "Denominacao" : "", "Gnf" : 0, "Grg" : 0, "HashRegistro" : "", "HoraEmissao" : "", "Id" : 0, "IdEcfCaixa" : 0, "IdImpressora" : 0, "IdOperador" : 0, "ListaR07VO" : {}, "SerieEcf" : "" }

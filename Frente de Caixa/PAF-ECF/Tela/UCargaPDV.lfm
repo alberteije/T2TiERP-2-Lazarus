@@ -1,0 +1,24 @@
+inherited FCargaPDV: TFCargaPDV
+  Left = 245
+  Top = 386
+  Caption = 'FCargaPDV'
+  OnClose = FormClose
+  OnShow = FormShow
+  object ProgressBar1: TProgressBar[0]
+    Left = 0
+    Height = 56
+    Top = 0
+    Width = 632
+    Align = alClient
+    TabOrder = 0
+  end
+  inherited TimerIntegracao: TTimer[1]
+  end
+  object Timer: TTimer[2]
+    Enabled = False
+    Interval = 100
+    OnTimer = TimerTimer
+    left = 24
+    top = 8
+  end
+end

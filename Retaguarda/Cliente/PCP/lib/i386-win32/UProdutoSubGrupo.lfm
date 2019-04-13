@@ -1,0 +1,97 @@
+inherited FProdutoSubGrupo: TFProdutoSubGrupo
+  Tag = 1
+  Left = 367
+  Top = 230
+  Caption = 'Subgrupo de Produto'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 216
+          Top = 9
+          Width = 885
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditNome: TLabeledEdit[1]
+          Left = 14
+          Height = 21
+          Top = 78
+          Width = 869
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditNome
+          EditLabel.AnchorSideRight.Control = EditNome
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditNome
+          EditLabel.Left = 14
+          EditLabel.Height = 13
+          EditLabel.Top = 62
+          EditLabel.Width = 869
+          EditLabel.Caption = 'Nome:'
+          EditLabel.ParentColor = False
+          TabOrder = 0
+        end
+        object MemoDescricao: TLabeledMemo[2]
+          Left = 14
+          Height = 89
+          Top = 126
+          Width = 869
+          Anchors = [akTop, akLeft, akRight]
+          ScrollBars = ssVertical
+          TabOrder = 1
+          MemoLabel.Left = 14
+          MemoLabel.Height = 13
+          MemoLabel.Top = 110
+          MemoLabel.Width = 50
+          MemoLabel.Caption = 'Descrição:'
+          MemoLabel.ParentColor = False
+        end
+        object EditGrupoProduto: TLabeledEdit[3]
+          Left = 75
+          Height = 21
+          Top = 30
+          Width = 808
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditGrupoProduto
+          EditLabel.AnchorSideRight.Control = EditGrupoProduto
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditGrupoProduto
+          EditLabel.Left = 75
+          EditLabel.Height = 13
+          EditLabel.Top = 14
+          EditLabel.Width = 808
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 2
+        end
+        object EditIdGrupoProduto: TLabeledCalcEdit[4]
+          Left = 14
+          Height = 21
+          Top = 30
+          Width = 61
+          Alignment = taRightJustify
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 3
+          Value = 0
+          OnKeyUp = EditIdGrupoProdutoKeyUp
+          CalcEditLabel.Left = 14
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 14
+          CalcEditLabel.Width = 97
+          CalcEditLabel.Caption = 'Grupo Produto [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+      end
+    end
+  end
+end

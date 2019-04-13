@@ -1,0 +1,105 @@
+inherited FPatrimTipoMovimentacao: TFPatrimTipoMovimentacao
+  Tag = 1
+  Left = 309
+  Top = 215
+  Caption = 'Tipo Movimentação Bem'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 922
+        ClientWidth = 922
+        inherited PanelFiltroRapido: TPanel
+          Width = 922
+          ClientWidth = 922
+          inherited BotaoConsultar: TSpeedButton
+            Left = 788
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 621
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 922
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 141
+          Top = 9
+          Width = 978
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditNome: TLabeledEdit[1]
+          Left = 69
+          Height = 21
+          Top = 30
+          Width = 908
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditNome
+          EditLabel.AnchorSideRight.Control = EditNome
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditNome
+          EditLabel.Left = 69
+          EditLabel.Height = 13
+          EditLabel.Top = 14
+          EditLabel.Width = 908
+          EditLabel.Caption = 'Nome:'
+          EditLabel.ParentColor = False
+          MaxLength = 50
+          TabOrder = 1
+        end
+        object MemoDescricao: TLabeledMemo[2]
+          Left = 14
+          Height = 65
+          Top = 73
+          Width = 963
+          Anchors = [akTop, akLeft, akRight]
+          ScrollBars = ssVertical
+          TabOrder = 2
+          MemoLabel.Left = 14
+          MemoLabel.Height = 13
+          MemoLabel.Top = 57
+          MemoLabel.Width = 50
+          MemoLabel.Caption = 'Descrição:'
+          MemoLabel.ParentColor = False
+        end
+        object EditTipo: TLabeledEdit[3]
+          Left = 14
+          Height = 21
+          Top = 30
+          Width = 49
+          EditLabel.AnchorSideLeft.Control = EditTipo
+          EditLabel.AnchorSideRight.Control = EditTipo
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditTipo
+          EditLabel.Left = 14
+          EditLabel.Height = 13
+          EditLabel.Top = 14
+          EditLabel.Width = 49
+          EditLabel.Caption = 'Tipo:'
+          EditLabel.ParentColor = False
+          MaxLength = 2
+          TabOrder = 0
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+end

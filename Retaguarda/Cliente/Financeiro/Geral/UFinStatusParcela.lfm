@@ -1,0 +1,95 @@
+inherited FFinStatusParcela: TFFinStatusParcela
+  Tag = 1
+  Left = 318
+  Top = 203
+  Caption = 'Status Parcela'
+  ClientWidth = 961
+  PixelsPerInch = 96
+  inherited PageControl: TPageControl
+    Width = 961
+    ActivePage = PaginaEdits
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 953
+        inherited Grid: TRxDbGrid
+          Width = 953
+        end
+        inherited PanelFiltroRapido: TPanel
+          Width = 953
+          inherited BotaoConsultar: TSpeedButton
+            Left = 819
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 652
+          end
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      inherited PanelEdits: TPanel
+        Width = 953
+        object BevelEdits: TBevel
+          Left = 8
+          Top = 9
+          Width = 932
+          Height = 176
+          Anchors = [akLeft, akTop, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditDescricao: TLabeledEdit
+          Left = 117
+          Top = 30
+          Width = 810
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          EditLabel.Width = 50
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Descrição:'
+          TabOrder = 1
+        end
+        object MemoProcedimento: TLabeledMemo
+          Left = 21
+          Top = 78
+          Width = 906
+          Height = 89
+          Anchors = [akLeft, akTop, akRight]
+          ScrollBars = ssVertical
+          TabOrder = 2
+          MemoLabel.Width = 69
+          MemoLabel.Height = 13
+          MemoLabel.Caption = 'Procedimento:'
+        end
+        object EditSituacao: TLabeledEdit
+          Left = 21
+          Top = 30
+          Width = 90
+          Height = 21
+          EditLabel.Width = 71
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Cód. Situação:'
+          MaxLength = 2
+          TabOrder = 0
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 961
+    inherited BotaoSair: TSpeedButton
+      Left = 855
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 755
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 645
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 745
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 545
+    end
+  end
+end
+

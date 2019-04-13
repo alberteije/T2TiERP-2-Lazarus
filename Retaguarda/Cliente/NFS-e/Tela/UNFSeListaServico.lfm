@@ -1,0 +1,85 @@
+inherited FNFSeListaServico: TFNFSeListaServico
+  inherited PageControl: TPageControl
+    Width = 930
+    ActivePage = PaginaEdits
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 922
+        inherited Grid: TRxDbGrid
+          Width = 922
+        end
+        inherited PanelFiltroRapido: TPanel
+          Width = 922
+          inherited BotaoConsultar: TSpeedButton
+            Left = 788
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 621
+          end
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      inherited PanelEdits: TPanel
+        Width = 922
+        object BevelEdits: TBevel
+          Left = 8
+          Top = 9
+          Width = 900
+          Height = 95
+          Anchors = [akLeft, akTop, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditCodigoPrincipal: TLabeledEdit
+          Left = 14
+          Top = 30
+          Width = 100
+          Height = 21
+          EditLabel.Width = 79
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Código Principal:'
+          MaxLength = 50
+          TabOrder = 0
+        end
+        object EditDescricao: TLabeledEdit
+          Left = 14
+          Top = 74
+          Width = 885
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          EditLabel.Width = 50
+          EditLabel.Height = 13
+          EditLabel.Caption = 'Descrição:'
+          MaxLength = 50
+          TabOrder = 1
+        end
+        object EditCodigoSecundario: TLabeledMaskEdit
+          Left = 120
+          Top = 30
+          Width = 100
+          Height = 21
+          TabOrder = 2
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 930
+    inherited BotaoSair: TSpeedButton
+      Left = 824
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 724
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 624
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 514
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 524
+    end
+  end
+end
+

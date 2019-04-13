@@ -1,0 +1,35 @@
+object FDataModule: TFDataModule
+  OldCreateOrder = False
+  Height = 201
+  HorizontalOffset = 409
+  VerticalOffset = 250
+  Width = 393
+  object ACBrSAT: TACBrSAT
+    Config.infCFe_versaoDadosEnt = 0.06
+    Config.ide_numeroCaixa = 0
+    Config.ide_tpAmb = taHomologacao
+    Config.emit_cRegTrib = RTSimplesNacional
+    Config.emit_cRegTribISSQN = RTISSMicroempresaMunicipal
+    Config.emit_indRatISSQN = irSim
+    Config.EhUTF8 = False
+    Config.PaginaDeCodigo = 0
+    ConfigArquivos.PrefixoArqCFe = 'AD'
+    ConfigArquivos.PrefixoArqCFeCanc = 'ADC'
+    Rede.tipoInter = infETHE
+    Rede.seg = segNONE
+    Rede.tipoLan = lanDHCP
+    Rede.proxy = 0
+    Rede.proxy_porta = 0
+    OnGetcodigoDeAtivacao = ACBrSATGetcodigoDeAtivacao
+    OnGetsignAC = ACBrSATGetsignAC
+    left = 32
+    top = 32
+  end
+  object ACBrSATExtratoFortes: TACBrSATExtratoFortes
+    ACBrSAT = ACBrSAT
+    Mask_qCom = '0.0000'
+    Mask_vUnCom = '0.000'
+    left = 144
+    top = 32
+  end
+end

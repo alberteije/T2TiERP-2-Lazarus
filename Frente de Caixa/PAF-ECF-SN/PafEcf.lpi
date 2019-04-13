@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <Flags>
+        <MainUnitHasUsesSectionForAllUnits Value="False"/>
+        <MainUnitHasCreateFormStatements Value="False"/>
+        <MainUnitHasTitleStatement Value="False"/>
+      </Flags>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="PafEcf"/>
+      <UseAppBundle Value="False"/>
+      <ResourceType Value="res"/>
+      <Icon Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="13">
+      <Item1>
+        <PackageName Value="LabeledControls"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="ACBrComum"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="MemDSLaz"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="FCL"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="ACBr_PAF"/>
+      </Item5>
+      <Item6>
+        <PackageName Value="ACBr_SPED"/>
+      </Item6>
+      <Item7>
+        <PackageName Value="ACBr_Sintegra"/>
+      </Item7>
+      <Item8>
+        <PackageName Value="zcomponent"/>
+      </Item8>
+      <Item9>
+        <PackageName Value="ACBrSerial"/>
+      </Item9>
+      <Item10>
+        <PackageName Value="rxnew"/>
+      </Item10>
+      <Item11>
+        <PackageName Value="ACBrDiversos"/>
+      </Item11>
+      <Item12>
+        <PackageName Value="ACBr_TEFD"/>
+      </Item12>
+      <Item13>
+        <PackageName Value="LCL"/>
+      </Item13>
+    </RequiredPackages>
+    <Units Count="125">
+      <Unit0>
+        <Filename Value="PafEcf.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="VO\CfopVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="CfopVO"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="VO\ClienteVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ClienteVO"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="VO\DAVDetalheVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DavDetalheVO"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="VO\PreVendaDetalheVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PreVendaDetalheVO"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="VO\R02VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="R02VO"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="VO\R03VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="R03VO"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="VO\R06VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="R06VO"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="VO\R07VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="R07VO"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="VO\SituacaoClienteVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SituacaoClienteVO"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="Controller\ProdutoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ProdutoController"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="Controller\VendaController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="VendaController"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="Tela\UCaixa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FCaixa"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UCaixa"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="Tela\UDescontoAcrescimo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FDescontoAcrescimo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UDescontoAcrescimo"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="Tela\UEfetuaPagamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FEfetuaPagamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UEfetuaPagamento"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="Tela\UIdentificaCliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FIdentificaCliente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UIdentificaCliente"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="Tela\UImportaCliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FImportaCliente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UImportaCliente"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="Tela\UImportaNumero.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FImportaNumero"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UImportaNumero"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="Tela\UIniciaMovimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FIniciaMovimento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UIniciaMovimento"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="Tela\UMovimentoAberto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FMovimentoAberto"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UMovimentoAberto"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="Tela\UValorReal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FValorReal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UValorReal"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="VO\FichaTecnicaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FichaTecnicaVO"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="VO\ProdutoPromocaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ProdutoPromocaoVO"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="Tela\UImportaProduto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FImportaProduto"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UImportaProduto"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="Util\Biblioteca.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Biblioteca"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="Controller\ClienteController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ClienteController"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="Controller\PreVendaController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PreVendaController"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="Controller\DAVController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DAVController"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="VO\Sintegra60AVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Sintegra60aVO"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="VO\Sintegra60MVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Sintegra60mVO"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="Tela\ULoginGerenteSupervisor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FLoginGerenteSupervisor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ULoginGerenteSupervisor"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="Tela\UVendasPeriodo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FVendasPeriodo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UVendasPeriodo"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="VO\R01VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="R01VO"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="Util\Constantes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Constantes"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="Tela\UCargaPDV.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FCargaPDV"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UCargaPDV"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="Tela\UFechaEfetuaPagamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FFechaEfetuaPagamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UFechaEfetuaPagamento"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="Tela\UFichaTecnica.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FFichaTecnica"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UFichaTecnica"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="Controller\FichaTecnicaController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FichaTecnicaController"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="Tela\UParcelamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FParcelamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UParcelamento"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="Tela\ULocaliza.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FLocaliza"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ULocaliza"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="Tela\USplash.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FSplash"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="USplash"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="Tela\UEncerraMovimento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FEncerraMovimento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UEncerraMovimento"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="Controller\BancoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="BancoController"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="Tela\UCheques.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FCheques"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UCheques"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="VO\LogImportacaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="LogImportacaoVO"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="Tela\ULogImportacao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FLogImportacao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ULogImportacao"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="Tela\UNotaFiscal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FNotaFiscal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UNotaFiscal"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="VO\DavCabecalhoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DavCabecalhoVO"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="VO\ContasParcelasVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ContasParcelasVO"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="VO\ContasPagarReceberVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ContasPagarReceberVO"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="VO\NotaFiscalDetalheVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NotaFiscalDetalheVO"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="VO\NotaFiscalCabecalhoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NotaFiscalCabecalhoVO"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="VO\UnidadeProdutoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnidadeProdutoVO"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="VO\PreVendaCabecalhoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PreVendaCabecalhoVO"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="Tela\UPenDrive.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FPenDrive"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UPenDrive"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="Tela\UMenuFiscal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FMenuFiscal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UMenuFiscal"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="VO\BancoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="BancoVO"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="Tela\UBase.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FBase"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UBase"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="Util\ECFUtil.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ECFUtil"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="Util\PAFUtil.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PAFUtil"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="Util\SessaoUsuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SessaoUsuario"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="Util\Tipos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Tipos"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="VO\DavDetalheAlteracaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DavDetalheAlteracaoVO"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="VO\EcfAliquotasVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfAliquotasVO"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="VO\EcfCaixaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfCaixaVO"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="VO\EcfChequeClienteVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfChequeClienteVO"/>
+      </Unit65>
+      <Unit66>
+        <Filename Value="VO\EcfConfiguracaoBalancaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfConfiguracaoBalancaVO"/>
+      </Unit66>
+      <Unit67>
+        <Filename Value="VO\EcfConfiguracaoLeitorSerVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfConfiguracaoLeitorSerVO"/>
+      </Unit67>
+      <Unit68>
+        <Filename Value="VO\EcfConfiguracaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfConfiguracaoVO"/>
+      </Unit68>
+      <Unit69>
+        <Filename Value="VO\EcfContadorVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfContadorVO"/>
+      </Unit69>
+      <Unit70>
+        <Filename Value="VO\EcfDocumentosEmitidosVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfDocumentosEmitidosVO"/>
+      </Unit70>
+      <Unit71>
+        <Filename Value="VO\EcfE3VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfE3VO"/>
+      </Unit71>
+      <Unit72>
+        <Filename Value="VO\EcfEmpresaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfEmpresaVO"/>
+      </Unit72>
+      <Unit73>
+        <Filename Value="VO\EcfFechamentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfFechamentoVO"/>
+      </Unit73>
+      <Unit74>
+        <Filename Value="VO\EcfFuncionarioVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfFuncionarioVO"/>
+      </Unit74>
+      <Unit75>
+        <Filename Value="VO\EcfImpressoraVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfImpressoraVO"/>
+      </Unit75>
+      <Unit76>
+        <Filename Value="VO\EcfMovimentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfMovimentoVO"/>
+      </Unit76>
+      <Unit77>
+        <Filename Value="VO\EcfOperadorVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfOperadorVO"/>
+      </Unit77>
+      <Unit78>
+        <Filename Value="VO\EcfPosicaoComponentesVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfPosicaoComponentesVO"/>
+      </Unit78>
+      <Unit79>
+        <Filename Value="VO\EcfProdutoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfProdutoVO"/>
+      </Unit79>
+      <Unit80>
+        <Filename Value="VO\EcfRecebimentoNaoFiscalVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfRecebimentoNaoFiscalVO"/>
+      </Unit80>
+      <Unit81>
+        <Filename Value="VO\EcfRelatorioGerencialVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfRelatorioGerencialVO"/>
+      </Unit81>
+      <Unit82>
+        <Filename Value="VO\EcfResolucaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfResolucaoVO"/>
+      </Unit82>
+      <Unit83>
+        <Filename Value="VO\EcfSangriaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfSangriaVO"/>
+      </Unit83>
+      <Unit84>
+        <Filename Value="VO\EcfSuprimentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfSuprimentoVO"/>
+      </Unit84>
+      <Unit85>
+        <Filename Value="VO\EcfTipoPagamentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfTipoPagamentoVO"/>
+      </Unit85>
+      <Unit86>
+        <Filename Value="VO\EcfTotalTipoPagamentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfTotalTipoPagamentoVO"/>
+      </Unit86>
+      <Unit87>
+        <Filename Value="VO\EcfTurnoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfTurnoVO"/>
+      </Unit87>
+      <Unit88>
+        <Filename Value="VO\EcfVendaCabecalhoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfVendaCabecalhoVO"/>
+      </Unit88>
+      <Unit89>
+        <Filename Value="VO\EcfVendaDetalheVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfVendaDetalheVO"/>
+      </Unit89>
+      <Unit90>
+        <Filename Value="VO\LogssVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="LogssVO"/>
+      </Unit90>
+      <Unit91>
+        <Filename Value="VO\ViewTotalPagamentoDataVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTotalPagamentoDataVO"/>
+      </Unit91>
+      <Unit92>
+        <Filename Value="VO\ViewTotalPagamentoMovimentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTotalPagamentoMovimentoVO"/>
+      </Unit92>
+      <Unit93>
+        <Filename Value="VO\VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="VO"/>
+      </Unit93>
+      <Unit94>
+        <Filename Value="Controller\Controller.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Controller"/>
+      </Unit94>
+      <Unit95>
+        <Filename Value="Controller\DavDetalheController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DavDetalheController"/>
+      </Unit95>
+      <Unit96>
+        <Filename Value="Controller\EcfAliquotasController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfAliquotasController"/>
+      </Unit96>
+      <Unit97>
+        <Filename Value="Controller\EcfChequeClienteController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfChequeClienteController"/>
+      </Unit97>
+      <Unit98>
+        <Filename Value="Controller\EcfConfiguracaoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfConfiguracaoController"/>
+      </Unit98>
+      <Unit99>
+        <Filename Value="Controller\EcfContadorController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfContadorController"/>
+      </Unit99>
+      <Unit100>
+        <Filename Value="Controller\EcfE3Controller.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfE3Controller"/>
+      </Unit100>
+      <Unit101>
+        <Filename Value="Controller\EcfFechamentoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfFechamentoController"/>
+      </Unit101>
+      <Unit102>
+        <Filename Value="Controller\EcfFuncionarioController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfFuncionarioController"/>
+      </Unit102>
+      <Unit103>
+        <Filename Value="Controller\EcfImpressoraController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfImpressoraController"/>
+      </Unit103>
+      <Unit104>
+        <Filename Value="Controller\EcfMovimentoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfMovimentoController"/>
+      </Unit104>
+      <Unit105>
+        <Filename Value="Controller\EcfSangriaController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfSangriaController"/>
+      </Unit105>
+      <Unit106>
+        <Filename Value="Controller\EcfSuprimentoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfSuprimentoController"/>
+      </Unit106>
+      <Unit107>
+        <Filename Value="Controller\EcfTipoPagamentoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfTipoPagamentoController"/>
+      </Unit107>
+      <Unit108>
+        <Filename Value="Controller\EcfTotalTipoPagamentoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfTotalTipoPagamentoController"/>
+      </Unit108>
+      <Unit109>
+        <Filename Value="Controller\EcfTurnoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfTurnoController"/>
+      </Unit109>
+      <Unit110>
+        <Filename Value="Controller\LogssController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="LogssController"/>
+      </Unit110>
+      <Unit111>
+        <Filename Value="Controller\NotaFiscalCabecalhoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NotaFiscalCabecalhoController"/>
+      </Unit111>
+      <Unit112>
+        <Filename Value="Controller\NotaFiscalDetalheController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NotaFiscalDetalheController"/>
+      </Unit112>
+      <Unit113>
+        <Filename Value="Controller\PreVendaDetalheController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PreVendaDetalheController"/>
+      </Unit113>
+      <Unit114>
+        <Filename Value="Controller\R01Controller.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="R01Controller"/>
+      </Unit114>
+      <Unit115>
+        <Filename Value="Controller\R02Controller.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="R02Controller"/>
+      </Unit115>
+      <Unit116>
+        <Filename Value="Controller\R06Controller.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="R06Controller"/>
+      </Unit116>
+      <Unit117>
+        <Filename Value="Controller\Sintegra60MController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Sintegra60MController"/>
+      </Unit117>
+      <Unit118>
+        <Filename Value="Controller\ViewTotalPagamentoDataController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTotalPagamentoDataController"/>
+      </Unit118>
+      <Unit119>
+        <Filename Value="Controller\ViewTotalPagamentoMovimentoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewTotalPagamentoMovimentoController"/>
+      </Unit119>
+      <Unit120>
+        <Filename Value="DataModule\UDataModule.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FDataModule"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="UDataModule"/>
+      </Unit120>
+      <Unit121>
+        <Filename Value="DataModule\udatamoduleconexao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FDataModuleConexao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="UDataModuleConexao"/>
+      </Unit121>
+      <Unit122>
+        <Filename Value="Tela\ULMF.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FLMF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ULMF"/>
+      </Unit122>
+      <Unit123>
+        <Filename Value="Tela\URegistrosPAF.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FRegistrosPAF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="URegistrosPAF"/>
+      </Unit123>
+      <Unit124>
+        <Filename Value="Util\T2TiORM.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="T2TiORM"/>
+      </Unit124>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <SearchPaths>
+      <IncludeFiles Value="VO;Controller;$(ProjOutDir)"/>
+      <OtherUnitFiles Value="VO;Controller;Tela;Util;DataModule"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <SyntaxMode Value="Delphi"/>
+      </SyntaxOptions>
+    </Parsing>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerMessages>
+        <MsgFileName Value=""/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="8">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+      <Item4>
+        <Name Value="ESynaSerError"/>
+      </Item4>
+      <Item5>
+        <Name Value="EClassNotFound"/>
+      </Item5>
+      <Item6>
+        <Name Value="EACBrECFSemResposta"/>
+      </Item6>
+      <Item7>
+        <Name Value="Exception"/>
+      </Item7>
+      <Item8>
+        <Name Value="EACBrTEFDGPNaoResponde"/>
+      </Item8>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

@@ -1,0 +1,114 @@
+inherited FFap: TFFap
+  Left = 359
+  Top = 180
+  Caption = 'FAP'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 414
+        Width = 855
+        ClientHeight = 414
+        ClientWidth = 855
+        inherited PanelFiltroRapido: TPanel
+          Top = 360
+          Width = 855
+          ClientWidth = 855
+          inherited BotaoConsultar: TSpeedButton
+            Left = 721
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 554
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 362
+          Width = 855
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 54
+          Top = 9
+          Width = 979
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditDataInicial: TLabeledDateEdit[1]
+          Left = 160
+          Height = 21
+          Top = 33
+          Width = 120
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 0
+          Text = '  /  /    '
+          DateEditLabel.Left = 160
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 17
+          DateEditLabel.Width = 57
+          DateEditLabel.Caption = 'Data Inicial:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditDataFinal: TLabeledDateEdit[2]
+          Left = 286
+          Height = 21
+          Top = 33
+          Width = 120
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 1
+          Text = '  /  /    '
+          DateEditLabel.Left = 286
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 17
+          DateEditLabel.Width = 52
+          DateEditLabel.Caption = 'Data Final:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditFap: TLabeledCalcEdit[3]
+          Left = 16
+          Height = 21
+          Top = 33
+          Width = 138
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 2
+          Value = 0
+          CalcEditLabel.Left = 16
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 17
+          CalcEditLabel.Width = 23
+          CalcEditLabel.Caption = 'FAP:'
+          CalcEditLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+end

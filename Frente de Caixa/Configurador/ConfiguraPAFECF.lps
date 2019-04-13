@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="44">
+      <Unit0>
+        <Filename Value="ConfiguraPAFECF.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="41" Y="12"/>
+        <UsageCount Value="53"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="UConfiguracao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FConfiguracao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UConfiguracao"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="734"/>
+        <CursorPos X="43" Y="765"/>
+        <UsageCount Value="53"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="UDataModule.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FDataModule"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="UDataModule"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="67"/>
+        <CursorPos X="5" Y="127"/>
+        <UsageCount Value="53"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="UConfigConexao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FConfigConexao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UConfigConexao"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="306"/>
+        <CursorPos X="5" Y="342"/>
+        <UsageCount Value="53"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="Controller\ConfiguracaoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ConfiguracaoController"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="45"/>
+        <CursorPos X="25" Y="65"/>
+        <UsageCount Value="26"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="USplash.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <UnitName Value="USplash"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="10"/>
+        <CursorPos X="23" Y="39"/>
+        <UsageCount Value="53"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="UCaixa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FCaixa"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UCaixa"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="125"/>
+        <CursorPos X="44" Y="146"/>
+        <UsageCount Value="49"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\PAF-ECF\VO\EcfCaixaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="48"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\PAF-ECF\VO\EcfConfiguracaoBalancaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="48"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\PAF-ECF\VO\EcfConfiguracaoLeitorSerVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="48"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="..\PAF-ECF\VO\EcfConfiguracaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="48"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="..\PAF-ECF\VO\EcfEmpresaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="48"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="..\PAF-ECF\VO\EcfImpressoraVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="48"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="..\PAF-ECF\VO\EcfPosicaoComponentesVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfPosicaoComponentesVO"/>
+        <EditorIndex Value="8"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="42"/>
+        <CursorPos X="3" Y="51"/>
+        <UsageCount Value="48"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="..\PAF-ECF\VO\EcfRelatorioGerencialVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="48"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="..\PAF-ECF\VO\EcfResolucaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="48"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="..\PAF-ECF\VO\VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="48"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="..\PAF-ECF\Util\T2TiORM.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="T2TiORM"/>
+        <EditorIndex Value="7"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="80"/>
+        <CursorPos X="1" Y="20"/>
+        <UsageCount Value="48"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="..\PAF-ECF\DataModule\udatamoduleconexao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <UnitName Value="UDataModuleConexao"/>
+        <EditorIndex Value="9"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="25"/>
+        <CursorPos X="6" Y="39"/>
+        <UsageCount Value="48"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="..\PAF-ECF\Util\Biblioteca.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="47"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="..\PAF-ECF\Util\Constantes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="47"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="Biblioteca.pas"/>
+        <UnitName Value="Biblioteca"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="86"/>
+        <CursorPos X="1" Y="86"/>
+        <UsageCount Value="23"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="Constantes.pas"/>
+        <UnitName Value="Constantes"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="21"/>
+        <CursorPos X="1" Y="35"/>
+        <UsageCount Value="23"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="Controller\TotalTipoPagamentoController.pas"/>
+        <UnitName Value="TotalTipoPagamentoController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="46"/>
+        <CursorPos X="17" Y="33"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="VO\MeiosPagamentoVO.pas"/>
+        <UnitName Value="MeiosPagamentoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="18"/>
+        <CursorPos X="1" Y="39"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="VO\TipoPagamentoVO.pas"/>
+        <UnitName Value="TipoPagamentoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="18"/>
+        <CursorPos X="1" Y="39"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="VO\TotalTipoPagamentoVO.pas"/>
+        <UnitName Value="TotalTipoPagamentoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="18"/>
+        <CursorPos X="1" Y="39"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="VO\ConfiguracaoVO.pas"/>
+        <UnitName Value="ConfiguracaoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="VO\ResolucaoVO.pas"/>
+        <UnitName Value="ResolucaoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="18"/>
+        <CursorPos X="1" Y="39"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="VO\PosicaoComponentesVO.pas"/>
+        <UnitName Value="PosicaoComponentesVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="18"/>
+        <CursorPos X="1" Y="39"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="ULogin.pas"/>
+        <ComponentName Value="FLogin"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ULogin"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="11"/>
+        <CursorPos X="19" Y="33"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="UConfiguracao.lfm"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="7"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="C:\lazarus\lcl\include\application.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1692"/>
+        <CursorPos X="1" Y="1704"/>
+        <UsageCount Value="7"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2708"/>
+        <CursorPos X="1" Y="2719"/>
+        <UsageCount Value="7"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="C:\lazarus\lcl\include\buttoncontrol.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="47"/>
+        <CursorPos X="1" Y="57"/>
+        <UsageCount Value="7"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="C:\lazarus\lcl\include\buttons.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="141"/>
+        <CursorPos X="1" Y="151"/>
+        <UsageCount Value="7"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="C:\lazarus\lcl\include\bitbtn.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="50"/>
+        <CursorPos X="1" Y="59"/>
+        <UsageCount Value="7"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="..\Balcao\Biblioteca.pas"/>
+        <UnitName Value="Biblioteca"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="87"/>
+        <CursorPos X="55" Y="96"/>
+        <UsageCount Value="7"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="C:\Testes\UCaixa.pas"/>
+        <HasResources Value="True"/>
+        <UnitName Value="UCaixa"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="49"/>
+        <CursorPos X="61" Y="49"/>
+        <UsageCount Value="7"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="Controller\EcfConfiguracaoController.pas"/>
+        <UnitName Value="EcfConfiguracaoController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="22"/>
+        <CursorPos X="36" Y="39"/>
+        <UsageCount Value="44"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="C:\Testes\EcfConfiguracaoController.pas"/>
+        <UnitName Value="EcfConfiguracaoController"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="C:\lazarus\components\ZEOSDBO-7.1.3a-stable\src\dbc\ZDbcMySqlUtils.pas"/>
+        <UnitName Value="ZDbcMySqlUtils"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="421"/>
+        <CursorPos X="17" Y="431"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="C:\Componentes\Lazarus\ACBr\Fontes\ACBrSerial\ACBrECFClass.pas"/>
+        <UnitName Value="ACBrECFClass"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1904"/>
+        <CursorPos X="50" Y="1910"/>
+        <UsageCount Value="10"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="C:\Componentes\Lazarus\ACBr\Fontes\ACBrSerial\ACBrECFBematech.pas"/>
+        <UnitName Value="ACBrECFBematech"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="811"/>
+        <CursorPos X="15" Y="815"/>
+        <UsageCount Value="10"/>
+      </Unit43>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="801" Column="5" TopLine="755"/>
+      </Position1>
+      <Position2>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="773" Column="84" TopLine="755"/>
+      </Position2>
+      <Position3>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="768" Column="8" TopLine="757"/>
+      </Position3>
+      <Position4>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="765" Column="11" TopLine="757"/>
+      </Position4>
+      <Position5>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="772" Column="59" TopLine="757"/>
+      </Position5>
+      <Position6>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="781" Column="49" TopLine="757"/>
+      </Position6>
+      <Position7>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
+      </Position7>
+      <Position8>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="417" Column="34" TopLine="397"/>
+      </Position8>
+      <Position9>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="764" Column="87" TopLine="745"/>
+      </Position9>
+      <Position10>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="364" Column="1" TopLine="364"/>
+      </Position10>
+      <Position11>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="765" Column="48" TopLine="740"/>
+      </Position11>
+      <Position12>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="766" Column="57" TopLine="746"/>
+      </Position12>
+      <Position13>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="768" Column="67" TopLine="747"/>
+      </Position13>
+      <Position14>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="764" Column="1" TopLine="747"/>
+      </Position14>
+      <Position15>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
+      </Position15>
+      <Position16>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="46" Column="20" TopLine="15"/>
+      </Position16>
+      <Position17>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="395" Column="37" TopLine="364"/>
+      </Position17>
+      <Position18>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="430" Column="1" TopLine="401"/>
+      </Position18>
+      <Position19>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="771" Column="94" TopLine="755"/>
+      </Position19>
+      <Position20>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="772" Column="21" TopLine="755"/>
+      </Position20>
+      <Position21>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
+      </Position21>
+      <Position22>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="381" Column="28" TopLine="351"/>
+      </Position22>
+      <Position23>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="433" Column="1" TopLine="405"/>
+      </Position23>
+      <Position24>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="428" Column="1" TopLine="405"/>
+      </Position24>
+      <Position25>
+        <Filename Value="Controller\ConfiguracaoController.pas"/>
+        <Caret Line="65" Column="25" TopLine="45"/>
+      </Position25>
+      <Position26>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="428" Column="1" TopLine="405"/>
+      </Position26>
+      <Position27>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="430" Column="1" TopLine="405"/>
+      </Position27>
+      <Position28>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="765" Column="1" TopLine="746"/>
+      </Position28>
+      <Position29>
+        <Filename Value="..\PAF-ECF\VO\EcfPosicaoComponentesVO.pas"/>
+        <Caret Line="51" Column="3" TopLine="42"/>
+      </Position29>
+      <Position30>
+        <Filename Value="UConfiguracao.pas"/>
+        <Caret Line="432" Column="44" TopLine="415"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+  <EditorMacros Count="0"/>
+</CONFIG>

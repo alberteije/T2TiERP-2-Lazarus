@@ -1,0 +1,390 @@
+inherited FTabelasSimplesNacional: TFTabelasSimplesNacional
+  Left = 318
+  Top = 203
+  Caption = 'Tabelas Simples Nacional'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 980
+        ClientWidth = 980
+        inherited PanelFiltroRapido: TPanel
+          Width = 980
+          ClientWidth = 980
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 679
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 980
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object PanelMestre: TPanel[0]
+          Left = 6
+          Height = 53
+          Top = 8
+          Width = 974
+          Anchors = [akTop, akLeft, akRight]
+          BevelOuter = bvLowered
+          ClientHeight = 53
+          ClientWidth = 974
+          TabOrder = 0
+          object ComboBoxAnexo: TLabeledComboBox
+            Left = 259
+            Height = 21
+            Top = 18
+            Width = 210
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              'Anexo I'
+              'Anexo II'
+              'Anexo III'
+              'Anexo IV'
+              'Anexo V'
+            )
+            Style = csDropDownList
+            TabOrder = 2
+            Text = 'Anexo I'
+            ComboBoxLabel.Left = 259
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 2
+            ComboBoxLabel.Width = 35
+            ComboBoxLabel.Caption = 'Anexo:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object EditVigenciaInicial: TLabeledDateEdit
+            Left = 5
+            Height = 21
+            Top = 18
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 0
+            Text = '  /  /    '
+            DateEditLabel.Left = 5
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 2
+            DateEditLabel.Width = 73
+            DateEditLabel.Caption = 'Vigência Inicial:'
+            DateEditLabel.ParentColor = False
+          end
+          object EditVigenciaFinal: TLabeledDateEdit
+            Left = 132
+            Height = 21
+            Top = 18
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 1
+            Text = '  /  /    '
+            DateEditLabel.Left = 132
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 2
+            DateEditLabel.Width = 68
+            DateEditLabel.Caption = 'Vigência Final:'
+            DateEditLabel.ParentColor = False
+          end
+          object ComboboxTabela: TLabeledComboBox
+            Left = 475
+            Height = 21
+            Top = 18
+            Width = 486
+            Anchors = [akTop, akLeft, akRight]
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              'Tabela I'
+              'Tabela II'
+              'Tabela III'
+              'Tabela IV'
+              'Tabela V-A'
+              'Tabela V-B'
+            )
+            Style = csDropDownList
+            TabOrder = 3
+            Text = 'Tabela I'
+            ComboBoxLabel.Left = 475
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 2
+            ComboBoxLabel.Width = 36
+            ComboBoxLabel.Caption = 'Tabela:'
+            ComboBoxLabel.ParentColor = False
+          end
+        end
+        object PageControlItens: TPageControl[1]
+          Left = 6
+          Height = 343
+          Top = 76
+          Width = 974
+          ActivePage = tsItens
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          TabIndex = 0
+          TabOrder = 1
+          object tsItens: TTabSheet
+            Caption = 'Detalhe'
+            ClientHeight = 317
+            ClientWidth = 966
+            object PanelItens: TPanel
+              Left = 0
+              Height = 317
+              Top = 0
+              Width = 966
+              Align = alClient
+              BevelOuter = bvNone
+              ClientHeight = 317
+              ClientWidth = 966
+              TabOrder = 0
+              object GridDetalhe: TRxDBGrid
+                Left = 0
+                Height = 317
+                Top = 0
+                Width = 966
+                TitleButtons = True
+                AutoSort = True
+                Columns = <                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Faixa'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'FAIXA'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Valor Inicial'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'VALOR_INICIAL'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Valor Final'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'VALOR_FINAL'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Alíquota'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'ALIQUOTA'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'IRPJ'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'IRPJ'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'CSLL'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'CSLL'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'COFINS'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'COFINS'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'PIS/PASEP'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'PIS_PASEP'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'CPP'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'CPP'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'ICMS'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'ICMS'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'IPI'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'IPI'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'ISS'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'ISS'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end>
+                KeyStrokes = <                
+                  item
+                    Command = rxgcShowFindDlg
+                    ShortCut = 16454
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowColumnsDlg
+                    ShortCut = 16471
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowFilterDlg
+                    ShortCut = 16468
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowSortDlg
+                    ShortCut = 16467
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowQuickFilter
+                    ShortCut = 16465
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcHideQuickFilter
+                    ShortCut = 16456
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcSelectAll
+                    ShortCut = 16449
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcDeSelectAll
+                    ShortCut = 16429
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcInvertSelection
+                    ShortCut = 16426
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcOptimizeColumnsWidth
+                    ShortCut = 16427
+                    Enabled = True
+                  end>
+                OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                Align = alClient
+                Color = clWindow
+                DrawFullLine = False
+                FocusColor = clRed
+                SelectedColor = clHighlight
+                GridLineStyle = psSolid
+                DataSource = DSTabelasSimplesNacionalDetalhe
+                Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgHeaderPushedLook]
+                ParentColor = False
+                TabOrder = 0
+                TitleFont.Color = clWindowText
+                TitleFont.Height = -11
+                TitleFont.Name = 'Tahoma'
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+  object DSTabelasSimplesNacionalDetalhe: TDatasource[5]
+    DataSet = CDSTabelasSimplesNacionalDetalhe
+    left = 88
+    top = 320
+  end
+  object CDSTabelasSimplesNacionalDetalhe: TBufDataset[6]
+    FieldDefs = <>
+    left = 85
+    top = 394
+  end
+end

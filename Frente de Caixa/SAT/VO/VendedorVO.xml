@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="VendedorVO" table="vendedor" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">vendedor</param>
+      </generator>
+    </id>
+
+    <property name="IdColaborador" column="ID_COLABORADOR" caption="Id Colaborador" width="80" type="Integer" />
+    <property name="Comissao" column="COMISSAO" caption="Comissao" width="168" type="FMTBcdField" />
+    <property name="MetaVendas" column="META_VENDAS" caption="Meta Vendas" width="168" type="FMTBcdField" />
+
+  </class>
+</t2ti-orm-mapping>

@@ -1,0 +1,149 @@
+inherited FTributOperacaoFiscal: TFTributOperacaoFiscal
+  Tag = 1
+  Left = 322
+  Top = 236
+  Caption = 'Operação Fiscal'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 315
+        Width = 884
+        ClientHeight = 315
+        ClientWidth = 884
+        inherited PanelFiltroRapido: TPanel
+          Top = 261
+          Width = 884
+          ClientWidth = 884
+          inherited BotaoConsultar: TSpeedButton
+            Left = 750
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 583
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 263
+          Width = 884
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 7
+          Height = 246
+          Top = 11
+          Width = 979
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditDescricao: TLabeledEdit[1]
+          Left = 14
+          Height = 21
+          Top = 74
+          Width = 964
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditDescricao
+          EditLabel.AnchorSideRight.Control = EditDescricao
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditDescricao
+          EditLabel.Left = 14
+          EditLabel.Height = 13
+          EditLabel.Top = 58
+          EditLabel.Width = 964
+          EditLabel.Caption = 'Descrição:'
+          EditLabel.ParentColor = False
+          MaxLength = 100
+          TabOrder = 2
+        end
+        object EditCfop: TLabeledCalcEdit[2]
+          Left = 14
+          Height = 21
+          Top = 32
+          Width = 61
+          Alignment = taRightJustify
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 0
+          Value = 0
+          OnKeyUp = EditCfopKeyUp
+          CalcEditLabel.Left = 14
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 16
+          CalcEditLabel.Width = 54
+          CalcEditLabel.Caption = 'CFOP [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditDescricaoNf: TLabeledEdit[3]
+          Left = 14
+          Height = 21
+          Top = 117
+          Width = 964
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditDescricaoNf
+          EditLabel.AnchorSideRight.Control = EditDescricaoNf
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditDescricaoNf
+          EditLabel.Left = 14
+          EditLabel.Height = 13
+          EditLabel.Top = 101
+          EditLabel.Width = 964
+          EditLabel.Caption = 'Descrição na Nota Fiscal (Natureza da Operação):'
+          EditLabel.ParentColor = False
+          MaxLength = 100
+          TabOrder = 3
+        end
+        object MemoObservacao: TLabeledMemo[4]
+          Left = 14
+          Height = 89
+          Top = 158
+          Width = 964
+          Anchors = [akTop, akLeft, akRight]
+          TabOrder = 4
+          MemoLabel.Left = 14
+          MemoLabel.Height = 13
+          MemoLabel.Top = 142
+          MemoLabel.Width = 62
+          MemoLabel.Caption = 'Observação:'
+          MemoLabel.ParentColor = False
+        end
+        object EditCfopDescricao: TLabeledEdit[5]
+          Left = 75
+          Height = 21
+          Top = 32
+          Width = 903
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditCfopDescricao
+          EditLabel.AnchorSideRight.Control = EditCfopDescricao
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditCfopDescricao
+          EditLabel.Left = 75
+          EditLabel.Height = 13
+          EditLabel.Top = 16
+          EditLabel.Width = 903
+          EditLabel.Caption = 'Descrição:'
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 1
+          TabStop = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+end

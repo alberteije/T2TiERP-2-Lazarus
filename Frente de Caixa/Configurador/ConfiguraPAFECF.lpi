@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <Flags>
+        <MainUnitHasUsesSectionForAllUnits Value="False"/>
+        <MainUnitHasCreateFormStatements Value="False"/>
+        <MainUnitHasTitleStatement Value="False"/>
+      </Flags>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="ConfiguraPAFECF"/>
+      <UseAppBundle Value="False"/>
+      <ResourceType Value="res"/>
+      <Icon Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="9">
+      <Item1>
+        <PackageName Value="FCL"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="zcomponent"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="ACBr_TEFD"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="ACBr_PAF"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="ACBr_SPED"/>
+      </Item5>
+      <Item6>
+        <PackageName Value="ACBr_Sintegra"/>
+      </Item6>
+      <Item7>
+        <PackageName Value="rxnew"/>
+      </Item7>
+      <Item8>
+        <PackageName Value="ACBrSerial"/>
+      </Item8>
+      <Item9>
+        <PackageName Value="LCL"/>
+      </Item9>
+    </RequiredPackages>
+    <Units Count="21">
+      <Unit0>
+        <Filename Value="ConfiguraPAFECF.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="UConfiguracao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FConfiguracao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UConfiguracao"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="UDataModule.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FDataModule"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="UDataModule"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="UConfigConexao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FConfigConexao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UConfigConexao"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="Controller\ConfiguracaoController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ConfiguracaoController"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="USplash.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <UnitName Value="USplash"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="UCaixa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FCaixa"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UCaixa"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\PAF-ECF\VO\EcfCaixaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\PAF-ECF\VO\EcfConfiguracaoBalancaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\PAF-ECF\VO\EcfConfiguracaoLeitorSerVO.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="..\PAF-ECF\VO\EcfConfiguracaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="..\PAF-ECF\VO\EcfEmpresaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="..\PAF-ECF\VO\EcfImpressoraVO.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="..\PAF-ECF\VO\EcfPosicaoComponentesVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfPosicaoComponentesVO"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="..\PAF-ECF\VO\EcfRelatorioGerencialVO.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="..\PAF-ECF\VO\EcfResolucaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="..\PAF-ECF\VO\VO.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="..\PAF-ECF\Util\T2TiORM.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="T2TiORM"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="..\PAF-ECF\DataModule\udatamoduleconexao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <UnitName Value="UDataModuleConexao"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="..\PAF-ECF\Util\Biblioteca.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="..\PAF-ECF\Util\Constantes.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit20>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <SearchPaths>
+      <IncludeFiles Value="Controller;VO;$(ProjOutDir)"/>
+      <OtherUnitFiles Value="..\PAF-ECF\VO;..\PAF-ECF\Util;..\PAF-ECF\DataModule;Controller"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <SyntaxMode Value="Delphi"/>
+      </SyntaxOptions>
+    </Parsing>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerMessages>
+        <MsgFileName Value=""/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

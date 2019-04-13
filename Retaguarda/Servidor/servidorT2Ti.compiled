@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\fpc\2.6.2\bin\i386-win32\fpc.exe" Date="1146920661"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -vewnhi &quot;-FuC:\Projetos\T2Ti ERP 2.0\Lazarus\Retaguarda\Servidor\Tributacao&quot; -FuC:\lazarus\components\Brook\master\packages\lib\i386-win32 &quot;-FuC:\Projetos\T2Ti ERP 2.0\Lazarus\Retaguarda\Servidor\&quot; -l &quot;-FEC:\Program Files (x86)\EasyPHP-DevServer-14.1VC11\binaries\apache\cgi-bin\&quot; -oservidorT2Ti.cgi servidorT2Ti.lpr"/>
+</CONFIG>

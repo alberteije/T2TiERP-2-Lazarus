@@ -1,0 +1,1432 @@
+object FFolhaInformativosGuias: TFFolhaInformativosGuias
+  Left = 334
+  Height = 416
+  Top = 222
+  Width = 977
+  BorderStyle = bsDialog
+  Caption = 'EDI - Folha de Pagamento'
+  ClientHeight = 416
+  ClientWidth = 977
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poDesktopCenter
+  LCLVersion = '1.2.0.3'
+  object PanelCabecalho: TPanel
+    Left = 0
+    Height = 65
+    Top = 0
+    Width = 977
+    Align = alTop
+    ClientHeight = 65
+    ClientWidth = 977
+    Color = 14537936
+    ParentColor = False
+    TabOrder = 0
+    object Bevel1: TBevel
+      Left = 61
+      Height = 6
+      Top = 50
+      Width = 910
+    end
+    object Image1: TImage
+      Left = 7
+      Height = 49
+      Top = 7
+      Width = 48
+      ParentShowHint = False
+      Picture.Data = {
+        1754506F727461626C654E6574776F726B477261706869635B10000089504E47
+        0D0A1A0A0000000D49484452000000300000003008060000005702F987000000
+        097048597300000B1300000B1301009A9C180000000467414D410000B18E7CFB
+        5193000000206348524D00007A25000080830000F9FF000080E9000075300000
+        EA6000003A980000176F925FC54600000FD14944415478DA62FCFFFF3FC35006
+        0001C4C430C4014000B15CBF7E1DCC00C684333333732B2B2BAB0688CFC8C848
+        94017F81E0F7EFDFEB81CCE2FF4C1C1FD93E9F6310BD1DC1C0C2F28781899581
+        81991968161314A319F90F18F9FFFF01F15F26863F7F98816AFF30B0B0FD07AB
+        656226CE030001C40275BC02D0E1CB383939C5FEFDFBC700C2C4020E0E0EA063
+        5992BF7FFF0E740E531AE3BFAFFF19FFFF43C430339719031BAFF17F663645A0
+        CB7880F835E3FF5FB7187E7F3AC5F0E7F34D065C2918244E4418020410D8034C
+        4C4CE14047887DFDFA1514A2244723C8136C6C6CFE3FFE3017B17D3CF699F1DF
+        3F260626B6E0FF2CBCF97F99792D197FBC6762F8FF09120320824D8081914DE5
+        2B03CB97D50CBFDE4E67F8F9FE1403B24F98790CFFB3F25A32FC7A39031247B8
+        014000B1406911603200873C13523C630D0034415019F0F3E74F0666364E7696
+        EF77FE73BC5829F58F91A1ECFFEFBFDA0CBF3F2830FC7F0B3612942C407AC1C6
+        7FFF06A49F7133B2702530B20B4730728B2D66FCF2A8F8EFAF6F9F199839C499
+        D8843630FCFECDCBC86B3F9FE13FE3770606DC050D4000B1804A2120FE07A519
+        FE30406C6344D2048BCDFF300EDCF1FF1998401828F9FB0FE33F9E57EBD8D839
+        B844FFFEFA3A85E9CFEF7B404D3CC030F101EA69063A5C096A34342680E8F737
+        90673818D9F85299B8E5B51918DF16FD63E62AFFFFE9A91C0333CB274696CF3C
+        4055783D0010402CC841F90798AB36BFE16478F38B91E1DF9FDFC0E4F487E1EF
+        9F3F0C7FFEC2D87F81EC3F100C14FF05C47E8ABC0CCE4A220CDFFFFE66FC2564
+        F78F85FBD945867B6B81010736F513102F037A623F3021D400D9598C8C481E80
+        7B0498BC7E7CB762E291D9CBF0F50DF77F606A606461E06266E09507E5193CEE
+        6700082016583D00320CC47AF4E10FC393CFC0E4F4F717D091BF197EFDFA050C
+        DD1F0CA024F607887FFD06F17F01C57F337CFDF193C14A4C89015C16FFFBC9F0
+        8BDBE0FF6B36260676FEB70C5C1F0E30FC6786A7BAE7406BB2FFFD61D80BA4BB
+        81024A981E013AFAC77D6E06680C31FEF9CBC2F0ED8322232BF7197CD9002080
+        E01E00156920FB1CA498195EFF009AF08F99E1EF3F76A047FE02696E300D61FF
+        056774186D242DC0F00318336073FEFE60F8C8ACCFC0A43C9D41F0490B03EFEB
+        A588A407A1D701B59CFFFF976129D0919670C7426B24581E872435A0EA5F7F94
+        C049194F650B1040700FC09418F17C6360E245CAA9E0FCC086928B199132F3AF
+        3FFF187EFDFD07CFDB8CFFBF01930F2BC35B997A06E65F4F1938DF1D402F03EE
+        0393543050CB3A20D7023D2690EB0AA69F3F2559B8788111F01BA70700028805
+        BD29F1EB0F114D0B46D452082D6F0339BF809EE060782759C220F1F9223075BC
+        873BEE3FB8F263780E4C4EE140BDFB8062CAB0006184B60BC09E00150E5FBE88
+        FE6779074C0DB88B76800042F10024BAFF0393C77F94D2F23F1E7F006B6F60F2
+        C3A2E2FF77869F1C9A0C6F24CB18046E5533FCFEF10F98A740B52EDC3D8F80F8
+        2E50AB325C37B23B81C99EE937A3382B9B103015FD452D12FF0363041A2B0001
+        84C8C440FC1BE8F04B3F79197E02DB00FF81B6C06A6530FB3F88FD1F88A16C60
+        30FE06A67D75AEBF0CDA22DC60BDA8F5032828BE33FCE7D666F8FA11E8C9DFFF
+        101916028A80D895014F45FCEFD70F292066054729286881A52123D0F1FF79D4
+        18FEF36A83550104100BACD9008ABD3FC01AE8CC5B4686373F80C5E61F482904
+        2A7D7EFFF90966FFF9FD075C02FD868A7F015660F1DA220CFAA2DC0C3FD19A1F
+        207305F8B91984C4B4193E028B0790C50C88A6630C10F7E24DA58CA032E1D3A5
+        1F2F6F014B0860D401DDC024A8C9C0AE97C9C0A210C8C0C0C20F8E2680004294
+        42204F003549B3FF636006853A3330CA59807503B0A6F8F3871158F633013DC5
+        0CA48118984F807E61F8C50154CFCBC1F01B9823919322C8F17C7C7C0CC24282
+        E09064D38C61F871712E308AFF83CA7716604CA443EB88D740FC01883F02F17B
+        A8D87B3066647800AC0F36FC7CF1EC2F339F10039B561C03BB7E36B0809103C6
+        0430427E7D00DB0510402CC80D37500BD44DE833D83388E20F186CFF39307202
+        AC7666022514906F90920EB05DC4202222026DC6303270D9F533B0CA7B32FC38
+        3791E1CF93437F80C2FED030FB054AB9A0C80767BEFFA88633F1F03170EA8430
+        B01BE633300B690223E22750E57714770004104A2686B0FF228A443CAD224644
+        5EC3483AA0D007676E70E0FC071783AC8A3E0C2C72CE0CBF6FAD66F8796BCD3B
+        46560E064666567849C6C8CAC9C0C42D85F000331703AB822B038BB809D049C0
+        52EDD767AC490D208058404D02945285F13FD6B62CB8F467444FA7C0A405AABF
+        A019181400C02639033F3F3F4A9202B9F0FFEF2FE072924D338E81553504C866
+        46E4689007401D00660E9462E83FB00580CBE13000104028490864E5933F1C0C
+        7F98D9C08D394803EF1F03ACA107C2E052092AF70B9891A5D9FE310871B2806B
+        72901C2F2F2F28F4A580EC34A0719CA8E9EE1FDC23E0F21439F681250C7AF2C0
+        53409D06E2B5200E4000C13D000A8B5FC016D8C9EF820C1FFFB1804B21605F0B
+        58DA801A6FBFC00DB8BFA0520828068A3550A9F4FDE76F062F2916060F057E86
+        6FC02215D8A7F8074C3EC032E0DF7C60ECB8819211289688EDDD1174393400A1
+        7D162B203E0E1040281E002593DF40C77DFA012CEB7FFFC428467F838BD19F90
+        6214D898FBF6F31703A39410BCBE00E27F40C782D2810DC8D1200BC1FA7FFFA6
+        D8F120F3D8D9218509880DB44A05E4018000422D8580D899EF03C3375E16507A
+        00279F7FE0A4C3028C7D66289F1342FF83E415290E46866FBFFE80D581931724
+        A9FD06D1EFDEBD6338B07F1FC37B200DECF55114F220479B595830686A6AC392
+        35381A000208E601781CF3FCFBC8C0875EA330225A8B70A5500AD89603666244
+        F4C2F20A33330BC3AD9B37196E5EBF0EEE72520A40C9E6C8A1430C8A8A4AC098
+        608717120001C4029200FA8E1126F0176B9E216E8806D903207D3F7E7C077737
+        A9910740667FFDF2059CFF40F50CCCBD0001C4028A661E1E9EF3ACACAC9466B0
+        6740B37EBC78F182535656166C01A837F7E3DB37BCED79523C00C957F0FC0616
+        070820503DC0FCE9D3A76DC0E2EF00D0130E648ED4FDFCF6EDDBD4AF5FBFFE7F
+        FCF8318BB8B8F87F508080322F2816A81503CCC07C04CA7B8858666000082016
+        A0E16A408EEDE7CF9F6F00A3460AC817068AB322B526C0F51B5283F73F5AFAFA
+        060C849B40C7F2028B4D0FA027406CB0F1200F7C07C500358A50580CA0245306
+        06800062813AEA2F50E0D58F1F3F3682F231100B82DA60481EC0D572F80AC4C0
+        1E07C30FA0E1A0918D3F90C08244F11F6051FBFD3B9562009457813100CAB3C8
+        49082080401EB803AA8041E353408B58C1ED2306462E94110B06C6FFA84D20B8
+        7F80BDE7FF3FC08D3106508BFADF576E6E6E5E6091C9080AA9DFBF7E31FC047A
+        809989892AA510B0A20486F43F78910D020001C4020D55503C7FFB072CEF8129
+        0D5862FE85A60F466013FB2F50E4374A89C4C4F81BEC899FFF78210369403EAC
+        AC969191F90F2AD5FE01CB56D008C6F7EFDF28AA03D03DF01FD474478A018000
+        0287F2DFFFC01E18D099DCCC6F1834B9B731F0B0BC8234C080EE6565FAC6C0C9
+        0C6C5031B200DB05ACC0D86166E5627ECF070AF4E73F349E5DFE14C0F0F18F14
+        28328065B42283909010B8A8038514240F7C077A80992A1E6006C5C03FD42404
+        10402CBFFF7331F0B33C63D0E4D9CE20C77992819BE5AD08030B572403B38024
+        03138710B8EBF39F15D8FDF9230874241F300880F983999FE1EFF793CA4C875C
+        A5D92FFCDDFDAA98E1AF801983B4B434D8F1B04C062E85404988993A1E606305
+        7AE02FA42D041BC3050820162BBE190CF29C27183840A1FC9F81E51F93E44286
+        FF2C5EC08211C8FF024C16FFA12DC7DF500C1F6D99014C457F39983F31184B9E
+        66782B1E05361CD46786B455FE82F3C00F60126261A18E077EB0B132FCFB831A
+        030001C4A2C6B69B01D492FD054EE6C00EDFAFB76AC0DE34BEE194BF40C71701
+        53C52A482B03984F842D81A1CC060CFDAF90A11370260336B77FFD0417A3D48A
+        01162C4908208058BE7D451BD061F8F51CC850C163D62626168649A0FC01F2E7
+        CF9F6C0CEF058C8016FC6060441ABF0165625012FA064C422C14D6F2600F0093
+        262B2B1B6264109A84000288E5F70FD4E216885F11304B0D988CC480FA5EFD04
+        F64D7E7FFDC9F09F6707C35F8D7C06C6BF880E09A806D6D4D105E70B60FD4251
+        2C80F313B024B3737262E0E2E60137F9FF4363002080587E6376825E12300F34
+        20B31198EC80FD4286A7A09E21FBBD050CBFC4EC19FEF2AA033DF103D4836106
+        4D96E8191A314C9A338FE1EBE72F0C4CCC9435A74140525A061C13D07611D840
+        8000428F01623C000216400C1ADB8C06561A7798BE7F64E0BCDEC7F0C9781AC8
+        C89F8C7F7EBEFA0F6A9983C686048519848445801E00D62F603B51875F50C666
+        A1F53EA8E26384AB65040FA481930DD0F1B0CE11D003A0E117068000C2E68147
+        44068C1910EF015A91FA9F996137EBAB230C3C17CB18BE69967F0796BAA97F7E
+        FFA9FCCFC4CA0DAA3B99FFFEFBF7EED52B39607B4B0E54A941FA0BCCA0563038
+        6382D84C6047837B5A0C1F3E7C8037C3A1FDECC78282820F816C503A04F5FA4E
+        02CDD80FF2144000B1FCFD83E1B0BBB0712E281F34822480C313F240BC051848
+        5381B89FF3F18EC7BF7F7C6178AC50B74F5A8C751FEFA73D0C4F3E8B307F6094
+        FE7FFCE8A11E6073BB1036DC0272BCB6B6367808063410006C82800D0485F0A5
+        4B9718EEDEBD0B2975808E04568E9BADADAD7341231ED098FB07CA57C0163003
+        4000B16071D47DD02C1610834C5C00C413A1D80E8727408DBE42200E01B69EEA
+        18BE3CD8F8E9CDC36FBADC0F4CFEBF3CF1FDD9178F73BFD8B9198021C8049D50
+        847B00D6E147EEF88368515151702CC0D4023DC00CE4FF038921E709905A8000
+        C2E681F7D012FF3610174087FD3C81B81B8853A00EC60664FF3332CCE7FBFBE4
+        85E587FA672F3FAB3FBECB153CEB37A788332BE31F46A0A3F840210AEFBE011D
+        079AFD018524A88B080BED8F1F3F825BB0A0913D98A7809E6707C69CD33F48E1
+        FF1928FE1936240910408C77DB301C024A67B5E0A4C1C070064DCE09EA290720
+        E6C5ACE3187F7F615578FB8CC7E5C94B1EC7FB40178831FDFF2302ED5F70019B
+        193228A3D7D090446EEC41BBB8286240CF3D86A68A6FD0007D0BC43740A52140
+        00618B01500DD1802394F741B122109B00B132100B015B1BDF7EB0883CBC239C
+        76E523BB86C85F464E7BE6FF3F35802E64869A078AB53FC05EDA73A0C3F8809D
+        7C6E5088C3865E907B81B04C0E6A530163E71B30D0DF834639B0751140182080
+        58C82C9AEF4331C452A0FD9FD8D519DE721A3330FFFBC9C1FCFFC705A0303F34
+        96F8A123745C4087F0014398159844A4819EB005261D2360C6E486252D90A381
+        A5CF37A0C3CF03F161A0E31F4307803F20C5006804FB3334A97F0008201606AA
+        01D09CF12F50A90D2A989F4331FAC212666829F20758D1B103B10C306D2B0263
+        4210DC6BFAFFFF1DD0830F401D2CA0D80FA44ED51F5CC3230001C438D497DB00
+        04180038FA02261010494C0000000049454E44AE426082
+      }
+      Transparent = True
+    end
+    object Label2: TLabel
+      Left = 62
+      Height = 23
+      Top = 24
+      Width = 249
+      Caption = 'EDI - Folha de Pagamento'
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object ActionToolBarPrincipal: TToolPanel
+    Left = 0
+    Height = 31
+    Top = 385
+    Width = 977
+    Items = <    
+      item
+        Action = ActionSair
+        Visible = True
+        Left = 902
+        Height = 21
+        Top = 5
+        Width = 70
+        ShowCaption = True
+      end>
+    ImageList = FDataModule.ImagensCadastros
+    ToolBarStyle = tbsWindowsXP
+    Options = [tpFlatBtns]
+    ButtonAllign = tbaRignt
+    Align = alBottom
+    BorderWidth = 4
+    ClientHeight = 31
+    ClientWidth = 977
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    ParentFont = False
+    TabOrder = 1
+  end
+  object PageControlItens: TPageControl
+    Left = 0
+    Height = 320
+    Top = 65
+    Width = 977
+    ActivePage = tsEDI
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 2
+    object tsEDI: TTabSheet
+      Caption = 'EDI'
+      ClientHeight = 294
+      ClientWidth = 969
+      ImageIndex = 4
+      object GroupBox10: TGroupBox
+        Left = 6
+        Height = 259
+        Top = 4
+        Width = 948
+        Anchors = [akTop, akLeft, akRight]
+        Caption = 'Dados Colaborador'
+        ClientHeight = 241
+        ClientWidth = 944
+        TabOrder = 0
+        object GridColaborador: TRxDBGrid
+          Left = 0
+          Height = 241
+          Top = 0
+          Width = 944
+          TitleButtons = False
+          AutoSort = True
+          KeyStrokes = <          
+            item
+              Command = rxgcShowFindDlg
+              ShortCut = 16454
+              Enabled = True
+            end          
+            item
+              Command = rxgcShowColumnsDlg
+              ShortCut = 16471
+              Enabled = True
+            end          
+            item
+              Command = rxgcShowFilterDlg
+              ShortCut = 16468
+              Enabled = True
+            end          
+            item
+              Command = rxgcShowSortDlg
+              ShortCut = 16467
+              Enabled = True
+            end          
+            item
+              Command = rxgcShowQuickFilter
+              ShortCut = 16465
+              Enabled = True
+            end          
+            item
+              Command = rxgcHideQuickFilter
+              ShortCut = 16456
+              Enabled = True
+            end          
+            item
+              Command = rxgcSelectAll
+              ShortCut = 16449
+              Enabled = True
+            end          
+            item
+              Command = rxgcDeSelectAll
+              ShortCut = 16429
+              Enabled = True
+            end          
+            item
+              Command = rxgcInvertSelection
+              ShortCut = 16426
+              Enabled = True
+            end          
+            item
+              Command = rxgcOptimizeColumnsWidth
+              ShortCut = 16427
+              Enabled = True
+            end>
+          OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+          Align = alClient
+          Color = clWindow
+          DrawFullLine = False
+          FocusColor = clRed
+          SelectedColor = clHighlight
+          GridLineStyle = psSolid
+          DataSource = DSColaborador
+          Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+          ParentColor = False
+          TabOrder = 0
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'Tahoma'
+        end
+      end
+      object ActionToolBar4: TToolPanel
+        Left = 0
+        Height = 31
+        Top = 263
+        Width = 969
+        Items = <        
+          item
+            Action = ActionGerarRemessa
+            Visible = True
+            Left = 5
+            Height = 21
+            Top = 5
+            Width = 105
+            ShowCaption = True
+          end        
+          item
+            Action = ActionLerRetorno
+            Visible = True
+            Left = 110
+            Height = 21
+            Top = 5
+            Width = 89
+            ShowCaption = True
+          end>
+        ImageList = FDataModule.ImagensCadastros
+        ToolBarStyle = tbsWindowsXP
+        Options = [tpFlatBtns]
+        Align = alBottom
+        BorderWidth = 4
+        ClientHeight = 31
+        ClientWidth = 969
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        ParentFont = False
+        TabOrder = 1
+      end
+    end
+    object tsInformativosMensais: TTabSheet
+      Caption = '--'
+      ClientHeight = 0
+      ClientWidth = 0
+      object PanelInformativosMensais: TPanel
+        Left = 0
+        Height = 293
+        Top = 0
+        Width = 969
+        Align = alClient
+        BevelOuter = bvNone
+        ClientHeight = 293
+        ClientWidth = 969
+        TabOrder = 0
+        object GroupBox1: TGroupBox
+          Left = 5
+          Height = 69
+          Top = 6
+          Width = 956
+          Anchors = [akTop, akLeft, akRight]
+          Caption = 'SEFIP:'
+          ClientHeight = 51
+          ClientWidth = 952
+          TabOrder = 0
+          object ComboBoxGfipCodigoRecolhimento: TLabeledComboBox
+            Left = 100
+            Height = 21
+            Top = 33
+            Width = 848
+            Anchors = [akTop, akLeft, akRight]
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              '115 - Recolhimento ao FGTS e informações à Previdência Social;'
+              '130 - Recolhimento ao FGTS e informações à Previdência Social relativas ao trabalhador avulso portuário;'
+              '135 - Recolhimento ao FGTS e informações à Previdência Social relativas ao trabalhador avulso não portuário;'
+              '145 - Recolhimento ao FGTS de diferenças apuradas pela CAIXA;'
+              '150 - Recolhimento ao FGTS e informações à Previdência Social de empresa prestadora de serviços com cessão de mão-de-obra e empresa de trabalho temporário (Lei nº 6.019/74), em relação aos empregados cedidos, ou de obra de construção civil – empreitada parcial;'
+              '155 - Recolhimento ao FGTS e informações à Previdência Social de obra de construção civil – empreitada total ou obra própria;'
+              '211 - Declaração para a Previdência Social de cooperativa de trabalho relativa aos contribuintes individuais cooperados que prestam serviços a tomadores.'
+              '307 - Recolhimento de Parcelamento do FGTS;'
+              '317 - Recolhimento de Parcelamento do FGTS de empresa com tomador de serviços;'
+              '327 - Recolhimento de Parcelamento de débito com o FGTS, priorizando os valores devidos aos trabalhadores;'
+              '337 - Recolhimento de Parcelamento de débito com o FGTS de empresas com tomador de serviços, priorizando os valores devidos aos trabalhadores;'
+              '345 - Recolhimento de parcelamento de débito com o FGTS relativo à diferença de recolhimento, priorizando os valores devidos aos trabalhadores;'
+              '418 - Recolhimento recursal para o FGTS;'
+              '604 - Recolhimento ao FGTS de entidades com fins filantrópicos – Decreto-Lei n° 194, de 24/02/1967 (competências anteriores a 10/1989);'
+              '608 - Recolhimento ao FGTS e informações à Previdência Social relativos a dirigente sindical;'
+              '640 - Recolhimento ao FGTS para empregado não optante (competência anterior a 10/1988);'
+              '650 - Recolhimento ao FGTS e informações à Previdência Social relativos a dissídio coletivo, reclamatória trabalhista ou conciliação perante as Comissões de Conciliação Prévia;'
+              '660 - Recolhimento exclusivo ao FGTS referente a dissídio coletivo, reclamatória trabalhista ou conciliação perante as Comissões de Conciliação Prévia.'
+            )
+            Style = csDropDownList
+            TabOrder = 0
+            Text = '115 - Recolhimento ao FGTS e informações à Previdência Social;'
+            ComboBoxLabel.Left = 100
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 17
+            ComboBoxLabel.Width = 104
+            ComboBoxLabel.Caption = 'Código Recolhimento:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object EditGfipCompetencia: TLabeledMaskEdit
+            Left = 8
+            Height = 21
+            Top = 33
+            Width = 86
+            CharCase = ecNormal
+            MaxLength = 7
+            TabOrder = 1
+            EditMask = '##/####;1;_'
+            Text = '  /////'
+            SpaceChar = '_'
+            MaskEditLabel.Left = 8
+            MaskEditLabel.Height = 17
+            MaskEditLabel.Top = 13
+            MaskEditLabel.Width = 65
+            MaskEditLabel.Caption = 'EditGfipCompetencia'
+            MaskEditLabel.ParentColor = False
+          end
+        end
+        object GroupBox2: TGroupBox
+          Left = 5
+          Height = 69
+          Top = 81
+          Width = 956
+          Anchors = [akTop, akLeft, akRight]
+          Caption = 'CAGED:'
+          ClientHeight = 51
+          ClientWidth = 952
+          TabOrder = 1
+          object ComboBoxCagedAlteracao: TLabeledComboBox
+            Left = 100
+            Height = 21
+            Top = 33
+            Width = 848
+            Anchors = [akTop, akLeft, akRight]
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              '1 - Nada a alterar'
+              '2 - Alterar dados cadastrais'
+            )
+            Style = csDropDownList
+            TabOrder = 0
+            Text = '1 - Nada a alterar'
+            ComboBoxLabel.Left = 100
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 17
+            ComboBoxLabel.Width = 105
+            ComboBoxLabel.Caption = 'Alteração Autorizado:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object EditCagedCompetencia: TLabeledMaskEdit
+            Left = 8
+            Height = 21
+            Top = 33
+            Width = 86
+            CharCase = ecNormal
+            MaxLength = 7
+            TabOrder = 1
+            EditMask = '##/####;1;_'
+            Text = '  /////'
+            SpaceChar = '_'
+            MaskEditLabel.Left = 8
+            MaskEditLabel.Height = 17
+            MaskEditLabel.Top = 13
+            MaskEditLabel.Width = 65
+            MaskEditLabel.Caption = 'EditCagedCompetencia'
+            MaskEditLabel.ParentColor = False
+          end
+        end
+        object ActionToolBarInformativosMensais: TToolPanel
+          Left = 0
+          Height = 31
+          Top = 269
+          Width = 969
+          Items = <>
+          Options = []
+          Align = alBottom
+          BorderWidth = 4
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          ParentFont = False
+          TabOrder = 2
+        end
+      end
+    end
+    object tsInformativosAnuais: TTabSheet
+      Caption = '--'
+      ClientHeight = 0
+      ClientWidth = 0
+      ImageIndex = 1
+      object PanelInformativosAnuais: TPanel
+        Left = 0
+        Height = 293
+        Top = 0
+        Width = 969
+        Align = alClient
+        BevelOuter = bvNone
+        ClientHeight = 293
+        ClientWidth = 969
+        TabOrder = 0
+        object GroupBox3: TGroupBox
+          Left = 5
+          Height = 69
+          Top = 6
+          Width = 956
+          Anchors = [akTop, akLeft, akRight]
+          Caption = 'Ficha Financeira:'
+          ClientHeight = 51
+          ClientWidth = 952
+          TabOrder = 0
+          object ComboBoxFichaFinanceiraOrdem: TLabeledComboBox
+            Left = 100
+            Height = 21
+            Top = 33
+            Width = 848
+            Anchors = [akTop, akLeft, akRight]
+            ItemHeight = 13
+            ItemIndex = 1
+            Items.Strings = (
+              'Id Colaborador'
+              'Nome Colaborador'
+            )
+            Style = csDropDownList
+            TabOrder = 0
+            Text = 'Nome Colaborador'
+            ComboBoxLabel.Left = 100
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 17
+            ComboBoxLabel.Width = 36
+            ComboBoxLabel.Caption = 'Ordem:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object EditFichaFinanceiraAnoBase: TLabeledMaskEdit
+            Left = 8
+            Height = 21
+            Top = 33
+            Width = 84
+            CharCase = ecNormal
+            MaxLength = 4
+            TabOrder = 1
+            EditMask = '####;1;_'
+            Text = '    '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 8
+            MaskEditLabel.Height = 17
+            MaskEditLabel.Top = 13
+            MaskEditLabel.Width = 65
+            MaskEditLabel.Caption = 'EditFichaFinanceiraAnoBase'
+            MaskEditLabel.ParentColor = False
+          end
+        end
+        object GroupBox4: TGroupBox
+          Left = 5
+          Height = 69
+          Top = 81
+          Width = 956
+          Anchors = [akTop, akLeft, akRight]
+          Caption = 'Comprovante de Rendimentos:'
+          ClientHeight = 51
+          ClientWidth = 952
+          TabOrder = 1
+          object EditComprovanteRendimentosAnoBase: TLabeledMaskEdit
+            Left = 8
+            Height = 21
+            Top = 33
+            Width = 84
+            CharCase = ecNormal
+            MaxLength = 4
+            TabOrder = 0
+            EditMask = '####;1;_'
+            Text = '    '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 8
+            MaskEditLabel.Height = 17
+            MaskEditLabel.Top = 13
+            MaskEditLabel.Width = 65
+            MaskEditLabel.Caption = 'EditComprovanteRendimentosAnoBase'
+            MaskEditLabel.ParentColor = False
+          end
+          object ComboBoxComprovanteRendimentosOrdem: TLabeledComboBox
+            Left = 100
+            Height = 21
+            Top = 33
+            Width = 848
+            Anchors = [akTop, akLeft, akRight]
+            ItemHeight = 13
+            ItemIndex = 1
+            Items.Strings = (
+              'Id Colaborador'
+              'Nome Colaborador'
+            )
+            Style = csDropDownList
+            TabOrder = 1
+            Text = 'Nome Colaborador'
+            ComboBoxLabel.Left = 100
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 17
+            ComboBoxLabel.Width = 36
+            ComboBoxLabel.Caption = 'Ordem:'
+            ComboBoxLabel.ParentColor = False
+          end
+        end
+        object ActionToolBar1: TToolPanel
+          Left = 0
+          Height = 31
+          Top = 269
+          Width = 969
+          Items = <>
+          Options = []
+          Align = alBottom
+          BorderWidth = 4
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          ParentFont = False
+          TabOrder = 2
+        end
+        object GroupBox5: TGroupBox
+          Left = 5
+          Height = 69
+          Top = 158
+          Width = 842
+          Anchors = [akTop, akLeft, akRight]
+          Caption = 'RAIS:'
+          ClientHeight = 51
+          ClientWidth = 838
+          TabOrder = 3
+          object EditRaisAnoBase: TLabeledMaskEdit
+            Left = 8
+            Height = 21
+            Top = 33
+            Width = 84
+            CharCase = ecNormal
+            MaxLength = 4
+            TabOrder = 0
+            EditMask = '####;1;_'
+            Text = '    '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 8
+            MaskEditLabel.Height = 17
+            MaskEditLabel.Top = 13
+            MaskEditLabel.Width = 65
+            MaskEditLabel.Caption = 'EditRaisAnoBase'
+            MaskEditLabel.ParentColor = False
+          end
+          object ComboBoxRaisTipoInformativo: TLabeledComboBox
+            Left = 100
+            Height = 21
+            Top = 33
+            Width = 197
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              'Normal'
+              'Genérico'
+            )
+            Style = csDropDownList
+            TabOrder = 1
+            Text = 'Normal'
+            ComboBoxLabel.Left = 100
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 17
+            ComboBoxLabel.Width = 98
+            ComboBoxLabel.Caption = 'Tipo do Informativo:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object ComboBoxRaisOrdem: TLabeledComboBox
+            Left = 303
+            Height = 21
+            Top = 33
+            Width = 531
+            Anchors = [akTop, akLeft, akRight]
+            ItemHeight = 13
+            ItemIndex = 1
+            Items.Strings = (
+              'Id Colaborador'
+              'Nome Colaborador'
+            )
+            Style = csDropDownList
+            TabOrder = 2
+            Text = 'Nome Colaborador'
+            ComboBoxLabel.Left = 303
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 17
+            ComboBoxLabel.Width = 36
+            ComboBoxLabel.Caption = 'Ordem:'
+            ComboBoxLabel.ParentColor = False
+          end
+        end
+        object GroupBox6: TGroupBox
+          Left = 853
+          Height = 69
+          Top = 158
+          Width = 108
+          Anchors = [akTop, akRight]
+          Caption = 'DIRF:'
+          ClientHeight = 51
+          ClientWidth = 104
+          TabOrder = 4
+          object EditDirfAnoBase: TLabeledMaskEdit
+            Left = 8
+            Height = 21
+            Top = 33
+            Width = 84
+            CharCase = ecNormal
+            MaxLength = 4
+            TabOrder = 0
+            EditMask = '####;1;_'
+            Text = '    '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 8
+            MaskEditLabel.Height = 17
+            MaskEditLabel.Top = 13
+            MaskEditLabel.Width = 65
+            MaskEditLabel.Caption = 'EditDirfAnoBase'
+            MaskEditLabel.ParentColor = False
+          end
+        end
+      end
+    end
+    object tsInformativosEventuais: TTabSheet
+      Caption = '--'
+      ClientHeight = 0
+      ClientWidth = 0
+      ImageIndex = 2
+      object PanelInformativosEventuais: TPanel
+        Left = 0
+        Height = 293
+        Top = 0
+        Width = 969
+        Align = alClient
+        BevelOuter = bvNone
+        ClientHeight = 293
+        ClientWidth = 969
+        TabOrder = 0
+        object GroupBox7: TGroupBox
+          Left = 5
+          Height = 115
+          Top = 6
+          Width = 956
+          Anchors = [akTop, akLeft, akRight]
+          Caption = 'Arquivo Digital Previdência Social:'
+          ClientHeight = 97
+          ClientWidth = 952
+          TabOrder = 0
+          object ComboBoxManadCentralizacaoEscrituracao: TLabeledComboBox
+            Left = 134
+            Height = 21
+            Top = 33
+            Width = 813
+            Anchors = [akTop, akLeft, akRight]
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              '0 - Estabelecimento sem centralização de escrituração'
+              '1 - Estabelecimento centralizador de escrituração'
+              '2 - Estabelecimento com escrituração centralizada'
+            )
+            Style = csDropDownList
+            TabOrder = 0
+            Text = '0 - Estabelecimento sem centralização de escrituração'
+            ComboBoxLabel.Left = 134
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 17
+            ComboBoxLabel.Width = 146
+            ComboBoxLabel.Caption = 'Centralização de Escrituração:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object EditManadPeriodoDe: TLabeledMaskEdit
+            Left = 8
+            Height = 21
+            Top = 33
+            Width = 57
+            CharCase = ecNormal
+            MaxLength = 7
+            TabOrder = 1
+            EditMask = '##/####;1;_'
+            Text = '  /////'
+            SpaceChar = '_'
+            MaskEditLabel.Left = 8
+            MaskEditLabel.Height = 17
+            MaskEditLabel.Top = 13
+            MaskEditLabel.Width = 65
+            MaskEditLabel.Caption = 'EditManadPeriodoDe'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditManadPediodoA: TLabeledMaskEdit
+            Left = 71
+            Height = 21
+            Top = 33
+            Width = 57
+            CharCase = ecNormal
+            MaxLength = 7
+            TabOrder = 2
+            EditMask = '##/####;1;_'
+            Text = '  /////'
+            SpaceChar = '_'
+            MaskEditLabel.Left = 71
+            MaskEditLabel.Height = 17
+            MaskEditLabel.Top = 13
+            MaskEditLabel.Width = 65
+            MaskEditLabel.Caption = 'EditManadPediodoA'
+            MaskEditLabel.ParentColor = False
+          end
+          object ComboBoxManadFinalidadeArquivo: TLabeledComboBox
+            Left = 8
+            Height = 21
+            Top = 78
+            Width = 939
+            Anchors = [akTop, akLeft, akRight]
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              '61 - Solicitação de Auditor-Fiscal da Secretaria da Receita Previdenciária através de MPF'
+              '62 - Entrega na Secretaria da Receita Previdenciária – Movimento anual de órgão público, conforme intimação'
+              '90 - Dados Internos UF'
+            )
+            Style = csDropDownList
+            TabOrder = 3
+            Text = '61 - Solicitação de Auditor-Fiscal da Secretaria da Receita Previdenciária através de MPF'
+            ComboBoxLabel.Left = 8
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 62
+            ComboBoxLabel.Width = 107
+            ComboBoxLabel.Caption = 'Finalidade do Arquivo:'
+            ComboBoxLabel.ParentColor = False
+          end
+        end
+        object ActionToolBar2: TToolPanel
+          Left = 0
+          Height = 31
+          Top = 269
+          Width = 969
+          Items = <>
+          Options = []
+          Align = alBottom
+          BorderWidth = 4
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          ParentFont = False
+          TabOrder = 1
+        end
+      end
+    end
+    object tsGuias: TTabSheet
+      Caption = '--'
+      ClientHeight = 0
+      ClientWidth = 0
+      ImageIndex = 3
+      object Panel1: TPanel
+        Left = 0
+        Height = 293
+        Top = 0
+        Width = 969
+        Align = alClient
+        BevelOuter = bvNone
+        ClientHeight = 293
+        ClientWidth = 969
+        TabOrder = 0
+        object GroupBox8: TGroupBox
+          Left = 3
+          Height = 61
+          Top = 120
+          Width = 958
+          Caption = 'GPS:'
+          ClientHeight = 43
+          ClientWidth = 954
+          TabOrder = 0
+          object EditGpsCompetencia: TLabeledMaskEdit
+            Left = 122
+            Height = 21
+            Top = 33
+            Width = 86
+            CharCase = ecNormal
+            MaxLength = 7
+            TabOrder = 1
+            EditMask = '##/####;1;_'
+            Text = '  /////'
+            SpaceChar = '_'
+            MaskEditLabel.Left = 122
+            MaskEditLabel.Height = 17
+            MaskEditLabel.Top = 13
+            MaskEditLabel.Width = 65
+            MaskEditLabel.Caption = 'EditGpsCompetencia'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditGpsCodigoPagamento: TLabeledMaskEdit
+            Left = 11
+            Height = 21
+            Top = 33
+            Width = 105
+            CharCase = ecNormal
+            MaxLength = 4
+            TabOrder = 0
+            EditMask = '####'
+            Text = '    '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 11
+            MaskEditLabel.Height = 17
+            MaskEditLabel.Top = 13
+            MaskEditLabel.Width = 65
+            MaskEditLabel.Caption = 'EditGpsCodigoPagamento'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditGpsIdentificador: TLabeledMaskEdit
+            Left = 214
+            Height = 21
+            Top = 33
+            Width = 226
+            CharCase = ecNormal
+            MaxLength = 0
+            TabOrder = 2
+            SpaceChar = '_'
+            MaskEditLabel.Left = 214
+            MaskEditLabel.Height = 17
+            MaskEditLabel.Top = 13
+            MaskEditLabel.Width = 65
+            MaskEditLabel.Caption = 'EditGpsIdentificador'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditGpsValorInss: TLabeledCalcEdit
+            Left = 446
+            Height = 21
+            Top = 33
+            Width = 121
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 3
+            Value = 0
+            CalcEditLabel.Left = 446
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 17
+            CalcEditLabel.Width = 54
+            CalcEditLabel.Caption = 'Valor INSS:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditGpsValorOutrasEntidades: TLabeledCalcEdit
+            Left = 573
+            Height = 21
+            Top = 33
+            Width = 121
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 4
+            Value = 0
+            CalcEditLabel.Left = 573
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 17
+            CalcEditLabel.Width = 114
+            CalcEditLabel.Caption = 'Valor Outras Entidades:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditGpsValorJuros: TLabeledCalcEdit
+            Left = 700
+            Height = 21
+            Top = 33
+            Width = 121
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 5
+            Value = 0
+            CalcEditLabel.Left = 700
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 17
+            CalcEditLabel.Width = 57
+            CalcEditLabel.Caption = 'Valor Juros:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditGpsValorTotal: TLabeledCalcEdit
+            Left = 827
+            Height = 21
+            Top = 33
+            Width = 121
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 6
+            Value = 0
+            CalcEditLabel.Left = 827
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 17
+            CalcEditLabel.Width = 55
+            CalcEditLabel.Caption = 'Valor Total:'
+            CalcEditLabel.ParentColor = False
+          end
+        end
+        object ActionToolBar3: TToolPanel
+          Left = 0
+          Height = 31
+          Top = 269
+          Width = 969
+          Items = <>
+          Options = []
+          Align = alBottom
+          BorderWidth = 4
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          ParentFont = False
+          TabOrder = 1
+        end
+        object GroupBox9: TGroupBox
+          Left = 3
+          Height = 69
+          Top = 187
+          Width = 268
+          Caption = 'GRRF (Guia de Recolhimento Rescisório do FGTS):'
+          ClientHeight = 51
+          ClientWidth = 264
+          TabOrder = 2
+          object EditGrrfPeriodoDe: TLabeledMaskEdit
+            Left = 8
+            Height = 21
+            Top = 33
+            Width = 57
+            CharCase = ecNormal
+            MaxLength = 7
+            TabOrder = 0
+            EditMask = '##/####;1;_'
+            Text = '  /////'
+            SpaceChar = '_'
+            MaskEditLabel.Left = 8
+            MaskEditLabel.Height = 17
+            MaskEditLabel.Top = 13
+            MaskEditLabel.Width = 65
+            MaskEditLabel.Caption = 'EditGrrfPeriodoDe'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditGrrfPeriodoA: TLabeledMaskEdit
+            Left = 71
+            Height = 21
+            Top = 33
+            Width = 57
+            CharCase = ecNormal
+            MaxLength = 7
+            TabOrder = 1
+            EditMask = '##/####;1;_'
+            Text = '  /////'
+            SpaceChar = '_'
+            MaskEditLabel.Left = 71
+            MaskEditLabel.Height = 17
+            MaskEditLabel.Top = 13
+            MaskEditLabel.Width = 65
+            MaskEditLabel.Caption = 'EditGrrfPeriodoA'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditGrrfDataPagamento: TLabeledDateEdit
+            Left = 134
+            Height = 21
+            Top = 33
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 2
+            Text = '  /  /    '
+            DateEditLabel.Left = 134
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 17
+            DateEditLabel.Width = 84
+            DateEditLabel.Caption = 'Data Pagamento:'
+            DateEditLabel.ParentColor = False
+          end
+        end
+        object GroupBox13: TGroupBox
+          Left = 277
+          Height = 69
+          Top = 187
+          Width = 359
+          Anchors = [akTop, akLeft, akRight]
+          Caption = 'GRCSU (Guia Recolhimento da Contribuição Sindical Urbana):'
+          ClientHeight = 51
+          ClientWidth = 355
+          TabOrder = 3
+          object EditGrcsuCompetencia: TLabeledMaskEdit
+            Left = 8
+            Height = 21
+            Top = 33
+            Width = 86
+            CharCase = ecNormal
+            MaxLength = 7
+            TabOrder = 0
+            EditMask = '##/####;1;_'
+            Text = '  /////'
+            SpaceChar = '_'
+            MaskEditLabel.Left = 8
+            MaskEditLabel.Height = 17
+            MaskEditLabel.Top = 13
+            MaskEditLabel.Width = 65
+            MaskEditLabel.Caption = 'EditGrcsuCompetencia'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditGrcsuMulta: TLabeledCalcEdit
+            Left = 100
+            Height = 21
+            Top = 33
+            Width = 121
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 1
+            Value = 0
+            CalcEditLabel.Left = 100
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 17
+            CalcEditLabel.Width = 52
+            CalcEditLabel.Caption = 'Multa (%):'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditGrcsuJuros: TLabeledCalcEdit
+            Left = 227
+            Height = 21
+            Top = 33
+            Width = 121
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 2
+            Value = 0
+            CalcEditLabel.Left = 227
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 17
+            CalcEditLabel.Width = 52
+            CalcEditLabel.Caption = 'Juros (%):'
+            CalcEditLabel.ParentColor = False
+          end
+        end
+        object GroupBox12: TGroupBox
+          Left = 3
+          Height = 109
+          Top = 5
+          Width = 958
+          Caption = 'DARF:'
+          ClientHeight = 91
+          ClientWidth = 954
+          TabOrder = 4
+          object EditValorMulta: TLabeledCalcEdit
+            Left = 139
+            Height = 21
+            Top = 80
+            Width = 121
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 5
+            Value = 0
+            CalcEditLabel.Left = 139
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 64
+            CalcEditLabel.Width = 57
+            CalcEditLabel.Caption = 'Valor Multa:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditValorJuros: TLabeledCalcEdit
+            Left = 266
+            Height = 21
+            Top = 80
+            Width = 121
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 6
+            Value = 0
+            CalcEditLabel.Left = 266
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 64
+            CalcEditLabel.Width = 57
+            CalcEditLabel.Caption = 'Valor Juros:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditDataVencimento: TLabeledDateEdit
+            Left = 139
+            Height = 21
+            Top = 32
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 1
+            Text = '  /  /    '
+            DateEditLabel.Left = 139
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 16
+            DateEditLabel.Width = 85
+            DateEditLabel.Caption = 'Data Vencimento:'
+            DateEditLabel.ParentColor = False
+          end
+          object EditPeriodoApuracao: TLabeledDateEdit
+            Left = 12
+            Height = 21
+            Top = 32
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 0
+            Text = '  /  /    '
+            DateEditLabel.Left = 12
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 16
+            DateEditLabel.Width = 89
+            DateEditLabel.Caption = 'Período Apuração:'
+            DateEditLabel.ParentColor = False
+          end
+          object EditCodigoReceita: TLabeledMaskEdit
+            Left = 266
+            Height = 21
+            Top = 32
+            Width = 105
+            CharCase = ecNormal
+            MaxLength = 4
+            TabOrder = 2
+            EditMask = '####'
+            Text = '    '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 266
+            MaskEditLabel.Height = 17
+            MaskEditLabel.Top = 12
+            MaskEditLabel.Width = 65
+            MaskEditLabel.Caption = 'EditCodigoReceita'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditNumeroReferencia: TLabeledMaskEdit
+            Left = 377
+            Height = 21
+            Top = 32
+            Width = 572
+            CharCase = ecNormal
+            MaxLength = 0
+            TabOrder = 3
+            SpaceChar = '_'
+            MaskEditLabel.Left = 377
+            MaskEditLabel.Height = 17
+            MaskEditLabel.Top = 12
+            MaskEditLabel.Width = 65
+            MaskEditLabel.Caption = 'EditNumeroReferencia'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditValorPrincipal: TLabeledCalcEdit
+            Left = 12
+            Height = 21
+            Top = 80
+            Width = 121
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 4
+            Value = 0
+            CalcEditLabel.Left = 12
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 64
+            CalcEditLabel.Width = 70
+            CalcEditLabel.Caption = 'Valor Principal:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditValorTotal: TLabeledCalcEdit
+            Left = 393
+            Height = 21
+            Top = 80
+            Width = 121
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 7
+            Value = 0
+            CalcEditLabel.Left = 393
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 64
+            CalcEditLabel.Width = 55
+            CalcEditLabel.Caption = 'Valor Total:'
+            CalcEditLabel.ParentColor = False
+          end
+        end
+      end
+    end
+  end
+  object ActionManagerLocal: TActionList
+    Images = FDataModule.ImagensCadastros
+    left = 800
+    top = 16
+    object ActionCancelar: TAction
+      Category = 'Geral'
+      Caption = 'Cancelar [F11]'
+      ImageIndex = 10
+      OnExecute = ActionCancelarExecute
+      ShortCut = 122
+    end
+    object ActionGerarSefip: TAction
+      Category = 'Informativos'
+      Caption = 'Gerar SEFIP'
+      ImageIndex = 31
+      OnExecute = ActionGerarSefipExecute
+    end
+    object ActionGerarCaged: TAction
+      Category = 'Informativos'
+      Caption = 'Gerar CAGED'
+      ImageIndex = 27
+      OnExecute = ActionGerarCagedExecute
+    end
+    object ActionGerarFichaFinanceira: TAction
+      Category = 'Informativos'
+      Caption = 'Gerar Ficha Financeira'
+      ImageIndex = 35
+      OnExecute = ActionGerarFichaFinanceiraExecute
+    end
+    object ActionSair: TAction
+      Category = 'Geral'
+      Caption = 'Sair [F8]'
+      ImageIndex = 19
+      OnExecute = ActionSairExecute
+      ShortCut = 119
+    end
+    object ActionGerarComprovanteRendimentos: TAction
+      Category = 'Informativos'
+      Caption = 'Gerar Comprovante de Rendimentos'
+      ImageIndex = 30
+      OnExecute = ActionGerarComprovanteRendimentosExecute
+    end
+    object ActionGerarRais: TAction
+      Category = 'Informativos'
+      Caption = 'Gerar RAIS'
+      ImageIndex = 33
+      OnExecute = ActionGerarRaisExecute
+    end
+    object ActionGerarDirf: TAction
+      Category = 'Informativos'
+      Caption = 'Gerar DIRF'
+      ImageIndex = 16
+      OnExecute = ActionGerarDirfExecute
+    end
+    object ActionGerarManad: TAction
+      Category = 'Informativos'
+      Caption = 'Gerar Arquivo Digital Previdência Social (MANAD)'
+      ImageIndex = 14
+      OnExecute = ActionGerarManadExecute
+    end
+    object ActionGerarGps: TAction
+      Category = 'Guias'
+      Caption = 'Gerar GPS'
+      ImageIndex = 26
+      OnExecute = ActionGerarGpsExecute
+    end
+    object ActionGerarIrrf: TAction
+      Category = 'Guias'
+      Caption = 'Gerar IRRF'
+      ImageIndex = 26
+      OnExecute = ActionGerarIrrfExecute
+    end
+    object ActionGerarPis: TAction
+      Category = 'Guias'
+      Caption = 'Gerar PIS'
+      ImageIndex = 26
+      OnExecute = ActionGerarPisExecute
+    end
+    object ActionGerarGrrf: TAction
+      Category = 'Guias'
+      Caption = 'Gerar GRRF'
+      ImageIndex = 27
+      OnExecute = ActionGerarGrrfExecute
+    end
+    object ActionGerarGrscu: TAction
+      Category = 'Guias'
+      Caption = 'Gerar GRCSU'
+      ImageIndex = 26
+      OnExecute = ActionGerarGrscuExecute
+    end
+    object ActionGerarRemessa: TAction
+      Category = 'EDI'
+      Caption = 'Gerar Remessa'
+      ImageIndex = 8
+      OnExecute = ActionGerarRemessaExecute
+    end
+    object ActionLerRetorno: TAction
+      Category = 'EDI'
+      Caption = 'Ler Retorno'
+      ImageIndex = 3
+      OnExecute = ActionLerRetornoExecute
+    end
+  end
+  object CDSColaborador: TBufDataset
+    FieldDefs = <>
+    left = 848
+    top = 144
+  end
+  object DSColaborador: TDatasource
+    DataSet = CDSColaborador
+    left = 866
+    top = 77
+  end
+end

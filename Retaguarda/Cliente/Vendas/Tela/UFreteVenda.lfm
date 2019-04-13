@@ -1,0 +1,324 @@
+inherited FFreteVenda: TFFreteVenda
+  Tag = 1
+  Left = 370
+  Top = 163
+  Caption = 'Frete'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 269
+        Width = 884
+        ClientHeight = 269
+        ClientWidth = 884
+        inherited PanelFiltroRapido: TPanel
+          Top = 215
+          Width = 884
+          ClientWidth = 884
+          inherited BotaoConsultar: TSpeedButton
+            Left = 750
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 583
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 217
+          Width = 884
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 183
+          Top = 9
+          Width = 979
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditPlaca: TLabeledEdit[1]
+          Left = 253
+          Height = 21
+          Top = 118
+          Width = 74
+          EditLabel.AnchorSideLeft.Control = EditPlaca
+          EditLabel.AnchorSideRight.Control = EditPlaca
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditPlaca
+          EditLabel.Left = 253
+          EditLabel.Height = 13
+          EditLabel.Top = 102
+          EditLabel.Width = 74
+          EditLabel.Caption = 'Placa:'
+          EditLabel.ParentColor = False
+          MaxLength = 7
+          TabOrder = 6
+        end
+        object EditMarcaVolume: TLabeledEdit[2]
+          Left = 14
+          Height = 21
+          Top = 160
+          Width = 710
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditMarcaVolume
+          EditLabel.AnchorSideRight.Control = EditMarcaVolume
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditMarcaVolume
+          EditLabel.Left = 14
+          EditLabel.Height = 13
+          EditLabel.Top = 144
+          EditLabel.Width = 710
+          EditLabel.Caption = 'Marca Volume:'
+          EditLabel.ParentColor = False
+          MaxLength = 50
+          TabOrder = 11
+        end
+        object EditUfPlaca: TLabeledEdit[3]
+          Left = 333
+          Height = 21
+          Top = 118
+          Width = 49
+          EditLabel.AnchorSideLeft.Control = EditUfPlaca
+          EditLabel.AnchorSideRight.Control = EditUfPlaca
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditUfPlaca
+          EditLabel.Left = 333
+          EditLabel.Height = 13
+          EditLabel.Top = 102
+          EditLabel.Width = 49
+          EditLabel.Caption = 'UF Placa:'
+          EditLabel.ParentColor = False
+          MaxLength = 2
+          TabOrder = 7
+        end
+        object EditConhecimento: TLabeledCalcEdit[4]
+          Left = 14
+          Height = 21
+          Top = 118
+          Width = 109
+          Alignment = taRightJustify
+          DisplayFormat = '#'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 4
+          Value = 0
+          CalcEditLabel.Left = 14
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 102
+          CalcEditLabel.Width = 72
+          CalcEditLabel.Caption = 'Conhecimento:'
+          CalcEditLabel.ParentColor = False
+        end
+        object ComboBoxResponsavel: TLabeledComboBox[5]
+          Left = 129
+          Height = 21
+          Top = 118
+          Width = 118
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            '1-Emitente'
+            '2-Destinatário'
+          )
+          Style = csDropDownList
+          TabOrder = 5
+          Text = '1-Emitente'
+          ComboBoxLabel.Left = 129
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 102
+          ComboBoxLabel.Width = 30
+          ComboBoxLabel.Caption = 'Frete:'
+          ComboBoxLabel.ParentColor = False
+        end
+        object EditSeloFiscal: TLabeledCalcEdit[6]
+          Left = 388
+          Height = 21
+          Top = 118
+          Width = 109
+          Alignment = taRightJustify
+          DisplayFormat = '#'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 8
+          Value = 0
+          CalcEditLabel.Left = 388
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 102
+          CalcEditLabel.Width = 53
+          CalcEditLabel.Caption = 'Selo Fiscal:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditQuantidadeVolumes: TLabeledCalcEdit[7]
+          Left = 503
+          Height = 21
+          Top = 118
+          Width = 121
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 9
+          Value = 0
+          CalcEditLabel.Left = 503
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 102
+          CalcEditLabel.Width = 102
+          CalcEditLabel.Caption = 'Quantidade Volumes:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditEspecieVolume: TLabeledEdit[8]
+          Left = 630
+          Height = 21
+          Top = 118
+          Width = 348
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditEspecieVolume
+          EditLabel.AnchorSideRight.Control = EditEspecieVolume
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditEspecieVolume
+          EditLabel.Left = 630
+          EditLabel.Height = 13
+          EditLabel.Top = 102
+          EditLabel.Width = 348
+          EditLabel.Caption = 'Espécie Volume:'
+          EditLabel.ParentColor = False
+          MaxLength = 20
+          TabOrder = 10
+        end
+        object EditPesoBruto: TLabeledCalcEdit[9]
+          Left = 730
+          Height = 21
+          Top = 160
+          Width = 121
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          Anchors = [akTop, akRight]
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 12
+          Value = 0
+          CalcEditLabel.Left = 730
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 144
+          CalcEditLabel.Width = 56
+          CalcEditLabel.Caption = 'Peso Bruto:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditPesoLiquido: TLabeledCalcEdit[10]
+          Left = 857
+          Height = 21
+          Top = 160
+          Width = 121
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          Anchors = [akTop, akRight]
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 13
+          Value = 0
+          CalcEditLabel.Left = 857
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 144
+          CalcEditLabel.Width = 63
+          CalcEditLabel.Caption = 'Peso Líquido:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditIdVendaCabecalho: TLabeledCalcEdit[11]
+          Left = 14
+          Height = 21
+          Top = 32
+          Width = 61
+          Alignment = taRightJustify
+          DisplayFormat = '#'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 0
+          Value = 0
+          OnKeyUp = EditIdVendaCabecalhoKeyUp
+          CalcEditLabel.Left = 14
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 16
+          CalcEditLabel.Width = 57
+          CalcEditLabel.Caption = 'Venda [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditIdTransportadora: TLabeledCalcEdit[12]
+          Left = 14
+          Height = 21
+          Top = 75
+          Width = 61
+          Alignment = taRightJustify
+          DisplayFormat = '#'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 2
+          Value = 0
+          OnKeyUp = EditIdTransportadoraKeyUp
+          CalcEditLabel.Left = 14
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 59
+          CalcEditLabel.Width = 102
+          CalcEditLabel.Caption = 'Transportadora [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditTransportadora: TLabeledEdit[13]
+          Left = 75
+          Height = 21
+          Top = 75
+          Width = 903
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditTransportadora
+          EditLabel.AnchorSideRight.Control = EditTransportadora
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditTransportadora
+          EditLabel.Left = 75
+          EditLabel.Height = 13
+          EditLabel.Top = 59
+          EditLabel.Width = 903
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 3
+          TabStop = False
+        end
+        object EditVendaCabecalho: TLabeledCalcEdit[14]
+          Left = 75
+          Height = 21
+          Top = 32
+          Width = 903
+          Color = clInfoBk
+          DisplayFormat = '#'
+          Anchors = [akTop, akLeft, akRight]
+          MaxValue = 0
+          MinValue = 0
+          ReadOnly = True
+          TabOrder = 1
+          TabStop = False
+          Value = 0
+          CalcEditLabel.Left = 75
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 16
+          CalcEditLabel.Width = 3
+          CalcEditLabel.Caption = ' '
+          CalcEditLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+end

@@ -1,0 +1,460 @@
+inherited FSintegra: TFSintegra
+  Left = 421
+  Height = 497
+  Top = 171
+  Width = 505
+  BorderStyle = bsDialog
+  Caption = 'Sintegra'
+  ClientHeight = 497
+  ClientWidth = 505
+  KeyPreview = True
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  Position = poScreenCenter
+  object PageControl1: TPageControl[0]
+    Left = 0
+    Height = 432
+    Top = 65
+    Width = 505
+    ActivePage = PaginaSintegra
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 0
+    object PaginaSintegra: TTabSheet
+      Caption = 'Dados Sintegra'
+      ClientHeight = 406
+      ClientWidth = 497
+      ImageIndex = 1
+      object Label6: TLabel
+        Left = 6
+        Height = 13
+        Top = 5
+        Width = 100
+        Caption = 'Código do Convênio:'
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label7: TLabel
+        Left = 260
+        Height = 13
+        Top = 6
+        Width = 107
+        Caption = 'Finalidade do Arquivo:'
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label8: TLabel
+        Left = 6
+        Height = 13
+        Top = 52
+        Width = 131
+        Caption = 'Natureza das Informações:'
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        ParentColor = False
+        ParentFont = False
+      end
+      object ComboBoxCodigoConvenio: TComboBox
+        Left = 6
+        Height = 21
+        Top = 22
+        Width = 248
+        ItemHeight = 13
+        ItemIndex = 2
+        Items.Strings = (
+          '1 - Convênio 57/95 Versão 31/99 Alt. 30/02'
+          '2 - Convênio 57/95 Versão 69/02 Alt. 142/02'
+          '3 - Convênio 57/95 Alt. 76/03'
+        )
+        Style = csDropDownList
+        TabOrder = 0
+        Text = '3 - Convênio 57/95 Alt. 76/03'
+      end
+      object ComboBoxFinalidadeArquivoSped: TComboBox
+        Left = 260
+        Height = 21
+        Top = 22
+        Width = 227
+        ItemHeight = 13
+        ItemIndex = 0
+        Items.Strings = (
+          '1 - Normal'
+          '2 - Retificação total de arquivo'
+          '3 - Retificação aditiva de arquivo'
+          '5 - Desfazimento'
+        )
+        Style = csDropDownList
+        TabOrder = 1
+        Text = '1 - Normal'
+      end
+      object ComboBoxNaturezaInformacoes: TComboBox
+        Left = 6
+        Height = 21
+        Top = 68
+        Width = 229
+        ItemHeight = 13
+        ItemIndex = 0
+        Items.Strings = (
+          '1 - Interestaduais - Somente operações sujeitas à Substituição Tributária'
+          '2 - Interestaduais - Operações com ou sem Substituição Tributária'
+          '3 - Totalidade das operações do informante'
+        )
+        Style = csDropDownList
+        TabOrder = 2
+        Text = '1 - Interestaduais - Somente operações sujeitas à Substituição Tributária'
+      end
+      object botaoCancela: TBitBtn
+        Left = 367
+        Height = 25
+        Top = 374
+        Width = 120
+        Caption = 'Ca&ncela (ESC)'
+        Kind = bkCancel
+        ModalResult = 2
+        OnClick = botaoCancelaClick
+        TabOrder = 3
+      end
+      object botaoConfirma: TBitBtn
+        Left = 204
+        Height = 25
+        Top = 374
+        Width = 157
+        Caption = 'Gerar Sintegra (F12)'
+        Glyph.Data = {
+          DE010000424DDE01000000000000760000002800000024000000120000000100
+          0400000000006801000000000000000000001000000000000000000000000000
+          80000080000000808000800000008000800080800000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333333333333333333333330000333333333333333333333333F33333333333
+          00003333344333333333333333388F3333333333000033334224333333333333
+          338338F3333333330000333422224333333333333833338F3333333300003342
+          222224333333333383333338F3333333000034222A22224333333338F338F333
+          8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
+          33333338F83338F338F33333000033A33333A222433333338333338F338F3333
+          0000333333333A222433333333333338F338F33300003333333333A222433333
+          333333338F338F33000033333333333A222433333333333338F338F300003333
+          33333333A222433333333333338F338F00003333333333333A22433333333333
+          3338F38F000033333333333333A223333333333333338F830000333333333333
+          333A333333333333333338330000333333333333333333333333333333333333
+          0000
+        }
+        NumGlyphs = 2
+        OnClick = botaoConfirmaClick
+        TabOrder = 4
+      end
+      object mkeDataIni: TMaskEdit
+        Left = 241
+        Height = 21
+        Top = 68
+        Width = 120
+        CharCase = ecNormal
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        MaxLength = 10
+        ParentFont = False
+        TabOrder = 5
+        OnExit = mkeDataIniExit
+        EditMask = '##/##/####;1;_'
+        Text = '  /  /    '
+        SpaceChar = '_'
+      end
+      object Label1: TLabel
+        Left = 241
+        Height = 13
+        Top = 52
+        Width = 57
+        Caption = 'Data Inicial:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+      object mkeDataFim: TMaskEdit
+        Left = 367
+        Height = 21
+        Top = 68
+        Width = 120
+        CharCase = ecNormal
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        MaxLength = 10
+        ParentFont = False
+        TabOrder = 6
+        OnExit = mkeDataFimExit
+        EditMask = '##/##/####;1;_'
+        Text = '  /  /    '
+        SpaceChar = '_'
+      end
+      object Label2: TLabel
+        Left = 367
+        Height = 13
+        Top = 52
+        Width = 52
+        Caption = 'Data Final:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+      object ComboBoxInventario: TComboBox
+        Left = 6
+        Height = 21
+        Top = 116
+        Width = 481
+        ItemHeight = 13
+        ItemIndex = 0
+        Items.Strings = (
+          '00 - Sem Inventário'
+          '01 – No final no período'
+          '02 – Na mudança de forma de tributação da mercadoria (ICMS)'
+          '03 – Na solicitação da baixa cadastral, paralisação temporária e outras situações'
+          '04 – Na alteração de regime de pagamento – condição do contribuinte'
+          '05 – Por determinação dos fiscos'
+        )
+        Style = csDropDownList
+        TabOrder = 7
+        Text = '00 - Sem Inventário'
+      end
+      object Label10: TLabel
+        Left = 6
+        Height = 13
+        Top = 100
+        Width = 54
+        Caption = 'Inventário:'
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        ParentColor = False
+        ParentFont = False
+      end
+      object GroupBox1: TGroupBox
+        Left = 6
+        Height = 208
+        Top = 153
+        Width = 481
+        Caption = 'Contadores:'
+        ClientHeight = 190
+        ClientWidth = 477
+        TabOrder = 8
+        object GridDetalhe: TRxDBGrid
+          Left = 0
+          Height = 190
+          Top = 0
+          Width = 477
+          TitleButtons = False
+          AutoSort = True
+          KeyStrokes = <          
+            item
+              Command = rxgcShowFindDlg
+              ShortCut = 16454
+              Enabled = True
+            end          
+            item
+              Command = rxgcShowColumnsDlg
+              ShortCut = 16471
+              Enabled = True
+            end          
+            item
+              Command = rxgcShowFilterDlg
+              ShortCut = 16468
+              Enabled = True
+            end          
+            item
+              Command = rxgcShowSortDlg
+              ShortCut = 16467
+              Enabled = True
+            end          
+            item
+              Command = rxgcShowQuickFilter
+              ShortCut = 16465
+              Enabled = True
+            end          
+            item
+              Command = rxgcHideQuickFilter
+              ShortCut = 16456
+              Enabled = True
+            end          
+            item
+              Command = rxgcSelectAll
+              ShortCut = 16449
+              Enabled = True
+            end          
+            item
+              Command = rxgcDeSelectAll
+              ShortCut = 16429
+              Enabled = True
+            end          
+            item
+              Command = rxgcInvertSelection
+              ShortCut = 16426
+              Enabled = True
+            end          
+            item
+              Command = rxgcOptimizeColumnsWidth
+              ShortCut = 16427
+              Enabled = True
+            end>
+          OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+          Align = alClient
+          Color = clWindow
+          DrawFullLine = False
+          FocusColor = clRed
+          SelectedColor = clHighlight
+          GridLineStyle = psSolid
+          DataSource = DSDetalhe
+          Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+          ParentColor = False
+          TabOrder = 0
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'Tahoma'
+        end
+      end
+    end
+  end
+  object Panel1: TPanel[1]
+    Left = 0
+    Height = 65
+    Top = 0
+    Width = 505
+    Align = alTop
+    ClientHeight = 65
+    ClientWidth = 505
+    Color = 14537936
+    ParentColor = False
+    TabOrder = 1
+    object Image1: TImage
+      Left = 10
+      Height = 48
+      Top = 8
+      Width = 48
+      Picture.Data = {
+        1754506F727461626C654E6574776F726B477261706869636D08000089504E47
+        0D0A1A0A0000000D49484452000000300000003008060000005702F987000008
+        34494441546881ED9A6D8C5C5519C77FFF3B6FBBDDEED26EBAEDB2337D9B69E9
+        B63385BE65A996D21AFC003460141313414388428DDA4430242492800648FCE4
+        074D8C7E5062D068620C696B350AB405A4545A8ADDD92D64675ADA99EDCBC26E
+        77B7DDEE9D997B1F3FCCDDBAADB501E6EE0713FE9FCE9C7BEEF99FE73C2FE739
+        CF1DF8149FA221446662D2CCAAF5B3DA3B6EFCC6DDDBEE7D61EEBC1BBF5BB1A8
+        D7D9B5A86F78E874356C2E27EC09017CDFEFDEB279D3A31B7BD62F9F9C9CBC09
+        78B4E679DD33C1159D89493DCF9B3B5038DE79E0E05B9C3F3F8A232DA856AB73
+        66826B4634108BC68E0D148ABB4647C72A8EE3B892762712F16333C1A5462758
+        BD7E935CB792F47C6F89990D3A4EE47D33F36BD5EA0ACFF77F0BE038CE57A391
+        C8BB721CC7F7FDC54097E3E844229128F7BDFD8635C2DF900656DEB2F186F3A3
+        63DB2F5E9AF89D19CFBB6EE557AEEBF614FA0E195211F800F840A2583CF6B655
+        2A959E4AA5F26B89E75DD7FDDDF8F8F8F6EE9B6F6D6B640D1FDB076EDEB03952
+        AD563B2F5CB870C7A5C9C92796A597762F58309FA3F93E5CD74D9BD923C01B66
+        7659BBBE5F6F07CF36373737D3B3615DFAECD9A1DB8EBF7F72472A937BAEA5A5
+        E5A5782C7AE6E8A1D7BD191160E59A8D4EAD5AEB1A1D1BBBCB75DD2F2C4A25B7
+        6CB9FDB6D9C32323F6E6C1B71819392F4966665EB058CC0C49985DB6121FB091
+        91F3F4E6FB756BCF06DBB07E6DF7BEFDAFFDEC64A9BC2F9188BFB82CBB614F2C
+        161DEC3F72C00F458074F7DA966AAD76FBF087C35B91B339BD6451F7E7B66E9E
+        B368618ABFFEED658EBC7314B752C1711CCC6C14D83525C035B013F892A4B6E1
+        91F3BCFCCA7ED6DCB29A871E7CA0E5E4A9D2DDAFEC7DF5B3C513271F04FFB585
+        CB56EF8DC5A2FB8BFD6F5FBCDEFA2EAB39B36A7D54A20D63AE5BA9DC2869533C
+        1EEB99DDD272EBC285A9E4D2258BE9EA5C40CDF3F8D7D13C070EBE45A552211A
+        BD620FF6497A585034B31B0CFE18F4DF2718454A9BD92F81DBA75EA8D56AC4E3
+        7136F66CE0E65C96682CC2E0E9B31C3FF13EA74E95CA172E5E7CB352A91E34B3
+        D713F1F8694923868D0DE40FD52E0B905EB9365BAD56BF08AC6C6B6D5DDADEDE
+        9EE9EAEAEC98DDD2422291C0755D9D3973CE064F9FD6D97343E6791E914804C7
+        7164C15607F67306D829A96C6669605B6042BB81A2A4A499DD032C98B23749F2
+        7DDF3CCF231A896A7EC73CEBEAEAA4B373BE128926735D970B172F3238786668
+        7878B830363E7E1CD41F8FC5FE54E83F9C8F02789EDFEEFB769FE3688D1CC7AA
+        D52A85C2715DBA74C926DD0A93932EBEEF21094957EFFA742C001EA26EEB9160
+        83043C0078D4A3DE7F45BEE9739E1D1AE2CCB973384E84A6A6044D8938CDCDCD
+        8A46A31D729C0EE033BEEF1FF17C6FDF1526B464C52DB33CCFBFCBF3BC278025
+        92DA2535724E54A6CD6F40FC934E64750C0327A2D1C8738E13D973E2DD231357
+        0800B03CB721E6D5BC1C6255A552FD8E99AD029A24C5A7D46DD3BC73FAEFABDA
+        3533FB3BB02830A153C01D9262578FBFCE1C32B30A3029A92F1E8FFD14E88B46
+        A3BDEF1DFDE7E5A4F07FEE7066D5FA15AEEB268155C036EA11AB079815BC77BD
+        4CF630B01DF851F0FB49E0E7C0BAEBBCE351D7D4047010A802BB81FEA644A23C
+        D077E8DD6BBDF4914D24B36A9D53ADD66EF27D1FA0CBCC9A80F54013D02E2965
+        6655605CD2D36656A6EED0048E9B94F49499CD066240091806268143C02549A7
+        1D89582CF65EA1FFF0473A071ACE850092E96C64CACC00AF5CCC5793E96C62BA
+        00E562DE4D657231339B72EE4AB998FF58A7EEB5108A0053486572A2AE9149EA
+        4EBB3378740F75A76E02264B85DE8612B8E908259D4EA6B32DA94CEE7E33DB63
+        662560979965038D58D0DE0594CCEC2FC974F6815426372B0CEE86AF94C974B6
+        09D82EE919603130475212380564A685E2AF4B6A033A80CF4B9A689DDBF1CEF8
+        C850AD11FE866F64927A806F017F96B41BB80B1892B40BB82318B31398077448
+        DA433DAA7D5BD211606F23FC0D0990CAE41C33DB042C96F44D337BA35CCCFF01
+        207062054E5C2C17F38F07FD71E0ACA4AF98D9C65426B7BF54E8FD4811277401
+        A8C7EDE3C079E029605F329D3D2CE91D331B0A9E034492E9EC62496BCC6C2DB0
+        0518054E4C1BF389D070144A6572ADD4A3CCF7806E601C280379E0B660D86B40
+        164802AD403FF0136067A9D03BDE087F68613495C945CD6C19B051D2E366D60D
+        57A407C724FDD8CC0E0003E562BE21E79D4268558952A1B70614800BC06CEA26
+        32015C0CDAB3837621ACC543C8651549EB243D094C48DA11449923417B02F881
+        A4EBE5431F1BA1091044A4AD66B60278CCCC7E6F6613C044D07E0C5861665B93
+        E96C68BC6117B62AD4B3CAE35CE95F0AFAFC604C6808D3077C49AF4A2A01774A
+        F224196041FB4EA02CE91FE562FE13C7FDAB116A757A6CE4DC60EBDC8E01498F
+        99590AC8496A36B3C5C097257DBF54E8DD1B2667E8E5F5F191A181B6F6F91F52
+        4F2F564A5A40FDAEFCC37231FF62D87CA1177793E96C1BF55CA79DFA296B417B
+        5B2A936BA88C782D84AA815426E7487A1AB857D2A3923A8093929E91F40830A7
+        AD7DFE4B6323E742E30C5503661635B3D5409F99ED34B31A5033B35D66D607AC
+        36B350BF49847D905525F502AD92664D8B42B324B5027949A19DC210F2951220
+        99CEB64BFA4550125913A4D34780B8A4874B85DEE130F966220A5D6A6B9F7F82
+        7A852E2B691EF5C3ED8972313F10365FE81A48657231E005EA97FA9541773FF5
+        13F8FE52A137D42F95A18751335B0E64CC6C879915A957AA77985906581E36DF
+        4C7CA59CBACC2CE13F1BB434E82B874D16BA06CAC5FC28F0ACA4A8A466A05952
+        44D2B3A542EF68D87CA1FBC01492E96C04F84D7021FB5A9809DC74CCC85F0D00
+        C64786AC6DEEFC414907CBC5FCA999E2F9BFC7BF015E42C6FDB1DC6032000000
+        0049454E44AE426082
+      }
+    end
+    object Bevel1: TBevel
+      Left = 65
+      Height = 6
+      Top = 50
+      Width = 434
+    end
+    object Label9: TLabel
+      Left = 65
+      Height = 23
+      Top = 22
+      Width = 80
+      Caption = 'Sintegra'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -19
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object DSDetalhe: TDatasource[2]
+    DataSet = CDSDetalhe
+    left = 392
+    top = 328
+  end
+  object CDSDetalhe: TBufDataset[3]
+    FieldDefs = <>
+    left = 320
+    top = 328
+  end
+end

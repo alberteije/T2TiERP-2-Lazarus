@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="EcfOperadorVO" table="ECF_OPERADOR" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">ECF_OPERADOR</param>
+      </generator>
+    </id>
+
+    <property name="IdEcfFuncionario" column="ID_ECF_FUNCIONARIO" />
+    <property name="Login" column="LOGIN" />
+    <property name="Senha" column="SENHA" />
+
+  </class>
+</t2ti-orm-mapping>

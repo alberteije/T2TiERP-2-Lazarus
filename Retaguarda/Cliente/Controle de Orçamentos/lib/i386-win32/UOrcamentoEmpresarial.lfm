@@ -1,0 +1,395 @@
+inherited FOrcamentoEmpresarial: TFOrcamentoEmpresarial
+  Left = 59
+  Top = 145
+  Caption = 'Orçamento Empresarial'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 422
+        ClientHeight = 422
+        inherited PanelFiltroRapido: TPanel
+          Top = 368
+          Width = 897
+          ClientWidth = 897
+          inherited BotaoConsultar: TSpeedButton
+            Left = 763
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 596
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 370
+          Width = 897
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object PanelParcelas: TPanel[0]
+          Left = 4
+          Height = 421
+          Top = 4
+          Width = 992
+          Align = alClient
+          ClientHeight = 421
+          ClientWidth = 992
+          TabOrder = 0
+          object PageControlItens: TPageControl
+            Left = 4
+            Height = 215
+            Top = 182
+            Width = 974
+            ActivePage = tsItens
+            Anchors = [akTop, akLeft, akRight, akBottom]
+            TabIndex = 0
+            TabOrder = 0
+            object tsItens: TTabSheet
+              Caption = 'Itens'
+              ClientHeight = 189
+              ClientWidth = 966
+              object PanelItens: TPanel
+                Left = 0
+                Height = 189
+                Top = 0
+                Width = 966
+                Align = alClient
+                BevelOuter = bvNone
+                ClientHeight = 189
+                ClientWidth = 966
+                TabOrder = 0
+                object GridOrcamentoDetalhe: TRxDBGrid
+                  Left = 0
+                  Height = 158
+                  Top = 31
+                  Width = 966
+                  TitleButtons = True
+                  AutoSort = True
+                  KeyStrokes = <                  
+                    item
+                      Command = rxgcShowFindDlg
+                      ShortCut = 16454
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowColumnsDlg
+                      ShortCut = 16471
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowFilterDlg
+                      ShortCut = 16468
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowSortDlg
+                      ShortCut = 16467
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowQuickFilter
+                      ShortCut = 16465
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcHideQuickFilter
+                      ShortCut = 16456
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcSelectAll
+                      ShortCut = 16449
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcDeSelectAll
+                      ShortCut = 16429
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcInvertSelection
+                      ShortCut = 16426
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcOptimizeColumnsWidth
+                      ShortCut = 16427
+                      Enabled = True
+                    end>
+                  OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                  Align = alClient
+                  Color = clWindow
+                  DrawFullLine = False
+                  FocusColor = clRed
+                  SelectedColor = clHighlight
+                  GridLineStyle = psSolid
+                  DataSource = DSOrcamentoDetalhe
+                  Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgHeaderPushedLook]
+                  ParentColor = False
+                  TabOrder = 0
+                  TitleFont.Color = clWindowText
+                  TitleFont.Height = -11
+                  TitleFont.Name = 'Tahoma'
+                  OnKeyDown = GridOrcamentoDetalheKeyDown
+                end
+                object ActionToolBarEdits: TToolPanel
+                  Left = 0
+                  Height = 31
+                  Top = 0
+                  Width = 966
+                  Items = <                  
+                    item
+                      Action = ActionCalcularVariacao
+                      Visible = True
+                      Left = 842
+                      Height = 21
+                      Top = 5
+                      Width = 119
+                      ShowCaption = True
+                    end                  
+                    item
+                      Action = ActionGerarOrcamentoEmpresarial
+                      Visible = True
+                      Left = 723
+                      Height = 21
+                      Top = 5
+                      Width = 119
+                      ShowCaption = True
+                    end                  
+                    item
+                      Action = ActionPegarRealizado
+                      Visible = True
+                      Left = 612
+                      Height = 21
+                      Top = 5
+                      Width = 111
+                      ShowCaption = True
+                    end>
+                  ImageList = FDataModule.ImagensCadastros
+                  ToolBarStyle = tbsWindowsXP
+                  Options = [tpFlatBtns]
+                  ButtonAllign = tbaRignt
+                  Align = alTop
+                  BorderWidth = 4
+                  ClientHeight = 31
+                  ClientWidth = 966
+                  TabOrder = 1
+                end
+              end
+            end
+          end
+        end
+        object PanelMestre: TPanel[1]
+          Left = 8
+          Height = 168
+          Top = 10
+          Width = 974
+          Anchors = [akTop, akLeft, akRight]
+          BevelOuter = bvLowered
+          ClientHeight = 168
+          ClientWidth = 974
+          TabOrder = 1
+          object EditIdOrcamentoPeriodo: TLabeledCalcEdit
+            Left = 7
+            Height = 21
+            Top = 22
+            Width = 61
+            Alignment = taRightJustify
+            DisplayFormat = '#'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 0
+            Value = 0
+            OnKeyUp = EditIdOrcamentoPeriodoKeyUp
+            CalcEditLabel.Left = 7
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 6
+            CalcEditLabel.Width = 63
+            CalcEditLabel.Caption = 'Período [F1]:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditOrcamentoPeriodo: TLabeledEdit
+            Left = 103
+            Height = 21
+            Top = 22
+            Width = 279
+            Color = clInfoBk
+            EditLabel.AnchorSideLeft.Control = EditOrcamentoPeriodo
+            EditLabel.AnchorSideRight.Control = EditOrcamentoPeriodo
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditOrcamentoPeriodo
+            EditLabel.Left = 103
+            EditLabel.Height = 13
+            EditLabel.Top = 6
+            EditLabel.Width = 279
+            EditLabel.Caption = '  '
+            EditLabel.ParentColor = False
+            ReadOnly = True
+            TabOrder = 2
+            TabStop = False
+          end
+          object EditNome: TLabeledEdit
+            Left = 388
+            Height = 21
+            Top = 22
+            Width = 574
+            Anchors = [akTop, akLeft, akRight]
+            EditLabel.AnchorSideLeft.Control = EditNome
+            EditLabel.AnchorSideRight.Control = EditNome
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditNome
+            EditLabel.Left = 388
+            EditLabel.Height = 13
+            EditLabel.Top = 6
+            EditLabel.Width = 574
+            EditLabel.Caption = 'Nome:'
+            EditLabel.ParentColor = False
+            TabOrder = 3
+          end
+          object EditDataBase: TLabeledDateEdit
+            Left = 134
+            Height = 21
+            Top = 67
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 5
+            Text = '  /  /    '
+            DateEditLabel.Left = 134
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 51
+            DateEditLabel.Width = 53
+            DateEditLabel.Caption = 'Data Base:'
+            DateEditLabel.ParentColor = False
+          end
+          object EditNumeroPeriodos: TLabeledCalcEdit
+            Left = 261
+            Height = 21
+            Top = 67
+            Width = 121
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,###'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 6
+            Value = 0
+            CalcEditLabel.Left = 261
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 51
+            CalcEditLabel.Width = 100
+            CalcEditLabel.Caption = 'Número de Periodos:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditDataInicial: TLabeledDateEdit
+            Left = 7
+            Height = 21
+            Top = 67
+            Width = 121
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 4
+            Text = '  /  /    '
+            DateEditLabel.Left = 7
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 51
+            DateEditLabel.Width = 57
+            DateEditLabel.Caption = 'Data Inicial:'
+            DateEditLabel.ParentColor = False
+          end
+          object MemoDescricao: TLabeledMemo
+            Left = 7
+            Height = 46
+            Top = 110
+            Width = 955
+            Anchors = [akTop, akLeft, akRight, akBottom]
+            TabOrder = 7
+            MemoLabel.Left = 7
+            MemoLabel.Height = 13
+            MemoLabel.Top = 94
+            MemoLabel.Width = 50
+            MemoLabel.Caption = 'Descricão:'
+            MemoLabel.ParentColor = False
+          end
+          object EditOrcamentoPeriodoCodigo: TLabeledEdit
+            Left = 68
+            Height = 21
+            Top = 22
+            Width = 35
+            Color = clInfoBk
+            EditLabel.AnchorSideLeft.Control = EditOrcamentoPeriodoCodigo
+            EditLabel.AnchorSideRight.Control = EditOrcamentoPeriodoCodigo
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditOrcamentoPeriodoCodigo
+            EditLabel.Left = 68
+            EditLabel.Height = 13
+            EditLabel.Top = 6
+            EditLabel.Width = 35
+            EditLabel.Caption = '  '
+            EditLabel.ParentColor = False
+            ReadOnly = True
+            TabOrder = 1
+            TabStop = False
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+  object ActionManager: TActionList[5]
+    Images = FDataModule.ImagensCadastros
+    left = 856
+    top = 328
+    object ActionGerarOrcamentoEmpresarial: TAction
+      Caption = 'Gerar Orçamento'
+      ImageIndex = 22
+      OnExecute = ActionGerarOrcamentoEmpresarialExecute
+    end
+    object ActionPegarRealizado: TAction
+      Caption = 'Pegar Realizado'
+      ImageIndex = 13
+      OnExecute = ActionPegarRealizadoExecute
+    end
+    object ActionCalcularVariacao: TAction
+      Caption = 'Calcular Variação'
+      ImageIndex = 6
+      OnExecute = ActionCalcularVariacaoExecute
+    end
+  end
+  object DSOrcamentoDetalhe: TDatasource[6]
+    DataSet = CDSOrcamentoDetalhe
+    left = 584
+    top = 336
+  end
+  object CDSOrcamentoDetalhe: TBufDataset[7]
+    FieldDefs = <>
+    left = 716
+    top = 340
+  end
+end

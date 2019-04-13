@@ -1,0 +1,1519 @@
+object FNfeDetalheAnexo: TFNfeDetalheAnexo
+  Left = 320
+  Top = 216
+  Caption = 'NF-e Detalhes Anexo'
+  ClientHeight = 379
+  ClientWidth = 1017
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  PixelsPerInch = 96
+  object PageControlDadosTributacao: TPageControl
+    Left = 0
+    Top = 0
+    Width = 1017
+    Height = 379
+    ActivePage = tsIcms
+    Align = alClient
+    TabOrder = 0
+    object tsIcms: TTabSheet
+      Caption = 'ICMS'
+      ImageIndex = 2
+      object PanelDetalheIcms: TPanel
+        Left = 0
+        Top = 0
+        Width = 1009
+        Height = 351
+        Align = alClient
+        BevelOuter = bvNone
+        TabOrder = 0
+        object Bevel1: TBevel
+          Left = 3
+          Top = 5
+          Width = 996
+          Height = 337
+          Anchors = [akLeft, akTop, akRight, akBottom]
+        end
+        object Label1: TLabel
+          Left = 126
+          Top = 35
+          Width = 474
+          Height = 13
+          Caption = 
+            '[0 = Nacional; 1 = Estrangeira Importação  direta;  2 = Estrange' +
+            'ira Adquirida no  mercado interno]'
+        end
+        object Label2: TLabel
+          Left = 104
+          Top = 83
+          Width = 541
+          Height = 13
+          Caption = 
+            '[0 = Margem Valor Agregado (%);  1 = Pauta (Valor);  2 = Preço T' +
+            'abelado Máx. (valor);  3 = valor da operação]'
+        end
+        object Label3: TLabel
+          Left = 142
+          Top = 176
+          Width = 841
+          Height = 13
+          Caption = 
+            '[0 = Preço tabelado ou máximo sugerido;  1 = Lista Negativa (val' +
+            'or);  2 = Lista Positiva (valor);  3 = Lista Neutra (valor);  4 ' +
+            '= Margem Valor Agregado (%);  5 = Pauta (valor)]'
+        end
+        object Label4: TLabel
+          Left = 663
+          Top = 123
+          Width = 333
+          Height = 26
+          Anchors = [akLeft, akTop, akRight]
+          AutoSize = False
+          Caption = 
+            '[1 = Táxi;  2 = Deficiente Físico;  3 = Produtor Agropecuário;  ' +
+            '4 = Frotista/Locadora;  5 = Diplomático/Consular;  6 = Utilitári' +
+            'os e Motocicletas da  Amazônia Ocidental e Áreas de  Livre Comér' +
+            'cio (Resolução  714/88 e 790/94 - CONTRAN e  suas alterações);  ' +
+            '7 = SUFRAMA;  9 = outros]'
+          WordWrap = True
+        end
+        object DBEditBcIcms: TLabeledDBEdit
+          Left = 142
+          Top = 128
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'BASE_CALCULO_ICMS'
+          DataSource = FDataModuleNFe.DSNfeImpostoIcms
+          TabOrder = 5
+          DBEditLabel.Width = 103
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Base de Cálculo (BC):'
+        end
+        object DBEditOrigemMercadoria: TLabeledDBEdit
+          Left = 15
+          Top = 32
+          Width = 105
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'ORIGEM_MERCADORIA'
+          DataSource = FDataModuleNFe.DSNfeImpostoIcms
+          TabOrder = 0
+          DBEditLabel.Width = 94
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Origem Mercadoria:'
+        end
+        object DBEditCst: TLabeledDBEdit
+          Left = 606
+          Top = 32
+          Width = 57
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'CST_ICMS'
+          DataSource = FDataModuleNFe.DSNfeImpostoIcms
+          TabOrder = 1
+          DBEditLabel.Width = 23
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'CST:'
+        end
+        object DBEditCsosn: TLabeledDBEdit
+          Left = 669
+          Top = 32
+          Width = 57
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'CSOSN'
+          DataSource = FDataModuleNFe.DSNfeImpostoIcms
+          TabOrder = 2
+          DBEditLabel.Width = 38
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'CSOSN:'
+        end
+        object DBEditModalidadeBcIcms: TLabeledDBEdit
+          Left = 15
+          Top = 80
+          Width = 83
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'MODALIDADE_BC_ICMS'
+          DataSource = FDataModuleNFe.DSNfeImpostoIcms
+          TabOrder = 3
+          DBEditLabel.Width = 74
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Modalidade BC:'
+        end
+        object DBEditTaxaReducaoBcIcmsSt: TLabeledDBEdit
+          Left = 142
+          Top = 218
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'PERCENTUAL_REDUCAO_BC_ICMS_ST'
+          DataSource = FDataModuleNFe.DSNfeImpostoIcms
+          TabOrder = 11
+          DBEditLabel.Width = 104
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Taxa Redução BC ST:'
+        end
+        object DBEditAliquotaIcms: TLabeledDBEdit
+          Left = 269
+          Top = 128
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'ALIQUOTA_ICMS'
+          DataSource = FDataModuleNFe.DSNfeImpostoIcms
+          TabOrder = 6
+          DBEditLabel.Width = 43
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Alíquota:'
+        end
+        object DBEditValorIcms: TLabeledDBEdit
+          Left = 396
+          Top = 128
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'VALOR_ICMS'
+          DataSource = FDataModuleNFe.DSNfeImpostoIcms
+          TabOrder = 7
+          DBEditLabel.Width = 28
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Valor:'
+        end
+        object DBEditMotivoDesoneracaoIcms: TLabeledDBEdit
+          Left = 523
+          Top = 128
+          Width = 134
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'MOTIVO_DESONERACAO_ICMS'
+          DataSource = FDataModuleNFe.DSNfeImpostoIcms
+          TabOrder = 8
+          DBEditLabel.Width = 102
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Motivo Desoneração:'
+        end
+        object DBEditModalidadeBcIcmsSt: TLabeledDBEdit
+          Left = 15
+          Top = 173
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'MODALIDADE_BC_ICMS_ST'
+          DataSource = FDataModuleNFe.DSNfeImpostoIcms
+          TabOrder = 9
+          DBEditLabel.Width = 89
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Modalidade BC ST:'
+        end
+        object DBEditPercentualMvaIcmsSt: TLabeledDBEdit
+          Left = 15
+          Top = 218
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'PERCENTUAL_MVA_ICMS_ST'
+          DataSource = FDataModuleNFe.DSNfeImpostoIcms
+          TabOrder = 10
+          DBEditLabel.Width = 94
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Percentual MVA ST:'
+        end
+        object DBEditTaxaReducaoBcIcms: TLabeledDBEdit
+          Left = 15
+          Top = 128
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'TAXA_REDUCAO_BC_ICMS'
+          DataSource = FDataModuleNFe.DSNfeImpostoIcms
+          TabOrder = 4
+          DBEditLabel.Width = 89
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Taxa Redução BC:'
+        end
+        object DBEditValorBcIcmsSt: TLabeledDBEdit
+          Left = 269
+          Top = 218
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'VALOR_BASE_CALCULO_ICMS_ST'
+          DataSource = FDataModuleNFe.DSNfeImpostoIcms
+          TabOrder = 12
+          DBEditLabel.Width = 94
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Base de Cálculo ST:'
+        end
+        object DBEditAliquotaIcmsSt: TLabeledDBEdit
+          Left = 396
+          Top = 218
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'ALIQUOTA_ICMS_ST'
+          DataSource = FDataModuleNFe.DSNfeImpostoIcms
+          TabOrder = 13
+          DBEditLabel.Width = 58
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Alíquota ST:'
+        end
+        object DBEditValorIcmsSt: TLabeledDBEdit
+          Left = 523
+          Top = 218
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'VALOR_ICMS_ST'
+          DataSource = FDataModuleNFe.DSNfeImpostoIcms
+          TabOrder = 14
+          DBEditLabel.Width = 43
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Valor ST:'
+        end
+        object DBEditValorBcIcmsStRetido: TLabeledDBEdit
+          Left = 650
+          Top = 218
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'VALOR_BC_ICMS_ST_RETIDO'
+          DataSource = FDataModuleNFe.DSNfeImpostoIcms
+          TabOrder = 15
+          DBEditLabel.Width = 66
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'BC ST Retido:'
+        end
+        object DBEditValorIcmsStRetido: TLabeledDBEdit
+          Left = 777
+          Top = 218
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'VALOR_ICMS_ST_RETIDO'
+          DataSource = FDataModuleNFe.DSNfeImpostoIcms
+          TabOrder = 16
+          DBEditLabel.Width = 77
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Valor ST Retido:'
+        end
+        object DBEditValorBcIcmsStDestino: TLabeledDBEdit
+          Left = 15
+          Top = 264
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'VALOR_BC_ICMS_ST_DESTINO'
+          DataSource = FDataModuleNFe.DSNfeImpostoIcms
+          TabOrder = 17
+          DBEditLabel.Width = 71
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'BC ST Destino:'
+        end
+        object DBEditValorIcmsStDestino: TLabeledDBEdit
+          Left = 142
+          Top = 264
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'VALOR_ICMS_ST_DESTINO'
+          DataSource = FDataModuleNFe.DSNfeImpostoIcms
+          TabOrder = 18
+          DBEditLabel.Width = 82
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Valor ST Destino:'
+        end
+        object DBEditAliquotaCreditoIcmsSn: TLabeledDBEdit
+          Left = 269
+          Top = 264
+          Width = 140
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'ALIQUOTA_CREDITO_ICMS_SN'
+          DataSource = FDataModuleNFe.DSNfeImpostoIcms
+          TabOrder = 19
+          DBEditLabel.Width = 97
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Alíquota Crédito SN:'
+        end
+        object DBEditValorCreditoIcmsSn: TLabeledDBEdit
+          Left = 415
+          Top = 264
+          Width = 140
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'VALOR_CREDITO_ICMS_SN'
+          DataSource = FDataModuleNFe.DSNfeImpostoIcms
+          TabOrder = 20
+          DBEditLabel.Width = 82
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Valor Crédito SN:'
+        end
+        object DBEditPercentualBcOperacaoPropria: TLabeledDBEdit
+          Left = 561
+          Top = 264
+          Width = 168
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'PERCENTUAL_BC_OPERACAO_PROPRIA'
+          DataSource = FDataModuleNFe.DSNfeImpostoIcms
+          TabOrder = 21
+          DBEditLabel.Width = 158
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Percentual BC Operação Própria:'
+        end
+        object DBEditUfSt: TLabeledDBEdit
+          Left = 735
+          Top = 264
+          Width = 48
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'UF_ST'
+          DataSource = FDataModuleNFe.DSNfeImpostoIcms
+          TabOrder = 22
+          DBEditLabel.Width = 32
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'UF ST:'
+        end
+      end
+    end
+    object tsPis: TTabSheet
+      Caption = 'PIS'
+      object PanelDetalhePis: TPanel
+        Left = 0
+        Top = 0
+        Width = 1009
+        Height = 351
+        Align = alClient
+        BevelOuter = bvNone
+        TabOrder = 0
+        object Bevel2: TBevel
+          Left = 3
+          Top = 5
+          Width = 996
+          Height = 337
+          Anchors = [akLeft, akTop, akRight, akBottom]
+        end
+        object DBEditCstPis: TLabeledDBEdit
+          Left = 15
+          Top = 32
+          Width = 57
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'CST_PIS'
+          DataSource = FDataModuleNFe.DSNfeImpostoPis
+          TabOrder = 0
+          DBEditLabel.Width = 23
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'CST:'
+        end
+        object DBEditQuantidadeVendidaPis: TLabeledDBEdit
+          Left = 78
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'QUANTIDADE_VENDIDA'
+          DataSource = FDataModuleNFe.DSNfeImpostoPis
+          TabOrder = 1
+          DBEditLabel.Width = 101
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Quantidade Vendida:'
+        end
+        object DBEditValorBcPis: TLabeledDBEdit
+          Left = 205
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'VALOR_BASE_CALCULO_PIS'
+          DataSource = FDataModuleNFe.DSNfeImpostoPis
+          TabOrder = 2
+          DBEditLabel.Width = 103
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Base de Cálculo (BC):'
+        end
+        object DBEditAliquotaPisPercentual: TLabeledDBEdit
+          Left = 332
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'ALIQUOTA_PIS_PERCENTUAL'
+          DataSource = FDataModuleNFe.DSNfeImpostoPis
+          TabOrder = 3
+          DBEditLabel.Width = 97
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Alíquota Percentual:'
+        end
+        object DBEditValorPis: TLabeledDBEdit
+          Left = 586
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'VALOR_PIS'
+          DataSource = FDataModuleNFe.DSNfeImpostoPis
+          TabOrder = 5
+          DBEditLabel.Width = 28
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Valor:'
+        end
+        object DBEditAliquotaPisReais: TLabeledDBEdit
+          Left = 459
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'ALIQUOTA_PIS_REAIS'
+          DataSource = FDataModuleNFe.DSNfeImpostoPis
+          TabOrder = 4
+          DBEditLabel.Width = 72
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Alíquota Reais:'
+        end
+      end
+    end
+    object tsCofins: TTabSheet
+      Caption = 'COFINS'
+      ImageIndex = 2
+      object PanelDetalheCofins: TPanel
+        Left = 0
+        Top = 0
+        Width = 1009
+        Height = 351
+        Align = alClient
+        BevelOuter = bvNone
+        TabOrder = 0
+        object Bevel3: TBevel
+          Left = 3
+          Top = 5
+          Width = 996
+          Height = 337
+          Anchors = [akLeft, akTop, akRight, akBottom]
+        end
+        object DBEditCstCofins: TLabeledDBEdit
+          Left = 15
+          Top = 32
+          Width = 57
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'CST_COFINS'
+          DataSource = FDataModuleNFe.DSNfeImpostoCofins
+          TabOrder = 0
+          DBEditLabel.Width = 23
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'CST:'
+        end
+        object DBEditQuantidadeVendidaCofins: TLabeledDBEdit
+          Left = 78
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'QUANTIDADE_VENDIDA'
+          DataSource = FDataModuleNFe.DSNfeImpostoCofins
+          TabOrder = 1
+          DBEditLabel.Width = 101
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Quantidade Vendida:'
+        end
+        object DBEditBcCofins: TLabeledDBEdit
+          Left = 205
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'BASE_CALCULO_COFINS'
+          DataSource = FDataModuleNFe.DSNfeImpostoCofins
+          TabOrder = 2
+          DBEditLabel.Width = 103
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Base de Cálculo (BC):'
+        end
+        object DBEditAliquotaPercentualCofins: TLabeledDBEdit
+          Left = 332
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'ALIQUOTA_COFINS_PERCENTUAL'
+          DataSource = FDataModuleNFe.DSNfeImpostoCofins
+          TabOrder = 3
+          DBEditLabel.Width = 97
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Alíquota Percentual:'
+        end
+        object DBEditValorCofins: TLabeledDBEdit
+          Left = 586
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'VALOR_COFINS'
+          DataSource = FDataModuleNFe.DSNfeImpostoCofins
+          TabOrder = 5
+          DBEditLabel.Width = 28
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Valor:'
+        end
+        object DBEditAliquotaReaisCofins: TLabeledDBEdit
+          Left = 459
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'ALIQUOTA_COFINS_REAIS'
+          DataSource = FDataModuleNFe.DSNfeImpostoCofins
+          TabOrder = 4
+          DBEditLabel.Width = 72
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Alíquota Reais:'
+        end
+      end
+    end
+    object tsIpi: TTabSheet
+      Caption = 'IPI'
+      ImageIndex = 3
+      object PanelDetalheIpi: TPanel
+        Left = 0
+        Top = 0
+        Width = 1009
+        Height = 351
+        Align = alClient
+        BevelOuter = bvNone
+        TabOrder = 0
+        object Bevel4: TBevel
+          Left = 3
+          Top = 5
+          Width = 996
+          Height = 337
+          Anchors = [akLeft, akTop, akRight, akBottom]
+        end
+        object DBEditCstIpi: TLabeledDBEdit
+          Left = 15
+          Top = 32
+          Width = 57
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'CST_IPI'
+          DataSource = FDataModuleNFe.DSNfeImpostoIpi
+          TabOrder = 0
+          DBEditLabel.Width = 23
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'CST:'
+        end
+        object DBEditQuantidadeUnidadeTributavelIpi: TLabeledDBEdit
+          Left = 332
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'QUANTIDADE_UNIDADE_TRIBUTAVEL'
+          DataSource = FDataModuleNFe.DSNfeImpostoIpi
+          TabOrder = 3
+          DBEditLabel.Width = 101
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Qtde Und Tributável:'
+        end
+        object DBEditValorBcIpi: TLabeledDBEdit
+          Left = 78
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'VALOR_BASE_CALCULO_IPI'
+          DataSource = FDataModuleNFe.DSNfeImpostoIpi
+          TabOrder = 1
+          DBEditLabel.Width = 103
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Base de Cálculo (BC):'
+        end
+        object DBEditAliquotaIpi: TLabeledDBEdit
+          Left = 205
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'ALIQUOTA_IPI'
+          DataSource = FDataModuleNFe.DSNfeImpostoIpi
+          TabOrder = 2
+          DBEditLabel.Width = 43
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Alíquota:'
+        end
+        object DBEditValorIpi: TLabeledDBEdit
+          Left = 586
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'VALOR_IPI'
+          DataSource = FDataModuleNFe.DSNfeImpostoIpi
+          TabOrder = 5
+          DBEditLabel.Width = 28
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Valor:'
+        end
+        object DBEditValorUnidadeTributavelIpi: TLabeledDBEdit
+          Left = 459
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'VALOR_UNIDADE_TRIBUTAVEL'
+          DataSource = FDataModuleNFe.DSNfeImpostoIpi
+          TabOrder = 4
+          DBEditLabel.Width = 101
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Valor Und Tributável:'
+        end
+        object DBEditEnquadramentoIpi: TLabeledDBEdit
+          Left = 15
+          Top = 80
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'ENQUADRAMENTO_IPI'
+          DataSource = FDataModuleNFe.DSNfeImpostoIpi
+          TabOrder = 6
+          DBEditLabel.Width = 80
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Enquadramento:'
+        end
+        object DBEditEnquadramentoLegalIpi: TLabeledDBEdit
+          Left = 142
+          Top = 80
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'ENQUADRAMENTO_LEGAL_IPI'
+          DataSource = FDataModuleNFe.DSNfeImpostoIpi
+          TabOrder = 7
+          DBEditLabel.Width = 108
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Enquadramento Legal:'
+        end
+        object DBEditCnpjProdutor: TLabeledDBEdit
+          Left = 269
+          Top = 80
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'CNPJ_PRODUTOR'
+          DataSource = FDataModuleNFe.DSNfeImpostoIpi
+          TabOrder = 8
+          DBEditLabel.Width = 74
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'CNPJ Produtor:'
+        end
+        object DBEditQuantidadeSeloIpi: TLabeledDBEdit
+          Left = 396
+          Top = 80
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'QUANTIDADE_SELO_IPI'
+          DataSource = FDataModuleNFe.DSNfeImpostoIpi
+          TabOrder = 9
+          DBEditLabel.Width = 83
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Quantidade Selo:'
+        end
+        object DBEditCodigoSeloIpi: TLabeledDBEdit
+          Left = 523
+          Top = 80
+          Width = 467
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          CharCase = ecUpperCase
+          DataField = 'CODIGO_SELO_IPI'
+          DataSource = FDataModuleNFe.DSNfeImpostoIpi
+          TabOrder = 10
+          DBEditLabel.Width = 60
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Código Selo:'
+        end
+      end
+    end
+    object tsImpostoImportacao: TTabSheet
+      Caption = 'Imposto Importação'
+      ImageIndex = 4
+      object PanelDetalheImpostoImportacao: TPanel
+        Left = 0
+        Top = 0
+        Width = 1009
+        Height = 351
+        Align = alClient
+        BevelOuter = bvNone
+        TabOrder = 0
+        object Bevel5: TBevel
+          Left = 3
+          Top = 5
+          Width = 996
+          Height = 337
+          Anchors = [akLeft, akTop, akRight, akBottom]
+        end
+        object DBEditValorBcIi: TLabeledDBEdit
+          Left = 15
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'VALOR_BC_II'
+          DataSource = FDataModuleNFe.DSNfeImpostoImportacao
+          TabOrder = 0
+          DBEditLabel.Width = 103
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Base de Cálculo (BC):'
+        end
+        object DBEditValorDespesasAduaneirasIi: TLabeledDBEdit
+          Left = 142
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'VALOR_DESPESAS_ADUANEIRAS'
+          DataSource = FDataModuleNFe.DSNfeImpostoImportacao
+          TabOrder = 1
+          DBEditLabel.Width = 107
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Despesas Aduaneiras:'
+        end
+        object DBEditValorIofIi: TLabeledDBEdit
+          Left = 396
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'VALOR_IOF'
+          DataSource = FDataModuleNFe.DSNfeImpostoImportacao
+          TabOrder = 3
+          DBEditLabel.Width = 22
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'IOF:'
+        end
+        object DBEditValorIi: TLabeledDBEdit
+          Left = 269
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'VALOR_IMPOSTO_IMPORTACAO'
+          DataSource = FDataModuleNFe.DSNfeImpostoImportacao
+          TabOrder = 2
+          DBEditLabel.Width = 28
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Valor:'
+        end
+      end
+    end
+    object tsIssqn: TTabSheet
+      Caption = 'ISSQN'
+      ImageIndex = 5
+      object PanelDetalheIssqn: TPanel
+        Left = 0
+        Top = 0
+        Width = 1009
+        Height = 351
+        Align = alClient
+        BevelOuter = bvNone
+        TabOrder = 0
+        object Bevel6: TBevel
+          Left = 3
+          Top = 5
+          Width = 996
+          Height = 337
+          Anchors = [akLeft, akTop, akRight, akBottom]
+        end
+        object Label5: TLabel
+          Left = 85
+          Top = 83
+          Width = 294
+          Height = 13
+          Caption = '[N = NORMAL;  R = RETIDA;  S = SUBSTITUTA;  I = ISENTA]'
+        end
+        object DBEditValorBcIssqn: TLabeledDBEdit
+          Left = 15
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'BASE_CALCULO_ISSQN'
+          DataSource = FDataModuleNFe.DSNfeImpostoIssqn
+          TabOrder = 0
+          DBEditLabel.Width = 103
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Base de Cálculo (BC):'
+        end
+        object DBEditAliquotaIssqn: TLabeledDBEdit
+          Left = 142
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'ALIQUOTA_ISSQN'
+          DataSource = FDataModuleNFe.DSNfeImpostoIssqn
+          TabOrder = 1
+          DBEditLabel.Width = 43
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Alíquota:'
+        end
+        object DBEditValorIssqn: TLabeledDBEdit
+          Left = 269
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'VALOR_ISSQN'
+          DataSource = FDataModuleNFe.DSNfeImpostoIssqn
+          TabOrder = 2
+          DBEditLabel.Width = 28
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Valor:'
+        end
+        object DBEditMunicipioIssqn: TLabeledDBEdit
+          Left = 396
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'MUNICIPIO_ISSQN'
+          DataSource = FDataModuleNFe.DSNfeImpostoIssqn
+          TabOrder = 3
+          DBEditLabel.Width = 47
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Município:'
+        end
+        object DBEditItemListaServicos: TLabeledDBEdit
+          Left = 523
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'ITEM_LISTA_SERVICOS'
+          DataSource = FDataModuleNFe.DSNfeImpostoIssqn
+          TabOrder = 4
+          DBEditLabel.Width = 94
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Item Lista Serviços:'
+        end
+        object LabeledDBEdit1: TLabeledDBEdit
+          Left = 15
+          Top = 80
+          Width = 64
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'ITEM_LISTA_SERVICOS'
+          DataSource = FDataModuleNFe.DSNfeImpostoIssqn
+          TabOrder = 5
+          DBEditLabel.Width = 55
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Tributação:'
+        end
+      end
+    end
+    object tsDetalheEspecificoCombustivel: TTabSheet
+      Caption = 'Combustível'
+      ImageIndex = 6
+      object PanelDetalheCombustivel: TPanel
+        Left = 0
+        Top = 0
+        Width = 1009
+        Height = 351
+        Align = alClient
+        BevelOuter = bvNone
+        TabOrder = 0
+        object DBEditCodigoAnpCombustivel: TLabeledDBEdit
+          Left = 15
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'CODIGO_ANP'
+          DataSource = FDataModuleNFe.DSNfeDetalheCombustivel
+          TabOrder = 0
+          DBEditLabel.Width = 60
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Código ANP:'
+        end
+        object DBEditCodifCombustivel: TLabeledDBEdit
+          Left = 142
+          Top = 32
+          Width = 249
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'CODIF'
+          DataSource = FDataModuleNFe.DSNfeDetalheCombustivel
+          TabOrder = 1
+          DBEditLabel.Width = 36
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'CODIF:'
+        end
+        object DBEditQuantidadeTemperaturaAmbienteCombustivel: TLabeledDBEdit
+          Left = 397
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'QUANTIDADE_TEMP_AMBIENTE'
+          DataSource = FDataModuleNFe.DSNfeDetalheCombustivel
+          TabOrder = 2
+          DBEditLabel.Width = 105
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Qtde Temp Ambiente:'
+        end
+        object DBEditUfConsumoCombustivel: TLabeledDBEdit
+          Left = 524
+          Top = 32
+          Width = 75
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'UF_CONSUMO'
+          DataSource = FDataModuleNFe.DSNfeDetalheCombustivel
+          TabOrder = 3
+          DBEditLabel.Width = 64
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'UF Consumo:'
+        end
+        object DBEditBcCideCombustivel: TLabeledDBEdit
+          Left = 605
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'BASE_CALCULO_CIDE'
+          DataSource = FDataModuleNFe.DSNfeDetalheCombustivel
+          TabOrder = 4
+          DBEditLabel.Width = 44
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'BC CIDE:'
+        end
+        object DBEditAliquotaCideCombustivel: TLabeledDBEdit
+          Left = 732
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'ALIQUOTA_CIDE'
+          DataSource = FDataModuleNFe.DSNfeDetalheCombustivel
+          TabOrder = 5
+          DBEditLabel.Width = 70
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Alíquota CIDE:'
+        end
+        object DBEditValorCideCombustivel: TLabeledDBEdit
+          Left = 859
+          Top = 32
+          Width = 121
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'VALOR_CIDE'
+          DataSource = FDataModuleNFe.DSNfeDetalheCombustivel
+          TabOrder = 6
+          DBEditLabel.Width = 55
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Valor CIDE:'
+        end
+      end
+    end
+    object tsDetalheEspecificoVeiculo: TTabSheet
+      Caption = 'Veículo'
+      ImageIndex = 7
+      object PanelDetalheVeiculo: TPanel
+        Left = 0
+        Top = 0
+        Width = 1009
+        Height = 351
+        Align = alClient
+        BevelOuter = bvNone
+        TabOrder = 0
+        object Bevel8: TBevel
+          Left = 3
+          Top = 5
+          Width = 996
+          Height = 337
+          Anchors = [akLeft, akTop, akRight, akBottom]
+        end
+        object Label6: TLabel
+          Left = 109
+          Top = 35
+          Width = 769
+          Height = 13
+          Caption = 
+            '[1 = Venda concessionária;  2 = Faturamento direto para  consumi' +
+            'dor final;  3 = Venda direta para grandes  consumidores (frotist' +
+            'a, governo,  ...);  0 = Outros]'
+        end
+        object Label7: TLabel
+          Left = 621
+          Top = 179
+          Width = 354
+          Height = 13
+          Caption = 
+            '[1=Passageiro;  2=Carga;  3=Misto ; 4=Corrida;  5=Tração;  6=Esp' +
+            'ecial]'
+        end
+        object Label8: TLabel
+          Left = 101
+          Top = 227
+          Width = 132
+          Height = 13
+          Caption = '[R=Remarcado; N=Normal]'
+        end
+        object Label9: TLabel
+          Left = 341
+          Top = 227
+          Width = 230
+          Height = 13
+          Caption = '[1=Acabado;  2=Inacabado;  3=Semi-acabado]'
+        end
+        object Label10: TLabel
+          Left = 101
+          Top = 275
+          Width = 634
+          Height = 13
+          Caption = 
+            '[0 = Não há;  1= Alienação Fiduciária;  2 = Arrendamento Mercant' +
+            'il;  3 = Reserva de Domínio;  4 = Penhor de Veículos;  9 = outra' +
+            's]'
+        end
+        object DBEditTipoOperacaoVeiculo: TLabeledDBEdit
+          Left = 15
+          Top = 32
+          Width = 88
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'TIPO_OPERACAO'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 0
+          DBEditLabel.Width = 74
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Tipo Operação:'
+        end
+        object DBEditChassiVeiculo: TLabeledDBEdit
+          Left = 15
+          Top = 80
+          Width = 168
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'CHASSI'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 1
+          DBEditLabel.Width = 35
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Chassi:'
+        end
+        object DBEditTipoCorVeiculo: TLabeledDBEdit
+          Left = 189
+          Top = 80
+          Width = 66
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'COR'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 2
+          DBEditLabel.Width = 57
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Código Cor:'
+        end
+        object DBEditPotenciaMotorVeiculo: TLabeledDBEdit
+          Left = 15
+          Top = 128
+          Width = 88
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'POTENCIA_MOTOR'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 4
+          DBEditLabel.Width = 76
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Potência Motor:'
+        end
+        object DBEditDescricaoCorVeiculo: TLabeledDBEdit
+          Left = 261
+          Top = 80
+          Width = 729
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          CharCase = ecUpperCase
+          DataField = 'DESCRICAO_COR'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 3
+          DBEditLabel.Width = 70
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Descrição Cor:'
+        end
+        object DBEditCilindradasVeiculo: TLabeledDBEdit
+          Left = 109
+          Top = 128
+          Width = 74
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'CILINDRADAS'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 5
+          DBEditLabel.Width = 56
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Cilindradas:'
+        end
+        object DBEditPesoLiquidoVeiculo: TLabeledDBEdit
+          Left = 189
+          Top = 128
+          Width = 74
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'PESO_LIQUIDO'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 6
+          DBEditLabel.Width = 63
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Peso Líquido:'
+        end
+        object DBEditPesoBrutoVeiculo: TLabeledDBEdit
+          Left = 269
+          Top = 128
+          Width = 74
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'PESO_BRUTO'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 7
+          DBEditLabel.Width = 56
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Peso Bruto:'
+        end
+        object DBEditNumeroSerieVeiculo: TLabeledDBEdit
+          Left = 349
+          Top = 128
+          Width = 74
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'NUMERO_SERIE'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 8
+          DBEditLabel.Width = 68
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Número Série:'
+        end
+        object DBEditTipoCombustivelVeiculo: TLabeledDBEdit
+          Left = 429
+          Top = 128
+          Width = 74
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'TIPO_COMBUSTIVEL'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 9
+          DBEditLabel.Width = 62
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Combustível:'
+        end
+        object DBEditNumeroMotorVeiculo: TLabeledDBEdit
+          Left = 509
+          Top = 128
+          Width = 481
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          CharCase = ecUpperCase
+          DataField = 'NUMERO_MOTOR'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 10
+          DBEditLabel.Width = 72
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Número Motor:'
+        end
+        object DBEditCapacidadeMaximaTracaoVeiculo: TLabeledDBEdit
+          Left = 15
+          Top = 176
+          Width = 104
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'CAPACIDADE_MAXIMA_TRACAO'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 11
+          DBEditLabel.Width = 96
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Capacidade Tração:'
+        end
+        object DBEditDistanciaEixosVeiculo: TLabeledDBEdit
+          Left = 125
+          Top = 176
+          Width = 82
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'DISTANCIA_EIXOS'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 12
+          DBEditLabel.Width = 75
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Distância Eixos:'
+        end
+        object DBEditAnoModeloVeiculo: TLabeledDBEdit
+          Left = 213
+          Top = 176
+          Width = 68
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'ANO_MODELO'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 13
+          DBEditLabel.Width = 60
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Ano Modelo:'
+        end
+        object DBEditAnoFabricacaoVeiculo: TLabeledDBEdit
+          Left = 287
+          Top = 176
+          Width = 88
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'ANO_FABRICACAO'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 14
+          DBEditLabel.Width = 78
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Ano Fabricação:'
+        end
+        object DBEditTipoPinturaVeiculo: TLabeledDBEdit
+          Left = 381
+          Top = 176
+          Width = 67
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'TIPO_PINTURA'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 15
+          DBEditLabel.Width = 61
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Tipo Pintura:'
+        end
+        object DBEditTipoVeiculo: TLabeledDBEdit
+          Left = 454
+          Top = 176
+          Width = 67
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'TIPO_VEICULO'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 16
+          DBEditLabel.Width = 60
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Tipo Veículo:'
+        end
+        object DBEditEspecieVeiculo: TLabeledDBEdit
+          Left = 527
+          Top = 176
+          Width = 88
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'ESPECIE_VEICULO'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 17
+          DBEditLabel.Width = 76
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Espécie Veículo:'
+        end
+        object DBEditCondicaoVinVeiculo: TLabeledDBEdit
+          Left = 15
+          Top = 224
+          Width = 80
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'CONDICAO_VIN'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 18
+          DBEditLabel.Width = 68
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Condição VIN:'
+        end
+        object DBEditCondicaoVeiculo: TLabeledDBEdit
+          Left = 239
+          Top = 224
+          Width = 96
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'CONDICAO_VEICULO'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 19
+          DBEditLabel.Width = 84
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Condição Veículo:'
+        end
+        object DBEditCodigoMarcaModeloVeiculo: TLabeledDBEdit
+          Left = 577
+          Top = 224
+          Width = 118
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'CODIGO_MARCA_MODELO'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 20
+          DBEditLabel.Width = 106
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Código Marca Modelo:'
+        end
+        object DBEditCodigoCorDenatranVeiculo: TLabeledDBEdit
+          Left = 701
+          Top = 224
+          Width = 118
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'CODIGO_COR'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 21
+          DBEditLabel.Width = 105
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Código Cor Denatran:'
+        end
+        object DBEditLotacaoVeiculo: TLabeledDBEdit
+          Left = 825
+          Top = 224
+          Width = 118
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'LOTACAO'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 22
+          DBEditLabel.Width = 42
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Lotação:'
+        end
+        object DBEditRestricaoVeiculo: TLabeledDBEdit
+          Left = 15
+          Top = 272
+          Width = 80
+          Height = 21
+          CharCase = ecUpperCase
+          DataField = 'RESTRICAO'
+          DataSource = FDataModuleNFe.DSNfeDetalheVeiculo
+          TabOrder = 23
+          DBEditLabel.Width = 49
+          DBEditLabel.Height = 13
+          DBEditLabel.Caption = 'Restrição:'
+        end
+      end
+    end
+    object tsDetalheEspecificoMedicamento: TTabSheet
+      Caption = 'Medicamento'
+      ImageIndex = 8
+      object PanelDetalheMedicamento: TPanel
+        Left = 0
+        Top = 0
+        Width = 1009
+        Height = 351
+        Align = alClient
+        BevelOuter = bvNone
+        TabOrder = 0
+        object GridDetalheMedicamento: TRxDbGrid
+          Left = 0
+          Top = 0
+          Width = 1009
+          Height = 351
+          Align = alClient
+          DataSource = FDataModuleNFe.DSNfeDetalheMedicamento
+          TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'Tahoma'
+          TitleFont.Style = []
+        end
+      end
+    end
+    object tsDetalheEspecificoArmamento: TTabSheet
+      Caption = 'Armamento'
+      ImageIndex = 9
+      object PanelDetalheArmamento: TPanel
+        Left = 0
+        Top = 0
+        Width = 1009
+        Height = 351
+        Align = alClient
+        BevelOuter = bvNone
+        TabOrder = 0
+        object GridDetalheArmamento: TRxDbGrid
+          Left = 0
+          Top = 0
+          Width = 1009
+          Height = 351
+          Align = alClient
+          DataSource = FDataModuleNFe.DSNfeDetalheArmamento
+          TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'Tahoma'
+          TitleFont.Style = []
+        end
+      end
+    end
+    object tsDeclaracaoImportacao: TTabSheet
+      Caption = 'Declaração Importação'
+      ImageIndex = 10
+      object PanelDeclaracaoImportacao: TPanel
+        Left = 0
+        Top = 0
+        Width = 1009
+        Height = 351
+        Align = alClient
+        BevelOuter = bvNone
+        TabOrder = 0
+        object GridDeclaracaoImportacao: TRxDbGrid
+          Left = 0
+          Top = 0
+          Width = 1009
+          Height = 158
+          Align = alClient
+          DataSource = FDataModuleNFe.DSNfeDeclaracaoImportacao
+          TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'Tahoma'
+          TitleFont.Style = []
+        end
+        object PageControlAdicoes: TPageControl
+          Left = 0
+          Top = 156
+          Width = 1009
+          Height = 193
+          ActivePage = tsDetalheAdicoes
+          Align = alBottom
+          TabOrder = 1
+          object tsDetalheAdicoes: TTabSheet
+            Caption = 'Adições'
+            object Panel1: TPanel
+              Left = 0
+              Top = 0
+              Width = 1001
+              Height = 165
+              Align = alClient
+              BevelOuter = bvNone
+              TabOrder = 0
+              object GridDeclaracaoImportacaoDetalhe: TRxDbGrid
+                Left = 0
+                Top = 0
+                Width = 1001
+                Height = 165
+                Align = alClient
+                DataSource = FDataModuleNFe.DSNfeImportacaoDetalhe
+                TabOrder = 0
+                TitleFont.Charset = DEFAULT_CHARSET
+                TitleFont.Color = clWindowText
+                TitleFont.Height = -11
+                TitleFont.Name = 'Tahoma'
+                TitleFont.Style = []
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+end
+

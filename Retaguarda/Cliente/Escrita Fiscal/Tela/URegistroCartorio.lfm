@@ -1,0 +1,172 @@
+inherited FRegistroCartorio: TFRegistroCartorio
+  Tag = 1
+  Left = 318
+  Top = 203
+  Caption = 'Registro Cartório'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 953
+        ClientWidth = 953
+        inherited PanelFiltroRapido: TPanel
+          Width = 953
+          ClientWidth = 953
+          inherited BotaoConsultar: TSpeedButton
+            Left = 821
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 652
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 953
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 10
+          Height = 97
+          Top = 11
+          Width = 982
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditNomeCartorio: TLabeledEdit[1]
+          Left = 18
+          Height = 21
+          Top = 32
+          Width = 964
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditNomeCartorio
+          EditLabel.AnchorSideRight.Control = EditNomeCartorio
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditNomeCartorio
+          EditLabel.Left = 18
+          EditLabel.Height = 13
+          EditLabel.Top = 16
+          EditLabel.Width = 964
+          EditLabel.Caption = 'Nome Cartório:'
+          EditLabel.ParentColor = False
+          TabOrder = 0
+        end
+        object EditDataRegistro: TLabeledDateEdit[2]
+          Left = 18
+          Height = 21
+          Top = 76
+          Width = 121
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 1
+          Text = '  /  /    '
+          DateEditLabel.Left = 18
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 60
+          DateEditLabel.Width = 70
+          DateEditLabel.Caption = 'Data Registro:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditNumero: TLabeledCalcEdit[3]
+          Left = 145
+          Height = 21
+          Top = 76
+          Width = 89
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 2
+          Value = 0
+          CalcEditLabel.Left = 145
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 60
+          CalcEditLabel.Width = 41
+          CalcEditLabel.Caption = 'Número:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditFolha: TLabeledCalcEdit[4]
+          Left = 240
+          Height = 21
+          Top = 76
+          Width = 89
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 3
+          Value = 0
+          CalcEditLabel.Left = 240
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 60
+          CalcEditLabel.Width = 30
+          CalcEditLabel.Caption = 'Folha:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditLivro: TLabeledCalcEdit[5]
+          Left = 335
+          Height = 21
+          Top = 76
+          Width = 89
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 4
+          Value = 0
+          CalcEditLabel.Left = 335
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 60
+          CalcEditLabel.Width = 27
+          CalcEditLabel.Caption = 'Livro:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditNire: TLabeledEdit[6]
+          Left = 430
+          Height = 21
+          Top = 76
+          Width = 552
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditNire
+          EditLabel.AnchorSideRight.Control = EditNire
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditNire
+          EditLabel.Left = 430
+          EditLabel.Height = 13
+          EditLabel.Top = 60
+          EditLabel.Width = 552
+          EditLabel.Caption = 'NIRE (Número de Identificação do Registro de Empresas):'
+          EditLabel.ParentColor = False
+          TabOrder = 5
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+end

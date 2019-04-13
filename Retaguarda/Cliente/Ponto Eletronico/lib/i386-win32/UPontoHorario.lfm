@@ -1,0 +1,387 @@
+inherited FPontoHorario: TFPontoHorario
+  Tag = 1
+  Left = 338
+  Top = 203
+  Caption = 'Ponto Horários'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 953
+        ClientWidth = 953
+        inherited PanelFiltroRapido: TPanel
+          Width = 953
+          ClientWidth = 953
+          inherited BotaoConsultar: TSpeedButton
+            Left = 819
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 652
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 953
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 132
+          Top = 9
+          Width = 982
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditCargaHoraria: TLabeledMaskEdit[1]
+          Left = 705
+          Height = 21
+          Top = 30
+          Width = 83
+          Anchors = [akTop, akRight]
+          CharCase = ecNormal
+          MaxLength = 8
+          TabOrder = 4
+          EditMask = '##:##:##;1;_'
+          Text = '  :  :  '
+          SpaceChar = '_'
+          MaskEditLabel.Left = 705
+          MaskEditLabel.Height = 13
+          MaskEditLabel.Top = 14
+          MaskEditLabel.Width = 71
+          MaskEditLabel.Caption = 'Carga Horária:'
+          MaskEditLabel.ParentColor = False
+        end
+        object ComboboxTipo: TLabeledComboBox[2]
+          Left = 16
+          Height = 21
+          Top = 30
+          Width = 86
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            'F - Fixo'
+            'D - Diário'
+            'S - Semanal'
+            'M - Mensal'
+          )
+          Style = csDropDownList
+          TabOrder = 0
+          Text = 'F - Fixo'
+          ComboBoxLabel.Left = 16
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 14
+          ComboBoxLabel.Width = 24
+          ComboBoxLabel.Caption = 'Tipo:'
+          ComboBoxLabel.ParentColor = False
+        end
+        object EditCodigo: TLabeledEdit[3]
+          Left = 108
+          Height = 21
+          Top = 30
+          Width = 41
+          EditLabel.AnchorSideLeft.Control = EditCodigo
+          EditLabel.AnchorSideRight.Control = EditCodigo
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditCodigo
+          EditLabel.Left = 108
+          EditLabel.Height = 13
+          EditLabel.Top = 14
+          EditLabel.Width = 41
+          EditLabel.Caption = 'Código:'
+          EditLabel.ParentColor = False
+          TabOrder = 1
+        end
+        object EditNome: TLabeledEdit[4]
+          Left = 155
+          Height = 21
+          Top = 30
+          Width = 425
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditNome
+          EditLabel.AnchorSideRight.Control = EditNome
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditNome
+          EditLabel.Left = 155
+          EditLabel.Height = 13
+          EditLabel.Top = 14
+          EditLabel.Width = 425
+          EditLabel.Caption = 'Nome:'
+          EditLabel.ParentColor = False
+          TabOrder = 2
+        end
+        object ComboboxTipoTrabalho: TLabeledComboBox[5]
+          Left = 586
+          Height = 21
+          Top = 30
+          Width = 113
+          Anchors = [akTop, akRight]
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            'N - Normal'
+            'C - Compensação'
+            'F - Folga'
+          )
+          Style = csDropDownList
+          TabOrder = 3
+          Text = 'N - Normal'
+          ComboBoxLabel.Left = 586
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 14
+          ComboBoxLabel.Width = 69
+          ComboBoxLabel.Caption = 'Tipo Trabalho:'
+          ComboBoxLabel.ParentColor = False
+        end
+        object GroupBoxRegistros: TGroupBox[6]
+          Left = 16
+          Height = 65
+          Top = 64
+          Width = 789
+          Caption = 'Registros'
+          ClientHeight = 47
+          ClientWidth = 785
+          TabOrder = 7
+          object EditEntrada01: TLabeledMaskEdit
+            Left = 6
+            Height = 21
+            Top = 19
+            Width = 72
+            CharCase = ecNormal
+            MaxLength = 8
+            TabOrder = 0
+            EditMask = '##:##:##;1;_'
+            Text = '  :  :  '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 6
+            MaskEditLabel.Height = 13
+            MaskEditLabel.Top = 3
+            MaskEditLabel.Width = 57
+            MaskEditLabel.Caption = 'Entrada 01:'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditEntrada02: TLabeledMaskEdit
+            Left = 84
+            Height = 21
+            Top = 19
+            Width = 72
+            CharCase = ecNormal
+            MaxLength = 8
+            TabOrder = 1
+            EditMask = '##:##:##;1;_'
+            Text = '  :  :  '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 84
+            MaskEditLabel.Height = 13
+            MaskEditLabel.Top = 3
+            MaskEditLabel.Width = 57
+            MaskEditLabel.Caption = 'Entrada 02:'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditEntrada03: TLabeledMaskEdit
+            Left = 162
+            Height = 21
+            Top = 19
+            Width = 72
+            CharCase = ecNormal
+            MaxLength = 8
+            TabOrder = 2
+            EditMask = '##:##:##;1;_'
+            Text = '  :  :  '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 162
+            MaskEditLabel.Height = 13
+            MaskEditLabel.Top = 3
+            MaskEditLabel.Width = 57
+            MaskEditLabel.Caption = 'Entrada 03:'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditEntrada04: TLabeledMaskEdit
+            Left = 240
+            Height = 21
+            Top = 19
+            Width = 72
+            CharCase = ecNormal
+            MaxLength = 8
+            TabOrder = 3
+            EditMask = '##:##:##;1;_'
+            Text = '  :  :  '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 240
+            MaskEditLabel.Height = 13
+            MaskEditLabel.Top = 3
+            MaskEditLabel.Width = 57
+            MaskEditLabel.Caption = 'Entrada 04:'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditEntrada05: TLabeledMaskEdit
+            Left = 318
+            Height = 21
+            Top = 19
+            Width = 72
+            CharCase = ecNormal
+            MaxLength = 8
+            TabOrder = 4
+            EditMask = '##:##:##;1;_'
+            Text = '  :  :  '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 318
+            MaskEditLabel.Height = 13
+            MaskEditLabel.Top = 3
+            MaskEditLabel.Width = 57
+            MaskEditLabel.Caption = 'Entrada 05:'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditSaida01: TLabeledMaskEdit
+            Left = 396
+            Height = 21
+            Top = 19
+            Width = 72
+            CharCase = ecNormal
+            MaxLength = 8
+            TabOrder = 5
+            EditMask = '##:##:##;1;_'
+            Text = '  :  :  '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 396
+            MaskEditLabel.Height = 13
+            MaskEditLabel.Top = 3
+            MaskEditLabel.Width = 56
+            MaskEditLabel.Caption = 'EditSaida01'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditSaida02: TLabeledMaskEdit
+            Left = 474
+            Height = 21
+            Top = 19
+            Width = 72
+            CharCase = ecNormal
+            MaxLength = 8
+            TabOrder = 6
+            EditMask = '##:##:##;1;_'
+            Text = '  :  :  '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 474
+            MaskEditLabel.Height = 13
+            MaskEditLabel.Top = 3
+            MaskEditLabel.Width = 56
+            MaskEditLabel.Caption = 'EditSaida02'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditSaida03: TLabeledMaskEdit
+            Left = 552
+            Height = 21
+            Top = 19
+            Width = 72
+            CharCase = ecNormal
+            MaxLength = 8
+            TabOrder = 7
+            EditMask = '##:##:##;1;_'
+            Text = '  :  :  '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 552
+            MaskEditLabel.Height = 13
+            MaskEditLabel.Top = 3
+            MaskEditLabel.Width = 56
+            MaskEditLabel.Caption = 'EditSaida03'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditSaida04: TLabeledMaskEdit
+            Left = 630
+            Height = 21
+            Top = 19
+            Width = 72
+            CharCase = ecNormal
+            MaxLength = 8
+            TabOrder = 8
+            EditMask = '##:##:##;1;_'
+            Text = '  :  :  '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 630
+            MaskEditLabel.Height = 13
+            MaskEditLabel.Top = 3
+            MaskEditLabel.Width = 56
+            MaskEditLabel.Caption = 'EditSaida04'
+            MaskEditLabel.ParentColor = False
+          end
+          object EditSaida05: TLabeledMaskEdit
+            Left = 708
+            Height = 21
+            Top = 19
+            Width = 72
+            CharCase = ecNormal
+            MaxLength = 8
+            TabOrder = 9
+            EditMask = '##:##:##;1;_'
+            Text = '  :  :  '
+            SpaceChar = '_'
+            MaskEditLabel.Left = 708
+            MaskEditLabel.Height = 13
+            MaskEditLabel.Top = 3
+            MaskEditLabel.Width = 56
+            MaskEditLabel.Caption = 'EditSaida05'
+            MaskEditLabel.ParentColor = False
+          end
+        end
+        object EditHoraInicioJornada: TLabeledMaskEdit[7]
+          Left = 794
+          Height = 21
+          Top = 30
+          Width = 90
+          Anchors = [akTop, akRight]
+          CharCase = ecNormal
+          MaxLength = 8
+          TabOrder = 5
+          EditMask = '##:##:##;1;_'
+          Text = '  :  :  '
+          SpaceChar = '_'
+          MaskEditLabel.Left = 794
+          MaskEditLabel.Height = 13
+          MaskEditLabel.Top = 14
+          MaskEditLabel.Width = 71
+          MaskEditLabel.Caption = 'Início Jornada:'
+          MaskEditLabel.ParentColor = False
+        end
+        object EditHoraFimJornada: TLabeledMaskEdit[8]
+          Left = 890
+          Height = 21
+          Top = 30
+          Width = 90
+          Anchors = [akTop, akRight]
+          CharCase = ecNormal
+          MaxLength = 8
+          TabOrder = 6
+          EditMask = '##:##:##;1;_'
+          Text = '  :  :  '
+          SpaceChar = '_'
+          MaskEditLabel.Left = 890
+          MaskEditLabel.Height = 13
+          MaskEditLabel.Top = 14
+          MaskEditLabel.Width = 62
+          MaskEditLabel.Caption = 'Fim Jornada:'
+          MaskEditLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+end

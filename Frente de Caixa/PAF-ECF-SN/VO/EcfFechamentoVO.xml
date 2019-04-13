@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="EcfFechamentoVO" table="ECF_FECHAMENTO" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">ECF_FECHAMENTO</param>
+      </generator>
+    </id>
+
+    <property name="IdEcfMovimento" column="ID_ECF_MOVIMENTO" />
+    <property name="TipoPagamento" column="TIPO_PAGAMENTO" />
+    <property name="Valor" column="VALOR" />
+
+  </class>
+</t2ti-orm-mapping>

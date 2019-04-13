@@ -1,0 +1,171 @@
+object FPontoRegistroIncluidoAFD: TFPontoRegistroIncluidoAFD
+  Left = 325
+  Height = 85
+  Top = 396
+  Width = 800
+  BorderStyle = bsDialog
+  Caption = 'Dados do registro incluído'
+  ClientHeight = 85
+  ClientWidth = 800
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  KeyPreview = True
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  Position = poScreenCenter
+  LCLVersion = '1.2.0.3'
+  object PanelRegistroIncluido: TPanel
+    Left = 0
+    Height = 54
+    Top = 0
+    Width = 800
+    Align = alClient
+    ClientHeight = 54
+    ClientWidth = 800
+    TabOrder = 0
+    object EditDataMarcacao: TLabeledDateEdit
+      Left = 10
+      Height = 21
+      Top = 24
+      Width = 120
+      ButtonWidth = 0
+      CharCase = ecNormal
+      DialogTitle = 'Select a Date'
+      MaxLength = 10
+      NumGlyphs = 2
+      PopupColor = clWindow
+      TabOrder = 0
+      Text = '  /  /    '
+      DateEditLabel.Left = 10
+      DateEditLabel.Height = 13
+      DateEditLabel.Top = 8
+      DateEditLabel.Width = 76
+      DateEditLabel.Caption = 'Data Marcação:'
+      DateEditLabel.ParentColor = False
+    end
+    object EditHoraMarcacao: TLabeledMaskEdit
+      Left = 137
+      Height = 21
+      Top = 24
+      Width = 92
+      CharCase = ecNormal
+      MaxLength = 5
+      TabOrder = 1
+      EditMask = '##:##;0;_'
+      SpaceChar = '_'
+      MaskEditLabel.Left = 137
+      MaskEditLabel.Height = 13
+      MaskEditLabel.Top = 8
+      MaskEditLabel.Width = 87
+      MaskEditLabel.Caption = 'EditHoraMarcacao'
+      MaskEditLabel.ParentColor = False
+    end
+    object EditJustificativa: TLabeledEdit
+      Left = 386
+      Height = 21
+      Top = 24
+      Width = 404
+      Anchors = [akTop, akLeft, akRight]
+      EditLabel.AnchorSideLeft.Control = EditJustificativa
+      EditLabel.AnchorSideRight.Control = EditJustificativa
+      EditLabel.AnchorSideRight.Side = asrBottom
+      EditLabel.AnchorSideBottom.Control = EditJustificativa
+      EditLabel.Left = 386
+      EditLabel.Height = 13
+      EditLabel.Top = 8
+      EditLabel.Width = 404
+      EditLabel.Caption = 'Justificativa:'
+      EditLabel.ParentColor = False
+      TabOrder = 3
+    end
+    object ComboBoxTipoMarcacao: TLabeledComboBox
+      Left = 235
+      Height = 21
+      Top = 24
+      Width = 145
+      ItemHeight = 13
+      ItemIndex = 0
+      Items.Strings = (
+        '1ª Entrada'
+        '1ª Saida'
+        '2ª Entrada'
+        '2ª Saida'
+        '3ª Entrada'
+        '3ª Saida'
+        '4ª Entrada'
+        '4ª Saida'
+        '5ª Entrada'
+        '5ª Saida'
+      )
+      Style = csDropDownList
+      TabOrder = 2
+      Text = '1ª Entrada'
+      ComboBoxLabel.Left = 235
+      ComboBoxLabel.Height = 13
+      ComboBoxLabel.Top = 8
+      ComboBoxLabel.Width = 73
+      ComboBoxLabel.Caption = 'Tipo Marcação:'
+      ComboBoxLabel.ParentColor = False
+    end
+  end
+  object ActionToolBar1: TToolPanel
+    Left = 0
+    Height = 31
+    Top = 54
+    Width = 800
+    Items = <    
+      item
+        Action = ActionSalvar
+        Visible = True
+        Left = 684
+        Height = 21
+        Top = 5
+        Width = 111
+        ShowCaption = True
+      end    
+      item
+        Action = ActionCancelar
+        Visible = True
+        Left = 581
+        Height = 21
+        Top = 5
+        Width = 103
+        ShowCaption = True
+      end>
+    ImageList = FDataModule.ImagensCadastros
+    ToolBarStyle = tbsWindowsXP
+    Options = [tpFlatBtns]
+    ButtonAllign = tbaRignt
+    Align = alBottom
+    BorderWidth = 4
+    ClientHeight = 31
+    ClientWidth = 800
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    ParentFont = False
+    TabOrder = 1
+  end
+  object ActionManagerLocal: TActionList
+    Images = FDataModule.ImagensCadastros
+    left = 528
+    top = 40
+    object ActionCancelar: TAction
+      Category = 'Opções'
+      Caption = 'Cancelar [F11]'
+      ImageIndex = 2
+      OnExecute = ActionCancelarExecute
+      ShortCut = 122
+    end
+    object ActionSalvar: TAction
+      Category = 'Opções'
+      Caption = 'Confirmar [F12]'
+      ImageIndex = 20
+      OnExecute = ActionSalvarExecute
+      ShortCut = 123
+    end
+  end
+end

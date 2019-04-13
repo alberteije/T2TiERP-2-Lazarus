@@ -1,0 +1,268 @@
+inherited FContabilLancamentoOrcado: TFContabilLancamentoOrcado
+  Tag = 1
+  Left = 318
+  Caption = 'Lançamento Orçado'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 348
+        Width = 953
+        ClientHeight = 348
+        ClientWidth = 953
+        inherited PanelFiltroRapido: TPanel
+          Top = 294
+          Width = 953
+          ClientWidth = 953
+          inherited BotaoConsultar: TSpeedButton
+            Left = 819
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 652
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 296
+          Width = 953
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 54
+          Top = 9
+          Width = 982
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object PageControlItens: TPageControl[1]
+          Left = 8
+          Height = 343
+          Top = 73
+          Width = 982
+          ActivePage = tsMeses
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          TabIndex = 0
+          TabOrder = 0
+          object tsMeses: TTabSheet
+            Caption = 'Meses'
+            ClientHeight = 317
+            ClientWidth = 974
+            ImageIndex = 1
+            object PanelContas: TPanel
+              Left = 0
+              Height = 317
+              Top = 0
+              Width = 974
+              Align = alClient
+              BevelOuter = bvNone
+              ClientHeight = 317
+              ClientWidth = 974
+              TabOrder = 0
+              object GridMeses: TRxDBGrid
+                Left = 0
+                Height = 317
+                Top = 0
+                Width = 974
+                TitleButtons = False
+                AutoSort = True
+                Columns = <                
+                  item
+                    ReadOnly = True
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Mês'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'MES'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Valor'
+                    Title.Orientation = toHorizontal
+                    Width = 200
+                    FieldName = 'VALOR'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end>
+                KeyStrokes = <                
+                  item
+                    Command = rxgcShowFindDlg
+                    ShortCut = 16454
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowColumnsDlg
+                    ShortCut = 16471
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowFilterDlg
+                    ShortCut = 16468
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowSortDlg
+                    ShortCut = 16467
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowQuickFilter
+                    ShortCut = 16465
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcHideQuickFilter
+                    ShortCut = 16456
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcSelectAll
+                    ShortCut = 16449
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcDeSelectAll
+                    ShortCut = 16429
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcInvertSelection
+                    ShortCut = 16426
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcOptimizeColumnsWidth
+                    ShortCut = 16427
+                    Enabled = True
+                  end>
+                OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                Align = alClient
+                Color = clWindow
+                DrawFullLine = False
+                FocusColor = clRed
+                SelectedColor = clHighlight
+                GridLineStyle = psSolid
+                DataSource = DSMeses
+                Options = [dgEditing, dgTitles, dgIndicator, dgColLines, dgRowLines, dgTabs, dgCancelOnExit]
+                ParentColor = False
+                TabOrder = 0
+                TitleFont.Color = clWindowText
+                TitleFont.Height = -11
+                TitleFont.Name = 'Tahoma'
+              end
+            end
+          end
+        end
+        object EditIdContabilConta: TLabeledCalcEdit[2]
+          Left = 16
+          Height = 21
+          Top = 30
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 1
+          Value = 0
+          OnKeyUp = EditIdContabilContaKeyUp
+          CalcEditLabel.Left = 16
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 14
+          CalcEditLabel.Width = 98
+          CalcEditLabel.Caption = 'Conta Contábil [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditContabilConta: TLabeledEdit[3]
+          Left = 77
+          Height = 21
+          Top = 30
+          Width = 850
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditContabilConta
+          EditLabel.AnchorSideRight.Control = EditContabilConta
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditContabilConta
+          EditLabel.Left = 77
+          EditLabel.Height = 13
+          EditLabel.Top = 14
+          EditLabel.Width = 850
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 2
+          TabStop = False
+        end
+        object EditAno: TLabeledMaskEdit[4]
+          Left = 933
+          Height = 21
+          Top = 30
+          Width = 43
+          Anchors = [akTop, akRight]
+          CharCase = ecNormal
+          MaxLength = 4
+          TabOrder = 3
+          EditMask = '####;0;_'
+          SpaceChar = '_'
+          MaskEditLabel.Left = 933
+          MaskEditLabel.Height = 13
+          MaskEditLabel.Top = 14
+          MaskEditLabel.Width = 37
+          MaskEditLabel.Caption = 'EditAno'
+          MaskEditLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+  object DSMeses: TDatasource[5]
+    DataSet = CDSMeses
+    left = 880
+    top = 264
+  end
+  object CDSMeses: TBufDataset[6]
+    FieldDefs = <    
+      item
+        Name = 'MES'
+        DataType = ftString
+        Precision = 0
+        Size = 30
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftFMTBcd
+        Precision = 18
+        Size = 6
+      end>
+    left = 662
+    top = 271
+  end
+end

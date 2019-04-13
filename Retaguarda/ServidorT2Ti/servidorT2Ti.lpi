@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <Flags>
+        <SaveOnlyProjectUnits Value="True"/>
+        <MainUnitHasCreateFormStatements Value="False"/>
+        <Runnable Value="False"/>
+      </Flags>
+      <MainUnit Value="0"/>
+      <Title Value="servidorT2Ti"/>
+      <UseAppBundle Value="False"/>
+      <ResourceType Value="res"/>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1" Active="Default">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="5">
+      <Item1>
+        <PackageName Value="ACBr_Sintegra"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="ACBr_SPED"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="FCL"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="zcore"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="BrookRT"/>
+      </Item5>
+    </RequiredPackages>
+    <Units Count="61">
+      <Unit0>
+        <Filename Value="servidorT2Ti.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="servidorT2Ti"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="107" Y="6"/>
+        <UsageCount Value="92"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="produto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Produto"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="3" Y="18"/>
+        <UsageCount Value="92"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="brokers.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Brokers"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="22" Y="5"/>
+        <UsageCount Value="92"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="DavCabecalho.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DavCabecalho"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2"/>
+        <CursorPos X="56" Y="32"/>
+        <UsageCount Value="92"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="DavDetalhe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DavDetalhe"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="96" Y="37"/>
+        <UsageCount Value="92"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="Contador.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Contador"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="11"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="92"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="Sintegra.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Sintegra"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="86"/>
+        <CursorPos X="7" Y="100"/>
+        <UsageCount Value="92"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="SpedFiscal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SpedFiscal"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="890"/>
+        <CursorPos X="45" Y="903"/>
+        <UsageCount Value="92"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\Comum\Constantes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Constantes"/>
+        <UsageCount Value="92"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\Comum\T2TiORM.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="T2TiORM"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="131"/>
+        <CursorPos X="47" Y="98"/>
+        <UsageCount Value="92"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="..\Comum\VO\VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="VO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="27"/>
+        <CursorPos X="44" Y="43"/>
+        <UsageCount Value="91"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="udatamodule.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FDataModule"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="UDataModule"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="47" Y="19"/>
+        <UsageCount Value="90"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="..\Comum\VO\ProdutoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ProdutoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="94"/>
+        <CursorPos X="4" Y="98"/>
+        <UsageCount Value="89"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="..\Comum\VO\DavCabecalhoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DavCabecalhoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="85"/>
+        <CursorPos X="1" Y="58"/>
+        <UsageCount Value="89"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="..\Comum\VO\DavDetalheVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DavDetalheVO"/>
+        <UsageCount Value="89"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="..\Comum\VO\EmpresaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EmpresaVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="135"/>
+        <CursorPos X="1" Y="159"/>
+        <UsageCount Value="89"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="..\Comum\VO\UsuarioVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UsuarioVO"/>
+        <UsageCount Value="89"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="..\Comum\VO\ViewSpedNfeItemVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewSpedNfeItemVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="38"/>
+        <CursorPos X="26" Y="73"/>
+        <UsageCount Value="89"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="..\Comum\VO\ContadorVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ContadorVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="63"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="89"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="..\Comum\VO\ViewSpedNfeEmitenteVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewSpedNfeEmitenteVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="47"/>
+        <CursorPos X="30" Y="73"/>
+        <UsageCount Value="82"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="..\Comum\VO\EcfImpressoraVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfImpressoraVO"/>
+        <UsageCount Value="82"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="..\Comum\VO\EcfNotaFiscalCabecalhoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfNotaFiscalCabecalhoVO"/>
+        <UsageCount Value="82"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="..\Comum\VO\EcfR02VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfR02VO"/>
+        <UsageCount Value="82"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="..\Comum\VO\EcfR03VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfR03VO"/>
+        <UsageCount Value="82"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="..\Comum\VO\EcfVendaCabecalhoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfVendaCabecalhoVO"/>
+        <UsageCount Value="82"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="..\Comum\VO\EcfVendaDetalheVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfVendaDetalheVO"/>
+        <UsageCount Value="82"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="..\Comum\VO\FiscalApuracaoIcmsVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FiscalApuracaoIcmsVO"/>
+        <UsageCount Value="82"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="..\Comum\VO\NfeCabecalhoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeCabecalhoVO"/>
+        <UsageCount Value="82"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="..\Comum\VO\NfeTransporteVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeTransporteVO"/>
+        <UsageCount Value="82"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="..\Comum\VO\ProdutoAlteracaoItemVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ProdutoAlteracaoItemVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="46"/>
+        <CursorPos X="31" Y="65"/>
+        <UsageCount Value="82"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="..\Comum\VO\TributOperacaoFiscalVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributOperacaoFiscalVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="56"/>
+        <CursorPos X="31" Y="65"/>
+        <UsageCount Value="82"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="..\Comum\VO\UnidadeConversaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnidadeConversaoVO"/>
+        <UsageCount Value="82"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="..\Comum\VO\UnidadeProdutoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnidadeProdutoVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="52"/>
+        <CursorPos X="25" Y="61"/>
+        <UsageCount Value="82"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="..\Comum\VO\ViewSpedC190VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewSpedC190VO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="40"/>
+        <CursorPos X="1" Y="63"/>
+        <UsageCount Value="82"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="..\Comum\VO\ViewSpedC300VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewSpedC300VO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="31"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="82"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="..\Comum\VO\ViewSpedC321VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewSpedC321VO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="43"/>
+        <CursorPos X="1" Y="49"/>
+        <UsageCount Value="82"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="..\Comum\VO\ViewSpedC370VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewSpedC370VO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="35"/>
+        <CursorPos X="1" Y="49"/>
+        <UsageCount Value="82"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="..\Comum\VO\ViewSpedC390VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewSpedC390VO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="28"/>
+        <CursorPos X="1" Y="60"/>
+        <UsageCount Value="82"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="..\Comum\VO\ViewSpedC425VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewSpedC425VO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="34"/>
+        <CursorPos X="1" Y="60"/>
+        <UsageCount Value="82"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="..\Comum\VO\ViewSpedC490VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewSpedC490VO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="32"/>
+        <CursorPos X="1" Y="59"/>
+        <UsageCount Value="82"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="..\Comum\VO\ViewSpedNfeDestinatarioVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewSpedNfeDestinatarioVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="47"/>
+        <CursorPos X="34" Y="73"/>
+        <UsageCount Value="82"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="..\Comum\VO\ViewSpedNfeDetalheVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewSpedNfeDetalheVO"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="130"/>
+        <CursorPos X="1" Y="130"/>
+        <UsageCount Value="82"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="Biblioteca.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Biblioteca"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="31"/>
+        <CursorPos X="26" Y="43"/>
+        <UsageCount Value="80"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="..\Comum\VO\EmpresaEnderecoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EmpresaEnderecoVO"/>
+        <UsageCount Value="80"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="..\Comum\VO\ViewSintegra61rVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewSintegra61rVO"/>
+        <UsageCount Value="77"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="..\Comum\VO\ViewSintegra60rVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewSintegra60rVO"/>
+        <UsageCount Value="77"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="..\Comum\VO\ViewSintegra60dVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ViewSintegra60dVO"/>
+        <UsageCount Value="77"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="..\Comum\VO\EcfSintegra60aVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfSintegra60aVO"/>
+        <UsageCount Value="77"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="..\Comum\VO\EcfSintegra60mVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EcfSintegra60mVO"/>
+        <UsageCount Value="77"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="SpedContribuicoes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SpedContribuicoes"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="54"/>
+        <CursorPos X="100" Y="855"/>
+        <UsageCount Value="73"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="Banco.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Banco"/>
+        <UsageCount Value="72"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="TributCofinsCodApuracao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributCofinsCodApuracao"/>
+        <UsageCount Value="21"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="TributConfiguraOfGt.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributConfiguraOfGt"/>
+        <UsageCount Value="21"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="TributGrupoTributario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributGrupoTributario"/>
+        <UsageCount Value="21"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="TributIcmsCustomCab.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributIcmsCustomCab"/>
+        <UsageCount Value="21"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="TributIcmsCustomDet.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributIcmsCustomDet"/>
+        <UsageCount Value="21"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="TributIcmsUf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributIcmsUf"/>
+        <UsageCount Value="21"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="TributIpiDipi.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributIpiDipi"/>
+        <UsageCount Value="21"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="TributIss.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributIss"/>
+        <UsageCount Value="21"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="TributOperacaoFiscal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributOperacaoFiscal"/>
+        <UsageCount Value="21"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="TributPisCodApuracao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TributPisCodApuracao"/>
+        <UsageCount Value="21"/>
+      </Unit60>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="C:\Program Files (x86)\EasyPHP-DevServer-14.1VC11\binaries\apache\cgi-bin\servidorT2Ti.cgi" ApplyConventions="False"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="..\Comum;..\Comum\VO"/>
+    </SearchPaths>
+    <Other>
+      <CompilerMessages>
+        <MsgFileName Value=""/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+  <EditorMacros Count="0"/>
+</CONFIG>

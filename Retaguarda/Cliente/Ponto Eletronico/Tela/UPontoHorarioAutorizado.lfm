@@ -1,0 +1,242 @@
+inherited FPontoHorarioAutorizado: TFPontoHorarioAutorizado
+  Tag = 1
+  Left = 318
+  Top = 203
+  Caption = 'Ponto Horário Autorizado'
+  ClientWidth = 961
+  PixelsPerInch = 96
+  inherited PageControl: TPageControl
+    Width = 961
+    ActivePage = PaginaEdits
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 953
+        inherited Grid: TRxDbGrid
+          Width = 953
+        end
+        inherited PanelFiltroRapido: TPanel
+          Width = 953
+          inherited BotaoConsultar: TSpeedButton
+            Left = 819
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 652
+          end
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      inherited PanelEdits: TPanel
+        Width = 953
+        object BevelEdits: TBevel
+          Left = 8
+          Top = 9
+          Width = 935
+          Height = 166
+          Anchors = [akLeft, akTop, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditCargaHoraria: TLabeledMaskEdit
+          Left = 235
+          Top = 74
+          Width = 83
+          Height = 21
+          MaxLength = 8
+          TabOrder = 4
+          Text = '  :::::::: : :'
+          EditMask = '##:##:##;1;_'
+        end
+        object EditHoraFechamentoDia: TLabeledMaskEdit
+          Left = 324
+          Top = 74
+          Width = 90
+          Height = 21
+          MaxLength = 8
+          TabOrder = 5
+          Text = '  :::::::: : :'
+          EditMask = '##:##:##;1;_'
+        end
+        object ComboboxTipo: TLabeledComboBox
+          Left = 143
+          Top = 74
+          Width = 86
+          Height = 21
+          Style = csDropDownList
+          ItemIndex = 0
+          TabOrder = 3
+          Text = 'F - Fixo'
+          Items.Strings = (
+            'F - Fixo'
+            'D - Diário'
+            'S - Semanal'
+            'M - Mensal')
+          ComboBoxLabel.Width = 24
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Caption = 'Tipo:'
+        end
+        object GroupBoxRegistros: TGroupBox
+          Left = 16
+          Top = 101
+          Width = 789
+          Height = 65
+          Caption = 'Registros'
+          TabOrder = 6
+          object EditEntrada01: TLabeledMaskEdit
+            Left = 6
+            Top = 19
+            Width = 72
+            Height = 21
+            MaxLength = 8
+            TabOrder = 0
+            Text = '  :::::::: : :'
+            EditMask = '##:##:##;1;_'
+          end
+          object EditEntrada02: TLabeledMaskEdit
+            Left = 84
+            Top = 19
+            Width = 72
+            Height = 21
+            MaxLength = 8
+            TabOrder = 1
+            Text = '  :::::::: : :'
+            EditMask = '##:##:##;1;_'
+          end
+          object EditEntrada03: TLabeledMaskEdit
+            Left = 162
+            Top = 19
+            Width = 72
+            Height = 21
+            MaxLength = 8
+            TabOrder = 2
+            Text = '  :::::::: : :'
+            EditMask = '##:##:##;1;_'
+          end
+          object EditEntrada04: TLabeledMaskEdit
+            Left = 240
+            Top = 19
+            Width = 72
+            Height = 21
+            MaxLength = 8
+            TabOrder = 3
+            Text = '  :::::::: : :'
+            EditMask = '##:##:##;1;_'
+          end
+          object EditEntrada05: TLabeledMaskEdit
+            Left = 318
+            Top = 19
+            Width = 72
+            Height = 21
+            MaxLength = 8
+            TabOrder = 4
+            Text = '  :::::::: : :'
+            EditMask = '##:##:##;1;_'
+          end
+          object EditSaida01: TLabeledMaskEdit
+            Left = 396
+            Top = 19
+            Width = 72
+            Height = 21
+            MaxLength = 8
+            TabOrder = 5
+            Text = '  :::::::: : :'
+            EditMask = '##:##:##;1;_'
+          end
+          object EditSaida02: TLabeledMaskEdit
+            Left = 474
+            Top = 19
+            Width = 72
+            Height = 21
+            MaxLength = 8
+            TabOrder = 6
+            Text = '  :::::::: : :'
+            EditMask = '##:##:##;1;_'
+          end
+          object EditSaida03: TLabeledMaskEdit
+            Left = 552
+            Top = 19
+            Width = 72
+            Height = 21
+            MaxLength = 8
+            TabOrder = 7
+            Text = '  :::::::: : :'
+            EditMask = '##:##:##;1;_'
+          end
+          object EditSaida04: TLabeledMaskEdit
+            Left = 630
+            Top = 19
+            Width = 72
+            Height = 21
+            MaxLength = 8
+            TabOrder = 8
+            Text = '  :::::::: : :'
+            EditMask = '##:##:##;1;_'
+          end
+          object EditSaida05: TLabeledMaskEdit
+            Left = 708
+            Top = 19
+            Width = 72
+            Height = 21
+            MaxLength = 8
+            TabOrder = 9
+            Text = '  :::::::: : :'
+            EditMask = '##:##:##;1;_'
+          end
+        end
+        object EditIdColaborador: TLabeledCalcEdit
+          Left = 16
+          Top = 33
+          Width = 61
+          Height = 21
+          TabOrder = 0
+          OnKeyUp = EditIdColaboradorKeyUp
+          CalcEditLabel.Width = 86
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Caption = 'Colaborador [F1]:'
+        end
+        object EditColaborador: TLabeledEdit
+          Left = 77
+          Top = 33
+          Width = 855
+          Height = 21
+          TabStop = False
+          Anchors = [akLeft, akTop, akRight]
+          Color = clInfoBk
+          EditLabel.Width = 6
+          EditLabel.Height = 13
+          EditLabel.Caption = '  '
+          ReadOnly = True
+          TabOrder = 1
+        end
+        object EditDataHorario: TLabeledDateEdit
+          Left = 16
+          Top = 74
+          Width = 121
+          Height = 21
+          TabOrder = 2
+          DateEditLabel.Width = 27
+          DateEditLabel.Height = 13
+          DateEditLabel.Caption = 'Data:'
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 961
+    inherited BotaoSair: TSpeedButton
+      Left = 855
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 755
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 645
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 745
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 545
+    end
+  end
+end
+

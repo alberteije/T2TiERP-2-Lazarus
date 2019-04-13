@@ -1,0 +1,113 @@
+inherited FTributGrupoTributario: TFTributGrupoTributario
+  Tag = 1
+  Left = 292
+  Top = 137
+  Caption = 'Grupo Tributário'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 315
+        Width = 884
+        ClientHeight = 315
+        ClientWidth = 884
+        inherited PanelFiltroRapido: TPanel
+          Top = 261
+          Width = 884
+          ClientWidth = 884
+          inherited BotaoConsultar: TSpeedButton
+            Left = 750
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 583
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 263
+          Width = 884
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 7
+          Height = 165
+          Top = 11
+          Width = 979
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditDescricao: TLabeledEdit[1]
+          Left = 14
+          Height = 21
+          Top = 35
+          Width = 781
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditDescricao
+          EditLabel.AnchorSideRight.Control = EditDescricao
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditDescricao
+          EditLabel.Left = 14
+          EditLabel.Height = 13
+          EditLabel.Top = 19
+          EditLabel.Width = 781
+          EditLabel.Caption = 'Descrição:'
+          EditLabel.ParentColor = False
+          MaxLength = 100
+          TabOrder = 0
+        end
+        object MemoObservacao: TLabeledMemo[2]
+          Left = 14
+          Height = 89
+          Top = 78
+          Width = 964
+          Anchors = [akTop, akLeft, akRight]
+          TabOrder = 2
+          MemoLabel.Left = 14
+          MemoLabel.Height = 13
+          MemoLabel.Top = 62
+          MemoLabel.Width = 62
+          MemoLabel.Caption = 'Observação:'
+          MemoLabel.ParentColor = False
+        end
+        object ComboboxOrigemMercadoria: TLabeledComboBox[3]
+          Left = 801
+          Height = 21
+          Top = 35
+          Width = 177
+          Anchors = [akTop, akRight]
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            '0 = Nacional'
+            '1 = Estrangeira - Importação direta'
+            '2 = Estrangeira - Adquirida no mercado interno'
+          )
+          Style = csDropDownList
+          TabOrder = 1
+          Text = '0 = Nacional'
+          ComboBoxLabel.Left = 801
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 19
+          ComboBoxLabel.Width = 94
+          ComboBoxLabel.Caption = 'Origem Mercadoria:'
+          ComboBoxLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+end

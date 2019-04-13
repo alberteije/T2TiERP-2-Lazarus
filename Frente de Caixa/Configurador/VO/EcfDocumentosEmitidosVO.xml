@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="EcfDocumentosEmitidosVO" table="ECF_DOCUMENTOS_EMITIDOS" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">ECF_DOCUMENTOS_EMITIDOS</param>
+      </generator>
+    </id>
+
+    <property name="IdEcfMovimento" column="ID_ECF_MOVIMENTO" />
+    <property name="DataEmissao" column="DATA_EMISSAO" />
+    <property name="HoraEmissao" column="HORA_EMISSAO" />
+    <property name="Tipo" column="TIPO" />
+    <property name="Coo" column="COO" />
+
+  </class>
+</t2ti-orm-mapping>

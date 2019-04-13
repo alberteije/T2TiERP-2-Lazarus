@@ -1,0 +1,159 @@
+inherited FCentroResultado: TFCentroResultado
+  Tag = 1
+  Left = 318
+  Top = 203
+  Caption = 'Plano Centro de Resultado'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 953
+        ClientWidth = 953
+        inherited PanelFiltroRapido: TPanel
+          Width = 953
+          ClientWidth = 953
+          inherited BotaoConsultar: TSpeedButton
+            Left = 819
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 652
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 953
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 102
+          Top = 9
+          Width = 979
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditDescricao: TLabeledEdit[1]
+          Left = 16
+          Height = 21
+          Top = 79
+          Width = 543
+          Constraints.MinWidth = 90
+          EditLabel.AnchorSideLeft.Control = EditDescricao
+          EditLabel.AnchorSideRight.Control = EditDescricao
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditDescricao
+          EditLabel.Left = 16
+          EditLabel.Height = 13
+          EditLabel.Top = 63
+          EditLabel.Width = 543
+          EditLabel.Caption = 'Descrição:'
+          EditLabel.ParentColor = False
+          TabOrder = 2
+        end
+        object EditClassificacao: TLabeledEdit[2]
+          Left = 565
+          Height = 21
+          Top = 79
+          Width = 334
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditClassificacao
+          EditLabel.AnchorSideRight.Control = EditClassificacao
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditClassificacao
+          EditLabel.Left = 565
+          EditLabel.Height = 13
+          EditLabel.Top = 63
+          EditLabel.Width = 334
+          EditLabel.Caption = 'Classificação:'
+          EditLabel.ParentColor = False
+          EditLabel.WordWrap = True
+          TabOrder = 3
+        end
+        object EditIdPlanoCentroResultado: TLabeledCalcEdit[3]
+          Left = 16
+          Height = 21
+          Top = 30
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 0
+          Value = 0
+          OnKeyUp = EditIdPlanoCentroResultadoKeyUp
+          CalcEditLabel.Left = 16
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 14
+          CalcEditLabel.Width = 140
+          CalcEditLabel.Caption = 'Plano Centro Resultado [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditPlanoCentroResultado: TLabeledEdit[4]
+          Left = 77
+          Height = 21
+          Top = 30
+          Width = 899
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditPlanoCentroResultado
+          EditLabel.AnchorSideRight.Control = EditPlanoCentroResultado
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditPlanoCentroResultado
+          EditLabel.Left = 77
+          EditLabel.Height = 13
+          EditLabel.Top = 14
+          EditLabel.Width = 899
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 1
+          TabStop = False
+        end
+        object ComboBoxSofreRateio: TLabeledComboBox[5]
+          Left = 905
+          Height = 21
+          Top = 79
+          Width = 71
+          Anchors = [akTop, akRight]
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            'Sim'
+            'Não'
+          )
+          Style = csDropDownList
+          TabOrder = 4
+          Text = 'Sim'
+          ComboBoxLabel.Left = 905
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 63
+          ComboBoxLabel.Width = 64
+          ComboBoxLabel.Caption = 'Sofre Rateio:'
+          ComboBoxLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+end

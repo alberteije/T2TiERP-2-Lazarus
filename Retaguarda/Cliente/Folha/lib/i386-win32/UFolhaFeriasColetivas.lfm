@@ -1,0 +1,197 @@
+inherited FFolhaFeriasColetivas: TFFolhaFeriasColetivas
+  Tag = 1
+  Left = 318
+  Top = 203
+  Caption = 'Férias Coletivas'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 953
+        ClientWidth = 953
+        inherited PanelFiltroRapido: TPanel
+          Width = 953
+          ClientWidth = 953
+          inherited BotaoConsultar: TSpeedButton
+            Left = 819
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 652
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 953
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 62
+          Top = 9
+          Width = 982
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditDiasGozo: TLabeledCalcEdit[1]
+          Left = 270
+          Height = 21
+          Top = 34
+          Width = 82
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 2
+          Value = 0
+          CalcEditLabel.Left = 270
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 18
+          CalcEditLabel.Width = 51
+          CalcEditLabel.Caption = 'Dias Gozo:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditDataInicio: TLabeledDateEdit[2]
+          Left = 16
+          Height = 21
+          Top = 34
+          Width = 121
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 0
+          Text = '  /  /    '
+          DateEditLabel.Left = 16
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 18
+          DateEditLabel.Width = 55
+          DateEditLabel.Caption = 'Data Início:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditDataFim: TLabeledDateEdit[3]
+          Left = 143
+          Height = 21
+          Top = 34
+          Width = 121
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 1
+          Text = '  /  /    '
+          DateEditLabel.Left = 143
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 18
+          DateEditLabel.Width = 46
+          DateEditLabel.Caption = 'Data Fim:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditAbonoPecuniarioInicio: TLabeledDateEdit[4]
+          Left = 358
+          Height = 21
+          Top = 34
+          Width = 121
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 3
+          Text = '  /  /    '
+          DateEditLabel.Left = 358
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 18
+          DateEditLabel.Width = 115
+          DateEditLabel.Caption = 'Abono Pecuniário Início:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditAbonoPecuniarioFim: TLabeledDateEdit[5]
+          Left = 485
+          Height = 21
+          Top = 34
+          Width = 121
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 4
+          Text = '  /  /    '
+          DateEditLabel.Left = 485
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 18
+          DateEditLabel.Width = 106
+          DateEditLabel.Caption = 'Abono Pecuniário Fim:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditDiasAbono: TLabeledCalcEdit[6]
+          Left = 612
+          Height = 21
+          Top = 34
+          Width = 82
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 5
+          Value = 0
+          CalcEditLabel.Left = 612
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 18
+          CalcEditLabel.Width = 58
+          CalcEditLabel.Caption = 'Dias Abono:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditDataPagamento: TLabeledDateEdit[7]
+          Left = 700
+          Height = 21
+          Top = 34
+          Width = 121
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 6
+          Text = '  /  /    '
+          DateEditLabel.Left = 700
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 18
+          DateEditLabel.Width = 84
+          DateEditLabel.Caption = 'Data Pagamento:'
+          DateEditLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+end

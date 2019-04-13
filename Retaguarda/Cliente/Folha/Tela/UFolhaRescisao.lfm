@@ -1,0 +1,361 @@
+inherited FFolhaRescisao: TFFolhaRescisao
+  Tag = 1
+  Left = 310
+  Top = 165
+  Width = 992
+  Caption = 'Folha Rescisão'
+  ClientWidth = 992
+  inherited PageControl: TPageControl
+    Width = 992
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 984
+      inherited PanelEdits: TPanel
+        Width = 984
+        ClientWidth = 984
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 224
+          Top = 10
+          Width = 966
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditIdColaborador: TLabeledCalcEdit[1]
+          Left = 14
+          Height = 21
+          Top = 33
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 0
+          Value = 0
+          OnKeyUp = EditIdColaboradorKeyUp
+          CalcEditLabel.Left = 14
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 17
+          CalcEditLabel.Width = 63
+          CalcEditLabel.Caption = 'Colaborador:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditColaborador: TLabeledEdit[2]
+          Left = 75
+          Height = 21
+          Top = 33
+          Width = 889
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditColaborador
+          EditLabel.AnchorSideRight.Control = EditColaborador
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditColaborador
+          EditLabel.Left = 75
+          EditLabel.Height = 13
+          EditLabel.Top = 17
+          EditLabel.Width = 889
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 1
+          TabStop = False
+        end
+        object EditDataDemissao: TLabeledDateEdit[3]
+          Left = 14
+          Height = 21
+          Top = 119
+          Width = 110
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 3
+          Text = '  /  /    '
+          DateEditLabel.Left = 14
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 103
+          DateEditLabel.Width = 75
+          DateEditLabel.Caption = 'Data Demissão:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditDataPagamento: TLabeledDateEdit[4]
+          Left = 130
+          Height = 21
+          Top = 119
+          Width = 110
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 4
+          Text = '  /  /    '
+          DateEditLabel.Left = 130
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 103
+          DateEditLabel.Width = 84
+          DateEditLabel.Caption = 'Data Pagamento:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditDiasAvisoPrevio: TLabeledCalcEdit[5]
+          Left = 362
+          Height = 21
+          Top = 119
+          Width = 98
+          Alignment = taRightJustify
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 6
+          Value = 0
+          CalcEditLabel.Left = 362
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 103
+          CalcEditLabel.Width = 86
+          CalcEditLabel.Caption = 'Dias Aviso Prévio:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditDataAvisoPrevio: TLabeledDateEdit[6]
+          Left = 246
+          Height = 21
+          Top = 119
+          Width = 110
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 5
+          Text = '  /  /    '
+          DateEditLabel.Left = 246
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 103
+          DateEditLabel.Width = 63
+          DateEditLabel.Caption = 'Aviso Prévio:'
+          DateEditLabel.ParentColor = False
+        end
+        object ComboBoxComprovouNovoEmprego: TLabeledComboBox[7]
+          Left = 468
+          Height = 21
+          Top = 119
+          Width = 138
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            'Sim'
+            'Não'
+          )
+          Style = csDropDownList
+          TabOrder = 7
+          Text = 'Sim'
+          ComboBoxLabel.Left = 468
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 103
+          ComboBoxLabel.Width = 132
+          ComboBoxLabel.Caption = 'Comprovou Novo Emprego:'
+          ComboBoxLabel.ParentColor = False
+        end
+        object ComboBoxDispensouEmpregado: TLabeledComboBox[8]
+          Left = 612
+          Height = 21
+          Top = 119
+          Width = 120
+          Anchors = [akTop, akLeft, akRight]
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            'Sim'
+            'Não'
+          )
+          Style = csDropDownList
+          TabOrder = 8
+          Text = 'Sim'
+          ComboBoxLabel.Left = 612
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 103
+          ComboBoxLabel.Width = 115
+          ComboBoxLabel.Caption = 'Dispensou Colaborador:'
+          ComboBoxLabel.ParentColor = False
+        end
+        object EditMotivo: TLabeledEdit[9]
+          Left = 14
+          Height = 21
+          Top = 76
+          Width = 950
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditMotivo
+          EditLabel.AnchorSideRight.Control = EditMotivo
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditMotivo
+          EditLabel.Left = 14
+          EditLabel.Height = 13
+          EditLabel.Top = 60
+          EditLabel.Width = 950
+          EditLabel.Caption = 'Motivo:'
+          EditLabel.ParentColor = False
+          TabOrder = 2
+        end
+        object EditPensaoAlimenticia: TLabeledCalcEdit[10]
+          Left = 737
+          Height = 21
+          Top = 119
+          Width = 123
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          Anchors = [akTop, akRight]
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 9
+          Value = 0
+          CalcEditLabel.Left = 737
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 103
+          CalcEditLabel.Width = 114
+          CalcEditLabel.Caption = 'Pensão Alimentícia (%):'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditPensaoAlimenticiaFgts: TLabeledCalcEdit[11]
+          Left = 866
+          Height = 21
+          Top = 119
+          Width = 98
+          Alignment = taRightJustify
+          DisplayFormat = '###,###,##0.00'
+          Anchors = [akTop, akRight]
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 10
+          Value = 0
+          CalcEditLabel.Left = 866
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 103
+          CalcEditLabel.Width = 86
+          CalcEditLabel.Caption = 'Pensão FGTS(%):'
+          CalcEditLabel.ParentColor = False
+        end
+        object GroupBox2: TGroupBox[12]
+          Left = 14
+          Height = 69
+          Top = 147
+          Width = 851
+          Anchors = [akTop, akLeft, akRight]
+          Caption = 'FGTS:'
+          ClientHeight = 51
+          ClientWidth = 847
+          TabOrder = 11
+          object EditFgtsValorRescisao: TLabeledCalcEdit
+            Left = 8
+            Height = 21
+            Top = 21
+            Width = 123
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 0
+            Value = 0
+            CalcEditLabel.Left = 8
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 5
+            CalcEditLabel.Width = 73
+            CalcEditLabel.Caption = 'Valor Rescisão:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditFgtsSaldoBanco: TLabeledCalcEdit
+            Left = 137
+            Height = 21
+            Top = 21
+            Width = 123
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 1
+            Value = 0
+            CalcEditLabel.Left = 137
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 5
+            CalcEditLabel.Width = 62
+            CalcEditLabel.Caption = 'Saldo Banco:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditFgtsComplementoSaldo: TLabeledCalcEdit
+            Left = 266
+            Height = 21
+            Top = 21
+            Width = 123
+            Alignment = taRightJustify
+            DisplayFormat = '###,###,##0.00'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 2
+            Value = 0
+            CalcEditLabel.Left = 266
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 5
+            CalcEditLabel.Width = 98
+            CalcEditLabel.Caption = 'Complemento Saldo:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditFgtsCodigoAfastamento: TLabeledEdit
+            Left = 395
+            Height = 21
+            Top = 21
+            Width = 105
+            EditLabel.AnchorSideLeft.Control = EditFgtsCodigoAfastamento
+            EditLabel.AnchorSideRight.Control = EditFgtsCodigoAfastamento
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditFgtsCodigoAfastamento
+            EditLabel.Left = 395
+            EditLabel.Height = 13
+            EditLabel.Top = 5
+            EditLabel.Width = 105
+            EditLabel.Caption = 'Código Afastamento:'
+            EditLabel.ParentColor = False
+            TabOrder = 3
+          end
+          object EditFgtsCodigoSaque: TLabeledEdit
+            Left = 506
+            Height = 21
+            Top = 21
+            Width = 105
+            EditLabel.AnchorSideLeft.Control = EditFgtsCodigoSaque
+            EditLabel.AnchorSideRight.Control = EditFgtsCodigoSaque
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditFgtsCodigoSaque
+            EditLabel.Left = 506
+            EditLabel.Height = 13
+            EditLabel.Top = 5
+            EditLabel.Width = 105
+            EditLabel.Caption = 'Código Saque:'
+            EditLabel.ParentColor = False
+            TabOrder = 4
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 992
+    ClientWidth = 992
+    inherited BotaoSair: TSpeedButton
+      Left = 892
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 692
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 792
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 592
+    end
+  end
+end

@@ -1,0 +1,122 @@
+inherited FContabilFechamento: TFContabilFechamento
+  Tag = 1
+  Left = 318
+  Top = 203
+  Caption = 'Contábil Fechamento'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Width = 953
+        ClientWidth = 953
+        inherited PanelFiltroRapido: TPanel
+          Width = 953
+          ClientWidth = 953
+          inherited BotaoConsultar: TSpeedButton
+            Left = 819
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 652
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Width = 953
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 54
+          Top = 9
+          Width = 982
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditDataInicio: TLabeledDateEdit[1]
+          Left = 18
+          Height = 21
+          Top = 32
+          Width = 121
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 0
+          Text = '  /  /    '
+          DateEditLabel.Left = 18
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 16
+          DateEditLabel.Width = 55
+          DateEditLabel.Caption = 'Data Início:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditDataFim: TLabeledDateEdit[2]
+          Left = 145
+          Height = 21
+          Top = 32
+          Width = 121
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 1
+          Text = '  /  /    '
+          DateEditLabel.Left = 145
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 16
+          DateEditLabel.Width = 46
+          DateEditLabel.Caption = 'Data Fim:'
+          DateEditLabel.ParentColor = False
+        end
+        object ComboBoxCriterioLancamento: TLabeledComboBox[3]
+          Left = 272
+          Height = 21
+          Top = 32
+          Width = 707
+          Anchors = [akTop, akLeft, akRight]
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            'L - Livre'
+            'A - Avisar'
+            'N - Não permitir (para lançamentos efetuados fora do período informado)'
+          )
+          Style = csDropDownList
+          TabOrder = 2
+          Text = 'L - Livre'
+          ComboBoxLabel.Left = 272
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 16
+          ComboBoxLabel.Width = 100
+          ComboBoxLabel.Caption = 'Critério Lançamento:'
+          ComboBoxLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+end

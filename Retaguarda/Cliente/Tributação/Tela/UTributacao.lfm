@@ -1,0 +1,940 @@
+inherited FTributacao: TFTributacao
+  Left = 318
+  Top = 139
+  Caption = 'Tributação'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 466
+        ClientHeight = 466
+        inherited PanelFiltroRapido: TPanel
+          Top = 414
+          inherited BotaoConsultar: TSpeedButton
+            Left = 852
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 683
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 414
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object ScrollBox: TScrollBox[0]
+          Left = 4
+          Height = 421
+          Top = 4
+          Width = 992
+          HorzScrollBar.Page = 992
+          VertScrollBar.Page = 421
+          Align = alClient
+          BorderStyle = bsNone
+          ClientHeight = 421
+          ClientWidth = 992
+          TabOrder = 0
+          object BevelEdits: TBevel
+            Left = 7
+            Height = 98
+            Top = 11
+            Width = 975
+            Anchors = [akTop, akLeft, akRight]
+            Constraints.MinWidth = 753
+          end
+          object PageControlDadosTributacao: TPageControl
+            Left = 7
+            Height = 284
+            Top = 128
+            Width = 975
+            ActivePage = tsIcms
+            Anchors = [akTop, akLeft, akRight, akBottom]
+            TabIndex = 0
+            TabOrder = 4
+            object tsIcms: TTabSheet
+              Caption = 'ICMS'
+              ClientHeight = 258
+              ClientWidth = 967
+              ImageIndex = 2
+              object PanelIcms: TPanel
+                Left = 0
+                Height = 258
+                Top = 0
+                Width = 967
+                Align = alClient
+                BevelOuter = bvNone
+                ClientHeight = 258
+                ClientWidth = 967
+                TabOrder = 0
+                object GridIcms: TRxDBGrid
+                  Left = 0
+                  Height = 227
+                  Top = 31
+                  Width = 967
+                  TitleButtons = False
+                  AutoSort = True
+                  KeyStrokes = <                  
+                    item
+                      Command = rxgcShowFindDlg
+                      ShortCut = 16454
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowColumnsDlg
+                      ShortCut = 16471
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowFilterDlg
+                      ShortCut = 16468
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowSortDlg
+                      ShortCut = 16467
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowQuickFilter
+                      ShortCut = 16465
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcHideQuickFilter
+                      ShortCut = 16456
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcSelectAll
+                      ShortCut = 16449
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcDeSelectAll
+                      ShortCut = 16429
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcInvertSelection
+                      ShortCut = 16426
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcOptimizeColumnsWidth
+                      ShortCut = 16427
+                      Enabled = True
+                    end>
+                  OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                  Align = alClient
+                  Color = clWindow
+                  DrawFullLine = False
+                  FocusColor = clRed
+                  SelectedColor = clHighlight
+                  GridLineStyle = psSolid
+                  Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+                  ParentColor = False
+                  TabOrder = 0
+                  TitleFont.Color = clWindowText
+                  TitleFont.Height = -11
+                  TitleFont.Name = 'Tahoma'
+                end
+                object ToolPanel1: TToolPanel
+                  Left = 0
+                  Height = 31
+                  Top = 0
+                  Width = 967
+                  Items = <                  
+                    item
+                      Action = ActionExcluirItem
+                      Visible = True
+                      Left = 873
+                      Height = 21
+                      Top = 5
+                      Width = 89
+                      ShowCaption = True
+                    end                  
+                    item
+                      Action = ActionUf
+                      Visible = True
+                      Left = 777
+                      Height = 21
+                      Top = 5
+                      Width = 96
+                      ShowCaption = True
+                    end>
+                  ImageList = FDataModule.ImagensCadastros
+                  Options = []
+                  ButtonAllign = tbaRignt
+                  Align = alTop
+                  BorderWidth = 4
+                  ClientHeight = 31
+                  ClientWidth = 967
+                  TabOrder = 1
+                end
+              end
+            end
+            object tsPis: TTabSheet
+              Caption = 'PIS'
+              ClientHeight = 258
+              ClientWidth = 967
+              object PanelPis: TPanel
+                Left = 0
+                Height = 258
+                Top = 0
+                Width = 967
+                Align = alClient
+                BevelOuter = bvNone
+                ClientHeight = 258
+                ClientWidth = 967
+                TabOrder = 0
+                object EditPorcentoBaseCalculoPis: TLabeledCalcEdit
+                  Left = 188
+                  Height = 21
+                  Top = 121
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 5
+                  Value = 0
+                  CalcEditLabel.Left = 188
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 105
+                  CalcEditLabel.Width = 110
+                  CalcEditLabel.Caption = 'Porcento Base Cálculo:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditCodigoCstPis: TLabeledCalcEdit
+                  Left = 5
+                  Height = 21
+                  Top = 26
+                  Width = 61
+                  Alignment = taRightJustify
+                  DecimalPlaces = 0
+                  DisplayFormat = '00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 0
+                  Value = 0
+                  CalcEditLabel.Left = 5
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 10
+                  CalcEditLabel.Width = 46
+                  CalcEditLabel.Caption = 'CST [F1]:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditCstPis: TLabeledEdit
+                  Left = 66
+                  Height = 21
+                  Top = 26
+                  Width = 894
+                  Anchors = [akTop, akLeft, akRight]
+                  Color = clInfoBk
+                  EditLabel.AnchorSideLeft.Control = EditCstPis
+                  EditLabel.AnchorSideRight.Control = EditCstPis
+                  EditLabel.AnchorSideRight.Side = asrBottom
+                  EditLabel.AnchorSideBottom.Control = EditCstPis
+                  EditLabel.Left = 66
+                  EditLabel.Height = 13
+                  EditLabel.Top = 10
+                  EditLabel.Width = 894
+                  EditLabel.Caption = '  '
+                  EditLabel.ParentColor = False
+                  ReadOnly = True
+                  TabOrder = 1
+                  TabStop = False
+                end
+                object EditCodigoApuracaoEfdPis: TLabeledCalcEdit
+                  Left = 5
+                  Height = 21
+                  Top = 71
+                  Width = 61
+                  Alignment = taRightJustify
+                  DecimalPlaces = 0
+                  DisplayFormat = '00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 2
+                  Value = 0
+                  CalcEditLabel.Left = 5
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 55
+                  CalcEditLabel.Width = 131
+                  CalcEditLabel.Caption = 'Código Apuração EFD [F1]:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditDescricaoCodigoApuracaoEfdPis: TLabeledEdit
+                  Left = 66
+                  Height = 21
+                  Top = 71
+                  Width = 894
+                  Anchors = [akTop, akLeft, akRight]
+                  Color = clInfoBk
+                  EditLabel.AnchorSideLeft.Control = EditDescricaoCodigoApuracaoEfdPis
+                  EditLabel.AnchorSideRight.Control = EditDescricaoCodigoApuracaoEfdPis
+                  EditLabel.AnchorSideRight.Side = asrBottom
+                  EditLabel.AnchorSideBottom.Control = EditDescricaoCodigoApuracaoEfdPis
+                  EditLabel.Left = 66
+                  EditLabel.Height = 13
+                  EditLabel.Top = 55
+                  EditLabel.Width = 894
+                  EditLabel.Caption = '  '
+                  EditLabel.ParentColor = False
+                  ReadOnly = True
+                  TabOrder = 3
+                  TabStop = False
+                end
+                object ComboboxModalidadeBcPis: TLabeledComboBox
+                  Left = 5
+                  Height = 21
+                  Top = 121
+                  Width = 177
+                  ItemHeight = 13
+                  ItemIndex = 0
+                  Items.Strings = (
+                    '0-Percentual'
+                    '1-Unidade'
+                  )
+                  Style = csDropDownList
+                  TabOrder = 4
+                  Text = '0-Percentual'
+                  ComboBoxLabel.Left = 5
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Top = 105
+                  ComboBoxLabel.Width = 151
+                  ComboBoxLabel.Caption = 'Modalidade da Base de Cálculo:'
+                  ComboBoxLabel.ParentColor = False
+                end
+                object EditAliquotaPorcentoPis: TLabeledCalcEdit
+                  Left = 315
+                  Height = 21
+                  Top = 121
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 6
+                  Value = 0
+                  CalcEditLabel.Left = 315
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 105
+                  CalcEditLabel.Width = 89
+                  CalcEditLabel.Caption = 'Alíquota Porcento:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditAliquotaUnidadePis: TLabeledCalcEdit
+                  Left = 442
+                  Height = 21
+                  Top = 121
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 7
+                  Value = 0
+                  CalcEditLabel.Left = 442
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 105
+                  CalcEditLabel.Width = 85
+                  CalcEditLabel.Caption = 'Alíquota Unidade:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorPrecoMaximoPis: TLabeledCalcEdit
+                  Left = 569
+                  Height = 21
+                  Top = 121
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 8
+                  Value = 0
+                  CalcEditLabel.Left = 569
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 105
+                  CalcEditLabel.Width = 97
+                  CalcEditLabel.Caption = 'Valor Preço Máximo:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorPautaFiscalPis: TLabeledCalcEdit
+                  Left = 696
+                  Height = 21
+                  Top = 121
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 9
+                  Value = 0
+                  CalcEditLabel.Left = 696
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 105
+                  CalcEditLabel.Width = 88
+                  CalcEditLabel.Caption = 'Valor Pauta Fiscal:'
+                  CalcEditLabel.ParentColor = False
+                end
+              end
+            end
+            object tsCofins: TTabSheet
+              Caption = 'COFINS'
+              ClientHeight = 258
+              ClientWidth = 967
+              ImageIndex = 2
+              object PanelCofins: TPanel
+                Left = 0
+                Height = 258
+                Top = 0
+                Width = 967
+                Align = alClient
+                BevelOuter = bvNone
+                ClientHeight = 258
+                ClientWidth = 967
+                TabOrder = 0
+                object EditPorcentoBaseCalculoCofins: TLabeledCalcEdit
+                  Left = 188
+                  Height = 21
+                  Top = 121
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 5
+                  Value = 0
+                  CalcEditLabel.Left = 188
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 105
+                  CalcEditLabel.Width = 110
+                  CalcEditLabel.Caption = 'Porcento Base Cálculo:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditCodigoCstCofins: TLabeledCalcEdit
+                  Left = 5
+                  Height = 21
+                  Top = 26
+                  Width = 61
+                  Alignment = taRightJustify
+                  DecimalPlaces = 0
+                  DisplayFormat = '00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 0
+                  Value = 0
+                  CalcEditLabel.Left = 5
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 10
+                  CalcEditLabel.Width = 46
+                  CalcEditLabel.Caption = 'CST [F1]:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditCstCofins: TLabeledEdit
+                  Left = 66
+                  Height = 21
+                  Top = 26
+                  Width = 894
+                  Anchors = [akTop, akLeft, akRight]
+                  Color = clInfoBk
+                  EditLabel.AnchorSideLeft.Control = EditCstCofins
+                  EditLabel.AnchorSideRight.Control = EditCstCofins
+                  EditLabel.AnchorSideRight.Side = asrBottom
+                  EditLabel.AnchorSideBottom.Control = EditCstCofins
+                  EditLabel.Left = 66
+                  EditLabel.Height = 13
+                  EditLabel.Top = 10
+                  EditLabel.Width = 894
+                  EditLabel.Caption = '  '
+                  EditLabel.ParentColor = False
+                  ReadOnly = True
+                  TabOrder = 1
+                  TabStop = False
+                end
+                object EditCodigoApuracaoEfdCofins: TLabeledCalcEdit
+                  Left = 5
+                  Height = 21
+                  Top = 71
+                  Width = 61
+                  Alignment = taRightJustify
+                  DecimalPlaces = 0
+                  DisplayFormat = '00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 2
+                  Value = 0
+                  CalcEditLabel.Left = 5
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 55
+                  CalcEditLabel.Width = 131
+                  CalcEditLabel.Caption = 'Código Apuração EFD [F1]:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditDescricaoCodigoApuracaoEfdCofins: TLabeledEdit
+                  Left = 66
+                  Height = 21
+                  Top = 71
+                  Width = 894
+                  Anchors = [akTop, akLeft, akRight]
+                  Color = clInfoBk
+                  EditLabel.AnchorSideLeft.Control = EditDescricaoCodigoApuracaoEfdCofins
+                  EditLabel.AnchorSideRight.Control = EditDescricaoCodigoApuracaoEfdCofins
+                  EditLabel.AnchorSideRight.Side = asrBottom
+                  EditLabel.AnchorSideBottom.Control = EditDescricaoCodigoApuracaoEfdCofins
+                  EditLabel.Left = 66
+                  EditLabel.Height = 13
+                  EditLabel.Top = 55
+                  EditLabel.Width = 894
+                  EditLabel.Caption = '  '
+                  EditLabel.ParentColor = False
+                  ReadOnly = True
+                  TabOrder = 3
+                  TabStop = False
+                end
+                object ComboboxModalidadeBcCofins: TLabeledComboBox
+                  Left = 5
+                  Height = 21
+                  Top = 121
+                  Width = 177
+                  ItemHeight = 13
+                  ItemIndex = 0
+                  Items.Strings = (
+                    '0-Percentual'
+                    '1-Unidade'
+                  )
+                  Style = csDropDownList
+                  TabOrder = 4
+                  Text = '0-Percentual'
+                  ComboBoxLabel.Left = 5
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Top = 105
+                  ComboBoxLabel.Width = 151
+                  ComboBoxLabel.Caption = 'Modalidade da Base de Cálculo:'
+                  ComboBoxLabel.ParentColor = False
+                end
+                object EditAliquotaPorcentoCofins: TLabeledCalcEdit
+                  Left = 315
+                  Height = 21
+                  Top = 121
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 6
+                  Value = 0
+                  CalcEditLabel.Left = 315
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 105
+                  CalcEditLabel.Width = 89
+                  CalcEditLabel.Caption = 'Alíquota Porcento:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditAliquotaUnidadeCofins: TLabeledCalcEdit
+                  Left = 442
+                  Height = 21
+                  Top = 121
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 7
+                  Value = 0
+                  CalcEditLabel.Left = 442
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 105
+                  CalcEditLabel.Width = 85
+                  CalcEditLabel.Caption = 'Alíquota Unidade:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorPrecoMaximoCofins: TLabeledCalcEdit
+                  Left = 569
+                  Height = 21
+                  Top = 121
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 8
+                  Value = 0
+                  CalcEditLabel.Left = 569
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 105
+                  CalcEditLabel.Width = 97
+                  CalcEditLabel.Caption = 'Valor Preço Máximo:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorPautaFiscalCofins: TLabeledCalcEdit
+                  Left = 696
+                  Height = 21
+                  Top = 121
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 9
+                  Value = 0
+                  CalcEditLabel.Left = 696
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 105
+                  CalcEditLabel.Width = 88
+                  CalcEditLabel.Caption = 'Valor Pauta Fiscal:'
+                  CalcEditLabel.ParentColor = False
+                end
+              end
+            end
+            object tsIpi: TTabSheet
+              Caption = 'IPI'
+              ClientHeight = 258
+              ClientWidth = 967
+              ImageIndex = 3
+              object PanelIpi: TPanel
+                Left = 0
+                Height = 258
+                Top = 0
+                Width = 967
+                Align = alClient
+                BevelOuter = bvNone
+                ClientHeight = 258
+                ClientWidth = 967
+                TabOrder = 0
+                object EditPorcentoBaseCalculoIpi: TLabeledCalcEdit
+                  Left = 188
+                  Height = 21
+                  Top = 121
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 5
+                  Value = 0
+                  CalcEditLabel.Left = 188
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 105
+                  CalcEditLabel.Width = 110
+                  CalcEditLabel.Caption = 'Porcento Base Cálculo:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditCodigoCstIpi: TLabeledCalcEdit
+                  Left = 5
+                  Height = 21
+                  Top = 26
+                  Width = 61
+                  Alignment = taRightJustify
+                  DecimalPlaces = 0
+                  DisplayFormat = '00'
+                  MaxLength = 2
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 0
+                  Value = 0
+                  CalcEditLabel.Left = 5
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 10
+                  CalcEditLabel.Width = 46
+                  CalcEditLabel.Caption = 'CST [F1]:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditCstIpi: TLabeledEdit
+                  Left = 66
+                  Height = 21
+                  Top = 26
+                  Width = 894
+                  Anchors = [akTop, akLeft, akRight]
+                  Color = clInfoBk
+                  EditLabel.AnchorSideLeft.Control = EditCstIpi
+                  EditLabel.AnchorSideRight.Control = EditCstIpi
+                  EditLabel.AnchorSideRight.Side = asrBottom
+                  EditLabel.AnchorSideBottom.Control = EditCstIpi
+                  EditLabel.Left = 66
+                  EditLabel.Height = 13
+                  EditLabel.Top = 10
+                  EditLabel.Width = 894
+                  EditLabel.Caption = '  '
+                  EditLabel.ParentColor = False
+                  ReadOnly = True
+                  TabOrder = 1
+                  TabStop = False
+                end
+                object EditIdTipoReceitaDipi: TLabeledCalcEdit
+                  Left = 5
+                  Height = 21
+                  Top = 71
+                  Width = 61
+                  Alignment = taRightJustify
+                  DecimalPlaces = 0
+                  DisplayFormat = '0'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 2
+                  Value = 0
+                  CalcEditLabel.Left = 5
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 55
+                  CalcEditLabel.Width = 110
+                  CalcEditLabel.Caption = 'Tipo Receita DIPI [F1]:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditTipoReceitaDipi: TLabeledEdit
+                  Left = 66
+                  Height = 21
+                  Top = 71
+                  Width = 894
+                  Anchors = [akTop, akLeft, akRight]
+                  Color = clInfoBk
+                  EditLabel.AnchorSideLeft.Control = EditTipoReceitaDipi
+                  EditLabel.AnchorSideRight.Control = EditTipoReceitaDipi
+                  EditLabel.AnchorSideRight.Side = asrBottom
+                  EditLabel.AnchorSideBottom.Control = EditTipoReceitaDipi
+                  EditLabel.Left = 66
+                  EditLabel.Height = 13
+                  EditLabel.Top = 55
+                  EditLabel.Width = 894
+                  EditLabel.Caption = '  '
+                  EditLabel.ParentColor = False
+                  ReadOnly = True
+                  TabOrder = 3
+                  TabStop = False
+                end
+                object ComboboxModalidadeBcIpi: TLabeledComboBox
+                  Left = 5
+                  Height = 21
+                  Top = 121
+                  Width = 177
+                  ItemHeight = 13
+                  ItemIndex = 0
+                  Items.Strings = (
+                    '0-Percentual'
+                    '1-Unidade'
+                  )
+                  Style = csDropDownList
+                  TabOrder = 4
+                  Text = '0-Percentual'
+                  ComboBoxLabel.Left = 5
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Top = 105
+                  ComboBoxLabel.Width = 151
+                  ComboBoxLabel.Caption = 'Modalidade da Base de Cálculo:'
+                  ComboBoxLabel.ParentColor = False
+                end
+                object EditAliquotaPorcentoIpi: TLabeledCalcEdit
+                  Left = 315
+                  Height = 21
+                  Top = 121
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 6
+                  Value = 0
+                  CalcEditLabel.Left = 315
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 105
+                  CalcEditLabel.Width = 89
+                  CalcEditLabel.Caption = 'Alíquota Porcento:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditAliquotaUnidadeIpi: TLabeledCalcEdit
+                  Left = 442
+                  Height = 21
+                  Top = 121
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 7
+                  Value = 0
+                  CalcEditLabel.Left = 442
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 105
+                  CalcEditLabel.Width = 85
+                  CalcEditLabel.Caption = 'Alíquota Unidade:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorPrecoMaximoIpi: TLabeledCalcEdit
+                  Left = 569
+                  Height = 21
+                  Top = 121
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 8
+                  Value = 0
+                  CalcEditLabel.Left = 569
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 105
+                  CalcEditLabel.Width = 97
+                  CalcEditLabel.Caption = 'Valor Preço Máximo:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorPautaFiscalIpi: TLabeledCalcEdit
+                  Left = 696
+                  Height = 21
+                  Top = 121
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 9
+                  Value = 0
+                  CalcEditLabel.Left = 696
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 105
+                  CalcEditLabel.Width = 88
+                  CalcEditLabel.Caption = 'Valor Pauta Fiscal:'
+                  CalcEditLabel.ParentColor = False
+                end
+              end
+            end
+          end
+          object EditIdOperacaoFiscal: TLabeledCalcEdit
+            Left = 16
+            Height = 21
+            Top = 33
+            Width = 61
+            Alignment = taRightJustify
+            DecimalPlaces = 0
+            DisplayFormat = '0'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 0
+            Value = 0
+            OnKeyUp = EditIdOperacaoFiscalKeyUp
+            CalcEditLabel.Left = 16
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 17
+            CalcEditLabel.Width = 103
+            CalcEditLabel.Caption = 'Operação Fiscal [F1]:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditOperacaoFiscal: TLabeledEdit
+            Left = 77
+            Height = 21
+            Top = 33
+            Width = 894
+            Anchors = [akTop, akLeft, akRight]
+            Color = clInfoBk
+            EditLabel.AnchorSideLeft.Control = EditOperacaoFiscal
+            EditLabel.AnchorSideRight.Control = EditOperacaoFiscal
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditOperacaoFiscal
+            EditLabel.Left = 77
+            EditLabel.Height = 13
+            EditLabel.Top = 17
+            EditLabel.Width = 894
+            EditLabel.Caption = '  '
+            EditLabel.ParentColor = False
+            ReadOnly = True
+            TabOrder = 1
+            TabStop = False
+          end
+          object EditIdGrupoTributario: TLabeledCalcEdit
+            Left = 16
+            Height = 21
+            Top = 76
+            Width = 61
+            Alignment = taRightJustify
+            DecimalPlaces = 0
+            DisplayFormat = '0'
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 2
+            Value = 0
+            OnKeyUp = EditIdGrupoTributarioKeyUp
+            CalcEditLabel.Left = 16
+            CalcEditLabel.Height = 13
+            CalcEditLabel.Top = 60
+            CalcEditLabel.Width = 105
+            CalcEditLabel.Caption = 'Grupo Tributário [F1]:'
+            CalcEditLabel.ParentColor = False
+          end
+          object EditGrupoTributario: TLabeledEdit
+            Left = 77
+            Height = 21
+            Top = 76
+            Width = 894
+            Anchors = [akTop, akLeft, akRight]
+            Color = clInfoBk
+            EditLabel.AnchorSideLeft.Control = EditGrupoTributario
+            EditLabel.AnchorSideRight.Control = EditGrupoTributario
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditGrupoTributario
+            EditLabel.Left = 77
+            EditLabel.Height = 13
+            EditLabel.Top = 60
+            EditLabel.Width = 894
+            EditLabel.Caption = '  '
+            EditLabel.ParentColor = False
+            ReadOnly = True
+            TabOrder = 3
+            TabStop = False
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+  inherited PopupMenuAtalhosBotoesTela: TPopupMenu
+    top = 23
+  end
+  inherited PopupMenuAtalhosBotoesTelaCadastro: TPopupMenu
+    left = 720
+    top = 24
+  end
+  object DSIcms: TDatasource[5]
+    DataSet = CDSIcms
+    left = 93
+    top = 392
+  end
+  object ActionManager1: TActionList[6]
+    Images = FDataModule.ImagensCadastros
+    left = 924
+    top = 168
+    object ActionUf: TAction
+      Caption = 'Importar UFs'
+      ImageIndex = 22
+      OnExecute = ActionUfExecute
+    end
+    object ActionExcluirItem: TAction
+      Caption = 'Excluir Item'
+      ImageIndex = 2
+      OnExecute = ActionExcluirItemExecute
+    end
+  end
+  object CDSIcms: TBufDataset[7]
+    FieldDefs = <>
+    left = 161
+    top = 378
+  end
+end

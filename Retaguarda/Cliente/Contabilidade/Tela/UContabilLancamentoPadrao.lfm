@@ -1,0 +1,169 @@
+inherited FContabilLancamentoPadrao: TFContabilLancamentoPadrao
+  Left = 293
+  Top = 220
+  Caption = 'Lançamento Padrão'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 363
+        Width = 947
+        ClientHeight = 363
+        ClientWidth = 947
+        inherited PanelFiltroRapido: TPanel
+          Top = 309
+          Width = 947
+          ClientWidth = 947
+          inherited BotaoConsultar: TSpeedButton
+            Left = 813
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 646
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 311
+          Width = 947
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 250
+          Top = 9
+          Width = 979
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditDescricao: TLabeledEdit[1]
+          Left = 17
+          Height = 21
+          Top = 30
+          Width = 958
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditDescricao
+          EditLabel.AnchorSideRight.Control = EditDescricao
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditDescricao
+          EditLabel.Left = 17
+          EditLabel.Height = 13
+          EditLabel.Top = 14
+          EditLabel.Width = 958
+          EditLabel.Caption = 'Descrição:'
+          EditLabel.ParentColor = False
+          TabOrder = 0
+        end
+        object MemoHistorico: TLabeledMemo[2]
+          Left = 17
+          Height = 89
+          Top = 73
+          Width = 958
+          Anchors = [akTop, akLeft, akRight]
+          MaxLength = 250
+          TabOrder = 1
+          MemoLabel.Left = 17
+          MemoLabel.Height = 13
+          MemoLabel.Top = 57
+          MemoLabel.Width = 45
+          MemoLabel.Caption = 'Histórico:'
+          MemoLabel.ParentColor = False
+        end
+        object EditContaDebito: TLabeledEdit[3]
+          Left = 78
+          Height = 21
+          Top = 184
+          Width = 897
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditContaDebito
+          EditLabel.AnchorSideRight.Control = EditContaDebito
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditContaDebito
+          EditLabel.Left = 78
+          EditLabel.Height = 13
+          EditLabel.Top = 168
+          EditLabel.Width = 897
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 3
+        end
+        object EditIdContaDebito: TLabeledCalcEdit[4]
+          Left = 17
+          Height = 21
+          Top = 184
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 2
+          Value = 0
+          OnKeyUp = EditIdContaDebitoKeyUp
+          CalcEditLabel.Left = 17
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 168
+          CalcEditLabel.Width = 90
+          CalcEditLabel.Caption = 'Conta Débito [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditContaCredito: TLabeledEdit[5]
+          Left = 78
+          Height = 21
+          Top = 227
+          Width = 897
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditContaCredito
+          EditLabel.AnchorSideRight.Control = EditContaCredito
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditContaCredito
+          EditLabel.Left = 78
+          EditLabel.Height = 13
+          EditLabel.Top = 211
+          EditLabel.Width = 897
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 5
+        end
+        object EditIdContaCredito: TLabeledCalcEdit[6]
+          Left = 17
+          Height = 21
+          Top = 227
+          Width = 61
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 4
+          Value = 0
+          OnKeyUp = EditIdContaCreditoKeyUp
+          CalcEditLabel.Left = 17
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 211
+          CalcEditLabel.Width = 94
+          CalcEditLabel.Caption = 'Conta Crédito [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+end

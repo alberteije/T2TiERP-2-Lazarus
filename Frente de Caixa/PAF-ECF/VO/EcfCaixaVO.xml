@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="EcfCaixaVO" table="ECF_CAIXA" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">ECF_CAIXA</param>
+      </generator>
+    </id>
+
+    <property name="Nome" column="NOME" />
+    <property name="DataCadastro" column="DATA_CADASTRO" />
+
+  </class>
+</t2ti-orm-mapping>

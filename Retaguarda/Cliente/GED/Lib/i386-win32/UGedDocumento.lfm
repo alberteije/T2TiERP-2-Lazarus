@@ -1,0 +1,764 @@
+inherited FGedDocumento: TFGedDocumento
+  Left = 300
+  Top = 118
+  Caption = 'Documento'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 484
+        Width = 1012
+        ClientHeight = 484
+        ClientWidth = 1012
+        inherited PanelFiltroRapido: TPanel
+          Top = 432
+          Width = 1012
+          ClientWidth = 1012
+          inherited BotaoConsultar: TSpeedButton
+            Left = 880
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 711
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 432
+          Width = 1012
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object PanelEditDocumento: TPanel[0]
+          Left = 4
+          Height = 421
+          Top = 4
+          Width = 992
+          Align = alClient
+          BevelOuter = bvNone
+          ClientHeight = 421
+          ClientWidth = 992
+          TabOrder = 0
+          object BevelEdits: TBevel
+            Left = 7
+            Height = 366
+            Top = 38
+            Width = 999
+            Anchors = [akTop, akLeft, akRight, akBottom]
+          end
+          object EditNome: TLabeledEdit
+            Left = 15
+            Height = 21
+            Top = 65
+            Width = 675
+            Anchors = [akTop, akLeft, akRight]
+            Constraints.MinWidth = 410
+            EditLabel.AnchorSideLeft.Control = EditNome
+            EditLabel.AnchorSideRight.Control = EditNome
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditNome
+            EditLabel.Left = 15
+            EditLabel.Height = 13
+            EditLabel.Top = 49
+            EditLabel.Width = 675
+            EditLabel.Caption = 'Nome:'
+            EditLabel.ParentColor = False
+            TabOrder = 0
+          end
+          object EditDescricao: TLabeledEdit
+            Left = 15
+            Height = 21
+            Top = 105
+            Width = 548
+            Anchors = [akTop, akLeft, akRight]
+            Constraints.MinWidth = 410
+            EditLabel.AnchorSideLeft.Control = EditDescricao
+            EditLabel.AnchorSideRight.Control = EditDescricao
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditDescricao
+            EditLabel.Left = 15
+            EditLabel.Height = 13
+            EditLabel.Top = 89
+            EditLabel.Width = 548
+            EditLabel.Caption = 'Descrição:'
+            EditLabel.ParentColor = False
+            TabOrder = 1
+          end
+          object ScrollBoxImage: TScrollBox
+            Left = 696
+            Height = 349
+            Top = 47
+            Width = 303
+            HorzScrollBar.Page = 299
+            VertScrollBar.Page = 345
+            Anchors = [akTop, akRight, akBottom]
+            ClientHeight = 345
+            ClientWidth = 299
+            Color = clWhite
+            ParentColor = False
+            TabOrder = 4
+            object ImagemDocumento: TImage
+              Left = 3
+              Height = 208
+              Top = 3
+              Width = 250
+              AutoSize = True
+              Center = True
+              PopupMenu = PopupMenu
+            end
+          end
+          object EditArquivoSelecionado: TLabeledEdit
+            Left = 15
+            Height = 21
+            Top = 148
+            Width = 675
+            Anchors = [akTop, akLeft, akRight]
+            Constraints.MinWidth = 410
+            EditLabel.AnchorSideLeft.Control = EditArquivoSelecionado
+            EditLabel.AnchorSideRight.Control = EditArquivoSelecionado
+            EditLabel.AnchorSideRight.Side = asrBottom
+            EditLabel.AnchorSideBottom.Control = EditArquivoSelecionado
+            EditLabel.Left = 15
+            EditLabel.Height = 13
+            EditLabel.Top = 132
+            EditLabel.Width = 675
+            EditLabel.Caption = 'Arquivo Selecionado:'
+            EditLabel.ParentColor = False
+            ReadOnly = True
+            TabOrder = 3
+            TabStop = False
+          end
+          object EditDataInclusao: TLabeledDateEdit
+            Left = 569
+            Height = 21
+            Top = 105
+            Width = 121
+            Anchors = [akTop, akRight]
+            ButtonWidth = 0
+            CharCase = ecNormal
+            DialogTitle = 'Select a Date'
+            MaxLength = 10
+            NumGlyphs = 2
+            PopupColor = clWindow
+            TabOrder = 2
+            Text = '  /  /    '
+            DateEditLabel.Left = 569
+            DateEditLabel.Height = 13
+            DateEditLabel.Top = 89
+            DateEditLabel.Width = 70
+            DateEditLabel.Caption = 'Data Inclusão:'
+            DateEditLabel.ParentColor = False
+          end
+          object ActionToolBar1: TToolPanel
+            Left = 0
+            Height = 31
+            Top = 0
+            Width = 992
+            Items = <            
+              item
+                Action = ActionDigitalizar
+                Visible = True
+                Left = 907
+                Height = 21
+                Top = 5
+                Width = 80
+                ShowCaption = True
+              end            
+              item
+                Action = ActionVisualizarArquivo
+                Visible = True
+                Left = 785
+                Height = 21
+                Top = 5
+                Width = 122
+                ShowCaption = True
+              end            
+              item
+                Action = ActionAbrirArquivo
+                Visible = True
+                Left = 686
+                Height = 21
+                Top = 5
+                Width = 99
+                ShowCaption = True
+              end>
+            ImageList = FDataModule.ImagensCadastros
+            ToolBarStyle = tbsWindowsXP
+            Options = [tpFlatBtns]
+            ButtonAllign = tbaRignt
+            Align = alTop
+            BorderWidth = 4
+            ClientHeight = 31
+            ClientWidth = 992
+            Color = clMenuBar
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            ParentColor = False
+            ParentFont = False
+            TabOrder = 5
+          end
+          object PageControlItens: TPageControl
+            Left = 15
+            Height = 221
+            Top = 175
+            Width = 675
+            ActivePage = tsDetalhe
+            Anchors = [akTop, akLeft, akRight, akBottom]
+            TabIndex = 0
+            TabOrder = 6
+            object tsDetalhe: TTabSheet
+              Caption = 'Detalhes Documento'
+              ClientHeight = 195
+              ClientWidth = 667
+              ImageIndex = 1
+              object GridDetalhe: TRxDBGrid
+                Left = 0
+                Height = 164
+                Top = 31
+                Width = 667
+                TitleButtons = True
+                AutoSort = True
+                Columns = <                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Tipo Documento [F1]'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'ID_GED_TIPO_DOCUMENTO'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Nome'
+                    Title.Orientation = toHorizontal
+                    Width = 200
+                    FieldName = 'NOME'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Descrição'
+                    Title.Orientation = toHorizontal
+                    Width = 200
+                    FieldName = 'DESCRICAO'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Palavra(s) Chave'
+                    Title.Orientation = toHorizontal
+                    Width = 200
+                    FieldName = 'PALAVRA_CHAVE'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Pode Excluir'
+                    Title.Orientation = toHorizontal
+                    Width = 70
+                    FieldName = 'PODE_EXCLUIR'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Pode Alterar'
+                    Title.Orientation = toHorizontal
+                    Width = 70
+                    FieldName = 'PODE_ALTERAR'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Assinado'
+                    Title.Orientation = toHorizontal
+                    Width = 50
+                    FieldName = 'ASSINADO'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Data Fim Vigência'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'DATA_FIM_VIGENCIA'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end                
+                  item
+                    Title.Alignment = taCenter
+                    Title.Caption = 'Data Exclusão'
+                    Title.Orientation = toHorizontal
+                    FieldName = 'DATA_EXCLUSAO'
+                    Filter.DropDownRows = 0
+                    Filter.EmptyValue = '(Empty)'
+                    Filter.EmptyFont.Style = [fsItalic]
+                    Filter.ItemIndex = -1
+                    EditButtons = <>
+                  end>
+                KeyStrokes = <                
+                  item
+                    Command = rxgcShowFindDlg
+                    ShortCut = 16454
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowColumnsDlg
+                    ShortCut = 16471
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowFilterDlg
+                    ShortCut = 16468
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowSortDlg
+                    ShortCut = 16467
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcShowQuickFilter
+                    ShortCut = 16465
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcHideQuickFilter
+                    ShortCut = 16456
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcSelectAll
+                    ShortCut = 16449
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcDeSelectAll
+                    ShortCut = 16429
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcInvertSelection
+                    ShortCut = 16426
+                    Enabled = True
+                  end                
+                  item
+                    Command = rxgcOptimizeColumnsWidth
+                    ShortCut = 16427
+                    Enabled = True
+                  end>
+                OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                Align = alClient
+                Color = clWindow
+                DrawFullLine = False
+                FocusColor = clRed
+                SelectedColor = clHighlight
+                GridLineStyle = psSolid
+                DataSource = DSDetalhe
+                Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgHeaderPushedLook]
+                ParentColor = False
+                TabOrder = 0
+                TitleFont.Color = clWindowText
+                TitleFont.Height = -11
+                TitleFont.Name = 'Tahoma'
+                OnKeyDown = GridDetalheKeyDown
+              end
+              object ActionToolBar3: TToolPanel
+                Left = 0
+                Height = 31
+                Top = 0
+                Width = 667
+                Items = <                
+                  item
+                    Action = ActionGravarDetalhe
+                    Visible = True
+                    Left = 557
+                    Height = 21
+                    Top = 5
+                    Width = 105
+                    ShowCaption = True
+                  end                
+                  item
+                    Action = ActionExcluirDetalhe
+                    Visible = True
+                    Left = 452
+                    Height = 21
+                    Top = 5
+                    Width = 105
+                    ShowCaption = True
+                  end>
+                ImageList = FDataModule.ImagensCadastros
+                ToolBarStyle = tbsWindowsXP
+                Options = [tpFlatBtns]
+                ButtonAllign = tbaRignt
+                Align = alTop
+                BorderWidth = 4
+                ClientHeight = 31
+                ClientWidth = 667
+                Color = clMenuBar
+                Font.Color = clBlack
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                ParentColor = False
+                ParentFont = False
+                TabOrder = 1
+              end
+            end
+            object tsItens: TTabSheet
+              Caption = 'Versionamento'
+              ClientHeight = 195
+              ClientWidth = 667
+              object PanelItens: TPanel
+                Left = 0
+                Height = 195
+                Top = 0
+                Width = 667
+                Align = alClient
+                BevelOuter = bvNone
+                ClientHeight = 195
+                ClientWidth = 667
+                TabOrder = 0
+                object GridVersao: TRxDBGrid
+                  Left = 0
+                  Height = 163
+                  Top = 32
+                  Width = 667
+                  TitleButtons = True
+                  AutoSort = True
+                  Columns = <                  
+                    item
+                      Title.Alignment = taCenter
+                      Title.Caption = 'Versão'
+                      Title.Orientation = toHorizontal
+                      FieldName = 'VERSAO'
+                      Filter.DropDownRows = 0
+                      Filter.EmptyValue = '(Empty)'
+                      Filter.EmptyFont.Style = [fsItalic]
+                      Filter.ItemIndex = -1
+                      EditButtons = <>
+                    end                  
+                    item
+                      Title.Alignment = taCenter
+                      Title.Caption = 'Ação'
+                      Title.Orientation = toHorizontal
+                      FieldName = 'ACAO'
+                      Filter.DropDownRows = 0
+                      Filter.EmptyValue = '(Empty)'
+                      Filter.EmptyFont.Style = [fsItalic]
+                      Filter.ItemIndex = -1
+                      EditButtons = <>
+                    end                  
+                    item
+                      Title.Alignment = taCenter
+                      Title.Caption = 'Data'
+                      Title.Orientation = toHorizontal
+                      Width = 90
+                      FieldName = 'DATA_HORA'
+                      Filter.DropDownRows = 0
+                      Filter.EmptyValue = '(Empty)'
+                      Filter.EmptyFont.Style = [fsItalic]
+                      Filter.ItemIndex = -1
+                      EditButtons = <>
+                    end                  
+                    item
+                      Title.Alignment = taCenter
+                      Title.Caption = 'Hash'
+                      Title.Orientation = toHorizontal
+                      Width = 220
+                      FieldName = 'HASH_ARQUIVO'
+                      Filter.DropDownRows = 0
+                      Filter.EmptyValue = '(Empty)'
+                      Filter.EmptyFont.Style = [fsItalic]
+                      Filter.ItemIndex = -1
+                      EditButtons = <>
+                    end                  
+                    item
+                      Title.Alignment = taCenter
+                      Title.Caption = 'Caminho no Servidor'
+                      Title.Orientation = toHorizontal
+                      Width = 600
+                      FieldName = 'CAMINHO'
+                      Filter.DropDownRows = 0
+                      Filter.EmptyValue = '(Empty)'
+                      Filter.EmptyFont.Style = [fsItalic]
+                      Filter.ItemIndex = -1
+                      EditButtons = <>
+                    end>
+                  KeyStrokes = <                  
+                    item
+                      Command = rxgcShowFindDlg
+                      ShortCut = 16454
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowColumnsDlg
+                      ShortCut = 16471
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowFilterDlg
+                      ShortCut = 16468
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowSortDlg
+                      ShortCut = 16467
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowQuickFilter
+                      ShortCut = 16465
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcHideQuickFilter
+                      ShortCut = 16456
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcSelectAll
+                      ShortCut = 16449
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcDeSelectAll
+                      ShortCut = 16429
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcInvertSelection
+                      ShortCut = 16426
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcOptimizeColumnsWidth
+                      ShortCut = 16427
+                      Enabled = True
+                    end>
+                  OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                  Align = alClient
+                  Color = clWindow
+                  DrawFullLine = False
+                  FocusColor = clRed
+                  SelectedColor = clHighlight
+                  GridLineStyle = psSolid
+                  DataSource = DSVersaoDocumento
+                  Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgHeaderPushedLook]
+                  ParentColor = False
+                  ReadOnly = True
+                  TabOrder = 0
+                  TitleFont.Color = clWindowText
+                  TitleFont.Height = -11
+                  TitleFont.Name = 'Tahoma'
+                end
+                object ActionToolBar2: TToolPanel
+                  Left = 0
+                  Height = 31
+                  Top = 0
+                  Width = 667
+                  Items = <                  
+                    item
+                      Action = ActionBaixarArquivo
+                      Visible = True
+                      Left = 4
+                      Height = 24
+                      Top = 4
+                      Width = 104
+                      ShowCaption = True
+                    end>
+                  ImageList = FDataModule.ImagensCadastros
+                  ToolBarStyle = tbsWindowsXP
+                  Options = [tpFlatBtns]
+                  ButtonAllign = tbaRignt
+                  Align = alTop
+                  BorderWidth = 4
+                  ClientHeight = 31
+                  ClientWidth = 667
+                  Color = clMenuBar
+                  Font.Color = clBlack
+                  Font.Height = -11
+                  Font.Name = 'Tahoma'
+                  ParentColor = False
+                  ParentFont = False
+                  TabOrder = 1
+                end
+              end
+            end
+          end
+          object Ole: TActiveXContainer
+            Left = 696
+            Height = 15
+            Top = 399
+            Width = 120
+            TabOrder = 7
+            UseDockManager = False
+            Active = False
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+  inherited PopupMenuExportar: TPopupMenu
+    left = 384
+  end
+  inherited PopupMenuAtalhosBotoesTelaCadastro: TPopupMenu
+    left = 248
+  end
+  object PopupMenu: TPopupMenu[5]
+    left = 928
+    top = 395
+    object miTamanhoOriginal: TMenuItem
+      Caption = '&Tamanho original'
+      OnClick = miTamanhoOriginalClick
+    end
+    object miReduzirparacaber: TMenuItem
+      Caption = '&Redimensionar'
+      OnClick = miReduzirparacaberClick
+    end
+  end
+  object ActionManager1: TActionList[6]
+    Images = FDataModule.ImagensCadastros
+    left = 816
+    top = 397
+    object ActionVisualizarArquivo: TAction
+      Caption = 'Visualizar Arquivo'
+      ImageIndex = 22
+      OnExecute = ActionVisualizarArquivoExecute
+    end
+    object ActionAbrirArquivo: TAction
+      Caption = 'Abrir Arquivo'
+      ImageIndex = 0
+      OnExecute = ActionAbrirArquivoExecute
+    end
+    object ActionDigitalizar: TAction
+      Caption = 'Digitalizar'
+      ImageIndex = 5
+      OnExecute = ActionDigitalizarExecute
+    end
+    object ActionBaixarArquivo: TAction
+      Caption = 'Baixar Arquivo'
+      ImageIndex = 8
+      OnExecute = ActionBaixarArquivoExecute
+    end
+    object ActionGravarDetalhe: TAction
+      Caption = 'Gravar Detalhe'
+      ImageIndex = 20
+      OnExecute = ActionGravarDetalheExecute
+    end
+    object ActionExcluirDetalhe: TAction
+      Caption = 'Excluir Detalhe'
+      ImageIndex = 2
+      OnExecute = ActionExcluirDetalheExecute
+    end
+  end
+  object DSVersaoDocumento: TDatasource[7]
+    DataSet = CDSVersaoDocumento
+    left = 112
+    top = 288
+  end
+  object CDSVersaoDocumento: TBufDataset[8]
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'ID_COLABORADOR'
+        DataType = ftInteger
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'ID_GED_DOCUMENTO'
+        DataType = ftInteger
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'VERSAO'
+        DataType = ftInteger
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'DATA_HORA'
+        DataType = ftTimeStamp
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'HASH_ARQUIVO'
+        DataType = ftString
+        Precision = 0
+        Size = 250
+      end    
+      item
+        Name = 'CAMINHO'
+        DataType = ftString
+        Precision = 0
+        Size = 250
+      end    
+      item
+        Name = 'ACAO'
+        DataType = ftString
+        Precision = 0
+        Size = 1
+      end>
+    left = 112
+    top = 336
+  end
+  object DSDetalhe: TDatasource[9]
+    DataSet = CDSDetalhe
+    left = 280
+    top = 296
+  end
+  object CDSDetalhe: TBufDataset[10]
+    FieldDefs = <>
+    left = 280
+    top = 344
+  end
+end

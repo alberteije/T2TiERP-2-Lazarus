@@ -1,0 +1,156 @@
+inherited FContabilLote: TFContabilLote
+  Left = 335
+  Top = 164
+  Caption = 'Lote de Lançamentos'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 341
+        Width = 842
+        ClientHeight = 341
+        ClientWidth = 842
+        inherited PanelFiltroRapido: TPanel
+          Top = 287
+          Width = 842
+          ClientWidth = 842
+          inherited BotaoConsultar: TSpeedButton
+            Left = 708
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 541
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 289
+          Width = 842
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 8
+          Height = 96
+          Top = 9
+          Width = 979
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditDescricao: TLabeledEdit[1]
+          Left = 15
+          Height = 21
+          Top = 31
+          Width = 961
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditDescricao
+          EditLabel.AnchorSideRight.Control = EditDescricao
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditDescricao
+          EditLabel.Left = 15
+          EditLabel.Height = 13
+          EditLabel.Top = 15
+          EditLabel.Width = 961
+          EditLabel.Caption = 'Descrição:'
+          EditLabel.ParentColor = False
+          TabOrder = 0
+        end
+        object EditDataInclusao: TLabeledDateEdit[2]
+          Left = 219
+          Height = 21
+          Top = 73
+          Width = 128
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 3
+          Text = '  /  /    '
+          DateEditLabel.Left = 219
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 57
+          DateEditLabel.Width = 70
+          DateEditLabel.Caption = 'Data Inclusão:'
+          DateEditLabel.ParentColor = False
+        end
+        object EditDataLiberacao: TLabeledDateEdit[3]
+          Left = 353
+          Height = 21
+          Top = 73
+          Width = 128
+          ButtonWidth = 0
+          CharCase = ecNormal
+          DialogTitle = 'Select a Date'
+          MaxLength = 10
+          NumGlyphs = 2
+          PopupColor = clWindow
+          TabOrder = 4
+          Text = '  /  /    '
+          DateEditLabel.Left = 353
+          DateEditLabel.Height = 13
+          DateEditLabel.Top = 57
+          DateEditLabel.Width = 76
+          DateEditLabel.Caption = 'Data Liberação:'
+          DateEditLabel.ParentColor = False
+        end
+        object ComboBoxLiberado: TLabeledComboBox[4]
+          Left = 15
+          Height = 21
+          Top = 73
+          Width = 96
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            'Sim'
+            'Não'
+          )
+          Style = csDropDownList
+          TabOrder = 1
+          Text = 'Sim'
+          ComboBoxLabel.Left = 15
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 57
+          ComboBoxLabel.Width = 45
+          ComboBoxLabel.Caption = 'Liberado:'
+          ComboBoxLabel.ParentColor = False
+        end
+        object ComboBoxProgramado: TLabeledComboBox[5]
+          Left = 117
+          Height = 21
+          Top = 73
+          Width = 96
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            'Sim'
+            'Não'
+          )
+          Style = csDropDownList
+          TabOrder = 2
+          Text = 'Sim'
+          ComboBoxLabel.Left = 117
+          ComboBoxLabel.Height = 13
+          ComboBoxLabel.Top = 57
+          ComboBoxLabel.Width = 62
+          ComboBoxLabel.Caption = 'Programado:'
+          ComboBoxLabel.ParentColor = False
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 708
+    end
+  end
+end

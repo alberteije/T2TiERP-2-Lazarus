@@ -1,0 +1,19 @@
+inherited FOrcamentoPeriodo: TFOrcamentoPeriodo
+  Tag = 1
+  Left = 295
+  Top = 170
+  Caption = 'Períodos do Orçamento'
+  inherited PageControl: TPageControl
+    inherited PaginaGrid: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+      end
+    end
+  end
+end

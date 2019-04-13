@@ -1,0 +1,19 @@
+object FDataModuleConexao: TFDataModuleConexao
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 232
+  HorizontalOffset = 438
+  VerticalOffset = 204
+  Width = 286
+  object Conexao: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = False
+    Properties.Strings = (
+      'AutoEncodeStrings='
+    )
+    Port = 0
+    Database = 't2tierp'
+    left = 57
+    top = 37
+  end
+end

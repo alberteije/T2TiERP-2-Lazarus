@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<t2ti-orm-mapping>
+  <class name="EcfFuncionarioVO" table="ECF_FUNCIONARIO" >
+
+    <id name="Id" column="ID">
+      <generator class="sequence">
+        <param name="sequence">ECF_FUNCIONARIO</param>
+      </generator>
+    </id>
+
+    <property name="Nome" column="NOME" />
+    <property name="Telefone" column="TELEFONE" />
+    <property name="Celular" column="CELULAR" />
+    <property name="Email" column="EMAIL" />
+    <property name="ComissaoVista" column="COMISSAO_VISTA" />
+    <property name="ComissaoPrazo" column="COMISSAO_PRAZO" />
+    <property name="NivelAutorizacao" column="NIVEL_AUTORIZACAO" />
+
+  </class>
+</t2ti-orm-mapping>

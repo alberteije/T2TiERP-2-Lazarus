@@ -1,0 +1,271 @@
+inherited FNaturezaFinanceira: TFNaturezaFinanceira
+  Left = 344
+  Top = 160
+  Caption = 'Natureza Financeira'
+  inherited PageControl: TPageControl
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      inherited PanelGrid: TPanel
+        Height = 395
+        Width = 972
+        ClientHeight = 395
+        ClientWidth = 972
+        inherited PanelFiltroRapido: TPanel
+          Top = 341
+          Width = 972
+          ClientWidth = 972
+          inherited BotaoConsultar: TSpeedButton
+            Left = 838
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 671
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 343
+          Width = 972
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 429
+      ClientWidth = 1000
+      inherited PanelEdits: TPanel
+        Width = 1000
+        ClientWidth = 1000
+        object BevelEdits: TBevel[0]
+          Left = 9
+          Height = 265
+          Top = 8
+          Width = 975
+          Anchors = [akTop, akLeft, akRight]
+          Constraints.MinWidth = 753
+        end
+        object EditPlanoNaturezaFinanceira: TLabeledEdit[1]
+          Left = 77
+          Height = 21
+          Top = 30
+          Width = 899
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditPlanoNaturezaFinanceira
+          EditLabel.AnchorSideRight.Control = EditPlanoNaturezaFinanceira
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditPlanoNaturezaFinanceira
+          EditLabel.Left = 77
+          EditLabel.Height = 13
+          EditLabel.Top = 14
+          EditLabel.Width = 899
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 1
+          TabStop = False
+        end
+        object EditContabilConta: TLabeledEdit[2]
+          Left = 77
+          Height = 21
+          Top = 74
+          Width = 899
+          Anchors = [akTop, akLeft, akRight]
+          Color = clInfoBk
+          EditLabel.AnchorSideLeft.Control = EditContabilConta
+          EditLabel.AnchorSideRight.Control = EditContabilConta
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditContabilConta
+          EditLabel.Left = 77
+          EditLabel.Height = 13
+          EditLabel.Top = 58
+          EditLabel.Width = 899
+          EditLabel.Caption = '  '
+          EditLabel.ParentColor = False
+          ReadOnly = True
+          TabOrder = 3
+          TabStop = False
+        end
+        object EditAplicacao: TLabeledEdit[3]
+          Left = 16
+          Height = 21
+          Top = 159
+          Width = 960
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditAplicacao
+          EditLabel.AnchorSideRight.Control = EditAplicacao
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditAplicacao
+          EditLabel.Left = 16
+          EditLabel.Height = 13
+          EditLabel.Top = 143
+          EditLabel.Width = 960
+          EditLabel.Caption = 'Aplicação:'
+          EditLabel.ParentColor = False
+          MaxLength = 250
+          TabOrder = 6
+        end
+        object EditDescricao: TLabeledEdit[4]
+          Left = 16
+          Height = 21
+          Top = 116
+          Width = 736
+          EditLabel.AnchorSideLeft.Control = EditDescricao
+          EditLabel.AnchorSideRight.Control = EditDescricao
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditDescricao
+          EditLabel.Left = 16
+          EditLabel.Height = 13
+          EditLabel.Top = 100
+          EditLabel.Width = 736
+          EditLabel.Caption = 'Descrição:'
+          EditLabel.ParentColor = False
+          MaxLength = 100
+          TabOrder = 4
+        end
+        object EditClassificacao: TLabeledEdit[5]
+          Left = 758
+          Height = 21
+          Top = 116
+          Width = 218
+          Anchors = [akTop, akLeft, akRight]
+          EditLabel.AnchorSideLeft.Control = EditClassificacao
+          EditLabel.AnchorSideRight.Control = EditClassificacao
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = EditClassificacao
+          EditLabel.Left = 758
+          EditLabel.Height = 13
+          EditLabel.Top = 100
+          EditLabel.Width = 218
+          EditLabel.Caption = 'Classificação:'
+          EditLabel.ParentColor = False
+          TabOrder = 5
+        end
+        object EditIdPlanoNaturezaFinanceira: TLabeledCalcEdit[6]
+          Left = 16
+          Height = 21
+          Top = 30
+          Width = 61
+          Alignment = taRightJustify
+          DisplayFormat = '#'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 0
+          Value = 0
+          OnKeyUp = EditIdPlanoNaturezaFinanceiraKeyUp
+          CalcEditLabel.Left = 16
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 14
+          CalcEditLabel.Width = 152
+          CalcEditLabel.Caption = 'Plano Natureza Financeira [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+        object EditIdContabilConta: TLabeledCalcEdit[7]
+          Left = 16
+          Height = 21
+          Top = 74
+          Width = 61
+          Alignment = taRightJustify
+          DisplayFormat = '#'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 2
+          Value = 0
+          OnKeyUp = EditIdContabilContaKeyUp
+          CalcEditLabel.Left = 16
+          CalcEditLabel.Height = 13
+          CalcEditLabel.Top = 58
+          CalcEditLabel.Width = 98
+          CalcEditLabel.Caption = 'Contábil Conta [F1]:'
+          CalcEditLabel.ParentColor = False
+        end
+        object GroupBoxOpcoes: TGroupBox[8]
+          Left = 16
+          Height = 71
+          Top = 192
+          Width = 960
+          Anchors = [akTop, akLeft, akRight]
+          Caption = ' Opções: '
+          ClientHeight = 53
+          ClientWidth = 956
+          TabOrder = 7
+          object ComboBoxTipo: TLabeledComboBox
+            Left = 10
+            Height = 21
+            Top = 20
+            Width = 71
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              'Receita'
+              'Despesa'
+            )
+            Style = csDropDownList
+            TabOrder = 0
+            Text = 'Receita'
+            ComboBoxLabel.Left = 10
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 4
+            ComboBoxLabel.Width = 24
+            ComboBoxLabel.Caption = 'Tipo:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object ComboBoxAPagar: TLabeledComboBox
+            Left = 87
+            Height = 21
+            Top = 20
+            Width = 154
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              'Sim'
+              'Não'
+            )
+            Style = csDropDownList
+            TabOrder = 1
+            Text = 'Sim'
+            ComboBoxLabel.Left = 87
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 4
+            ComboBoxLabel.Width = 136
+            ComboBoxLabel.Caption = 'Aparece no Contas a Pagar:'
+            ComboBoxLabel.ParentColor = False
+          end
+          object ComboBoxAReceber: TLabeledComboBox
+            Left = 247
+            Height = 21
+            Top = 20
+            Width = 160
+            ItemHeight = 13
+            ItemIndex = 0
+            Items.Strings = (
+              'Sim'
+              'Não'
+            )
+            Style = csDropDownList
+            TabOrder = 2
+            Text = 'Sim'
+            ComboBoxLabel.Left = 247
+            ComboBoxLabel.Height = 13
+            ComboBoxLabel.Top = 4
+            ComboBoxLabel.Width = 148
+            ComboBoxLabel.Caption = 'Aparece no Contas a Receber:'
+            ComboBoxLabel.ParentColor = False
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    inherited BotaoExportar: TSpeedButton
+      Left = 808
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 698
+    end
+    inherited BotaoSeparador1: TSpeedButton
+      Left = 798
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 598
+    end
+  end
+end

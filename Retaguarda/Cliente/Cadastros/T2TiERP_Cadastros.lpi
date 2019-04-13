@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="T2TiERP_Cadastros"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="11">
+      <Item1>
+        <PackageName Value="zcore"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="ACBr_NFe"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="Printer4Lazarus"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="rxnew"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="LJGridUtilsPkg"/>
+      </Item5>
+      <Item6>
+        <PackageName Value="BrookRT"/>
+      </Item6>
+      <Item7>
+        <PackageName Value="LabeledControls"/>
+      </Item7>
+      <Item8>
+        <PackageName Value="FCL"/>
+      </Item8>
+      <Item9>
+        <PackageName Value="ACBr_Boleto"/>
+      </Item9>
+      <Item10>
+        <PackageName Value="SpkToolbarPackage"/>
+      </Item10>
+      <Item11>
+        <PackageName Value="LCL"/>
+      </Item11>
+    </RequiredPackages>
+    <Units Count="59">
+      <Unit0>
+        <Filename Value="T2TiERP_Cadastros.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="T2TiERP_Cadastros"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="Tela\umenu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FMenu"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UMenu"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="Tela\uproduto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FProduto"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UProduto"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\Comum\DataModule\UDataModule.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FDataModule"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="UDataModule"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="..\Comum\Tipos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Tipos"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="..\Comum\Tela\UBase.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FBase"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UBase"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\Comum\SessaoUsuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SessaoUsuario"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\..\Comum\VO\EmpresaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EmpresaVO"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\..\Comum\VO\UsuarioVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UsuarioVO"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\..\Comum\VO\VO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="VO"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="..\..\Comum\Biblioteca.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Biblioteca"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="..\Comum\Tela\UTela.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FTela"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UTela"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="..\Comum\Tela\UFiltro.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FFiltro"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UFiltro"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="..\..\Comum\Constantes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Constantes"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="..\Comum\Tela\UTelaCadastro.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FTelaCadastro"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UTelaCadastro"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="..\Comum\Tela\ULookup.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FLookup"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ULookup"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="..\..\Comum\VO\ProdutoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ProdutoVO"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="..\..\Comum\VO\ContadorVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ContadorVO"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="Tela\UEstadoCivil.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FEstadoCivil"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UEstadoCivil"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="..\..\Comum\VO\EstadoCivilVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EstadoCivilVO"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="Tela\UPessoa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FPessoa"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UPessoa"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="..\..\Comum\VO\PessoaTelefoneVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PessoaTelefoneVO"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="..\..\Comum\VO\PessoaJuridicaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PessoaJuridicaVO"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="..\..\Comum\VO\PessoaFisicaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PessoaFisicaVO"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="..\..\Comum\VO\PessoaEnderecoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PessoaEnderecoVO"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="..\..\Comum\VO\PessoaContatoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PessoaContatoVO"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="..\..\Comum\VO\PessoaVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PessoaVO"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="..\..\Comum\VO\SituacaoForCliVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SituacaoForCliVO"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="..\..\Comum\VO\AtividadeForCliVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="AtividadeForCliVO"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="Tela\UAtividadeForCli.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FAtividadeForCli"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UAtividadeForCli"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="Tela\USituacaoForCli.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FSituacaoForCli"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="USituacaoForCli"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="..\..\Comum\VO\TipoAdmissaoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TipoAdmissaoVO"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="Tela\UTipoAdmissao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FTipoAdmissao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UTipoAdmissao"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="Tela\UTipoRelacionamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FTipoRelacionamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UTipoRelacionamento"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="..\..\Comum\VO\TipoRelacionamentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TipoRelacionamentoVO"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="..\..\Comum\VO\TipoColaboradorVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TipoColaboradorVO"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="Tela\UTipoColaborador.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FTipoColaborador"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UTipoColaborador"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="Tela\USituacaoColaborador.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FSituacaoColaborador"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="USituacaoColaborador"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="..\..\Comum\VO\SituacaoColaboradorVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SituacaoColaboradorVO"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="Tela\UTipoDesligamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FTipoDesligamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UTipoDesligamento"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="..\..\Comum\VO\TipoDesligamentoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TipoDesligamentoVO"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="Tela\UAlmoxarifado.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FAlmoxarifado"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UAlmoxarifado"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="Tela\UPais.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FPais"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UPais"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="..\..\Comum\VO\PaisVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PaisVO"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="..\..\Comum\VO\AlmoxarifadoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="AlmoxarifadoVO"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="Tela\USetor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FSetor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="USetor"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="..\..\Comum\VO\SetorVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SetorVO"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="Tela\UUf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FUf"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UUf"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="..\..\Comum\VO\UfVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UfVO"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="Tela\UBanco.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FBanco"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UBanco"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="..\..\Comum\VO\BancoVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="BancoVO"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="Tela\UCfop.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FCfop"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UCfop"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="..\..\Comum\VO\CfopVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="CfopVO"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="..\..\Comum\VO\NfeDestinatarioVO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NfeDestinatarioVO"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="..\Comum\Controller\EstadoCivilController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EstadoCivilController"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="..\..\Comum\T2TiORM.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="T2TiORM"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="..\Comum\Controller\Controller.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Controller"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="..\Comum\Tela\ULogin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FLogin"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ULogin"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="..\Comum\Controller\EmpresaController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EmpresaController"/>
+      </Unit58>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="T2TiERP_Cadastros"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="Tela;..\Comum\DataModule;..\Comum;..\Comum\Tela;..\..\Comum\VO;..\..\Comum;..\Comum\Controller"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerMessages>
+        <MsgFileName Value=""/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

@@ -1,0 +1,3717 @@
+inherited FNFe: TFNFe
+  Tag = 1
+  Left = 339
+  Height = 583
+  Top = 98
+  Width = 1000
+  Caption = 'NF-e'
+  ClientHeight = 583
+  ClientWidth = 1000
+  inherited PageControl: TPageControl
+    Height = 552
+    Width = 1000
+    ActivePage = PaginaEdits
+    TabIndex = 1
+    inherited PaginaGrid: TTabSheet
+      ClientHeight = 496
+      ClientWidth = 992
+      inherited PanelGrid: TPanel
+        Height = 496
+        Width = 992
+        ClientHeight = 496
+        ClientWidth = 992
+        inherited PanelFiltroRapido: TPanel
+          Top = 444
+          Width = 992
+          ClientWidth = 992
+          inherited BotaoConsultar: TSpeedButton
+            Left = 856
+            OnClick = BotaoConsultarClick
+          end
+          inherited EditCriterioRapido: TLabeledMaskEdit
+            Width = 691
+          end
+        end
+        inherited Grid: TRxDBGrid
+          Height = 444
+          Width = 992
+        end
+      end
+    end
+    inherited PaginaEdits: TTabSheet
+      ClientHeight = 526
+      ClientWidth = 992
+      inherited PanelEdits: TPanel
+        Height = 526
+        Width = 992
+        ClientHeight = 526
+        ClientWidth = 992
+        object ScrollBox: TScrollBox[0]
+          Left = 4
+          Height = 518
+          Top = 4
+          Width = 984
+          HorzScrollBar.Page = 980
+          VertScrollBar.Page = 497
+          Align = alClient
+          ClientHeight = 497
+          ClientWidth = 980
+          TabOrder = 0
+          object BevelEdits: TBevel
+            Left = 0
+            Height = 353
+            Top = 31
+            Width = 1424
+            Align = alClient
+          end
+          object ActionToolBarEdits: TToolPanel
+            Left = 0
+            Height = 31
+            Top = 0
+            Width = 1424
+            Items = <            
+              item
+                Action = ActionAtualizarTotais
+                Visible = True
+                Left = 1310
+                Height = 21
+                Top = 5
+                Width = 109
+                ShowCaption = True
+              end            
+              item
+                Action = ActionConsultarSefaz
+                Visible = True
+                Left = 1201
+                Height = 21
+                Top = 5
+                Width = 109
+                ShowCaption = True
+              end            
+              item
+                Action = ActionCancelarNfe
+                Visible = True
+                Left = 1098
+                Height = 21
+                Top = 5
+                Width = 103
+                ShowCaption = True
+              end            
+              item
+                Action = ActionSelecionarCertificado
+                Visible = True
+                Left = 882
+                Height = 21
+                Top = 5
+                Width = 143
+                ShowCaption = True
+              end            
+              item
+                Action = ActionImprimirDanfe
+                Visible = True
+                Left = 369
+                Height = 21
+                Top = 5
+                Width = 114
+                ShowCaption = True
+              end            
+              item
+                Action = ActionEnviar
+                Visible = True
+                Left = 483
+                Height = 21
+                Top = 5
+                Width = 60
+                ShowCaption = True
+              end            
+              item
+                Action = ActionAssinar
+                Visible = True
+                Left = 543
+                Height = 21
+                Top = 5
+                Width = 66
+                ShowCaption = True
+              end            
+              item
+                Action = ActionValidar
+                Visible = True
+                Left = 609
+                Height = 21
+                Top = 5
+                Width = 64
+                ShowCaption = True
+              end            
+              item
+                Action = ActionGerarXml
+                Visible = True
+                Left = 673
+                Height = 21
+                Top = 5
+                Width = 83
+                ShowCaption = True
+              end            
+              item
+                Action = ActionCCe
+                Visible = True
+                Left = 756
+                Height = 21
+                Top = 5
+                Width = 55
+                ShowCaption = True
+              end            
+              item
+                Action = ActionEtiqueta
+                Visible = True
+                Left = 811
+                Height = 21
+                Top = 5
+                Width = 71
+                ShowCaption = True
+              end            
+              item
+                Action = ActionInutilizar
+                Visible = True
+                Left = 1025
+                Height = 21
+                Top = 5
+                Width = 73
+                ShowCaption = True
+              end>
+            ImageList = FDataModule.ImagensCadastros
+            ToolBarStyle = tbsWindowsXP
+            Options = [tpFlatBtns]
+            ButtonAllign = tbaRignt
+            Align = alTop
+            BorderWidth = 4
+            ClientHeight = 31
+            ClientWidth = 1424
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            ParentFont = False
+            TabOrder = 0
+          end
+          object PageControlEdits: TPageControl
+            Left = 0
+            Height = 353
+            Top = 31
+            Width = 1424
+            ActivePage = TabSheetDadosNotaFiscal
+            Align = alClient
+            TabIndex = 0
+            TabOrder = 1
+            object TabSheetDadosNotaFiscal: TTabSheet
+              Caption = 'Dados da NF-e'
+              ClientHeight = 327
+              ClientWidth = 1416
+              object PanelDadosNotaFiscal: TPanel
+                Left = 0
+                Height = 327
+                Top = 0
+                Width = 1416
+                Align = alClient
+                BevelInner = bvLowered
+                BevelOuter = bvNone
+                ClientHeight = 327
+                ClientWidth = 1416
+                FullRepaint = False
+                ParentBidiMode = False
+                TabOrder = 0
+                UseDockManager = False
+                object EditNumeroNfe: TLabeledEdit
+                  Left = 988
+                  Height = 21
+                  Top = 64
+                  Width = 84
+                  Anchors = [akTop, akRight]
+                  EditLabel.AnchorSideLeft.Control = EditNumeroNfe
+                  EditLabel.AnchorSideRight.Control = EditNumeroNfe
+                  EditLabel.AnchorSideRight.Side = asrBottom
+                  EditLabel.AnchorSideBottom.Control = EditNumeroNfe
+                  EditLabel.Left = 988
+                  EditLabel.Height = 13
+                  EditLabel.Top = 48
+                  EditLabel.Width = 84
+                  EditLabel.Caption = 'Número:'
+                  EditLabel.ParentColor = False
+                  ReadOnly = True
+                  TabOrder = 9
+                end
+                object EditSerie: TLabeledEdit
+                  Left = 920
+                  Height = 21
+                  Top = 64
+                  Width = 62
+                  Anchors = [akTop, akRight]
+                  EditLabel.AnchorSideLeft.Control = EditSerie
+                  EditLabel.AnchorSideRight.Control = EditSerie
+                  EditLabel.AnchorSideRight.Side = asrBottom
+                  EditLabel.AnchorSideBottom.Control = EditSerie
+                  EditLabel.Left = 920
+                  EditLabel.Height = 13
+                  EditLabel.Top = 48
+                  EditLabel.Width = 62
+                  EditLabel.Caption = 'Serie:'
+                  EditLabel.ParentColor = False
+                  ReadOnly = True
+                  TabOrder = 8
+                end
+                object EditNaturezaOperacao: TLabeledEdit
+                  Left = 648
+                  Height = 21
+                  Top = 21
+                  Width = 656
+                  Anchors = [akTop, akLeft, akRight]
+                  EditLabel.AnchorSideLeft.Control = EditNaturezaOperacao
+                  EditLabel.AnchorSideRight.Control = EditNaturezaOperacao
+                  EditLabel.AnchorSideRight.Side = asrBottom
+                  EditLabel.AnchorSideBottom.Control = EditNaturezaOperacao
+                  EditLabel.Left = 648
+                  EditLabel.Height = 13
+                  EditLabel.Top = 5
+                  EditLabel.Width = 656
+                  EditLabel.Caption = 'Natureza da Operação:'
+                  EditLabel.ParentColor = False
+                  ReadOnly = True
+                  TabOrder = 4
+                end
+                object GroupBoxDestinatario: TGroupBox
+                  Left = 6
+                  Height = 191
+                  Top = 134
+                  Width = 1298
+                  Anchors = [akTop, akLeft, akRight]
+                  Caption = 'Destinatário:'
+                  ClientHeight = 173
+                  ClientWidth = 1294
+                  TabOrder = 18
+                  object EditDestinatarioCpfCnpj: TLabeledEdit
+                    Left = 67
+                    Height = 21
+                    Top = 18
+                    Width = 136
+                    EditLabel.AnchorSideLeft.Control = EditDestinatarioCpfCnpj
+                    EditLabel.AnchorSideRight.Control = EditDestinatarioCpfCnpj
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditDestinatarioCpfCnpj
+                    EditLabel.Left = 67
+                    EditLabel.Height = 13
+                    EditLabel.Top = 2
+                    EditLabel.Width = 136
+                    EditLabel.Caption = 'CPF / CNPJ:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 14
+                    TabOrder = 1
+                  end
+                  object EditDestinatarioIE: TLabeledEdit
+                    Left = 1015
+                    Height = 21
+                    Top = 101
+                    Width = 138
+                    Anchors = [akTop, akRight]
+                    EditLabel.AnchorSideLeft.Control = EditDestinatarioIE
+                    EditLabel.AnchorSideRight.Control = EditDestinatarioIE
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditDestinatarioIE
+                    EditLabel.Left = 1015
+                    EditLabel.Height = 13
+                    EditLabel.Top = 85
+                    EditLabel.Width = 138
+                    EditLabel.Caption = 'Inscrição Estadual:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 14
+                    TabOrder = 11
+                  end
+                  object EditDestinatarioTelefone: TLabeledEdit
+                    Left = 1159
+                    Height = 21
+                    Top = 101
+                    Width = 129
+                    Anchors = [akTop, akRight]
+                    EditLabel.AnchorSideLeft.Control = EditDestinatarioTelefone
+                    EditLabel.AnchorSideRight.Control = EditDestinatarioTelefone
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditDestinatarioTelefone
+                    EditLabel.Left = 1159
+                    EditLabel.Height = 13
+                    EditLabel.Top = 85
+                    EditLabel.Width = 129
+                    EditLabel.Caption = 'Telefone:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 14
+                    TabOrder = 12
+                  end
+                  object EditDestinatarioLogradouro: TLabeledEdit
+                    Left = 85
+                    Height = 21
+                    Top = 59
+                    Width = 714
+                    Anchors = [akTop, akLeft, akRight]
+                    EditLabel.AnchorSideLeft.Control = EditDestinatarioLogradouro
+                    EditLabel.AnchorSideRight.Control = EditDestinatarioLogradouro
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditDestinatarioLogradouro
+                    EditLabel.Left = 85
+                    EditLabel.Height = 13
+                    EditLabel.Top = 43
+                    EditLabel.Width = 714
+                    EditLabel.Caption = 'Logradouro:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 4
+                  end
+                  object EditDestinatarioNumero: TLabeledEdit
+                    Left = 807
+                    Height = 21
+                    Top = 59
+                    Width = 100
+                    Anchors = [akTop, akRight]
+                    EditLabel.AnchorSideLeft.Control = EditDestinatarioNumero
+                    EditLabel.AnchorSideRight.Control = EditDestinatarioNumero
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditDestinatarioNumero
+                    EditLabel.Left = 807
+                    EditLabel.Height = 13
+                    EditLabel.Top = 43
+                    EditLabel.Width = 100
+                    EditLabel.Caption = 'Numero:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 5
+                  end
+                  object EditDestinatarioBairro: TLabeledEdit
+                    Left = 7
+                    Height = 21
+                    Top = 101
+                    Width = 200
+                    EditLabel.AnchorSideLeft.Control = EditDestinatarioBairro
+                    EditLabel.AnchorSideRight.Control = EditDestinatarioBairro
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditDestinatarioBairro
+                    EditLabel.Left = 7
+                    EditLabel.Height = 13
+                    EditLabel.Top = 85
+                    EditLabel.Width = 200
+                    EditLabel.Caption = 'Bairro:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 8
+                  end
+                  object EditDestinatarioCEP: TLabeledEdit
+                    Left = 7
+                    Height = 21
+                    Top = 59
+                    Width = 72
+                    EditLabel.AnchorSideLeft.Control = EditDestinatarioCEP
+                    EditLabel.AnchorSideRight.Control = EditDestinatarioCEP
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditDestinatarioCEP
+                    EditLabel.Left = 7
+                    EditLabel.Height = 13
+                    EditLabel.Top = 43
+                    EditLabel.Width = 72
+                    EditLabel.Caption = 'CEP:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 8
+                    TabOrder = 3
+                  end
+                  object EditDestinatarioCidade: TLabeledEdit
+                    Left = 282
+                    Height = 21
+                    Top = 101
+                    Width = 678
+                    Anchors = [akTop, akLeft, akRight]
+                    EditLabel.AnchorSideLeft.Control = EditDestinatarioCidade
+                    EditLabel.AnchorSideRight.Control = EditDestinatarioCidade
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditDestinatarioCidade
+                    EditLabel.Left = 282
+                    EditLabel.Height = 13
+                    EditLabel.Top = 85
+                    EditLabel.Width = 678
+                    EditLabel.Caption = 'Cidade:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 9
+                  end
+                  object EditDestinatarioUF: TLabeledEdit
+                    Left = 967
+                    Height = 21
+                    Top = 101
+                    Width = 39
+                    Anchors = [akTop, akRight]
+                    CharCase = ecUppercase
+                    EditLabel.AnchorSideLeft.Control = EditDestinatarioUF
+                    EditLabel.AnchorSideRight.Control = EditDestinatarioUF
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditDestinatarioUF
+                    EditLabel.Left = 967
+                    EditLabel.Height = 13
+                    EditLabel.Top = 85
+                    EditLabel.Width = 39
+                    EditLabel.Caption = 'UF:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 2
+                    TabOrder = 10
+                  end
+                  object EditDestinatarioComplemento: TLabeledEdit
+                    Left = 914
+                    Height = 21
+                    Top = 59
+                    Width = 374
+                    Anchors = [akTop, akRight]
+                    EditLabel.AnchorSideLeft.Control = EditDestinatarioComplemento
+                    EditLabel.AnchorSideRight.Control = EditDestinatarioComplemento
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditDestinatarioComplemento
+                    EditLabel.Left = 914
+                    EditLabel.Height = 13
+                    EditLabel.Top = 43
+                    EditLabel.Width = 374
+                    EditLabel.Caption = 'Complemento:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 6
+                  end
+                  object EditDestinatarioRazao: TLabeledEdit
+                    Left = 209
+                    Height = 21
+                    Top = 18
+                    Width = 1079
+                    Anchors = [akTop, akLeft, akRight]
+                    EditLabel.AnchorSideLeft.Control = EditDestinatarioRazao
+                    EditLabel.AnchorSideRight.Control = EditDestinatarioRazao
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditDestinatarioRazao
+                    EditLabel.Left = 209
+                    EditLabel.Height = 13
+                    EditLabel.Top = 2
+                    EditLabel.Width = 1079
+                    EditLabel.Caption = 'Razão Social / Nome:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 2
+                  end
+                  object EditDestinatarioEmail: TLabeledEdit
+                    Left = 151
+                    Height = 21
+                    Top = 145
+                    Width = 1137
+                    Anchors = [akTop, akLeft, akRight]
+                    EditLabel.AnchorSideLeft.Control = EditDestinatarioEmail
+                    EditLabel.AnchorSideRight.Control = EditDestinatarioEmail
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditDestinatarioEmail
+                    EditLabel.Left = 151
+                    EditLabel.Height = 13
+                    EditLabel.Top = 129
+                    EditLabel.Width = 1137
+                    EditLabel.Caption = 'E-Mail:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 14
+                  end
+                  object EditDestinatarioId: TLabeledCalcEdit
+                    Left = 7
+                    Height = 21
+                    Top = 18
+                    Width = 54
+                    Alignment = taRightJustify
+                    DecimalPlaces = 0
+                    DisplayFormat = '0'
+                    MaxValue = 0
+                    MinValue = 0
+                    TabOrder = 0
+                    Value = 0
+                    OnKeyUp = EditDestinatarioIdKeyUp
+                    CalcEditLabel.Left = 7
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Top = 2
+                    CalcEditLabel.Width = 37
+                    CalcEditLabel.Caption = 'Id [F1]:'
+                    CalcEditLabel.ParentColor = False
+                  end
+                  object EditDestinatarioSuframa: TLabeledEdit
+                    Left = 7
+                    Height = 21
+                    Top = 145
+                    Width = 138
+                    EditLabel.AnchorSideLeft.Control = EditDestinatarioSuframa
+                    EditLabel.AnchorSideRight.Control = EditDestinatarioSuframa
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditDestinatarioSuframa
+                    EditLabel.Left = 7
+                    EditLabel.Height = 13
+                    EditLabel.Top = 129
+                    EditLabel.Width = 138
+                    EditLabel.Caption = 'SUFRAMA:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 15
+                    TabOrder = 13
+                  end
+                  object EditDestinatarioCodigoIbge: TLabeledEdit
+                    Left = 213
+                    Height = 21
+                    Top = 101
+                    Width = 63
+                    EditLabel.AnchorSideLeft.Control = EditDestinatarioCodigoIbge
+                    EditLabel.AnchorSideRight.Control = EditDestinatarioCodigoIbge
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditDestinatarioCodigoIbge
+                    EditLabel.Left = 213
+                    EditLabel.Height = 13
+                    EditLabel.Top = 85
+                    EditLabel.Width = 63
+                    EditLabel.Caption = 'Cód IBGE:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 7
+                  end
+                end
+                object EditDataHoraEmissao: TLabeledDateEdit
+                  Left = 1078
+                  Height = 21
+                  Top = 64
+                  Width = 110
+                  Anchors = [akTop, akRight]
+                  ButtonWidth = 0
+                  CharCase = ecNormal
+                  DialogTitle = 'Select a Date'
+                  MaxLength = 10
+                  NumGlyphs = 2
+                  PopupColor = clWindow
+                  TabOrder = 10
+                  Text = '  /  /    '
+                  DateEditLabel.Left = 1078
+                  DateEditLabel.Height = 13
+                  DateEditLabel.Top = 48
+                  DateEditLabel.Width = 83
+                  DateEditLabel.Caption = 'Data de Emissão:'
+                  DateEditLabel.ParentColor = False
+                end
+                object EditDataEntradaSaida: TLabeledDateEdit
+                  Left = 1194
+                  Height = 21
+                  Top = 64
+                  Width = 110
+                  Anchors = [akTop, akRight]
+                  ButtonWidth = 0
+                  CharCase = ecNormal
+                  DialogTitle = 'Select a Date'
+                  MaxLength = 10
+                  NumGlyphs = 2
+                  PopupColor = clWindow
+                  TabOrder = 11
+                  Text = '  /  /    '
+                  DateEditLabel.Left = 1194
+                  DateEditLabel.Height = 13
+                  DateEditLabel.Top = 48
+                  DateEditLabel.Width = 98
+                  DateEditLabel.Caption = 'Data Entrada/Saída:'
+                  DateEditLabel.ParentColor = False
+                end
+                object EditHoraEntradaSaida: TLabeledMaskEdit
+                  Left = 1310
+                  Height = 21
+                  Top = 64
+                  Width = 115
+                  Anchors = [akTop, akRight]
+                  CharCase = ecNormal
+                  MaxLength = 8
+                  TabOrder = 12
+                  EditMask = '##:##:##;1;_'
+                  Text = '  :  :  '
+                  SpaceChar = '_'
+                  MaskEditLabel.Left = 1310
+                  MaskEditLabel.Height = 13
+                  MaskEditLabel.Top = 48
+                  MaskEditLabel.Width = 105
+                  MaskEditLabel.Caption = 'EditHoraEntradaSaida'
+                  MaskEditLabel.ParentColor = False
+                end
+                object ComboTipoOperacao: TLabeledComboBox
+                  Left = 7
+                  Height = 22
+                  Top = 106
+                  Width = 200
+                  ItemHeight = 16
+                  ItemIndex = 1
+                  Items.Strings = (
+                    '0 - Entrada'
+                    '1 - Saída'
+                  )
+                  ReadOnly = True
+                  Style = csOwnerDrawFixed
+                  TabOrder = 13
+                  Text = '1 - Saída'
+                  ComboBoxLabel.Left = 7
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Top = 90
+                  ComboBoxLabel.Width = 89
+                  ComboBoxLabel.Caption = 'Tipo de Operação:'
+                  ComboBoxLabel.ParentColor = False
+                end
+                object ComboTipoEmissao: TLabeledComboBox
+                  Left = 213
+                  Height = 22
+                  Top = 106
+                  Width = 190
+                  ItemHeight = 16
+                  ItemIndex = 0
+                  Items.Strings = (
+                    '1 – Normal'
+                    '2 – Contingência FS'
+                    '3 – Contingência SCAN'
+                    '4 – Contingência DPEC'
+                    '5 – Contingência FS-DA'
+                    '6 – Contingência SVC-AN'
+                    '7 – Contingência SVC-RS'
+                  )
+                  ReadOnly = True
+                  Style = csOwnerDrawFixed
+                  TabOrder = 14
+                  Text = '1 – Normal'
+                  ComboBoxLabel.Left = 213
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Top = 90
+                  ComboBoxLabel.Width = 80
+                  ComboBoxLabel.Caption = 'Tipo de Emissão:'
+                  ComboBoxLabel.ParentColor = False
+                end
+                object ComboFinalidadeEmissao: TLabeledComboBox
+                  Left = 409
+                  Height = 22
+                  Top = 106
+                  Width = 190
+                  ItemHeight = 16
+                  ItemIndex = 0
+                  Items.Strings = (
+                    '1 - Normal'
+                    '2 - Complementar'
+                    '3 - Ajuste'
+                  )
+                  ReadOnly = True
+                  Style = csOwnerDrawFixed
+                  TabOrder = 15
+                  Text = '1 - Normal'
+                  ComboBoxLabel.Left = 409
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Top = 90
+                  ComboBoxLabel.Width = 108
+                  ComboBoxLabel.Caption = 'Finalidade de Emissão:'
+                  ComboBoxLabel.ParentColor = False
+                end
+                object ComboFormaImpDanfe: TLabeledComboBox
+                  Left = 605
+                  Height = 22
+                  Top = 106
+                  Width = 190
+                  ItemHeight = 16
+                  ItemIndex = 0
+                  Items.Strings = (
+                    '1 - Retrato'
+                    '2 - Paisagem'
+                  )
+                  ReadOnly = True
+                  Style = csOwnerDrawFixed
+                  TabOrder = 16
+                  Text = '1 - Retrato'
+                  ComboBoxLabel.Left = 605
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Top = 90
+                  ComboBoxLabel.Width = 133
+                  ComboBoxLabel.Caption = 'Formato Impressão DANFE:'
+                  ComboBoxLabel.ParentColor = False
+                end
+                object ComboBoxFormaPagamento: TLabeledComboBox
+                  Left = 801
+                  Height = 22
+                  Top = 106
+                  Width = 503
+                  Anchors = [akTop, akLeft, akRight]
+                  ItemHeight = 16
+                  ItemIndex = 0
+                  Items.Strings = (
+                    'A Vista'
+                    'A Prazo'
+                    'Outros'
+                  )
+                  ReadOnly = True
+                  Style = csOwnerDrawFixed
+                  TabOrder = 17
+                  Text = 'A Vista'
+                  ComboBoxLabel.Left = 801
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Top = 90
+                  ComboBoxLabel.Width = 106
+                  ComboBoxLabel.Caption = 'Forma de Pagamento:'
+                  ComboBoxLabel.ParentColor = False
+                end
+                object EditChaveAcesso: TLabeledEdit
+                  Left = 7
+                  Height = 22
+                  Top = 63
+                  Width = 742
+                  Anchors = [akTop, akLeft, akRight]
+                  AutoSize = False
+                  EditLabel.AnchorSideLeft.Control = EditChaveAcesso
+                  EditLabel.AnchorSideRight.Control = EditChaveAcesso
+                  EditLabel.AnchorSideRight.Side = asrBottom
+                  EditLabel.AnchorSideBottom.Control = EditChaveAcesso
+                  EditLabel.Left = 7
+                  EditLabel.Height = 13
+                  EditLabel.Top = 47
+                  EditLabel.Width = 742
+                  EditLabel.Caption = 'Chave de Acesso:'
+                  EditLabel.ParentColor = False
+                  Font.CharSet = ANSI_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -11
+                  Font.Name = 'Courier New'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                  ReadOnly = True
+                  TabOrder = 5
+                end
+                object EditCodigoNumerico: TLabeledEdit
+                  Left = 776
+                  Height = 21
+                  Top = 64
+                  Width = 138
+                  Anchors = [akTop, akRight]
+                  EditLabel.AnchorSideLeft.Control = EditCodigoNumerico
+                  EditLabel.AnchorSideRight.Control = EditCodigoNumerico
+                  EditLabel.AnchorSideRight.Side = asrBottom
+                  EditLabel.AnchorSideBottom.Control = EditCodigoNumerico
+                  EditLabel.Left = 776
+                  EditLabel.Height = 13
+                  EditLabel.Top = 48
+                  EditLabel.Width = 138
+                  EditLabel.Caption = 'Cód. Numérico:'
+                  EditLabel.ParentColor = False
+                  ReadOnly = True
+                  TabOrder = 7
+                end
+                object EditDigitoChaveAcesso: TLabeledEdit
+                  Left = 749
+                  Height = 22
+                  Top = 63
+                  Width = 21
+                  Anchors = [akTop, akRight]
+                  AutoSize = False
+                  EditLabel.AnchorSideLeft.Control = EditDigitoChaveAcesso
+                  EditLabel.AnchorSideRight.Control = EditDigitoChaveAcesso
+                  EditLabel.AnchorSideRight.Side = asrBottom
+                  EditLabel.AnchorSideBottom.Control = EditDigitoChaveAcesso
+                  EditLabel.Left = 749
+                  EditLabel.Height = 13
+                  EditLabel.Top = 47
+                  EditLabel.Width = 21
+                  EditLabel.Caption = 'DV:'
+                  EditLabel.ParentColor = False
+                  Font.CharSet = ANSI_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -11
+                  Font.Name = 'Courier New'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                  ReadOnly = True
+                  TabOrder = 6
+                end
+                object ComboboxModeloNotaFiscal: TLabeledComboBox
+                  Left = 455
+                  Height = 22
+                  Top = 21
+                  Width = 187
+                  ItemHeight = 16
+                  ItemIndex = 0
+                  Items.Strings = (
+                    '55 - Nota Fiscal Eletrônica - NFe'
+                  )
+                  ReadOnly = True
+                  Style = csOwnerDrawFixed
+                  TabOrder = 3
+                  Text = '55 - Nota Fiscal Eletrônica - NFe'
+                  ComboBoxLabel.Left = 455
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Top = 5
+                  ComboBoxLabel.Width = 93
+                  ComboBoxLabel.Caption = 'Modelo Nota Fiscal:'
+                  ComboBoxLabel.ParentColor = False
+                end
+                object EditIdOperacaoFiscal: TLabeledCalcEdit
+                  Left = 7
+                  Height = 21
+                  Top = 21
+                  Width = 61
+                  Alignment = taRightJustify
+                  DecimalPlaces = 0
+                  DisplayFormat = '0'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 0
+                  Value = 0
+                  OnKeyUp = EditIdOperacaoFiscalKeyUp
+                  CalcEditLabel.Left = 7
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 5
+                  CalcEditLabel.Width = 103
+                  CalcEditLabel.Caption = 'Operação Fiscal [F1]:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditOperacaoFiscal: TLabeledEdit
+                  Left = 68
+                  Height = 21
+                  Top = 21
+                  Width = 314
+                  Color = clInfoBk
+                  EditLabel.AnchorSideLeft.Control = EditOperacaoFiscal
+                  EditLabel.AnchorSideRight.Control = EditOperacaoFiscal
+                  EditLabel.AnchorSideRight.Side = asrBottom
+                  EditLabel.AnchorSideBottom.Control = EditOperacaoFiscal
+                  EditLabel.Left = 68
+                  EditLabel.Height = 13
+                  EditLabel.Top = 5
+                  EditLabel.Width = 314
+                  EditLabel.Caption = '  '
+                  EditLabel.ParentColor = False
+                  ReadOnly = True
+                  TabOrder = 1
+                  TabStop = False
+                end
+                object EditIdVenda: TLabeledCalcEdit
+                  Left = 388
+                  Height = 21
+                  Top = 21
+                  Width = 61
+                  Alignment = taRightJustify
+                  DecimalPlaces = 0
+                  DisplayFormat = '0'
+                  MaxValue = 0
+                  MinValue = 0
+                  TabOrder = 2
+                  Value = 0
+                  OnKeyUp = EditIdVendaKeyUp
+                  CalcEditLabel.Left = 388
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 5
+                  CalcEditLabel.Width = 57
+                  CalcEditLabel.Caption = 'Venda [F1]:'
+                  CalcEditLabel.ParentColor = False
+                end
+              end
+            end
+            object TabSheetProdutos: TTabSheet
+              Caption = 'Produtos / Serviços'
+              ClientHeight = 343
+              ClientWidth = 972
+              ImageIndex = 1
+              object PanelDetalhes: TPanel
+                Left = 0
+                Height = 343
+                Top = 0
+                Width = 972
+                Align = alClient
+                BevelInner = bvLowered
+                BevelOuter = bvNone
+                ClientHeight = 343
+                ClientWidth = 972
+                TabOrder = 0
+                object GridItens: TRxDBGrid
+                  Left = 1
+                  Height = 310
+                  Top = 32
+                  Width = 970
+                  TitleButtons = False
+                  AutoSort = True
+                  KeyStrokes = <                  
+                    item
+                      Command = rxgcShowFindDlg
+                      ShortCut = 16454
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowColumnsDlg
+                      ShortCut = 16471
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowFilterDlg
+                      ShortCut = 16468
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowSortDlg
+                      ShortCut = 16467
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcShowQuickFilter
+                      ShortCut = 16465
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcHideQuickFilter
+                      ShortCut = 16456
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcSelectAll
+                      ShortCut = 16449
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcDeSelectAll
+                      ShortCut = 16429
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcInvertSelection
+                      ShortCut = 16426
+                      Enabled = True
+                    end                  
+                    item
+                      Command = rxgcOptimizeColumnsWidth
+                      ShortCut = 16427
+                      Enabled = True
+                    end>
+                  OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                  Align = alClient
+                  Color = clWindow
+                  DrawFullLine = False
+                  FocusColor = clRed
+                  SelectedColor = clHighlight
+                  GridLineStyle = psSolid
+                  DataSource = FDataModuleNFe.DSNfeDetalhe
+                  Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+                  ParentColor = False
+                  TabOrder = 0
+                  TitleFont.Color = clWindowText
+                  TitleFont.Height = -11
+                  TitleFont.Name = 'Tahoma'
+                  OnKeyDown = GridItensKeyDown
+                end
+                object ActionToolBar1: TToolPanel
+                  Left = 1
+                  Height = 31
+                  Top = 1
+                  Width = 970
+                  Items = <                  
+                    item
+                      Action = ActionIncluirItem
+                      Visible = True
+                      Left = 4
+                      Height = 24
+                      Top = 4
+                      Width = 133
+                      ShowCaption = True
+                    end                  
+                    item
+                      Action = ActionExcluirItem
+                      Visible = True
+                      Left = 137
+                      Height = 24
+                      Top = 4
+                      Width = 134
+                      ShowCaption = True
+                    end>
+                  ImageList = FDataModule.ImagensCadastros
+                  ToolBarStyle = tbsWindowsXP
+                  Options = [tpFlatBtns]
+                  ButtonAllign = tbaRignt
+                  Align = alTop
+                  BorderWidth = 4
+                  ClientHeight = 31
+                  ClientWidth = 970
+                  Font.Color = clBlack
+                  Font.Height = -11
+                  Font.Name = 'Tahoma'
+                  ParentFont = False
+                  TabOrder = 1
+                end
+              end
+            end
+            object TabSheetDocumentosReferenciados: TTabSheet
+              Caption = 'Documentos Referenciados'
+              ClientHeight = 343
+              ClientWidth = 972
+              ImageIndex = 2
+              object PageControlReferenciado: TPageControl
+                Left = 0
+                Height = 312
+                Top = 31
+                Width = 972
+                ActivePage = TabSheetReferenciadoNfe
+                Align = alClient
+                TabIndex = 0
+                TabOrder = 0
+                object TabSheetReferenciadoNfe: TTabSheet
+                  Caption = 'NF-e'
+                  ClientHeight = 286
+                  ClientWidth = 964
+                  object GridNfeReferenciada: TRxDBGrid
+                    Left = 0
+                    Height = 286
+                    Top = 0
+                    Width = 964
+                    TitleButtons = False
+                    AutoSort = True
+                    KeyStrokes = <                    
+                      item
+                        Command = rxgcShowFindDlg
+                        ShortCut = 16454
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowColumnsDlg
+                        ShortCut = 16471
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowFilterDlg
+                        ShortCut = 16468
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowSortDlg
+                        ShortCut = 16467
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowQuickFilter
+                        ShortCut = 16465
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcHideQuickFilter
+                        ShortCut = 16456
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcSelectAll
+                        ShortCut = 16449
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcDeSelectAll
+                        ShortCut = 16429
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcInvertSelection
+                        ShortCut = 16426
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcOptimizeColumnsWidth
+                        ShortCut = 16427
+                        Enabled = True
+                      end>
+                    OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                    Align = alClient
+                    Color = clWindow
+                    DrawFullLine = False
+                    FocusColor = clRed
+                    SelectedColor = clHighlight
+                    GridLineStyle = psSolid
+                    DataSource = FDataModuleNFe.DSNfeReferenciada
+                    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+                    ParentColor = False
+                    TabOrder = 0
+                    TitleFont.Color = clWindowText
+                    TitleFont.Height = -11
+                    TitleFont.Name = 'Tahoma'
+                  end
+                end
+                object TabSheetReferenciadoNf: TTabSheet
+                  Caption = 'NF 1/1A'
+                  ClientHeight = 286
+                  ClientWidth = 964
+                  ImageIndex = 1
+                  object GridNfReferenciada: TRxDBGrid
+                    Left = 0
+                    Height = 286
+                    Top = 0
+                    Width = 964
+                    TitleButtons = False
+                    AutoSort = True
+                    KeyStrokes = <                    
+                      item
+                        Command = rxgcShowFindDlg
+                        ShortCut = 16454
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowColumnsDlg
+                        ShortCut = 16471
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowFilterDlg
+                        ShortCut = 16468
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowSortDlg
+                        ShortCut = 16467
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowQuickFilter
+                        ShortCut = 16465
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcHideQuickFilter
+                        ShortCut = 16456
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcSelectAll
+                        ShortCut = 16449
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcDeSelectAll
+                        ShortCut = 16429
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcInvertSelection
+                        ShortCut = 16426
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcOptimizeColumnsWidth
+                        ShortCut = 16427
+                        Enabled = True
+                      end>
+                    OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                    Align = alClient
+                    Color = clWindow
+                    DrawFullLine = False
+                    FocusColor = clRed
+                    SelectedColor = clHighlight
+                    GridLineStyle = psSolid
+                    DataSource = FDataModuleNFe.DSNfReferenciada
+                    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+                    ParentColor = False
+                    TabOrder = 0
+                    TitleFont.Color = clWindowText
+                    TitleFont.Height = -11
+                    TitleFont.Name = 'Tahoma'
+                  end
+                end
+                object TabSheetReferenciadoCte: TTabSheet
+                  Caption = 'CT-e'
+                  ClientHeight = 286
+                  ClientWidth = 964
+                  ImageIndex = 2
+                  object GridCteReferenciado: TRxDBGrid
+                    Left = 0
+                    Height = 286
+                    Top = 0
+                    Width = 964
+                    TitleButtons = False
+                    AutoSort = True
+                    KeyStrokes = <                    
+                      item
+                        Command = rxgcShowFindDlg
+                        ShortCut = 16454
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowColumnsDlg
+                        ShortCut = 16471
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowFilterDlg
+                        ShortCut = 16468
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowSortDlg
+                        ShortCut = 16467
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowQuickFilter
+                        ShortCut = 16465
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcHideQuickFilter
+                        ShortCut = 16456
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcSelectAll
+                        ShortCut = 16449
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcDeSelectAll
+                        ShortCut = 16429
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcInvertSelection
+                        ShortCut = 16426
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcOptimizeColumnsWidth
+                        ShortCut = 16427
+                        Enabled = True
+                      end>
+                    OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                    Align = alClient
+                    Color = clWindow
+                    DrawFullLine = False
+                    FocusColor = clRed
+                    SelectedColor = clHighlight
+                    GridLineStyle = psSolid
+                    DataSource = FDataModuleNFe.DSCteReferenciado
+                    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+                    ParentColor = False
+                    TabOrder = 0
+                    TitleFont.Color = clWindowText
+                    TitleFont.Height = -11
+                    TitleFont.Name = 'Tahoma'
+                  end
+                end
+                object TabSheetReferenciadoRural: TTabSheet
+                  Caption = 'NF Produtor Rural'
+                  ClientHeight = 286
+                  ClientWidth = 964
+                  ImageIndex = 3
+                  object GridNfRuralReferenciada: TRxDBGrid
+                    Left = 0
+                    Height = 286
+                    Top = 0
+                    Width = 964
+                    TitleButtons = False
+                    AutoSort = True
+                    KeyStrokes = <                    
+                      item
+                        Command = rxgcShowFindDlg
+                        ShortCut = 16454
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowColumnsDlg
+                        ShortCut = 16471
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowFilterDlg
+                        ShortCut = 16468
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowSortDlg
+                        ShortCut = 16467
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowQuickFilter
+                        ShortCut = 16465
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcHideQuickFilter
+                        ShortCut = 16456
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcSelectAll
+                        ShortCut = 16449
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcDeSelectAll
+                        ShortCut = 16429
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcInvertSelection
+                        ShortCut = 16426
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcOptimizeColumnsWidth
+                        ShortCut = 16427
+                        Enabled = True
+                      end>
+                    OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                    Align = alClient
+                    Color = clWindow
+                    DrawFullLine = False
+                    FocusColor = clRed
+                    SelectedColor = clHighlight
+                    GridLineStyle = psSolid
+                    DataSource = FDataModuleNFe.DSNfRuralReferenciada
+                    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+                    ParentColor = False
+                    TabOrder = 0
+                    TitleFont.Color = clWindowText
+                    TitleFont.Height = -11
+                    TitleFont.Name = 'Tahoma'
+                  end
+                end
+                object TabSheetReferenciadoCupom: TTabSheet
+                  Caption = 'Cupom Fiscal'
+                  ClientHeight = 286
+                  ClientWidth = 964
+                  ImageIndex = 4
+                  object GridCupomReferenciado: TRxDBGrid
+                    Left = 0
+                    Height = 286
+                    Top = 0
+                    Width = 964
+                    TitleButtons = False
+                    AutoSort = True
+                    KeyStrokes = <                    
+                      item
+                        Command = rxgcShowFindDlg
+                        ShortCut = 16454
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowColumnsDlg
+                        ShortCut = 16471
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowFilterDlg
+                        ShortCut = 16468
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowSortDlg
+                        ShortCut = 16467
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowQuickFilter
+                        ShortCut = 16465
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcHideQuickFilter
+                        ShortCut = 16456
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcSelectAll
+                        ShortCut = 16449
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcDeSelectAll
+                        ShortCut = 16429
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcInvertSelection
+                        ShortCut = 16426
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcOptimizeColumnsWidth
+                        ShortCut = 16427
+                        Enabled = True
+                      end>
+                    OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                    Align = alClient
+                    Color = clWindow
+                    DrawFullLine = False
+                    FocusColor = clRed
+                    SelectedColor = clHighlight
+                    GridLineStyle = psSolid
+                    DataSource = FDataModuleNFe.DSCupomReferenciado
+                    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+                    ParentColor = False
+                    TabOrder = 0
+                    TitleFont.Color = clWindowText
+                    TitleFont.Height = -11
+                    TitleFont.Name = 'Tahoma'
+                  end
+                end
+              end
+              object ActionToolBar2: TToolPanel
+                Left = 0
+                Height = 31
+                Top = 0
+                Width = 972
+                Items = <                
+                  item
+                    Action = ActionExcluirDocumentosReferenciados
+                    Visible = True
+                    Left = 4
+                    Height = 24
+                    Top = 4
+                    Width = 210
+                    ShowCaption = True
+                  end>
+                ImageList = FDataModule.ImagensCadastros
+                ToolBarStyle = tbsWindowsXP
+                Options = [tpFlatBtns]
+                ButtonAllign = tbaRignt
+                Align = alTop
+                BorderWidth = 4
+                ClientHeight = 31
+                ClientWidth = 972
+                Font.Color = clBlack
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                ParentFont = False
+                TabOrder = 1
+              end
+            end
+            object TabSheetEntregaRetirada: TTabSheet
+              Caption = 'Entrega / Retirada'
+              ClientHeight = 343
+              ClientWidth = 972
+              ImageIndex = 6
+              object PanelEntregaRetirada: TPanel
+                Left = 0
+                Height = 343
+                Top = 0
+                Width = 972
+                Align = alClient
+                BevelInner = bvLowered
+                BevelOuter = bvNone
+                ClientHeight = 343
+                ClientWidth = 972
+                FullRepaint = False
+                ParentBidiMode = False
+                TabOrder = 0
+                UseDockManager = False
+                object GroupBoxEntrega: TGroupBox
+                  Left = 6
+                  Height = 113
+                  Top = 33
+                  Width = 956
+                  Anchors = [akTop, akLeft, akRight]
+                  Caption = 'Dados para entrega:'
+                  ClientHeight = 95
+                  ClientWidth = 952
+                  TabOrder = 0
+                  object EditEntregaCpfCnpj: TLabeledEdit
+                    Left = 7
+                    Height = 21
+                    Top = 17
+                    Width = 136
+                    EditLabel.AnchorSideLeft.Control = EditEntregaCpfCnpj
+                    EditLabel.AnchorSideRight.Control = EditEntregaCpfCnpj
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditEntregaCpfCnpj
+                    EditLabel.Left = 7
+                    EditLabel.Height = 13
+                    EditLabel.Top = 1
+                    EditLabel.Width = 136
+                    EditLabel.Caption = 'CPF / CNPJ:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 14
+                    TabOrder = 0
+                  end
+                  object EditEntregaLogradouro: TLabeledEdit
+                    Left = 152
+                    Height = 21
+                    Top = 17
+                    Width = 370
+                    Anchors = [akTop, akLeft, akRight]
+                    EditLabel.AnchorSideLeft.Control = EditEntregaLogradouro
+                    EditLabel.AnchorSideRight.Control = EditEntregaLogradouro
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditEntregaLogradouro
+                    EditLabel.Left = 152
+                    EditLabel.Height = 13
+                    EditLabel.Top = 1
+                    EditLabel.Width = 370
+                    EditLabel.Caption = 'Logradouro:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 1
+                  end
+                  object EditEntregaNumero: TLabeledEdit
+                    Left = 532
+                    Height = 21
+                    Top = 17
+                    Width = 100
+                    Anchors = [akTop, akRight]
+                    EditLabel.AnchorSideLeft.Control = EditEntregaNumero
+                    EditLabel.AnchorSideRight.Control = EditEntregaNumero
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditEntregaNumero
+                    EditLabel.Left = 532
+                    EditLabel.Height = 13
+                    EditLabel.Top = 1
+                    EditLabel.Width = 100
+                    EditLabel.Caption = 'Numero:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 2
+                  end
+                  object EditEntregaBairro: TLabeledEdit
+                    Left = 7
+                    Height = 21
+                    Top = 62
+                    Width = 200
+                    EditLabel.AnchorSideLeft.Control = EditEntregaBairro
+                    EditLabel.AnchorSideRight.Control = EditEntregaBairro
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditEntregaBairro
+                    EditLabel.Left = 7
+                    EditLabel.Height = 13
+                    EditLabel.Top = 46
+                    EditLabel.Width = 200
+                    EditLabel.Caption = 'Bairro:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 4
+                  end
+                  object EditEntregaCidade: TLabeledEdit
+                    Left = 282
+                    Height = 21
+                    Top = 62
+                    Width = 612
+                    Anchors = [akTop, akLeft, akRight]
+                    EditLabel.AnchorSideLeft.Control = EditEntregaCidade
+                    EditLabel.AnchorSideRight.Control = EditEntregaCidade
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditEntregaCidade
+                    EditLabel.Left = 282
+                    EditLabel.Height = 13
+                    EditLabel.Top = 46
+                    EditLabel.Width = 612
+                    EditLabel.Caption = 'Cidade:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 6
+                  end
+                  object EditEntregaUf: TLabeledEdit
+                    Left = 901
+                    Height = 21
+                    Top = 62
+                    Width = 39
+                    Anchors = [akTop, akRight]
+                    CharCase = ecUppercase
+                    EditLabel.AnchorSideLeft.Control = EditEntregaUf
+                    EditLabel.AnchorSideRight.Control = EditEntregaUf
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditEntregaUf
+                    EditLabel.Left = 901
+                    EditLabel.Height = 13
+                    EditLabel.Top = 46
+                    EditLabel.Width = 39
+                    EditLabel.Caption = 'UF:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 2
+                    TabOrder = 7
+                  end
+                  object EditEntregaComplemento: TLabeledEdit
+                    Left = 640
+                    Height = 21
+                    Top = 17
+                    Width = 300
+                    Anchors = [akTop, akRight]
+                    EditLabel.AnchorSideLeft.Control = EditEntregaComplemento
+                    EditLabel.AnchorSideRight.Control = EditEntregaComplemento
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditEntregaComplemento
+                    EditLabel.Left = 640
+                    EditLabel.Height = 13
+                    EditLabel.Top = 1
+                    EditLabel.Width = 300
+                    EditLabel.Caption = 'Complemento:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 3
+                  end
+                  object EditEntregaIbge: TLabeledCalcEdit
+                    Left = 213
+                    Height = 21
+                    Top = 62
+                    Width = 63
+                    Alignment = taRightJustify
+                    DecimalPlaces = 0
+                    DisplayFormat = '0'
+                    MaxValue = 0
+                    MinValue = 0
+                    TabOrder = 5
+                    Value = 0
+                    CalcEditLabel.Left = 213
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Top = 46
+                    CalcEditLabel.Width = 63
+                    CalcEditLabel.Caption = 'Código IBGE:'
+                    CalcEditLabel.ParentColor = False
+                  end
+                end
+                object GroupBoxRetirada: TGroupBox
+                  Left = 6
+                  Height = 113
+                  Top = 163
+                  Width = 956
+                  Anchors = [akTop, akLeft, akRight]
+                  Caption = 'Dados para retirada:'
+                  ClientHeight = 95
+                  ClientWidth = 952
+                  TabOrder = 1
+                  object EditRetiradaCpfCnpj: TLabeledEdit
+                    Left = 7
+                    Height = 21
+                    Top = 17
+                    Width = 136
+                    EditLabel.AnchorSideLeft.Control = EditRetiradaCpfCnpj
+                    EditLabel.AnchorSideRight.Control = EditRetiradaCpfCnpj
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditRetiradaCpfCnpj
+                    EditLabel.Left = 7
+                    EditLabel.Height = 13
+                    EditLabel.Top = 1
+                    EditLabel.Width = 136
+                    EditLabel.Caption = 'CPF / CNPJ:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 14
+                    TabOrder = 0
+                  end
+                  object EditRetiradaLogradouro: TLabeledEdit
+                    Left = 152
+                    Height = 21
+                    Top = 17
+                    Width = 370
+                    Anchors = [akTop, akLeft, akRight]
+                    EditLabel.AnchorSideLeft.Control = EditRetiradaLogradouro
+                    EditLabel.AnchorSideRight.Control = EditRetiradaLogradouro
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditRetiradaLogradouro
+                    EditLabel.Left = 152
+                    EditLabel.Height = 13
+                    EditLabel.Top = 1
+                    EditLabel.Width = 370
+                    EditLabel.Caption = 'Logradouro:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 1
+                  end
+                  object EditRetiradaNumero: TLabeledEdit
+                    Left = 532
+                    Height = 21
+                    Top = 17
+                    Width = 100
+                    Anchors = [akTop, akRight]
+                    EditLabel.AnchorSideLeft.Control = EditRetiradaNumero
+                    EditLabel.AnchorSideRight.Control = EditRetiradaNumero
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditRetiradaNumero
+                    EditLabel.Left = 532
+                    EditLabel.Height = 13
+                    EditLabel.Top = 1
+                    EditLabel.Width = 100
+                    EditLabel.Caption = 'Numero:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 2
+                  end
+                  object EditRetiradaBairro: TLabeledEdit
+                    Left = 7
+                    Height = 21
+                    Top = 62
+                    Width = 200
+                    EditLabel.AnchorSideLeft.Control = EditRetiradaBairro
+                    EditLabel.AnchorSideRight.Control = EditRetiradaBairro
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditRetiradaBairro
+                    EditLabel.Left = 7
+                    EditLabel.Height = 13
+                    EditLabel.Top = 46
+                    EditLabel.Width = 200
+                    EditLabel.Caption = 'Bairro:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 4
+                  end
+                  object EditRetiradaCidade: TLabeledEdit
+                    Left = 282
+                    Height = 21
+                    Top = 62
+                    Width = 612
+                    Anchors = [akTop, akLeft, akRight]
+                    EditLabel.AnchorSideLeft.Control = EditRetiradaCidade
+                    EditLabel.AnchorSideRight.Control = EditRetiradaCidade
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditRetiradaCidade
+                    EditLabel.Left = 282
+                    EditLabel.Height = 13
+                    EditLabel.Top = 46
+                    EditLabel.Width = 612
+                    EditLabel.Caption = 'Cidade:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 6
+                  end
+                  object EditRetiradaUf: TLabeledEdit
+                    Left = 901
+                    Height = 21
+                    Top = 62
+                    Width = 39
+                    Anchors = [akTop, akRight]
+                    CharCase = ecUppercase
+                    EditLabel.AnchorSideLeft.Control = EditRetiradaUf
+                    EditLabel.AnchorSideRight.Control = EditRetiradaUf
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditRetiradaUf
+                    EditLabel.Left = 901
+                    EditLabel.Height = 13
+                    EditLabel.Top = 46
+                    EditLabel.Width = 39
+                    EditLabel.Caption = 'UF:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 2
+                    TabOrder = 7
+                  end
+                  object EditRetiradaComplemento: TLabeledEdit
+                    Left = 640
+                    Height = 21
+                    Top = 17
+                    Width = 300
+                    Anchors = [akTop, akRight]
+                    EditLabel.AnchorSideLeft.Control = EditRetiradaComplemento
+                    EditLabel.AnchorSideRight.Control = EditRetiradaComplemento
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditRetiradaComplemento
+                    EditLabel.Left = 640
+                    EditLabel.Height = 13
+                    EditLabel.Top = 1
+                    EditLabel.Width = 300
+                    EditLabel.Caption = 'Complemento:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 3
+                  end
+                  object EditRetiradaIbge: TLabeledCalcEdit
+                    Left = 213
+                    Height = 21
+                    Top = 62
+                    Width = 63
+                    Alignment = taRightJustify
+                    DecimalPlaces = 0
+                    DisplayFormat = '0'
+                    MaxValue = 0
+                    MinValue = 0
+                    TabOrder = 5
+                    Value = 0
+                    CalcEditLabel.Left = 213
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Top = 46
+                    CalcEditLabel.Width = 63
+                    CalcEditLabel.Caption = 'Código IBGE:'
+                    CalcEditLabel.ParentColor = False
+                  end
+                end
+                object ActionToolBar3: TToolPanel
+                  Left = 1
+                  Height = 31
+                  Top = 1
+                  Width = 970
+                  Items = <                  
+                    item
+                      Action = ActionExcluirEntregaRetirada
+                      Visible = True
+                      Left = 4
+                      Height = 24
+                      Top = 4
+                      Width = 189
+                      ShowCaption = True
+                    end>
+                  ImageList = FDataModule.ImagensCadastros
+                  Options = [tpFlatBtns]
+                  ButtonAllign = tbaRignt
+                  Align = alTop
+                  BorderWidth = 4
+                  ClientHeight = 31
+                  ClientWidth = 970
+                  Font.Color = clBlack
+                  Font.Height = -11
+                  Font.Name = 'Tahoma'
+                  ParentFont = False
+                  TabOrder = 2
+                end
+              end
+            end
+            object TabSheetTransporte: TTabSheet
+              Caption = 'Transporte'
+              ClientHeight = 343
+              ClientWidth = 972
+              ImageIndex = 2
+              object PanelTransporte: TPanel
+                Left = 0
+                Height = 343
+                Top = 0
+                Width = 972
+                Align = alClient
+                BevelInner = bvLowered
+                BevelOuter = bvNone
+                ClientHeight = 343
+                ClientWidth = 972
+                FullRepaint = False
+                ParentBidiMode = False
+                TabOrder = 0
+                UseDockManager = False
+                object GroupBoxTransportador: TGroupBox
+                  Left = 6
+                  Height = 99
+                  Top = 48
+                  Width = 960
+                  Anchors = [akTop, akLeft, akRight]
+                  Caption = 'Transportador:'
+                  ClientHeight = 81
+                  ClientWidth = 956
+                  TabOrder = 2
+                  object EditTransportadorCpfCnpj: TLabeledEdit
+                    Left = 68
+                    Height = 21
+                    Top = 17
+                    Width = 136
+                    EditLabel.AnchorSideLeft.Control = EditTransportadorCpfCnpj
+                    EditLabel.AnchorSideRight.Control = EditTransportadorCpfCnpj
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditTransportadorCpfCnpj
+                    EditLabel.Left = 68
+                    EditLabel.Height = 13
+                    EditLabel.Top = 1
+                    EditLabel.Width = 136
+                    EditLabel.Caption = 'CPF / CNPJ:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 14
+                    TabOrder = 1
+                  end
+                  object EditTransportadorIE: TLabeledEdit
+                    Left = 638
+                    Height = 21
+                    Top = 17
+                    Width = 306
+                    Anchors = [akTop, akRight]
+                    EditLabel.AnchorSideLeft.Control = EditTransportadorIE
+                    EditLabel.AnchorSideRight.Control = EditTransportadorIE
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditTransportadorIE
+                    EditLabel.Left = 638
+                    EditLabel.Height = 13
+                    EditLabel.Top = 1
+                    EditLabel.Width = 306
+                    EditLabel.Caption = 'Inscrição Estadual:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 14
+                    TabOrder = 3
+                  end
+                  object EditTransportadorLogradouro: TLabeledEdit
+                    Left = 8
+                    Height = 21
+                    Top = 58
+                    Width = 471
+                    Anchors = [akTop, akLeft, akRight]
+                    EditLabel.AnchorSideLeft.Control = EditTransportadorLogradouro
+                    EditLabel.AnchorSideRight.Control = EditTransportadorLogradouro
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditTransportadorLogradouro
+                    EditLabel.Left = 8
+                    EditLabel.Height = 13
+                    EditLabel.Top = 42
+                    EditLabel.Width = 471
+                    EditLabel.Caption = 'Logradouro:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 4
+                  end
+                  object EditTransportadorCidade: TLabeledEdit
+                    Left = 485
+                    Height = 21
+                    Top = 58
+                    Width = 414
+                    Anchors = [akTop, akRight]
+                    EditLabel.AnchorSideLeft.Control = EditTransportadorCidade
+                    EditLabel.AnchorSideRight.Control = EditTransportadorCidade
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditTransportadorCidade
+                    EditLabel.Left = 485
+                    EditLabel.Height = 13
+                    EditLabel.Top = 42
+                    EditLabel.Width = 414
+                    EditLabel.Caption = 'Cidade:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 5
+                  end
+                  object EditTransportadorUF: TLabeledEdit
+                    Left = 905
+                    Height = 21
+                    Top = 58
+                    Width = 39
+                    Anchors = [akTop, akRight]
+                    CharCase = ecUppercase
+                    EditLabel.AnchorSideLeft.Control = EditTransportadorUF
+                    EditLabel.AnchorSideRight.Control = EditTransportadorUF
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditTransportadorUF
+                    EditLabel.Left = 905
+                    EditLabel.Height = 13
+                    EditLabel.Top = 42
+                    EditLabel.Width = 39
+                    EditLabel.Caption = 'UF:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 2
+                    TabOrder = 6
+                  end
+                  object EditTransportadorRazaoSocial: TLabeledEdit
+                    Left = 210
+                    Height = 21
+                    Top = 17
+                    Width = 422
+                    Anchors = [akTop, akLeft, akRight]
+                    EditLabel.AnchorSideLeft.Control = EditTransportadorRazaoSocial
+                    EditLabel.AnchorSideRight.Control = EditTransportadorRazaoSocial
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditTransportadorRazaoSocial
+                    EditLabel.Left = 210
+                    EditLabel.Height = 13
+                    EditLabel.Top = 1
+                    EditLabel.Width = 422
+                    EditLabel.Caption = 'Razão Social / Nome::'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 2
+                  end
+                  object EditTransportadorId: TLabeledCalcEdit
+                    Left = 8
+                    Height = 21
+                    Top = 17
+                    Width = 54
+                    Alignment = taRightJustify
+                    DecimalPlaces = 0
+                    DisplayFormat = '0'
+                    MaxValue = 0
+                    MinValue = 0
+                    TabOrder = 0
+                    Value = 0
+                    OnKeyUp = EditTransportadorIdKeyUp
+                    CalcEditLabel.Left = 8
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Top = 1
+                    CalcEditLabel.Width = 37
+                    CalcEditLabel.Caption = 'Id [F1]:'
+                    CalcEditLabel.ParentColor = False
+                  end
+                end
+                object GroupBoxTransporteRetencaoICMS: TGroupBox
+                  Left = 290
+                  Height = 60
+                  Top = 153
+                  Width = 677
+                  Anchors = [akTop, akLeft, akRight]
+                  Caption = 'Retenção ICMS:'
+                  ClientHeight = 42
+                  ClientWidth = 673
+                  TabOrder = 7
+                  object EditRetencaoIcmsUf: TLabeledEdit
+                    Left = 8
+                    Height = 21
+                    Top = 20
+                    Width = 39
+                    CharCase = ecUppercase
+                    EditLabel.AnchorSideLeft.Control = EditRetencaoIcmsUf
+                    EditLabel.AnchorSideRight.Control = EditRetencaoIcmsUf
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditRetencaoIcmsUf
+                    EditLabel.Left = 8
+                    EditLabel.Height = 13
+                    EditLabel.Top = 4
+                    EditLabel.Width = 39
+                    EditLabel.Caption = 'UF:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 2
+                    TabOrder = 0
+                  end
+                  object EditRetencaoIcmsBaseCalculo: TLabeledCalcEdit
+                    Left = 197
+                    Height = 21
+                    Top = 20
+                    Width = 120
+                    Alignment = taRightJustify
+                    DisplayFormat = '###,###,##0.00'
+                    MaxValue = 0
+                    MinValue = 0
+                    TabOrder = 3
+                    Value = 0
+                    CalcEditLabel.Left = 197
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Top = 4
+                    CalcEditLabel.Width = 79
+                    CalcEditLabel.Caption = 'Base de Cálculo:'
+                    CalcEditLabel.ParentColor = False
+                  end
+                  object EditRetencaoIcmsAliquota: TLabeledCalcEdit
+                    Left = 323
+                    Height = 21
+                    Top = 20
+                    Width = 99
+                    Alignment = taRightJustify
+                    DisplayFormat = '###,###,##0.00'
+                    MaxValue = 0
+                    MinValue = 0
+                    TabOrder = 4
+                    Value = 0
+                    CalcEditLabel.Left = 323
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Top = 4
+                    CalcEditLabel.Width = 43
+                    CalcEditLabel.Caption = 'Alíquota:'
+                    CalcEditLabel.ParentColor = False
+                  end
+                  object EditRetencaoIcmsValorServico: TLabeledCalcEdit
+                    Left = 430
+                    Height = 21
+                    Top = 20
+                    Width = 120
+                    Alignment = taRightJustify
+                    DisplayFormat = '###,###,##0.00'
+                    MaxValue = 0
+                    MinValue = 0
+                    TabOrder = 5
+                    Value = 0
+                    CalcEditLabel.Left = 430
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Top = 4
+                    CalcEditLabel.Width = 81
+                    CalcEditLabel.Caption = 'Valor do Serviço:'
+                    CalcEditLabel.ParentColor = False
+                  end
+                  object EditRetencaoIcmsIcmsRetido: TLabeledCalcEdit
+                    Left = 556
+                    Height = 21
+                    Top = 20
+                    Width = 116
+                    Alignment = taRightJustify
+                    DisplayFormat = '###,###,##0.00'
+                    MaxValue = 0
+                    MinValue = 0
+                    TabOrder = 6
+                    Value = 0
+                    CalcEditLabel.Left = 556
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Top = 4
+                    CalcEditLabel.Width = 63
+                    CalcEditLabel.Caption = 'ICMS Retido:'
+                    CalcEditLabel.ParentColor = False
+                  end
+                  object EditRetencaoIcmsCidade: TLabeledCalcEdit
+                    Left = 53
+                    Height = 21
+                    Top = 20
+                    Width = 82
+                    Alignment = taRightJustify
+                    DecimalPlaces = 0
+                    DisplayFormat = '0'
+                    MaxValue = 0
+                    MinValue = 0
+                    TabOrder = 1
+                    Value = 0
+                    CalcEditLabel.Left = 53
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Top = 4
+                    CalcEditLabel.Width = 63
+                    CalcEditLabel.Caption = 'Código IBGE:'
+                    CalcEditLabel.ParentColor = False
+                  end
+                  object EditRetencaoIcmsCfop: TLabeledCalcEdit
+                    Left = 141
+                    Height = 21
+                    Top = 20
+                    Width = 50
+                    Alignment = taRightJustify
+                    DecimalPlaces = 0
+                    DisplayFormat = '0'
+                    MaxValue = 0
+                    MinValue = 0
+                    TabOrder = 2
+                    Value = 0
+                    CalcEditLabel.Left = 141
+                    CalcEditLabel.Height = 13
+                    CalcEditLabel.Top = 4
+                    CalcEditLabel.Width = 31
+                    CalcEditLabel.Caption = 'CFOP:'
+                    CalcEditLabel.ParentColor = False
+                  end
+                end
+                object GroupBoxVeiculo: TGroupBox
+                  Left = 6
+                  Height = 60
+                  Top = 153
+                  Width = 278
+                  Caption = 'Veículo:'
+                  ClientHeight = 42
+                  ClientWidth = 274
+                  TabOrder = 5
+                  object EditVeiculoRntc: TLabeledEdit
+                    Left = 134
+                    Height = 21
+                    Top = 20
+                    Width = 133
+                    EditLabel.AnchorSideLeft.Control = EditVeiculoRntc
+                    EditLabel.AnchorSideRight.Control = EditVeiculoRntc
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditVeiculoRntc
+                    EditLabel.Left = 134
+                    EditLabel.Height = 13
+                    EditLabel.Top = 4
+                    EditLabel.Width = 133
+                    EditLabel.Caption = 'RNTC:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 20
+                    TabOrder = 2
+                  end
+                  object EditVeiculoPlaca: TLabeledEdit
+                    Left = 53
+                    Height = 21
+                    Top = 20
+                    Width = 75
+                    EditLabel.AnchorSideLeft.Control = EditVeiculoPlaca
+                    EditLabel.AnchorSideRight.Control = EditVeiculoPlaca
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditVeiculoPlaca
+                    EditLabel.Left = 53
+                    EditLabel.Height = 13
+                    EditLabel.Top = 4
+                    EditLabel.Width = 75
+                    EditLabel.Caption = 'Placa:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 8
+                    TabOrder = 1
+                  end
+                  object EditVeiculoUf: TLabeledEdit
+                    Left = 8
+                    Height = 21
+                    Top = 20
+                    Width = 39
+                    CharCase = ecUppercase
+                    EditLabel.AnchorSideLeft.Control = EditVeiculoUf
+                    EditLabel.AnchorSideRight.Control = EditVeiculoUf
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditVeiculoUf
+                    EditLabel.Left = 8
+                    EditLabel.Height = 13
+                    EditLabel.Top = 4
+                    EditLabel.Width = 39
+                    EditLabel.Caption = 'UF:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 2
+                    TabOrder = 0
+                  end
+                end
+                object GroupBoxReboque: TGroupBox
+                  Left = 6
+                  Height = 113
+                  Top = 219
+                  Width = 340
+                  Anchors = [akTop, akLeft, akBottom]
+                  Caption = 'Reboque:'
+                  ClientHeight = 95
+                  ClientWidth = 336
+                  TabOrder = 6
+                  object GridReboque: TRxDBGrid
+                    Left = 0
+                    Height = 95
+                    Top = 0
+                    Width = 336
+                    TitleButtons = False
+                    AutoSort = True
+                    KeyStrokes = <                    
+                      item
+                        Command = rxgcShowFindDlg
+                        ShortCut = 16454
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowColumnsDlg
+                        ShortCut = 16471
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowFilterDlg
+                        ShortCut = 16468
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowSortDlg
+                        ShortCut = 16467
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowQuickFilter
+                        ShortCut = 16465
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcHideQuickFilter
+                        ShortCut = 16456
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcSelectAll
+                        ShortCut = 16449
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcDeSelectAll
+                        ShortCut = 16429
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcInvertSelection
+                        ShortCut = 16426
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcOptimizeColumnsWidth
+                        ShortCut = 16427
+                        Enabled = True
+                      end>
+                    OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                    Align = alClient
+                    Color = clWindow
+                    DrawFullLine = False
+                    FocusColor = clRed
+                    SelectedColor = clHighlight
+                    GridLineStyle = psSolid
+                    DataSource = FDataModuleNFe.DSReboque
+                    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+                    ParentColor = False
+                    TabOrder = 0
+                    TitleFont.Color = clWindowText
+                    TitleFont.Height = -11
+                    TitleFont.Name = 'Tahoma'
+                  end
+                end
+                object GroupBoxVolumes: TGroupBox
+                  Left = 346
+                  Height = 113
+                  Top = 219
+                  Width = 620
+                  Anchors = [akTop, akLeft, akRight, akBottom]
+                  Caption = 'Volumes:'
+                  ClientHeight = 95
+                  ClientWidth = 616
+                  TabOrder = 4
+                  object GridVolumes: TRxDBGrid
+                    Left = 0
+                    Height = 95
+                    Top = 0
+                    Width = 374
+                    TitleButtons = False
+                    AutoSort = True
+                    KeyStrokes = <                    
+                      item
+                        Command = rxgcShowFindDlg
+                        ShortCut = 16454
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowColumnsDlg
+                        ShortCut = 16471
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowFilterDlg
+                        ShortCut = 16468
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowSortDlg
+                        ShortCut = 16467
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowQuickFilter
+                        ShortCut = 16465
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcHideQuickFilter
+                        ShortCut = 16456
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcSelectAll
+                        ShortCut = 16449
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcDeSelectAll
+                        ShortCut = 16429
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcInvertSelection
+                        ShortCut = 16426
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcOptimizeColumnsWidth
+                        ShortCut = 16427
+                        Enabled = True
+                      end>
+                    OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                    Align = alClient
+                    Color = clWindow
+                    DrawFullLine = False
+                    FocusColor = clRed
+                    SelectedColor = clHighlight
+                    GridLineStyle = psSolid
+                    DataSource = FDataModuleNFe.DSVolumes
+                    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+                    ParentColor = False
+                    TabOrder = 0
+                    TitleFont.Color = clWindowText
+                    TitleFont.Height = -11
+                    TitleFont.Name = 'Tahoma'
+                  end
+                  object GroupBoxLacres: TGroupBox
+                    Left = 374
+                    Height = 95
+                    Top = 0
+                    Width = 242
+                    Align = alRight
+                    Caption = 'Lacres:'
+                    ClientHeight = 77
+                    ClientWidth = 238
+                    TabOrder = 1
+                    object GridVolumesLacres: TRxDBGrid
+                      Left = 0
+                      Height = 77
+                      Top = 0
+                      Width = 238
+                      TitleButtons = False
+                      AutoSort = True
+                      KeyStrokes = <                      
+                        item
+                          Command = rxgcShowFindDlg
+                          ShortCut = 16454
+                          Enabled = True
+                        end                      
+                        item
+                          Command = rxgcShowColumnsDlg
+                          ShortCut = 16471
+                          Enabled = True
+                        end                      
+                        item
+                          Command = rxgcShowFilterDlg
+                          ShortCut = 16468
+                          Enabled = True
+                        end                      
+                        item
+                          Command = rxgcShowSortDlg
+                          ShortCut = 16467
+                          Enabled = True
+                        end                      
+                        item
+                          Command = rxgcShowQuickFilter
+                          ShortCut = 16465
+                          Enabled = True
+                        end                      
+                        item
+                          Command = rxgcHideQuickFilter
+                          ShortCut = 16456
+                          Enabled = True
+                        end                      
+                        item
+                          Command = rxgcSelectAll
+                          ShortCut = 16449
+                          Enabled = True
+                        end                      
+                        item
+                          Command = rxgcDeSelectAll
+                          ShortCut = 16429
+                          Enabled = True
+                        end                      
+                        item
+                          Command = rxgcInvertSelection
+                          ShortCut = 16426
+                          Enabled = True
+                        end                      
+                        item
+                          Command = rxgcOptimizeColumnsWidth
+                          ShortCut = 16427
+                          Enabled = True
+                        end>
+                      OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                      Align = alClient
+                      Color = clWindow
+                      DrawFullLine = False
+                      FocusColor = clRed
+                      SelectedColor = clHighlight
+                      GridLineStyle = psSolid
+                      DataSource = FDataModuleNFe.DSVolumesLacres
+                      Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+                      ParentColor = False
+                      TabOrder = 0
+                      TitleFont.Color = clWindowText
+                      TitleFont.Height = -11
+                      TitleFont.Name = 'Tahoma'
+                    end
+                  end
+                end
+                object ComboModalidadeFrete: TLabeledComboBox
+                  Left = 6
+                  Height = 22
+                  Top = 19
+                  Width = 190
+                  ItemHeight = 16
+                  ItemIndex = 0
+                  Items.Strings = (
+                    '0 - ContaDestinatario'
+                    '1 - ContaDestinatario'
+                    '2 - ContaTerceiros'
+                    '9 - SemFrete'
+                  )
+                  ReadOnly = True
+                  Style = csOwnerDrawFixed
+                  TabOrder = 0
+                  Text = '0 - ContaDestinatario'
+                  ComboBoxLabel.Left = 6
+                  ComboBoxLabel.Height = 13
+                  ComboBoxLabel.Top = 3
+                  ComboBoxLabel.Width = 87
+                  ComboBoxLabel.Caption = 'Modalidade Frete:'
+                  ComboBoxLabel.ParentColor = False
+                end
+                object EditTransporteVagao: TLabeledEdit
+                  Left = 202
+                  Height = 21
+                  Top = 20
+                  Width = 109
+                  CharCase = ecUppercase
+                  EditLabel.AnchorSideLeft.Control = EditTransporteVagao
+                  EditLabel.AnchorSideRight.Control = EditTransporteVagao
+                  EditLabel.AnchorSideRight.Side = asrBottom
+                  EditLabel.AnchorSideBottom.Control = EditTransporteVagao
+                  EditLabel.Left = 202
+                  EditLabel.Height = 13
+                  EditLabel.Top = 4
+                  EditLabel.Width = 109
+                  EditLabel.Caption = 'Vagão:'
+                  EditLabel.ParentColor = False
+                  MaxLength = 2
+                  TabOrder = 1
+                end
+                object EditTransporteBalsa: TLabeledEdit
+                  Left = 317
+                  Height = 21
+                  Top = 20
+                  Width = 109
+                  CharCase = ecUppercase
+                  EditLabel.AnchorSideLeft.Control = EditTransporteBalsa
+                  EditLabel.AnchorSideRight.Control = EditTransporteBalsa
+                  EditLabel.AnchorSideRight.Side = asrBottom
+                  EditLabel.AnchorSideBottom.Control = EditTransporteBalsa
+                  EditLabel.Left = 317
+                  EditLabel.Height = 13
+                  EditLabel.Top = 4
+                  EditLabel.Width = 109
+                  EditLabel.Caption = 'Balsa:'
+                  EditLabel.ParentColor = False
+                  MaxLength = 2
+                  TabOrder = 3
+                end
+                object ActionToolBar4: TToolPanel
+                  Left = 516
+                  Height = 31
+                  Top = 1
+                  Width = 472
+                  Items = <                  
+                    item
+                      Action = ActionExcluirTransporte
+                      Visible = True
+                      Left = 4
+                      Height = 24
+                      Top = 4
+                      Width = 158
+                      ShowCaption = True
+                    end>
+                  ImageList = FDataModule.ImagensCadastros
+                  ToolBarStyle = tbsWindowsXP
+                  Options = [tpFlatBtns]
+                  ButtonAllign = tbaRignt
+                  Align = alCustom
+                  Anchors = [akTop, akLeft, akRight]
+                  BorderWidth = 4
+                  ClientHeight = 31
+                  ClientWidth = 472
+                  Font.Color = clBlack
+                  Font.Height = -11
+                  Font.Name = 'Tahoma'
+                  ParentFont = False
+                  TabOrder = 8
+                end
+              end
+            end
+            object TabSheetCobranca: TTabSheet
+              Caption = 'Cobrança'
+              ClientHeight = 365
+              ClientWidth = 963
+              ImageIndex = 7
+              object PanelCobranca: TPanel
+                Left = 0
+                Height = 365
+                Top = 0
+                Width = 963
+                Align = alClient
+                BevelInner = bvLowered
+                BevelOuter = bvNone
+                ClientHeight = 365
+                ClientWidth = 963
+                TabOrder = 0
+                object PanelFatura: TPanel
+                  Left = 1
+                  Height = 112
+                  Top = 32
+                  Width = 961
+                  Align = alClient
+                  BevelOuter = bvLowered
+                  ClientHeight = 112
+                  ClientWidth = 961
+                  TabOrder = 0
+                  object GroupBoxFatura: TGroupBox
+                    Left = 6
+                    Height = 107
+                    Top = 4
+                    Width = 948
+                    Caption = 'Fatura:'
+                    ClientHeight = 89
+                    ClientWidth = 944
+                    TabOrder = 0
+                    object EditFaturaNumero: TLabeledEdit
+                      Left = 8
+                      Height = 21
+                      Top = 19
+                      Width = 923
+                      Anchors = [akTop, akLeft, akRight]
+                      EditLabel.AnchorSideLeft.Control = EditFaturaNumero
+                      EditLabel.AnchorSideRight.Control = EditFaturaNumero
+                      EditLabel.AnchorSideRight.Side = asrBottom
+                      EditLabel.AnchorSideBottom.Control = EditFaturaNumero
+                      EditLabel.Left = 8
+                      EditLabel.Height = 13
+                      EditLabel.Top = 3
+                      EditLabel.Width = 923
+                      EditLabel.Caption = 'Número:'
+                      EditLabel.ParentColor = False
+                      MaxLength = 60
+                      TabOrder = 0
+                    end
+                    object EditFaturaValorOriginal: TLabeledCalcEdit
+                      Left = 8
+                      Height = 21
+                      Top = 63
+                      Width = 121
+                      Alignment = taRightJustify
+                      DisplayFormat = '###,###,##0.00'
+                      MaxValue = 0
+                      MinValue = 0
+                      TabOrder = 1
+                      Value = 0
+                      CalcEditLabel.Left = 8
+                      CalcEditLabel.Height = 13
+                      CalcEditLabel.Top = 47
+                      CalcEditLabel.Width = 67
+                      CalcEditLabel.Caption = 'Valor Original:'
+                      CalcEditLabel.ParentColor = False
+                    end
+                    object EditFaturaValorDesconto: TLabeledCalcEdit
+                      Left = 135
+                      Height = 21
+                      Top = 63
+                      Width = 121
+                      Alignment = taRightJustify
+                      DisplayFormat = '###,###,##0.00'
+                      MaxValue = 0
+                      MinValue = 0
+                      TabOrder = 2
+                      Value = 0
+                      CalcEditLabel.Left = 135
+                      CalcEditLabel.Height = 13
+                      CalcEditLabel.Top = 47
+                      CalcEditLabel.Width = 91
+                      CalcEditLabel.Caption = 'Valor do Desconto:'
+                      CalcEditLabel.ParentColor = False
+                    end
+                    object EditFaturaValorLiquido: TLabeledCalcEdit
+                      Left = 262
+                      Height = 21
+                      Top = 63
+                      Width = 121
+                      Alignment = taRightJustify
+                      DisplayFormat = '###,###,##0.00'
+                      MaxValue = 0
+                      MinValue = 0
+                      TabOrder = 3
+                      Value = 0
+                      CalcEditLabel.Left = 262
+                      CalcEditLabel.Height = 13
+                      CalcEditLabel.Top = 47
+                      CalcEditLabel.Width = 64
+                      CalcEditLabel.Caption = 'Valor Líquido:'
+                      CalcEditLabel.ParentColor = False
+                    end
+                    object Button1: TButton
+                      Left = 729
+                      Height = 25
+                      Top = 59
+                      Width = 202
+                      Caption = 'Financeiro'
+                      OnClick = Button1Click
+                      TabOrder = 4
+                    end
+                  end
+                end
+                object GroupBox1: TGroupBox
+                  Left = 1
+                  Height = 220
+                  Top = 144
+                  Width = 961
+                  Align = alBottom
+                  Caption = 'Duplicatas'
+                  ClientHeight = 202
+                  ClientWidth = 957
+                  TabOrder = 1
+                  object GridDuplicatas: TRxDBGrid
+                    Left = 0
+                    Height = 202
+                    Top = 0
+                    Width = 957
+                    TitleButtons = False
+                    AutoSort = True
+                    KeyStrokes = <                    
+                      item
+                        Command = rxgcShowFindDlg
+                        ShortCut = 16454
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowColumnsDlg
+                        ShortCut = 16471
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowFilterDlg
+                        ShortCut = 16468
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowSortDlg
+                        ShortCut = 16467
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcShowQuickFilter
+                        ShortCut = 16465
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcHideQuickFilter
+                        ShortCut = 16456
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcSelectAll
+                        ShortCut = 16449
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcDeSelectAll
+                        ShortCut = 16429
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcInvertSelection
+                        ShortCut = 16426
+                        Enabled = True
+                      end                    
+                      item
+                        Command = rxgcOptimizeColumnsWidth
+                        ShortCut = 16427
+                        Enabled = True
+                      end>
+                    OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+                    Align = alClient
+                    Color = clWindow
+                    DrawFullLine = False
+                    FocusColor = clRed
+                    SelectedColor = clHighlight
+                    GridLineStyle = psSolid
+                    DataSource = FDataModuleNFe.DSDuplicata
+                    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+                    ParentColor = False
+                    TabOrder = 0
+                    TitleFont.Color = clWindowText
+                    TitleFont.Height = -11
+                    TitleFont.Name = 'Tahoma'
+                  end
+                end
+                object ActionToolBar5: TToolPanel
+                  Left = 1
+                  Height = 31
+                  Top = 1
+                  Width = 961
+                  Items = <                  
+                    item
+                      Action = ActionExcluirCobranca
+                      Visible = True
+                      Left = 4
+                      Height = 24
+                      Top = 4
+                      Width = 152
+                      ShowCaption = True
+                    end>
+                  ImageList = FDataModule.ImagensCadastros
+                  ToolBarStyle = tbsWindowsXP
+                  Options = [tpFlatBtns]
+                  ButtonAllign = tbaRignt
+                  Align = alTop
+                  BorderWidth = 4
+                  ClientHeight = 31
+                  ClientWidth = 961
+                  Font.Color = clBlack
+                  Font.Height = -11
+                  Font.Name = 'Tahoma'
+                  ParentFont = False
+                  TabOrder = 2
+                end
+              end
+            end
+            object TabSheetInformacoesAdicionais: TTabSheet
+              Caption = 'Informações Adicionais'
+              ClientHeight = 343
+              ClientWidth = 972
+              ImageIndex = 4
+              object PanelInformacoesAdicionais: TPanel
+                Left = 0
+                Height = 343
+                Top = 0
+                Width = 972
+                Align = alClient
+                ClientHeight = 343
+                ClientWidth = 972
+                TabOrder = 0
+                object MemoInfComplementarFisco: TLabeledMemo
+                  Left = 6
+                  Height = 57
+                  Top = 182
+                  Width = 956
+                  Anchors = [akTop, akLeft, akRight]
+                  TabOrder = 2
+                  MemoLabel.Left = 6
+                  MemoLabel.Height = 13
+                  MemoLabel.Top = 166
+                  MemoLabel.Width = 220
+                  MemoLabel.Caption = 'Informações Adicionais de Interesse do Fisco:'
+                  MemoLabel.ParentColor = False
+                end
+                object MemoInfComplementarContribuinte: TLabeledMemo
+                  Left = 6
+                  Height = 71
+                  Top = 263
+                  Width = 956
+                  Anchors = [akTop, akLeft, akRight, akBottom]
+                  TabOrder = 3
+                  MemoLabel.Left = 6
+                  MemoLabel.Height = 13
+                  MemoLabel.Top = 247
+                  MemoLabel.Width = 255
+                  MemoLabel.Caption = 'Informações Adicionais de Interesse do Contribuinte:'
+                  MemoLabel.ParentColor = False
+                end
+                object GroupBox2: TGroupBox
+                  Left = 6
+                  Height = 64
+                  Top = 9
+                  Width = 956
+                  Anchors = [akTop, akLeft, akRight]
+                  Caption = 'Informações de Comércio Exterior:'
+                  ClientHeight = 46
+                  ClientWidth = 952
+                  TabOrder = 0
+                  object EditComexLocalEmbarque: TLabeledEdit
+                    Left = 52
+                    Height = 21
+                    Top = 17
+                    Width = 894
+                    Anchors = [akTop, akLeft, akRight]
+                    EditLabel.AnchorSideLeft.Control = EditComexLocalEmbarque
+                    EditLabel.AnchorSideRight.Control = EditComexLocalEmbarque
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditComexLocalEmbarque
+                    EditLabel.Left = 52
+                    EditLabel.Height = 13
+                    EditLabel.Top = 1
+                    EditLabel.Width = 894
+                    EditLabel.Caption = 'Local Embarque:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 1
+                  end
+                  object EditComexUfEmbarque: TLabeledEdit
+                    Left = 7
+                    Height = 21
+                    Top = 17
+                    Width = 39
+                    CharCase = ecUppercase
+                    EditLabel.AnchorSideLeft.Control = EditComexUfEmbarque
+                    EditLabel.AnchorSideRight.Control = EditComexUfEmbarque
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditComexUfEmbarque
+                    EditLabel.Left = 7
+                    EditLabel.Height = 13
+                    EditLabel.Top = 1
+                    EditLabel.Width = 39
+                    EditLabel.Caption = 'UF:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 2
+                    TabOrder = 0
+                  end
+                end
+                object GroupBox3: TGroupBox
+                  Left = 6
+                  Height = 64
+                  Top = 89
+                  Width = 957
+                  Anchors = [akTop, akLeft, akRight]
+                  Caption = 'Informações de Compras:'
+                  ClientHeight = 46
+                  ClientWidth = 953
+                  TabOrder = 1
+                  object EditCompraPedido: TLabeledEdit
+                    Left = 197
+                    Height = 21
+                    Top = 17
+                    Width = 370
+                    EditLabel.AnchorSideLeft.Control = EditCompraPedido
+                    EditLabel.AnchorSideRight.Control = EditCompraPedido
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditCompraPedido
+                    EditLabel.Left = 197
+                    EditLabel.Height = 13
+                    EditLabel.Top = 1
+                    EditLabel.Width = 370
+                    EditLabel.Caption = 'Pedido:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 1
+                  end
+                  object EditCompraNotaEmpenho: TLabeledEdit
+                    Left = 7
+                    Height = 21
+                    Top = 17
+                    Width = 184
+                    CharCase = ecUppercase
+                    EditLabel.AnchorSideLeft.Control = EditCompraNotaEmpenho
+                    EditLabel.AnchorSideRight.Control = EditCompraNotaEmpenho
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditCompraNotaEmpenho
+                    EditLabel.Left = 7
+                    EditLabel.Height = 13
+                    EditLabel.Top = 1
+                    EditLabel.Width = 184
+                    EditLabel.Caption = 'Nota Empenho:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 22
+                    TabOrder = 0
+                  end
+                  object EditCompraContrato: TLabeledEdit
+                    Left = 573
+                    Height = 21
+                    Top = 17
+                    Width = 374
+                    Anchors = [akTop, akLeft, akRight]
+                    EditLabel.AnchorSideLeft.Control = EditCompraContrato
+                    EditLabel.AnchorSideRight.Control = EditCompraContrato
+                    EditLabel.AnchorSideRight.Side = asrBottom
+                    EditLabel.AnchorSideBottom.Control = EditCompraContrato
+                    EditLabel.Left = 573
+                    EditLabel.Height = 13
+                    EditLabel.Top = 1
+                    EditLabel.Width = 374
+                    EditLabel.Caption = 'Contrato:'
+                    EditLabel.ParentColor = False
+                    MaxLength = 60
+                    TabOrder = 2
+                  end
+                end
+              end
+            end
+            object TabSheetRespostaSefaz: TTabSheet
+              Caption = 'Respostas Sefaz'
+              ClientHeight = 343
+              ClientWidth = 972
+              ImageIndex = 3
+              object MemoRespostas: TMemo
+                Left = 0
+                Height = 343
+                Top = 0
+                Width = 972
+                Align = alClient
+                ScrollBars = ssVertical
+                TabOrder = 0
+              end
+            end
+          end
+          object PageControlTotais: TPageControl
+            Left = 0
+            Height = 113
+            Top = 384
+            Width = 1424
+            ActivePage = tsTotaisGeral
+            Align = alBottom
+            TabIndex = 0
+            TabOrder = 2
+            object tsTotaisGeral: TTabSheet
+              Caption = 'Totais Geral'
+              ClientHeight = 87
+              ClientWidth = 1416
+              object PanelTotais: TPanel
+                Left = 0
+                Height = 87
+                Top = 0
+                Width = 1416
+                Align = alClient
+                BevelInner = bvLowered
+                BevelOuter = bvNone
+                ClientHeight = 87
+                ClientWidth = 1416
+                TabOrder = 0
+                object EditBCIcms: TLabeledCalcEdit
+                  Left = 10
+                  Height = 21
+                  Top = 18
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  ReadOnly = True
+                  TabOrder = 0
+                  Value = 0
+                  CalcEditLabel.Left = 10
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 2
+                  CalcEditLabel.Width = 122
+                  CalcEditLabel.Caption = 'Base de Cálculo do ICMS:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorIcms: TLabeledCalcEdit
+                  Left = 149
+                  Height = 21
+                  Top = 18
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  ReadOnly = True
+                  TabOrder = 1
+                  Value = 0
+                  CalcEditLabel.Left = 149
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 2
+                  CalcEditLabel.Width = 71
+                  CalcEditLabel.Caption = 'Valor do ICMS:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditBCIcmsSt: TLabeledCalcEdit
+                  Left = 288
+                  Height = 21
+                  Top = 18
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  ReadOnly = True
+                  TabOrder = 2
+                  Value = 0
+                  CalcEditLabel.Left = 288
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 2
+                  CalcEditLabel.Width = 107
+                  CalcEditLabel.Caption = 'Base Cálculo ICMS ST:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorIcmsSt: TLabeledCalcEdit
+                  Left = 427
+                  Height = 21
+                  Top = 18
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  ReadOnly = True
+                  TabOrder = 3
+                  Value = 0
+                  CalcEditLabel.Left = 427
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 2
+                  CalcEditLabel.Width = 86
+                  CalcEditLabel.Caption = 'Valor do ICMS ST:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorCOFINS: TLabeledCalcEdit
+                  Left = 566
+                  Height = 21
+                  Top = 18
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  ReadOnly = True
+                  TabOrder = 4
+                  Value = 0
+                  CalcEditLabel.Left = 566
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 2
+                  CalcEditLabel.Width = 96
+                  CalcEditLabel.Caption = 'Valor Total COFINS:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorIPI: TLabeledCalcEdit
+                  Left = 705
+                  Height = 21
+                  Top = 18
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  ReadOnly = True
+                  TabOrder = 5
+                  Value = 0
+                  CalcEditLabel.Left = 705
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 2
+                  CalcEditLabel.Width = 72
+                  CalcEditLabel.Caption = 'Valor Total IPI:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditTotalProdutos: TLabeledCalcEdit
+                  Left = 845
+                  Height = 21
+                  Top = 18
+                  Width = 117
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  Font.Color = clWindowText
+                  Font.Height = -11
+                  Font.Name = 'Tahoma'
+                  Font.Style = [fsBold]
+                  MaxValue = 0
+                  MinValue = 0
+                  ParentFont = False
+                  ReadOnly = True
+                  TabOrder = 6
+                  Value = 0
+                  CalcEditLabel.Left = 845
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 2
+                  CalcEditLabel.Width = 86
+                  CalcEditLabel.Caption = 'Total Produtos:'
+                  CalcEditLabel.ParentColor = False
+                  CalcEditLabel.ParentFont = False
+                  CalcEditLabel.Font.Color = clWindowText
+                  CalcEditLabel.Font.Height = -11
+                  CalcEditLabel.Font.Name = 'Tahoma'
+                  CalcEditLabel.Font.Style = [fsBold]
+                end
+                object EditTotalImpostoImportacao: TLabeledCalcEdit
+                  Left = 705
+                  Height = 21
+                  Top = 57
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  Font.Color = clWindowText
+                  Font.Height = -11
+                  Font.Name = 'Tahoma'
+                  MaxValue = 0
+                  MinValue = 0
+                  ParentFont = False
+                  ReadOnly = True
+                  TabOrder = 12
+                  Value = 0
+                  CalcEditLabel.Left = 705
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 41
+                  CalcEditLabel.Width = 66
+                  CalcEditLabel.Caption = 'Valor Total II:'
+                  CalcEditLabel.ParentColor = False
+                  CalcEditLabel.ParentFont = False
+                  CalcEditLabel.Font.Color = clWindowText
+                  CalcEditLabel.Font.Height = -11
+                  CalcEditLabel.Font.Name = 'Tahoma'
+                end
+                object EditValorTotalNota: TLabeledCalcEdit
+                  Left = 845
+                  Height = 21
+                  Top = 57
+                  Width = 117
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  Font.Color = clWindowText
+                  Font.Height = -11
+                  Font.Name = 'Tahoma'
+                  Font.Style = [fsBold]
+                  MaxValue = 0
+                  MinValue = 0
+                  ParentFont = False
+                  ReadOnly = True
+                  TabOrder = 13
+                  Value = 0
+                  CalcEditLabel.Left = 845
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 41
+                  CalcEditLabel.Width = 61
+                  CalcEditLabel.Caption = 'Total Nota:'
+                  CalcEditLabel.ParentColor = False
+                  CalcEditLabel.ParentFont = False
+                  CalcEditLabel.Font.Color = clWindowText
+                  CalcEditLabel.Font.Height = -11
+                  CalcEditLabel.Font.Name = 'Tahoma'
+                  CalcEditLabel.Font.Style = [fsBold]
+                end
+                object EditValorFrete: TLabeledCalcEdit
+                  Left = 10
+                  Height = 21
+                  Top = 57
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  ReadOnly = True
+                  TabOrder = 7
+                  Value = 0
+                  CalcEditLabel.Left = 10
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 41
+                  CalcEditLabel.Width = 72
+                  CalcEditLabel.Caption = 'Valor do Frete:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorSeguro: TLabeledCalcEdit
+                  Left = 149
+                  Height = 21
+                  Top = 57
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  ReadOnly = True
+                  TabOrder = 8
+                  Value = 0
+                  CalcEditLabel.Left = 149
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 41
+                  CalcEditLabel.Width = 80
+                  CalcEditLabel.Caption = 'Valor do Seguro:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorOutrasDespesas: TLabeledCalcEdit
+                  Left = 288
+                  Height = 21
+                  Top = 57
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  ReadOnly = True
+                  TabOrder = 9
+                  Value = 0
+                  CalcEditLabel.Left = 288
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 41
+                  CalcEditLabel.Width = 122
+                  CalcEditLabel.Caption = 'Outras Desp. Acessorias:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorPIS: TLabeledCalcEdit
+                  Left = 427
+                  Height = 21
+                  Top = 57
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  ReadOnly = True
+                  TabOrder = 10
+                  Value = 0
+                  CalcEditLabel.Left = 427
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 41
+                  CalcEditLabel.Width = 74
+                  CalcEditLabel.Caption = 'Valor Total PIS:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorDesconto: TLabeledCalcEdit
+                  Left = 566
+                  Height = 21
+                  Top = 57
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  ReadOnly = True
+                  TabOrder = 11
+                  Value = 0
+                  CalcEditLabel.Left = 566
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 41
+                  CalcEditLabel.Width = 49
+                  CalcEditLabel.Caption = 'Desconto:'
+                  CalcEditLabel.ParentColor = False
+                end
+              end
+            end
+            object tsOutrosTotais: TTabSheet
+              Caption = 'Outros Totais'
+              ClientHeight = 0
+              ClientWidth = 0
+              ImageIndex = 1
+              object PanelOutrosTotais: TPanel
+                Left = 0
+                Height = 85
+                Top = 0
+                Width = 800
+                Align = alClient
+                BevelInner = bvLowered
+                BevelOuter = bvNone
+                ClientHeight = 85
+                ClientWidth = 800
+                TabOrder = 0
+                object EditBaseCalculoIssqn: TLabeledCalcEdit
+                  Left = 10
+                  Height = 21
+                  Top = 18
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  ReadOnly = True
+                  TabOrder = 0
+                  Value = 0
+                  CalcEditLabel.Left = 10
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 2
+                  CalcEditLabel.Width = 128
+                  CalcEditLabel.Caption = 'Base de Cálculo do ISSQN:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorIssqn: TLabeledCalcEdit
+                  Left = 158
+                  Height = 21
+                  Top = 18
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  ReadOnly = True
+                  TabOrder = 1
+                  Value = 0
+                  CalcEditLabel.Left = 158
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 2
+                  CalcEditLabel.Width = 77
+                  CalcEditLabel.Caption = 'Valor do ISSQN:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorPisIssqn: TLabeledCalcEdit
+                  Left = 306
+                  Height = 21
+                  Top = 18
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  ReadOnly = True
+                  TabOrder = 2
+                  Value = 0
+                  CalcEditLabel.Left = 306
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 2
+                  CalcEditLabel.Width = 81
+                  CalcEditLabel.Caption = 'Valor PIS ISSQN:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorCofinsIssqn: TLabeledCalcEdit
+                  Left = 454
+                  Height = 21
+                  Top = 18
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  ReadOnly = True
+                  TabOrder = 3
+                  Value = 0
+                  CalcEditLabel.Left = 454
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 2
+                  CalcEditLabel.Width = 118
+                  CalcEditLabel.Caption = 'Valor do COFINS ISSQN:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorRetidoPis: TLabeledCalcEdit
+                  Left = 10
+                  Height = 21
+                  Top = 57
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  ReadOnly = True
+                  TabOrder = 4
+                  Value = 0
+                  CalcEditLabel.Left = 10
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 41
+                  CalcEditLabel.Width = 81
+                  CalcEditLabel.Caption = 'Valor Retido PIS:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorRetidoCofins: TLabeledCalcEdit
+                  Left = 158
+                  Height = 21
+                  Top = 57
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  ReadOnly = True
+                  TabOrder = 5
+                  Value = 0
+                  CalcEditLabel.Left = 158
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 41
+                  CalcEditLabel.Width = 103
+                  CalcEditLabel.Caption = 'Valor Retido COFINS:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorRetidoCsll: TLabeledCalcEdit
+                  Left = 306
+                  Height = 21
+                  Top = 57
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  Font.Color = clWindowText
+                  Font.Height = -11
+                  Font.Name = 'Tahoma'
+                  MaxValue = 0
+                  MinValue = 0
+                  ParentFont = False
+                  ReadOnly = True
+                  TabOrder = 6
+                  Value = 0
+                  CalcEditLabel.Left = 306
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 41
+                  CalcEditLabel.Width = 88
+                  CalcEditLabel.Caption = 'Valor Retido CSLL:'
+                  CalcEditLabel.ParentColor = False
+                  CalcEditLabel.ParentFont = False
+                  CalcEditLabel.Font.Color = clWindowText
+                  CalcEditLabel.Font.Height = -11
+                  CalcEditLabel.Font.Name = 'Tahoma'
+                end
+                object EditValorTotalServicos: TLabeledCalcEdit
+                  Left = 881
+                  Height = 21
+                  Top = 18
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  Font.Color = clWindowText
+                  Font.Height = -11
+                  Font.Name = 'Tahoma'
+                  Anchors = [akTop, akRight]
+                  MaxValue = 0
+                  MinValue = 0
+                  ParentFont = False
+                  ReadOnly = True
+                  TabOrder = 11
+                  Value = 0
+                  CalcEditLabel.Left = 881
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 2
+                  CalcEditLabel.Width = 71
+                  CalcEditLabel.Caption = 'Total Serviços:'
+                  CalcEditLabel.ParentColor = False
+                  CalcEditLabel.ParentFont = False
+                  CalcEditLabel.Font.Color = clWindowText
+                  CalcEditLabel.Font.Height = -11
+                  CalcEditLabel.Font.Name = 'Tahoma'
+                end
+                object EditBaseCalculoIrrf: TLabeledCalcEdit
+                  Left = 454
+                  Height = 21
+                  Top = 57
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  MaxValue = 0
+                  MinValue = 0
+                  ReadOnly = True
+                  TabOrder = 7
+                  Value = 0
+                  CalcEditLabel.Left = 454
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 41
+                  CalcEditLabel.Width = 106
+                  CalcEditLabel.Caption = 'Base de Cálculo IRRF:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorRetidoIrrf: TLabeledCalcEdit
+                  Left = 602
+                  Height = 21
+                  Top = 57
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  Anchors = [akTop, akRight]
+                  MaxValue = 0
+                  MinValue = 0
+                  ReadOnly = True
+                  TabOrder = 8
+                  Value = 0
+                  CalcEditLabel.Left = 602
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 41
+                  CalcEditLabel.Width = 89
+                  CalcEditLabel.Caption = 'Valor Retido IRRF:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditBaseCalculoPrevidencia: TLabeledCalcEdit
+                  Left = 741
+                  Height = 21
+                  Top = 57
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  Anchors = [akTop, akRight]
+                  MaxValue = 0
+                  MinValue = 0
+                  ReadOnly = True
+                  TabOrder = 9
+                  Value = 0
+                  CalcEditLabel.Left = 741
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 41
+                  CalcEditLabel.Width = 122
+                  CalcEditLabel.Caption = 'Base Cálculo Previdência:'
+                  CalcEditLabel.ParentColor = False
+                end
+                object EditValorRetidoPrevidencia: TLabeledCalcEdit
+                  Left = 881
+                  Height = 21
+                  Top = 57
+                  Width = 121
+                  Alignment = taRightJustify
+                  DisplayFormat = '###,###,##0.00'
+                  Anchors = [akTop, akRight]
+                  MaxValue = 0
+                  MinValue = 0
+                  ReadOnly = True
+                  TabOrder = 10
+                  Value = 0
+                  CalcEditLabel.Left = 881
+                  CalcEditLabel.Height = 13
+                  CalcEditLabel.Top = 41
+                  CalcEditLabel.Width = 120
+                  CalcEditLabel.Caption = 'Valor Retido Previdência:'
+                  CalcEditLabel.ParentColor = False
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  inherited PanelToolBar: TPanel
+    Width = 1000
+    ClientWidth = 1000
+    inherited BotaoSair: TSpeedButton
+      Left = 900
+    end
+    inherited BotaoExportar: TSpeedButton
+      Left = 800
+    end
+    inherited BotaoImprimir: TSpeedButton
+      Left = 700
+    end
+    inherited BotaoFiltrar: TSpeedButton
+      Left = 600
+    end
+  end
+  inherited PopupMenuExportar: TPopupMenu
+    left = 24
+    top = 0
+  end
+  inherited PopupMenuAtalhosBotoesTela: TPopupMenu
+    left = 124
+    top = 65535
+  end
+  inherited PopupMenuAtalhosBotoesTelaCadastro: TPopupMenu
+    left = 264
+    top = 0
+  end
+  object ActionManager: TActionList[5]
+    Images = FDataModule.ImagensCadastros
+    left = 427
+    object ActionIncluirItem: TAction
+      Category = 'NFe'
+      Caption = 'Incluir Item na Nota'
+      ImageIndex = 13
+      OnExecute = ActionIncluirItemExecute
+    end
+    object ActionExcluirItem: TAction
+      Category = 'NFe'
+      Caption = 'Excluir Item da Nota'
+      ImageIndex = 2
+      OnExecute = ActionExcluirItemExecute
+    end
+    object ActionExcluirDocumentosReferenciados: TAction
+      Category = 'NFe'
+      Caption = 'Excluir Documentos Referenciados'
+      ImageIndex = 2
+      OnExecute = ActionExcluirDocumentosReferenciadosExecute
+    end
+    object ActionExcluirEntregaRetirada: TAction
+      Category = 'NFe'
+      Caption = 'Excluir Dados Entrega/Retirada'
+      ImageIndex = 2
+      OnExecute = ActionExcluirEntregaRetiradaExecute
+    end
+    object ActionExcluirTransporte: TAction
+      Category = 'NFe'
+      Caption = 'Excluir Dados Transporte'
+      ImageIndex = 2
+      OnExecute = ActionExcluirTransporteExecute
+    end
+    object ActionExcluirCobranca: TAction
+      Category = 'NFe'
+      Caption = 'Excluir Dados Cobrança'
+      ImageIndex = 2
+      OnExecute = ActionExcluirCobrancaExecute
+    end
+    object ActionSelecionarCertificado: TAction
+      Category = 'NFe'
+      Caption = 'Selecionar Certificado'
+      ImageIndex = 9
+      OnExecute = ActionSelecionarCertificadoExecute
+    end
+    object ActionConsultarSefaz: TAction
+      Category = 'NFe'
+      Caption = 'Consultar Sefaz'
+      ImageIndex = 9
+      OnExecute = ActionConsultarSefazExecute
+    end
+    object ActionImprimirDanfe: TAction
+      Category = 'NFe'
+      Caption = 'Imprimir DANFE'
+      ImageIndex = 12
+      OnExecute = ActionImprimirDanfeExecute
+    end
+    object ActionCancelarNfe: TAction
+      Category = 'NFe'
+      Caption = 'Cancelar NF-e'
+      ImageIndex = 2
+      OnExecute = ActionCancelarNfeExecute
+    end
+    object ActionEnviar: TAction
+      Category = 'NFe'
+      Caption = 'Enviar'
+      ImageIndex = 8
+      OnExecute = ActionEnviarExecute
+    end
+    object ActionAssinar: TAction
+      Category = 'NFe'
+      Caption = 'Assinar'
+      ImageIndex = 21
+      OnExecute = ActionAssinarExecute
+    end
+    object ActionValidar: TAction
+      Category = 'NFe'
+      Caption = 'Validar'
+      ImageIndex = 19
+      OnExecute = ActionValidarExecute
+    end
+    object ActionAtualizarTotais: TAction
+      Category = 'NFe'
+      Caption = 'Atualizar Totais'
+      ImageIndex = 6
+      OnExecute = ActionAtualizarTotaisExecute
+    end
+    object ActionGerarXml: TAction
+      Category = 'NFe'
+      Caption = 'Gerar XML'
+      ImageIndex = 24
+      OnExecute = ActionGerarXmlExecute
+    end
+    object ActionEtiqueta: TAction
+      Category = 'NFe'
+      Caption = 'Etiqueta'
+      ImageIndex = 5
+      OnExecute = ActionEtiquetaExecute
+    end
+    object ActionCCe: TAction
+      Category = 'NFe'
+      Caption = 'CC-e'
+      ImageIndex = 1
+      OnExecute = ActionCCeExecute
+    end
+    object ActionInutilizar: TAction
+      Category = 'NFe'
+      Caption = 'Inutilizar'
+      ImageIndex = 8
+      OnExecute = ActionInutilizarExecute
+    end
+  end
+  object frReport1: TfrReport[6]
+    DefaultCopies = 0
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    OnGetValue = frReport1GetValue
+    left = 224
+    top = 56
+  end
+  object frBarCodeObject1: TfrBarCodeObject[7]
+    left = 304
+    top = 64
+  end
+end
