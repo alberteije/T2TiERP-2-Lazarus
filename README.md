@@ -235,8 +235,8 @@
                         <img src="http://t2ti.com/images/erp/lazarus_tier.jpg" />
                         <hr />
                     <br />  
-                        O ERP Delphi foi desenvolvido em duas e três camadas. 
-                        O usuário baixa a camada de visão para sua máquina e se conecta ao servidor de aplicaçoes, 
+                        O ERP Lazarus foi desenvolvido em duas e três camadas. 
+                        O usuário baixa a camada de visão para sua máquina e se conecta ao servidor de aplicaçoes (Brook for Free Pascal), 
                         onde estarão armazenadas as classes de negócio. O banco de dados poderá residir na mesma 
                         máquina do servidor de aplicações ou em outro 
                         servidor específico para o SGBD. 
