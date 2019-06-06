@@ -234,17 +234,24 @@
                         </table>
                         <br />
                 </div>
-                        <h3>Forma de Desenvolvimento Lazarus</h3> 
+                        <h3>Forma de Desenvolvimento Lazarus [Way we Developed using Lazarus]</h3> 
                         <hr />
                         <img src="http://t2ti.com/images/erp/lazarus_tier.jpg" />
                         <hr />
                     <br />  
                         O ERP Lazarus foi desenvolvido em duas e três camadas. 
                         O usuário baixa a camada de visão para sua máquina e se conecta ao servidor de aplicaçoes (Brook for Free Pascal), 
-                        onde estarão armazenadas as classes de negócio. O banco de dados poderá residir na mesma 
+                        onde estão armazenadas as classes de negócio. O banco de dados poderá residir na mesma 
                         máquina do servidor de aplicações ou em outro 
                         servidor específico para o SGBD. 
                         <br /><br />
                         O acesso aos dados é feito por padrão com um ORM próprio (T2Ti ORM). 
                         Para acessar os bancos de dados utilizamos o Zeos.
+  	<br /><br />
+  <i>
+[Lazarus ERP was developed in two and three layers. The user downloads the view layer to his machine and connects to the application server (Brook for Free Pascal) where the business classes are stored. The database may reside on the same machine as the application server or on another server specific to the DBMS.
+	<br /><br />
+Data access is done by default with an own ORM (T2Ti ORM). To access the databases we use Zeos.]
+  </i>
+
 </html>
